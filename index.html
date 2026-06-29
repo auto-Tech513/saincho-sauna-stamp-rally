@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#101417" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="サ印帳" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>サ印帳 | サウナスタンプラリー</title>
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="./icons/favicon-16.png" sizes="16x16" type="image/png" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">SAUNA STAMP RALLY</p>
+          <h1>サ印帳</h1>
+        </div>
+        <button class="icon-button" id="settingsButton" type="button" aria-label="設定を開く">
+          <span class="icon-lines" aria-hidden="true"></span>
+        </button>
+      </header>
+
+      <main class="main">
+        <section class="install-card" id="installCard" aria-label="ホーム画面に追加" hidden>
+          <img src="./icons/icon-192.png" width="48" height="48" alt="" />
+          <div>
+            <strong>サ印帳をホームに追加</strong>
+            <span id="installHint">次から1タップで開けます</span>
+          </div>
+          <button class="install-button" id="installButton" type="button">追加</button>
+          <button class="install-dismiss" id="installDismissButton" type="button" aria-label="閉じる">
+            <span class="icon-close" aria-hidden="true"></span>
+          </button>
+        </section>
+
+        <section class="summary-band" aria-label="進捗">
+          <div class="summary-copy">
+            <span class="summary-label">押印済み</span>
+            <strong id="visitedCount">0</strong>
+            <span id="nextMilestone">あと3湯で最初の県章</span>
+            <span id="collectionScope">候補を読み込み中</span>
+          </div>
+          <div class="progress-ring" id="progressRing" aria-label="収録候補達成率">
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="hero-metrics" aria-label="候補状況">
+            <div>
+              <strong id="totalCandidateCount">0</strong>
+              <span>候補</span>
+            </div>
+            <div>
+              <strong id="coveredPrefCount">0</strong>
+              <span>県</span>
+            </div>
+            <div>
+              <strong id="heroWishlistCount">0</strong>
+              <span>行きたい</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="view view-active" id="viewExplore" aria-label="探す">
+          <div class="tool-band">
+            <label class="search-box">
+              <span aria-hidden="true"></span>
+              <input id="searchInput" type="search" autocomplete="off" placeholder="サウナ名・県・特徴で検索" />
+            </label>
+            <div class="segment" role="tablist" aria-label="表示切替">
+              <button class="segment-active" type="button" data-filter="all">全部</button>
+              <button type="button" data-filter="unvisited">未押印</button>
+              <button type="button" data-filter="wishlist">行きたい</button>
+            </div>
+          </div>
+
+          <div class="pref-strip" id="prefStrip" aria-label="都道府県"></div>
+          <div class="source-row" id="sourceRow"></div>
+          <div class="spotlight" id="spotlight"></div>
+          <div class="facility-list" id="facilityList"></div>
+        </section>
+
+        <section class="view" id="viewPassport" aria-label="サ印">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">COLLECTION</p>
+              <h2>サ印</h2>
+            </div>
+            <button class="ghost-button" id="clearFilterButton" type="button">全県</button>
+          </div>
+          <div class="stamp-grid" id="stampGrid"></div>
+        </section>
+
+        <section class="view" id="viewStats" aria-label="記録">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">LOG</p>
+              <h2>記録</h2>
+            </div>
+            <button class="ghost-button" id="exportButton" type="button">書き出し</button>
+          </div>
+          <div class="stats-grid" id="statsGrid"></div>
+          <div class="pref-board" id="prefBoard"></div>
+          <label class="import-box">
+            <input id="importInput" type="file" accept="application/json" />
+            <span>記録を読み込む</span>
+          </label>
+        </section>
+
+        <section class="view" id="viewAdd" aria-label="追加">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">MY SAUNA</p>
+              <h2>追加</h2>
+            </div>
+          </div>
+          <form class="add-form" id="addForm">
+            <label>
+              <span>サウナ名</span>
+              <input name="name" required maxlength="48" placeholder="例: 旅先で見つけたサウナ" />
+            </label>
+            <label>
+              <span>都道府県</span>
+              <select name="prefecture" id="prefSelect" required></select>
+            </label>
+            <label>
+              <span>市区町村・エリア</span>
+              <input name="city" maxlength="36" placeholder="例: 箱根町" />
+            </label>
+            <label>
+              <span>特徴</span>
+              <select name="trait" required>
+                <option value="wood">薪・森</option>
+                <option value="water">水風呂</option>
+                <option value="urban">都市型</option>
+                <option value="onsen">温泉</option>
+                <option value="award">名店</option>
+              </select>
+            </label>
+            <label>
+              <span>メモ</span>
+              <textarea name="note" maxlength="180" rows="4" placeholder="温度、水風呂、外気浴、再訪したい理由"></textarea>
+            </label>
+            <button class="primary-button" type="submit">追加して押印候補へ</button>
+          </form>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="主要ナビゲーション">
+        <button class="nav-active" type="button" data-view="Explore" aria-current="page">
+          <span class="nav-icon nav-search" aria-hidden="true"></span>
+          <span>探す</span>
+        </button>
+        <button type="button" data-view="Passport">
+          <span class="nav-icon nav-stamp" aria-hidden="true"></span>
+          <span>サ印</span>
+        </button>
+        <button type="button" data-view="Stats">
+          <span class="nav-icon nav-chart" aria-hidden="true"></span>
+          <span>記録</span>
+        </button>
+        <button type="button" data-view="Add">
+          <span class="nav-icon nav-plus" aria-hidden="true"></span>
+          <span>追加</span>
+        </button>
+      </nav>
+    </div>
+
+    <dialog class="settings-dialog" id="settingsDialog">
+      <div class="dialog-head">
+        <h2>設定</h2>
+        <button class="icon-button" id="closeSettingsButton" type="button" aria-label="設定を閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <label class="toggle-row">
+        <span>押印時の振動</span>
+        <input id="vibrationToggle" type="checkbox" checked />
+      </label>
+      <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
+      <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
+    </dialog>
+
+    <dialog class="settings-dialog install-help-dialog" id="installHelpDialog">
+      <div class="dialog-head">
+        <h2>ホーム画面に追加</h2>
+        <button class="icon-button" id="closeInstallHelpButton" type="button" aria-label="閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <ol class="install-steps">
+        <li>共有ボタンを開く</li>
+        <li>ホーム画面に追加を選ぶ</li>
+        <li>追加を押す</li>
+      </ol>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
