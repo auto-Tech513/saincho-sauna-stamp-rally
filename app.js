@@ -59,7 +59,7 @@ const TRAIT_FEATURES = {
   onsen: ["温泉付き"],
 };
 
-const NON_DISPLAY_TAGS = new Set(["SaunaTime掲載", "県別スターター", "注目", "自然", "街サウナ", "温浴"]);
+const NON_DISPLAY_TAGS = new Set(["SaunaTime掲載", "県別スターター", "ユーザー指定追加", "注目", "自然", "街サウナ", "温浴"]);
 
 const AROMAS = ["檜", "白樺", "薄荷", "ほうじ茶", "ヴィヒタ", "柚子", "松葉"];
 
@@ -706,7 +706,7 @@ function shareFacilityMemo(facility) {
 
 function shareFacility(facility) {
   const detail = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
-  const tags = getFacilityFeatures(facility).slice(0, 4);
+  const tags = normalizeFeatures(facility.tags || []).slice(0, 4);
   const text = [
     `サ印帳でおすすめ: ${facility.name}`,
     detail,
@@ -764,6 +764,10 @@ function getDisplayTags(facility) {
 
 function getFacilityFeatures(facility) {
   const explicit = normalizeFeatures(facility.features || []);
+  if ((facility.tags || []).includes("ユーザー指定追加")) {
+    return normalizeFeatures([...explicit, ...(facility.tags || [])]);
+  }
+
   const inferred = new Set([...explicit, ...(TRAIT_FEATURES[facility.trait] || [])]);
   const text = normalizeText([
     facility.name,

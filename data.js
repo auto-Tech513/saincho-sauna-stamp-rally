@@ -6902,10 +6902,9 @@ export const SEED_FACILITIES = [
     "name": "BIWAKO SAUNA",
     "prefecture": "滋賀県",
     "city": "蒲生郡日野町",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7053,10 +7052,9 @@ export const SEED_FACILITIES = [
     "name": "RS GLAMPING",
     "prefecture": "滋賀県",
     "city": "高島市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7081,10 +7079,9 @@ export const SEED_FACILITIES = [
     "name": "NEST琵琶湖",
     "prefecture": "滋賀県",
     "city": "高島市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7134,10 +7131,9 @@ export const SEED_FACILITIES = [
     "name": "BY THE BIWAKO",
     "prefecture": "滋賀県",
     "city": "高島市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7201,10 +7197,9 @@ export const SEED_FACILITIES = [
     "name": "Seas Sauna HIRA",
     "prefecture": "滋賀県",
     "city": "大津市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7259,8 +7254,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "ユーザー指定追加",
-      "温泉付き",
-      "外気浴あり"
+      "温泉付き"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7288,8 +7282,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "ユーザー指定追加",
-      "温泉付き",
-      "外気浴あり"
+      "温泉付き"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7303,8 +7296,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "ユーザー指定追加",
-      "温泉付き",
-      "外気浴あり"
+      "温泉付き"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7370,10 +7362,9 @@ export const SEED_FACILITIES = [
     "name": "IZA近江舞子",
     "prefecture": "滋賀県",
     "city": "大津市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7410,11 +7401,10 @@ export const SEED_FACILITIES = [
     "name": "グランドメルキュール琵琶湖リゾート＆スパ",
     "prefecture": "滋賀県",
     "city": "長浜市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
       "ユーザー指定追加",
-      "宿泊可",
-      "外気浴あり"
+      "宿泊可"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7440,11 +7430,10 @@ export const SEED_FACILITIES = [
     "name": "琵琶湖ホテル",
     "prefecture": "滋賀県",
     "city": "大津市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
       "ユーザー指定追加",
-      "宿泊可",
-      "外気浴あり"
+      "宿泊可"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7455,11 +7444,10 @@ export const SEED_FACILITIES = [
     "name": "琵琶湖マリオットホテル",
     "prefecture": "滋賀県",
     "city": "守山市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
       "ユーザー指定追加",
-      "宿泊可",
-      "外気浴あり"
+      "宿泊可"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7484,10 +7472,9 @@ export const SEED_FACILITIES = [
     "name": "蒼の湖邸 BIWAFRONT HIKONE",
     "prefecture": "滋賀県",
     "city": "彦根市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
@@ -7512,10 +7499,9 @@ export const SEED_FACILITIES = [
     "name": "琵琶湖湯",
     "prefecture": "滋賀県",
     "city": "長浜市",
-    "trait": "wood",
+    "trait": "water",
     "tags": [
-      "ユーザー指定追加",
-      "外気浴あり"
+      "ユーザー指定追加"
     ],
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/shiga",

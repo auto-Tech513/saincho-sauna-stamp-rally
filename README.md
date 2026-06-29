@@ -14,7 +14,7 @@
 - iOS向けに `apple-touch-icon.png` と `apple-mobile-web-app-*` メタタグを追加しました。
 - ホーム画面用アイコンは添付PNGを `icon-source.png` として保持し、縦横比を歪ませない中央配置の正方形化を行ったうえで各サイズへ展開しています。
 - URL共有時の表示画像は Open Graph / X Card ともに `saincho-icon-1024.png` を指定し、ホーム画面アイコンと同じ画像が使われるようにしています。
-- `sw.js` は `saincho-v11` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像をキャッシュします。
+- `sw.js` は `saincho-v12` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像をキャッシュします。
 
 ## 参照サイト分析
 
