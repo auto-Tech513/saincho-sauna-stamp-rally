@@ -62,7 +62,7 @@
           <div class="summary-copy">
             <span class="summary-label">押印済み</span>
             <strong id="visitedCount">0</strong>
-            <span id="nextMilestone">あと3湯で最初の県章</span>
+            <span id="nextMilestone">次の称号を計算中</span>
             <span id="collectionScope">候補を読み込み中</span>
           </div>
           <div class="progress-ring" id="progressRing" aria-label="収録候補達成率">
@@ -121,6 +121,8 @@
             </div>
             <button class="ghost-button" id="clearFilterButton" type="button">全県</button>
           </div>
+          <div class="passport-scope-strip" id="passportPrefStrip" aria-label="サ印の都道府県切替"></div>
+          <div class="title-progress-panel" id="titleProgressPanel"></div>
           <div class="stamp-grid" id="stampGrid"></div>
         </section>
 
@@ -164,6 +166,7 @@
               <legend>特徴（複数選択可）</legend>
               <div class="feature-picker-grid" id="addFeatureGrid"></div>
             </fieldset>
+            <p class="form-hint" id="sharedAddHint">追加した施設は、公開候補として他のユーザーにも表示されます。</p>
             <label>
               <span>メモ</span>
               <textarea name="note" maxlength="180" rows="4" placeholder="温度、水風呂、外気浴、再訪したい理由"></textarea>
@@ -220,6 +223,19 @@
         <li>ホーム画面に追加を選ぶ</li>
         <li>追加を押す</li>
       </ol>
+    </dialog>
+
+    <dialog class="achievement-dialog" id="achievementDialog">
+      <div class="achievement-card">
+        <button class="achievement-close" id="closeAchievementButton" type="button" aria-label="閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+        <img src="./assets/achievement-mascot.png" width="360" height="240" alt="" />
+        <p class="eyebrow" id="achievementEyebrow">ACHIEVEMENT</p>
+        <h2 id="achievementTitle">称号獲得</h2>
+        <p id="achievementBody">サ印帳が育ちました。</p>
+        <button class="primary-button" id="achievementOkButton" type="button">受け取る</button>
+      </div>
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>

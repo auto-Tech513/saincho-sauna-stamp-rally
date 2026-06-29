@@ -5,7 +5,32 @@ const LEGACY_STORAGE_KEY = "yuincho-state-v1";
 const SETTINGS_KEY = "saincho-settings-v1";
 const LEGACY_SETTINGS_KEY = "yuincho-settings-v1";
 const INSTALL_DISMISSED_KEY = "saincho-install-dismissed-v1";
-const PREFECTURE_BADGE_GOAL = 5;
+const SHARED_FACILITIES_ENDPOINT = "./api/facilities";
+
+const TITLE_MILESTONES = [
+  { count: 0, title: "湯けむり準備中" },
+  { count: 1, title: "はじめの一湯" },
+  { count: 5, title: "新米サウナー" },
+  { count: 20, title: "初級サウナー" },
+  { count: 50, title: "中級サウナー" },
+  { count: 100, title: "上級サウナー" },
+  { count: 250, title: "玄人サウナー" },
+  { count: 400, title: "プロサウナー" },
+  { count: 600, title: "名人サウナー" },
+  { count: 800, title: "達人サウナー" },
+  { count: 1000, title: "永世サウナー" },
+  { count: 2000, title: "神人サウナー" },
+];
+
+const SEARCH_SYNONYM_GROUPS = [
+  ["saunachelin", "サウナシュラン", "さうなしゅらん", "サウナシェラン", "サウナチェリン"],
+  ["sauna", "サウナ", "さうな"],
+  ["spa", "スパ", "すぱ"],
+  ["ofuro", "おふろ", "オフロ"],
+  ["onsen", "温泉", "おんせん", "オンセン"],
+  ["loyly", "ロウリュ", "ロウリュウ", "ろうりゅ", "セルフロウリュ"],
+  ["private", "プライベート", "個室", "貸切"],
+];
 
 const STAMP_STYLES = {
   wood: { kanji: "薪", color: "#2d6a4f", bg: "#eff7ef" },
@@ -23,7 +48,7 @@ const FEATURE_GROUPS = [
   },
   {
     label: "温度体験",
-    options: ["セルフロウリュ", "アロマロウリュ", "熱波師あり", "水風呂あり", "外気浴あり", "外気浴なし"],
+    options: ["セルフロウリュ", "アロマロウリュ", "熱波師あり", "水風呂あり", "外気あり", "外気なし"],
   },
   {
     label: "利用条件",
@@ -39,8 +64,8 @@ const FEATURE_OPTIONS = FEATURE_GROUPS.flatMap((group) => group.options);
 const FEATURE_NORMALIZE_MAP = new Map(FEATURE_OPTIONS.map((feature) => [normalizeText(feature), feature]));
 const FEATURE_ALIASES = {
   "スチーム(ミスト)サウナ": ["スチームサウナ", "ミストサウナ", "蒸気サウナ"],
-  "外気浴あり": ["外気あり", "外気浴", "外気"],
-  "外気浴なし": ["外気なし"],
+  "外気あり": ["外気浴あり", "外気浴", "外気"],
+  "外気なし": ["外気浴なし"],
   "水風呂あり": ["水風呂", "冷水浴"],
   "熱波師あり": ["熱波", "アウフグース"],
   "アロマロウリュ": ["アロマロウリュウ"],
@@ -52,6 +77,14 @@ const FEATURE_ALIASES = {
 Object.entries(FEATURE_ALIASES).forEach(([feature, aliases]) => {
   aliases.forEach((alias) => FEATURE_NORMALIZE_MAP.set(normalizeText(alias), feature));
 });
+const FEATURE_CONFLICTS = new Map([
+  ["外気あり", "外気なし"],
+  ["外気なし", "外気あり"],
+  ["サ飯あり", "サ飯なし"],
+  ["サ飯なし", "サ飯あり"],
+  ["タオルレンタルあり", "タオルレンタルなし"],
+  ["タオルレンタルなし", "タオルレンタルあり"],
+]);
 
 const TRAIT_FEATURES = {
   wood: ["薪サウナ"],
@@ -59,7 +92,7 @@ const TRAIT_FEATURES = {
   onsen: ["温泉付き"],
 };
 
-const NON_DISPLAY_TAGS = new Set(["SaunaTime掲載", "県別スターター", "ユーザー指定追加", "注目", "自然", "街サウナ", "温浴"]);
+const NON_DISPLAY_TAGS = new Set(["SaunaTime掲載", "県別スターター", "ユーザー指定追加", "みんなの追加", "注目", "自然", "街サウナ", "温浴"]);
 
 const AROMAS = ["檜", "白樺", "薄荷", "ほうじ茶", "ヴィヒタ", "柚子", "松葉"];
 
@@ -74,7 +107,10 @@ let selectedPrefecture = "全国";
 let activeFilter = "all";
 let activeView = "Explore";
 let searchTerm = "";
+let searchNeedles = [];
 let selectedFeatureFilters = new Set();
+let sharedFacilities = [];
+let sharedFacilitiesConfigured = false;
 let toastTimer = 0;
 let visibleLimit = 36;
 let deferredInstallPrompt = null;
@@ -98,6 +134,8 @@ const el = {
   addFeatureGrid: document.querySelector("#addFeatureGrid"),
   spotlight: document.querySelector("#spotlight"),
   facilityList: document.querySelector("#facilityList"),
+  passportPrefStrip: document.querySelector("#passportPrefStrip"),
+  titleProgressPanel: document.querySelector("#titleProgressPanel"),
   stampGrid: document.querySelector("#stampGrid"),
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
@@ -119,6 +157,13 @@ const el = {
   installFromSettingsButton: document.querySelector("#installFromSettingsButton"),
   installHelpDialog: document.querySelector("#installHelpDialog"),
   closeInstallHelpButton: document.querySelector("#closeInstallHelpButton"),
+  sharedAddHint: document.querySelector("#sharedAddHint"),
+  achievementDialog: document.querySelector("#achievementDialog"),
+  achievementEyebrow: document.querySelector("#achievementEyebrow"),
+  achievementTitle: document.querySelector("#achievementTitle"),
+  achievementBody: document.querySelector("#achievementBody"),
+  closeAchievementButton: document.querySelector("#closeAchievementButton"),
+  achievementOkButton: document.querySelector("#achievementOkButton"),
 };
 
 init();
@@ -131,6 +176,7 @@ function init() {
   bindEvents();
   renderInstallPrompt();
   registerServiceWorker();
+  loadSharedFacilities();
 }
 
 function bindEvents() {
@@ -148,7 +194,7 @@ function bindEvents() {
   });
 
   el.searchInput.addEventListener("input", (event) => {
-    searchTerm = normalizeText(event.target.value.trim());
+    setSearchTerm(event.target.value);
     visibleLimit = 36;
     renderSearchClearButton();
     const moved = moveToSearchPrefecture(event.target.value);
@@ -162,7 +208,7 @@ function bindEvents() {
   el.searchClearButton.addEventListener("click", () => {
     if (!el.searchInput.value) return;
     el.searchInput.value = "";
-    searchTerm = "";
+    setSearchTerm("");
     visibleLimit = 36;
     renderSearchClearButton();
     renderExplore();
@@ -185,11 +231,23 @@ function bindEvents() {
     if (selectedFeatureFilters.has(feature)) {
       selectedFeatureFilters.delete(feature);
     } else {
+      const conflict = FEATURE_CONFLICTS.get(feature);
+      if (conflict) selectedFeatureFilters.delete(conflict);
       selectedFeatureFilters.add(feature);
     }
     visibleLimit = 36;
     renderFeatureFilterGrid();
     renderExplore();
+  });
+
+  el.addFeatureGrid.addEventListener("change", (event) => {
+    const input = event.target.closest('input[name="features"]');
+    if (!input?.checked) return;
+    const feature = normalizeFeature(input.value);
+    const conflict = FEATURE_CONFLICTS.get(feature);
+    if (!conflict) return;
+    const conflictInput = el.addFeatureGrid.querySelector(`input[name="features"][value="${cssEscape(conflict)}"]`);
+    if (conflictInput) conflictInput.checked = false;
   });
 
   el.main.addEventListener("click", (event) => {
@@ -226,7 +284,15 @@ function bindEvents() {
     setView("Explore");
   });
 
-  el.addForm.addEventListener("submit", (event) => {
+  el.passportPrefStrip.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-passport-prefecture]");
+    if (!button) return;
+    selectedPrefecture = button.dataset.passportPrefecture;
+    visibleLimit = 36;
+    renderAll();
+  });
+
+  el.addForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const form = new FormData(el.addForm);
     const memoText = String(form.get("note")).trim();
@@ -249,27 +315,41 @@ function bindEvents() {
     const duplicate = findDuplicateFacility(custom);
     if (duplicate) {
       selectedPrefecture = duplicate.prefecture;
-      searchTerm = normalizeText(duplicate.name);
+      setSearchTerm(duplicate.name);
       el.searchInput.value = duplicate.name;
       setView("Explore");
       showToast(`${duplicate.name} はすでに候補にあります`);
       return;
     }
 
-    state.customFacilities.push(custom);
+    let addedFacility = custom;
+    let shared = false;
+    try {
+      const result = await publishSharedFacility(custom);
+      if (result?.facility) {
+        addedFacility = result.facility;
+        shared = true;
+        mergeSharedFacility(result.facility);
+      } else {
+        state.customFacilities.push(custom);
+      }
+    } catch {
+      state.customFacilities.push(custom);
+    }
+
     if (memoText) {
-      state.facilityMemos[custom.id] = {
+      state.facilityMemos[addedFacility.id] = {
         text: memoText,
         updatedAt: new Date().toISOString(),
       };
     }
-    selectedPrefecture = custom.prefecture;
-    searchTerm = normalizeText(custom.name);
-    el.searchInput.value = custom.name;
+    selectedPrefecture = addedFacility.prefecture;
+    setSearchTerm(addedFacility.name);
+    el.searchInput.value = addedFacility.name;
     saveState();
     el.addForm.reset();
     setView("Explore");
-    showToast(`${custom.name} を候補に追加しました`);
+    showToast(shared ? `${addedFacility.name} をみんなの候補に追加しました` : `${addedFacility.name} を自分の候補に追加しました`);
   });
 
   el.settingsButton.addEventListener("click", () => el.settingsDialog.showModal());
@@ -324,6 +404,8 @@ function bindEvents() {
     renderInstallPrompt();
   });
   el.closeInstallHelpButton.addEventListener("click", () => el.installHelpDialog.close());
+  el.closeAchievementButton.addEventListener("click", () => el.achievementDialog.close());
+  el.achievementOkButton.addEventListener("click", () => el.achievementDialog.close());
 }
 
 function setView(view) {
@@ -353,17 +435,13 @@ function renderSummary() {
   const wishlistTotal = Object.keys(state.wishlist).length;
   const rawPercent = facilities.length ? (visitedTotal / facilities.length) * 100 : 0;
   const percent = rawPercent > 0 && rawPercent < 1 ? rawPercent.toFixed(1) : Math.round(rawPercent).toString();
-  const countsByPref = countVisitedByPrefecture();
-  const nearest = PREFECTURES.map((pref) => {
-    const count = countsByPref[pref.name] || 0;
-    return { name: pref.name, remain: Math.max(0, PREFECTURE_BADGE_GOAL - count), count };
-  }).filter((pref) => pref.remain > 0).sort((a, b) => a.remain - b.remain)[0];
+  const nextTitle = getNextTitle(visitedTotal);
   const coveredPrefTotal = Object.keys(countFacilitiesByPrefecture()).length;
 
   el.visitedCount.textContent = visitedTotal;
   el.progressPercent.textContent = `${percent}%`;
   el.progressRing.style.setProperty("--progress", `${rawPercent}%`);
-  el.nextMilestone.textContent = nearest ? `あと${nearest.remain}湯で${nearest.name}の県章` : "全県章を獲得済み";
+  el.nextMilestone.textContent = nextTitle ? `あと${nextTitle.count - visitedTotal}湯で${nextTitle.title}` : "最高称号に到達済み";
   el.collectionScope.textContent = `${facilities.length}候補 / ${PREFECTURES.length}都道府県`;
   el.totalCandidateCount.textContent = facilities.length;
   el.coveredPrefCount.textContent = coveredPrefTotal;
@@ -497,6 +575,8 @@ function renderFacilityCard(facility) {
 }
 
 function renderPassport() {
+  renderPassportPrefStrip();
+  renderTitleProgress();
   const facilities = getFacilities().filter((facility) => selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture);
   const sorted = [...facilities].sort((a, b) => {
     const aTime = state.visited[a.id]?.at || "";
@@ -527,6 +607,53 @@ function renderPassport() {
   }).join("");
 }
 
+function renderPassportPrefStrip() {
+  const countsByPref = countVisitedByPrefecture();
+  const candidatesByPref = countEligibleFacilitiesByPrefecture();
+  const allVisited = Object.keys(state.visited).length;
+  const allEligible = countEligibleFacilities().length;
+  const chips = [
+    `<button class="pref-chip ${selectedPrefecture === "全国" ? "pref-chip-active" : ""}" type="button" data-passport-prefecture="全国">全国 ${allVisited}/${allEligible}</button>`,
+    ...PREFECTURES.map((pref) => {
+      const active = selectedPrefecture === pref.name;
+      const visitedCount = countsByPref[pref.name] || 0;
+      const candidateCount = candidatesByPref[pref.name] || 0;
+      const mastered = candidateCount > 0 && visitedCount >= candidateCount;
+      return `<button class="pref-chip ${active ? "pref-chip-active" : ""} ${mastered ? "pref-chip-mastered" : ""}" type="button" data-passport-prefecture="${escapeAttr(pref.name)}">${escapeHtml(shortPrefName(pref.name))} ${visitedCount}/${candidateCount}</button>`;
+    }),
+  ];
+  el.passportPrefStrip.innerHTML = chips.join("");
+}
+
+function renderTitleProgress() {
+  const visitedTotal = Object.keys(state.visited).length;
+  const current = getCurrentTitle(visitedTotal);
+  const next = getNextTitle(visitedTotal);
+  const remaining = next ? next.count - visitedTotal : 0;
+  const titlePercent = next
+    ? Math.min(100, Math.round(((visitedTotal - current.count) / Math.max(1, next.count - current.count)) * 100))
+    : 100;
+  const prefProgress = selectedPrefecture === "全国" ? null : getPrefectureMasterProgress(selectedPrefecture);
+  const prefCopy = prefProgress
+    ? `${selectedPrefecture}: ${prefProgress.visited}/${prefProgress.eligible}湯${prefProgress.mastered ? " / マスター認定済み" : ` / あと${prefProgress.remaining}湯`}`
+    : `${getMasteredPrefectures().length}/${PREFECTURES.length}県をマスター`;
+
+  el.titleProgressPanel.innerHTML = `
+    <article class="title-card">
+      <img src="./assets/achievement-mascot.png" width="180" height="120" alt="" />
+      <div class="title-card-body">
+        <span class="title-kicker">現在の称号</span>
+        <strong>${escapeHtml(current.title)}</strong>
+        <p>${next ? `あと${remaining}湯で${escapeHtml(next.title)}` : "最高称号に到達済み"}</p>
+        <div class="title-progress" aria-label="次の称号までの進捗">
+          <span style="width:${titlePercent}%"></span>
+        </div>
+        <em>${escapeHtml(prefCopy)}</em>
+      </div>
+    </article>
+  `;
+}
+
 function renderMemoPanel(facility) {
   const memo = getFacilityMemo(facility.id);
   const updatedAt = memo?.updatedAt ? formatDate(memo.updatedAt) : "";
@@ -554,13 +681,14 @@ function renderStats() {
   const visitedTotal = Object.keys(state.visited).length;
   const prefectureTotal = Object.keys(countVisitedByPrefecture()).length;
   const wishlistTotal = Object.keys(state.wishlist).length;
-  const earnedBadges = Object.values(countVisitedByPrefecture()).filter((count) => count >= PREFECTURE_BADGE_GOAL).length;
+  const masteredTotal = getMasteredPrefectures().length;
+  const currentTitle = getCurrentTitle(visitedTotal).title;
 
   el.statsGrid.innerHTML = [
     ["押印", `${visitedTotal}`],
     ["訪問県", `${prefectureTotal}`],
     ["行きたい", `${wishlistTotal}`],
-    ["県章", `${earnedBadges}`],
+    ["称号", currentTitle],
   ].map(([label, value]) => `
     <div class="stat-box">
       <span>${label}</span>
@@ -569,11 +697,11 @@ function renderStats() {
   `).join("");
 
   const countsByPref = countVisitedByPrefecture();
-  const candidatesByPref = countFacilitiesByPrefecture();
+  const candidatesByPref = countEligibleFacilitiesByPrefecture();
   el.prefBoard.innerHTML = PREFECTURES.map((pref) => {
     const count = countsByPref[pref.name] || 0;
     const candidateCount = candidatesByPref[pref.name] || 0;
-    const badge = count >= PREFECTURE_BADGE_GOAL ? "県章獲得" : `あと${Math.max(0, PREFECTURE_BADGE_GOAL - count)}`;
+    const badge = candidateCount > 0 && count >= candidateCount ? "マスター" : `あと${Math.max(0, candidateCount - count)}`;
     return `
       <button class="pref-progress" type="button" data-prefecture="${escapeAttr(pref.name)}">
         <strong>${escapeHtml(shortPrefName(pref.name))}</strong>
@@ -581,6 +709,12 @@ function renderStats() {
       </button>
     `;
   }).join("");
+  el.prefBoard.insertAdjacentHTML("afterbegin", `
+    <button class="pref-progress pref-progress-master" type="button" data-prefecture="全国">
+      <strong>県マスター</strong>
+      <span>${masteredTotal}/${PREFECTURES.length}県</span>
+    </button>
+  `);
 }
 
 function renderPrefSelect() {
@@ -631,6 +765,9 @@ function stampFacility(facility) {
     if (status) showToast(`${facility.name} は${status.badge}のため押印できません`);
     return;
   }
+  const beforeVisitedTotal = Object.keys(state.visited).length;
+  const beforeTitle = getCurrentTitle(beforeVisitedTotal);
+  const wasPrefMastered = isPrefectureMastered(facility.prefecture);
   const aroma = AROMAS[Math.floor(Math.random() * AROMAS.length)];
   state.visited[facility.id] = {
     at: new Date().toISOString(),
@@ -640,7 +777,23 @@ function stampFacility(facility) {
   saveState();
   if (settings.vibration && "vibrate" in navigator) navigator.vibrate([20, 30, 20]);
   renderAll();
+  const afterVisitedTotal = beforeVisitedTotal + 1;
+  const afterTitle = getCurrentTitle(afterVisitedTotal);
+  const prefMastered = !wasPrefMastered && isPrefectureMastered(facility.prefecture);
   showToast(`${facility.name} を押印。今日の余韻は${aroma}`);
+  if (prefMastered) {
+    window.setTimeout(() => showAchievement({
+      eyebrow: "PREFECTURE MASTER",
+      title: `${facility.prefecture}のマスターサウナー認定`,
+      body: "開業予定・要確認を除くサ印をすべて集めました。",
+    }), 220);
+  } else if (afterTitle.count > beforeTitle.count) {
+    window.setTimeout(() => showAchievement({
+      eyebrow: "NEW TITLE",
+      title: `${afterTitle.title} 認定`,
+      body: `${afterVisitedTotal}湯のサ印を集めました。次の一湯がまた近づいています。`,
+    }), 220);
+  }
 }
 
 function unstampFacility(facility) {
@@ -718,12 +871,85 @@ function shareFacility(facility) {
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
+async function loadSharedFacilities() {
+  try {
+    const response = await fetch(SHARED_FACILITIES_ENDPOINT, { headers: { accept: "application/json" } });
+    if (!response.ok) return;
+    const payload = await response.json();
+    sharedFacilitiesConfigured = payload.configured !== false;
+    sharedFacilities = normalizeSharedFacilities(payload.facilities || []);
+    renderAll();
+  } catch {
+    sharedFacilitiesConfigured = false;
+  } finally {
+    renderSharedHint();
+  }
+}
+
+async function publishSharedFacility(facility) {
+  const response = await fetch(SHARED_FACILITIES_ENDPOINT, {
+    method: "POST",
+    headers: { "content-type": "application/json", accept: "application/json" },
+    body: JSON.stringify({
+      name: facility.name,
+      prefecture: facility.prefecture,
+      city: facility.city,
+      features: facility.features || [],
+    }),
+  });
+  if (!response.ok) throw new Error("shared-save-failed");
+  const payload = await response.json();
+  return { facility: normalizeSharedFacility(payload.facility), duplicate: Boolean(payload.duplicate) };
+}
+
+function mergeSharedFacility(facility) {
+  if (!facility) return;
+  const key = facilityDuplicateKey(facility);
+  sharedFacilities = [
+    ...sharedFacilities.filter((item) => facilityDuplicateKey(item) !== key),
+    facility,
+  ].sort((a, b) => a.prefecture.localeCompare(b.prefecture, "ja") || a.name.localeCompare(b.name, "ja"));
+}
+
+function normalizeSharedFacilities(values) {
+  if (!Array.isArray(values)) return [];
+  const normalized = values.map(normalizeSharedFacility).filter(Boolean);
+  return dedupeFacilities(normalized);
+}
+
+function normalizeSharedFacility(value) {
+  if (!value || typeof value !== "object") return null;
+  const name = String(value.name || "").trim().slice(0, 64);
+  const prefecture = String(value.prefecture || "").trim();
+  if (!name || !PREFECTURES.some((pref) => pref.name === prefecture)) return null;
+  const features = normalizeFeatures(value.features || value.tags || []);
+  return {
+    id: typeof value.id === "string" ? value.id : `shared-${Date.now().toString(36)}`,
+    name,
+    prefecture,
+    city: String(value.city || "").trim().slice(0, 40),
+    trait: value.trait || inferTraitFromFeatures(features),
+    tags: ["みんなの追加", ...features],
+    features,
+    source: "みんなの追加",
+    sourceUrl: "",
+    shared: true,
+  };
+}
+
+function renderSharedHint() {
+  if (!el.sharedAddHint) return;
+  el.sharedAddHint.textContent = sharedFacilitiesConfigured
+    ? "追加した施設は、公開候補として他のユーザーにも表示されます。"
+    : "共有ストレージ未接続時は、この端末の候補として保存します。";
+}
+
 function getFilteredFacilities() {
   return getFacilities().filter((facility) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
     const memo = getFacilityMemo(facility.id);
     const features = getFacilityFeatures(facility);
-    const haystack = [
+    const haystack = buildSearchBlob([
       facility.name,
       facility.prefecture,
       facility.city,
@@ -733,9 +959,8 @@ function getFilteredFacilities() {
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
       ...facility.tags,
-    ].join(" ");
-    const normalizedHaystack = normalizeText(haystack);
-    const matchesSearch = !searchTerm || normalizedHaystack.includes(searchTerm);
+    ]);
+    const matchesSearch = !searchNeedles.length || searchNeedles.every((needle) => haystack.includes(needle));
     const matchesFeatures = [...selectedFeatureFilters].every((feature) => features.includes(feature));
     const matchesFilter =
       activeFilter === "all" ||
@@ -752,7 +977,7 @@ function getFacilities() {
     trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
     tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
   }));
-  return [...SEED_FACILITIES, ...custom];
+  return dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
 }
 
 function getDisplayTags(facility) {
@@ -764,7 +989,7 @@ function getDisplayTags(facility) {
 
 function getFacilityFeatures(facility) {
   const explicit = normalizeFeatures(facility.features || []);
-  if ((facility.tags || []).includes("ユーザー指定追加")) {
+  if ((facility.tags || []).includes("ユーザー指定追加") || (facility.tags || []).includes("みんなの追加")) {
     return normalizeFeatures([...explicit, ...(facility.tags || [])]);
   }
 
@@ -795,8 +1020,8 @@ function getFacilityFeatures(facility) {
   if (/(宿泊|カプセル|ホテル|旅館)/.test(text)) inferred.add("宿泊可");
   if (/(タオルレンタルあり|タオルあり|手ぶら)/.test(text)) inferred.add("タオルレンタルあり");
   if (/(タオルレンタルなし|タオルなし|要持参)/.test(text)) inferred.add("タオルレンタルなし");
-  if (/(外気浴なし|外気なし)/.test(text)) inferred.add("外気浴なし");
-  if (!inferred.has("外気浴なし") && /(外気浴|露天|テラス|川|森|海|湖)/.test(text)) inferred.add("外気浴あり");
+  if (/(外気浴なし|外気なし)/.test(text)) inferred.add("外気なし");
+  if (!inferred.has("外気なし") && /(外気浴|外気あり|露天|テラス|川|森|海|湖)/.test(text)) inferred.add("外気あり");
   if (/(サ飯なし|食事なし|レストランなし)/.test(text)) inferred.add("サ飯なし");
   if (!inferred.has("サ飯なし") && /(サ飯|食堂|レストラン|カフェ|蕎麦|ごはん|食事)/.test(text)) inferred.add("サ飯あり");
   if (/(飲み放題|ドリンク飲み放題)/.test(text)) inferred.add("サウナドリンク飲み放題");
@@ -807,7 +1032,18 @@ function getFacilityFeatures(facility) {
 
 function normalizeFeatures(values) {
   if (!Array.isArray(values)) return [];
-  return FEATURE_OPTIONS.filter((feature) => values.some((value) => normalizeFeature(value) === feature));
+  const selected = [];
+  values.forEach((value) => {
+    const feature = normalizeFeature(value);
+    if (!feature) return;
+    const conflict = FEATURE_CONFLICTS.get(feature);
+    if (conflict) {
+      const conflictIndex = selected.indexOf(conflict);
+      if (conflictIndex >= 0) selected.splice(conflictIndex, 1);
+    }
+    if (!selected.includes(feature)) selected.push(feature);
+  });
+  return FEATURE_OPTIONS.filter((feature) => selected.includes(feature));
 }
 
 function normalizeFeature(value) {
@@ -829,24 +1065,26 @@ function uniqueStrings(values) {
 
 function moveToSearchPrefecture(value) {
   const term = normalizeText(value);
+  const needles = createSearchNeedles(value);
   if (!term) return false;
 
   const prefMatch = PREFECTURES.find((pref) => {
-    const full = normalizeText(pref.name);
-    const short = normalizeText(shortPrefName(pref.name));
+    const full = buildSearchBlob([pref.name]);
+    const short = buildSearchBlob([shortPrefName(pref.name)]);
     return full === term || short === term || (term.length >= 2 && (full.includes(term) || short.includes(term)));
   });
   if (prefMatch) return setSelectedPrefecture(prefMatch.name);
 
   if (term.length < 2) return false;
   const facilities = getFacilities();
-  const nameMatch = facilities.find((facility) => normalizeText(facility.name).includes(term));
+  const nameMatch = facilities.find((facility) => matchesSearchNeedles([facility.name], needles));
   if (nameMatch) return setSelectedPrefecture(nameMatch.prefecture);
 
   const matchingFacilities = facilities.filter((facility) => {
     const memo = getFacilityMemo(facility.id);
     const features = getFacilityFeatures(facility);
-    const haystack = normalizeText([
+    const haystack = buildSearchBlob([
+      facility.name,
       facility.prefecture,
       facility.city,
       facility.source,
@@ -855,8 +1093,8 @@ function moveToSearchPrefecture(value) {
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
       ...facility.tags,
-    ].join(" "));
-    return haystack.includes(term);
+    ]);
+    return needles.every((needle) => haystack.includes(needle));
   });
   const matchedPrefectures = [...new Set(matchingFacilities.map((facility) => facility.prefecture))];
   if (matchedPrefectures.length === 1) return setSelectedPrefecture(matchedPrefectures[0]);
@@ -899,6 +1137,46 @@ function countFacilitiesByPrefecture() {
     acc[facility.prefecture] = (acc[facility.prefecture] || 0) + 1;
     return acc;
   }, {});
+}
+
+function countEligibleFacilities() {
+  return getFacilities().filter((facility) => !getFacilityStatus(facility));
+}
+
+function countEligibleFacilitiesByPrefecture() {
+  return countEligibleFacilities().reduce((acc, facility) => {
+    acc[facility.prefecture] = (acc[facility.prefecture] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+function getPrefectureMasterProgress(prefecture) {
+  const eligible = countEligibleFacilities().filter((facility) => facility.prefecture === prefecture);
+  const visited = eligible.filter((facility) => state.visited[facility.id]).length;
+  return {
+    eligible: eligible.length,
+    visited,
+    remaining: Math.max(0, eligible.length - visited),
+    mastered: eligible.length > 0 && visited >= eligible.length,
+  };
+}
+
+function isPrefectureMastered(prefecture) {
+  return getPrefectureMasterProgress(prefecture).mastered;
+}
+
+function getMasteredPrefectures() {
+  return PREFECTURES.filter((pref) => isPrefectureMastered(pref.name));
+}
+
+function getCurrentTitle(count) {
+  return TITLE_MILESTONES.reduce((current, milestone) => (
+    count >= milestone.count ? milestone : current
+  ), TITLE_MILESTONES[0]);
+}
+
+function getNextTitle(count) {
+  return TITLE_MILESTONES.find((milestone) => milestone.count > count) || null;
 }
 
 function exportState() {
@@ -1066,6 +1344,17 @@ function showToast(message) {
   }, 2600);
 }
 
+function showAchievement({ eyebrow, title, body }) {
+  el.achievementEyebrow.textContent = eyebrow;
+  el.achievementTitle.textContent = title;
+  el.achievementBody.textContent = body;
+  if (typeof el.achievementDialog.showModal === "function") {
+    el.achievementDialog.showModal();
+    return;
+  }
+  showToast(title);
+}
+
 function shortPrefName(name) {
   if (name === "北海道") return name;
   return name.replace(/[都道府県]$/, "");
@@ -1099,11 +1388,87 @@ function normalizeText(value) {
     .replace(/\s+/g, " ");
 }
 
+function setSearchTerm(value) {
+  searchTerm = normalizeText(value);
+  searchNeedles = createSearchNeedles(value);
+}
+
+function createSearchNeedles(value) {
+  const base = normalizeText(value);
+  if (!base) return [];
+  return base.split(" ")
+    .flatMap(expandSearchTerm)
+    .map(normalizeSearchToken)
+    .filter((term) => term.length >= 1)
+    .filter((term, index, all) => all.indexOf(term) === index);
+}
+
+function matchesSearchNeedles(parts, needles) {
+  if (!needles.length) return true;
+  const blob = buildSearchBlob(parts);
+  return needles.every((needle) => blob.includes(needle));
+}
+
+function buildSearchBlob(parts) {
+  const source = parts.filter(Boolean).join(" ");
+  const terms = [
+    source,
+    toHiragana(source),
+    toKatakana(source),
+    normalizeCompact(source),
+    ...source.split(/\s+/).flatMap(expandSearchTerm),
+  ];
+  return terms.map(normalizeSearchToken).join(" ");
+}
+
+function expandSearchTerm(term) {
+  const normalized = normalizeText(term);
+  const compact = normalizeCompact(normalized);
+  const variants = [normalized, toHiragana(normalized), toKatakana(normalized), compact];
+  SEARCH_SYNONYM_GROUPS.forEach((group) => {
+    const normalizedGroup = group.map(normalizeSearchToken);
+    if (normalizedGroup.some((item) => compact.includes(item) || normalizeSearchToken(normalized).includes(item))) {
+      variants.push(...group);
+    }
+  });
+  return variants;
+}
+
+function normalizeSearchToken(value) {
+  return normalizeCompact(toKatakana(value));
+}
+
+function normalizeCompact(value) {
+  return normalizeText(value).replace(/[ \u3000・･＆&.．\-ー－〜～~（）()【】[\]「」『』：:]/g, "");
+}
+
+function toKatakana(value) {
+  return String(value).replace(/[\u3041-\u3096]/g, (char) => String.fromCharCode(char.charCodeAt(0) + 0x60));
+}
+
+function toHiragana(value) {
+  return String(value).replace(/[\u30a1-\u30f6]/g, (char) => String.fromCharCode(char.charCodeAt(0) - 0x60));
+}
+
 function normalizeFacilityName(value) {
   return normalizeText(value)
     .replace(/[ \u3000・･＆&.．\-ー－〜～~（）()【】\[\]「」『』：:]/g, "")
     .replace(/天然温泉かけ流し/g, "")
     .replace(/プレミア/g, "");
+}
+
+function dedupeFacilities(facilities) {
+  const seen = new Set();
+  return facilities.filter((facility) => {
+    const key = facilityDuplicateKey(facility);
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function facilityDuplicateKey(facility) {
+  return `${facility.prefecture}:${normalizeFacilityName(facility.name)}`;
 }
 
 function cssEscape(value) {

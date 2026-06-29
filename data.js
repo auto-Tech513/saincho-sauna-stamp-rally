@@ -8182,5 +8182,627 @@ export const SEED_FACILITIES = [
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府八尾市八尾木北5丁目101"
+  },
+  {
+    "id": "kyoto-user-b2tgx",
+    "name": "ササウナ SASAUNA Sakura Sauna & Spa Kyoto",
+    "prefecture": "京都府",
+    "city": "京都市東山区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市東山区鞘町一丁目396-1"
+  },
+  {
+    "id": "kyoto-user-1pvtyjx",
+    "name": "KUDOCHI sauna 京都河原町店",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区河原町通三条下る山崎町258 AD-G四条河原町 7階"
+  },
+  {
+    "id": "kyoto-user-1g20k0a",
+    "name": "sayoka",
+    "prefecture": "京都府",
+    "city": "京都市上京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市上京区溝前町83"
+  },
+  {
+    "id": "kyoto-user-j3dknm",
+    "name": "MACHIYA:SAUNA KYOTO",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区三坊西洞院町561 西側奥"
+  },
+  {
+    "id": "kyoto-user-11cb2lw",
+    "name": "貸切ルーフトップサウナ＆BBQ Ciel京都",
+    "prefecture": "京都府",
+    "city": "京都市左京区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市左京区岡崎徳成町28-4 聖護院ビル 3F"
+  },
+  {
+    "id": "kyoto-user-15k4tfq",
+    "name": "六角スパサウナ",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区越後町198"
+  },
+  {
+    "id": "kyoto-user-l36i5j",
+    "name": "Machiya de SAUNA",
+    "prefecture": "京都府",
+    "city": "京都市南区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市南区東九条室町30-26"
+  },
+  {
+    "id": "kyoto-user-be4qvn",
+    "name": "Private City Sauna RE:ZONE",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区丸太町通西洞院上る梅屋町166-7 SDビル 5F"
+  },
+  {
+    "id": "kyoto-user-dmr65k",
+    "name": "さがの温泉 天山の湯",
+    "prefecture": "京都府",
+    "city": "京都市右京区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市右京区嵯峨野宮ノ元町55-4-7"
+  },
+  {
+    "id": "kyoto-user-3m2ccw",
+    "name": "京都プライベートサウナ高瀬川",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区船頭町238 105"
+  },
+  {
+    "id": "kyoto-user-1m4gc6x",
+    "name": "SAUNA (OFURO 2号店)",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区恵比須町534-33"
+  },
+  {
+    "id": "kyoto-user-ec5yho",
+    "name": "東宇治天然温泉 源氏の湯",
+    "prefecture": "京都府",
+    "city": "宇治市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府宇治市大久保町大竹52"
+  },
+  {
+    "id": "kyoto-user-1mkggjh",
+    "name": "誠の湯",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区西新屋敷太夫町81-6"
+  },
+  {
+    "id": "kyoto-user-1a97bp3",
+    "name": "壬生温泉 はなの湯",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区壬生松原町15-3"
+  },
+  {
+    "id": "kyoto-user-rnv4pe",
+    "name": "五香湯",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区黒門通り五条上ル柿本町590-12"
+  },
+  {
+    "id": "kyoto-user-1nj2sax",
+    "name": "kasika 京都北山",
+    "prefecture": "京都府",
+    "city": "京都市左京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市左京区下鴨南芝町43-3 KITAYAMA HILLS 1F"
+  },
+  {
+    "id": "kyoto-user-928m8d",
+    "name": "竹取温泉 灯りの湯",
+    "prefecture": "京都府",
+    "city": "八幡市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府八幡市八幡中ノ山82-1"
+  },
+  {
+    "id": "kyoto-user-19hoo6l",
+    "name": "白山湯 高辻店",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区舟屋町665"
+  },
+  {
+    "id": "kyoto-user-1xehjlq",
+    "name": "カルドグラン京都河原町",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区河原町通三条下ル大黒町58 ミーナ京都 8F"
+  },
+  {
+    "id": "kyoto-user-5a86v7",
+    "name": "衣笠温泉",
+    "prefecture": "京都府",
+    "city": "京都市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市北区大将軍一条町50"
+  },
+  {
+    "id": "kyoto-user-1x5ea9a",
+    "name": "京極湯",
+    "prefecture": "京都府",
+    "city": "京都市右京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市右京区西京極西川町39-7"
+  },
+  {
+    "id": "kyoto-user-1ubgh8r",
+    "name": "京都 玉の湯",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区押小路通御幸町西入ル亀屋町401"
+  },
+  {
+    "id": "kyoto-user-16dgcll",
+    "name": "上方温泉 一休京都本館",
+    "prefecture": "京都府",
+    "city": "城陽市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府城陽市中芦原25-2"
+  },
+  {
+    "id": "kyoto-user-wazg8n",
+    "name": "天橋立ホテル",
+    "prefecture": "京都府",
+    "city": "宮津市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府宮津市字文珠310"
+  },
+  {
+    "id": "kyoto-user-hdhyis",
+    "name": "スパ＆ホテル水春 松井山手",
+    "prefecture": "京都府",
+    "city": "京田辺市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京田辺市山手中央5-1"
+  },
+  {
+    "id": "kyoto-user-adprgs",
+    "name": "リブマックスリゾート京丹後シーフロント",
+    "prefecture": "京都府",
+    "city": "京丹後市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京丹後市網野町小浜915-15"
+  },
+  {
+    "id": "kyoto-user-6lj07l",
+    "name": "京都るり渓温泉 for REST RESORT",
+    "prefecture": "京都府",
+    "city": "南丹市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府南丹市園部町大河内広谷1-14"
+  },
+  {
+    "id": "kyoto-user-1w868ny",
+    "name": "安心お宿プレミア京都四条烏丸店",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区綾小路通東洞院東入神明町239-1"
+  },
+  {
+    "id": "kyoto-user-dyi2nm",
+    "name": "ぎょうざ湯",
+    "prefecture": "京都府",
+    "city": "京都市東山区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市東山区"
+  },
+  {
+    "id": "kyoto-user-11i3cdh",
+    "name": "ぬかとゆげ 酵素風呂&サウナ",
+    "prefecture": "京都府",
+    "city": "京丹後市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京丹後市"
+  },
+  {
+    "id": "kyoto-user-139djtj",
+    "name": "MOKSA（モクサ）",
+    "prefecture": "京都府",
+    "city": "京都市左京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市左京区上高野東山37"
+  },
+  {
+    "id": "kyoto-user-1jp67yg",
+    "name": "丸福樓",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区正面通加茂川西入鍵屋町349"
+  },
+  {
+    "id": "kyoto-user-1hze32m",
+    "name": "GOOD NATURE HOTEL KYOTO",
+    "prefecture": "京都府",
+    "city": "京都市下京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市下京区河原町通四条下ル2丁目稲荷町318-6"
+  },
+  {
+    "id": "kyoto-user-1ogm6x8",
+    "name": "新シ湯",
+    "prefecture": "京都府",
+    "city": "京都市東山区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市東山区古西町316"
+  },
+  {
+    "id": "kyoto-user-6zrbd3",
+    "name": "桜湯",
+    "prefecture": "京都府",
+    "city": "京都市上京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市上京区俵屋町454"
+  },
+  {
+    "id": "kyoto-user-27vzyb",
+    "name": "御三軒湯",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区"
+  },
+  {
+    "id": "kyoto-user-vym1qx",
+    "name": "ホテルエルシエント京都",
+    "prefecture": "京都府",
+    "city": "京都市南区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市南区東九条東山王町13"
+  },
+  {
+    "id": "kyoto-user-1trj6eg",
+    "name": "ホテルロイヤルヒル福知山&スパ",
+    "prefecture": "京都府",
+    "city": "福知山市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府福知山市字土師小字澤居山176"
+  },
+  {
+    "id": "kyoto-user-k0uymp",
+    "name": "改進浴場",
+    "prefecture": "京都府",
+    "city": "京都市左京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市左京区"
+  },
+  {
+    "id": "kyoto-user-ewlj5",
+    "name": "ホテルモントレ京都 スパ トリニテ",
+    "prefecture": "京都府",
+    "city": "京都市中京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市中京区烏丸通三条下ル饅頭屋町604"
+  },
+  {
+    "id": "kyoto-user-ok4zny",
+    "name": "船岡温泉",
+    "prefecture": "京都府",
+    "city": "京都市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市北区紫野南舟岡町82-1"
+  },
+  {
+    "id": "kyoto-user-1sxahtu",
+    "name": "日の出湯",
+    "prefecture": "京都府",
+    "city": "京都市南区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市南区西九条唐橋町26-6"
+  },
+  {
+    "id": "kyoto-user-msitah",
+    "name": "風風の湯",
+    "prefecture": "京都府",
+    "city": "京都市西京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市西京区嵐山上河原町1"
+  },
+  {
+    "id": "kyoto-user-10mu8nw",
+    "name": "京都桂温泉 仁左衛門の湯",
+    "prefecture": "京都府",
+    "city": "京都市西京区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市西京区樫原盆山5"
+  },
+  {
+    "id": "kyoto-user-19bgwxs",
+    "name": "大黒湯",
+    "prefecture": "京都府",
+    "city": "京都市東山区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市東山区山城町284"
+  },
+  {
+    "id": "kyoto-user-bf0z8j",
+    "name": "源湯",
+    "prefecture": "京都府",
+    "city": "京都市上京区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/kyoto",
+    "note": "京都府京都市上京区北町580-6"
   }
 ];

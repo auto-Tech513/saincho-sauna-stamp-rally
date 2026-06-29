@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v12";
+const CACHE_NAME = "saincho-v13";
 const ASSETS = [
   "./",
   "./index.html",
@@ -13,6 +13,7 @@ const ASSETS = [
   "./icons/favicon-32.png",
   "./icons/favicon-16.png",
   "./assets/sauna-hero.png",
+  "./assets/achievement-mascot.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -30,6 +31,11 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const url = new URL(event.request.url);
+  if (url.pathname.startsWith("/api/")) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
   event.respondWith(
     fetch(event.request)
       .then((response) => {

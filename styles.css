@@ -626,9 +626,14 @@ a {
 
 .feature-option input {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   opacity: 0;
+  cursor: pointer;
+}
+
+.feature-option span {
   pointer-events: none;
 }
 
@@ -1056,6 +1061,97 @@ a {
   margin: 8px 0 14px;
 }
 
+.passport-scope-strip {
+  display: flex;
+  gap: 8px;
+  margin: 0 -14px 12px;
+  padding: 0 14px 2px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.passport-scope-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.pref-chip-mastered {
+  border-color: rgb(187 141 35 / 0.45);
+  box-shadow: inset 0 -3px 0 rgb(187 141 35 / 0.28);
+}
+
+.title-progress-panel {
+  margin-bottom: 12px;
+}
+
+.title-card {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  background:
+    linear-gradient(135deg, rgb(16 20 23 / 0.93), rgb(36 64 59 / 0.94)),
+    var(--night);
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.title-card img {
+  display: block;
+  width: 116px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  background: #fff8e9;
+}
+
+.title-card-body {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.title-kicker {
+  color: rgb(255 255 255 / 0.66);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.title-card strong {
+  font-size: 18px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.title-card p,
+.title-card em {
+  margin: 0;
+  color: rgb(255 255 255 / 0.72);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.title-progress {
+  height: 8px;
+  margin: 2px 0;
+  background: rgb(255 255 255 / 0.16);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.title-progress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  border-radius: inherit;
+}
+
 .stamp-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(132px, 1fr));
@@ -1184,6 +1280,7 @@ a {
   display: block;
   font-size: 30px;
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .pref-board {
@@ -1202,6 +1299,16 @@ a {
   background: white;
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.pref-progress-master {
+  color: white;
+  background: linear-gradient(135deg, var(--night), var(--gold));
+  border-color: rgb(187 141 35 / 0.4);
+}
+
+.pref-progress-master span {
+  color: rgb(255 255 255 / 0.76);
 }
 
 .pref-progress strong {
@@ -1263,6 +1370,14 @@ a {
   font-weight: 900;
 }
 
+.form-hint {
+  margin: -2px 0 0;
+  color: #52605b;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .add-form input,
 .add-form select,
 .add-form textarea {
@@ -1276,8 +1391,7 @@ a {
 }
 
 .add-form .feature-option input {
-  width: 1px;
-  min-height: 1px;
+  min-height: 100%;
   padding: 0;
   border: 0;
 }
@@ -1442,6 +1556,120 @@ a {
   line-height: 1.5;
 }
 
+.achievement-dialog {
+  width: min(calc(100% - 28px), 440px);
+  padding: 0;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+}
+
+.achievement-dialog::backdrop {
+  background:
+    radial-gradient(circle at 50% 30%, rgb(187 141 35 / 0.3), transparent 32%),
+    rgb(16 20 23 / 0.68);
+  backdrop-filter: blur(4px);
+}
+
+.achievement-card {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  text-align: center;
+  background:
+    linear-gradient(180deg, #fffaf0, #f4fbf6),
+    white;
+  border: 1px solid rgb(16 20 23 / 0.08);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgb(16 20 23 / 0.28);
+  animation: achievement-pop 320ms cubic-bezier(0.2, 0.9, 0.2, 1.15);
+  overflow: hidden;
+}
+
+.achievement-card::before,
+.achievement-card::after {
+  position: absolute;
+  top: 18px;
+  content: "〰";
+  color: rgb(10 143 138 / 0.35);
+  font-size: 30px;
+  font-weight: 900;
+  animation: steam-rise 1500ms ease-in-out infinite;
+}
+
+.achievement-card::before {
+  left: 22px;
+}
+
+.achievement-card::after {
+  right: 26px;
+  animation-delay: 240ms;
+}
+
+.achievement-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: #44514d;
+  background: rgb(16 20 23 / 0.06);
+  border-radius: 8px;
+}
+
+.achievement-close .icon-close {
+  width: 16px;
+  height: 16px;
+}
+
+.achievement-card img {
+  justify-self: center;
+  width: min(100%, 330px);
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  background: #fff8e9;
+}
+
+.achievement-card h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.achievement-card p {
+  margin: 0;
+  color: #52605b;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.achievement-card .primary-button {
+  width: 100%;
+  margin-top: 4px;
+}
+
+@keyframes achievement-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.94);
+  }
+}
+
+@keyframes steam-rise {
+  50% {
+    transform: translateY(-7px);
+    opacity: 0.58;
+  }
+}
+
 .toast {
   position: fixed;
   z-index: 40;
@@ -1568,6 +1796,30 @@ a {
     margin-bottom: 10px;
   }
 
+  .passport-scope-strip {
+    margin-inline: -12px;
+    padding-inline: 12px;
+  }
+
+  .title-card {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .title-card img {
+    width: 92px;
+  }
+
+  .title-card strong {
+    font-size: 16px;
+  }
+
+  .title-card p,
+  .title-card em {
+    font-size: 11px;
+  }
+
   .feature-filter-grid,
   .feature-picker-grid {
     display: grid;
@@ -1609,6 +1861,18 @@ a {
   .import-box {
     min-height: 42px;
     padding-inline: 10px;
+  }
+
+  .achievement-card {
+    padding: 12px;
+  }
+
+  .achievement-card img {
+    width: min(100%, 300px);
+  }
+
+  .achievement-card h2 {
+    font-size: 20px;
   }
 }
 
