@@ -1328,7 +1328,7 @@ a {
 
 @media (max-width: 420px) {
   .main {
-    padding-inline: 12px;
+    padding: 12px 12px 14px;
   }
 
   .install-card {
@@ -1363,12 +1363,22 @@ a {
   }
 
   .summary-band {
-    min-height: 226px;
-    padding: 16px;
+    min-height: 206px;
+    margin-bottom: 12px;
+    padding: 14px;
   }
 
   .summary-copy strong {
-    font-size: 40px;
+    font-size: 38px;
+  }
+
+  .summary-copy span:last-child {
+    font-size: 12px;
+  }
+
+  .progress-ring {
+    width: 68px;
+    height: 68px;
   }
 
   .hero-metrics {
@@ -1376,8 +1386,21 @@ a {
   }
 
   .hero-metrics div {
-    min-height: 54px;
+    min-height: 50px;
     padding: 8px;
+  }
+
+  .tool-band {
+    gap: 8px;
+    padding: 8px 0 10px;
+  }
+
+  .pref-strip {
+    margin-bottom: 8px;
+  }
+
+  .source-row {
+    margin-bottom: 10px;
   }
 
   .facility-card {
