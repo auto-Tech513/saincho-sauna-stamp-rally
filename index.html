@@ -8,6 +8,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="行ったサウナを押印して集める、スマホ優先のサウナスタンプラリー。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="サ印帳" />
+    <meta property="og:title" content="サ印帳 | サウナスタンプラリー" />
+    <meta property="og:description" content="行ったサウナを押印して集める、スマホ優先のサウナスタンプラリー。" />
+    <meta property="og:url" content="https://saincho-sauna-stamp-rally.pages.dev/" />
+    <meta property="og:image" content="https://saincho-sauna-stamp-rally.pages.dev/icons/saincho-icon-1024.png" />
+    <meta property="og:image:secure_url" content="https://saincho-sauna-stamp-rally.pages.dev/icons/saincho-icon-1024.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="サ印帳のアプリアイコン" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="サ印帳 | サウナスタンプラリー" />
+    <meta name="twitter:description" content="行ったサウナを押印して集める、スマホ優先のサウナスタンプラリー。" />
+    <meta name="twitter:image" content="https://saincho-sauna-stamp-rally.pages.dev/icons/saincho-icon-1024.png" />
+    <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/icons/saincho-icon-1024.png" />
     <title>サ印帳 | サウナスタンプラリー</title>
     <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="./icons/favicon-16.png" sizes="16x16" type="image/png" />
@@ -72,6 +89,9 @@
             <label class="search-box">
               <span aria-hidden="true"></span>
               <input id="searchInput" type="search" autocomplete="off" placeholder="サウナ名・県・特徴で検索" />
+              <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
+                <span class="icon-close" aria-hidden="true"></span>
+              </button>
             </label>
             <div class="segment" role="tablist" aria-label="表示切替">
               <button class="segment-active" type="button" data-filter="all">全部</button>
@@ -82,6 +102,13 @@
 
           <div class="pref-strip" id="prefStrip" aria-label="都道府県"></div>
           <div class="source-row" id="sourceRow"></div>
+          <details class="feature-filter-panel" id="featureFilterPanel">
+            <summary>
+              <span>特徴で絞り込み</span>
+              <strong id="featureFilterCount">指定なし</strong>
+            </summary>
+            <div class="feature-filter-grid" id="featureFilterGrid"></div>
+          </details>
           <div class="spotlight" id="spotlight"></div>
           <div class="facility-list" id="facilityList"></div>
         </section>
@@ -133,16 +160,10 @@
               <span>市区町村・エリア</span>
               <input name="city" maxlength="36" placeholder="例: 箱根町" />
             </label>
-            <label>
-              <span>特徴</span>
-              <select name="trait" required>
-                <option value="wood">薪・森</option>
-                <option value="water">水風呂</option>
-                <option value="urban">都市型</option>
-                <option value="onsen">温泉</option>
-                <option value="award">名店</option>
-              </select>
-            </label>
+            <fieldset class="feature-picker">
+              <legend>特徴（複数選択可）</legend>
+              <div class="feature-picker-grid" id="addFeatureGrid"></div>
+            </fieldset>
             <label>
               <span>メモ</span>
               <textarea name="note" maxlength="180" rows="4" placeholder="温度、水風呂、外気浴、再訪したい理由"></textarea>
