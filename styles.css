@@ -596,6 +596,7 @@ a {
 
 .feature-chip,
 .feature-option {
+  position: relative;
   display: inline-grid;
   place-items: center;
   min-height: 34px;
@@ -873,6 +874,7 @@ a {
 .primary-button,
 .secondary-button,
 .undo-button,
+.facility-share-button,
 .ghost-button,
 .danger-button,
 .import-box {
@@ -926,6 +928,20 @@ a {
   background: #101417;
   border-radius: 8px;
   font-weight: 900;
+}
+
+.facility-share-button {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  background: #101417;
+  border: 1px solid rgb(255 255 255 / 0.06);
+  box-shadow: 0 8px 16px rgb(16 20 23 / 0.12);
+}
+
+.spotlight-actions .facility-share-button {
+  grid-column: 1 / -1;
+  margin-top: 0;
 }
 
 .memo-panel {
@@ -1259,6 +1275,13 @@ a {
   border-radius: 8px;
 }
 
+.add-form .feature-option input {
+  width: 1px;
+  min-height: 1px;
+  padding: 0;
+  border: 0;
+}
+
 .add-form textarea {
   min-height: 104px;
   resize: vertical;
@@ -1556,7 +1579,10 @@ a {
   .feature-option {
     min-height: 38px;
     padding-inline: 8px;
+    font-size: 11px;
     white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: normal;
     text-align: center;
   }
 
@@ -1577,6 +1603,7 @@ a {
   .primary-button,
   .secondary-button,
   .undo-button,
+  .facility-share-button,
   .ghost-button,
   .danger-button,
   .import-box {

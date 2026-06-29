@@ -6896,5 +6896,1305 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/940/"
+  },
+  {
+    "id": "shiga-user-1ag3xyd",
+    "name": "BIWAKO SAUNA",
+    "prefecture": "滋賀県",
+    "city": "蒲生郡日野町",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県蒲生郡日野町西大路2168"
+  },
+  {
+    "id": "shiga-user-26n73f",
+    "name": "The 99F",
+    "prefecture": "滋賀県",
+    "city": "栗東市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県栗東市大橋2丁目8-14"
+  },
+  {
+    "id": "shiga-user-1nbsrf5",
+    "name": "SHIGARAKI SAUNA",
+    "prefecture": "滋賀県",
+    "city": "甲賀市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県甲賀市信楽町下朝宮457"
+  },
+  {
+    "id": "shiga-user-negeea",
+    "name": "ドガサウナ",
+    "prefecture": "滋賀県",
+    "city": "犬上郡多賀町",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県犬上郡多賀町藤瀬424"
+  },
+  {
+    "id": "shiga-user-wjucab",
+    "name": "サウナ&スパ ソレイユ 長浜",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市大辰巳町49"
+  },
+  {
+    "id": "shiga-user-1a6n533",
+    "name": "スパリゾート雄琴 あがりゃんせ",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市苗鹿3丁目9-5"
+  },
+  {
+    "id": "shiga-user-4llpcp",
+    "name": "大津温泉 おふろcaféびわこ座",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市月輪1丁目9-18"
+  },
+  {
+    "id": "shiga-user-11znma6",
+    "name": "MOTHER HAUS プライベートサウナ",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市伊香立南庄町1348-2"
+  },
+  {
+    "id": "shiga-user-1vk2426",
+    "name": "ワニベース 貸切りサウナ",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市和邇北浜390"
+  },
+  {
+    "id": "shiga-user-dz0wm7",
+    "name": "水口温泉つばきの湯",
+    "prefecture": "滋賀県",
+    "city": "甲賀市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県甲賀市水口町水口5572"
+  },
+  {
+    "id": "shiga-user-1ibupig",
+    "name": "守山 天然温泉 ほたるの湯",
+    "prefecture": "滋賀県",
+    "city": "守山市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県守山市吉身4丁目5-20"
+  },
+  {
+    "id": "shiga-user-11b4qo",
+    "name": "RS GLAMPING",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市今津町浜分38-11"
+  },
+  {
+    "id": "shiga-user-koynge",
+    "name": "永源寺温泉 八風の湯",
+    "prefecture": "滋賀県",
+    "city": "東近江市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県東近江市永源寺高野町352"
+  },
+  {
+    "id": "shiga-user-nxsjvz",
+    "name": "NEST琵琶湖",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市マキノ町新保146-1"
+  },
+  {
+    "id": "shiga-user-15kywts",
+    "name": "RESORT × SPA Future RESORT",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市名越町1016-4"
+  },
+  {
+    "id": "shiga-user-17n6tox",
+    "name": "GREEN SAUNA",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市坂本8丁目17-4465-20"
+  },
+  {
+    "id": "shiga-user-165k21d",
+    "name": "IZA takashima 湊",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市今津町名小路2丁目6-6"
+  },
+  {
+    "id": "shiga-user-1f8g7z5",
+    "name": "BY THE BIWAKO",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市新旭町饗庭4036-1"
+  },
+  {
+    "id": "shiga-user-123ecqy",
+    "name": "Resoreat Takashima",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市今津町浜分38-7"
+  },
+  {
+    "id": "shiga-user-elefe9",
+    "name": "極楽湯 彦根店",
+    "prefecture": "滋賀県",
+    "city": "彦根市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県彦根市西沼波町175-1"
+  },
+  {
+    "id": "shiga-user-c7snl7",
+    "name": "長命寺温泉 天葉の湯",
+    "prefecture": "滋賀県",
+    "city": "近江八幡市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県近江八幡市長命寺町68-1"
+  },
+  {
+    "id": "shiga-user-1m6zl2m",
+    "name": "都湯-ZEZE-",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市馬場3丁目12-21"
+  },
+  {
+    "id": "shiga-user-1a3j9be",
+    "name": "Seas Sauna HIRA",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市南小松1695-1"
+  },
+  {
+    "id": "shiga-user-5svv5m",
+    "name": "北近江リゾート 天然温泉 北近江の湯",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市高月町唐川89"
+  },
+  {
+    "id": "shiga-user-jdqhzu",
+    "name": "蒲生野の湯",
+    "prefecture": "滋賀県",
+    "city": "蒲生郡竜王町",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県蒲生郡竜王町山之上7104-1"
+  },
+  {
+    "id": "shiga-user-8e4ce4",
+    "name": "くつき温泉 てんくう",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市朽木柏341-3"
+  },
+  {
+    "id": "shiga-user-1e0rf80",
+    "name": "天然温泉 比良とぴあ",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市北比良1039-2"
+  },
+  {
+    "id": "shiga-user-134ghnk",
+    "name": "甲賀温泉 やっぽんぽんの湯",
+    "prefecture": "滋賀県",
+    "city": "甲賀市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県甲賀市土山町黒川1711"
+  },
+  {
+    "id": "shiga-user-1ptudij",
+    "name": "十二坊温泉ゆらら",
+    "prefecture": "滋賀県",
+    "city": "湖南市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県湖南市岩根678-28"
+  },
+  {
+    "id": "shiga-user-1foircl",
+    "name": "マキノ高原 温泉さらさ",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市マキノ町牧野931-3"
+  },
+  {
+    "id": "shiga-user-wjp1yg",
+    "name": "おごと温泉 湯元舘",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市苗鹿2-30-7"
+  },
+  {
+    "id": "shiga-user-bdr11j",
+    "name": "みずほの湯",
+    "prefecture": "滋賀県",
+    "city": "守山市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県守山市水保町1172-1"
+  },
+  {
+    "id": "shiga-user-1frphtk",
+    "name": "延命湯",
+    "prefecture": "滋賀県",
+    "city": "東近江市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県東近江市八日市本町11-9"
+  },
+  {
+    "id": "shiga-user-pn41xy",
+    "name": "宝船温泉 湯元ことぶき",
+    "prefecture": "滋賀県",
+    "city": "高島市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県高島市安曇川町下小田24"
+  },
+  {
+    "id": "shiga-user-17bq8py",
+    "name": "IZA近江舞子",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市南小松1054-3"
+  },
+  {
+    "id": "shiga-user-1yhm5oa",
+    "name": "和乃リトリートひといき",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市宮前町10-11"
+  },
+  {
+    "id": "shiga-user-1tzv82a",
+    "name": "おうみウェーブ",
+    "prefecture": "滋賀県",
+    "city": "米原市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県米原市宇賀野1364-1（神照寺周辺）"
+  },
+  {
+    "id": "shiga-user-1plgjyn",
+    "name": "グランドメルキュール琵琶湖リゾート＆スパ",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市大島町38"
+  },
+  {
+    "id": "shiga-user-19fsx83",
+    "name": "おごと温泉 びわこ緑水亭",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市雄琴6丁目1-6"
+  },
+  {
+    "id": "shiga-user-1y0fohl",
+    "name": "琵琶湖ホテル",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市浜町2-40"
+  },
+  {
+    "id": "shiga-user-1hisq4o",
+    "name": "琵琶湖マリオットホテル",
+    "prefecture": "滋賀県",
+    "city": "守山市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県守山市今浜町十軒家2876"
+  },
+  {
+    "id": "shiga-user-6r05kp",
+    "name": "里湯昔話 雄山荘",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市雄琴1丁目9-28"
+  },
+  {
+    "id": "shiga-user-140ucsy",
+    "name": "蒼の湖邸 BIWAFRONT HIKONE",
+    "prefecture": "滋賀県",
+    "city": "彦根市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県彦根市松原町1435-91"
+  },
+  {
+    "id": "shiga-user-g1h0se",
+    "name": "グリーンホテルYes長浜みなと館",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市港町2-28"
+  },
+  {
+    "id": "shiga-user-qy4sgq",
+    "name": "琵琶湖湯",
+    "prefecture": "滋賀県",
+    "city": "長浜市",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "外気浴あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県長浜市神前町5-18"
+  },
+  {
+    "id": "shiga-user-1dhrjdx",
+    "name": "湯トピアきりしま",
+    "prefecture": "滋賀県",
+    "city": "大津市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/shiga",
+    "note": "滋賀県大津市中央1丁目7-26"
+  },
+  {
+    "id": "osaka-user-whq1vo",
+    "name": "大阪サウナDESSE",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区南船場3丁目6-18 ケーズビル心斎橋 4階"
+  },
+  {
+    "id": "osaka-user-d9b62s",
+    "name": "ニュージャパン梅田 (カプセルイン大阪)",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区堂山町9-5"
+  },
+  {
+    "id": "osaka-user-1uoehl6",
+    "name": "サウナ＆スパ カプセルホテル 大東洋",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区中崎西2丁目1-9"
+  },
+  {
+    "id": "osaka-user-1w01akt",
+    "name": "サウナ＆カプセル アムザ",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区千日前2丁目9-17"
+  },
+  {
+    "id": "osaka-user-1j28a4y",
+    "name": "SAUNA OOO OSAKA",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区西心斎橋2丁目1-18 3F"
+  },
+  {
+    "id": "osaka-user-bc4jgf",
+    "name": "真大阪サウナ",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区西心斎橋1丁目15-13 アートマスターズ 心斎橋ビル 4F"
+  },
+  {
+    "id": "osaka-user-1m1sc4u",
+    "name": "宇宙.サウナ 寺田町店",
+    "prefecture": "大阪府",
+    "city": "大阪市天王寺区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市天王寺区大道4丁目10-17 新井ビル 4F"
+  },
+  {
+    "id": "osaka-user-fhxa4o",
+    "name": "天然温泉 なにわの湯",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区長柄西1丁目7-31"
+  },
+  {
+    "id": "osaka-user-u0b57v",
+    "name": "KUDOCHI sauna 大阪心斎橋店",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区東心斎橋1丁目15-15 いちご心斎橋ビル 1階"
+  },
+  {
+    "id": "osaka-user-1lg1t19",
+    "name": "個室サウナとと 東梅田店",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区西天満6丁目9-17 西天満センタ 2F"
+  },
+  {
+    "id": "osaka-user-1eyy5qr",
+    "name": "個室サウナとと 南船場店",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区南船場2丁目6-16 Yesビル 5階"
+  },
+  {
+    "id": "osaka-user-1b160lq",
+    "name": "SAUNA Pod 槃",
+    "prefecture": "大阪府",
+    "city": "大阪市西区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市西区立売堀6丁目7-11"
+  },
+  {
+    "id": "osaka-user-49wea8",
+    "name": "入船温泉",
+    "prefecture": "大阪府",
+    "city": "大阪市西成区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市西成区萩之茶屋1丁目6-3"
+  },
+  {
+    "id": "osaka-user-1065z3t",
+    "name": "SPAWORLD HOTEL&RESORT",
+    "prefecture": "大阪府",
+    "city": "大阪市浪速区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市浪速区恵美須東3丁目4-24"
+  },
+  {
+    "id": "osaka-user-xqq5cz",
+    "name": "辰巳温泉",
+    "prefecture": "大阪府",
+    "city": "大阪市住吉区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市住吉区大領5丁目10-11"
+  },
+  {
+    "id": "osaka-user-1ek1v75",
+    "name": "M's sauna",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区曾根崎新地1丁目11-20 B1"
+  },
+  {
+    "id": "osaka-user-88phe5",
+    "name": "天翔SAUNA",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区豊崎5丁目8-2 扶栄ビル 102号"
+  },
+  {
+    "id": "osaka-user-1p6138r",
+    "name": "光の温泉メディカルサウナ",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区上汐2丁目3-6 上汐中央ビル 402"
+  },
+  {
+    "id": "osaka-user-13126t4",
+    "name": "eni.sauna",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区松屋町住吉6-26 eninal MACCHAMACHI 3F"
+  },
+  {
+    "id": "osaka-user-7xb7zf",
+    "name": "MENTE 梅田店",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区茶屋町15-9 XROSSchayamachi S 3 1F"
+  },
+  {
+    "id": "osaka-user-1su3rxw",
+    "name": "MENTE はなれ福島店",
+    "prefecture": "大阪府",
+    "city": "大阪市福島区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市福島区福島3丁目13-12"
+  },
+  {
+    "id": "osaka-user-3fiqq5",
+    "name": "会員制プライベートサウナHAAAVE.",
+    "prefecture": "大阪府",
+    "city": "大阪市西区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市西区南堀江1丁目25-1 Wave on Horie Tower 2階"
+  },
+  {
+    "id": "osaka-user-1wcyont",
+    "name": "道頓堀サウナ",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区島の内2丁目17-17-4"
+  },
+  {
+    "id": "osaka-user-2mx5ie",
+    "name": "わがまちサウナ 大阪野田",
+    "prefecture": "大阪府",
+    "city": "大阪市福島区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市福島区大開1丁目1-4 TAKUYOビル 4階"
+  },
+  {
+    "id": "osaka-user-120inyk",
+    "name": "グランドサウナ心斎橋",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区西心斎橋2丁目8-12"
+  },
+  {
+    "id": "osaka-user-18sjb5w",
+    "name": "ユートピア白玉温泉",
+    "prefecture": "大阪府",
+    "city": "大阪市城東区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市城東区蒲生2丁目7-36"
+  },
+  {
+    "id": "osaka-user-z0wkgr",
+    "name": "ヘルシー温泉タテバ",
+    "prefecture": "大阪府",
+    "city": "大阪市浪速区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市浪速区桜川2丁目14-19"
+  },
+  {
+    "id": "osaka-user-11wzcxk",
+    "name": "天然露天温泉 スパスミノエ",
+    "prefecture": "大阪府",
+    "city": "大阪市住之江区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市住之江区泉1丁目1-82"
+  },
+  {
+    "id": "osaka-user-1tzg1zl",
+    "name": "湯源郷 太平のゆ なんば店",
+    "prefecture": "大阪府",
+    "city": "大阪市浪速区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市浪速区敷津東2丁目2-8"
+  },
+  {
+    "id": "osaka-user-73bcpd",
+    "name": "鶴見緑地湯元 水春",
+    "prefecture": "大阪府",
+    "city": "大阪市鶴見区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市鶴見区緑地公園1-37"
+  },
+  {
+    "id": "osaka-user-vayout",
+    "name": "空庭温泉 OSAKA BAY TOWER",
+    "prefecture": "大阪府",
+    "city": "大阪市港区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市港区弁天1丁目2-3"
+  },
+  {
+    "id": "osaka-user-1g93dki",
+    "name": "うめきた温泉 蓮 Wellbeing Park",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区大深町5-54 グラングリーン大阪南館 3・4階"
+  },
+  {
+    "id": "osaka-user-1ggz25r",
+    "name": "天然温泉 ひなたの湯 新大阪店",
+    "prefecture": "大阪府",
+    "city": "大阪市淀川区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市淀川区三国本町1丁目6-15 ドルチェヴィータ新大阪 9F"
+  },
+  {
+    "id": "osaka-user-ti6zcg",
+    "name": "天然温泉ひなたの湯 大阪ユニバーサルベイサイド",
+    "prefecture": "大阪府",
+    "city": "大阪市此花区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市此花区春日出南3丁目2-27"
+  },
+  {
+    "id": "osaka-user-31rg0y",
+    "name": "カプセルホテル J・garden新大阪",
+    "prefecture": "大阪府",
+    "city": "大阪市淀川区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市淀川区東三国4-2-13"
+  },
+  {
+    "id": "osaka-user-u57sgy",
+    "name": "HOTEL Cargo Shinsaibashi",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区博労町2-6-3"
+  },
+  {
+    "id": "osaka-user-1o8217c",
+    "name": "キャビン＆カプセルホテル J-SHIP大阪難波",
+    "prefecture": "大阪府",
+    "city": "大阪市浪速区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市浪速区湊町2-2-14"
+  },
+  {
+    "id": "osaka-user-17du82o",
+    "name": "ビジネス＆カプセルホテル サンプレイン長堀",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区東心斎橋1丁目10-3"
+  },
+  {
+    "id": "osaka-user-1su5wnw",
+    "name": "Hotel atarayo Osaka",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区南久宝寺町3丁目2-8"
+  },
+  {
+    "id": "osaka-user-23pvm0",
+    "name": "HOTEL THE ROCK",
+    "prefecture": "大阪府",
+    "city": "大阪市西区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市西区立売堀1丁目9-35"
+  },
+  {
+    "id": "osaka-user-cwbbqx",
+    "name": "リーベルホテル大阪",
+    "prefecture": "大阪府",
+    "city": "大阪市此花区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市此花区桜島1丁目1-35"
+  },
+  {
+    "id": "osaka-user-11wr484",
+    "name": "屋上の北欧サウナ店 LOMA",
+    "prefecture": "大阪府",
+    "city": "大阪市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市中央区松屋町7-17 3F"
+  },
+  {
+    "id": "osaka-user-1vhar4s",
+    "name": "サウナ＆スパ カプセルホテル DAITOYO LADIES",
+    "prefecture": "大阪府",
+    "city": "大阪市北区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市北区中崎西2丁目1-9 観光ビル「大東洋」 B1"
+  },
+  {
+    "id": "osaka-user-1c8nzmu",
+    "name": "なにわ健康ランド 湯〜トピア",
+    "prefecture": "大阪府",
+    "city": "東大阪市",
+    "trait": "award",
+    "tags": [
+      "ユーザー指定追加",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府東大阪市長堂3丁目4-21"
+  },
+  {
+    "id": "osaka-user-1n2rhb7",
+    "name": "天然温泉 延羽の湯 鶴橋店",
+    "prefecture": "大阪府",
+    "city": "大阪市東成区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府大阪市東成区玉津3丁目13-41 1F"
+  },
+  {
+    "id": "osaka-user-1llt0xt",
+    "name": "天然温泉 延羽の湯 本店 (羽曳野店)",
+    "prefecture": "大阪府",
+    "city": "羽曳野市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府羽曳野市広瀬186-3"
+  },
+  {
+    "id": "osaka-user-1jmp4os",
+    "name": "夢の公衆浴場 五色",
+    "prefecture": "大阪府",
+    "city": "豊中市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府豊中市庄内栄町3丁目24-10"
+  },
+  {
+    "id": "osaka-user-4wodts",
+    "name": "八尾グランドホテル",
+    "prefecture": "大阪府",
+    "city": "八尾市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/osaka",
+    "note": "大阪府八尾市八尾木北5丁目101"
   }
 ];

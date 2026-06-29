@@ -216,6 +216,7 @@ function bindEvents() {
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
+    if (button.dataset.action === "share-facility") shareFacility(facility);
   });
 
   el.prefBoard.addEventListener("click", (event) => {
@@ -447,6 +448,7 @@ function renderSpotlight() {
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
       </div>
     </article>
   `;
@@ -487,6 +489,7 @@ function renderFacilityCard(facility) {
         <p class="facility-meta">${escapeHtml(meta)}</p>
         <div class="tag-row">${tags}</div>
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
+        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
         ${renderMemoPanel(facility)}
       </div>
     </article>
@@ -516,6 +519,7 @@ function renderPassport() {
         <p class="stamp-title">${escapeHtml(facility.name)}</p>
         <span class="stamp-date">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
+        <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
         ${memo ? `<button class="tiny-share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
         ${visited ? `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
       </article>
@@ -698,6 +702,20 @@ function shareFacilityMemo(facility) {
   ].filter(Boolean).join("\n");
   const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
   window.open(url, "_blank", "noopener,noreferrer");
+}
+
+function shareFacility(facility) {
+  const detail = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
+  const tags = getFacilityFeatures(facility).slice(0, 4);
+  const text = [
+    `サ印帳でおすすめ: ${facility.name}`,
+    detail,
+    tags.length ? `特徴: ${tags.join("・")}` : "",
+    "#サ印帳 #サウナ",
+  ].filter(Boolean).join("\n");
+  const params = new URLSearchParams({ text });
+  params.set("url", facility.sourceUrl || "https://saincho-sauna-stamp-rally.pages.dev/");
+  window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
 function getFilteredFacilities() {
