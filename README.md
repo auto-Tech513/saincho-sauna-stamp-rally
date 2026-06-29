@@ -10,10 +10,10 @@
 
 ## PWA / アイコン
 
-- `manifest.webmanifest` は `サ印帳` のアプリ名、standalone表示、192px/512px PNGアイコン、maskable対応を含みます。
+- `manifest.webmanifest` は `サ印帳` のアプリ名、standalone表示、192px/512px/1024px PNGアイコンを含みます。
 - iOS向けに `apple-touch-icon.png` と `apple-mobile-web-app-*` メタタグを追加しました。
-- ホーム画面用アイコンは添付参考の「余白・手描き線・サウナ帽・遊びのある温度感」を分析し、サウナ帽のキャラクター、押印、サ印帳カードを組み合わせた軽い印象のSVG/PNGに刷新しました。
-- `sw.js` は `saincho-v8` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像をキャッシュします。
+- ホーム画面用アイコンは添付PNGを `icon-source.png` として保持し、縦横比を歪ませない中央配置の正方形化を行ったうえで各サイズへ展開しています。
+- `sw.js` は `saincho-v9` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像をキャッシュします。
 
 ## 参照サイト分析
 
