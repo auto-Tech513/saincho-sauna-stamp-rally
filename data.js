@@ -5235,7 +5235,7 @@ export const SEED_FACILITIES = [
     "id": "st-hyogo-4912",
     "name": "ルネサンスビエラ明舞24",
     "prefecture": "兵庫県",
-    "city": "",
+    "city": "神戸市垂水区",
     "trait": "award",
     "tags": [
       "SaunaTime掲載",
@@ -5243,13 +5243,14 @@ export const SEED_FACILITIES = [
       "注目"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4912/"
+    "sourceUrl": "https://saunatime.jp/saunas/4912/",
+    "note": "兵庫県神戸市垂水区狩口台1-16-2 ビエラ明舞 1・2階"
   },
   {
     "id": "st-hyogo-4919",
     "name": "ルネサンス伊丹24",
     "prefecture": "兵庫県",
-    "city": "",
+    "city": "伊丹市",
     "trait": "award",
     "tags": [
       "SaunaTime掲載",
@@ -5257,13 +5258,14 @@ export const SEED_FACILITIES = [
       "注目"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4919/"
+    "sourceUrl": "https://saunatime.jp/saunas/4919/",
+    "note": "兵庫県伊丹市東有岡1-20"
   },
   {
     "id": "st-hyogo-4675",
     "name": "ルネサンス神戸",
     "prefecture": "兵庫県",
-    "city": "",
+    "city": "神戸市兵庫区",
     "trait": "award",
     "tags": [
       "SaunaTime掲載",
@@ -5271,7 +5273,8 @@ export const SEED_FACILITIES = [
       "注目"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4675/"
+    "sourceUrl": "https://saunatime.jp/saunas/4675/",
+    "note": "兵庫県神戸市兵庫区駅前通1-2-1"
   },
   {
     "id": "st-nara-2847",
@@ -8804,5 +8807,855 @@ export const SEED_FACILITIES = [
     "source": "指定リスト/地域照合",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市上京区北町580-6"
+  },
+  {
+    "id": "hyogo-user-yru0ya",
+    "name": "神戸サウナ＆スパ",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区下山手通2-2-10"
+  },
+  {
+    "id": "hyogo-user-14m6zk6",
+    "name": "神戸レディススパ",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区下山手通2-2-10 2〜4階"
+  },
+  {
+    "id": "hyogo-user-1r3y3aw",
+    "name": "神戸クアハウス",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区二宮町3-10-15（営業状況要確認）",
+    "status": "verify"
+  },
+  {
+    "id": "hyogo-user-1il2ira",
+    "name": "神戸ハーバーランド温泉 万葉倶楽部",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区東川崎町1-3-3"
+  },
+  {
+    "id": "hyogo-user-1ou3tfn",
+    "name": "サウナリゾートオリエンタル神戸",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区港島1-1-6 センチュリオンホテルヴィンテージ神戸 2F（別表記: 中央区港島中町6-11-9）"
+  },
+  {
+    "id": "hyogo-user-10dqxag",
+    "name": "神戸みなと温泉 蓮",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区新港町1-1"
+  },
+  {
+    "id": "hyogo-user-1ejkw5g",
+    "name": "天然温泉 あぐろの湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市長田区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市長田区南駒栄町1-6"
+  },
+  {
+    "id": "hyogo-user-1pze2ds",
+    "name": "SPA専 太平のゆ",
+    "prefecture": "兵庫県",
+    "city": "神戸市垂水区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市垂水区海岸通2166-2"
+  },
+  {
+    "id": "hyogo-user-j7o6wd",
+    "name": "ジェームス山天然温泉 月の湯舟",
+    "prefecture": "兵庫県",
+    "city": "神戸市垂水区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市垂水区青山台7-4-46"
+  },
+  {
+    "id": "hyogo-user-1n3wo72",
+    "name": "有馬街道温泉 すずらんの湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市北区山田町小部妙賀11-1"
+  },
+  {
+    "id": "hyogo-user-1dy2c1k",
+    "name": "太山寺温泉 なでしこの湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市西区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市西区伊川谷町前開270-1"
+  },
+  {
+    "id": "hyogo-user-ttbeet",
+    "name": "有馬温泉 太閤の湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市北区有馬町池の尻292-2"
+  },
+  {
+    "id": "hyogo-user-16k6kzu",
+    "name": "兵衛向陽閣",
+    "prefecture": "兵庫県",
+    "city": "神戸市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市北区有馬町1904"
+  },
+  {
+    "id": "hyogo-user-1790s0s",
+    "name": "月光園 鴻朧館",
+    "prefecture": "兵庫県",
+    "city": "神戸市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市北区有馬町318"
+  },
+  {
+    "id": "hyogo-user-1w5g7q9",
+    "name": "あさひ湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市兵庫区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市兵庫区駿河町2-1-16"
+  },
+  {
+    "id": "hyogo-user-7i92nv",
+    "name": "萬歳湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市兵庫区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市兵庫区大開通8-2-19"
+  },
+  {
+    "id": "hyogo-user-1c0ebbj",
+    "name": "湯あそびひろば 森温泉",
+    "prefecture": "兵庫県",
+    "city": "神戸市東灘区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市東灘区森南町1-15-4"
+  },
+  {
+    "id": "hyogo-user-n0qmv5",
+    "name": "みのたにグリーンスポーツホテル 銀河の湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市北区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市北区山田町原野1-1"
+  },
+  {
+    "id": "hyogo-user-1kn9ytm",
+    "name": "チムジルバンスパ神戸",
+    "prefecture": "兵庫県",
+    "city": "神戸市須磨区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市須磨区車奥中ノ尾772-4"
+  },
+  {
+    "id": "hyogo-user-xlbjlg",
+    "name": "おでんサウナ",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区元町通3丁目11-10 4階・5階"
+  },
+  {
+    "id": "hyogo-user-15h08za",
+    "name": "ホテルクラウンパレス神戸",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区東川崎町1-3-5"
+  },
+  {
+    "id": "hyogo-user-hegv6a",
+    "name": "つかさ湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市中央区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市中央区下山手通8-1-24"
+  },
+  {
+    "id": "hyogo-user-17owoba",
+    "name": "ときわ湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市東灘区",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市東灘区御影本町8-9-19"
+  },
+  {
+    "id": "hyogo-user-16v9p1",
+    "name": "恋野温泉うはらの湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市東灘区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市東灘区住吉東町4-6-5"
+  },
+  {
+    "id": "hyogo-user-1j3sjca",
+    "name": "第一平和温泉 龍の湯",
+    "prefecture": "兵庫県",
+    "city": "神戸市長田区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "塩サウナ",
+      "水風呂あり",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市長田区四番町1-11-6"
+  },
+  {
+    "id": "hyogo-user-1m40n7t",
+    "name": "宮島温泉",
+    "prefecture": "兵庫県",
+    "city": "神戸市長田区",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市長田区三番町2-1-3"
+  },
+  {
+    "id": "hyogo-user-egdok4",
+    "name": "菊水さうな",
+    "prefecture": "兵庫県",
+    "city": "神戸市兵庫区",
+    "trait": "wood",
+    "tags": [
+      "ユーザー指定追加",
+      "薪サウナ",
+      "個室",
+      "貸切可",
+      "セルフロウリュ",
+      "外気あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県神戸市兵庫区烏原町ヌク谷11番地 菊水ゴルフクラブ内"
+  },
+  {
+    "id": "hyogo-user-cz5z9x",
+    "name": "蓬川温泉 みずきの湯",
+    "prefecture": "兵庫県",
+    "city": "尼崎市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県尼崎市蓬川町295-3"
+  },
+  {
+    "id": "hyogo-user-19g7bpz",
+    "name": "湯の華廊",
+    "prefecture": "兵庫県",
+    "city": "尼崎市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県尼崎市塚口本町4-8-12"
+  },
+  {
+    "id": "hyogo-user-1mmz5l4",
+    "name": "湯あそびひろば ふくずみ温泉",
+    "prefecture": "兵庫県",
+    "city": "尼崎市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県尼崎市水堂町1-4-8"
+  },
+  {
+    "id": "hyogo-user-1ryh2b6",
+    "name": "天然温泉 蓬莱湯",
+    "prefecture": "兵庫県",
+    "city": "尼崎市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県尼崎市道意町2-21-2"
+  },
+  {
+    "id": "hyogo-user-fvv4rv",
+    "name": "三田天然温泉 寿ノ湯",
+    "prefecture": "兵庫県",
+    "city": "三田市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県三田市富士が丘5-2"
+  },
+  {
+    "id": "hyogo-user-1lou3ff",
+    "name": "美健SPA 湯櫻（SPAキセラ川西）",
+    "prefecture": "兵庫県",
+    "city": "川西市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県川西市火打1-16-6"
+  },
+  {
+    "id": "hyogo-user-jp9ytn",
+    "name": "極楽湯 川西店",
+    "prefecture": "兵庫県",
+    "city": "川西市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県川西市中央町14-6"
+  },
+  {
+    "id": "hyogo-user-toefox",
+    "name": "SAUNA STATION",
+    "prefecture": "兵庫県",
+    "city": "川辺郡猪名川町",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可",
+      "外気あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県川辺郡猪名川町広根西ヲコダ14-11-3"
+  },
+  {
+    "id": "hyogo-user-ffu317",
+    "name": "潮芦屋温泉 SPA水春",
+    "prefecture": "兵庫県",
+    "city": "芦屋市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県芦屋市海洋町10-2"
+  },
+  {
+    "id": "hyogo-user-1u5a0n5",
+    "name": "private sauna苦楽園",
+    "prefecture": "兵庫県",
+    "city": "西宮市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県西宮市名次町5-7"
+  },
+  {
+    "id": "hyogo-user-fxh8ab",
+    "name": "天然温泉 双葉温泉",
+    "prefecture": "兵庫県",
+    "city": "西宮市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県西宮市分銅町2-28"
+  },
+  {
+    "id": "hyogo-user-1myv6gj",
+    "name": "CLUB NISHINOMIYA",
+    "prefecture": "兵庫県",
+    "city": "西宮市",
+    "trait": "urban",
+    "tags": [
+      "ユーザー指定追加"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県西宮市今津港町1-26"
+  },
+  {
+    "id": "hyogo-user-cz61n0",
+    "name": "名湯 宝乃湯",
+    "prefecture": "兵庫県",
+    "city": "宝塚市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県宝塚市中筋3-3-1"
+  },
+  {
+    "id": "hyogo-user-ch6pzy",
+    "name": "itadaki Sauna19",
+    "prefecture": "兵庫県",
+    "city": "宝塚市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可",
+      "外気あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県宝塚市雲雀丘山手2-10-11 HIBARI HILLS内"
+  },
+  {
+    "id": "hyogo-user-1ce529a",
+    "name": "道の駅よかわ（吉川温泉よかたん）",
+    "prefecture": "兵庫県",
+    "city": "三木市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県三木市吉川町みなぎ台2-5"
+  },
+  {
+    "id": "hyogo-user-1s3mclq",
+    "name": "天然温泉 湯庵",
+    "prefecture": "兵庫県",
+    "city": "三木市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県三木市別所町西這田566-2"
+  },
+  {
+    "id": "hyogo-user-46nfyf",
+    "name": "ネスタリゾート神戸 天然温泉 十界の湯",
+    "prefecture": "兵庫県",
+    "city": "三木市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県三木市細川町垂穂894-60"
+  },
+  {
+    "id": "hyogo-user-1rz9ggw",
+    "name": "Prus Sauna 兵庫姫路店",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市岡田150-4 2F"
+  },
+  {
+    "id": "hyogo-user-dkpa17",
+    "name": "private sauna Re:set",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市野里304"
+  },
+  {
+    "id": "hyogo-user-iezsww",
+    "name": "森の湯",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市南駅前町23"
+  },
+  {
+    "id": "hyogo-user-1uphg1v",
+    "name": "姫路キヤッスルグランヴィリオホテル 華楽の湯",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市三左衛門堀西の町158"
+  },
+  {
+    "id": "hyogo-user-jtgohw",
+    "name": "新鶴湯",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市広畑区東新町2-21"
+  },
+  {
+    "id": "hyogo-user-1gm9be0",
+    "name": "SAUNA & SPA 花の湯 HANAKITA",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "water",
+    "tags": [
+      "ユーザー指定追加",
+      "ドライサウナ",
+      "水風呂あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市増位新町1-6"
+  },
+  {
+    "id": "hyogo-user-3000pe",
+    "name": "SETRE SAUNA（セトレサウナ）",
+    "prefecture": "兵庫県",
+    "city": "姫路市",
+    "trait": "custom",
+    "tags": [
+      "ユーザー指定追加",
+      "個室",
+      "貸切可",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県姫路市広嶺山224-26 セトレハイランドヴィラ姫路"
+  },
+  {
+    "id": "hyogo-user-1r99kvc",
+    "name": "アクアイグニス淡路島",
+    "prefecture": "兵庫県",
+    "city": "淡路市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり",
+      "宿泊可"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県淡路市夢舞台2-28"
+  },
+  {
+    "id": "hyogo-user-1tlx8b4",
+    "name": "パルシェ香りの館・香りの湯",
+    "prefecture": "兵庫県",
+    "city": "淡路市",
+    "trait": "onsen",
+    "tags": [
+      "ユーザー指定追加",
+      "温泉付き",
+      "外気あり",
+      "サ飯あり"
+    ],
+    "source": "指定リスト/地域照合",
+    "sourceUrl": "https://sauna-ikitai.com/hyogo",
+    "note": "兵庫県淡路市尾崎3025-1"
   }
 ];

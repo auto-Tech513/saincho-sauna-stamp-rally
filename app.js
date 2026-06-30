@@ -690,7 +690,7 @@ function renderStats() {
     ["行きたい", `${wishlistTotal}`],
     ["称号", currentTitle],
   ].map(([label, value]) => `
-    <div class="stat-box">
+    <div class="stat-box ${label === "称号" ? "stat-box-title" : ""}">
       <span>${label}</span>
       <strong>${value}</strong>
     </div>
