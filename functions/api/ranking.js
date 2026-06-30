@@ -1,6 +1,6 @@
 const KV_KEY = "ranking:v1";
 const MAX_RANKING_ENTRIES = 5000;
-const PUBLIC_LIMIT = 100;
+const PUBLIC_LIMIT = 10;
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
   { count: 1, title: "はじめの一湯" },

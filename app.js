@@ -9,36 +9,40 @@ const SHARED_FACILITIES_ENDPOINT = "./api/facilities";
 const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
 const RANKING_REFRESH_MS = 10000;
-const AMAZON_ASSOCIATE_TAG = "";
+const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 
 const PRODUCT_RECOMMENDATIONS = [
   {
     category: "サウナハット",
     title: "今治タオル系サウナハット",
-    proof: "Amazon #1高評価 4.5 / 773件を確認",
+    proof: "Amazon 4.5 / 773件を確認、楽天はレビュー評価順",
     reason: "髪の乾燥とのぼせ対策。まず1つ買うなら定番のタオル地。",
-    url: "https://www.amazon.co.jp/dp/B0BJZYDL1C",
+    amazonUrl: "https://www.amazon.co.jp/dp/B0BJZYDL1C",
+    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B5%25E3%2582%25A6%25E3%2583%258A%25E3%2583%258F%25E3%2583%2583%25E3%2583%2588%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
   },
   {
     category: "サウナマット",
     title: "GoodKuru 折りたたみマット系",
-    proof: "Amazon's Choice、4.2 / 1,228件を確認",
+    proof: "Amazon 4.2 / 1,230件を確認、楽天はレビュー評価順",
     reason: "共用マットが気になる人向け。小さく畳めて持ち歩きやすい。",
-    url: "https://www.amazon.co.jp/dp/B0B1SYFH2W",
+    amazonUrl: "https://www.amazon.co.jp/dp/B0B1SYFH2W",
+    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B5%25E3%2582%25A6%25E3%2583%258A%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
   },
   {
     category: "水分補給",
     title: "ポカリスエット 500ml×24本",
-    proof: "Amazon 4.5 / 5,419件、直近8,000点以上を確認",
+    proof: "Amazon 4.5 / 5,453件を確認、楽天はレビュー評価順",
     reason: "サウナ前後の定番補給。まとめ買いで切らしにくい。",
-    url: "https://www.amazon.co.jp/dp/B000K82WFI",
+    amazonUrl: "https://www.amazon.co.jp/dp/B000K82WFI",
+    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259D%25E3%2582%25AB%25E3%2583%25AA%25E3%2582%25B9%25E3%2582%25A8%25E3%2583%2583%25E3%2583%2588%2520500ml%252024%25E6%259C%25AC%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
   },
   {
     category: "オロポ",
     title: "オロナミンC 120ml×30本",
-    proof: "Amazon 4.5 / 4,231件、直近100点以上を確認",
+    proof: "Amazon 4.5 / 4,231件を確認、楽天はレビュー評価順",
     reason: "ポカリと合わせてオロポ用。施設帰りのご褒美にも強い。",
-    url: "https://www.amazon.co.jp/dp/B08JCZ34K3",
+    amazonUrl: "https://www.amazon.co.jp/dp/B08JCZ34K3",
+    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AA%25E3%2583%25AD%25E3%2583%258A%25E3%2583%259F%25E3%2583%25B3C%252030%25E6%259C%25AC%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
   },
 ];
 
@@ -811,22 +815,26 @@ function renderLeaderboard() {
       updatedAt: new Date().toISOString(),
     }
     : null;
-  const entries = leaderboardEntries.length ? leaderboardEntries : (localEntry ? [localEntry] : []);
+  const entries = mergeRankingEntries(leaderboardEntries, localEntry);
   const sorted = [...entries]
     .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
-    .slice(0, 20);
+    .slice(0, 10);
   const ownRank = localEntry ? sorted.findIndex((entry) => entry.id === profile.id) + 1 : 0;
   const entryAbove = ownRank > 1 ? sorted[ownRank - 2] : null;
   const gapToAbove = entryAbove ? Math.max(1, entryAbove.stamps - visitedTotal + 1) : 0;
+  const topTenEdge = sorted.length >= 10 ? sorted[9] : null;
+  const gapToTopTen = topTenEdge && !ownRank ? Math.max(1, topTenEdge.stamps - visitedTotal + 1) : 0;
 
   if (!isProfileComplete()) {
-    el.leaderboardSummary.textContent = "登録するとサ印数がランキングに同期されます。メールは表示されません。";
+    el.leaderboardSummary.textContent = "登録すると上位10名ランキングに同期されます。メールは表示されません。";
   } else if (rankingConfigured) {
     el.leaderboardSummary.textContent = ownRank > 1
       ? `あなたは${ownRank}位。あと${gapToAbove}湯で${ownRank - 1}位が見えます。`
       : ownRank === 1
         ? `あなたは1位。${visitedTotal}湯で首位キープ中です。`
-        : `${visitedTotal}湯で同期中`;
+        : gapToTopTen
+          ? `上位10名まであと${gapToTopTen}湯。${visitedTotal}湯で追走中です。`
+          : `${visitedTotal}湯で同期中`;
   } else {
     el.leaderboardSummary.textContent = "共有ランキングは未接続です。登録内容は端末内で保持しています。";
   }
@@ -858,7 +866,10 @@ function renderShopPanel() {
       <h4>${escapeHtml(item.title)}</h4>
       <p>${escapeHtml(item.reason)}</p>
       <em>${escapeHtml(item.proof)}</em>
-      <a href="${escapeAttr(buildAmazonUrl(item.url))}" target="_blank" rel="nofollow sponsored noreferrer">Amazonで見る</a>
+      <div class="shop-card-actions">
+        <a href="${escapeAttr(buildAmazonUrl(item.amazonUrl))}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
+        <a href="${escapeAttr(item.rakutenUrl)}" target="_blank" rel="nofollow sponsored noreferrer">楽天 高評価順</a>
+      </div>
     </article>
   `).join("");
 }
@@ -1401,6 +1412,13 @@ function normalizeRankingEntries(values) {
   })).filter((entry) => entry.id && entry.nickname)
     .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
     .slice(0, 50);
+}
+
+function mergeRankingEntries(entries, localEntry) {
+  const merged = new Map();
+  entries.forEach((entry) => merged.set(entry.id, entry));
+  if (localEntry) merged.set(localEntry.id, localEntry);
+  return [...merged.values()];
 }
 
 function exportState() {

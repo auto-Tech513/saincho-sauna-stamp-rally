@@ -1501,16 +1501,30 @@ a {
   line-height: 1.45;
 }
 
-.shop-card a {
+.shop-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.shop-card-actions a {
   display: grid;
   place-items: center;
   min-height: 38px;
-  margin-top: 2px;
+  padding: 0 8px;
   color: white;
   background: var(--coal);
   border-radius: 8px;
   font-size: 12px;
   font-weight: 900;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.shop-card-actions a:last-child {
+  color: #16201d;
+  background: #f7d773;
 }
 
 .pref-board {
