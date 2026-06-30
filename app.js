@@ -6,6 +6,41 @@ const SETTINGS_KEY = "saincho-settings-v1";
 const LEGACY_SETTINGS_KEY = "yuincho-settings-v1";
 const INSTALL_DISMISSED_KEY = "saincho-install-dismissed-v1";
 const SHARED_FACILITIES_ENDPOINT = "./api/facilities";
+const PROFILE_KEY = "saincho-profile-v1";
+const RANKING_ENDPOINT = "./api/ranking";
+const RANKING_REFRESH_MS = 10000;
+const AMAZON_ASSOCIATE_TAG = "";
+
+const PRODUCT_RECOMMENDATIONS = [
+  {
+    category: "サウナハット",
+    title: "今治タオル系サウナハット",
+    proof: "Amazon #1高評価 4.5 / 773件を確認",
+    reason: "髪の乾燥とのぼせ対策。まず1つ買うなら定番のタオル地。",
+    url: "https://www.amazon.co.jp/dp/B0BJZYDL1C",
+  },
+  {
+    category: "サウナマット",
+    title: "GoodKuru 折りたたみマット系",
+    proof: "Amazon's Choice、4.2 / 1,228件を確認",
+    reason: "共用マットが気になる人向け。小さく畳めて持ち歩きやすい。",
+    url: "https://www.amazon.co.jp/dp/B0B1SYFH2W",
+  },
+  {
+    category: "水分補給",
+    title: "ポカリスエット 500ml×24本",
+    proof: "Amazon 4.5 / 5,419件、直近8,000点以上を確認",
+    reason: "サウナ前後の定番補給。まとめ買いで切らしにくい。",
+    url: "https://www.amazon.co.jp/dp/B000K82WFI",
+  },
+  {
+    category: "オロポ",
+    title: "オロナミンC 120ml×30本",
+    proof: "Amazon 4.5 / 4,231件、直近100点以上を確認",
+    reason: "ポカリと合わせてオロポ用。施設帰りのご褒美にも強い。",
+    url: "https://www.amazon.co.jp/dp/B08JCZ34K3",
+  },
+];
 
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -103,6 +138,7 @@ const FACILITY_STATUS = {
 
 let state = loadState();
 let settings = loadSettings();
+let profile = loadProfile();
 let selectedPrefecture = "全国";
 let activeFilter = "all";
 let activeView = "Explore";
@@ -111,7 +147,11 @@ let searchNeedles = [];
 let selectedFeatureFilters = new Set();
 let sharedFacilities = [];
 let sharedFacilitiesConfigured = false;
+let leaderboardEntries = [];
+let rankingConfigured = null;
 let toastTimer = 0;
+let rankingSyncTimer = 0;
+let rankingPollTimer = 0;
 let visibleLimit = 36;
 let deferredInstallPrompt = null;
 
@@ -139,6 +179,15 @@ const el = {
   stampGrid: document.querySelector("#stampGrid"),
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
+  profileForm: document.querySelector("#profileForm"),
+  profileNickname: document.querySelector("#profileNickname"),
+  profileEmail: document.querySelector("#profileEmail"),
+  profileStatus: document.querySelector("#profileStatus"),
+  leaderboardList: document.querySelector("#leaderboardList"),
+  leaderboardSummary: document.querySelector("#leaderboardSummary"),
+  leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
+  leaderboardSyncButton: document.querySelector("#leaderboardSyncButton"),
+  shopGrid: document.querySelector("#shopGrid"),
   prefSelect: document.querySelector("#prefSelect"),
   addForm: document.querySelector("#addForm"),
   toast: document.querySelector("#toast"),
@@ -172,11 +221,15 @@ function init() {
   renderPrefSelect();
   renderFeatureControls();
   renderSearchClearButton();
+  renderProfilePanel();
+  renderShopPanel();
   renderAll();
   bindEvents();
   renderInstallPrompt();
   registerServiceWorker();
   loadSharedFacilities();
+  loadRanking();
+  startRankingPolling();
 }
 
 function bindEvents() {
@@ -291,6 +344,27 @@ function bindEvents() {
     visibleLimit = 36;
     renderAll();
   });
+
+  el.profileForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const nickname = el.profileNickname.value.trim();
+    const email = el.profileEmail.value.trim();
+    if (!nickname || !email || !el.profileEmail.validity.valid) {
+      showToast("ニックネームとメールアドレスを確認してください");
+      return;
+    }
+    profile = {
+      id: profile.id || createClientId(),
+      nickname: nickname.slice(0, 16),
+      email: email.slice(0, 80),
+      registeredAt: profile.registeredAt || new Date().toISOString(),
+    };
+    saveProfile();
+    renderProfilePanel();
+    syncRanking({ announce: true });
+  });
+
+  el.leaderboardSyncButton.addEventListener("click", () => syncRanking({ announce: true }));
 
   el.addForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -715,6 +789,78 @@ function renderStats() {
       <span>${masteredTotal}/${PREFECTURES.length}県</span>
     </button>
   `);
+  renderLeaderboard();
+}
+
+function renderProfilePanel() {
+  el.profileNickname.value = profile.nickname || "";
+  el.profileEmail.value = profile.email || "";
+  el.profileStatus.textContent = isProfileComplete() ? "参加中" : "未登録";
+}
+
+function renderLeaderboard() {
+  const visitedTotal = Object.keys(state.visited).length;
+  const currentTitle = getCurrentTitle(visitedTotal).title;
+  const localEntry = isProfileComplete()
+    ? {
+      id: profile.id,
+      nickname: profile.nickname,
+      stamps: visitedTotal,
+      title: currentTitle,
+      local: true,
+      updatedAt: new Date().toISOString(),
+    }
+    : null;
+  const entries = leaderboardEntries.length ? leaderboardEntries : (localEntry ? [localEntry] : []);
+  const sorted = [...entries]
+    .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
+    .slice(0, 20);
+  const ownRank = localEntry ? sorted.findIndex((entry) => entry.id === profile.id) + 1 : 0;
+  const entryAbove = ownRank > 1 ? sorted[ownRank - 2] : null;
+  const gapToAbove = entryAbove ? Math.max(1, entryAbove.stamps - visitedTotal + 1) : 0;
+
+  if (!isProfileComplete()) {
+    el.leaderboardSummary.textContent = "登録するとサ印数がランキングに同期されます。メールは表示されません。";
+  } else if (rankingConfigured) {
+    el.leaderboardSummary.textContent = ownRank > 1
+      ? `あなたは${ownRank}位。あと${gapToAbove}湯で${ownRank - 1}位が見えます。`
+      : ownRank === 1
+        ? `あなたは1位。${visitedTotal}湯で首位キープ中です。`
+        : `${visitedTotal}湯で同期中`;
+  } else {
+    el.leaderboardSummary.textContent = "共有ランキングは未接続です。登録内容は端末内で保持しています。";
+  }
+
+  if (!sorted.length) {
+    el.leaderboardList.innerHTML = `<div class="leaderboard-empty">最初の参加者を待っています。</div>`;
+  } else {
+    el.leaderboardList.innerHTML = sorted.map((entry, index) => `
+      <article class="leaderboard-row ${entry.id === profile.id ? "is-you" : ""} ${index < 3 ? `is-top-${index + 1}` : ""}">
+        <strong>${index + 1}</strong>
+        <div>
+          <span>${escapeHtml(entry.nickname)}</span>
+          <em>${escapeHtml(entry.title)}</em>
+        </div>
+        <b>${entry.stamps}湯</b>
+      </article>
+    `).join("");
+  }
+  const latest = sorted.map((entry) => entry.updatedAt).filter(Boolean).sort().at(-1);
+  el.leaderboardUpdatedAt.textContent = rankingConfigured
+    ? `10秒ごとに自動更新${latest ? ` / ${formatDateTime(latest)}` : ""}`
+    : "Cloudflare KV接続後に全ユーザーランキングが有効になります";
+}
+
+function renderShopPanel() {
+  el.shopGrid.innerHTML = PRODUCT_RECOMMENDATIONS.map((item) => `
+    <article class="shop-card">
+      <span>${escapeHtml(item.category)}</span>
+      <h4>${escapeHtml(item.title)}</h4>
+      <p>${escapeHtml(item.reason)}</p>
+      <em>${escapeHtml(item.proof)}</em>
+      <a href="${escapeAttr(buildAmazonUrl(item.url))}" target="_blank" rel="nofollow sponsored noreferrer">Amazonで見る</a>
+    </article>
+  `).join("");
 }
 
 function renderPrefSelect() {
@@ -775,6 +921,7 @@ function stampFacility(facility) {
   };
   delete state.wishlist[facility.id];
   saveState();
+  queueRankingSync();
   if (settings.vibration && "vibrate" in navigator) navigator.vibrate([20, 30, 20]);
   renderAll();
   const afterVisitedTotal = beforeVisitedTotal + 1;
@@ -800,6 +947,7 @@ function unstampFacility(facility) {
   if (!state.visited[facility.id]) return;
   delete state.visited[facility.id];
   saveState();
+  queueRankingSync();
   renderAll();
   showToast(`${facility.name} の押印を取り消しました`);
 }
@@ -1179,6 +1327,82 @@ function getNextTitle(count) {
   return TITLE_MILESTONES.find((milestone) => milestone.count > count) || null;
 }
 
+function startRankingPolling() {
+  clearInterval(rankingPollTimer);
+  rankingPollTimer = window.setInterval(loadRanking, RANKING_REFRESH_MS);
+}
+
+async function loadRanking() {
+  try {
+    const response = await fetch(RANKING_ENDPOINT, { headers: { accept: "application/json" } });
+    if (!response.ok) throw new Error("ranking-load-failed");
+    const payload = await response.json();
+    rankingConfigured = payload.configured !== false;
+    leaderboardEntries = normalizeRankingEntries(payload.entries || []);
+  } catch {
+    rankingConfigured = false;
+    leaderboardEntries = [];
+  } finally {
+    renderLeaderboard();
+  }
+}
+
+function queueRankingSync() {
+  if (!isProfileComplete()) return;
+  clearTimeout(rankingSyncTimer);
+  rankingSyncTimer = window.setTimeout(() => syncRanking({ announce: false }), 700);
+}
+
+async function syncRanking({ announce } = { announce: false }) {
+  if (!isProfileComplete()) {
+    if (announce) showToast("ランキング参加登録をしてください");
+    return;
+  }
+  if (rankingConfigured === false) {
+    renderLeaderboard();
+    if (announce) showToast("共有ランキングは未接続です");
+    return;
+  }
+  const stamps = Object.keys(state.visited).length;
+  const title = getCurrentTitle(stamps).title;
+  try {
+    const response = await fetch(RANKING_ENDPOINT, {
+      method: "POST",
+      headers: { "content-type": "application/json", accept: "application/json" },
+      body: JSON.stringify({
+        participantId: profile.id,
+        nickname: profile.nickname,
+        email: profile.email,
+        stamps,
+        title,
+      }),
+    });
+    if (!response.ok) throw new Error("ranking-save-failed");
+    const payload = await response.json();
+    rankingConfigured = true;
+    leaderboardEntries = normalizeRankingEntries(payload.entries || []);
+    renderLeaderboard();
+    if (announce) showToast("ランキングを更新しました");
+  } catch {
+    rankingConfigured = false;
+    renderLeaderboard();
+    if (announce) showToast("共有ランキングは未接続です");
+  }
+}
+
+function normalizeRankingEntries(values) {
+  if (!Array.isArray(values)) return [];
+  return values.map((entry) => ({
+    id: typeof entry.id === "string" ? entry.id : "",
+    nickname: typeof entry.nickname === "string" ? entry.nickname.slice(0, 16) : "匿名サウナー",
+    stamps: Number.isFinite(Number(entry.stamps)) ? Math.max(0, Math.floor(Number(entry.stamps))) : 0,
+    title: typeof entry.title === "string" ? entry.title.slice(0, 20) : getCurrentTitle(0).title,
+    updatedAt: typeof entry.updatedAt === "string" ? entry.updatedAt : "",
+  })).filter((entry) => entry.id && entry.nickname)
+    .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
+    .slice(0, 50);
+}
+
 function exportState() {
   const payload = {
     exportedAt: new Date().toISOString(),
@@ -1321,6 +1545,43 @@ function saveState() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
 
+function loadProfile() {
+  try {
+    const value = JSON.parse(localStorage.getItem(PROFILE_KEY));
+    if (!value || typeof value !== "object") return createProfile();
+    return {
+      id: typeof value.id === "string" && value.id ? value.id : createClientId(),
+      nickname: typeof value.nickname === "string" ? value.nickname.trim().slice(0, 16) : "",
+      email: typeof value.email === "string" ? value.email.trim().slice(0, 80) : "",
+      registeredAt: typeof value.registeredAt === "string" ? value.registeredAt : "",
+    };
+  } catch {
+    return createProfile();
+  }
+}
+
+function createProfile() {
+  return {
+    id: createClientId(),
+    nickname: "",
+    email: "",
+    registeredAt: "",
+  };
+}
+
+function saveProfile() {
+  localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+}
+
+function isProfileComplete() {
+  return Boolean(profile.id && profile.nickname && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email));
+}
+
+function createClientId() {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  return `client-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
+}
+
 function loadSettings() {
   try {
     const stored = localStorage.getItem(SETTINGS_KEY) || localStorage.getItem(LEGACY_SETTINGS_KEY);
@@ -1368,6 +1629,23 @@ function formatDate(value) {
     month: "2-digit",
     day: "2-digit",
   }).format(date);
+}
+
+function formatDateTime(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "";
+  return new Intl.DateTimeFormat("ja-JP", {
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
+}
+
+function buildAmazonUrl(value) {
+  const url = new URL(value);
+  if (AMAZON_ASSOCIATE_TAG) url.searchParams.set("tag", AMAZON_ASSOCIATE_TAG);
+  return url.href;
 }
 
 function getFacilityMemo(id) {

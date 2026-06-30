@@ -1291,6 +1291,228 @@ a {
   overflow-wrap: normal;
 }
 
+.profile-panel,
+.leaderboard-panel,
+.shop-panel {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 14px;
+  background: rgb(255 255 255 / 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel-head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.panel-head > span,
+.leaderboard-updated {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.profile-form {
+  display: grid;
+  gap: 10px;
+}
+
+.profile-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.profile-form input {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.mini-button {
+  min-height: 34px;
+  padding: 0 12px;
+  color: white;
+  background: var(--teal);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.leaderboard-summary {
+  padding: 10px;
+  color: #33413d;
+  background: #f6fbf8;
+  border: 1px solid #d8ebe5;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 8px;
+}
+
+.leaderboard-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-height: 58px;
+  padding: 10px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.leaderboard-row.is-you {
+  border-color: rgb(10 143 138 / 0.4);
+  box-shadow: inset 3px 0 0 var(--teal);
+}
+
+.leaderboard-row.is-top-1 > strong {
+  color: #2d2310;
+  background: linear-gradient(135deg, #f7d773, #b6841e);
+}
+
+.leaderboard-row.is-top-2 > strong {
+  color: #263039;
+  background: linear-gradient(135deg, #eef3f6, #a8b4bd);
+}
+
+.leaderboard-row.is-top-3 > strong {
+  color: #302218;
+  background: linear-gradient(135deg, #e5b486, #9b5c2d);
+}
+
+.leaderboard-row > strong {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  color: white;
+  background: var(--night);
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.leaderboard-row div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.leaderboard-row span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 900;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leaderboard-row em {
+  color: var(--muted);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.leaderboard-row b {
+  color: var(--teal);
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.leaderboard-empty {
+  padding: 18px 10px;
+  color: var(--muted);
+  background: white;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.leaderboard-updated {
+  margin: -2px 0 0;
+  line-height: 1.35;
+}
+
+.shop-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.shop-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.shop-card span {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.shop-card h4,
+.shop-card p {
+  margin: 0;
+}
+
+.shop-card h4 {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.shop-card p,
+.shop-card em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.shop-card a {
+  display: grid;
+  place-items: center;
+  min-height: 38px;
+  margin-top: 2px;
+  color: white;
+  background: var(--coal);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .pref-board {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
@@ -1726,6 +1948,15 @@ a {
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .profile-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) auto;
+    align-items: end;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 420px) {
@@ -1806,6 +2037,25 @@ a {
 
   .stat-box-title strong {
     font-size: 21px;
+  }
+
+  .profile-panel,
+  .leaderboard-panel,
+  .shop-panel {
+    padding: 12px;
+  }
+
+  .panel-head h3 {
+    font-size: 18px;
+  }
+
+  .leaderboard-row {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .leaderboard-row b {
+    font-size: 14px;
   }
 
   .passport-scope-strip {
