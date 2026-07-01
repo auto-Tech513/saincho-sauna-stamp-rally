@@ -1,10 +1,11 @@
-const CACHE_NAME = "saincho-v17";
+const CACHE_NAME = "saincho-v18";
 const ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./data.js",
+  "./content.js",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",

@@ -290,11 +290,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4701/"
   },
@@ -304,10 +300,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4690/"
@@ -318,10 +311,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4719/"
@@ -332,11 +322,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/232/"
   },
@@ -346,11 +332,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1083/"
   },
@@ -361,8 +343,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -377,11 +357,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4551/"
   },
@@ -391,10 +367,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/15/"
@@ -406,8 +379,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -423,8 +394,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -441,10 +410,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1968/"
@@ -456,8 +422,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -473,8 +437,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -492,8 +454,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -508,10 +468,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1032/"
@@ -523,8 +480,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -540,8 +495,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -556,11 +509,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/178/"
   },
@@ -570,11 +519,7 @@ export const SEED_FACILITIES = [
     "prefecture": "北海道",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1140/"
   },
@@ -585,8 +530,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -606,8 +549,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -639,8 +580,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -656,8 +595,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -673,8 +610,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -690,8 +625,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -708,8 +641,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "SAUNACHELIN 2025",
-      "温泉",
-      "自然"
+      "温泉"
     ],
     "source": "SAUNACHELIN",
     "sourceUrl": "https://www.saunachelin.com/en/"
@@ -721,8 +653,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -738,8 +668,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -755,8 +683,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -771,11 +697,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/180/"
   },
@@ -786,8 +708,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -802,10 +722,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/963/"
@@ -817,8 +734,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -834,8 +749,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -851,8 +764,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -868,8 +779,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -884,10 +793,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1214/"
@@ -899,8 +805,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -917,10 +821,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1203/"
@@ -932,8 +833,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -948,11 +847,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/183/"
   },
@@ -963,8 +858,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -980,8 +873,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -997,8 +888,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1014,8 +903,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1031,8 +918,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1048,8 +933,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1065,8 +948,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1082,8 +963,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1099,8 +978,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -1115,11 +992,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/944/"
   },
@@ -1129,11 +1002,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4376/"
   },
@@ -1143,11 +1012,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/270/"
   },
@@ -1158,8 +1023,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1174,11 +1037,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/265/"
   },
@@ -1189,8 +1048,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1205,10 +1062,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4286/"
@@ -1219,10 +1073,7 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1216/"
@@ -1234,8 +1085,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1251,8 +1100,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1268,8 +1115,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -1286,10 +1131,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/187/"
@@ -1300,10 +1142,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1350/"
@@ -1314,11 +1153,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/65/"
   },
@@ -1329,8 +1164,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1346,8 +1179,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1363,8 +1194,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -1382,8 +1211,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1398,11 +1225,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3881/"
   },
@@ -1413,8 +1236,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -1430,8 +1251,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1446,10 +1265,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3692/"
@@ -1461,8 +1277,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1478,8 +1292,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -1497,8 +1309,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -1514,8 +1324,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1531,8 +1339,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -1550,8 +1356,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1566,11 +1370,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3362/"
   },
@@ -1580,11 +1380,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1324/"
   },
@@ -1595,8 +1391,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1612,8 +1406,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1629,8 +1421,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1646,8 +1436,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1662,10 +1450,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1313/"
@@ -1677,8 +1462,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -1693,11 +1476,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1312/"
   },
@@ -1708,8 +1487,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1724,11 +1501,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1316/"
   },
@@ -1738,10 +1511,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4482/"
@@ -1753,8 +1523,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -1769,10 +1537,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/277/"
@@ -1784,8 +1549,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1800,10 +1563,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2900/"
@@ -1815,8 +1575,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -1832,8 +1590,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -1849,8 +1605,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -1866,8 +1620,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -1882,10 +1634,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "water",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3331/"
@@ -1896,10 +1645,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/278/"
@@ -1910,11 +1656,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4844/"
   },
@@ -1924,11 +1666,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4843/"
   },
@@ -1938,11 +1676,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4841/"
   },
@@ -1952,11 +1686,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4842/"
   },
@@ -1967,8 +1697,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "スチーム(ミスト)サウナ"
     ],
     "features": [
@@ -1984,8 +1712,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2001,8 +1727,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2017,10 +1741,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1440/"
@@ -2032,8 +1753,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -2048,11 +1767,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1410/"
   },
@@ -2063,8 +1778,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -2081,11 +1794,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1424/"
   },
@@ -2096,8 +1805,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2112,10 +1819,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4474/"
@@ -2126,10 +1830,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1435/"
@@ -2141,8 +1842,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2157,10 +1856,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1432/"
@@ -2172,8 +1868,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2189,8 +1883,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2206,8 +1898,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2223,8 +1913,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2240,8 +1928,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2256,11 +1942,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/274/"
   },
@@ -2271,8 +1953,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2288,8 +1968,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2304,10 +1982,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1279/"
@@ -2319,8 +1994,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -2336,8 +2009,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2352,10 +2023,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/948/"
@@ -2367,8 +2035,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -2384,8 +2050,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -2400,10 +2064,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3556/"
@@ -2415,8 +2076,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2431,11 +2090,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4785/"
   },
@@ -2446,8 +2101,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2462,11 +2115,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4579/"
   },
@@ -2476,11 +2125,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1242/"
   },
@@ -2491,8 +2136,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2507,11 +2150,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1272/"
   },
@@ -2522,8 +2161,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2539,8 +2176,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2556,8 +2191,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2573,8 +2206,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2589,11 +2220,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/272/"
   },
@@ -2604,8 +2231,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -2623,8 +2248,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -2641,10 +2264,7 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1290/"
@@ -2656,8 +2276,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2673,8 +2291,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2689,10 +2305,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4279/"
@@ -2703,11 +2316,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1365/"
   },
@@ -2718,8 +2327,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2735,8 +2342,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2752,8 +2357,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -2770,11 +2373,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1371/"
   },
@@ -2785,8 +2384,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2802,8 +2399,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2818,11 +2413,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1390/"
   },
@@ -2832,11 +2423,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1370/"
   },
@@ -2846,11 +2433,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1378/"
   },
@@ -2861,8 +2444,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -2879,10 +2460,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/208/"
@@ -2893,10 +2471,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1388/"
@@ -2907,11 +2482,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4845/"
   },
@@ -2922,8 +2493,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -2939,8 +2508,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -2957,10 +2524,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1402/"
@@ -2972,8 +2536,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -2989,8 +2551,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -3006,8 +2566,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -3025,8 +2583,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3042,8 +2598,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3059,8 +2613,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -3076,8 +2628,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3093,8 +2643,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3110,8 +2658,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3127,8 +2673,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3144,8 +2688,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3160,10 +2702,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1392/"
@@ -3174,10 +2713,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4629/"
@@ -3188,10 +2724,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/199/"
@@ -3202,10 +2735,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1510/"
@@ -3216,11 +2746,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3382/"
   },
@@ -3230,10 +2756,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/72/"
@@ -3245,8 +2768,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3261,11 +2782,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4628/"
   },
@@ -3275,11 +2792,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4846/"
   },
@@ -3289,11 +2802,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4847/"
   },
@@ -3303,11 +2812,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4848/"
   },
@@ -3318,8 +2823,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3335,8 +2838,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3352,8 +2853,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -3369,8 +2868,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -3388,8 +2885,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -3407,8 +2902,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3424,8 +2917,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3440,10 +2931,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1478/"
@@ -3455,8 +2943,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3471,10 +2957,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1450/"
@@ -3485,10 +2968,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2708/"
@@ -3500,8 +2980,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3517,8 +2995,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3534,8 +3010,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "塩サウナ",
       "外気あり"
@@ -3555,8 +3029,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -3574,8 +3046,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3591,8 +3061,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3608,8 +3076,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3625,8 +3091,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -3641,11 +3105,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4627/"
   },
@@ -3655,10 +3115,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2480/"
@@ -3670,8 +3127,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3686,10 +3141,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4174/"
@@ -3701,8 +3153,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3717,11 +3167,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4416/"
   },
@@ -3732,8 +3178,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3749,8 +3193,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3765,10 +3207,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/38/"
@@ -3779,10 +3218,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1669/"
@@ -3794,8 +3230,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3810,11 +3244,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1651/"
   },
@@ -3825,8 +3255,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3841,11 +3269,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3080/"
   },
@@ -3856,8 +3280,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3872,10 +3294,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/295/"
@@ -3887,8 +3306,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3904,8 +3321,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
       "水辺"
     ],
     "source": "SaunaTime",
@@ -3917,11 +3332,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4858/"
   },
@@ -3932,8 +3343,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3948,11 +3357,7 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1659/"
   },
@@ -3963,8 +3368,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -3982,8 +3385,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -3999,8 +3400,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4016,8 +3415,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4033,8 +3430,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4050,8 +3445,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4067,8 +3460,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4084,8 +3475,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4101,8 +3490,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4118,8 +3505,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4134,11 +3519,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4834/"
   },
@@ -4149,8 +3530,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4166,8 +3545,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -4185,8 +3562,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4201,11 +3576,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/114/"
   },
@@ -4216,8 +3587,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4233,8 +3602,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4249,11 +3616,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1547/"
   },
@@ -4264,8 +3627,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "塩サウナ",
       "宿泊可"
     ],
@@ -4283,8 +3644,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4300,8 +3659,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4317,8 +3674,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4334,8 +3689,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4351,8 +3704,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4368,8 +3719,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -4387,8 +3736,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -4405,11 +3752,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1519/"
   },
@@ -4419,10 +3762,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1550/"
@@ -4434,8 +3774,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -4453,8 +3791,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4470,8 +3806,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -4488,11 +3822,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4759/"
   },
@@ -4503,8 +3833,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4520,8 +3848,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4537,8 +3863,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4554,8 +3878,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4570,11 +3892,7 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1517/"
   },
@@ -4585,8 +3903,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -4604,8 +3920,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "塩サウナ"
     ],
@@ -4623,8 +3937,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -4642,8 +3954,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4658,10 +3968,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1634/"
@@ -4672,11 +3979,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1594/"
   },
@@ -4687,8 +3990,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4704,8 +4005,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4721,8 +4020,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4738,8 +4035,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4754,11 +4049,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/336/"
   },
@@ -4769,8 +4060,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4786,8 +4075,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4802,10 +4089,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1589/"
@@ -4816,11 +4100,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/52/"
   },
@@ -4830,10 +4110,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1638/"
@@ -4845,8 +4122,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4862,8 +4137,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4879,8 +4152,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -4900,8 +4171,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4917,8 +4186,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -4933,10 +4200,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1631/"
@@ -4947,10 +4211,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1635/"
@@ -4962,8 +4223,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -4978,11 +4237,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/115/"
   },
@@ -4992,10 +4247,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2701/"
@@ -5006,11 +4258,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/338/"
   },
@@ -5021,8 +4269,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5038,8 +4284,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5055,8 +4299,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -5072,8 +4314,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5088,11 +4328,7 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4790/"
   },
@@ -5103,8 +4339,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5119,10 +4353,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4839/"
@@ -5134,8 +4365,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "個室"
     ],
     "features": [
@@ -5150,10 +4379,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4776/"
@@ -5164,10 +4390,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4746/"
@@ -5178,10 +4401,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4840/"
@@ -5193,8 +4413,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5209,10 +4427,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4763/"
@@ -5223,10 +4438,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4799/"
@@ -5237,10 +4449,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4802/"
@@ -5252,8 +4461,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5268,10 +4475,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/370/"
@@ -5282,10 +4486,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/57/"
@@ -5297,8 +4498,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5313,11 +4512,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4854/"
   },
@@ -5327,10 +4522,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4849/"
@@ -5341,11 +4533,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4903/"
   },
@@ -5355,11 +4543,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4853/"
   },
@@ -5369,11 +4553,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4902/"
   },
@@ -5383,10 +4563,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4852/"
@@ -5397,10 +4574,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4851/"
@@ -5411,10 +4585,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4850/"
@@ -5440,8 +4611,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5457,8 +4626,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5474,8 +4641,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5490,11 +4655,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4935/"
   },
@@ -5505,8 +4666,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5521,11 +4680,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4934/"
   },
@@ -5535,10 +4690,7 @@ export const SEED_FACILITIES = [
     "prefecture": "埼玉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/20/"
@@ -5550,8 +4702,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5566,10 +4716,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4796/"
@@ -5594,10 +4741,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4749/"
@@ -5609,8 +4753,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5626,8 +4768,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -5642,11 +4782,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4809/"
   },
@@ -5657,8 +4793,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -5674,8 +4808,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -5691,8 +4823,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -5708,8 +4838,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -5725,8 +4853,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5741,10 +4867,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4393/"
@@ -5755,10 +4878,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4767/"
@@ -5769,10 +4889,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4757/"
@@ -5783,11 +4900,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4863/"
   },
@@ -5797,11 +4910,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4859/"
   },
@@ -5811,11 +4920,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4861/"
   },
@@ -5825,11 +4930,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4862/"
   },
@@ -5839,11 +4940,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4860/"
   },
@@ -5854,8 +4951,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5871,8 +4966,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -5888,8 +4981,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5905,8 +4996,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5922,8 +5011,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5939,8 +5026,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5956,8 +5041,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5973,8 +5056,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -5990,8 +5071,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6006,10 +5085,7 @@ export const SEED_FACILITIES = [
     "prefecture": "千葉県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/76/"
@@ -6021,8 +5097,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -6081,11 +5155,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4937/"
   },
@@ -6095,11 +5165,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/524/"
   },
@@ -6109,11 +5175,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4488/"
   },
@@ -6123,11 +5185,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3127/"
   },
@@ -6137,10 +5195,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4872/"
@@ -6151,10 +5206,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4880/"
@@ -6165,10 +5217,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4868/"
@@ -6179,10 +5228,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4866/"
@@ -6193,10 +5239,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4904/"
@@ -6207,10 +5250,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4668/"
@@ -6221,10 +5261,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4873/"
@@ -6235,10 +5272,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4865/"
@@ -6249,11 +5283,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4898/"
   },
@@ -6263,10 +5293,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4900/"
@@ -6277,10 +5304,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4867/"
@@ -6291,10 +5315,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4870/"
@@ -6305,10 +5326,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4876/"
@@ -6319,10 +5337,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4875/"
@@ -6333,11 +5348,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4905/"
   },
@@ -6347,10 +5358,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4874/"
@@ -6361,10 +5369,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4901/"
@@ -6375,10 +5380,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4879/"
@@ -6389,10 +5391,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4877/"
@@ -6403,10 +5402,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4878/"
@@ -6417,10 +5413,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4899/"
@@ -6431,10 +5424,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4869/"
@@ -6445,10 +5435,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4871/"
@@ -6460,8 +5447,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "テントサウナ"
     ],
     "features": [
@@ -6476,10 +5461,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4692/"
@@ -6490,10 +5472,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4783/"
@@ -6505,8 +5484,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6522,8 +5499,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6538,10 +5513,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4761/"
@@ -6552,10 +5524,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4762/"
@@ -6566,10 +5535,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4801/"
@@ -6580,10 +5546,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4781/"
@@ -6594,10 +5557,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4800/"
@@ -6609,8 +5569,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6626,8 +5584,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -6643,8 +5599,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -6659,11 +5613,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4886/"
   },
@@ -6673,11 +5623,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4884/"
   },
@@ -6687,11 +5633,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4883/"
   },
@@ -6701,10 +5643,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4670/"
@@ -6715,11 +5654,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4674/"
   },
@@ -6729,10 +5664,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4672/"
@@ -6743,10 +5675,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4881/"
@@ -6757,11 +5686,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4885/"
   },
@@ -6771,11 +5696,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4882/"
   },
@@ -6786,8 +5707,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "セルフロウリュ"
     ],
     "features": [
@@ -6803,8 +5722,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "個室"
     ],
@@ -6821,10 +5738,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4786/"
@@ -6836,8 +5750,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -6853,8 +5765,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6869,10 +5779,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/63/"
@@ -6884,8 +5791,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6901,8 +5806,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6918,8 +5821,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -6935,8 +5836,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6952,8 +5851,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -6969,8 +5866,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -6986,8 +5881,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7003,8 +5896,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7019,11 +5910,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4798/"
   },
@@ -7033,11 +5920,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4653/"
   },
@@ -7048,8 +5931,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7066,11 +5947,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2075/"
   },
@@ -7081,8 +5958,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -7098,8 +5973,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -7115,8 +5988,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -7131,11 +6002,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/200/"
   },
@@ -7146,8 +6013,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7162,10 +6027,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2095/"
@@ -7176,11 +6038,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4856/"
   },
@@ -7190,10 +6048,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4566/"
@@ -7205,8 +6060,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7222,8 +6075,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7239,8 +6090,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7256,8 +6105,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7272,11 +6119,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/205/"
   },
@@ -7286,10 +6129,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2143/"
@@ -7301,8 +6141,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7317,10 +6155,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2077/"
@@ -7332,8 +6167,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7351,8 +6184,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7367,10 +6198,7 @@ export const SEED_FACILITIES = [
     "prefecture": "新潟県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4172/"
@@ -7382,8 +6210,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7398,11 +6224,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4768/"
   },
@@ -7413,8 +6235,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7429,11 +6249,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4334/"
   },
@@ -7444,8 +6260,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7460,11 +6274,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/287/"
   },
@@ -7475,8 +6285,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7491,10 +6299,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2421/"
@@ -7506,8 +6311,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -7524,10 +6327,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/329/"
@@ -7538,10 +6338,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3345/"
@@ -7553,8 +6350,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -7569,10 +6364,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/324/"
@@ -7584,8 +6376,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7601,8 +6391,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7618,8 +6406,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7637,8 +6423,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7656,8 +6440,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7673,8 +6455,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7689,10 +6469,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/288/"
@@ -7703,10 +6480,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4574/"
@@ -7717,11 +6491,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/290/"
   },
@@ -7732,8 +6502,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7749,8 +6517,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7765,10 +6531,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2165/"
@@ -7779,11 +6542,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2912/"
   },
@@ -7794,8 +6553,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7811,8 +6568,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7827,11 +6582,7 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2159/"
   },
@@ -7842,8 +6593,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7861,8 +6610,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7878,8 +6625,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -7897,8 +6642,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -7913,11 +6656,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4681/"
   },
@@ -7928,8 +6667,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -7947,8 +6684,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -7963,10 +6698,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/451/"
@@ -7977,10 +6709,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/17/"
@@ -7992,8 +6721,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8008,11 +6735,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2240/"
   },
@@ -8023,8 +6746,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8039,10 +6760,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2212/"
@@ -8053,11 +6771,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4707/"
   },
@@ -8068,8 +6782,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8084,11 +6796,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4770/"
   },
@@ -8099,8 +6807,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8116,8 +6822,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8132,11 +6836,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4381/"
   },
@@ -8146,10 +6846,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/152/"
@@ -8161,8 +6858,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8178,8 +6873,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8195,8 +6888,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8212,8 +6903,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -8231,8 +6920,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8248,8 +6935,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8265,8 +6950,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8282,8 +6965,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
       "水辺"
     ],
     "source": "SaunaTime",
@@ -8296,8 +6977,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8312,10 +6991,7 @@ export const SEED_FACILITIES = [
     "prefecture": "石川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2231/"
@@ -8327,8 +7003,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -8346,8 +7020,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8363,8 +7035,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8380,8 +7050,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8396,10 +7064,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/126/"
@@ -8410,11 +7075,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/490/"
   },
@@ -8425,8 +7086,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8441,10 +7100,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2270/"
@@ -8456,8 +7112,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -8474,11 +7128,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2260/"
   },
@@ -8488,10 +7138,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/491/"
@@ -8502,10 +7149,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2279/"
@@ -8516,11 +7160,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2272/"
   },
@@ -8530,11 +7170,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4533/"
   },
@@ -8545,8 +7181,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -8564,8 +7198,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8581,8 +7213,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8598,8 +7228,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8614,10 +7242,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/489/"
@@ -8628,10 +7253,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/494/"
@@ -8642,10 +7264,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/573/"
@@ -8656,11 +7275,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2280/"
   },
@@ -8671,8 +7286,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8688,8 +7301,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8705,8 +7316,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8722,8 +7331,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8739,8 +7346,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8756,8 +7361,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -8774,11 +7377,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3055/"
   },
@@ -8789,8 +7388,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8806,8 +7403,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -8823,8 +7418,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8840,8 +7433,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8856,11 +7447,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4738/"
   },
@@ -8870,11 +7457,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4828/"
   },
@@ -8884,11 +7467,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4732/"
   },
@@ -8898,10 +7477,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2468/"
@@ -8913,8 +7489,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8929,10 +7503,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2460/"
@@ -8944,8 +7515,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8961,8 +7530,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8978,8 +7545,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -8995,8 +7560,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9014,8 +7577,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "テントサウナ"
     ],
     "features": [
@@ -9031,8 +7592,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9048,8 +7607,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -9066,11 +7623,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/425/"
   },
@@ -9081,8 +7634,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9100,8 +7651,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9119,8 +7668,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9138,8 +7685,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9157,8 +7702,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9174,8 +7717,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9191,8 +7732,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9207,10 +7746,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2456/"
@@ -9221,10 +7757,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2688/"
@@ -9236,8 +7769,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9252,11 +7783,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2437/"
   },
@@ -9266,11 +7793,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/386/"
   },
@@ -9280,10 +7803,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2454/"
@@ -9295,8 +7815,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9311,10 +7829,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2409/"
@@ -9325,11 +7840,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4803/"
   },
@@ -9339,11 +7850,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4544/"
   },
@@ -9354,8 +7861,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9370,10 +7875,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/311/"
@@ -9384,11 +7886,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/446/"
   },
@@ -9398,10 +7896,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4415/"
@@ -9413,8 +7908,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9430,8 +7923,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -9446,10 +7937,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2309/"
@@ -9460,10 +7948,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2326/"
@@ -9475,8 +7960,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9492,8 +7975,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9508,10 +7989,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4575/"
@@ -9522,11 +8000,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4855/"
   },
@@ -9537,8 +8011,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -9554,8 +8026,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9571,8 +8041,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9588,8 +8056,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -9605,8 +8071,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9622,8 +8086,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9639,8 +8101,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9656,8 +8116,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9673,8 +8131,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9690,8 +8146,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9706,11 +8160,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4769/"
   },
@@ -9721,8 +8171,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -9739,10 +8187,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4684/"
@@ -9754,8 +8199,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9771,8 +8214,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -9787,11 +8228,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/377/"
   },
@@ -9802,9 +8239,6 @@ export const SEED_FACILITIES = [
     "city": "岐阜市菅生",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "完全貸切",
       "個室"
     ],
@@ -9832,7 +8266,7 @@ export const SEED_FACILITIES = [
     "city": "関市板取",
     "trait": "wood",
     "tags": [
-      "天然水風呂",
+      "水風呂あり",
       "アウトドア",
       "板取川"
     ],
@@ -9874,9 +8308,6 @@ export const SEED_FACILITIES = [
     "city": "岐阜市正木",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴",
       "岐阜市"
     ],
     "source": "SaunaTime",
@@ -9890,7 +8321,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "温泉",
-      "水風呂",
+      "水風呂あり",
       "道の駅"
     ],
     "source": "公式",
@@ -9917,11 +8348,9 @@ export const SEED_FACILITIES = [
     "city": "中津川市",
     "trait": "wood",
     "tags": [
-      "指定リスト",
-      "中津川",
-      "営業要確認"
+      "中津川"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/gifu",
     "status": "verify"
   },
@@ -9961,8 +8390,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "展望露天",
-      "日帰り温泉",
-      "自然"
+      "日帰り温泉"
     ],
     "source": "公式",
     "sourceUrl": "https://sasayurinoyu.jp/"
@@ -9973,11 +8401,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岐阜県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4823/"
   },
@@ -10073,9 +8497,6 @@ export const SEED_FACILITIES = [
     "city": "加茂郡八百津町",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴",
       "薪サウナ",
       "スパイス"
     ],
@@ -10089,9 +8510,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "県補正"
     ],
     "source": "SaunaTime",
@@ -10147,7 +8565,7 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "アウトドア",
-      "天然水風呂",
+      "水風呂あり",
       "水着共用"
     ],
     "source": "公式",
@@ -10272,9 +8690,6 @@ export const SEED_FACILITIES = [
     "city": "大垣市波須",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "薬草樽蒸し",
       "事前予約"
     ],
@@ -10303,10 +8718,9 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "24時間",
-      "営業要確認",
       "健康ランド"
     ],
-    "source": "営業要確認",
+    "source": "より湯",
     "sourceUrl": "https://yoriyu.com/result.php?num=6846",
     "status": "verify"
   },
@@ -10345,11 +8759,9 @@ export const SEED_FACILITIES = [
     "city": "関市",
     "trait": "onsen",
     "tags": [
-      "指定リスト",
-      "関市",
-      "営業要確認"
+      "関市"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/gifu",
     "status": "verify"
   },
@@ -10374,9 +8786,6 @@ export const SEED_FACILITIES = [
     "city": "羽島郡岐南町",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴",
       "薬草風呂",
       "漢方サウナ"
     ],
@@ -10417,11 +8826,7 @@ export const SEED_FACILITIES = [
     "prefecture": "静岡県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4835/"
   },
@@ -10461,10 +8866,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "カプセル",
-      "静岡駅",
-      "要確認"
+      "静岡駅"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
     "status": "verify"
   },
@@ -10476,7 +8880,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "浜松",
-      "温浴",
       "市野"
     ],
     "source": "スーパー銭湯全国検索",
@@ -10504,8 +8907,7 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "古民家",
-      "テントサウナ",
-      "自然"
+      "テントサウナ"
     ],
     "source": "公式",
     "sourceUrl": "https://sauna-mysa.jp/"
@@ -10517,9 +8919,6 @@ export const SEED_FACILITIES = [
     "city": "静岡市清水区草薙1-2-26",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "男性専用",
       "草薙"
     ],
@@ -10674,8 +9073,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "スポーツクラブ",
-      "葵区",
-      "要確認"
+      "葵区"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
@@ -10689,10 +9087,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "ホテル",
-      "葵区",
-      "要確認"
+      "葵区"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
     "status": "verify"
   },
@@ -10705,7 +9102,7 @@ export const SEED_FACILITIES = [
     "tags": [
       "匠宿",
       "里山",
-      "水風呂"
+      "水風呂あり"
     ],
     "source": "公式",
     "sourceUrl": "https://www.fukisarashi-yu.jp/"
@@ -10787,7 +9184,6 @@ export const SEED_FACILITIES = [
     "city": "静岡市駿河区古宿294",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "久能山",
       "宿泊"
     ],
@@ -10801,9 +9197,6 @@ export const SEED_FACILITIES = [
     "city": "沼津市大岡1431",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "スポーツクラブ",
       "沼津"
     ],
@@ -10817,9 +9210,6 @@ export const SEED_FACILITIES = [
     "city": "静岡市駿河区稲川2-1-32",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "スポーツクラブ",
       "駿河区"
     ],
@@ -10833,9 +9223,7 @@ export const SEED_FACILITIES = [
     "city": "浜松市中央区",
     "trait": "onsen",
     "tags": [
-      "浜松",
-      "温浴",
-      "要確認"
+      "浜松"
     ],
     "source": "スーパー銭湯全国検索",
     "sourceUrl": "https://www.supersento.com/chubu/shizuoka/1_hamamatu.html"
@@ -10876,7 +9264,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "御殿場",
-      "温浴",
       "宿泊"
     ],
     "source": "御殿場市観光協会",
@@ -10890,10 +9277,9 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "宿泊",
-      "匠宿",
-      "要確認"
+      "匠宿"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
     "status": "verify"
   },
@@ -10905,8 +9291,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "銭湯",
-      "葵区",
-      "要確認"
+      "葵区"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
@@ -10962,8 +9347,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "ホテル",
-      "葵区",
-      "要確認"
+      "葵区"
     ],
     "source": "公式",
     "sourceUrl": "https://castleshizuoka.hotel-support.co.jp/"
@@ -10976,10 +9360,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "ホテル",
-      "駿河区",
-      "要確認"
+      "駿河区"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka",
     "status": "verify"
   },
@@ -11005,8 +9388,7 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "富士",
-      "プライベート",
-      "要確認"
+      "プライベート"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shizuoka/%E5%AF%8C%E5%A3%AB%E5%B8%82",
@@ -11048,8 +9430,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "浜松",
-      "野天風呂",
-      "温浴"
+      "野天風呂"
     ],
     "source": "公式",
     "sourceUrl": "https://yufukeishiori.com/"
@@ -11060,11 +9441,7 @@ export const SEED_FACILITIES = [
     "prefecture": "静岡県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4772/"
   },
@@ -11076,7 +9453,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "富士",
-      "温浴",
       "サウナ"
     ],
     "source": "サウナイキタイ",
@@ -11090,8 +9466,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "御殿場",
-      "立ち寄り湯",
-      "要確認"
+      "立ち寄り湯"
     ],
     "source": "御殿場市観光協会",
     "sourceUrl": "https://gotemba.jp/hotspring/"
@@ -11160,7 +9535,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "浜松",
-      "温浴",
       "和合"
     ],
     "source": "スーパー銭湯全国検索",
@@ -11202,8 +9576,6 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "tags": [
       "SAUNACHELIN 2025",
-      "街サウナ",
-      "名店",
       "2025年開業"
     ],
     "source": "公式",
@@ -11272,7 +9644,6 @@ export const SEED_FACILITIES = [
     "city": "名古屋市名東区",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "漫画",
       "深夜"
     ],
@@ -11285,11 +9656,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛知県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4824/"
   },
@@ -11328,9 +9695,6 @@ export const SEED_FACILITIES = [
     "city": "名古屋市中村区",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "2025年開業",
       "大型"
     ],
@@ -11345,7 +9709,6 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "ケロ",
-      "街サウナ",
       "栄"
     ],
     "source": "公式",
@@ -11374,7 +9737,7 @@ export const SEED_FACILITIES = [
     "tags": [
       "個室",
       "栄",
-      "水風呂"
+      "水風呂あり"
     ],
     "source": "公式",
     "sourceUrl": "https://tenetsauna.jp/"
@@ -11401,7 +9764,6 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "2024年開業",
-      "自然",
       "男女共用"
     ],
     "source": "公式",
@@ -11694,11 +10056,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛知県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4891/"
   },
@@ -11708,11 +10066,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛知県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4676/"
   },
@@ -11722,11 +10076,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛知県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4890/"
   },
@@ -11737,9 +10087,6 @@ export const SEED_FACILITIES = [
     "city": "名古屋市中区錦",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "カプセル",
       "栄"
     ],
@@ -11937,9 +10284,6 @@ export const SEED_FACILITIES = [
     "city": "桑名市",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "桑名",
       "個室"
     ],
@@ -12008,11 +10352,7 @@ export const SEED_FACILITIES = [
     "prefecture": "三重県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2756/"
   },
@@ -12038,8 +10378,7 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "アウトドア",
-      "熊野",
-      "自然"
+      "熊野"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie"
@@ -12051,9 +10390,7 @@ export const SEED_FACILITIES = [
     "city": "志摩市",
     "trait": "wood",
     "tags": [
-      "指定リスト",
-      "志摩",
-      "要確認"
+      "志摩"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
@@ -12094,11 +10431,9 @@ export const SEED_FACILITIES = [
     "city": "いなべ市",
     "trait": "urban",
     "tags": [
-      "指定リスト",
-      "いなべ",
-      "要確認"
+      "いなべ"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
     "status": "verify"
   },
@@ -12123,7 +10458,6 @@ export const SEED_FACILITIES = [
     "city": "三重郡朝日町",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "朝日町",
       "露天"
     ],
@@ -12152,7 +10486,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "おふろcafe",
-      "温浴",
       "四日市"
     ],
     "source": "公式",
@@ -12166,8 +10499,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "長島温泉",
-      "クアハウス",
-      "温浴"
+      "クアハウス"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie"
@@ -12179,11 +10511,9 @@ export const SEED_FACILITIES = [
     "city": "津市",
     "trait": "wood",
     "tags": [
-      "指定リスト",
-      "津",
-      "要確認"
+      "津"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
     "status": "verify"
   },
@@ -12207,11 +10537,7 @@ export const SEED_FACILITIES = [
     "prefecture": "三重県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4604/"
   },
@@ -12250,11 +10576,9 @@ export const SEED_FACILITIES = [
     "city": "三重郡菰野町",
     "trait": "wood",
     "tags": [
-      "指定リスト",
-      "菰野",
-      "要確認"
+      "菰野"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
     "status": "verify"
   },
@@ -12266,8 +10590,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "ホテル",
-      "伊賀",
-      "温浴"
+      "伊賀"
     ],
     "source": "公式",
     "sourceUrl": "https://www.hh-sunpia-iga.co.jp/"
@@ -12279,7 +10602,6 @@ export const SEED_FACILITIES = [
     "city": "桑名市",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "桑名",
       "サウナ"
     ],
@@ -12293,11 +10615,9 @@ export const SEED_FACILITIES = [
     "city": "四日市市",
     "trait": "urban",
     "tags": [
-      "指定リスト",
-      "四日市",
-      "要確認"
+      "四日市"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
     "status": "verify"
   },
@@ -12309,7 +10629,6 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "伊勢",
-      "温浴",
       "露天"
     ],
     "source": "公式",
@@ -12322,9 +10641,6 @@ export const SEED_FACILITIES = [
     "city": "四日市市",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目",
       "天然温泉",
       "四日市"
     ],
@@ -12353,8 +10669,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "銭湯",
-      "伊勢",
-      "温浴"
+      "伊勢"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie"
@@ -12366,9 +10681,6 @@ export const SEED_FACILITIES = [
     "city": "伊勢市",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ",
       "ホテル",
       "伊勢"
     ],
@@ -12396,11 +10708,9 @@ export const SEED_FACILITIES = [
     "city": "亀山市",
     "trait": "wood",
     "tags": [
-      "指定リスト",
-      "亀山",
-      "要確認"
+      "亀山"
     ],
-    "source": "指定リスト",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie",
     "status": "verify"
   },
@@ -12411,7 +10721,6 @@ export const SEED_FACILITIES = [
     "city": "津市",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "津",
       "極楽湯"
     ],
@@ -12552,8 +10861,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "温泉",
-      "伊賀",
-      "自然"
+      "伊賀"
     ],
     "source": "公式",
     "sourceUrl": "https://www.sarubino.com/"
@@ -12580,8 +10888,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "天然温泉",
-      "四日市",
-      "温浴"
+      "四日市"
     ],
     "source": "公式",
     "sourceUrl": "https://jab53.com/"
@@ -12594,7 +10901,7 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "テントサウナ",
-      "滝つぼ水風呂",
+      "水風呂あり",
       "キャンプ"
     ],
     "source": "公式",
@@ -12608,8 +10915,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "VISON",
-      "薬草湯",
-      "温浴"
+      "薬草湯"
     ],
     "source": "公式",
     "sourceUrl": "https://vison.jp/shop/detail.php?id=74"
@@ -12622,8 +10928,7 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "海洋深層水",
-      "尾鷲",
-      "温浴"
+      "尾鷲"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/mie"
@@ -12649,7 +10954,6 @@ export const SEED_FACILITIES = [
     "city": "松阪市",
     "trait": "onsen",
     "tags": [
-      "温浴",
       "松阪",
       "銭湯"
     ],
@@ -12676,10 +10980,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "蒲生郡日野町",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県蒲生郡日野町西大路2168"
   },
@@ -12689,10 +10991,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "高島市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市新旭町饗庭4036-1"
   },
@@ -12702,10 +11002,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市坂本8丁目17-4465-20"
   },
@@ -12715,10 +11013,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "高島市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市今津町名小路2丁目6-6"
   },
@@ -12728,10 +11024,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市南小松1054-3"
   },
@@ -12742,11 +11036,10 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市伊香立南庄町1348-2"
   },
@@ -12756,10 +11049,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "高島市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市マキノ町新保146-1"
   },
@@ -12769,10 +11060,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "高島市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市今津町浜分38-7"
   },
@@ -12782,10 +11071,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "長浜市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市名越町1016-4"
   },
@@ -12795,10 +11082,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "高島市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市今津町浜分38-11"
   },
@@ -12808,10 +11093,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市南小松1695-1"
   },
@@ -12821,10 +11104,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "甲賀市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県甲賀市信楽町下朝宮457"
   },
@@ -12834,10 +11115,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "栗東市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県栗東市大橋2丁目8-14"
   },
@@ -12847,10 +11126,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "米原市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県米原市宇賀野1364-1（神照寺周辺）"
   },
@@ -12861,11 +11138,10 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市雄琴6丁目1-6"
   },
@@ -12876,11 +11152,10 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市苗鹿2-30-7"
   },
@@ -12891,10 +11166,9 @@ export const SEED_FACILITIES = [
     "city": "高島市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市朽木柏341-3"
   },
@@ -12905,10 +11179,9 @@ export const SEED_FACILITIES = [
     "city": "長浜市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市大島町38"
   },
@@ -12919,10 +11192,9 @@ export const SEED_FACILITIES = [
     "city": "長浜市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市港町2-28"
   },
@@ -12932,10 +11204,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "長浜市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市大辰巳町49"
   },
@@ -12945,11 +11215,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4436/"
   },
@@ -12959,10 +11225,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市苗鹿3丁目9-5"
   },
@@ -12972,11 +11236,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4545/"
   },
@@ -12986,10 +11246,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "犬上郡多賀町",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県犬上郡多賀町藤瀬424"
   },
@@ -13000,10 +11258,9 @@ export const SEED_FACILITIES = [
     "city": "高島市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市マキノ町牧野931-3"
   },
@@ -13013,10 +11270,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "守山市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県守山市水保町1172-1"
   },
@@ -13026,11 +11281,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4602/"
   },
@@ -13041,10 +11292,9 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市和邇北浜390"
   },
@@ -13055,10 +11305,9 @@ export const SEED_FACILITIES = [
     "city": "東近江市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県東近江市永源寺高野町352"
   },
@@ -13068,10 +11317,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "東近江市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県東近江市八日市本町11-9"
   },
@@ -13081,10 +11328,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "蒲生郡竜王町",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県蒲生郡竜王町山之上7104-1"
   },
@@ -13094,10 +11339,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "彦根市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県彦根市西沼波町175-1"
   },
@@ -13107,11 +11350,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2809/"
   },
@@ -13122,10 +11361,9 @@ export const SEED_FACILITIES = [
     "city": "甲賀市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県甲賀市土山町黒川1711"
   },
@@ -13136,10 +11374,9 @@ export const SEED_FACILITIES = [
     "city": "守山市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県守山市吉身4丁目5-20"
   },
@@ -13149,11 +11386,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4534/"
   },
@@ -13164,10 +11397,9 @@ export const SEED_FACILITIES = [
     "city": "湖南市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県湖南市岩根678-28"
   },
@@ -13178,10 +11410,9 @@ export const SEED_FACILITIES = [
     "city": "甲賀市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県甲賀市水口町水口5572"
   },
@@ -13191,11 +11422,7 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2795/"
   },
@@ -13205,10 +11432,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "彦根市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県彦根市松原町1435-91"
   },
@@ -13219,11 +11444,10 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市月輪1丁目9-18"
   },
@@ -13234,10 +11458,9 @@ export const SEED_FACILITIES = [
     "city": "近江八幡市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県近江八幡市長命寺町68-1"
   },
@@ -13248,10 +11471,9 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市北比良1039-2"
   },
@@ -13261,10 +11483,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市馬場3丁目12-21"
   },
@@ -13274,10 +11494,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "大津市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市中央1丁目7-26"
   },
@@ -13288,10 +11506,9 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市浜町2-40"
   },
@@ -13302,10 +11519,9 @@ export const SEED_FACILITIES = [
     "city": "守山市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県守山市今浜町十軒家2876"
   },
@@ -13315,10 +11531,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "長浜市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市神前町5-18"
   },
@@ -13329,10 +11543,9 @@ export const SEED_FACILITIES = [
     "city": "高島市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県高島市安曇川町下小田24"
   },
@@ -13343,10 +11556,9 @@ export const SEED_FACILITIES = [
     "city": "長浜市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市高月町唐川89"
   },
@@ -13357,10 +11569,9 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県大津市雄琴1丁目9-28"
   },
@@ -13370,10 +11581,8 @@ export const SEED_FACILITIES = [
     "prefecture": "滋賀県",
     "city": "長浜市",
     "trait": "water",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/shiga",
     "note": "滋賀県長浜市宮前町10-11"
   },
@@ -13383,11 +11592,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4811/"
   },
@@ -13398,10 +11603,9 @@ export const SEED_FACILITIES = [
     "city": "京都市下京区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区河原町通四条下ル2丁目稲荷町318-6"
   },
@@ -13411,10 +11615,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市左京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市左京区下鴨南芝町43-3 KITAYAMA HILLS 1F"
   },
@@ -13425,11 +11627,10 @@ export const SEED_FACILITIES = [
     "city": "京都市中京区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区河原町通三条下る山崎町258 AD-G四条河原町 7階"
   },
@@ -13439,10 +11640,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市南区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市南区東九条室町30-26"
   },
@@ -13452,10 +11651,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区三坊西洞院町561 西側奥"
   },
@@ -13465,10 +11662,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市左京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市左京区上高野東山37"
   },
@@ -13479,11 +11674,10 @@ export const SEED_FACILITIES = [
     "city": "京都市中京区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区丸太町通西洞院上る梅屋町166-7 SDビル 5F"
   },
@@ -13493,10 +11687,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区恵比須町534-33"
   },
@@ -13506,10 +11698,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市上京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市上京区溝前町83"
   },
@@ -13519,10 +11709,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区河原町通三条下ル大黒町58 ミーナ京都 8F"
   },
@@ -13532,10 +11720,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市東山区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市東山区"
   },
@@ -13545,11 +11731,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/113/"
   },
@@ -13559,11 +11741,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/31/"
   },
@@ -13574,10 +11752,9 @@ export const SEED_FACILITIES = [
     "city": "京都市右京区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市右京区嵯峨野宮ノ元町55-4-7"
   },
@@ -13587,10 +11764,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市東山区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市東山区鞘町一丁目396-1"
   },
@@ -13601,10 +11776,9 @@ export const SEED_FACILITIES = [
     "city": "京田辺市",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京田辺市山手中央5-1"
   },
@@ -13614,10 +11788,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京丹後市",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京丹後市"
   },
@@ -13628,10 +11800,9 @@ export const SEED_FACILITIES = [
     "city": "京都市南区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市南区東九条東山王町13"
   },
@@ -13642,10 +11813,9 @@ export const SEED_FACILITIES = [
     "city": "京都市中京区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区烏丸通三条下ル饅頭屋町604"
   },
@@ -13656,10 +11826,9 @@ export const SEED_FACILITIES = [
     "city": "福知山市",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府福知山市字土師小字澤居山176"
   },
@@ -13670,10 +11839,9 @@ export const SEED_FACILITIES = [
     "city": "京丹後市",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京丹後市網野町小浜915-15"
   },
@@ -13683,11 +11851,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4913/"
   },
@@ -13697,11 +11861,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4910/"
   },
@@ -13712,10 +11872,9 @@ export const SEED_FACILITIES = [
     "city": "京都市下京区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区綾小路通東洞院東入神明町239-1"
   },
@@ -13726,10 +11885,9 @@ export const SEED_FACILITIES = [
     "city": "京都市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市北区大将軍一条町50"
   },
@@ -13739,10 +11897,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市左京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市左京区"
   },
@@ -13752,10 +11908,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市下京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区正面通加茂川西入鍵屋町349"
   },
@@ -13765,10 +11919,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市右京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市右京区西京極西川町39-7"
   },
@@ -13778,10 +11930,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区押小路通御幸町西入ル亀屋町401"
   },
@@ -13792,11 +11942,10 @@ export const SEED_FACILITIES = [
     "city": "京都市下京区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区船頭町238 105"
   },
@@ -13807,10 +11956,9 @@ export const SEED_FACILITIES = [
     "city": "南丹市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府南丹市園部町大河内広谷1-14"
   },
@@ -13821,10 +11969,9 @@ export const SEED_FACILITIES = [
     "city": "京都市西京区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市西京区樫原盆山5"
   },
@@ -13834,10 +11981,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市上京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市上京区北町580-6"
   },
@@ -13847,10 +11992,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市下京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区黒門通り五条上ル柿本町590-12"
   },
@@ -13860,10 +12003,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区"
   },
@@ -13873,10 +12014,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市上京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市上京区俵屋町454"
   },
@@ -13887,10 +12026,9 @@ export const SEED_FACILITIES = [
     "city": "城陽市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府城陽市中芦原25-2"
   },
@@ -13900,10 +12038,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市東山区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市東山区古西町316"
   },
@@ -13914,10 +12050,9 @@ export const SEED_FACILITIES = [
     "city": "京都市中京区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区壬生松原町15-3"
   },
@@ -13927,10 +12062,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市下京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区西新屋敷太夫町81-6"
   },
@@ -13941,10 +12074,9 @@ export const SEED_FACILITIES = [
     "city": "京都市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市北区紫野南舟岡町82-1"
   },
@@ -13955,10 +12087,9 @@ export const SEED_FACILITIES = [
     "city": "京都市左京区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市左京区岡崎徳成町28-4 聖護院ビル 3F"
   },
@@ -13968,10 +12099,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市東山区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市東山区山城町284"
   },
@@ -13982,10 +12111,9 @@ export const SEED_FACILITIES = [
     "city": "八幡市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府八幡市八幡中ノ山82-1"
   },
@@ -13995,11 +12123,7 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2998/"
   },
@@ -14010,10 +12134,9 @@ export const SEED_FACILITIES = [
     "city": "宮津市",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府宮津市字文珠310"
   },
@@ -14024,10 +12147,9 @@ export const SEED_FACILITIES = [
     "city": "宇治市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府宇治市大久保町大竹52"
   },
@@ -14037,10 +12159,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市南区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市南区西九条唐橋町26-6"
   },
@@ -14050,10 +12170,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市下京区",
     "trait": "award",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市下京区舟屋町665"
   },
@@ -14063,10 +12181,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市西京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市西京区嵐山上河原町1"
   },
@@ -14076,10 +12192,8 @@ export const SEED_FACILITIES = [
     "prefecture": "京都府",
     "city": "京都市中京区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/kyoto",
     "note": "京都府京都市中京区越後町198"
   },
@@ -14089,10 +12203,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区松屋町住吉6-26 eninal MACCHAMACHI 3F"
   },
@@ -14103,10 +12215,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区南久宝寺町3丁目2-8"
   },
@@ -14117,10 +12228,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区博労町2-6-3"
   },
@@ -14131,10 +12241,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市西区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市西区立売堀1丁目9-35"
   },
@@ -14145,11 +12254,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区東心斎橋1丁目15-15 いちご心斎橋ビル 1階"
   },
@@ -14159,10 +12267,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市北区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区曾根崎新地1丁目11-20 B1"
   },
@@ -14173,11 +12279,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市福島区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市福島区福島3丁目13-12"
   },
@@ -14188,11 +12293,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区茶屋町15-9 XROSSchayamachi S 3 1F"
   },
@@ -14202,10 +12306,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区西心斎橋2丁目1-18 3F"
   },
@@ -14215,10 +12317,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市西区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市西区立売堀6丁目7-11"
   },
@@ -14229,11 +12329,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市浪速区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市浪速区恵美須東3丁目4-24"
   },
@@ -14244,10 +12343,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区大深町5-54 グラングリーン大阪南館 3・4階"
   },
@@ -14258,10 +12356,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市淀川区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市淀川区東三国4-2-13"
   },
@@ -14272,10 +12369,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市浪速区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市浪速区湊町2-2-14"
   },
@@ -14285,10 +12381,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "award",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区西心斎橋2丁目8-12"
   },
@@ -14299,10 +12393,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "award",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区千日前2丁目9-17"
   },
@@ -14313,10 +12406,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区中崎西2丁目1-9 観光ビル「大東洋」 B1"
   },
@@ -14327,10 +12419,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "award",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区中崎西2丁目1-9"
   },
@@ -14341,10 +12432,9 @@ export const SEED_FACILITIES = [
     "city": "東大阪市",
     "trait": "award",
     "tags": [
-      "ユーザー指定追加",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府東大阪市長堂3丁目4-21"
   },
@@ -14355,10 +12445,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "award",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区堂山町9-5"
   },
@@ -14369,11 +12458,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区東心斎橋1丁目10-3"
   },
@@ -14384,10 +12472,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市浪速区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市浪速区桜川2丁目14-19"
   },
@@ -14398,10 +12485,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市城東区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市城東区蒲生2丁目7-36"
   },
@@ -14412,10 +12498,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市此花区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市此花区桜島1丁目1-35"
   },
@@ -14425,11 +12510,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4914/"
   },
@@ -14439,11 +12520,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4911/"
   },
@@ -14453,11 +12530,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4917/"
   },
@@ -14467,11 +12540,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4918/"
   },
@@ -14481,11 +12550,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4915/"
   },
@@ -14495,11 +12560,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4916/"
   },
@@ -14509,10 +12570,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市福島区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市福島区大開1丁目1-4 TAKUYOビル 4階"
   },
@@ -14522,10 +12581,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市天王寺区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市天王寺区大道4丁目10-17 新井ビル 4F"
   },
@@ -14535,10 +12592,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区松屋町7-17 3F"
   },
@@ -14549,11 +12604,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市西区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市西区南堀江1丁目25-1 Wave on Horie Tower 2階"
   },
@@ -14564,10 +12618,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市港区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市港区弁天1丁目2-3"
   },
@@ -14578,10 +12631,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区西天満6丁目9-17 西天満センタ 2F"
   },
@@ -14592,10 +12644,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区南船場2丁目6-16 Yesビル 5階"
   },
@@ -14606,10 +12657,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区上汐2丁目3-6 上汐中央ビル 402"
   },
@@ -14619,10 +12669,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区西心斎橋1丁目15-13 アートマスターズ 心斎橋ビル 4F"
   },
@@ -14632,10 +12680,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "award",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区南船場3丁目6-18 ケーズビル心斎橋 4階"
   },
@@ -14646,10 +12692,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市住吉区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市住吉区大領5丁目10-11"
   },
@@ -14659,10 +12704,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市鶴見区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市鶴見区緑地公園1-37"
   },
@@ -14673,10 +12716,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区長柄西1丁目7-31"
   },
@@ -14687,10 +12729,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市淀川区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市淀川区三国本町1丁目6-15 ドルチェヴィータ新大阪 9F"
   },
@@ -14701,10 +12742,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市東成区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市東成区玉津3丁目13-41 1F"
   },
@@ -14715,10 +12755,9 @@ export const SEED_FACILITIES = [
     "city": "羽曳野市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府羽曳野市広瀬186-3"
   },
@@ -14729,10 +12768,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市此花区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市此花区春日出南3丁目2-27"
   },
@@ -14743,10 +12781,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市住之江区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市住之江区泉1丁目1-82"
   },
@@ -14756,10 +12793,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市北区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市北区豊崎5丁目8-2 扶栄ビル 102号"
   },
@@ -14769,10 +12804,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市浪速区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市浪速区敷津東2丁目2-8"
   },
@@ -14782,10 +12815,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "大阪市中央区",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市中央区島の内2丁目17-17-4"
   },
@@ -14796,10 +12827,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市西成区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府大阪市西成区萩之茶屋1丁目6-3"
   },
@@ -14810,10 +12840,9 @@ export const SEED_FACILITIES = [
     "city": "八尾市",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府八尾市八尾木北5丁目101"
   },
@@ -14823,10 +12852,8 @@ export const SEED_FACILITIES = [
     "prefecture": "大阪府",
     "city": "豊中市",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/osaka",
     "note": "大阪府豊中市庄内栄町3丁目24-10"
   },
@@ -14836,10 +12863,8 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "西宮市",
     "trait": "urban",
-    "tags": [
-      "ユーザー指定追加"
-    ],
-    "source": "指定リスト/地域照合",
+    "tags": [],
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県西宮市今津港町1-26"
   },
@@ -14849,11 +12874,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4813/"
   },
@@ -14863,11 +12884,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4819/"
   },
@@ -14878,12 +12895,11 @@ export const SEED_FACILITIES = [
     "city": "宝塚市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可",
       "外気あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県宝塚市雲雀丘山手2-10-11 HIBARI HILLS内"
   },
@@ -14894,11 +12910,10 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市野里304"
   },
@@ -14909,11 +12924,10 @@ export const SEED_FACILITIES = [
     "city": "西宮市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県西宮市名次町5-7"
   },
@@ -14924,11 +12938,10 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市岡田150-4 2F"
   },
@@ -14939,12 +12952,11 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市増位新町1-6"
   },
@@ -14955,12 +12967,11 @@ export const SEED_FACILITIES = [
     "city": "川辺郡猪名川町",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可",
       "外気あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県川辺郡猪名川町広根西ヲコダ14-11-3"
   },
@@ -14971,13 +12982,12 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可",
       "外気あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市広嶺山224-26 セトレハイランドヴィラ姫路"
   },
@@ -14987,11 +12997,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4822/"
   },
@@ -15002,12 +13008,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市垂水区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市垂水区海岸通2166-2"
   },
@@ -15018,13 +13023,12 @@ export const SEED_FACILITIES = [
     "city": "淡路市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県淡路市夢舞台2-28"
   },
@@ -15035,11 +13039,10 @@ export const SEED_FACILITIES = [
     "city": "神戸市兵庫区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市兵庫区駿河町2-1-16"
   },
@@ -15050,11 +13053,10 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "custom",
     "tags": [
-      "ユーザー指定追加",
       "個室",
       "貸切可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区元町通3丁目11-10 4階・5階"
   },
@@ -15065,12 +13067,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区港島1-1-6 センチュリオンホテルヴィンテージ神戸 2F（別表記: 中央区港島中町6-11-9）"
   },
@@ -15081,12 +13082,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市垂水区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市垂水区青山台7-4-46"
   },
@@ -15097,12 +13097,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市須磨区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市須磨区車奥中ノ尾772-4"
   },
@@ -15113,12 +13112,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり",
       "外気あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区下山手通8-1-24"
   },
@@ -15129,11 +13127,10 @@ export const SEED_FACILITIES = [
     "city": "神戸市東灘区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市東灘区御影本町8-9-19"
   },
@@ -15144,13 +13141,12 @@ export const SEED_FACILITIES = [
     "city": "三木市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県三木市細川町垂穂894-60"
   },
@@ -15161,12 +13157,11 @@ export const SEED_FACILITIES = [
     "city": "淡路市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県淡路市尾崎3025-1"
   },
@@ -15177,10 +13172,9 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "urban",
     "tags": [
-      "ユーザー指定追加",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区東川崎町1-3-5"
   },
@@ -15191,13 +13185,12 @@ export const SEED_FACILITIES = [
     "city": "神戸市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市北区山田町原野1-1"
   },
@@ -15207,11 +13200,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "神戸市垂水区",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4912/",
     "note": "兵庫県神戸市垂水区狩口台1-16-2 ビエラ明舞 1・2階"
@@ -15222,11 +13211,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "伊丹市",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4919/",
     "note": "兵庫県伊丹市東有岡1-20"
@@ -15237,11 +13222,7 @@ export const SEED_FACILITIES = [
     "prefecture": "兵庫県",
     "city": "神戸市兵庫区",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4675/",
     "note": "兵庫県神戸市兵庫区駅前通1-2-1"
@@ -15253,14 +13234,13 @@ export const SEED_FACILITIES = [
     "city": "神戸市兵庫区",
     "trait": "wood",
     "tags": [
-      "ユーザー指定追加",
       "薪サウナ",
       "個室",
       "貸切可",
       "セルフロウリュ",
       "外気あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市兵庫区烏原町ヌク谷11番地 菊水ゴルフクラブ内"
   },
@@ -15271,13 +13251,12 @@ export const SEED_FACILITIES = [
     "city": "神戸市長田区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "水風呂あり",
       "外気あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市長田区三番町2-1-3"
   },
@@ -15288,12 +13267,11 @@ export const SEED_FACILITIES = [
     "city": "川西市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県川西市中央町14-6"
   },
@@ -15304,12 +13282,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市北区有馬町318"
   },
@@ -15320,12 +13297,11 @@ export const SEED_FACILITIES = [
     "city": "三田市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県三田市富士が丘5-2"
   },
@@ -15336,11 +13312,10 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市広畑区東新町2-21"
   },
@@ -15351,11 +13326,10 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市南駅前町23"
   },
@@ -15366,11 +13340,10 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区二宮町3-10-15（営業状況要確認）",
     "status": "verify"
@@ -15382,14 +13355,13 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区下山手通2-2-10"
   },
@@ -15400,12 +13372,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区東川崎町1-3-3"
   },
@@ -15416,13 +13387,12 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区新港町1-1"
   },
@@ -15433,14 +13403,13 @@ export const SEED_FACILITIES = [
     "city": "神戸市中央区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市中央区下山手通2-2-10 2〜4階"
   },
@@ -15451,13 +13420,12 @@ export const SEED_FACILITIES = [
     "city": "神戸市西区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市西区伊川谷町前開270-1"
   },
@@ -15468,7 +13436,6 @@ export const SEED_FACILITIES = [
     "city": "神戸市長田区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "塩サウナ",
@@ -15476,7 +13443,7 @@ export const SEED_FACILITIES = [
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市長田区四番町1-11-6"
   },
@@ -15487,12 +13454,11 @@ export const SEED_FACILITIES = [
     "city": "芦屋市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県芦屋市海洋町10-2"
   },
@@ -15503,12 +13469,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市長田区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市長田区南駒栄町1-6"
   },
@@ -15519,12 +13484,11 @@ export const SEED_FACILITIES = [
     "city": "西宮市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県西宮市分銅町2-28"
   },
@@ -15535,12 +13499,11 @@ export const SEED_FACILITIES = [
     "city": "三木市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県三木市別所町西這田566-2"
   },
@@ -15551,12 +13514,11 @@ export const SEED_FACILITIES = [
     "city": "尼崎市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県尼崎市道意町2-21-2"
   },
@@ -15567,12 +13529,11 @@ export const SEED_FACILITIES = [
     "city": "尼崎市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県尼崎市水堂町1-4-8"
   },
@@ -15583,12 +13544,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市東灘区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市東灘区森南町1-15-4"
   },
@@ -15599,12 +13559,11 @@ export const SEED_FACILITIES = [
     "city": "尼崎市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県尼崎市塚口本町4-8-12"
   },
@@ -15615,12 +13574,11 @@ export const SEED_FACILITIES = [
     "city": "三木市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県三木市吉川町みなぎ台2-5"
   },
@@ -15631,12 +13589,11 @@ export const SEED_FACILITIES = [
     "city": "川西市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県川西市火打1-16-6"
   },
@@ -15647,12 +13604,11 @@ export const SEED_FACILITIES = [
     "city": "姫路市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県姫路市三左衛門堀西の町158"
   },
@@ -15663,12 +13619,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "サ飯あり",
       "宿泊可"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市北区有馬町1904"
   },
@@ -15679,12 +13634,11 @@ export const SEED_FACILITIES = [
     "city": "尼崎市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県尼崎市蓬川町295-3"
   },
@@ -15695,12 +13649,11 @@ export const SEED_FACILITIES = [
     "city": "宝塚市",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県宝塚市中筋3-3-1"
   },
@@ -15711,12 +13664,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市北区有馬町池の尻292-2"
   },
@@ -15727,12 +13679,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市北区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市北区山田町小部妙賀11-1"
   },
@@ -15743,12 +13694,11 @@ export const SEED_FACILITIES = [
     "city": "神戸市東灘区",
     "trait": "onsen",
     "tags": [
-      "ユーザー指定追加",
       "温泉付き",
       "外気あり",
       "サ飯あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市東灘区住吉東町4-6-5"
   },
@@ -15759,11 +13709,10 @@ export const SEED_FACILITIES = [
     "city": "神戸市兵庫区",
     "trait": "water",
     "tags": [
-      "ユーザー指定追加",
       "ドライサウナ",
       "水風呂あり"
     ],
-    "source": "指定リスト/地域照合",
+    "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/hyogo",
     "note": "兵庫県神戸市兵庫区大開通8-2-19"
   },
@@ -15774,8 +13723,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15791,8 +13738,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15808,8 +13753,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15824,11 +13767,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2847/"
   },
@@ -15839,8 +13778,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15856,8 +13793,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15873,8 +13808,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15889,11 +13822,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4673/"
   },
@@ -15904,8 +13833,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15921,8 +13848,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15938,8 +13863,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -15957,8 +13880,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15974,8 +13895,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -15991,8 +13910,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -16017,8 +13934,6 @@ export const SEED_FACILITIES = [
       "セルフロウリュ"
     ],
     "tags": [
-      "サウナイキタイ掲載",
-      "県別30件補強",
       "ドライサウナ",
       "水風呂あり",
       "外気あり",
@@ -16032,11 +13947,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2833/"
   },
@@ -16047,8 +13958,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -16064,8 +13973,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16081,8 +13988,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16098,8 +14003,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16114,11 +14017,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4515/"
   },
@@ -16129,8 +14028,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16146,8 +14043,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -16164,11 +14059,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2843/"
   },
@@ -16178,11 +14069,7 @@ export const SEED_FACILITIES = [
     "prefecture": "奈良県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2836/"
   },
@@ -16193,8 +14080,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16210,8 +14095,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16227,8 +14110,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16244,8 +14125,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16261,8 +14140,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16277,11 +14154,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4792/"
   },
@@ -16292,8 +14165,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -16311,8 +14182,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16328,8 +14197,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16344,10 +14211,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2878/"
@@ -16358,10 +14222,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2865/"
@@ -16372,10 +14233,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2854/"
@@ -16387,8 +14245,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16404,8 +14260,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -16423,8 +14277,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16439,10 +14291,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2877/"
@@ -16453,11 +14302,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2851/"
   },
@@ -16467,11 +14312,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2860/"
   },
@@ -16481,10 +14322,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2875/"
@@ -16496,8 +14334,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16512,11 +14348,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2850/"
   },
@@ -16527,8 +14359,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -16543,11 +14373,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4547/"
   },
@@ -16558,8 +14384,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16575,8 +14399,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16592,8 +14414,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -16611,8 +14431,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -16630,8 +14448,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -16649,8 +14465,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16666,8 +14480,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -16683,8 +14495,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16699,10 +14509,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2874/"
@@ -16713,11 +14520,7 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/582/"
   },
@@ -16728,8 +14531,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16745,8 +14546,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16761,11 +14560,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4713/"
   },
@@ -16775,11 +14570,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4722/"
   },
@@ -16796,8 +14587,6 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "tags": [
-      "サウナイキタイ掲載",
-      "県別30件補強",
       "水風呂あり",
       "外気あり",
       "貸切可"
@@ -16810,11 +14599,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4693/"
   },
@@ -16833,8 +14618,6 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "tags": [
-      "サウナイキタイ掲載",
-      "県別30件補強",
       "個室",
       "貸切可",
       "水風呂あり",
@@ -16849,10 +14632,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3590/"
@@ -16863,10 +14643,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/717/"
@@ -16877,10 +14654,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/720/"
@@ -16891,10 +14665,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3594/"
@@ -16905,11 +14676,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3604/"
   },
@@ -16920,8 +14687,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -16937,8 +14702,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -16954,8 +14717,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16971,8 +14732,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -16987,10 +14746,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3598/"
@@ -17001,11 +14757,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/718/"
   },
@@ -17015,10 +14767,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3597/"
@@ -17030,8 +14779,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17046,10 +14793,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "water",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3076/"
@@ -17061,8 +14805,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17077,10 +14819,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3603/"
@@ -17091,11 +14830,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3569/"
   },
@@ -17106,8 +14841,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17123,8 +14856,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17140,8 +14871,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17162,8 +14891,6 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "tags": [
-      "サウナイキタイ掲載",
-      "県別30件補強",
       "水風呂あり",
       "外気あり"
     ],
@@ -17176,8 +14903,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17193,8 +14918,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17209,10 +14932,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3601/"
@@ -17223,10 +14943,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3595/"
@@ -17237,7 +14954,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "出雲市",
     "sourceUrl": "https://hotel-the-cliff.jp/sauna/",
-    "source": "公式サイト",
+    "source": "公式",
     "features": [
       "個室",
       "貸切可",
@@ -17247,7 +14964,6 @@ export const SEED_FACILITIES = [
     ],
     "tags": [
       "公式確認",
-      "県別30件補強",
       "個室",
       "貸切可",
       "セルフロウリュ",
@@ -17262,11 +14978,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/758/"
   },
@@ -17276,10 +14988,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2892/"
@@ -17290,11 +14999,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/755/"
   },
@@ -17304,11 +15009,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/757/"
   },
@@ -17318,11 +15019,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/752/"
   },
@@ -17333,8 +15030,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17349,10 +15044,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2931/"
@@ -17363,10 +15055,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/764/"
@@ -17378,8 +15067,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -17395,8 +15082,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -17412,8 +15097,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17429,8 +15112,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17445,10 +15126,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3607/"
@@ -17460,8 +15138,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17477,8 +15153,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17494,8 +15168,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -17512,10 +15184,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3617/"
@@ -17527,8 +15196,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -17544,8 +15211,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17560,10 +15225,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3618/"
@@ -17574,11 +15236,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3605/"
   },
@@ -17589,8 +15247,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17605,10 +15261,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3614/"
@@ -17620,8 +15273,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17637,8 +15288,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17654,8 +15303,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17670,11 +15317,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4662/"
   },
@@ -17684,10 +15327,7 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3615/"
@@ -17699,8 +15339,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17715,11 +15353,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4818/"
   },
@@ -17731,7 +15365,6 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "tags": [
       "SAUNACHELIN 2025",
-      "自然",
       "風"
     ],
     "source": "SAUNACHELIN",
@@ -17744,8 +15377,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -17760,10 +15391,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/724/"
@@ -17774,10 +15402,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/722/"
@@ -17789,8 +15414,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -17806,8 +15429,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -17822,11 +15443,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3648/"
   },
@@ -17836,11 +15453,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4644/"
   },
@@ -17851,8 +15464,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -17867,11 +15478,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4892/"
   },
@@ -17882,8 +15489,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -17898,11 +15503,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4591/"
   },
@@ -17913,8 +15514,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17930,8 +15529,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17947,8 +15544,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17964,8 +15559,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -17980,11 +15573,7 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3644/"
   },
@@ -17995,8 +15584,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18012,8 +15599,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18029,8 +15614,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18046,8 +15629,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18063,8 +15644,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18080,8 +15659,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18097,8 +15674,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18114,8 +15689,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -18135,8 +15708,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18152,8 +15723,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -18171,8 +15740,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18188,8 +15755,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -18208,10 +15773,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4655/"
@@ -18223,8 +15785,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18240,8 +15800,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18256,10 +15814,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/731/"
@@ -18270,10 +15825,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/762/"
@@ -18285,8 +15837,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -18302,8 +15852,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -18319,8 +15867,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18336,8 +15882,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18353,8 +15897,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18369,10 +15911,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/761/"
@@ -18383,11 +15922,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3520/"
   },
@@ -18397,11 +15932,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4896/"
   },
@@ -18411,11 +15942,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4897/"
   },
@@ -18425,11 +15952,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4893/"
   },
@@ -18439,11 +15962,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4894/"
   },
@@ -18453,11 +15972,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4895/"
   },
@@ -18468,8 +15983,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18485,8 +15998,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "塩サウナ"
     ],
@@ -18504,8 +16015,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18521,8 +16030,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18537,10 +16044,7 @@ export const SEED_FACILITIES = [
     "prefecture": "広島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3547/"
@@ -18552,8 +16056,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18569,8 +16071,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18586,8 +16086,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18603,8 +16101,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18620,8 +16116,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18637,8 +16131,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18654,8 +16146,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -18673,8 +16163,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -18689,10 +16177,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4634/"
@@ -18704,8 +16189,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -18720,10 +16203,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3677/"
@@ -18734,11 +16214,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3674/"
   },
@@ -18748,11 +16224,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3671/"
   },
@@ -18763,8 +16235,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -18779,10 +16249,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/769/"
@@ -18793,10 +16260,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4631/"
@@ -18807,11 +16271,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4650/"
   },
@@ -18821,11 +16281,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4641/"
   },
@@ -18835,10 +16291,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4262/"
@@ -18850,8 +16303,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -18866,11 +16317,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4920/"
   },
@@ -18881,8 +16328,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -18898,8 +16343,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -18915,8 +16358,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -18932,8 +16373,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -18950,10 +16389,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3665/"
@@ -18965,8 +16401,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -18986,8 +16420,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -19002,10 +16434,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4621/"
@@ -19017,8 +16446,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -19036,8 +16463,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19053,8 +16478,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19070,8 +16493,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19087,8 +16508,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -19106,8 +16525,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19123,8 +16540,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19140,8 +16555,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -19156,11 +16569,7 @@ export const SEED_FACILITIES = [
     "prefecture": "山口県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3656/"
   },
@@ -19171,8 +16580,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19188,8 +16595,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19204,11 +16609,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3696/"
   },
@@ -19219,8 +16620,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19235,10 +16634,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3700/"
@@ -19249,11 +16645,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/712/"
   },
@@ -19263,10 +16655,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3686/"
@@ -19278,8 +16667,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19295,8 +16682,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19312,8 +16697,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -19328,10 +16711,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3693/"
@@ -19343,8 +16723,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19360,8 +16738,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19377,8 +16753,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19394,8 +16768,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19411,8 +16783,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -19430,8 +16800,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19446,11 +16814,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4549/"
   },
@@ -19461,8 +16825,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19478,8 +16840,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19494,11 +16854,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4550/"
   },
@@ -19509,8 +16865,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19525,11 +16879,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3680/"
   },
@@ -19540,8 +16890,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19557,8 +16905,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19574,8 +16920,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19591,8 +16935,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19608,8 +16950,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19624,11 +16964,7 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4564/"
   },
@@ -19639,8 +16975,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19656,8 +16990,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19673,8 +17005,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -19690,8 +17020,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19706,11 +17034,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3715/"
   },
@@ -19720,10 +17044,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/714/"
@@ -19734,11 +17055,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/736/"
   },
@@ -19748,11 +17065,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/737/"
   },
@@ -19763,8 +17076,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19780,8 +17091,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19797,8 +17106,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19813,11 +17120,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3727/"
   },
@@ -19828,8 +17131,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19845,8 +17146,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19861,11 +17160,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/127/"
   },
@@ -19876,8 +17171,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19893,8 +17186,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19910,8 +17201,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19926,10 +17215,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/740/"
@@ -19941,8 +17227,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -19958,8 +17242,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -19974,11 +17256,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/739/"
   },
@@ -19988,10 +17266,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/44/"
@@ -20003,8 +17278,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20020,8 +17293,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20037,8 +17308,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20054,8 +17323,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20071,8 +17338,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20088,8 +17353,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20104,10 +17367,7 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3728/"
@@ -20119,8 +17379,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -20137,10 +17395,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4404/"
@@ -20151,11 +17406,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3769/"
   },
@@ -20165,10 +17416,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3785/"
@@ -20179,11 +17427,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3731/"
   },
@@ -20194,8 +17438,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20211,8 +17453,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20227,10 +17467,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4253/"
@@ -20241,11 +17478,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3732/"
   },
@@ -20256,8 +17489,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20273,8 +17504,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20290,8 +17519,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20306,10 +17533,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3774/"
@@ -20320,11 +17544,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3751/"
   },
@@ -20335,8 +17555,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20352,8 +17570,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20369,8 +17585,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20386,8 +17600,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20403,8 +17615,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20420,8 +17630,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -20439,8 +17647,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20456,8 +17662,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20473,8 +17677,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20490,8 +17692,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -20508,11 +17708,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3745/"
   },
@@ -20523,8 +17719,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20540,8 +17734,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20556,11 +17748,7 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3736/"
   },
@@ -20571,8 +17759,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20588,8 +17774,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20605,8 +17789,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20622,8 +17804,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -20639,8 +17819,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20655,10 +17833,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/741/"
@@ -20670,8 +17845,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20687,8 +17860,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20704,8 +17875,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20721,8 +17890,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -20740,8 +17907,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20757,8 +17922,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20774,8 +17937,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20791,8 +17952,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20808,8 +17967,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20824,11 +17981,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3567/"
   },
@@ -20839,8 +17992,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20856,8 +18007,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20872,11 +18021,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3802/"
   },
@@ -20886,11 +18031,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4552/"
   },
@@ -20901,8 +18042,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20917,11 +18056,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3801/"
   },
@@ -20932,8 +18067,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -20949,8 +18082,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20966,8 +18097,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20983,8 +18112,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -20999,11 +18126,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4659/"
   },
@@ -21014,8 +18137,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21031,8 +18152,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -21047,10 +18166,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4371/"
@@ -21062,8 +18178,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21078,11 +18192,7 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3795/"
   },
@@ -21093,8 +18203,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21123,10 +18231,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4778/"
@@ -21137,10 +18242,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "water",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4773/"
@@ -21151,10 +18253,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/793/"
@@ -21165,10 +18264,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/791/"
@@ -21179,10 +18275,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4487/"
@@ -21193,10 +18286,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/792/"
@@ -21207,10 +18297,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4787/"
@@ -21222,8 +18309,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -21239,8 +18324,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -21256,8 +18339,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -21273,8 +18354,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21290,8 +18369,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21307,8 +18384,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21323,11 +18398,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4925/"
   },
@@ -21337,11 +18408,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4924/"
   },
@@ -21351,11 +18418,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4922/"
   },
@@ -21365,11 +18428,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4921/"
   },
@@ -21379,11 +18438,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4923/"
   },
@@ -21393,11 +18448,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4926/"
   },
@@ -21408,8 +18459,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -21427,8 +18476,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21444,8 +18491,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21461,8 +18506,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21478,8 +18521,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -21496,10 +18537,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4468/"
@@ -21510,10 +18548,7 @@ export const SEED_FACILITIES = [
     "prefecture": "福岡県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3840/"
@@ -21525,8 +18560,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21542,8 +18575,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21559,8 +18590,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21576,8 +18605,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21593,8 +18620,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21610,8 +18635,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21627,8 +18650,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -21645,10 +18666,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3946/"
@@ -21660,8 +18678,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -21677,8 +18693,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21694,8 +18708,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21710,11 +18722,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4478/"
   },
@@ -21725,8 +18733,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -21743,10 +18749,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3945/"
@@ -21758,8 +18761,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21774,11 +18775,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4473/"
   },
@@ -21789,8 +18786,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21806,8 +18801,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -21825,8 +18818,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21841,7 +18832,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "武雄市",
     "sourceUrl": "https://www.mifuneyama.co.jp/rakan.html",
-    "source": "公式サイト",
+    "source": "公式",
     "features": [
       "温泉付き",
       "薪サウナ",
@@ -21853,7 +18844,6 @@ export const SEED_FACILITIES = [
     ],
     "tags": [
       "公式確認",
-      "県別30件補強",
       "温泉付き",
       "薪サウナ",
       "スチーム(ミスト)サウナ",
@@ -21870,11 +18860,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3571/"
   },
@@ -21884,11 +18870,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3948/"
   },
@@ -21899,8 +18881,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21916,8 +18896,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -21933,8 +18911,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -21950,8 +18926,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -21970,11 +18944,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4477/"
   },
@@ -21984,11 +18954,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4389/"
   },
@@ -21999,8 +18965,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22016,8 +18980,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22033,8 +18995,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22050,8 +19010,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22066,10 +19024,7 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3938/"
@@ -22080,10 +19035,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3960/"
@@ -22094,11 +19046,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4616/"
   },
@@ -22108,10 +19056,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/801/"
@@ -22123,8 +19068,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22139,10 +19082,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "water",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/805/"
@@ -22153,10 +19093,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3980/"
@@ -22168,8 +19105,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22185,8 +19120,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22202,8 +19135,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22219,8 +19150,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22235,10 +19164,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3966/"
@@ -22249,11 +19175,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4927/"
   },
@@ -22263,11 +19185,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4928/"
   },
@@ -22278,8 +19196,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -22297,8 +19213,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -22318,8 +19232,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22334,11 +19246,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3954/"
   },
@@ -22349,8 +19257,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22366,8 +19272,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22382,10 +19286,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/842/"
@@ -22396,11 +19297,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/841/"
   },
@@ -22410,10 +19307,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3956/"
@@ -22424,11 +19318,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2935/"
   },
@@ -22439,8 +19329,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "water",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -22458,8 +19346,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22475,8 +19361,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22492,8 +19376,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22509,8 +19391,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22525,10 +19405,7 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "city": "",
     "trait": "water",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3582/"
@@ -22540,8 +19417,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22556,11 +19431,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/82/"
   },
@@ -22571,8 +19442,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22588,8 +19457,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22604,11 +19471,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/832/"
   },
@@ -22618,10 +19481,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4527/"
@@ -22632,10 +19492,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/838/"
@@ -22647,8 +19504,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22664,8 +19519,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22681,8 +19534,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -22697,11 +19548,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/836/"
   },
@@ -22712,8 +19559,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22728,11 +19573,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4930/"
   },
@@ -22742,11 +19583,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4929/"
   },
@@ -22756,11 +19593,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "wood",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "自然"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4931/"
   },
@@ -22771,8 +19604,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22788,8 +19619,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22805,8 +19634,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22822,8 +19649,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22839,8 +19664,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22856,8 +19679,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22873,8 +19694,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -22890,8 +19709,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -22909,8 +19726,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22926,8 +19741,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22943,8 +19756,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22960,8 +19771,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -22976,10 +19785,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4524/"
@@ -22991,8 +19797,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -23007,10 +19811,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/854/"
@@ -23021,10 +19822,7 @@ export const SEED_FACILITIES = [
     "prefecture": "熊本県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/849/"
@@ -23035,11 +19833,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/78/"
   },
@@ -23050,8 +19844,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23067,8 +19859,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23084,8 +19874,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23101,8 +19889,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -23120,8 +19906,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23136,11 +19920,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3865/"
   },
@@ -23151,8 +19931,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -23168,8 +19946,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23184,11 +19960,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3854/"
   },
@@ -23199,8 +19971,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり",
       "宿泊可"
     ],
@@ -23217,11 +19987,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4932/"
   },
@@ -23231,10 +19997,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4472/"
@@ -23246,8 +20009,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23263,8 +20024,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23280,8 +20039,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -23299,8 +20056,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23315,11 +20070,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4716/"
   },
@@ -23330,8 +20081,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23347,8 +20096,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -23364,8 +20111,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23381,8 +20126,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -23400,8 +20143,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23416,11 +20157,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3914/"
   },
@@ -23431,8 +20168,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23448,8 +20183,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり",
       "宿泊可"
@@ -23469,8 +20202,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23486,8 +20217,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23503,8 +20232,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23519,10 +20246,7 @@ export const SEED_FACILITIES = [
     "prefecture": "大分県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3858/"
@@ -23533,11 +20257,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4705/"
   },
@@ -23547,10 +20267,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/867/"
@@ -23562,8 +20279,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23579,8 +20294,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23595,11 +20308,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/868/"
   },
@@ -23609,10 +20318,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2936/"
@@ -23623,10 +20329,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4267/"
@@ -23638,8 +20341,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23654,11 +20355,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4933/"
   },
@@ -23668,10 +20365,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4078/"
@@ -23683,8 +20377,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "サ飯あり"
     ],
     "features": [
@@ -23700,8 +20392,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "urban",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "外気あり"
     ],
     "features": [
@@ -23717,8 +20407,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -23733,11 +20421,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2886/"
   },
@@ -23748,8 +20432,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23765,8 +20447,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23782,8 +20462,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23799,8 +20477,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23816,8 +20492,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -23834,10 +20508,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4074/"
@@ -23849,8 +20520,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23865,10 +20534,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4073/"
@@ -23879,10 +20545,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4077/"
@@ -23894,8 +20557,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23911,8 +20572,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23927,11 +20586,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/132/"
   },
@@ -23941,10 +20596,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/870/"
@@ -23956,8 +20608,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -23972,11 +20622,7 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4097/"
   },
@@ -23987,8 +20633,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24003,10 +20647,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/906/"
@@ -24018,8 +20659,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24035,8 +20674,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24052,8 +20689,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24068,10 +20703,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4305/"
@@ -24082,10 +20714,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4160/"
@@ -24096,10 +20725,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/916/"
@@ -24111,8 +20737,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -24128,8 +20752,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -24144,11 +20766,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/924/"
   },
@@ -24159,8 +20777,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24176,8 +20792,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24193,8 +20807,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24209,11 +20821,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "街サウナ"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4639/"
   },
@@ -24223,11 +20831,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/925/"
   },
@@ -24238,8 +20842,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24255,8 +20857,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24272,8 +20872,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24288,10 +20886,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/915/"
@@ -24303,8 +20898,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24319,11 +20912,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4157/"
   },
@@ -24333,11 +20922,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4154/"
   },
@@ -24347,11 +20932,7 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4682/"
   },
@@ -24362,8 +20943,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24379,8 +20958,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24396,8 +20973,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24413,8 +20988,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -24432,8 +21005,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24449,8 +21020,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "wood",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "外気あり"
     ],
@@ -24468,8 +21037,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24484,10 +21051,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4316/"
@@ -24499,8 +21063,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -24515,11 +21077,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/935/"
   },
@@ -24529,11 +21087,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4735/"
   },
@@ -24543,11 +21097,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/116/"
   },
@@ -24557,10 +21107,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/938/"
@@ -24571,10 +21118,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4312/"
@@ -24585,10 +21129,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/939/"
@@ -24599,10 +21140,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4356/"
@@ -24613,11 +21151,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4317/"
   },
@@ -24627,10 +21161,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/933/"
@@ -24641,10 +21172,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2893/"
@@ -24656,8 +21184,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24672,10 +21198,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/934/"
@@ -24686,10 +21209,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4314/"
@@ -24700,10 +21220,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "urban",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4315/"
@@ -24714,11 +21231,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "注目"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4734/"
   },
@@ -24729,8 +21242,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -24748,8 +21259,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -24765,8 +21274,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き",
       "宿泊可"
     ],
@@ -24783,11 +21290,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "onsen",
-    "tags": [
-      "SaunaTime掲載",
-      "県別スターター",
-      "温浴"
-    ],
+    "tags": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/940/"
   },
@@ -24798,8 +21301,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24815,8 +21316,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24831,10 +21330,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/932/"
@@ -24846,8 +21342,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "award",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "宿泊可"
     ],
     "features": [
@@ -24863,8 +21357,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24879,10 +21371,7 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "city": "",
     "trait": "award",
-    "tags": [
-      "SaunaTime掲載",
-      "県別30件補強"
-    ],
+    "tags": [],
     "features": [],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/930/"
@@ -24894,8 +21383,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24911,8 +21398,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [
@@ -24928,8 +21413,6 @@ export const SEED_FACILITIES = [
     "city": "",
     "trait": "onsen",
     "tags": [
-      "SaunaTime掲載",
-      "県別30件補強",
       "温泉付き"
     ],
     "features": [

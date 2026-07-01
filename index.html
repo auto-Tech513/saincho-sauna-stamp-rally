@@ -173,7 +173,7 @@
                 <p class="eyebrow">GEAR</p>
                 <h3>サウナ補給</h3>
               </div>
-              <span>公式アフィリエイト</span>
+              <button class="mini-button" type="button" data-open-view="Gear">30件を見る</button>
             </div>
             <div class="shop-grid" id="shopGrid"></div>
           </section>
@@ -182,6 +182,45 @@
             <input id="importInput" type="file" accept="application/json" />
             <span>記録を読み込む</span>
           </label>
+        </section>
+
+        <section class="view" id="viewGear" aria-label="Gear">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">GEAR</p>
+              <h2>サウナ補給</h2>
+            </div>
+            <span class="count-badge" id="gearCount">30件</span>
+          </div>
+          <div class="commerce-hero">
+            <span>公式アフィリエイト</span>
+            <h3>初心者が失敗しにくい30アイテム</h3>
+            <p>固定の古い星評価ではなく、Amazonはレビュー順検索、楽天はレビュー評価順の検索へ送ります。今の高評価品をその場で比較できます。</p>
+          </div>
+          <div class="category-strip" id="gearCategoryStrip" aria-label="Gearカテゴリ"></div>
+          <div class="gear-grid" id="gearGrid"></div>
+        </section>
+
+        <section class="view" id="viewGuide" aria-label="サウナ入門">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">BEGINNER GUIDE</p>
+              <h2>サウナ入門</h2>
+            </div>
+            <span class="count-badge" id="articleCount">30記事</span>
+          </div>
+          <div class="guide-hero">
+            <span>まず安全、その次に気持ちよさ</span>
+            <h3>初めてでも迷わない入り方と豆知識</h3>
+            <p>我慢比べではなく、自分の体調に合わせて続けるための記事を30本まとめました。気になる項目だけ開いて読めます。</p>
+          </div>
+          <div class="category-strip" id="articleCategoryStrip" aria-label="記事カテゴリ"></div>
+          <div class="article-list" id="articleList"></div>
+          <section class="reference-panel" aria-label="参考情報">
+            <p class="eyebrow">REFERENCES</p>
+            <h3>安全面の参考</h3>
+            <div id="guideReferences"></div>
+          </section>
         </section>
 
         <section class="view" id="viewAdd" aria-label="追加">
@@ -249,6 +288,11 @@
         <span>押印時の振動</span>
         <input id="vibrationToggle" type="checkbox" checked />
       </label>
+      <div class="menu-actions" aria-label="メニュー">
+        <button type="button" data-menu-view="Gear">Gearページ</button>
+        <button type="button" data-menu-view="Guide">サウナ入門</button>
+        <button type="button" data-menu-view="Stats">ランキング</button>
+      </div>
       <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
       <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
     </dialog>

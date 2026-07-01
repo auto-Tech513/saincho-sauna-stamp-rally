@@ -1,4 +1,5 @@
 import { PREFECTURES, SEED_FACILITIES } from "./data.js";
+import { GEAR_PRODUCTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "./content.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -10,41 +11,9 @@ const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
 const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
-
-const PRODUCT_RECOMMENDATIONS = [
-  {
-    category: "サウナハット",
-    title: "今治タオル系サウナハット",
-    proof: "Amazon 4.5 / 773件を確認、楽天はレビュー評価順",
-    reason: "髪の乾燥とのぼせ対策。まず1つ買うなら定番のタオル地。",
-    amazonUrl: "https://www.amazon.co.jp/dp/B0BJZYDL1C",
-    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B5%25E3%2582%25A6%25E3%2583%258A%25E3%2583%258F%25E3%2583%2583%25E3%2583%2588%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
-  },
-  {
-    category: "サウナマット",
-    title: "GoodKuru 折りたたみマット系",
-    proof: "Amazon 4.2 / 1,230件を確認、楽天はレビュー評価順",
-    reason: "共用マットが気になる人向け。小さく畳めて持ち歩きやすい。",
-    amazonUrl: "https://www.amazon.co.jp/dp/B0B1SYFH2W",
-    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B5%25E3%2582%25A6%25E3%2583%258A%25E3%2583%259E%25E3%2583%2583%25E3%2583%2588%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
-  },
-  {
-    category: "水分補給",
-    title: "ポカリスエット 500ml×24本",
-    proof: "Amazon 4.5 / 5,453件を確認、楽天はレビュー評価順",
-    reason: "サウナ前後の定番補給。まとめ買いで切らしにくい。",
-    amazonUrl: "https://www.amazon.co.jp/dp/B000K82WFI",
-    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%259D%25E3%2582%25AB%25E3%2583%25AA%25E3%2582%25B9%25E3%2582%25A8%25E3%2583%2583%25E3%2583%2588%2520500ml%252024%25E6%259C%25AC%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
-  },
-  {
-    category: "オロポ",
-    title: "オロナミンC 120ml×30本",
-    proof: "Amazon 4.5 / 4,231件を確認、楽天はレビュー評価順",
-    reason: "ポカリと合わせてオロポ用。施設帰りのご褒美にも強い。",
-    amazonUrl: "https://www.amazon.co.jp/dp/B08JCZ34K3",
-    rakutenUrl: "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25AA%25E3%2583%25AD%25E3%2583%258A%25E3%2583%259F%25E3%2583%25B3C%252030%25E6%259C%25AC%2F%3Fs%3D6&link_type=text&ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9",
-  },
-];
+const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
+const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
+const PRODUCT_RECOMMENDATIONS = GEAR_PRODUCTS.slice(0, 4);
 
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -105,7 +74,7 @@ const FEATURE_ALIASES = {
   "スチーム(ミスト)サウナ": ["スチームサウナ", "ミストサウナ", "蒸気サウナ"],
   "外気あり": ["外気浴あり", "外気浴", "外気"],
   "外気なし": ["外気浴なし"],
-  "水風呂あり": ["水風呂", "冷水浴"],
+  "水風呂あり": ["水風呂", "天然水風呂", "滝つぼ水風呂", "冷水", "冷水浴"],
   "熱波師あり": ["熱波", "アウフグース"],
   "アロマロウリュ": ["アロマロウリュウ"],
   "セルフロウリュ": ["セルフロウリュウ"],
@@ -131,7 +100,25 @@ const TRAIT_FEATURES = {
   onsen: ["温泉付き"],
 };
 
-const NON_DISPLAY_TAGS = new Set(["SaunaTime掲載", "県別スターター", "ユーザー指定追加", "みんなの追加", "注目", "自然", "街サウナ", "温浴"]);
+const NON_DISPLAY_TAGS = new Set([
+  "SaunaTime掲載",
+  "サウナイキタイ掲載",
+  "県別スターター",
+  "県別30件補強",
+  "ユーザー指定追加",
+  "みんなの追加",
+  "指定リスト",
+  "地域照合",
+  "指定リスト/地域照合",
+  "設備未確認",
+  "営業要確認",
+  "要確認",
+  "注目",
+  "名店",
+  "自然",
+  "街サウナ",
+  "温浴",
+]);
 
 const AROMAS = ["檜", "白樺", "薄荷", "ほうじ茶", "ヴィヒタ", "柚子", "松葉"];
 
@@ -144,6 +131,8 @@ let state = loadState();
 let settings = loadSettings();
 let profile = loadProfile();
 let selectedPrefecture = "全国";
+let selectedGearCategory = "すべて";
+let selectedArticleCategory = "すべて";
 let activeFilter = "all";
 let activeView = "Explore";
 let searchTerm = "";
@@ -192,6 +181,13 @@ const el = {
   leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
   leaderboardSyncButton: document.querySelector("#leaderboardSyncButton"),
   shopGrid: document.querySelector("#shopGrid"),
+  gearCategoryStrip: document.querySelector("#gearCategoryStrip"),
+  gearGrid: document.querySelector("#gearGrid"),
+  gearCount: document.querySelector("#gearCount"),
+  articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
+  articleList: document.querySelector("#articleList"),
+  articleCount: document.querySelector("#articleCount"),
+  guideReferences: document.querySelector("#guideReferences"),
   prefSelect: document.querySelector("#prefSelect"),
   addForm: document.querySelector("#addForm"),
   toast: document.querySelector("#toast"),
@@ -239,6 +235,13 @@ function init() {
 function bindEvents() {
   document.querySelectorAll("[data-view]").forEach((button) => {
     button.addEventListener("click", () => setView(button.dataset.view));
+  });
+
+  document.querySelectorAll("[data-menu-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      el.settingsDialog.close();
+      setView(button.dataset.menuView);
+    });
   });
 
   document.querySelectorAll("[data-filter]").forEach((button) => {
@@ -308,6 +311,26 @@ function bindEvents() {
   });
 
   el.main.addEventListener("click", (event) => {
+    const openViewButton = event.target.closest("[data-open-view]");
+    if (openViewButton) {
+      setView(openViewButton.dataset.openView);
+      return;
+    }
+
+    const gearCategoryButton = event.target.closest("[data-gear-category]");
+    if (gearCategoryButton) {
+      selectedGearCategory = gearCategoryButton.dataset.gearCategory;
+      renderGearPage();
+      return;
+    }
+
+    const articleCategoryButton = event.target.closest("[data-article-category]");
+    if (articleCategoryButton) {
+      selectedArticleCategory = articleCategoryButton.dataset.articleCategory;
+      renderGuidePage();
+      return;
+    }
+
     const moreButton = event.target.closest("[data-show-more]");
     if (moreButton) {
       visibleLimit += 36;
@@ -505,6 +528,8 @@ function renderAll() {
   renderExplore();
   renderPassport();
   renderStats();
+  renderGearPage();
+  renderGuidePage();
 }
 
 function renderSummary() {
@@ -598,7 +623,7 @@ function renderSpotlight() {
       <div>
         <span class="spotlight-label">次の一湯</span>
         <h3>${escapeHtml(facility.name)}</h3>
-        <p>${escapeHtml([facility.prefecture, facility.city, facility.source].filter(Boolean).join(" / "))}</p>
+        <p>${escapeHtml(getFacilityMeta(facility))}</p>
       </div>
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
@@ -614,11 +639,13 @@ function renderFacilityCard(facility) {
   const visited = state.visited[facility.id];
   const wished = Boolean(state.wishlist[facility.id]);
   const status = getFacilityStatus(facility);
-  const meta = [facility.prefecture, facility.city, facility.source].filter(Boolean).join(" / ");
-  const tags = getDisplayTags(facility).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+  const meta = getFacilityMeta(facility);
+  const displayTags = getDisplayTags(facility);
+  const tags = displayTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+  const sourceLabel = getFacilitySourceLabel(facility);
   const sourceBadge = facility.sourceUrl
-    ? `<a class="source-badge" href="${escapeAttr(facility.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(facility.source)}</a>`
-    : `<span class="source-badge">${escapeHtml(facility.source)}</span>`;
+    ? `<a class="source-badge" href="${escapeAttr(facility.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel)}</a>`
+    : `<span class="source-badge">${escapeHtml(sourceLabel)}</span>`;
   const headBadge = visited
     ? `<span class="visited-badge">押印済</span>`
     : status
@@ -643,7 +670,7 @@ function renderFacilityCard(facility) {
           ${headBadge}
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
-        <div class="tag-row">${tags}</div>
+        ${tags ? `<div class="tag-row">${tags}</div>` : ""}
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
         ${renderMemoPanel(facility)}
@@ -860,18 +887,85 @@ function renderLeaderboard() {
 }
 
 function renderShopPanel() {
-  el.shopGrid.innerHTML = PRODUCT_RECOMMENDATIONS.map((item) => `
-    <article class="shop-card">
+  el.shopGrid.innerHTML = PRODUCT_RECOMMENDATIONS.map((item) => renderGearCard(item, "compact")).join("");
+}
+
+function renderGearPage() {
+  const categories = ["すべて", ...uniqueStrings(GEAR_PRODUCTS.map((item) => item.category))];
+  if (!categories.includes(selectedGearCategory)) selectedGearCategory = "すべて";
+  const products = selectedGearCategory === "すべて"
+    ? GEAR_PRODUCTS
+    : GEAR_PRODUCTS.filter((item) => item.category === selectedGearCategory);
+
+  el.gearCount.textContent = `${products.length}/${GEAR_PRODUCTS.length}件`;
+  el.gearCategoryStrip.innerHTML = categories.map((category) => `
+    <button class="pref-chip ${selectedGearCategory === category ? "pref-chip-active" : ""}" type="button" data-gear-category="${escapeAttr(category)}">
+      ${escapeHtml(category)}
+    </button>
+  `).join("");
+  el.gearGrid.innerHTML = products.map((item) => renderGearCard(item, "full")).join("");
+}
+
+function renderGuidePage() {
+  const categories = ["すべて", ...uniqueStrings(SAUNA_ARTICLES.map((item) => item.category))];
+  if (!categories.includes(selectedArticleCategory)) selectedArticleCategory = "すべて";
+  const articles = selectedArticleCategory === "すべて"
+    ? SAUNA_ARTICLES
+    : SAUNA_ARTICLES.filter((item) => item.category === selectedArticleCategory);
+
+  el.articleCount.textContent = `${articles.length}/${SAUNA_ARTICLES.length}記事`;
+  el.articleCategoryStrip.innerHTML = categories.map((category) => `
+    <button class="pref-chip ${selectedArticleCategory === category ? "pref-chip-active" : ""}" type="button" data-article-category="${escapeAttr(category)}">
+      ${escapeHtml(category)}
+    </button>
+  `).join("");
+  el.articleList.innerHTML = articles.map(renderArticleCard).join("");
+  el.guideReferences.innerHTML = SAUNA_REFERENCES.map((item) => `
+    <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.label)}</a>
+  `).join("");
+}
+
+function renderGearCard(item, mode) {
+  const links = getGearLinks(item);
+  return `
+    <article class="shop-card ${mode === "full" ? "gear-card-full" : ""}">
       <span>${escapeHtml(item.category)}</span>
       <h4>${escapeHtml(item.title)}</h4>
       <p>${escapeHtml(item.reason)}</p>
       <em>${escapeHtml(item.proof)}</em>
       <div class="shop-card-actions">
-        <a href="${escapeAttr(buildAmazonUrl(item.amazonUrl))}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
-        <a href="${escapeAttr(item.rakutenUrl)}" target="_blank" rel="nofollow sponsored noreferrer">楽天 高評価順</a>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天 高評価順</a>
       </div>
     </article>
-  `).join("");
+  `;
+}
+
+function renderArticleCard(article, index) {
+  return `
+    <article class="article-card">
+      <details ${index === 0 ? "open" : ""}>
+        <summary>
+          <span>${escapeHtml(article.category)}</span>
+          <strong>${escapeHtml(article.title)}</strong>
+        </summary>
+        <div class="article-body">
+          <p>${escapeHtml(article.lead)}</p>
+          <ul>
+            ${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
+          </ul>
+          <div class="article-action">
+            <b>実践</b>
+            <span>${escapeHtml(article.action)}</span>
+          </div>
+          <div class="article-caution">
+            <b>注意</b>
+            <span>${escapeHtml(article.caution)}</span>
+          </div>
+        </div>
+      </details>
+    </article>
+  `;
 }
 
 function renderPrefSelect() {
@@ -1139,11 +1233,29 @@ function getFacilities() {
   return dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
 }
 
+function getFacilityMeta(facility) {
+  return [facility.prefecture, facility.city, getFacilitySourceLabel(facility)].filter(Boolean).join(" / ");
+}
+
+function getFacilitySourceLabel(facility) {
+  const source = String(facility.source || "").trim();
+  const url = String(facility.sourceUrl || "");
+  if (/指定リスト|地域照合|営業要確認/.test(source)) {
+    if (/sauna-ikitai\.com/.test(url)) return "サウナイキタイ";
+    if (/saunatime\.jp/.test(url)) return "SaunaTime";
+    if (/supersento\.com/.test(url)) return "スーパー銭湯全国検索";
+    if (/sauna-map\.com/.test(url)) return "サウナマップ";
+    if (/yoriyu\.com/.test(url)) return "より湯";
+    return url ? "参照元" : "";
+  }
+  return source || (url ? "参照元" : "");
+}
+
 function getDisplayTags(facility) {
   const features = getFacilityFeatures(facility);
   const sourceTags = (facility.tags || []).filter((tag) => !NON_DISPLAY_TAGS.has(tag) && !features.includes(tag) && !features.includes(normalizeFeature(tag)));
   const tags = uniqueStrings([...features, ...sourceTags]).slice(0, 8);
-  return tags.length ? tags : ["設備未確認"];
+  return tags;
 }
 
 function getFacilityFeatures(facility) {
@@ -1660,9 +1772,34 @@ function formatDateTime(value) {
   }).format(date);
 }
 
+function getGearLinks(item) {
+  return {
+    amazon: item.amazonUrl ? buildAmazonUrl(item.amazonUrl) : buildAmazonSearchUrl(item.amazonQuery || item.title),
+    rakuten: item.rakutenUrl || buildRakutenAffiliateUrl(item.rakutenQuery || item.title),
+  };
+}
+
 function buildAmazonUrl(value) {
   const url = new URL(value);
   if (AMAZON_ASSOCIATE_TAG) url.searchParams.set("tag", AMAZON_ASSOCIATE_TAG);
+  return url.href;
+}
+
+function buildAmazonSearchUrl(query) {
+  const url = new URL("https://www.amazon.co.jp/s");
+  url.searchParams.set("k", query);
+  url.searchParams.set("s", "review-rank");
+  if (AMAZON_ASSOCIATE_TAG) url.searchParams.set("tag", AMAZON_ASSOCIATE_TAG);
+  return url.href;
+}
+
+function buildRakutenAffiliateUrl(query) {
+  const target = new URL(`https://search.rakuten.co.jp/search/mall/${encodeURIComponent(query)}/`);
+  target.searchParams.set("s", "6");
+  const url = new URL(RAKUTEN_AFFILIATE_URL);
+  url.searchParams.set("pc", target.href);
+  url.searchParams.set("link_type", "text");
+  url.searchParams.set("ut", RAKUTEN_AFFILIATE_UT);
   return url.href;
 }
 
