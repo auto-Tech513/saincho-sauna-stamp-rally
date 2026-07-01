@@ -14,6 +14,10 @@ const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
 const PRODUCT_RECOMMENDATIONS = GEAR_PRODUCTS.slice(0, 4);
+const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
+const MENU_EDGE_WIDTH = 46;
+const MENU_SWIPE_DISTANCE = 72;
+const MENU_SWIPE_MAX_VERTICAL = 64;
 
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -147,6 +151,7 @@ let rankingSyncTimer = 0;
 let rankingPollTimer = 0;
 let visibleLimit = 36;
 let deferredInstallPrompt = null;
+let menuSwipeStart = null;
 
 const el = {
   main: document.querySelector(".main"),
@@ -238,9 +243,16 @@ function bindEvents() {
     button.addEventListener("click", () => setView(button.dataset.view));
   });
 
+  document.addEventListener("click", (event) => {
+    const openViewButton = event.target instanceof Element ? event.target.closest("[data-open-view]") : null;
+    if (!openViewButton || el.main.contains(openViewButton)) return;
+    if (el.settingsDialog.open) closeSettingsDialog();
+    setView(openViewButton.dataset.openView);
+  });
+
   document.querySelectorAll("[data-menu-view]").forEach((button) => {
     button.addEventListener("click", () => {
-      el.settingsDialog.close();
+      closeSettingsDialog();
       setView(button.dataset.menuView);
     });
   });
@@ -454,8 +466,8 @@ function bindEvents() {
     showToast(shared ? `${addedFacility.name} をみんなの候補に追加しました` : `${addedFacility.name} を自分の候補に追加しました`);
   });
 
-  el.settingsButton.addEventListener("click", () => el.settingsDialog.showModal());
-  el.closeSettingsButton.addEventListener("click", () => el.settingsDialog.close());
+  el.settingsButton.addEventListener("click", openSettingsDialog);
+  el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
   el.vibrationToggle.checked = settings.vibration;
   el.vibrationToggle.addEventListener("change", () => {
     settings.vibration = el.vibrationToggle.checked;
@@ -466,7 +478,7 @@ function bindEvents() {
     if (!confirm("すべての押印・行きたい・追加データを削除します。")) return;
     state = createState();
     saveState();
-    el.settingsDialog.close();
+    closeSettingsDialog();
     renderAll();
     showToast("記録をリセットしました");
   });
@@ -508,6 +520,74 @@ function bindEvents() {
   el.closeInstallHelpButton.addEventListener("click", () => el.installHelpDialog.close());
   el.closeAchievementButton.addEventListener("click", () => el.achievementDialog.close());
   el.achievementOkButton.addEventListener("click", () => el.achievementDialog.close());
+  bindSwipeMenu();
+}
+
+function openSettingsDialog() {
+  if (el.settingsDialog.open) return;
+  if (typeof el.settingsDialog.showModal === "function") {
+    el.settingsDialog.showModal();
+    return;
+  }
+  el.settingsDialog.setAttribute("open", "");
+}
+
+function closeSettingsDialog() {
+  if (!el.settingsDialog.open) return;
+  if (typeof el.settingsDialog.close === "function") {
+    el.settingsDialog.close();
+    return;
+  }
+  el.settingsDialog.removeAttribute("open");
+}
+
+function bindSwipeMenu() {
+  document.addEventListener("touchstart", (event) => {
+    if (!MOBILE_MENU_QUERY.matches || event.touches.length !== 1) {
+      menuSwipeStart = null;
+      return;
+    }
+    const touch = event.touches[0];
+    const target = event.target instanceof Element ? event.target : document.body;
+    if (!el.settingsDialog.open) {
+      if (!isMenuOpenSwipeStart(touch, target)) {
+        menuSwipeStart = null;
+        return;
+      }
+      menuSwipeStart = { mode: "open", x: touch.clientX, y: touch.clientY };
+      return;
+    }
+    if (target.closest("input, textarea, select, button, a")) {
+      menuSwipeStart = null;
+      return;
+    }
+    menuSwipeStart = { mode: "close", x: touch.clientX, y: touch.clientY };
+  }, { passive: true });
+
+  document.addEventListener("touchend", (event) => {
+    if (!menuSwipeStart || !event.changedTouches.length) return;
+    const touch = event.changedTouches[0];
+    const dx = touch.clientX - menuSwipeStart.x;
+    const dy = Math.abs(touch.clientY - menuSwipeStart.y);
+    const mode = menuSwipeStart.mode;
+    menuSwipeStart = null;
+    if (dy > MENU_SWIPE_MAX_VERTICAL) return;
+    if (mode === "open" && dx <= -MENU_SWIPE_DISTANCE) openSettingsDialog();
+    if (mode === "close" && dx >= MENU_SWIPE_DISTANCE) closeSettingsDialog();
+  }, { passive: true });
+}
+
+function isMenuOpenSwipeStart(touch, target) {
+  if (touch.clientX < window.innerWidth - MENU_EDGE_WIDTH) return false;
+  if (isBottomNavTouch(touch.clientY)) return false;
+  return !target.closest("input, textarea, select, button, a, .bottom-nav, .category-strip, .pref-strip, .passport-scope-strip, .source-row, .gear-category-strip");
+}
+
+function isBottomNavTouch(clientY) {
+  const nav = document.querySelector(".bottom-nav");
+  if (!nav) return false;
+  const rect = nav.getBoundingClientRect();
+  return clientY >= rect.top - 12 && clientY <= rect.bottom + 12;
 }
 
 function setView(view) {
@@ -1042,14 +1122,14 @@ function getArticleGearProducts(article) {
 function getProductsForArticleCategory(category) {
   const map = {
     基本: ["サウナハット", "マット", "タオル", "水分補給"],
-    安全: ["水分補給", "計測"],
+    安全: ["水分補給", "視界", "計測"],
     水風呂: ["水分補給", "タオル"],
     休憩: ["サウナハット", "タオル", "水分補給"],
     水分: ["水分補給", "ボトル"],
     マナー: ["タオル", "マット", "バッグ"],
     ロウリュ: ["香り", "サウナハット", "水分補給"],
-    道具: ["サウナハット", "マット", "タオル", "バッグ"],
-    施設選び: ["バッグ", "タオル", "水分補給"],
+    道具: ["サウナハット", "マット", "タオル", "バッグ", "視界"],
+    施設選び: ["バッグ", "タオル", "水分補給", "視界"],
     種類: ["サウナハット", "マット", "水分補給"],
     体調: ["水分補給", "計測"],
     季節: ["水分補給", "ウェア"],
@@ -1701,7 +1781,7 @@ function renderInstallPrompt() {
 }
 
 function showInstallHelp() {
-  if (el.settingsDialog.open) el.settingsDialog.close();
+  if (el.settingsDialog.open) closeSettingsDialog();
   if (typeof el.installHelpDialog.showModal === "function") {
     el.installHelpDialog.showModal();
     return;

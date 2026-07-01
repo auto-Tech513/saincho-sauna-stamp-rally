@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v19";
+const CACHE_NAME = "saincho-v20";
 const ASSETS = [
   "./",
   "./index.html",
@@ -14,6 +14,7 @@ const ASSETS = [
   "./icons/favicon-32.png",
   "./icons/favicon-16.png",
   "./assets/sauna-hero.png",
+  "./assets/saincho-header-ritual.jpg",
   "./assets/achievement-mascot.png",
 ];
 
