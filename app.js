@@ -1,5 +1,5 @@
 import { PREFECTURES, SEED_FACILITIES } from "./data.js";
-import { GEAR_PRODUCTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "./content.js";
+import { GEAR_PRODUCTS, GUIDE_FAQS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "./content.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -18,6 +18,40 @@ const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
+const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
+const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、県別マスター、称号、ランキング、サウナ入門、Gearまでスマホで使えます。";
+const VIEW_META = {
+  Explore: {
+    path: "/",
+    title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
+    description: "サ印帳は、行ったサウナをサ印として押印し、全国1589候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録アプリです。",
+  },
+  Passport: {
+    path: "/passport/",
+    title: "サ印帳のサ印コレクション | 県別マスターと称号",
+    description: "サ印帳で押印したサウナを全県・県別に切り替えて確認。県別マスター認定、称号、達成度でサ活の継続を楽しめます。",
+  },
+  Stats: {
+    path: "/ranking/",
+    title: "サ印ランキング TOP10 | サ印帳",
+    description: "サ印帳のサ印数ランキング、訪問県、称号、行きたい候補を確認。サウナ仲間と記録を共有できます。",
+  },
+  Gear: {
+    path: "/gear/",
+    title: "サウナグッズ30選 | サ印帳 Gear",
+    description: "サウナハット、サウナマット、水分補給、タオル、遠征グッズなど、初心者が失敗しにくいサウナGearをAmazon・楽天で比較できます。",
+  },
+  Guide: {
+    path: "/guide/",
+    title: "サウナ入門30記事 | 入り方・水風呂・持ち物・マナー",
+    description: "初めてのサウナでも迷わない入り方、水風呂、休憩、水分補給、ロウリュ、サウナグッズ、マナーを30記事とFAQで確認できます。",
+  },
+  Add: {
+    path: "/add/",
+    title: "候補にないサウナを追加 | サ印帳",
+    description: "サ印帳に候補がないサウナを自分で登録し、特徴、メモ、押印候補として管理できます。",
+  },
+};
 
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -195,6 +229,7 @@ const el = {
   articleList: document.querySelector("#articleList"),
   articleCount: document.querySelector("#articleCount"),
   guideReferences: document.querySelector("#guideReferences"),
+  guideFaq: document.querySelector("#guideFaq"),
   prefSelect: document.querySelector("#prefSelect"),
   addForm: document.querySelector("#addForm"),
   toast: document.querySelector("#toast"),
@@ -225,8 +260,12 @@ const el = {
 init();
 
 function init() {
+  activeView = getViewFromLocation();
+  applyActiveView(activeView);
+  updateDocumentMetaForView(activeView);
   renderPrefSelect();
   renderFeatureControls();
+  hydrateSearchFromUrl();
   renderSearchClearButton();
   renderProfilePanel();
   renderShopPanel();
@@ -237,6 +276,13 @@ function init() {
   loadSharedFacilities();
   loadRanking();
   startRankingPolling();
+  window.addEventListener("popstate", () => {
+    activeView = getViewFromLocation();
+    applyActiveView(activeView);
+    updateDocumentMetaForView(activeView);
+    renderAll();
+    el.main.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }
 
 function bindEvents() {
@@ -256,6 +302,15 @@ function bindEvents() {
       closeSettingsDialog();
       setView(button.dataset.menuView);
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    const appActionButton = event.target instanceof Element ? event.target.closest("[data-app-action]") : null;
+    if (!appActionButton) return;
+    if (el.settingsDialog.open && appActionButton.closest(".settings-dialog")) closeSettingsDialog();
+    if (appActionButton.dataset.appAction === "share-app") shareApp();
+    if (appActionButton.dataset.appAction === "copy-app-url") copyAppUrl();
+    if (appActionButton.dataset.appAction === "share-line") shareToLine();
   });
 
   document.querySelectorAll("[data-filter]").forEach((button) => {
@@ -592,7 +647,15 @@ function isBottomNavTouch(clientY) {
 }
 
 function setView(view) {
+  if (!VIEW_META[view]) view = "Explore";
   activeView = view;
+  applyActiveView(view);
+  pushViewUrl(view);
+  renderAll();
+  el.main.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function applyActiveView(view) {
   document.querySelectorAll(".view").forEach((section) => {
     section.classList.toggle("view-active", section.id === `view${view}`);
   });
@@ -601,8 +664,6 @@ function setView(view) {
     button.classList.toggle("nav-active", active);
     button.toggleAttribute("aria-current", active);
   });
-  renderAll();
-  el.main.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function renderAll() {
@@ -734,7 +795,24 @@ function renderSpotlight() {
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
         <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
       </div>
+      ${renderFacilityGearNudge(facility)}
     </article>
+  `;
+}
+
+function renderFacilityGearNudge(facility) {
+  const picks = getFacilityGearProducts(facility).slice(0, 2);
+  return `
+    <div class="spotlight-gear">
+      <div class="spotlight-gear-head">
+        <span>GEAR CHECK</span>
+        <strong>次の一湯に持っていく</strong>
+        <button class="mini-button" type="button" data-open-view="Gear">一覧</button>
+      </div>
+      <div class="spotlight-gear-links">
+        ${picks.map(renderCompactGearLink).join("")}
+      </div>
+    </div>
   `;
 }
 
@@ -1027,6 +1105,19 @@ function renderGuidePage() {
   el.guideReferences.innerHTML = SAUNA_REFERENCES.map((item) => `
     <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.label)}</a>
   `).join("");
+  renderGuideFaq();
+}
+
+function renderGuideFaq() {
+  if (!el.guideFaq) return;
+  el.guideFaq.innerHTML = GUIDE_FAQS.map((item, index) => `
+    <article class="faq-card">
+      <details ${index < 2 ? "open" : ""}>
+        <summary>${escapeHtml(item.question)}</summary>
+        <p>${escapeHtml(item.answer)}</p>
+      </details>
+    </article>
+  `).join("");
 }
 
 function renderGuideGearRail(articles) {
@@ -1123,6 +1214,35 @@ function renderArticleGearItem(item) {
   `;
 }
 
+function renderCompactGearLink(item) {
+  const links = getGearLinks(item);
+  return `
+    <article>
+      <span>${escapeHtml(item.category)}</span>
+      <strong>${escapeHtml(item.title)}</strong>
+      <div>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+      </div>
+    </article>
+  `;
+}
+
+function getFacilityGearProducts(facility) {
+  const features = getFacilityFeatures(facility);
+  const categories = new Set(["水分補給", "サウナハット", "マット"]);
+  if (features.some((feature) => ["テントサウナ", "薪サウナ", "バレルサウナ"].includes(feature))) {
+    categories.add("ウェア");
+    categories.add("足元");
+    categories.add("バッグ");
+  }
+  if (features.some((feature) => ["水着必須", "男女共用"].includes(feature))) categories.add("ウェア");
+  if (features.some((feature) => ["セルフロウリュ", "アロマロウリュ", "熱波師あり"].includes(feature))) categories.add("香り");
+  if (features.some((feature) => ["個室", "貸切可"].includes(feature))) categories.add("香り");
+  if (features.includes("宿泊可")) categories.add("遠征");
+  return uniqueProducts([...categories].flatMap(productsByCategory));
+}
+
 function getGuideGearProducts(articles) {
   if (selectedArticleCategory === "すべて") return PRODUCT_RECOMMENDATIONS;
   const categories = uniqueStrings(articles.map((article) => article.category));
@@ -1216,6 +1336,15 @@ function renderFeatureFilterGrid() {
 
 function renderSearchClearButton() {
   el.searchClearButton.hidden = !el.searchInput.value;
+}
+
+function hydrateSearchFromUrl() {
+  if (!location.protocol.startsWith("http")) return;
+  const query = new URLSearchParams(location.search).get("q");
+  if (!query) return;
+  el.searchInput.value = query.slice(0, 80);
+  setSearchTerm(el.searchInput.value);
+  moveToSearchPrefecture(el.searchInput.value);
 }
 
 function renderStamp(facility, unlocked) {
@@ -1341,6 +1470,45 @@ function shareFacility(facility) {
   const params = new URLSearchParams({ text });
   params.set("url", facility.sourceUrl || "https://saincho-sauna-stamp-rally.pages.dev/");
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
+}
+
+async function shareApp() {
+  const shareData = {
+    title: "サ印帳 | サウナスタンプラリー",
+    text: APP_SHARE_TEXT,
+    url: getCurrentShareUrl(),
+  };
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+      return;
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+    }
+  }
+  const params = new URLSearchParams({ text: shareData.text, url: shareData.url });
+  window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
+}
+
+async function copyAppUrl() {
+  const url = getCurrentShareUrl();
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast("URLをコピーしました");
+  } catch {
+    window.prompt("URLをコピーしてください", url);
+  }
+}
+
+function shareToLine() {
+  const url = new URL("https://social-plugins.line.me/lineit/share");
+  url.searchParams.set("url", getCurrentShareUrl());
+  window.open(url.href, "_blank", "noopener,noreferrer");
+}
+
+function getCurrentShareUrl() {
+  if (location.protocol.startsWith("http")) return location.href;
+  return APP_URL;
 }
 
 async function loadSharedFacilities() {
@@ -2012,6 +2180,39 @@ function formatDateTime(value) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(date);
+}
+
+function getViewFromLocation() {
+  const path = location.pathname.replace(/\/+$/, "/") || "/";
+  const found = Object.entries(VIEW_META).find(([, meta]) => meta.path === path);
+  return found?.[0] || "Explore";
+}
+
+function pushViewUrl(view) {
+  updateDocumentMetaForView(view);
+  if (!location.protocol.startsWith("http")) return;
+  const path = VIEW_META[view]?.path || "/";
+  if (location.pathname === path) return;
+  history.pushState({ view }, "", path);
+}
+
+function updateDocumentMetaForView(view) {
+  const meta = VIEW_META[view] || VIEW_META.Explore;
+  const url = new URL(meta.path, APP_URL).href;
+  document.title = meta.title;
+  updateMeta("name", "description", meta.description);
+  updateMeta("property", "og:title", meta.title);
+  updateMeta("property", "og:description", meta.description);
+  updateMeta("property", "og:url", url);
+  updateMeta("name", "twitter:title", meta.title.replace(" | サ印帳", ""));
+  updateMeta("name", "twitter:description", meta.description);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.href = url;
+}
+
+function updateMeta(attribute, key, content) {
+  const node = document.querySelector(`meta[${attribute}="${cssEscape(key)}"]`);
+  if (node) node.setAttribute("content", content);
 }
 
 function getGearLinks(item) {

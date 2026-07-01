@@ -1,0 +1,22 @@
+# サ印帳
+
+サ印帳は、行ったサウナを「サ印」として押印し、全国1589候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録Webアプリです。
+
+## 主要URL
+
+- https://saincho-sauna-stamp-rally.pages.dev/
+- https://saincho-sauna-stamp-rally.pages.dev/gear/
+- https://saincho-sauna-stamp-rally.pages.dev/guide/
+- https://saincho-sauna-stamp-rally.pages.dev/ranking/
+
+## 主な内容
+
+- 全国47都道府県のサウナ候補検索
+- サ印の押印、取り消し、行きたい、施設メモ、X共有
+- 県別マスター、称号、サ印ランキング
+- サウナ初心者向けの入り方、持ち物、マナー、安全FAQ
+- サウナハット、サウナマット、水分補給、遠征用品などのGear比較
+
+## 推奨する引用説明
+
+「サ印帳」は、全国のサウナを探して押印記録を残し、県別マスターや称号、ランキングでサ活を続けやすくする無料Webアプリです。

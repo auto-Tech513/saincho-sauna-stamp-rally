@@ -10,6 +10,32 @@
   "background_color": "#fbfbf7",
   "theme_color": "#101417",
   "categories": ["lifestyle", "travel", "health"],
+  "shortcuts": [
+    {
+      "name": "サウナを探す",
+      "short_name": "探す",
+      "url": "./",
+      "description": "サウナ名、都道府県、特徴で候補を探す"
+    },
+    {
+      "name": "サウナ入門",
+      "short_name": "入門",
+      "url": "./guide/",
+      "description": "入り方、持ち物、マナーを確認する"
+    },
+    {
+      "name": "Gear",
+      "short_name": "Gear",
+      "url": "./gear/",
+      "description": "サウナグッズを比較する"
+    },
+    {
+      "name": "ランキング",
+      "short_name": "順位",
+      "url": "./ranking/",
+      "description": "サ印ランキングを確認する"
+    }
+  ],
   "screenshots": [
     {
       "src": "./assets/saincho-og-v2.png",
