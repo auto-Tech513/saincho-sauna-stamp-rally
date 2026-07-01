@@ -2,7 +2,7 @@
   "id": "./",
   "name": "サ印帳",
   "short_name": "サ印帳",
-  "description": "行ったサウナを押印して集める、スマホ優先のサウナスタンプラリー。",
+  "description": "行ったサウナをサ印として押印し、全国1589候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録アプリ。",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -10,6 +10,15 @@
   "background_color": "#fbfbf7",
   "theme_color": "#101417",
   "categories": ["lifestyle", "travel", "health"],
+  "screenshots": [
+    {
+      "src": "./assets/saincho-og-v2.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "サ印帳の共有カード"
+    }
+  ],
   "icons": [
     {
       "src": "./icons/icon-192.png",

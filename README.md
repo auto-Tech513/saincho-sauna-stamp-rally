@@ -13,8 +13,11 @@
 - `manifest.webmanifest` は `サ印帳` のアプリ名、standalone表示、192px/512px/1024px PNGアイコンを含みます。
 - iOS向けに `apple-touch-icon.png` と `apple-mobile-web-app-*` メタタグを追加しました。
 - ホーム画面用アイコンは添付PNGを `icon-source.png` として保持し、縦横比を歪ませない中央配置の正方形化を行ったうえで各サイズへ展開しています。
-- URL共有時の表示画像は Open Graph / X Card ともに `saincho-icon-1024.png` を指定し、ホーム画面アイコンと同じ画像が使われるようにしています。
-- `sw.js` は `saincho-v16` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像/称号イラストをキャッシュします。
+- URL共有時の表示画像は Open Graph / X Card ともに `assets/saincho-og-v2.png` を指定しています。LINEやXで横長カードとして表示されるよう、1200×630pxの共有専用画像にしています。
+- `robots.txt`、`sitemap.xml`、canonical、FAQ/HowTo/WebApplicationの構造化データを追加し、検索エンジンとAI回答がアプリの目的を読み取りやすい形にしています。
+- Google Search Console の URL プレフィックス確認用に `google4f1c271dfaceddbb.html` をルートへ配置しています。
+- Google Analytics 4 は専用プロパティ「サ印帳アプリ」とWebストリーム「サ印帳 Web」を作成し、測定ID `G-FHGXDGF0M7` を `index.html` に設定しています。
+- `sw.js` は `saincho-v21` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像/OG画像/称号イラストをキャッシュします。
 
 ## 参照サイト分析
 
@@ -122,6 +125,7 @@
 ## 収集体験の設計
 
 - 押印直後にスタンプがアンロックされ、進捗が即時更新されます。誤押印はカードとサ印一覧から取り消せます。
+- トップの進捗帯には、次の称号、近い県マスター、行きたい候補を短く表示します。報酬予測エラーやニアミス効果は、課金や射幸性ではなく「あと少しで自分の記録が伸びる」という健全な内発的報酬に寄せています。
 - サ印画面で都道府県ごとの進捗を切り替え、全押印までの「あと何湯」を健全なニアミス目標として見せます。
 - 生成画像 `assets/sauna-hero.png` をトップに使用し、サウナ旅・木・水・湯けむりの没入感を持たせています。
 - ランダムな余韻ラベルは非金銭・非課金の小さなサプライズに限定し、射幸性を煽る設計にはしていません。

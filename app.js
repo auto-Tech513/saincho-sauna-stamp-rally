@@ -158,6 +158,7 @@ const el = {
   visitedCount: document.querySelector("#visitedCount"),
   nextMilestone: document.querySelector("#nextMilestone"),
   collectionScope: document.querySelector("#collectionScope"),
+  rewardNudge: document.querySelector("#rewardNudge"),
   totalCandidateCount: document.querySelector("#totalCandidateCount"),
   coveredPrefCount: document.querySelector("#coveredPrefCount"),
   heroWishlistCount: document.querySelector("#heroWishlistCount"),
@@ -630,6 +631,27 @@ function renderSummary() {
   el.totalCandidateCount.textContent = facilities.length;
   el.coveredPrefCount.textContent = coveredPrefTotal;
   el.heroWishlistCount.textContent = wishlistTotal;
+  renderRewardNudge(visitedTotal, wishlistTotal);
+}
+
+function renderRewardNudge(visitedTotal, wishlistTotal) {
+  if (!el.rewardNudge) return;
+  const nextTitle = getNextTitle(visitedTotal);
+  const titleGoal = nextTitle
+    ? { label: "次の称号", value: `あと${nextTitle.count - visitedTotal}湯`, hint: nextTitle.title }
+    : { label: "称号", value: "到達済み", hint: "最高称号" };
+  const prefGoal = getNearestPrefectureGoal();
+  const wishlistGoal = wishlistTotal > 0
+    ? { label: "行きたい", value: `${wishlistTotal}件`, hint: "未来の一湯" }
+    : { label: "行きたい", value: "あと1件", hint: "候補を残す" };
+  const goals = [titleGoal, prefGoal, wishlistGoal];
+  el.rewardNudge.innerHTML = goals.map((goal) => `
+    <div class="reward-pill">
+      <span>${escapeHtml(goal.label)}</span>
+      <strong>${escapeHtml(goal.value)}</strong>
+      <em>${escapeHtml(goal.hint)}</em>
+    </div>
+  `).join("");
 }
 
 function renderExplore() {
@@ -1626,6 +1648,29 @@ function getPrefectureMasterProgress(prefecture) {
     visited,
     remaining: Math.max(0, eligible.length - visited),
     mastered: eligible.length > 0 && visited >= eligible.length,
+  };
+}
+
+function getNearestPrefectureGoal() {
+  const scopedPrefecture = selectedPrefecture !== "全国" ? selectedPrefecture : "";
+  const progresses = PREFECTURES.map((pref) => ({
+    prefecture: pref.name,
+    ...getPrefectureMasterProgress(pref.name),
+  })).filter((item) => item.eligible > 0 && !item.mastered);
+  const current = scopedPrefecture
+    ? progresses.find((item) => item.prefecture === scopedPrefecture)
+    : null;
+  const target = current || progresses
+    .filter((item) => item.visited > 0)
+    .sort((a, b) => a.remaining - b.remaining || b.visited - a.visited)[0] || progresses[0];
+  if (!target) return { label: "県マスター", value: "完走", hint: "全県認定" };
+  if (target.visited === 0 && !current) {
+    return { label: "県マスター", value: "あと1湯", hint: "最初の県へ" };
+  }
+  return {
+    label: shortPrefName(target.prefecture),
+    value: `あと${target.remaining}湯`,
+    hint: "県マスター",
   };
 }
 
