@@ -24,7 +24,7 @@ const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、行ったサウナをサ印として押印し、全国1589候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録アプリです。",
+    description: "サ印帳は、行ったサウナをサ印として押印し、全国2376候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録アプリです。",
   },
   Passport: {
     path: "/passport/",
@@ -143,6 +143,7 @@ const NON_DISPLAY_TAGS = new Set([
   "サウナイキタイ掲載",
   "県別スターター",
   "県別30件補強",
+  "県別50件補強",
   "ユーザー指定追加",
   "みんなの追加",
   "指定リスト",
@@ -823,10 +824,7 @@ function renderFacilityCard(facility) {
   const meta = getFacilityMeta(facility);
   const displayTags = getDisplayTags(facility);
   const tags = displayTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
-  const sourceLabel = getFacilitySourceLabel(facility);
-  const sourceBadge = facility.sourceUrl
-    ? `<a class="source-badge" href="${escapeAttr(facility.sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel)}</a>`
-    : `<span class="source-badge">${escapeHtml(sourceLabel)}</span>`;
+  const sourceBadge = renderFacilitySourceBadge(facility);
   const headBadge = visited
     ? `<span class="visited-badge">押印済</span>`
     : status
@@ -1468,7 +1466,7 @@ function shareFacility(facility) {
     "#サ印帳 #サウナ",
   ].filter(Boolean).join("\n");
   const params = new URLSearchParams({ text });
-  params.set("url", facility.sourceUrl || "https://saincho-sauna-stamp-rally.pages.dev/");
+  params.set("url", facility.officialUrl || facility.sourceUrl || "https://saincho-sauna-stamp-rally.pages.dev/");
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
@@ -1636,6 +1634,21 @@ function getFacilitySourceLabel(facility) {
     return url ? "参照元" : "";
   }
   return source || (url ? "参照元" : "");
+}
+
+function renderFacilitySourceBadge(facility) {
+  const sourceLabel = getFacilitySourceLabel(facility);
+  const officialUrl = String(facility.officialUrl || "").trim();
+  const sourceUrl = String(facility.sourceUrl || "").trim();
+  const links = [];
+  if (officialUrl) {
+    links.push(`<a class="source-badge source-badge-official" href="${escapeAttr(officialUrl)}" target="_blank" rel="noreferrer">公式</a>`);
+  }
+  if (sourceUrl) {
+    links.push(`<a class="source-badge" href="${escapeAttr(sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel)}</a>`);
+  }
+  if (!links.length) return `<span class="source-badge">${escapeHtml(sourceLabel)}</span>`;
+  return `<span class="source-badge-group">${links.join("")}</span>`;
 }
 
 function getDisplayTags(facility) {

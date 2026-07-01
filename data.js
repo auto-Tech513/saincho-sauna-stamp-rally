@@ -1,3 +1,4 @@
+// Generated data for サ印帳. Edit source lists carefully; keep sourceUrl as the verification page.
 export const PREFECTURES = [
   {
     "region": "北海道・東北",
@@ -8856,7 +8857,7 @@ export const SEED_FACILITIES = [
       "富士"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/shizuoka/%E5%AF%8C%E5%A3%AB%E5%B8%82"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81232"
   },
   {
     "id": "manual-shizuoka-capsule-inn",
@@ -9119,7 +9120,7 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/shizuoka/%E5%AF%8C%E5%A3%AB%E5%B8%82"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9579"
   },
   {
     "id": "manual-shizuoka-ole-inn",
@@ -9391,7 +9392,7 @@ export const SEED_FACILITIES = [
       "プライベート"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/shizuoka/%E5%AF%8C%E5%A3%AB%E5%B8%82",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82308",
     "status": "verify"
   },
   {
@@ -9456,7 +9457,7 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/shizuoka/%E5%AF%8C%E5%A3%AB%E5%B8%82"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2525"
   },
   {
     "id": "manual-shizuoka-fujinokokoroyu",
@@ -13925,7 +13926,7 @@ export const SEED_FACILITIES = [
     "name": "御所宝湯",
     "prefecture": "奈良県",
     "city": "御所市",
-    "sourceUrl": "https://sauna-ikitai.com/nara/%E5%BE%A1%E6%89%80%E5%B8%82",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/56149",
     "source": "サウナイキタイ",
     "features": [
       "ドライサウナ",
@@ -14884,7 +14885,7 @@ export const SEED_FACILITIES = [
     "name": "湯谷荘",
     "prefecture": "鳥取県",
     "city": "鳥取市",
-    "sourceUrl": "https://sauna-ikitai.com/tottori/%E9%B3%A5%E5%8F%96%E5%B8%82",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/106982",
     "source": "サウナイキタイ",
     "features": [
       "水風呂あり",
@@ -21420,5 +21421,14596 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/118/"
+  },
+  {
+    "id": "si-hokkaido-98",
+    "name": "吹上温泉保養センター 白銀荘",
+    "prefecture": "北海道",
+    "city": "空知郡上富良野町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/98",
+    "officialUrl": "http://kamifurano-hokkaido.com/"
+  },
+  {
+    "id": "si-hokkaido-166",
+    "name": "ニコーリフレ SAPPORO",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/166",
+    "officialUrl": "https://www.nikoh.info"
+  },
+  {
+    "id": "si-hokkaido-4521",
+    "name": "北こぶし知床 ホテル&リゾート",
+    "prefecture": "北海道",
+    "city": "斜里郡斜里町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4521",
+    "officialUrl": "https://www.shiretoko.co.jp/"
+  },
+  {
+    "id": "si-hokkaido-8555",
+    "name": "定山渓 鹿の湯",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8555",
+    "officialUrl": "https://shikanoyu.co.jp/shikanoyu/"
+  },
+  {
+    "id": "si-hokkaido-4998",
+    "name": "月見湯",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4998",
+    "officialUrl": "https://9056899086.amebaownd.com/"
+  },
+  {
+    "id": "si-hokkaido-6182",
+    "name": "GARDENS CABIN (ガーデンズキャビン)",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6182",
+    "officialUrl": "https://www.gardenscabin.com/"
+  },
+  {
+    "id": "si-hokkaido-55",
+    "name": "OMO7旭川(おも) by 星野リゾート サウナプラトー",
+    "prefecture": "北海道",
+    "city": "旭川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/55"
+  },
+  {
+    "id": "si-hokkaido-131",
+    "name": "ログホテル ザ メープルロッジ",
+    "prefecture": "北海道",
+    "city": "岩見沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/131"
+  },
+  {
+    "id": "si-hokkaido-271",
+    "name": "洞爺湖万世閣 ホテルレイクサイドテラス",
+    "prefecture": "北海道",
+    "city": "虻田郡洞爺湖町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/271"
+  },
+  {
+    "id": "si-hokkaido-79919",
+    "name": "サウナコタンサッポロ",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79919"
+  },
+  {
+    "id": "si-hokkaido-280",
+    "name": "登別温泉 登別グランドホテル",
+    "prefecture": "北海道",
+    "city": "登別市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/280"
+  },
+  {
+    "id": "si-hokkaido-80811",
+    "name": "ザ・センチュリオンサウナレスト&ステイ札幌",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80811"
+  },
+  {
+    "id": "si-hokkaido-174",
+    "name": "すすきの天然温泉 湯香郷",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/174"
+  },
+  {
+    "id": "si-hokkaido-97",
+    "name": "ニュー阿寒ホテル",
+    "prefecture": "北海道",
+    "city": "釧路市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/97"
+  },
+  {
+    "id": "si-hokkaido-11181",
+    "name": "Kushiro Marshland Hostel THE GEEK",
+    "prefecture": "北海道",
+    "city": "川上郡標茶町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11181"
+  },
+  {
+    "id": "si-hokkaido-205",
+    "name": "小金湯温泉 湯元 小金湯",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/205"
+  },
+  {
+    "id": "si-hokkaido-85",
+    "name": "芦別温泉 おふろcafé 星遊館 (芦別温泉スターライトホテル)",
+    "prefecture": "北海道",
+    "city": "芦別市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85"
+  },
+  {
+    "id": "si-hokkaido-210",
+    "name": "定山渓万世閣ホテルミリオーネ",
+    "prefecture": "北海道",
+    "city": "札幌市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/210"
+  },
+  {
+    "id": "si-hokkaido-61",
+    "name": "SPA&SAUNA オスパー",
+    "prefecture": "北海道",
+    "city": "旭川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61"
+  },
+  {
+    "id": "si-hokkaido-4951",
+    "name": "奥札幌の秘湯 湖畔の宿支笏湖 丸駒温泉旅館",
+    "prefecture": "北海道",
+    "city": "千歳市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4951"
+  },
+  {
+    "id": "si-aomori-10804",
+    "name": "十和田サウナ",
+    "prefecture": "青森県",
+    "city": "十和田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10804"
+  },
+  {
+    "id": "si-aomori-351",
+    "name": "まちなか温泉青森センターホテル",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/351"
+  },
+  {
+    "id": "si-aomori-387",
+    "name": "青森ねぶたサウナ(青森屋 by 星野リゾート)",
+    "prefecture": "青森県",
+    "city": "三沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/387"
+  },
+  {
+    "id": "si-aomori-406",
+    "name": "カプセルイン弘前・アサヒサウナ",
+    "prefecture": "青森県",
+    "city": "弘前市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/406"
+  },
+  {
+    "id": "si-aomori-424",
+    "name": "大鰐町地域交流センター 鰐come(ワニカム)",
+    "prefecture": "青森県",
+    "city": "南津軽郡大鰐町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/424"
+  },
+  {
+    "id": "si-aomori-389",
+    "name": "八甲田ホテル",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/389"
+  },
+  {
+    "id": "si-aomori-4813",
+    "name": "壽浴場",
+    "prefecture": "青森県",
+    "city": "八戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4813"
+  },
+  {
+    "id": "si-aomori-434",
+    "name": "八戸銭湯 オールウェイズ",
+    "prefecture": "青森県",
+    "city": "八戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/434"
+  },
+  {
+    "id": "si-aomori-407",
+    "name": "からんころん温泉",
+    "prefecture": "青森県",
+    "city": "平川市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/407"
+  },
+  {
+    "id": "si-aomori-425",
+    "name": "熊ノ沢温泉",
+    "prefecture": "青森県",
+    "city": "八戸市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/425"
+  },
+  {
+    "id": "si-aomori-364",
+    "name": "極楽湯 青森店",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/364"
+  },
+  {
+    "id": "si-aomori-79104",
+    "name": "天然温泉 淡雪の湯 ドーミーイン青森",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79104"
+  },
+  {
+    "id": "si-aomori-401",
+    "name": "十和田温泉",
+    "prefecture": "青森県",
+    "city": "十和田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/401"
+  },
+  {
+    "id": "si-aomori-6112",
+    "name": "アソベの森 いわき荘",
+    "prefecture": "青森県",
+    "city": "弘前市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6112"
+  },
+  {
+    "id": "si-aomori-5531",
+    "name": "境関温泉",
+    "prefecture": "青森県",
+    "city": "弘前市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5531"
+  },
+  {
+    "id": "si-aomori-68359",
+    "name": "スパハウス かわむら",
+    "prefecture": "青森県",
+    "city": "三沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/68359"
+  },
+  {
+    "id": "si-aomori-4553",
+    "name": "なごみ処 湯ったら温泉",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4553"
+  },
+  {
+    "id": "si-aomori-421",
+    "name": "スーパー銭湯極楽湯八戸店",
+    "prefecture": "青森県",
+    "city": "八戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/421"
+  },
+  {
+    "id": "si-aomori-79083",
+    "name": "プライベートサウナVihta",
+    "prefecture": "青森県",
+    "city": "青森市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79083"
+  },
+  {
+    "id": "si-aomori-4810",
+    "name": "南部の湯 ドーミーイン本八戸",
+    "prefecture": "青森県",
+    "city": "八戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4810"
+  },
+  {
+    "id": "si-iwate-4353",
+    "name": "古戦場",
+    "prefecture": "岩手県",
+    "city": "一関市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4353"
+  },
+  {
+    "id": "si-iwate-505",
+    "name": "SPA銭湯ゆっこ盛岡",
+    "prefecture": "岩手県",
+    "city": "盛岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/505"
+  },
+  {
+    "id": "si-iwate-6690",
+    "name": "星降る山荘 七時雨山荘",
+    "prefecture": "岩手県",
+    "city": "八幡平市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6690"
+  },
+  {
+    "id": "si-iwate-35788",
+    "name": "ひづめゆ",
+    "prefecture": "岩手県",
+    "city": "紫波郡紫波町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/35788"
+  },
+  {
+    "id": "si-iwate-54929",
+    "name": "KANAN SPA(HOTEL MAZARIUM)",
+    "prefecture": "岩手県",
+    "city": "盛岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/54929"
+  },
+  {
+    "id": "si-iwate-513",
+    "name": "盛南温泉 開運の湯",
+    "prefecture": "岩手県",
+    "city": "盛岡市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/513"
+  },
+  {
+    "id": "si-iwate-11695",
+    "name": "三陸四季湯彩ますと乃湯",
+    "prefecture": "岩手県",
+    "city": "上閉伊郡大槌町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11695"
+  },
+  {
+    "id": "si-iwate-542",
+    "name": "湯の杜 ホテル志戸平",
+    "prefecture": "岩手県",
+    "city": "花巻市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/542"
+  },
+  {
+    "id": "si-iwate-5980",
+    "name": "天然温泉 さんさの湯 ドーミーイン盛岡",
+    "prefecture": "岩手県",
+    "city": "盛岡市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5980"
+  },
+  {
+    "id": "si-iwate-80451",
+    "name": "鉛温泉 藤三旅館",
+    "prefecture": "岩手県",
+    "city": "花巻市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80451"
+  },
+  {
+    "id": "si-iwate-95949",
+    "name": "おふろランド北上",
+    "prefecture": "岩手県",
+    "city": "北上市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/95949"
+  },
+  {
+    "id": "si-iwate-545",
+    "name": "花と緑と安らぎの湯 東和温泉",
+    "prefecture": "岩手県",
+    "city": "花巻市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/545"
+  },
+  {
+    "id": "si-iwate-575",
+    "name": "うたたねカフェ さくらの湯",
+    "prefecture": "岩手県",
+    "city": "奥州市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/575"
+  },
+  {
+    "id": "si-iwate-565",
+    "name": "夏油高原温泉 兎森の湯",
+    "prefecture": "岩手県",
+    "city": "北上市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/565"
+  },
+  {
+    "id": "si-iwate-536",
+    "name": "山の神温泉 なごみの湯",
+    "prefecture": "岩手県",
+    "city": "花巻市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/536"
+  },
+  {
+    "id": "si-iwate-81667",
+    "name": "松園サウナ研究所",
+    "prefecture": "岩手県",
+    "city": "盛岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81667"
+  },
+  {
+    "id": "si-iwate-81111",
+    "name": "the campus～トロイカの森～",
+    "prefecture": "岩手県",
+    "city": "北上市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81111"
+  },
+  {
+    "id": "si-iwate-491",
+    "name": "焼走りの湯 (岩手山焼走り国際交流村 内)",
+    "prefecture": "岩手県",
+    "city": "八幡平市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/491"
+  },
+  {
+    "id": "si-iwate-17837",
+    "name": "カダルテラス金田一",
+    "prefecture": "岩手県",
+    "city": "二戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/17837"
+  },
+  {
+    "id": "si-iwate-11996",
+    "name": "SaunAPPI(サウナッピ)",
+    "prefecture": "岩手県",
+    "city": "八幡平市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11996"
+  },
+  {
+    "id": "si-miyagi-640",
+    "name": "スパメッツァ 仙台 竜泉寺の湯",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/640"
+  },
+  {
+    "id": "si-miyagi-654",
+    "name": "サウナ&カプセル キュア国分町",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/654"
+  },
+  {
+    "id": "si-miyagi-79074",
+    "name": "愛子天空の湯 そよぎの杜",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79074"
+  },
+  {
+    "id": "si-miyagi-4376",
+    "name": "仙台湯処 サンピアの湯",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4376"
+  },
+  {
+    "id": "si-miyagi-659",
+    "name": "天然温泉 仙台コロナの湯",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/659"
+  },
+  {
+    "id": "si-miyagi-657",
+    "name": "駅前人工温泉 とぽす 仙台駅西口",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/657"
+  },
+  {
+    "id": "si-miyagi-79995",
+    "name": "ゆ〜とぴあ仙台南",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79995"
+  },
+  {
+    "id": "si-miyagi-23215",
+    "name": "アクアイグニス仙台 藤塚の湯",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/23215"
+  },
+  {
+    "id": "si-miyagi-4738",
+    "name": "唐桑御殿つなかん サウナ",
+    "prefecture": "宮城県",
+    "city": "気仙沼市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4738"
+  },
+  {
+    "id": "si-miyagi-83178",
+    "name": "JUURI SAUNA(ユーリサウナ)",
+    "prefecture": "宮城県",
+    "city": "牡鹿郡女川町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/83178"
+  },
+  {
+    "id": "si-miyagi-81752",
+    "name": "Lita-sauna(リタサウナ)",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81752"
+  },
+  {
+    "id": "si-miyagi-625",
+    "name": "道の駅 上品の郷 (ふたごの湯)",
+    "prefecture": "宮城県",
+    "city": "石巻市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/625"
+  },
+  {
+    "id": "si-miyagi-671",
+    "name": "仙台秋保温泉 ホテル瑞鳳",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/671"
+  },
+  {
+    "id": "si-miyagi-676",
+    "name": "極楽湯 名取店",
+    "prefecture": "宮城県",
+    "city": "名取市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/676"
+  },
+  {
+    "id": "si-miyagi-619",
+    "name": "加護坊温泉 さくらの湯",
+    "prefecture": "宮城県",
+    "city": "大崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/619"
+  },
+  {
+    "id": "si-miyagi-81849",
+    "name": "sauna KURO",
+    "prefecture": "宮城県",
+    "city": "宮城郡利府町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81849"
+  },
+  {
+    "id": "si-miyagi-17209",
+    "name": "天然温泉 杜都の湯 御宿 野乃仙台",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/17209"
+  },
+  {
+    "id": "si-miyagi-636",
+    "name": "極楽湯 富谷店",
+    "prefecture": "宮城県",
+    "city": "富谷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/636"
+  },
+  {
+    "id": "si-miyagi-80506",
+    "name": "ラストサウナ LAST SAUNA",
+    "prefecture": "宮城県",
+    "city": "仙台市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80506"
+  },
+  {
+    "id": "si-miyagi-63772",
+    "name": "鳴子温泉 旅館すがわら",
+    "prefecture": "宮城県",
+    "city": "大崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/63772"
+  },
+  {
+    "id": "si-akita-9116",
+    "name": "タザワコサウナ",
+    "prefecture": "秋田県",
+    "city": "仙北市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9116"
+  },
+  {
+    "id": "si-akita-85091",
+    "name": "蔵サウナと文化財の宿 森長",
+    "prefecture": "秋田県",
+    "city": "男鹿市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85091"
+  },
+  {
+    "id": "si-akita-554",
+    "name": "リフレッシュ・スパ クォード (ホテル クォードインyokote)",
+    "prefecture": "秋田県",
+    "city": "横手市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/554"
+  },
+  {
+    "id": "si-akita-507",
+    "name": "ルートイングランティア秋田SPA RESORT (スーパー健康ランド 華のゆ)",
+    "prefecture": "秋田県",
+    "city": "秋田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/507"
+  },
+  {
+    "id": "si-akita-530",
+    "name": "中里温泉",
+    "prefecture": "秋田県",
+    "city": "大仙市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/530"
+  },
+  {
+    "id": "si-akita-82457",
+    "name": "田沢湖水沢温泉郷 セルリアンリゾートAONI",
+    "prefecture": "秋田県",
+    "city": "仙北市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82457"
+  },
+  {
+    "id": "si-akita-11659",
+    "name": "井戸端サウナ",
+    "prefecture": "秋田県",
+    "city": "雄勝郡東成瀬村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11659"
+  },
+  {
+    "id": "si-akita-512",
+    "name": "天然温泉 ホテルこまち",
+    "prefecture": "秋田県",
+    "city": "秋田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/512"
+  },
+  {
+    "id": "si-akita-4853",
+    "name": "砂丘温泉ゆめろん",
+    "prefecture": "秋田県",
+    "city": "山本郡三種町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4853"
+  },
+  {
+    "id": "si-akita-78339",
+    "name": "MUSIRO SAUNA(ムシロサウナ)",
+    "prefecture": "秋田県",
+    "city": "横手市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78339"
+  },
+  {
+    "id": "si-akita-506",
+    "name": "中通温泉こまちの湯 ドーミーイン秋田",
+    "prefecture": "秋田県",
+    "city": "秋田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/506"
+  },
+  {
+    "id": "si-akita-81169",
+    "name": "サウナカフェumikko",
+    "prefecture": "秋田県",
+    "city": "山本郡八峰町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81169"
+  },
+  {
+    "id": "si-akita-483",
+    "name": "後生掛温泉",
+    "prefecture": "秋田県",
+    "city": "鹿角市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/483"
+  },
+  {
+    "id": "si-akita-529",
+    "name": "川口温泉 奥羽山荘",
+    "prefecture": "秋田県",
+    "city": "大仙市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/529"
+  },
+  {
+    "id": "si-akita-87245",
+    "name": "bon-sauna U|盆宿U フィンランド式蔵サウナ",
+    "prefecture": "秋田県",
+    "city": "雄勝郡羽後町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87245"
+  },
+  {
+    "id": "si-akita-86319",
+    "name": "乳頭温泉郷 孫六温泉 六庵",
+    "prefecture": "秋田県",
+    "city": "仙北市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/86319"
+  },
+  {
+    "id": "si-akita-500",
+    "name": "秋田温泉さとみ 温泉センター りらっくす",
+    "prefecture": "秋田県",
+    "city": "秋田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/500"
+  },
+  {
+    "id": "si-akita-567",
+    "name": "道の駅 象潟 ねむの丘",
+    "prefecture": "秋田県",
+    "city": "にかほ市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/567"
+  },
+  {
+    "id": "si-akita-9551",
+    "name": "CRANDSサウナ",
+    "prefecture": "秋田県",
+    "city": "山本郡八峰町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9551"
+  },
+  {
+    "id": "si-akita-474",
+    "name": "ポルダー潟の湯",
+    "prefecture": "秋田県",
+    "city": "南秋田郡大潟村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/474"
+  },
+  {
+    "id": "si-yamagata-11030",
+    "name": "SHONAI HOTEL SUIDEN TERRASSE / スイデンテラス",
+    "prefecture": "山形県",
+    "city": "鶴岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11030"
+  },
+  {
+    "id": "si-yamagata-8956",
+    "name": "高源ゆ",
+    "prefecture": "山形県",
+    "city": "上山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8956"
+  },
+  {
+    "id": "si-yamagata-628",
+    "name": "水沢温泉館",
+    "prefecture": "山形県",
+    "city": "西村山郡西川町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/628"
+  },
+  {
+    "id": "si-yamagata-59449",
+    "name": "黒沢温泉 悠湯の郷 ゆさ & おふろcafé yusa",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/59449"
+  },
+  {
+    "id": "si-yamagata-24535",
+    "name": "水曜日の小野川温泉",
+    "prefecture": "山形県",
+    "city": "米沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/24535"
+  },
+  {
+    "id": "si-yamagata-79069",
+    "name": "KAMEYA HOTEL 龍宮殿サウナ",
+    "prefecture": "山形県",
+    "city": "鶴岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79069"
+  },
+  {
+    "id": "si-yamagata-705",
+    "name": "極楽湯グループ 鷹山の湯",
+    "prefecture": "山形県",
+    "city": "米沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/705"
+  },
+  {
+    "id": "si-yamagata-49813",
+    "name": "SAUNA BASE TRIP.",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/49813"
+  },
+  {
+    "id": "si-yamagata-78664",
+    "name": "寒河江市市民浴場 湯るりさがえ",
+    "prefecture": "山形県",
+    "city": "寒河江市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78664"
+  },
+  {
+    "id": "si-yamagata-81522",
+    "name": "プライベートサウナ 月灯り / 湯坊いちらくTENDO SPA&BREWERY",
+    "prefecture": "山形県",
+    "city": "天童市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81522"
+  },
+  {
+    "id": "si-yamagata-582",
+    "name": "鳥海温泉保養センターあぽん西浜",
+    "prefecture": "山形県",
+    "city": "飽海郡遊佐町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/582"
+  },
+  {
+    "id": "si-yamagata-639",
+    "name": "寒河江花咲か温泉 ゆ〜チェリー",
+    "prefecture": "山形県",
+    "city": "寒河江市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/639"
+  },
+  {
+    "id": "si-yamagata-701",
+    "name": "高畠町太陽館",
+    "prefecture": "山形県",
+    "city": "東置賜郡高畠町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/701"
+  },
+  {
+    "id": "si-yamagata-16351",
+    "name": "キートスビレッジ",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/16351"
+  },
+  {
+    "id": "si-yamagata-12825",
+    "name": "SOLENA(ソレナ)",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12825"
+  },
+  {
+    "id": "si-yamagata-80983",
+    "name": "SPA ゆーぱる(タスパークホテル長井)",
+    "prefecture": "山形県",
+    "city": "長井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80983"
+  },
+  {
+    "id": "si-yamagata-79464",
+    "name": "発酵サウナ",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79464"
+  },
+  {
+    "id": "si-yamagata-611",
+    "name": "櫛引温泉 ゆ〜Town",
+    "prefecture": "山形県",
+    "city": "鶴岡市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/611"
+  },
+  {
+    "id": "si-yamagata-102725",
+    "name": "旅館 温活サ活",
+    "prefecture": "山形県",
+    "city": "東根市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/102725"
+  },
+  {
+    "id": "si-yamagata-662",
+    "name": "沼木温泉 辻ヶ花",
+    "prefecture": "山形県",
+    "city": "山形市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/662"
+  },
+  {
+    "id": "si-fukushima-9550",
+    "name": "LAKE SIDE HOTEL MINATOYA (MINATOYA SAUNA)",
+    "prefecture": "福島県",
+    "city": "耶麻郡猪苗代町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9550"
+  },
+  {
+    "id": "si-fukushima-12419",
+    "name": "サウナ発達",
+    "prefecture": "福島県",
+    "city": "南相馬市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12419"
+  },
+  {
+    "id": "si-fukushima-814",
+    "name": "ひばり温泉",
+    "prefecture": "福島県",
+    "city": "須賀川市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/814"
+  },
+  {
+    "id": "si-fukushima-78226",
+    "name": "Sauna & Spa Green サウナ&スパ グリーン～愛宕山温泉～",
+    "prefecture": "福島県",
+    "city": "須賀川市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78226"
+  },
+  {
+    "id": "si-fukushima-78165",
+    "name": "サウナ F-トゥーリSAUNA F-tuuli",
+    "prefecture": "福島県",
+    "city": "福島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78165"
+  },
+  {
+    "id": "si-fukushima-66148",
+    "name": "OUSE SAUNA TUULI(OUSE Camp&Sauna TUULI内)",
+    "prefecture": "福島県",
+    "city": "郡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/66148"
+  },
+  {
+    "id": "si-fukushima-72188",
+    "name": "Roots猪苗代 LakeArea (THE LAKE)",
+    "prefecture": "福島県",
+    "city": "耶麻郡猪苗代町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/72188"
+  },
+  {
+    "id": "si-fukushima-827",
+    "name": "森のサウナ kaveri(カベリ)-エンゼルフォレスト白河高原",
+    "prefecture": "福島県",
+    "city": "岩瀬郡天栄村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/827"
+  },
+  {
+    "id": "si-fukushima-777",
+    "name": "日帰り温泉 富士の湯",
+    "prefecture": "福島県",
+    "city": "会津若松市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/777"
+  },
+  {
+    "id": "si-fukushima-7064",
+    "name": "陽日の郷 あづま館",
+    "prefecture": "福島県",
+    "city": "二本松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7064"
+  },
+  {
+    "id": "si-fukushima-11798",
+    "name": "森の駅yodge",
+    "prefecture": "福島県",
+    "city": "石川郡玉川村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11798"
+  },
+  {
+    "id": "si-fukushima-797",
+    "name": "こおりやま駅前サウ���24",
+    "prefecture": "福島県",
+    "city": "郡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/797"
+  },
+  {
+    "id": "si-fukushima-794",
+    "name": "極楽湯 福島郡山店",
+    "prefecture": "福島県",
+    "city": "郡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/794"
+  },
+  {
+    "id": "si-fukushima-5915",
+    "name": "つるしの湯",
+    "prefecture": "福島県",
+    "city": "相馬郡新地町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5915"
+  },
+  {
+    "id": "si-fukushima-20740",
+    "name": "御とめ湯り",
+    "prefecture": "福島県",
+    "city": "福島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/20740"
+  },
+  {
+    "id": "si-fukushima-843",
+    "name": "スパホテルあぶくま",
+    "prefecture": "福島県",
+    "city": "西白河郡西郷村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/843"
+  },
+  {
+    "id": "si-fukushima-940",
+    "name": "太平洋健康センター 勿来温泉 関の湯",
+    "prefecture": "福島県",
+    "city": "いわき市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/940"
+  },
+  {
+    "id": "si-fukushima-782",
+    "name": "ゆとりろ磐梯熱海",
+    "prefecture": "福島県",
+    "city": "郡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/782"
+  },
+  {
+    "id": "si-fukushima-78187",
+    "name": "private sauna さはこ前",
+    "prefecture": "福島県",
+    "city": "いわき市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78187"
+  },
+  {
+    "id": "si-fukushima-7222",
+    "name": "カプセルホテル サウナ&大浴場 リフレ いわき駅前店",
+    "prefecture": "福島県",
+    "city": "いわき市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7222"
+  },
+  {
+    "id": "si-ibaraki-79238",
+    "name": "SPA&ごはん ゆるうむ yuluumu",
+    "prefecture": "茨城県",
+    "city": "水戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79238"
+  },
+  {
+    "id": "si-ibaraki-81944",
+    "name": "常総ONSEN&SAUNA お湯むすび",
+    "prefecture": "茨城県",
+    "city": "常総市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81944"
+  },
+  {
+    "id": "si-ibaraki-11135",
+    "name": "HARTA SAUNA YUKI-IBARAKI【ハルタサウナ】",
+    "prefecture": "茨城県",
+    "city": "結城市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11135"
+  },
+  {
+    "id": "si-ibaraki-42883",
+    "name": "85歳が創ったハンパない極熱サウナ~3UN~",
+    "prefecture": "茨城県",
+    "city": "日立市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/42883"
+  },
+  {
+    "id": "si-ibaraki-12262",
+    "name": "コアミガメ",
+    "prefecture": "茨城県",
+    "city": "高萩市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12262"
+  },
+  {
+    "id": "si-ibaraki-81798",
+    "name": "SAUNA NAYA",
+    "prefecture": "茨城県",
+    "city": "古河市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81798"
+  },
+  {
+    "id": "si-ibaraki-81126",
+    "name": "サウナ蓑蒸",
+    "prefecture": "茨城県",
+    "city": "笠間市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81126"
+  },
+  {
+    "id": "si-ibaraki-4785",
+    "name": "天然温泉 湯舞音 龍ケ崎店",
+    "prefecture": "茨城県",
+    "city": "龍ケ崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4785"
+  },
+  {
+    "id": "si-ibaraki-1271",
+    "name": "潮騒の湯",
+    "prefecture": "茨城県",
+    "city": "東茨城郡大洗町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1271"
+  },
+  {
+    "id": "si-ibaraki-81438",
+    "name": "鹿とサウナ",
+    "prefecture": "茨城県",
+    "city": "鹿嶋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81438"
+  },
+  {
+    "id": "si-ibaraki-78562",
+    "name": "OFF SAUNA",
+    "prefecture": "茨城県",
+    "city": "水戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78562"
+  },
+  {
+    "id": "si-ibaraki-1141",
+    "name": "湯楽の里 日立店",
+    "prefecture": "茨城県",
+    "city": "日立市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1141"
+  },
+  {
+    "id": "si-ibaraki-1441",
+    "name": "天然温泉きぬの湯",
+    "prefecture": "茨城県",
+    "city": "常総市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1441"
+  },
+  {
+    "id": "si-ibaraki-115561",
+    "name": "niko and ... BASE",
+    "prefecture": "茨城県",
+    "city": "水戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/115561"
+  },
+  {
+    "id": "si-ibaraki-1373",
+    "name": "御老公の湯 境店",
+    "prefecture": "茨城県",
+    "city": "猿島郡境町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1373"
+  },
+  {
+    "id": "si-ibaraki-29749",
+    "name": "MITO SAUNA KOTO",
+    "prefecture": "茨城県",
+    "city": "水戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/29749"
+  },
+  {
+    "id": "si-ibaraki-100381",
+    "name": "おふろcafé りんねの湯",
+    "prefecture": "茨城県",
+    "city": "那珂市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/100381"
+  },
+  {
+    "id": "si-ibaraki-1350",
+    "name": "いちの湯 古河店",
+    "prefecture": "茨城県",
+    "city": "古河市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1350"
+  },
+  {
+    "id": "si-ibaraki-1331",
+    "name": "筑波山温泉 つくばの湯",
+    "prefecture": "茨城県",
+    "city": "つくば市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1331"
+  },
+  {
+    "id": "si-ibaraki-87241",
+    "name": "No.12 Kashima Fan Zone",
+    "prefecture": "茨城県",
+    "city": "鹿嶋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87241"
+  },
+  {
+    "id": "si-tochigi-11817",
+    "name": "日光サウナリゾート",
+    "prefecture": "栃木県",
+    "city": "日光市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11817"
+  },
+  {
+    "id": "si-tochigi-4385",
+    "name": "宝湯",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4385"
+  },
+  {
+    "id": "si-tochigi-8759",
+    "name": "ネレルサウナ | 益子舘 里山リゾートホテル",
+    "prefecture": "栃木県",
+    "city": "芳賀郡益子町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8759"
+  },
+  {
+    "id": "si-tochigi-1244",
+    "name": "小山思川温泉",
+    "prefecture": "栃木県",
+    "city": "小山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1244"
+  },
+  {
+    "id": "si-tochigi-80568",
+    "name": "スノーピーク鹿沼キャンプフィールド&スパ",
+    "prefecture": "栃木県",
+    "city": "鹿沼市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80568"
+  },
+  {
+    "id": "si-tochigi-48361",
+    "name": "那須ユートピア",
+    "prefecture": "栃木県",
+    "city": "那須郡那須町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/48361"
+  },
+  {
+    "id": "si-tochigi-6217",
+    "name": "宮の街道温泉 江戸遊",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6217"
+  },
+  {
+    "id": "si-tochigi-12795",
+    "name": "大谷元気炉 六号基 |AZUMAYA",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12795"
+  },
+  {
+    "id": "si-tochigi-12819",
+    "name": "Quiet Storm Nasu",
+    "prefecture": "栃木県",
+    "city": "那須郡那須町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12819"
+  },
+  {
+    "id": "si-tochigi-1279",
+    "name": "YUKALA 小山店",
+    "prefecture": "栃木県",
+    "city": "小山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1279"
+  },
+  {
+    "id": "si-tochigi-1135",
+    "name": "宇都宮天然温泉 ベルさくらの湯",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1135"
+  },
+  {
+    "id": "si-tochigi-82367",
+    "name": "さぷらす",
+    "prefecture": "栃木県",
+    "city": "日光市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82367"
+  },
+  {
+    "id": "si-tochigi-1242",
+    "name": "スーパー銭湯 佐野やすらぎの湯",
+    "prefecture": "栃木県",
+    "city": "佐野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1242"
+  },
+  {
+    "id": "si-tochigi-45227",
+    "name": "カンデオホテルズ宇都宮",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/45227"
+  },
+  {
+    "id": "si-tochigi-11263",
+    "name": "お丸山ホテル",
+    "prefecture": "栃木県",
+    "city": "さくら市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11263"
+  },
+  {
+    "id": "si-tochigi-892",
+    "name": "源泉 那須山 令和の湯",
+    "prefecture": "栃木県",
+    "city": "那須郡那須町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/892"
+  },
+  {
+    "id": "si-tochigi-1281",
+    "name": "スーパー銭湯 小山やすらぎの湯",
+    "prefecture": "栃木県",
+    "city": "小山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1281"
+  },
+  {
+    "id": "si-tochigi-1143",
+    "name": "宇都宮天然温泉ゆらら",
+    "prefecture": "栃木県",
+    "city": "宇都宮市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1143"
+  },
+  {
+    "id": "si-tochigi-23149",
+    "name": "TERA PrivateSauna&river",
+    "prefecture": "栃木県",
+    "city": "日光市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/23149"
+  },
+  {
+    "id": "si-tochigi-4914",
+    "name": "栃木天然温泉 いきいき夢ロマン",
+    "prefecture": "栃木県",
+    "city": "栃木市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4914"
+  },
+  {
+    "id": "si-gunma-80443",
+    "name": "観音山サウナ蒸寺",
+    "prefecture": "群馬県",
+    "city": "高崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80443"
+  },
+  {
+    "id": "si-gunma-80768",
+    "name": "サウナの森水沼ヴィレッジ サウナ",
+    "prefecture": "群馬県",
+    "city": "桐生市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80768"
+  },
+  {
+    "id": "si-gunma-81337",
+    "name": "【整処】サウナ薪",
+    "prefecture": "群馬県",
+    "city": "みどり市",
+    "trait": "wood",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "薪サウナ"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81337"
+  },
+  {
+    "id": "si-gunma-4368",
+    "name": "花湯スカイテルメリゾート",
+    "prefecture": "群馬県",
+    "city": "渋川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4368"
+  },
+  {
+    "id": "si-gunma-80659",
+    "name": "ニノサ",
+    "prefecture": "群馬県",
+    "city": "桐生市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80659"
+  },
+  {
+    "id": "si-gunma-87998",
+    "name": "温窟サウナかま蔵 伊勢崎店",
+    "prefecture": "群馬県",
+    "city": "伊勢崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87998"
+  },
+  {
+    "id": "si-gunma-78969",
+    "name": "万座亭",
+    "prefecture": "群馬県",
+    "city": "吾妻郡嬬恋村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78969"
+  },
+  {
+    "id": "si-gunma-9995",
+    "name": "SHIROIYA HOTEL 白井屋ホテル",
+    "prefecture": "群馬県",
+    "city": "前橋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9995"
+  },
+  {
+    "id": "si-gunma-987",
+    "name": "別邸 仙寿庵",
+    "prefecture": "群馬県",
+    "city": "利根郡みなかみ町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/987"
+  },
+  {
+    "id": "si-gunma-12536",
+    "name": "滝つぼサウナ(サンバードサウナガーデン)",
+    "prefecture": "群馬県",
+    "city": "利根郡みなかみ町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12536"
+  },
+  {
+    "id": "si-gunma-12978",
+    "name": "Komorebiテラス ばんどうのゆ",
+    "prefecture": "群馬県",
+    "city": "渋川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12978"
+  },
+  {
+    "id": "si-gunma-1260",
+    "name": "天然温泉 湯楽部太田店",
+    "prefecture": "群馬県",
+    "city": "太田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1260"
+  },
+  {
+    "id": "si-gunma-20806",
+    "name": "天然温泉 ゆらぶ桐生店",
+    "prefecture": "群馬県",
+    "city": "桐生市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/20806"
+  },
+  {
+    "id": "si-gunma-107314",
+    "name": "温窟サウナかま蔵 高崎店",
+    "prefecture": "群馬県",
+    "city": "高崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/107314"
+  },
+  {
+    "id": "si-gunma-1223",
+    "name": "天然温泉 七福の湯 前橋店",
+    "prefecture": "群馬県",
+    "city": "前橋市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1223"
+  },
+  {
+    "id": "si-gunma-30838",
+    "name": "さなざわ㞢テラス(温泉&サウナ)",
+    "prefecture": "群馬県",
+    "city": "利根郡みなかみ町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/30838"
+  },
+  {
+    "id": "si-gunma-78747",
+    "name": "kanrano sauna",
+    "prefecture": "群馬県",
+    "city": "甘楽郡甘楽町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78747"
+  },
+  {
+    "id": "si-gunma-88293",
+    "name": "駅の天然温泉 水沼の湯",
+    "prefecture": "群馬県",
+    "city": "桐生市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88293"
+  },
+  {
+    "id": "si-gunma-38857",
+    "name": "MOOSKA DE STUBEN(ムースカドストゥーベン)",
+    "prefecture": "群馬県",
+    "city": "利根郡みなかみ町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/38857"
+  },
+  {
+    "id": "si-saitama-1523",
+    "name": "湯乃泉 草加健康センター",
+    "prefecture": "埼玉県",
+    "city": "草加市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1523"
+  },
+  {
+    "id": "si-saitama-1470",
+    "name": "おふろcafé utatane",
+    "prefecture": "埼玉県",
+    "city": "さいたま市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1470"
+  },
+  {
+    "id": "si-saitama-81144",
+    "name": "温泉バルコニー キング&クイーン",
+    "prefecture": "埼玉県",
+    "city": "所沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81144"
+  },
+  {
+    "id": "si-saitama-79480",
+    "name": "朝霞サウナ 和(なごみ)",
+    "prefecture": "埼玉県",
+    "city": "朝霞市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79480"
+  },
+  {
+    "id": "si-saitama-1579",
+    "name": "バーデンガーデン(旧:ザ ベッドアンドスパ 所沢)",
+    "prefecture": "埼玉県",
+    "city": "所沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1579"
+  },
+  {
+    "id": "si-saitama-1545",
+    "name": "竜泉寺の湯 草加谷塚店",
+    "prefecture": "埼玉県",
+    "city": "草加市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1545"
+  },
+  {
+    "id": "si-saitama-1469",
+    "name": "美楽温泉 SPA-HERBS",
+    "prefecture": "埼玉県",
+    "city": "さいたま市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1469"
+  },
+  {
+    "id": "si-saitama-79824",
+    "name": "サウナヘヴン草加",
+    "prefecture": "埼玉県",
+    "city": "草加市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79824"
+  },
+  {
+    "id": "si-saitama-8370",
+    "name": "サウナスイートキャビン(オーパークおごせ内)",
+    "prefecture": "埼玉県",
+    "city": "入間郡越生町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8370"
+  },
+  {
+    "id": "si-saitama-1346",
+    "name": "おふろcafé ハレニワの湯",
+    "prefecture": "埼玉県",
+    "city": "熊谷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1346"
+  },
+  {
+    "id": "si-saitama-83642",
+    "name": "毎日サウナ 越谷店",
+    "prefecture": "埼玉県",
+    "city": "越谷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/83642"
+  },
+  {
+    "id": "si-saitama-12586",
+    "name": "小江戸温泉 KASHIBA",
+    "prefecture": "埼玉県",
+    "city": "川越市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12586"
+  },
+  {
+    "id": "si-saitama-172",
+    "name": "喜楽湯",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/172"
+  },
+  {
+    "id": "si-saitama-4583",
+    "name": "花湯スパリゾート",
+    "prefecture": "埼玉県",
+    "city": "熊谷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4583"
+  },
+  {
+    "id": "si-saitama-9290",
+    "name": "COMORIVER(コモリバ)",
+    "prefecture": "埼玉県",
+    "city": "比企郡ときがわ町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9290"
+  },
+  {
+    "id": "si-saitama-1413",
+    "name": "杉戸天然温泉 雅楽の湯",
+    "prefecture": "埼玉県",
+    "city": "北葛飾郡杉戸町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1413"
+  },
+  {
+    "id": "si-saitama-1550",
+    "name": "サウナひろい(広の湯)",
+    "prefecture": "埼玉県",
+    "city": "川口市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1550"
+  },
+  {
+    "id": "si-saitama-82230",
+    "name": "サウナ横綱 本川越店",
+    "prefecture": "埼玉県",
+    "city": "川越市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82230"
+  },
+  {
+    "id": "si-saitama-98117",
+    "name": "YUBUNE SAUNA PARK はにゅうの湯",
+    "prefecture": "埼玉県",
+    "city": "羽生市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/98117"
+  },
+  {
+    "id": "si-saitama-1562",
+    "name": "七福の湯 戸田店",
+    "prefecture": "埼玉県",
+    "city": "戸田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1562"
+  },
+  {
+    "id": "si-chiba-23546",
+    "name": "スパメッツァ おおたか 竜泉寺の湯",
+    "prefecture": "千葉県",
+    "city": "流山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/23546"
+  },
+  {
+    "id": "si-chiba-1786",
+    "name": "カプセルホテル&サウナ ジートピア",
+    "prefecture": "千葉県",
+    "city": "船橋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1786"
+  },
+  {
+    "id": "si-chiba-10970",
+    "name": "Sea Sauna Shack / シーサウナシャック",
+    "prefecture": "千葉県",
+    "city": "館山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10970"
+  },
+  {
+    "id": "si-chiba-9039",
+    "name": "JFA夢フィールド 幕張温泉 湯楽の里",
+    "prefecture": "千葉県",
+    "city": "千葉市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9039"
+  },
+  {
+    "id": "si-chiba-1708",
+    "name": "サウナ&カプセルホテルレインボー本八幡店",
+    "prefecture": "千葉県",
+    "city": "市川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1708"
+  },
+  {
+    "id": "si-chiba-1471",
+    "name": "野天風呂 湯の郷",
+    "prefecture": "千葉県",
+    "city": "野田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1471"
+  },
+  {
+    "id": "si-chiba-1712",
+    "name": "佐倉天然温泉 澄流(すみれ)",
+    "prefecture": "千葉県",
+    "city": "佐倉市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1712"
+  },
+  {
+    "id": "si-chiba-1728",
+    "name": "クアパレス",
+    "prefecture": "千葉県",
+    "city": "船橋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1728"
+  },
+  {
+    "id": "si-chiba-1571",
+    "name": "おふろcafé かりんの湯",
+    "prefecture": "千葉県",
+    "city": "香取市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1571"
+  },
+  {
+    "id": "si-chiba-1666",
+    "name": "楽天地天然温泉 法典の湯",
+    "prefecture": "千葉県",
+    "city": "市川市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1666"
+  },
+  {
+    "id": "si-chiba-1996",
+    "name": "ビバークランド ロードの湯",
+    "prefecture": "千葉県",
+    "city": "千葉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1996"
+  },
+  {
+    "id": "si-chiba-114510",
+    "name": "毎日サウナ東京 幕張店",
+    "prefecture": "千葉県",
+    "city": "千葉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/114510"
+  },
+  {
+    "id": "si-chiba-41068",
+    "name": "edén エデン レストラン&スパ",
+    "prefecture": "千葉県",
+    "city": "勝浦市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/41068"
+  },
+  {
+    "id": "si-chiba-8464",
+    "name": "八街ヴィラ",
+    "prefecture": "千葉県",
+    "city": "八街市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8464"
+  },
+  {
+    "id": "si-chiba-1850",
+    "name": "Spa Resort 菜々の湯",
+    "prefecture": "千葉県",
+    "city": "習志野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1850"
+  },
+  {
+    "id": "si-chiba-23677",
+    "name": "ゆうみ Sauna Cafe (Beach Sauna)",
+    "prefecture": "千葉県",
+    "city": "安房郡鋸南町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/23677"
+  },
+  {
+    "id": "si-chiba-1787",
+    "name": "船橋グランドサウナ&カプセルホテル",
+    "prefecture": "千葉県",
+    "city": "船橋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1787"
+  },
+  {
+    "id": "si-chiba-2338",
+    "name": "サウナきさらづ つぼや",
+    "prefecture": "千葉県",
+    "city": "木更津市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2338"
+  },
+  {
+    "id": "si-chiba-2128",
+    "name": "薬湯市原店",
+    "prefecture": "千葉県",
+    "city": "市原市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2128"
+  },
+  {
+    "id": "si-chiba-4410",
+    "name": "のだ温泉 ほのか",
+    "prefecture": "千葉県",
+    "city": "野田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4410"
+  },
+  {
+    "id": "si-tokyo-9134",
+    "name": "黄金湯",
+    "prefecture": "東京都",
+    "city": "墨田区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9134"
+  },
+  {
+    "id": "si-tokyo-88",
+    "name": "サウナ&カプセルホテル 北欧",
+    "prefecture": "東京都",
+    "city": "台東区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88"
+  },
+  {
+    "id": "si-tokyo-6656",
+    "name": "サウナ&ホテル かるまる池袋",
+    "prefecture": "東京都",
+    "city": "豊島区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6656"
+  },
+  {
+    "id": "si-tokyo-1934",
+    "name": "改良湯",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1934"
+  },
+  {
+    "id": "si-tokyo-65093",
+    "name": "渋谷SAUNAS",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65093"
+  },
+  {
+    "id": "si-tokyo-67270",
+    "name": "サウナ東京 (Sauna Tokyo)",
+    "prefecture": "東京都",
+    "city": "港区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/67270"
+  },
+  {
+    "id": "si-tokyo-4416",
+    "name": "松本湯",
+    "prefecture": "東京都",
+    "city": "中野区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4416"
+  },
+  {
+    "id": "si-tokyo-1873",
+    "name": "天空のアジト マルシンスパ",
+    "prefecture": "東京都",
+    "city": "渋谷区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1873"
+  },
+  {
+    "id": "si-tokyo-12818",
+    "name": "ROOFTOP(ルーフトップ)",
+    "prefecture": "東京都",
+    "city": "杉並区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12818"
+  },
+  {
+    "id": "si-tokyo-1757",
+    "name": "東京ドーム天然温泉 Spa LaQua(スパ ラクーア)",
+    "prefecture": "東京都",
+    "city": "文京区",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1757"
+  },
+  {
+    "id": "si-tokyo-1687",
+    "name": "タイムズ スパ・レスタ",
+    "prefecture": "東京都",
+    "city": "豊島区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1687"
+  },
+  {
+    "id": "si-tokyo-1599",
+    "name": "堀田湯",
+    "prefecture": "東京都",
+    "city": "足立区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1599"
+  },
+  {
+    "id": "si-tokyo-1698",
+    "name": "ひだまりの泉 萩の湯",
+    "prefecture": "東京都",
+    "city": "台東区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1698"
+  },
+  {
+    "id": "si-tokyo-1821",
+    "name": "新宿天然温泉 テルマー湯",
+    "prefecture": "東京都",
+    "city": "新宿区",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1821"
+  },
+  {
+    "id": "si-tokyo-63706",
+    "name": "生姜サウナ 金の亀",
+    "prefecture": "東京都",
+    "city": "港区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/63706"
+  },
+  {
+    "id": "si-tokyo-1808",
+    "name": "両国湯屋江戸遊",
+    "prefecture": "東京都",
+    "city": "墨田区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1808"
+  },
+  {
+    "id": "si-tokyo-1823",
+    "name": "スパ&カプセル ニューウイング",
+    "prefecture": "東京都",
+    "city": "墨田区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1823"
+  },
+  {
+    "id": "si-tokyo-80262",
+    "name": "泊まれるサウナ屋さん 品川サウナ",
+    "prefecture": "東京都",
+    "city": "品川区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80262"
+  },
+  {
+    "id": "si-tokyo-4343",
+    "name": "文化浴泉",
+    "prefecture": "東京都",
+    "city": "目黒区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4343"
+  },
+  {
+    "id": "si-tokyo-1647",
+    "name": "豊島園 庭の湯",
+    "prefecture": "東京都",
+    "city": "練馬区",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1647"
+  },
+  {
+    "id": "si-kanagawa-10781",
+    "name": "朝日湯源泉ゆいる",
+    "prefecture": "神奈川県",
+    "city": "川崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10781"
+  },
+  {
+    "id": "si-kanagawa-2385",
+    "name": "大磯プリンスホテル THERMAL SPA S.WAVE",
+    "prefecture": "神奈川県",
+    "city": "中郡大磯町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2385"
+  },
+  {
+    "id": "si-kanagawa-75917",
+    "name": "HARE-TABI SAUNA&INN",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/75917"
+  },
+  {
+    "id": "si-kanagawa-2136",
+    "name": "綱島源泉 湯けむりの庄",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2136"
+  },
+  {
+    "id": "si-kanagawa-2146",
+    "name": "ファンタジーサウナ&スパおふろの国",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2146"
+  },
+  {
+    "id": "si-kanagawa-82473",
+    "name": "saunahouse",
+    "prefecture": "神奈川県",
+    "city": "川崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82473"
+  },
+  {
+    "id": "si-kanagawa-2187",
+    "name": "横濱スパヒルズ 竜泉寺の湯",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2187"
+  },
+  {
+    "id": "si-kanagawa-2049",
+    "name": "宮前平源泉 湯けむりの庄",
+    "prefecture": "神奈川県",
+    "city": "川崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2049"
+  },
+  {
+    "id": "si-kanagawa-2150",
+    "name": "ヨコヤマ・ユーランド鶴見",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2150"
+  },
+  {
+    "id": "si-kanagawa-2212",
+    "name": "横浜天然温泉 SPA EAS",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2212"
+  },
+  {
+    "id": "si-kanagawa-9852",
+    "name": "KAMAKURA HOTEL",
+    "prefecture": "神奈川県",
+    "city": "鎌倉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9852"
+  },
+  {
+    "id": "si-kanagawa-9073",
+    "name": "8HOTEL CHIGASAKI",
+    "prefecture": "神奈川県",
+    "city": "茅ヶ崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9073"
+  },
+  {
+    "id": "si-kanagawa-2298",
+    "name": "OYUGIWA海老名",
+    "prefecture": "神奈川県",
+    "city": "海老名市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2298"
+  },
+  {
+    "id": "si-kanagawa-2147",
+    "name": "RAKU SPA 鶴見",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2147"
+  },
+  {
+    "id": "si-kanagawa-80330",
+    "name": "サウナゆげ蔵",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80330"
+  },
+  {
+    "id": "si-kanagawa-2445",
+    "name": "箱根湯寮",
+    "prefecture": "神奈川県",
+    "city": "足柄下郡箱根町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2445"
+  },
+  {
+    "id": "si-kanagawa-2236",
+    "name": "横浜みなとみらい 万葉倶楽部",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2236"
+  },
+  {
+    "id": "si-kanagawa-2368",
+    "name": "亀遊舘",
+    "prefecture": "神奈川県",
+    "city": "横浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2368"
+  },
+  {
+    "id": "si-kanagawa-2139",
+    "name": "レックスイン川崎",
+    "prefecture": "神奈川県",
+    "city": "川崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2139"
+  },
+  {
+    "id": "si-kanagawa-2061",
+    "name": "溝口温泉 喜楽里",
+    "prefecture": "神奈川県",
+    "city": "川崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2061"
+  },
+  {
+    "id": "si-niigata-21037",
+    "name": "Snow Peak FIELD SUITE SPA HEADQUARTERS",
+    "prefecture": "新潟県",
+    "city": "三条市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/21037"
+  },
+  {
+    "id": "si-niigata-735",
+    "name": "サウナと天然温泉 じょんのび館",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/735"
+  },
+  {
+    "id": "si-niigata-36052",
+    "name": "SHIIYA VILLAGE",
+    "prefecture": "新潟県",
+    "city": "柏崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/36052"
+  },
+  {
+    "id": "si-niigata-9851",
+    "name": "サウナ宝来洲",
+    "prefecture": "新潟県",
+    "city": "柏崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9851"
+  },
+  {
+    "id": "si-niigata-88693",
+    "name": "sauna100",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88693"
+  },
+  {
+    "id": "si-niigata-713",
+    "name": "極楽湯 女池店",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/713"
+  },
+  {
+    "id": "si-niigata-9592",
+    "name": "HOSTELperch (パーチ)",
+    "prefecture": "新潟県",
+    "city": "佐渡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9592"
+  },
+  {
+    "id": "si-niigata-78413",
+    "name": "古町サウナ SAUNA KUMORI",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78413"
+  },
+  {
+    "id": "si-niigata-80519",
+    "name": "ななほしサウナ",
+    "prefecture": "新潟県",
+    "city": "五泉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80519"
+  },
+  {
+    "id": "si-niigata-741",
+    "name": "湯田上温泉 ホテル小柳 (oyanagi)",
+    "prefecture": "新潟県",
+    "city": "南蒲原郡田上町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/741"
+  },
+  {
+    "id": "si-niigata-69085",
+    "name": "サウナ&酒場 弁天スタンド",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/69085"
+  },
+  {
+    "id": "si-niigata-10129",
+    "name": "Heidi Guest House",
+    "prefecture": "新潟県",
+    "city": "南魚沼郡湯沢町",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気なし",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10129"
+  },
+  {
+    "id": "si-niigata-82365",
+    "name": "バレルサウナsui",
+    "prefecture": "新潟県",
+    "city": "新発田市",
+    "trait": "wood",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "バレルサウナ",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82365"
+  },
+  {
+    "id": "si-niigata-7793",
+    "name": "神の湯",
+    "prefecture": "新潟県",
+    "city": "南魚沼郡湯沢町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7793"
+  },
+  {
+    "id": "si-niigata-844",
+    "name": "七福の湯 上越店",
+    "prefecture": "新潟県",
+    "city": "上越市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/844"
+  },
+  {
+    "id": "si-niigata-709",
+    "name": "天然温泉 多宝の湯 ドーミーイン新潟",
+    "prefecture": "新潟県",
+    "city": "新潟市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/709"
+  },
+  {
+    "id": "si-niigata-78127",
+    "name": "プライベートサウナ ART",
+    "prefecture": "新潟県",
+    "city": "長岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78127"
+  },
+  {
+    "id": "si-niigata-78308",
+    "name": "里山十帖 THE HOUSE SEN",
+    "prefecture": "新潟県",
+    "city": "十日町市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78308"
+  },
+  {
+    "id": "si-niigata-788",
+    "name": "スーパー銭湯 越後長岡ゆらいや",
+    "prefecture": "新潟県",
+    "city": "長岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/788"
+  },
+  {
+    "id": "si-niigata-80979",
+    "name": "HOTEL SOBOKU",
+    "prefecture": "新潟県",
+    "city": "妙高市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80979"
+  },
+  {
+    "id": "si-toyama-79038",
+    "name": "湯屋 FUROBAKKA(フロバッカ)",
+    "prefecture": "富山県",
+    "city": "黒部市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79038"
+  },
+  {
+    "id": "si-toyama-26715",
+    "name": "The Hive SAUNA",
+    "prefecture": "富山県",
+    "city": "中新川郡立山町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/26715"
+  },
+  {
+    "id": "si-toyama-1020",
+    "name": "Sauna Talo Toyama サウナタロトヤマ",
+    "prefecture": "富山県",
+    "city": "富山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1020"
+  },
+  {
+    "id": "si-toyama-1002",
+    "name": "天然温泉 海王",
+    "prefecture": "富山県",
+    "city": "射水市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1002"
+  },
+  {
+    "id": "si-toyama-12651",
+    "name": "TATEYAMA SAUNA",
+    "prefecture": "富山県",
+    "city": "中新川郡立山町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12651"
+  },
+  {
+    "id": "si-toyama-5947",
+    "name": "天然温泉 風の森",
+    "prefecture": "富山県",
+    "city": "小矢部市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5947"
+  },
+  {
+    "id": "si-toyama-80165",
+    "name": "37BASE",
+    "prefecture": "富山県",
+    "city": "南砺市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80165"
+  },
+  {
+    "id": "si-toyama-80882",
+    "name": "SPA BALNAGE(スパ・バルナージュ)",
+    "prefecture": "富山県",
+    "city": "魚津市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80882"
+  },
+  {
+    "id": "si-toyama-80282",
+    "name": "アパホテルステイ〈富山〉",
+    "prefecture": "富山県",
+    "city": "富山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80282"
+  },
+  {
+    "id": "si-toyama-1183",
+    "name": "平ふれあい温泉センター ゆ〜楽",
+    "prefecture": "富山県",
+    "city": "南砺市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1183"
+  },
+  {
+    "id": "si-toyama-1044",
+    "name": "天然温泉 剱の湯 御宿 野乃富山",
+    "prefecture": "富山県",
+    "city": "富山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1044"
+  },
+  {
+    "id": "si-toyama-997",
+    "name": "陽だまりの湯",
+    "prefecture": "富山県",
+    "city": "高岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/997"
+  },
+  {
+    "id": "si-toyama-10169",
+    "name": "レヴォ Cuisine régionale L'évo",
+    "prefecture": "富山県",
+    "city": "南砺市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10169"
+  },
+  {
+    "id": "si-toyama-957",
+    "name": "辻わくわくランド",
+    "prefecture": "富山県",
+    "city": "魚津市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/957"
+  },
+  {
+    "id": "si-toyama-1027",
+    "name": "太閤山天然温泉 太閤の湯(ホテル太閤の湯)",
+    "prefecture": "富山県",
+    "city": "射水市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1027"
+  },
+  {
+    "id": "si-toyama-78626",
+    "name": "氷見・松田江温泉 民宿あおまさ",
+    "prefecture": "富山県",
+    "city": "氷見市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78626"
+  },
+  {
+    "id": "si-toyama-40113",
+    "name": "SAUNA da SAUNA",
+    "prefecture": "富山県",
+    "city": "高岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/40113"
+  },
+  {
+    "id": "si-toyama-81202",
+    "name": "ひかりランド大門の湯",
+    "prefecture": "富山県",
+    "city": "射水市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81202"
+  },
+  {
+    "id": "si-toyama-1118",
+    "name": "川合田温泉 サウナ部",
+    "prefecture": "富山県",
+    "city": "南砺市川西",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1118"
+  },
+  {
+    "id": "si-toyama-5277",
+    "name": "氷見温泉郷 総湯",
+    "prefecture": "富山県",
+    "city": "氷見市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5277"
+  },
+  {
+    "id": "si-ishikawa-1120",
+    "name": "天然温泉リラックスパーク テルメ金沢",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1120"
+  },
+  {
+    "id": "si-ishikawa-59285",
+    "name": "松の湯",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/59285"
+  },
+  {
+    "id": "si-ishikawa-1150",
+    "name": "源泉掛け流し しあわせの湯",
+    "prefecture": "石川県",
+    "city": "野々市市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1150"
+  },
+  {
+    "id": "si-ishikawa-12079",
+    "name": "香林居",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12079"
+  },
+  {
+    "id": "si-ishikawa-11110",
+    "name": "天然温泉 加賀の宝泉 御宿 野乃金沢",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11110"
+  },
+  {
+    "id": "si-ishikawa-10936",
+    "name": "LINNAS Kanazawa Kuumus",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10936"
+  },
+  {
+    "id": "si-ishikawa-793",
+    "name": "海浜あみだ湯",
+    "prefecture": "石川県",
+    "city": "珠洲市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/793"
+  },
+  {
+    "id": "si-ishikawa-77997",
+    "name": "SAUNA HAKUSAN(サウナはくさん)",
+    "prefecture": "石川県",
+    "city": "白山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/77997"
+  },
+  {
+    "id": "si-ishikawa-1132",
+    "name": "満天の湯 金沢店",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1132"
+  },
+  {
+    "id": "si-ishikawa-5256",
+    "name": "有松温泉元湯れもん湯",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5256"
+  },
+  {
+    "id": "si-ishikawa-1114",
+    "name": "天然温泉 加賀の湧泉 ドーミーイン金沢",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1114"
+  },
+  {
+    "id": "si-ishikawa-1107",
+    "name": "和おんの湯",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1107"
+  },
+  {
+    "id": "si-ishikawa-1116",
+    "name": "アパスパ金沢駅前(アパホテル金沢駅前)",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1116"
+  },
+  {
+    "id": "si-ishikawa-12884",
+    "name": "森のサウナ 山紫水明【一里野高原ホテル ろあん】",
+    "prefecture": "石川県",
+    "city": "白山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12884"
+  },
+  {
+    "id": "si-ishikawa-1309",
+    "name": "大江戸温泉物語Premium よしのや依緑園",
+    "prefecture": "石川県",
+    "city": "加賀市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1309"
+  },
+  {
+    "id": "si-ishikawa-1133",
+    "name": "天然温泉 アパスパ金沢中央",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1133"
+  },
+  {
+    "id": "si-ishikawa-78028",
+    "name": "saunaLOHAS【サウナロハス】",
+    "prefecture": "石川県",
+    "city": "野々市市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78028"
+  },
+  {
+    "id": "si-ishikawa-889",
+    "name": "ほっとらんどNANAO",
+    "prefecture": "石川県",
+    "city": "七尾市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/889"
+  },
+  {
+    "id": "si-ishikawa-1168",
+    "name": "浅の川温泉 湯楽",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1168"
+  },
+  {
+    "id": "si-ishikawa-858",
+    "name": "和倉温泉総湯",
+    "prefecture": "石川県",
+    "city": "七尾市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/858"
+  },
+  {
+    "id": "si-fukui-1410",
+    "name": "ゆけむり温泉 ゆ〜遊",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1410"
+  },
+  {
+    "id": "si-fukui-7489",
+    "name": "余熱館 ささおか",
+    "prefecture": "福井県",
+    "city": "あわら市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7489"
+  },
+  {
+    "id": "si-fukui-74762",
+    "name": "Umitoma Ocean View Resort Echizen",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/74762"
+  },
+  {
+    "id": "si-fukui-1397",
+    "name": "お風呂のデパート たきのゆ",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1397"
+  },
+  {
+    "id": "si-fukui-1387",
+    "name": "極楽湯 福井店",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1387"
+  },
+  {
+    "id": "si-fukui-80703",
+    "name": "さんくさうな",
+    "prefecture": "福井県",
+    "city": "越前市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80703"
+  },
+  {
+    "id": "si-fukui-1375",
+    "name": "旅館 松岡サウナ",
+    "prefecture": "福井県",
+    "city": "吉田郡永平寺町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1375"
+  },
+  {
+    "id": "si-fukui-1458",
+    "name": "かわだ温泉 ラポーゼ かわだ",
+    "prefecture": "福井県",
+    "city": "鯖江市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1458"
+  },
+  {
+    "id": "si-fukui-1325",
+    "name": "三国温泉ゆあぽーと",
+    "prefecture": "福井県",
+    "city": "坂井市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1325"
+  },
+  {
+    "id": "si-fukui-81601",
+    "name": "古民家サウナ ととの居",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81601"
+  },
+  {
+    "id": "si-fukui-1388",
+    "name": "勝山天然温泉 水芭蕉",
+    "prefecture": "福井県",
+    "city": "勝山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1388"
+  },
+  {
+    "id": "si-fukui-1474",
+    "name": "越前温泉 漁火",
+    "prefecture": "福井県",
+    "city": "丹生郡越前町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1474"
+  },
+  {
+    "id": "si-fukui-81965",
+    "name": "つるが湯",
+    "prefecture": "福井県",
+    "city": "敦賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81965"
+  },
+  {
+    "id": "si-fukui-92154",
+    "name": "天然温泉 若狭の湯 ドーミーイン敦賀",
+    "prefecture": "福井県",
+    "city": "敦賀市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/92154"
+  },
+  {
+    "id": "si-fukui-5656",
+    "name": "羽二重の湯 ドーミーイン福井",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5656"
+  },
+  {
+    "id": "si-fukui-7821",
+    "name": "湯っぷる",
+    "prefecture": "福井県",
+    "city": "大飯郡高浜町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7821"
+  },
+  {
+    "id": "si-fukui-1430",
+    "name": "大野市健康保養施設あっ宝んど",
+    "prefecture": "福井県",
+    "city": "大野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1430"
+  },
+  {
+    "id": "si-fukui-1351",
+    "name": "いきいきプラザ 霞の郷温泉",
+    "prefecture": "福井県",
+    "city": "坂井市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1351"
+  },
+  {
+    "id": "si-fukui-1394",
+    "name": "天然温泉サウナ アパスパ福井片町(アパホテル 福井片町)",
+    "prefecture": "福井県",
+    "city": "福井市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1394"
+  },
+  {
+    "id": "si-fukui-1323",
+    "name": "あわら温泉 グランディア芳泉",
+    "prefecture": "福井県",
+    "city": "あわら市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1323"
+  },
+  {
+    "id": "si-yamanashi-8094",
+    "name": "ホテルマウント富士",
+    "prefecture": "山梨県",
+    "city": "南都留郡山中湖村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8094"
+  },
+  {
+    "id": "si-yamanashi-80715",
+    "name": "CYCL",
+    "prefecture": "山梨県",
+    "city": "南都留郡山中湖村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80715"
+  },
+  {
+    "id": "si-yamanashi-47767",
+    "name": "FOLKWOOD SAUNA",
+    "prefecture": "山梨県",
+    "city": "北杜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/47767"
+  },
+  {
+    "id": "si-yamanashi-2193",
+    "name": "ふじやま温泉",
+    "prefecture": "山梨県",
+    "city": "富士吉田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2193"
+  },
+  {
+    "id": "si-yamanashi-2192",
+    "name": "河口湖 ホテル 桜庵",
+    "prefecture": "山梨県",
+    "city": "南都留郡富士河口湖町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2192"
+  },
+  {
+    "id": "si-yamanashi-9645",
+    "name": "富士山の見える全室個室サウナ付旅館 しずく",
+    "prefecture": "山梨県",
+    "city": "南都留郡山中湖村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9645"
+  },
+  {
+    "id": "si-yamanashi-78414",
+    "name": "湖畔の楽園ドラゴンサウナ",
+    "prefecture": "山梨県",
+    "city": "西八代郡市川三郷町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78414"
+  },
+  {
+    "id": "si-yamanashi-9336",
+    "name": "Dot Glamping 富士山",
+    "prefecture": "山梨県",
+    "city": "南都留郡富士河口湖町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9336"
+  },
+  {
+    "id": "si-yamanashi-2083",
+    "name": "みはらしの丘 みたまの湯",
+    "prefecture": "山梨県",
+    "city": "西八代郡市川三郷町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2083"
+  },
+  {
+    "id": "si-yamanashi-78963",
+    "name": "MATKA private outdoor sauna",
+    "prefecture": "山梨県",
+    "city": "笛吹市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78963"
+  },
+  {
+    "id": "si-yamanashi-2096",
+    "name": "ホテル&薬草風呂 スターらんど",
+    "prefecture": "山梨県",
+    "city": "都留市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2096"
+  },
+  {
+    "id": "si-yamanashi-41134",
+    "name": "Luont SAUNA FUJI (ルオントサウナ富士)",
+    "prefecture": "山梨県",
+    "city": "富士吉田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/41134"
+  },
+  {
+    "id": "si-yamanashi-1969",
+    "name": "スパランド ホテル内藤",
+    "prefecture": "山梨県",
+    "city": "笛吹市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1969"
+  },
+  {
+    "id": "si-yamanashi-9410",
+    "name": "金の森山荘",
+    "prefecture": "山梨県",
+    "city": "大月市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9410"
+  },
+  {
+    "id": "si-yamanashi-78732",
+    "name": "郷音-G.O.A.T-",
+    "prefecture": "山梨県",
+    "city": "都留市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78732"
+  },
+  {
+    "id": "si-yamanashi-2008",
+    "name": "天然温泉HealthySPAサンロード",
+    "prefecture": "山梨県",
+    "city": "甲府市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2008"
+  },
+  {
+    "id": "si-yamanashi-79698",
+    "name": "道志川サウナ",
+    "prefecture": "山梨県",
+    "city": "南都留郡道志村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79698"
+  },
+  {
+    "id": "si-yamanashi-1853",
+    "name": "湯めみの丘",
+    "prefecture": "山梨県",
+    "city": "甲斐市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1853"
+  },
+  {
+    "id": "si-yamanashi-1963",
+    "name": "桜湯",
+    "prefecture": "山梨県",
+    "city": "中巨摩郡昭和町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1963"
+  },
+  {
+    "id": "si-yamanashi-10788",
+    "name": "サウナ堂 (水之元オートキャンプ場)",
+    "prefecture": "山梨県",
+    "city": "南都留郡道志村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10788"
+  },
+  {
+    "id": "si-nagano-11218",
+    "name": "The TOJIBA 松川館",
+    "prefecture": "長野県",
+    "city": "上高井郡高山村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11218"
+  },
+  {
+    "id": "si-nagano-10800",
+    "name": "タビシロサウナ",
+    "prefecture": "長野県",
+    "city": "松本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10800"
+  },
+  {
+    "id": "si-nagano-1370",
+    "name": "白樺リゾート 池の平ホテル「湖天の湯」",
+    "prefecture": "長野県",
+    "city": "北佐久郡立科町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1370"
+  },
+  {
+    "id": "si-nagano-13125",
+    "name": "From P Hakuba (フロムピー ハクバ)",
+    "prefecture": "長野県",
+    "city": "北安曇郡白馬村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13125"
+  },
+  {
+    "id": "si-nagano-4471",
+    "name": "川中島温泉テルメDOME",
+    "prefecture": "長野県",
+    "city": "長野市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4471"
+  },
+  {
+    "id": "si-nagano-4374",
+    "name": "フィンランド・ヴィレッジ",
+    "prefecture": "長野県",
+    "city": "南佐久郡小海町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4374"
+  },
+  {
+    "id": "si-nagano-46909",
+    "name": "SAUNA TEN \"Birch and cloud forest\"",
+    "prefecture": "長野県",
+    "city": "南佐久郡",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/46909"
+  },
+  {
+    "id": "si-nagano-11519",
+    "name": "シマシマサウナ",
+    "prefecture": "長野県",
+    "city": "松本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11519"
+  },
+  {
+    "id": "si-nagano-11874",
+    "name": "和の心を愉しむ 渋温泉 春蘭の宿 さかえや",
+    "prefecture": "長野県",
+    "city": "下高井郡山ノ内町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11874"
+  },
+  {
+    "id": "si-nagano-61661",
+    "name": "サウナスペースTOJIBA 湯治場",
+    "prefecture": "長野県",
+    "city": "小諸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61661"
+  },
+  {
+    "id": "si-nagano-75124",
+    "name": "hyva sauna",
+    "prefecture": "長野県",
+    "city": "上田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/75124"
+  },
+  {
+    "id": "si-nagano-78739",
+    "name": "SAMBO SAUN",
+    "prefecture": "長野県",
+    "city": "長野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78739"
+  },
+  {
+    "id": "si-nagano-13547",
+    "name": "しぇろくまサウナ&カフェ",
+    "prefecture": "長野県",
+    "city": "上水内郡信濃町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13547"
+  },
+  {
+    "id": "si-nagano-1315",
+    "name": "湯の華銭湯 瑞祥 松本館",
+    "prefecture": "長野県",
+    "city": "松本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1315"
+  },
+  {
+    "id": "si-nagano-1160",
+    "name": "地蔵温泉 十福の湯",
+    "prefecture": "長野県",
+    "city": "上田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1160"
+  },
+  {
+    "id": "si-nagano-5874",
+    "name": "権堂温泉テルメDOME",
+    "prefecture": "長野県",
+    "city": "長野市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5874"
+  },
+  {
+    "id": "si-nagano-1396",
+    "name": "美肌の湯 ロマネット",
+    "prefecture": "長野県",
+    "city": "岡谷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1396"
+  },
+  {
+    "id": "si-nagano-79874",
+    "name": "軽井沢プライベートアウトドアサウナkaveri",
+    "prefecture": "長野県",
+    "city": "北佐久郡軽井沢町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79874"
+  },
+  {
+    "id": "si-nagano-8865",
+    "name": "Kakure Sauna 【戸隠高原ホテル】",
+    "prefecture": "長野県",
+    "city": "長野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8865"
+  },
+  {
+    "id": "si-gifu-2303",
+    "name": "岐阜各務原 恵みの湯",
+    "prefecture": "岐阜県",
+    "city": "各務原市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2303"
+  },
+  {
+    "id": "si-gifu-2376",
+    "name": "SAUNA RESORT 天光の湯",
+    "prefecture": "岐阜県",
+    "city": "多治見市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2376"
+  },
+  {
+    "id": "si-gifu-92846",
+    "name": "Kanzaki Sanga Sauna",
+    "prefecture": "岐阜県",
+    "city": "山県市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/92846"
+  },
+  {
+    "id": "si-gifu-28499",
+    "name": "時のホテル",
+    "prefecture": "岐阜県",
+    "city": "土岐市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/28499"
+  },
+  {
+    "id": "si-gifu-1374",
+    "name": "リブマックスリゾート飛騨高山～臥龍の郷～",
+    "prefecture": "岐阜県",
+    "city": "高山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1374"
+  },
+  {
+    "id": "si-gifu-43675",
+    "name": "泊まれる銭湯 鷹の湯",
+    "prefecture": "岐阜県",
+    "city": "高山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/43675"
+  },
+  {
+    "id": "si-gifu-2275",
+    "name": "湯の華ア���ランド",
+    "prefecture": "岐阜県",
+    "city": "可児市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2275"
+  },
+  {
+    "id": "si-nara-8931",
+    "name": "ume, yamazoe",
+    "prefecture": "奈良県",
+    "city": "山辺郡山添村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8931"
+  },
+  {
+    "id": "si-nara-3154",
+    "name": "奈良ロイヤルホテル ラ・ロイヤル・スパ&サウナ",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3154"
+  },
+  {
+    "id": "si-nara-6065",
+    "name": "天然温泉 吉野桜の湯 御宿 野乃奈良",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6065"
+  },
+  {
+    "id": "si-nara-5986",
+    "name": "カンデオホテルズ奈良橿原",
+    "prefecture": "奈良県",
+    "city": "橿原市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5986"
+  },
+  {
+    "id": "si-nara-12485",
+    "name": "信貴の湯",
+    "prefecture": "奈良県",
+    "city": "生駒郡三郷町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12485"
+  },
+  {
+    "id": "si-nara-81207",
+    "name": "グッドサウナ",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81207"
+  },
+  {
+    "id": "si-nara-59647",
+    "name": "黒滝のお宿 ~森と川と~",
+    "prefecture": "奈良県",
+    "city": "吉野郡黒滝村",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/59647"
+  },
+  {
+    "id": "si-nara-56446",
+    "name": "ガジラスパ(ガジラアウトドアツアー)",
+    "prefecture": "奈良県",
+    "city": "五條市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/56446"
+  },
+  {
+    "id": "si-nara-82085",
+    "name": "KISSA 喫酒と喫サ",
+    "prefecture": "奈良県",
+    "city": "大和郡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82085"
+  },
+  {
+    "id": "si-nara-81267",
+    "name": "今昔荘 奈良 ならまち 蒸風呂邸",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81267"
+  },
+  {
+    "id": "si-nara-80185",
+    "name": "雲海サウナ SAUNA GEN",
+    "prefecture": "奈良県",
+    "city": "山辺郡",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80185"
+  },
+  {
+    "id": "si-nara-12839",
+    "name": "霊山寺 薬師湯殿",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12839"
+  },
+  {
+    "id": "si-nara-7087",
+    "name": "法華寺浴室(からふろ)",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7087"
+  },
+  {
+    "id": "si-nara-78935",
+    "name": "Nagi no Ne",
+    "prefecture": "奈良県",
+    "city": "吉野郡東吉野村",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78935"
+  },
+  {
+    "id": "si-nara-65820",
+    "name": "ANDO HOTEL 奈良若草山(アンドホテル 奈良若草山)",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65820"
+  },
+  {
+    "id": "si-nara-7990",
+    "name": "朝日温泉",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7990"
+  },
+  {
+    "id": "si-nara-10046",
+    "name": "JWマリオットホテル奈良",
+    "prefecture": "奈良県",
+    "city": "奈良市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10046"
+  },
+  {
+    "id": "si-nara-3487",
+    "name": "下市温泉秋津荘 明水館",
+    "prefecture": "奈良県",
+    "city": "吉野郡下市町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3487"
+  },
+  {
+    "id": "si-nara-6013",
+    "name": "グランドメルキュール奈良橿原",
+    "prefecture": "奈良県",
+    "city": "橿原市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6013"
+  },
+  {
+    "id": "si-nara-87338",
+    "name": "東吉野ふるさと村",
+    "prefecture": "奈良県",
+    "city": "吉野郡東吉野村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87338"
+  },
+  {
+    "id": "si-wakayama-6004",
+    "name": "二ノ丸温泉",
+    "prefecture": "和歌山県",
+    "city": "有田郡湯浅町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6004"
+  },
+  {
+    "id": "si-wakayama-3738",
+    "name": "南紀白浜温泉 ホテル川久",
+    "prefecture": "和歌山県",
+    "city": "西牟婁郡白浜町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3738"
+  },
+  {
+    "id": "si-wakayama-86315",
+    "name": "紀美野サウナ&ホテル",
+    "prefecture": "和歌山県",
+    "city": "海草郡紀美野町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/86315"
+  },
+  {
+    "id": "si-wakayama-6255",
+    "name": "幸福湯",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6255"
+  },
+  {
+    "id": "si-wakayama-11429",
+    "name": "禅サウナ in Temple Camp 大泰寺(テントサウナ)",
+    "prefecture": "和歌山県",
+    "city": "東牟婁郡那智勝浦町",
+    "trait": "wood",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "テントサウナ",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11429"
+  },
+  {
+    "id": "si-wakayama-83219",
+    "name": "古民家銭湯 - 高野口乃湯",
+    "prefecture": "和歌山県",
+    "city": "橋本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/83219"
+  },
+  {
+    "id": "si-wakayama-80234",
+    "name": "Sauna Aalto",
+    "prefecture": "和歌山県",
+    "city": "西牟婁郡白浜町",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "外気なし",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80234"
+  },
+  {
+    "id": "si-wakayama-6672",
+    "name": "SHIRAHAMA KEYTERRACE ホテルシーモア",
+    "prefecture": "和歌山県",
+    "city": "西牟婁郡白浜町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6672"
+  },
+  {
+    "id": "si-wakayama-80437",
+    "name": "神通温泉",
+    "prefecture": "和歌山県",
+    "city": "紀の川市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80437"
+  },
+  {
+    "id": "si-wakayama-12899",
+    "name": "天空のリゾート 四季 SHIOSAI TERRACE",
+    "prefecture": "和歌山県",
+    "city": "西牟婁郡白浜町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12899"
+  },
+  {
+    "id": "si-wakayama-78711",
+    "name": "ele.sauna&coffee",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78711"
+  },
+  {
+    "id": "si-wakayama-9006",
+    "name": "カンデオホテルズ南海和歌山",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9006"
+  },
+  {
+    "id": "si-wakayama-81448",
+    "name": "三笠館(MIKASAKAN) サウナ",
+    "prefecture": "和歌山県",
+    "city": "紀の川市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81448"
+  },
+  {
+    "id": "si-wakayama-82075",
+    "name": "NAGOMI サウナ",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82075"
+  },
+  {
+    "id": "si-wakayama-3532",
+    "name": "幸の湯",
+    "prefecture": "和歌山県",
+    "city": "岩出市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3532"
+  },
+  {
+    "id": "si-wakayama-49318",
+    "name": "稲村亭(NIPPONIA 串本熊野海道)",
+    "prefecture": "和歌山県",
+    "city": "東牟婁郡串本町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/49318"
+  },
+  {
+    "id": "si-wakayama-8583",
+    "name": "山吹温泉",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8583"
+  },
+  {
+    "id": "si-wakayama-3534",
+    "name": "川辺の湯安庵",
+    "prefecture": "和歌山県",
+    "city": "岩出市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3534"
+  },
+  {
+    "id": "si-wakayama-9209",
+    "name": "滝原温泉 ほたるの湯",
+    "prefecture": "和歌山県",
+    "city": "有田郡広川町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9209"
+  },
+  {
+    "id": "si-wakayama-5042",
+    "name": "休暇村紀州加太",
+    "prefecture": "和歌山県",
+    "city": "和歌山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5042"
+  },
+  {
+    "id": "si-tottori-7260",
+    "name": "GOOD BLESS GARDEN",
+    "prefecture": "鳥取県",
+    "city": "米子市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7260"
+  },
+  {
+    "id": "si-tottori-9626",
+    "name": "Nature Sauna(大山隠岐国立公園内・一向平キャンプ場)",
+    "prefecture": "鳥取県",
+    "city": "東伯郡琴浦町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9626"
+  },
+  {
+    "id": "si-tottori-2119",
+    "name": "天然温泉 夕凪の湯 御宿 野乃境港",
+    "prefecture": "鳥取県",
+    "city": "境港市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2119"
+  },
+  {
+    "id": "si-tottori-11328",
+    "name": "ペンションあすか",
+    "prefecture": "鳥取県",
+    "city": "西伯郡伯耆町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11328"
+  },
+  {
+    "id": "si-tottori-2238",
+    "name": "おーゆ・ランド(おーゆ・ホテル)",
+    "prefecture": "鳥取県",
+    "city": "米子市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2238"
+  },
+  {
+    "id": "si-tottori-10915",
+    "name": "八東ふる里の森",
+    "prefecture": "鳥取県",
+    "city": "八頭郡八頭町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10915"
+  },
+  {
+    "id": "si-tottori-2228",
+    "name": "皆生温泉 汐の湯",
+    "prefecture": "鳥取県",
+    "city": "米子市皆生温泉",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2228"
+  },
+  {
+    "id": "si-tottori-27307",
+    "name": "FBI DAISEN",
+    "prefecture": "鳥取県",
+    "city": "西伯郡伯耆町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/27307"
+  },
+  {
+    "id": "si-tottori-7778",
+    "name": "なかやま温泉 ゆーゆー倶楽部naspal",
+    "prefecture": "鳥取県",
+    "city": "西伯郡大山町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7778"
+  },
+  {
+    "id": "si-tottori-11049",
+    "name": "一ノ湯",
+    "prefecture": "鳥取県",
+    "city": "鳥取市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11049"
+  },
+  {
+    "id": "si-tottori-80738",
+    "name": "鳴り石の浜ネイチャーサウナ",
+    "prefecture": "鳥取県",
+    "city": "東伯郡琴浦町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80738"
+  },
+  {
+    "id": "si-tottori-88952",
+    "name": "HOTEL星取テラスせきがね",
+    "prefecture": "鳥取県",
+    "city": "倉吉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88952"
+  },
+  {
+    "id": "si-tottori-78779",
+    "name": "大江戸温泉物語Premium斉木別館",
+    "prefecture": "鳥取県",
+    "city": "東伯郡三朝町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78779"
+  },
+  {
+    "id": "si-tottori-81409",
+    "name": "明石家",
+    "prefecture": "鳥取県",
+    "city": "岩美郡岩美町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81409"
+  },
+  {
+    "id": "si-tottori-81520",
+    "name": "リバートリップオートキャンプ場",
+    "prefecture": "鳥取県",
+    "city": "鳥取市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "外気なし",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81520"
+  },
+  {
+    "id": "si-tottori-82459",
+    "name": "FURAHA",
+    "prefecture": "鳥取県",
+    "city": "岩美郡岩美町",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82459"
+  },
+  {
+    "id": "si-tottori-2313",
+    "name": "岸本温泉ゆうあいパル(パルプラスオン)",
+    "prefecture": "鳥取県",
+    "city": "西伯郡伯耆町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2313"
+  },
+  {
+    "id": "si-tottori-4709",
+    "name": "鳥取グリーンホテルモーリス",
+    "prefecture": "鳥取県",
+    "city": "鳥取市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4709"
+  },
+  {
+    "id": "si-tottori-11852",
+    "name": "メルキュール鳥取大山リゾート&スパ",
+    "prefecture": "鳥取県",
+    "city": "西伯郡伯耆町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11852"
+  },
+  {
+    "id": "si-tottori-81696",
+    "name": "GRAN LAKE TOTTORI 【グランレイク鳥取】",
+    "prefecture": "鳥取県",
+    "city": "東伯郡湯梨浜町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81696"
+  },
+  {
+    "id": "si-shimane-11239",
+    "name": "四季荘",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11239"
+  },
+  {
+    "id": "si-shimane-12908",
+    "name": "サウナリゾートオリエンタル出雲(センチュリオンホテル&スパ クラシック出雲)",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12908"
+  },
+  {
+    "id": "si-shimane-82300",
+    "name": "suomi SAUNA ~宍道湖畔のサウナ~",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82300"
+  },
+  {
+    "id": "si-shimane-78250",
+    "name": "SAUNA BREEZE",
+    "prefecture": "島根県",
+    "city": "益田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78250"
+  },
+  {
+    "id": "si-shimane-32422",
+    "name": "Sauna park camp Morinosu",
+    "prefecture": "島根県",
+    "city": "飯石郡飯南町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/32422"
+  },
+  {
+    "id": "si-shimane-24337",
+    "name": "天然温泉 だんだんの湯 御宿 野乃松江",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/24337"
+  },
+  {
+    "id": "si-shimane-2341",
+    "name": "八雲の湯 ドーミーイン出雲",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2341"
+  },
+  {
+    "id": "si-shimane-73111",
+    "name": "ホテル一畑",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/73111"
+  },
+  {
+    "id": "si-shimane-2256",
+    "name": "いずも縁結び温泉ゆらり(割烹温泉ゆらり)",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2256"
+  },
+  {
+    "id": "si-shimane-6619",
+    "name": "MASCOS HOTEL",
+    "prefecture": "島根県",
+    "city": "益田市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6619"
+  },
+  {
+    "id": "si-shimane-93409",
+    "name": "天然温泉三刀屋の湯 ドーミーインEXPRESS出雲の國 雲南",
+    "prefecture": "島根県",
+    "city": "雲南市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/93409"
+  },
+  {
+    "id": "si-shimane-114440",
+    "name": "天然温泉 湯屋天神",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/114440"
+  },
+  {
+    "id": "si-shimane-51595",
+    "name": "一畑山コテージ「おてらサウナ禅」",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/51595"
+  },
+  {
+    "id": "si-shimane-79276",
+    "name": "FUMAI sauna",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79276"
+  },
+  {
+    "id": "si-shimane-47932",
+    "name": "瑞穂ハイランド",
+    "prefecture": "島根県",
+    "city": "邑智郡邑南町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/47932"
+  },
+  {
+    "id": "si-shimane-2300",
+    "name": "きまち温泉 大森の湯",
+    "prefecture": "島根県",
+    "city": "松江市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2300"
+  },
+  {
+    "id": "si-shimane-78522",
+    "name": "ゆとりろ津和野",
+    "prefecture": "島根県",
+    "city": "鹿足郡津和野町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78522"
+  },
+  {
+    "id": "si-shimane-6694",
+    "name": "しっとりつるつる北山温泉",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6694"
+  },
+  {
+    "id": "si-shimane-3355",
+    "name": "匹見峡温泉やすらぎの湯",
+    "prefecture": "島根県",
+    "city": "益田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3355"
+  },
+  {
+    "id": "si-shimane-9977",
+    "name": "見晴らしの丘公園キララコテージ ログハウス",
+    "prefecture": "島根県",
+    "city": "出雲市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9977"
+  },
+  {
+    "id": "si-okayama-16022",
+    "name": "浮サウナ(fuu sauna)",
+    "prefecture": "岡山県",
+    "city": "倉敷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/16022"
+  },
+  {
+    "id": "si-okayama-5992",
+    "name": "パブリックハウス アンド サウナ 久米屋",
+    "prefecture": "岡山県",
+    "city": "美作市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5992"
+  },
+  {
+    "id": "si-okayama-81919",
+    "name": "sauna kolme kylä (サウナ コルメ キュラ)",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81919"
+  },
+  {
+    "id": "si-okayama-43411",
+    "name": "牛窓TARI",
+    "prefecture": "岡山県",
+    "city": "瀬戸内市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/43411"
+  },
+  {
+    "id": "si-okayama-3402",
+    "name": "瀬戸大橋スパリゾート",
+    "prefecture": "岡山県",
+    "city": "倉敷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3402"
+  },
+  {
+    "id": "si-okayama-5611",
+    "name": "ホテルアベストグランデ岡山 なごみの湯",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5611"
+  },
+  {
+    "id": "si-okayama-65818",
+    "name": "SETONITE(セトニテ)",
+    "prefecture": "岡山県",
+    "city": "玉野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65818"
+  },
+  {
+    "id": "si-okayama-43147",
+    "name": "天然温泉 吉備の湯 ドーミーイン岡山",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/43147"
+  },
+  {
+    "id": "si-okayama-3270",
+    "name": "岡山みやび温泉 大家族の湯",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3270"
+  },
+  {
+    "id": "si-okayama-78759",
+    "name": "kobatoisa cafe&sauna",
+    "prefecture": "岡山県",
+    "city": "美作市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78759"
+  },
+  {
+    "id": "si-okayama-81579",
+    "name": "THE TANADA SAUNA",
+    "prefecture": "岡山県",
+    "city": "久米郡久米南町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81579"
+  },
+  {
+    "id": "si-okayama-2600",
+    "name": "極楽の里 えびす乃ゆ河辺店",
+    "prefecture": "岡山県",
+    "city": "津山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2600"
+  },
+  {
+    "id": "si-okayama-3305",
+    "name": "SPA & Wellness ぽかぽか",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3305"
+  },
+  {
+    "id": "si-okayama-68425",
+    "name": "旧原田邸",
+    "prefecture": "岡山県",
+    "city": "倉敷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/68425"
+  },
+  {
+    "id": "si-okayama-44104",
+    "name": "てんとうみ 渋川海岸グランピング",
+    "prefecture": "岡山県",
+    "city": "玉野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/44104"
+  },
+  {
+    "id": "si-okayama-81090",
+    "name": "KIKORU SAUNA",
+    "prefecture": "岡山県",
+    "city": "真庭市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81090"
+  },
+  {
+    "id": "si-okayama-81468",
+    "name": "あまみのとりこ プライベートサウナ",
+    "prefecture": "岡山県",
+    "city": "倉敷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81468"
+  },
+  {
+    "id": "si-okayama-80199",
+    "name": "RR Conditioning & SPA",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80199"
+  },
+  {
+    "id": "si-okayama-104606",
+    "name": "SAUNA402",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/104606"
+  },
+  {
+    "id": "si-okayama-12082",
+    "name": "ホテル グラン・ココエ倉敷",
+    "prefecture": "岡山県",
+    "city": "倉敷市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12082"
+  },
+  {
+    "id": "si-hiroshima-3461",
+    "name": "広島カプセルホテル&サウナ岩盤浴 ニュージャパンEX",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3461"
+  },
+  {
+    "id": "si-hiroshima-10780",
+    "name": "yubune",
+    "prefecture": "広島県",
+    "city": "尾道市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10780"
+  },
+  {
+    "id": "si-hiroshima-79789",
+    "name": "Hiki stargazing sauna",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79789"
+  },
+  {
+    "id": "si-hiroshima-41763",
+    "name": "MACHI:SAUNA HIROSHIMA",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/41763"
+  },
+  {
+    "id": "si-hiroshima-6019",
+    "name": "広島パシフィックホテル サウナ 亀の家",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6019"
+  },
+  {
+    "id": "si-hiroshima-7976",
+    "name": "リブマックスリゾート宮浜温泉 Ocean",
+    "prefecture": "広島県",
+    "city": "廿日市市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7976"
+  },
+  {
+    "id": "si-hiroshima-78678",
+    "name": "スパシーレ祇園",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78678"
+  },
+  {
+    "id": "si-hiroshima-12844",
+    "name": "サウナ海-sauna kai-",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12844"
+  },
+  {
+    "id": "si-hiroshima-3424",
+    "name": "天然温泉コロナの湯 福山店",
+    "prefecture": "広島県",
+    "city": "福山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3424"
+  },
+  {
+    "id": "si-hiroshima-3497",
+    "name": "アジアンリゾートスパ シーレ",
+    "prefecture": "広島県",
+    "city": "安芸郡坂町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3497"
+  },
+  {
+    "id": "si-hiroshima-79725",
+    "name": "山の中のバレルサウナ｢Tramonto｣",
+    "prefecture": "広島県",
+    "city": "福山市",
+    "trait": "wood",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "バレルサウナ"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79725"
+  },
+  {
+    "id": "si-hiroshima-9711",
+    "name": "SOLA SPA 呉 大和温泉",
+    "prefecture": "広島県",
+    "city": "呉市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9711"
+  },
+  {
+    "id": "si-hiroshima-81112",
+    "name": "ベネトレ広島店",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81112"
+  },
+  {
+    "id": "si-hiroshima-6178",
+    "name": "赤ビルの湯",
+    "prefecture": "広島県",
+    "city": "呉市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6178"
+  },
+  {
+    "id": "si-hiroshima-6042",
+    "name": "カンデオホテルズ広島八丁堀",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6042"
+  },
+  {
+    "id": "si-hiroshima-3485",
+    "name": "いなり湯",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3485"
+  },
+  {
+    "id": "si-hiroshima-12551",
+    "name": "天然温泉 芸州の湯 ドーミーイン広島ANNEX",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12551"
+  },
+  {
+    "id": "si-hiroshima-60769",
+    "name": "maki de sauna",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/60769"
+  },
+  {
+    "id": "si-hiroshima-8460",
+    "name": "銭湯 遊湯",
+    "prefecture": "広島県",
+    "city": "福山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8460"
+  },
+  {
+    "id": "si-hiroshima-3455",
+    "name": "五日市天然温泉ゆらゆら",
+    "prefecture": "広島県",
+    "city": "広島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3455"
+  },
+  {
+    "id": "si-yamaguchi-3578",
+    "name": "天宿の杜 桂月",
+    "prefecture": "山口県",
+    "city": "美祢市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3578"
+  },
+  {
+    "id": "si-yamaguchi-5765",
+    "name": "東大寺別院阿弥陀寺 石風呂",
+    "prefecture": "山口県",
+    "city": "防府市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5765"
+  },
+  {
+    "id": "si-yamaguchi-10363",
+    "name": "宇部サウナセンター",
+    "prefecture": "山口県",
+    "city": "宇部市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10363"
+  },
+  {
+    "id": "si-yamaguchi-62419",
+    "name": "しお活バレルサウナ",
+    "prefecture": "山口県",
+    "city": "光市",
+    "trait": "wood",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "バレルサウナ",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/62419"
+  },
+  {
+    "id": "si-yamaguchi-78333",
+    "name": "紅花舎 koukasha",
+    "prefecture": "山口県",
+    "city": "山口市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78333"
+  },
+  {
+    "id": "si-yamaguchi-3644",
+    "name": "フレスパランド カッタの湯",
+    "prefecture": "山口県",
+    "city": "宇部市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3644"
+  },
+  {
+    "id": "si-yamaguchi-3562",
+    "name": "西ノ市温泉 蛍の湯(ホタルサウナ)",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3562"
+  },
+  {
+    "id": "si-yamaguchi-3636",
+    "name": "天然温泉 和楽の湯 下関せいりゅう",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3636"
+  },
+  {
+    "id": "si-yamaguchi-12664",
+    "name": "VIEHÄTTÄVÄ ヴィエハッタヴァ",
+    "prefecture": "山口県",
+    "city": "山口市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12664"
+  },
+  {
+    "id": "si-yamaguchi-3627",
+    "name": "くだまつ健康パーク",
+    "prefecture": "山口県",
+    "city": "下松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3627"
+  },
+  {
+    "id": "si-yamaguchi-3617",
+    "name": "天然温泉みちしお",
+    "prefecture": "山口県",
+    "city": "山陽小野田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3617"
+  },
+  {
+    "id": "si-yamaguchi-86971",
+    "name": "SOIL Nagatoyumoto",
+    "prefecture": "山口県",
+    "city": "長門市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/86971"
+  },
+  {
+    "id": "si-yamaguchi-3508",
+    "name": "大谷山荘",
+    "prefecture": "山口県",
+    "city": "長門市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3508"
+  },
+  {
+    "id": "si-yamaguchi-80932",
+    "name": "しお活HARBOR",
+    "prefecture": "山口県",
+    "city": "熊毛郡平生町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80932"
+  },
+  {
+    "id": "si-yamaguchi-6356",
+    "name": "川棚グランドホテル お多福",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6356"
+  },
+  {
+    "id": "si-yamaguchi-3646",
+    "name": "関門の湯 ドーミーインPREMIUM下関",
+    "prefecture": "山口県",
+    "city": "下関市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3646"
+  },
+  {
+    "id": "si-yamaguchi-3612",
+    "name": "江泊温泉 和の湯(やわらぎのゆ)",
+    "prefecture": "山口県",
+    "city": "防府市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3612"
+  },
+  {
+    "id": "si-yamaguchi-3577",
+    "name": "おんせんの森 (旧 温泉の森)",
+    "prefecture": "山口県",
+    "city": "山口市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3577"
+  },
+  {
+    "id": "si-yamaguchi-81994",
+    "name": "湯野温泉 芳山園 芳和の湯",
+    "prefecture": "山口県",
+    "city": "周南市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81994"
+  },
+  {
+    "id": "si-yamaguchi-80900",
+    "name": "湯や 晴ル音",
+    "prefecture": "山口県",
+    "city": "周南市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80900"
+  },
+  {
+    "id": "si-tokushima-12013",
+    "name": "森のサウナ",
+    "prefecture": "徳島県",
+    "city": "名西郡神山町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12013"
+  },
+  {
+    "id": "si-tokushima-6663",
+    "name": "シモノロ・パーマネント(谷のサウナ)",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6663"
+  },
+  {
+    "id": "si-tokushima-61495",
+    "name": "NATURE HEALING KAMIYAMA",
+    "prefecture": "徳島県",
+    "city": "名西郡神山町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61495"
+  },
+  {
+    "id": "si-tokushima-3598",
+    "name": "徳島天然温泉 あらたえの湯",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3598"
+  },
+  {
+    "id": "si-tokushima-59152",
+    "name": "山ノサウナ 廃校を貸切で",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/59152"
+  },
+  {
+    "id": "si-tokushima-5294",
+    "name": "昭和湯",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5294"
+  },
+  {
+    "id": "si-tokushima-4721",
+    "name": "天然温泉 びざんの湯 (ホテルサンルート徳島)",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4721"
+  },
+  {
+    "id": "si-tokushima-62254",
+    "name": "Kuo Green Village",
+    "prefecture": "徳島県",
+    "city": "徳島県海部郡海陽町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/62254"
+  },
+  {
+    "id": "si-tokushima-4713",
+    "name": "ネクセル リラクゼーション&スパ",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4713"
+  },
+  {
+    "id": "si-tokushima-8750",
+    "name": "ブルーヴィラあなぶき",
+    "prefecture": "徳島県",
+    "city": "美馬市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8750"
+  },
+  {
+    "id": "si-tokushima-7343",
+    "name": "元町湯",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7343"
+  },
+  {
+    "id": "si-tokushima-8893",
+    "name": "神山温泉ホテル四季の里&いやしの湯",
+    "prefecture": "徳島県",
+    "city": "名西郡神山町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8893"
+  },
+  {
+    "id": "si-tokushima-3671",
+    "name": "祖谷渓温泉 ホテル秘境の湯",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3671"
+  },
+  {
+    "id": "si-tokushima-3638",
+    "name": "湯処あらたえ 小松島店",
+    "prefecture": "徳島県",
+    "city": "小松島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3638"
+  },
+  {
+    "id": "si-tokushima-9871",
+    "name": "グランドエクシブ鳴門",
+    "prefecture": "徳島県",
+    "city": "鳴門市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9871"
+  },
+  {
+    "id": "si-tokushima-3657",
+    "name": "湯あそびひろば 大和の郷",
+    "prefecture": "徳島県",
+    "city": "阿南市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3657"
+  },
+  {
+    "id": "si-tokushima-79565",
+    "name": "リゾートホテル モアナコースト",
+    "prefecture": "徳島県",
+    "city": "鳴門市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79565"
+  },
+  {
+    "id": "si-tokushima-8912",
+    "name": "湯あそびひろば 川内温泉",
+    "prefecture": "徳島県",
+    "city": "徳島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8912"
+  },
+  {
+    "id": "si-tokushima-10218",
+    "name": "新祖谷温泉 ホテルかずら橋",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10218"
+  },
+  {
+    "id": "si-tokushima-90073",
+    "name": "峡谷の湯宿 大歩危峡まんなか",
+    "prefecture": "徳島県",
+    "city": "三好市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/90073"
+  },
+  {
+    "id": "si-kagawa-3541",
+    "name": "塚原から風呂(からふろ)",
+    "prefecture": "香川県",
+    "city": "さぬき市",
+    "trait": "custom",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3541"
+  },
+  {
+    "id": "si-kagawa-9627",
+    "name": "sanamane",
+    "prefecture": "香川県",
+    "city": "香川郡直島町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9627"
+  },
+  {
+    "id": "si-kagawa-9175",
+    "name": "高松ぽかぽか温泉",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9175"
+  },
+  {
+    "id": "si-kagawa-81076",
+    "name": "タスサウナ",
+    "prefecture": "香川県",
+    "city": "観音寺市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81076"
+  },
+  {
+    "id": "si-kagawa-12715",
+    "name": "URASHIMA VILLAGE (ウラシマビレッジ)",
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12715"
+  },
+  {
+    "id": "si-kagawa-80524",
+    "name": "クラフトホテル瀬戸内",
+    "prefecture": "香川県",
+    "city": "東かがわ市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80524"
+  },
+  {
+    "id": "si-kagawa-12610",
+    "name": "積凪KITAKEN棟 -泊Rutto",
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12610"
+  },
+  {
+    "id": "si-kagawa-3546",
+    "name": "天然温泉 香南楽湯",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3546"
+  },
+  {
+    "id": "si-kagawa-3509",
+    "name": "癒しの里 さらい 湯の華",
+    "prefecture": "香川県",
+    "city": "坂出市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3509"
+  },
+  {
+    "id": "si-kagawa-6530",
+    "name": "共楽湯",
+    "prefecture": "香川県",
+    "city": "観音寺市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6530"
+  },
+  {
+    "id": "si-kagawa-3495",
+    "name": "さぬきの湯 ドーミーイン高松",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3495"
+  },
+  {
+    "id": "si-kagawa-5011",
+    "name": "由良里の湯",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5011"
+  },
+  {
+    "id": "si-kagawa-8154",
+    "name": "吉野湯",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8154"
+  },
+  {
+    "id": "si-kagawa-13678",
+    "name": "RVパーク kumonパーク",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13678"
+  },
+  {
+    "id": "si-kagawa-21202",
+    "name": "積凪MOKURASU棟 -泊Rutto",
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/21202"
+  },
+  {
+    "id": "si-kagawa-7300",
+    "name": "クア温泉屋島",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7300"
+  },
+  {
+    "id": "si-kagawa-11843",
+    "name": "仏生山温泉",
+    "prefecture": "香川県",
+    "city": "高松市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11843"
+  },
+  {
+    "id": "si-kagawa-55687",
+    "name": "父母ヶ浜絶景浴サウナ",
+    "prefecture": "香川県",
+    "city": "三豊市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/55687"
+  },
+  {
+    "id": "si-kagawa-3405",
+    "name": "島湯 Bath house",
+    "prefecture": "香川県",
+    "city": "小豆郡土庄町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3405"
+  },
+  {
+    "id": "si-kagawa-3414",
+    "name": "オリーブ温泉満天の湯",
+    "prefecture": "香川県",
+    "city": "小豆郡土庄町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3414"
+  },
+  {
+    "id": "si-ehime-3607",
+    "name": "ナニワサウナ",
+    "prefecture": "愛媛県",
+    "city": "今治市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3607"
+  },
+  {
+    "id": "si-ehime-80886",
+    "name": "SAUNA ALKU",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80886"
+  },
+  {
+    "id": "si-ehime-3721",
+    "name": "見奈良天然温泉 利楽",
+    "prefecture": "愛媛県",
+    "city": "東温市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3721"
+  },
+  {
+    "id": "si-ehime-4781",
+    "name": "東道後温泉 久米之癒",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4781"
+  },
+  {
+    "id": "si-ehime-4438",
+    "name": "天然温泉 石手の湯 ドーミーイン松山",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4438"
+  },
+  {
+    "id": "si-ehime-3637",
+    "name": "シーパの湯",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3637"
+  },
+  {
+    "id": "si-ehime-3707",
+    "name": "道後さや天然温泉ゆらら",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3707"
+  },
+  {
+    "id": "si-ehime-3662",
+    "name": "別子温泉〜天空の湯〜",
+    "prefecture": "愛媛県",
+    "city": "新居浜市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3662"
+  },
+  {
+    "id": "si-ehime-38065",
+    "name": "sauna.494(近藤家別邸花澄)",
+    "prefecture": "愛媛県",
+    "city": "東温市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/38065"
+  },
+  {
+    "id": "si-ehime-8443",
+    "name": "カンデオホテルズ松山大街道",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8443"
+  },
+  {
+    "id": "si-ehime-3717",
+    "name": "星乃岡温泉千湯館",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3717"
+  },
+  {
+    "id": "si-ehime-3709",
+    "name": "新開温泉",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3709"
+  },
+  {
+    "id": "si-ehime-12684",
+    "name": "レフ松山市駅 by ベッセルホテルズ",
+    "prefecture": "愛媛県",
+    "city": "松山市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12684"
+  },
+  {
+    "id": "si-ehime-107807",
+    "name": "宇和サウナ(宇和パークホテル)",
+    "prefecture": "愛媛県",
+    "city": "西予市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/107807"
+  },
+  {
+    "id": "si-ehime-3720",
+    "name": "東温市ふるさと交流館さくらの湯",
+    "prefecture": "愛媛県",
+    "city": "東温市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3720"
+  },
+  {
+    "id": "si-ehime-5989",
+    "name": "大正湯",
+    "prefecture": "愛媛県",
+    "city": "八幡浜市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5989"
+  },
+  {
+    "id": "si-ehime-3536",
+    "name": "インランド・シー・リゾート フェスパ",
+    "prefecture": "愛媛県",
+    "city": "越智郡上島町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3536"
+  },
+  {
+    "id": "si-ehime-3820",
+    "name": "伊方町健康交流施設 亀ヶ池温泉",
+    "prefecture": "愛媛県",
+    "city": "西宇和郡伊方町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3820"
+  },
+  {
+    "id": "si-ehime-3649",
+    "name": "西条天然温泉 ひうちの湯",
+    "prefecture": "愛媛県",
+    "city": "西条市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3649"
+  },
+  {
+    "id": "si-ehime-3821",
+    "name": "八幡浜黒湯温泉 みなと湯",
+    "prefecture": "愛媛県",
+    "city": "八幡浜市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3821"
+  },
+  {
+    "id": "si-kochi-8247",
+    "name": "SAUNA グリンピア",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8247"
+  },
+  {
+    "id": "si-kochi-23347",
+    "name": "土佐望月温泉 姫若子の湯",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/23347"
+  },
+  {
+    "id": "si-kochi-80716",
+    "name": "EN+",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80716"
+  },
+  {
+    "id": "si-kochi-58063",
+    "name": "本川サウナ ニジュマル",
+    "prefecture": "高知県",
+    "city": "吾川郡いの町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/58063"
+  },
+  {
+    "id": "si-kochi-3785",
+    "name": "高砂湯",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3785"
+  },
+  {
+    "id": "si-kochi-3724",
+    "name": "木の香温泉",
+    "prefecture": "高知県",
+    "city": "吾川郡いの町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3724"
+  },
+  {
+    "id": "si-kochi-79383",
+    "name": "プライベートサウナ fu-ga",
+    "prefecture": "高知県",
+    "city": "吾川郡仁淀川町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79383"
+  },
+  {
+    "id": "si-kochi-3795",
+    "name": "OMO7高知 by 星野リゾート",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3795"
+  },
+  {
+    "id": "si-kochi-11676",
+    "name": "Niyodo Adventure",
+    "prefecture": "高知県",
+    "city": "吾川郡仁淀川町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11676"
+  },
+  {
+    "id": "si-kochi-5740",
+    "name": "雲の上の温泉",
+    "prefecture": "高知県",
+    "city": "高岡郡梼原町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5740"
+  },
+  {
+    "id": "si-kochi-3891",
+    "name": "シレストむろと",
+    "prefecture": "高知県",
+    "city": "室戸市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3891"
+  },
+  {
+    "id": "si-kochi-3793",
+    "name": "黒潮温泉 龍馬の湯(高知黒潮ホテル)",
+    "prefecture": "高知県",
+    "city": "香南市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3793"
+  },
+  {
+    "id": "si-kochi-80058",
+    "name": "NAMI TERRACE GEISEI",
+    "prefecture": "高知県",
+    "city": "安芸郡芸西村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80058"
+  },
+  {
+    "id": "si-kochi-8903",
+    "name": "土佐和紙工芸村QRAUD(くらうど)",
+    "prefecture": "高知県",
+    "city": "吾川郡いの町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8903"
+  },
+  {
+    "id": "si-kochi-86544",
+    "name": "ROSH(ロシュ)",
+    "prefecture": "高知県",
+    "city": "南国市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/86544"
+  },
+  {
+    "id": "si-kochi-3995",
+    "name": "四万十いやしの里",
+    "prefecture": "高知県",
+    "city": "四万十市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3995"
+  },
+  {
+    "id": "si-kochi-83541",
+    "name": "大月アウトドアフィールドKASHINISHI",
+    "prefecture": "高知県",
+    "city": "幡多郡大月町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/83541"
+  },
+  {
+    "id": "si-kochi-5150",
+    "name": "中津渓谷 ゆの森",
+    "prefecture": "高知県",
+    "city": "吾川郡仁淀川町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5150"
+  },
+  {
+    "id": "si-kochi-6916",
+    "name": "ツーリストイン高知",
+    "prefecture": "高知県",
+    "city": "高知市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6916"
+  },
+  {
+    "id": "si-kochi-18793",
+    "name": "アシズリテルメ",
+    "prefecture": "高知県",
+    "city": "土佐清水市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/18793"
+  },
+  {
+    "id": "si-fukuoka-3681",
+    "name": "イズバ/IZBA",
+    "prefecture": "福岡県",
+    "city": "宗像市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3681"
+  },
+  {
+    "id": "si-fukuoka-80161",
+    "name": "SHIAGARU SAUNA 福岡 天神",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80161"
+  },
+  {
+    "id": "si-fukuoka-9171",
+    "name": "ウェルビー福岡(女性専用エリア) ※旧SaunaLab Fukuoka",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9171"
+  },
+  {
+    "id": "si-fukuoka-3874",
+    "name": "源泉掛け流し温泉久留米 游心の湯",
+    "prefecture": "福岡県",
+    "city": "久留米市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3874"
+  },
+  {
+    "id": "si-fukuoka-7272",
+    "name": "ヒナタの杜 小戸の湯どころ",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7272"
+  },
+  {
+    "id": "si-fukuoka-78824",
+    "name": "SAUNA OOO FUKUOKA (サウナ オー フクオカ)",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78824"
+  },
+  {
+    "id": "si-fukuoka-3777",
+    "name": "伊都の湯どころ",
+    "prefecture": "福岡県",
+    "city": "糸島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3777"
+  },
+  {
+    "id": "si-fukuoka-81567",
+    "name": "THE VANISH",
+    "prefecture": "福岡県",
+    "city": "糟屋郡久山町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81567"
+  },
+  {
+    "id": "si-fukuoka-5848",
+    "name": "新宮温泉 ふくの湯",
+    "prefecture": "福岡県",
+    "city": "糟屋郡新宮町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5848"
+  },
+  {
+    "id": "si-fukuoka-10698",
+    "name": "小倉サウナ TOTONOI (ととのい)",
+    "prefecture": "福岡県",
+    "city": "北九州市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10698"
+  },
+  {
+    "id": "si-fukuoka-5490",
+    "name": "筑紫の湯",
+    "prefecture": "福岡県",
+    "city": "筑紫野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5490"
+  },
+  {
+    "id": "si-fukuoka-3749",
+    "name": "照葉スパリゾート",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3749"
+  },
+  {
+    "id": "si-fukuoka-3666",
+    "name": "天然温泉コロナの湯 小倉店",
+    "prefecture": "福岡県",
+    "city": "北九州市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3666"
+  },
+  {
+    "id": "si-fukuoka-79308",
+    "name": "for sauner",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79308"
+  },
+  {
+    "id": "si-fukuoka-79903",
+    "name": "脈 -MYAKU PRIVATE SAUNA-",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79903"
+  },
+  {
+    "id": "si-fukuoka-3778",
+    "name": "博多天然温泉 八百治の湯(八百治博多ホテル)",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3778"
+  },
+  {
+    "id": "si-fukuoka-3776",
+    "name": "畑冷泉館",
+    "prefecture": "福岡県",
+    "city": "豊前市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3776"
+  },
+  {
+    "id": "si-fukuoka-10007",
+    "name": "HIDEAWAY sunset camp",
+    "prefecture": "福岡県",
+    "city": "糸島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10007"
+  },
+  {
+    "id": "si-fukuoka-3723",
+    "name": "宗像王丸・天然温泉 やまつばさ",
+    "prefecture": "福岡県",
+    "city": "宗像市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3723"
+  },
+  {
+    "id": "si-fukuoka-6300",
+    "name": "カンデオホテルズ福岡天神",
+    "prefecture": "福岡県",
+    "city": "福岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6300"
+  },
+  {
+    "id": "si-saga-24106",
+    "name": "佐賀の湯処 KOMOREBI",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/24106"
+  },
+  {
+    "id": "si-saga-7566",
+    "name": "有明海の湯(蟹御殿)",
+    "prefecture": "佐賀県",
+    "city": "藤津郡太良町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7566"
+  },
+  {
+    "id": "si-saga-80159",
+    "name": "OND HOTEL",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80159"
+  },
+  {
+    "id": "si-saga-81912",
+    "name": "OND SAUNA",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81912"
+  },
+  {
+    "id": "si-saga-104474",
+    "name": "JIN6サウナ",
+    "prefecture": "佐賀県",
+    "city": "唐津市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/104474"
+  },
+  {
+    "id": "si-saga-78405",
+    "name": "みはらしの宿 杉乃家",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78405"
+  },
+  {
+    "id": "si-saga-61462",
+    "name": "武雄温泉 泉都乃湯(セントラルホテル伊万里)",
+    "prefecture": "佐賀県",
+    "city": "伊万里市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61462"
+  },
+  {
+    "id": "si-saga-3837",
+    "name": "SHIORI (古湯温泉 ONCRI)",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3837"
+  },
+  {
+    "id": "si-saga-80164",
+    "name": "アウトドアサウナ「在りのまま」",
+    "prefecture": "佐賀県",
+    "city": "小城市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80164"
+  },
+  {
+    "id": "si-saga-3929",
+    "name": "うらり武雄 Garden Terrace Spa Reasorts",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3929"
+  },
+  {
+    "id": "si-saga-3830",
+    "name": "三瀬温泉 やまびこの湯",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3830"
+  },
+  {
+    "id": "si-saga-4418",
+    "name": "武雄温泉 鷺乃湯",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4418"
+  },
+  {
+    "id": "si-saga-75916",
+    "name": "嬉野アウトドアフィールド",
+    "prefecture": "佐賀県",
+    "city": "嬉野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/75916"
+  },
+  {
+    "id": "si-saga-79686",
+    "name": "個室サウナSET UP",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79686"
+  },
+  {
+    "id": "si-saga-3953",
+    "name": "和多屋別荘「湯殿 心晶」",
+    "prefecture": "佐賀県",
+    "city": "嬉野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3953"
+  },
+  {
+    "id": "si-saga-82448",
+    "name": "漢専用サウナTUNING",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82448"
+  },
+  {
+    "id": "si-saga-84765",
+    "name": "カガミノサウナ(奥武雄温泉 風の森)",
+    "prefecture": "佐賀県",
+    "city": "武雄市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/84765"
+  },
+  {
+    "id": "si-saga-78282",
+    "name": "ガーデンテラス佐賀ホテル&リゾート",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78282"
+  },
+  {
+    "id": "si-saga-79201",
+    "name": "河畔サウナ(個室サウナ 和多屋別荘内)",
+    "prefecture": "佐賀県",
+    "city": "嬉野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79201"
+  },
+  {
+    "id": "si-saga-80213",
+    "name": "洋々庵",
+    "prefecture": "佐賀県",
+    "city": "佐賀市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80213"
+  },
+  {
+    "id": "si-nagasaki-3941",
+    "name": "カプセルホテルサウナサン",
+    "prefecture": "長崎県",
+    "city": "佐世保市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3941"
+  },
+  {
+    "id": "si-nagasaki-4045",
+    "name": "島原温泉 ホテル南風楼",
+    "prefecture": "長崎県",
+    "city": "島原市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4045"
+  },
+  {
+    "id": "si-nagasaki-4048",
+    "name": "御湯神指しベストパワーランド",
+    "prefecture": "長崎県",
+    "city": "諫早市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4048"
+  },
+  {
+    "id": "si-nagasaki-82202",
+    "name": "ONSEN&SAUNA YUKULU",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82202"
+  },
+  {
+    "id": "si-nagasaki-4054",
+    "name": "MINATO SAUNA",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4054"
+  },
+  {
+    "id": "si-nagasaki-13847",
+    "name": "ISARIBI SAUNA(LAMP壱岐)",
+    "prefecture": "長崎県",
+    "city": "壱岐市勝本町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13847"
+  },
+  {
+    "id": "si-nagasaki-12181",
+    "name": "西果てサウナ (RE SORT)",
+    "prefecture": "長崎県",
+    "city": "佐世保市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12181"
+  },
+  {
+    "id": "si-nagasaki-12613",
+    "name": "アクティビティプラネット雲仙 (レストハウス 森のしらべ)",
+    "prefecture": "長崎県",
+    "city": "雲仙市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12613"
+  },
+  {
+    "id": "si-nagasaki-43444",
+    "name": "薬湯&サウナ ofuroba",
+    "prefecture": "長崎県",
+    "city": "北松浦郡小値賀町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/43444"
+  },
+  {
+    "id": "si-nagasaki-3957",
+    "name": "ハウステンボス温泉",
+    "prefecture": "長崎県",
+    "city": "佐世保市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3957"
+  },
+  {
+    "id": "si-nagasaki-4005",
+    "name": "天然温泉 ゆの華 サンスパおおむら店",
+    "prefecture": "長崎県",
+    "city": "大村市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4005"
+  },
+  {
+    "id": "si-nagasaki-80978",
+    "name": "長崎サウナかめやま",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80978"
+  },
+  {
+    "id": "si-nagasaki-8888",
+    "name": "カンデオホテルズ 長崎新地中華街",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8888"
+  },
+  {
+    "id": "si-nagasaki-25426",
+    "name": "ペットリゾート ブレインズ長崎(宿泊者専用)",
+    "prefecture": "長崎県",
+    "city": "松浦市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/25426"
+  },
+  {
+    "id": "si-nagasaki-10396",
+    "name": "天然温泉 鶴港の湯 ドーミーインPREMIUM長崎駅前",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10396"
+  },
+  {
+    "id": "si-nagasaki-81098",
+    "name": "HARIOBEACHWALK",
+    "prefecture": "長崎県",
+    "city": "佐世保市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81098"
+  },
+  {
+    "id": "si-nagasaki-4071",
+    "name": "長崎温泉 Ark Land Spa (旧:島風の湯)",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4071"
+  },
+  {
+    "id": "si-nagasaki-4056",
+    "name": "出島の湯 ドーミーイン長崎新地中華街",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4056"
+  },
+  {
+    "id": "si-nagasaki-80911",
+    "name": "UKUSAUNA",
+    "prefecture": "長崎県",
+    "city": "佐世保市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80911"
+  },
+  {
+    "id": "si-nagasaki-7186",
+    "name": "天然温泉 YUYU SPA (i+Land nagasaki)",
+    "prefecture": "長崎県",
+    "city": "長崎市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7186"
+  },
+  {
+    "id": "si-kumamoto-4044",
+    "name": "サウナと天然温泉 湯らっくす",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4044"
+  },
+  {
+    "id": "si-kumamoto-4020",
+    "name": "温泉カフェ あがんなっせ(旧 菊南温泉スパリゾート あがんなっせ)",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4020"
+  },
+  {
+    "id": "si-kumamoto-14173",
+    "name": "トトノウバイ",
+    "prefecture": "熊本県",
+    "city": "菊池市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/14173"
+  },
+  {
+    "id": "si-kumamoto-78344",
+    "name": "湯屋 水禅 Luxury Sauna & Spa(松屋別館)",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78344"
+  },
+  {
+    "id": "si-kumamoto-61594",
+    "name": "Mifune Terrace",
+    "prefecture": "熊本県",
+    "city": "上益城郡御船町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61594"
+  },
+  {
+    "id": "si-kumamoto-5182",
+    "name": "田迎サウナ",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5182"
+  },
+  {
+    "id": "si-kumamoto-36877",
+    "name": "カンデオホテルズ熊本新市街",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/36877"
+  },
+  {
+    "id": "si-kumamoto-4061",
+    "name": "嘉島湯元水春",
+    "prefecture": "熊本県",
+    "city": "上益城郡嘉島町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4061"
+  },
+  {
+    "id": "si-kumamoto-10968",
+    "name": "光アイランド",
+    "prefecture": "熊本県",
+    "city": "上天草市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10968"
+  },
+  {
+    "id": "si-kumamoto-30079",
+    "name": "那古井館別邸 玉響(たまゆら)",
+    "prefecture": "熊本県",
+    "city": "玉名市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/30079"
+  },
+  {
+    "id": "si-kumamoto-88756",
+    "name": "熊本城サウナ城の湯",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88756"
+  },
+  {
+    "id": "si-kumamoto-54532",
+    "name": "森のサウナ in吉原ごんべえ村",
+    "prefecture": "熊本県",
+    "city": "阿蘇郡南小国町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/54532"
+  },
+  {
+    "id": "si-kumamoto-3997",
+    "name": "玉名温泉 つかさの湯",
+    "prefecture": "熊本県",
+    "city": "玉名市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3997"
+  },
+  {
+    "id": "si-kumamoto-78751",
+    "name": "カミノウラ307",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78751"
+  },
+  {
+    "id": "si-kumamoto-18102",
+    "name": "Hygge (ヒュッゲ)",
+    "prefecture": "熊本県",
+    "city": "上天草市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/18102"
+  },
+  {
+    "id": "si-kumamoto-4034",
+    "name": "坪井温泉 大福湯",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4034"
+  },
+  {
+    "id": "si-kumamoto-79653",
+    "name": "somari PRIVATE SAUNA&STONE SPA",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79653"
+  },
+  {
+    "id": "si-kumamoto-4046",
+    "name": "ばってんの湯",
+    "prefecture": "熊本県",
+    "city": "熊本市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4046"
+  },
+  {
+    "id": "si-kumamoto-11921",
+    "name": "親和苑",
+    "prefecture": "熊本県",
+    "city": "阿蘇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11921"
+  },
+  {
+    "id": "si-kumamoto-52618",
+    "name": "MIKI TAO SAUNA(ミキタオサウナ)",
+    "prefecture": "熊本県",
+    "city": "阿蘇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/52618"
+  },
+  {
+    "id": "si-oita-10962",
+    "name": "稲積水中鍾乳洞",
+    "prefecture": "大分県",
+    "city": "豊後大野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10962"
+  },
+  {
+    "id": "si-oita-4426",
+    "name": "寒の地獄旅館",
+    "prefecture": "大分県",
+    "city": "玖珠郡九重町",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4426"
+  },
+  {
+    "id": "si-oita-9118",
+    "name": "REBUILD SAUNA (LAMP豊後大野)",
+    "prefecture": "大分県",
+    "city": "豊後大野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9118"
+  },
+  {
+    "id": "si-oita-3875",
+    "name": "杉乃井ホテル",
+    "prefecture": "大分県",
+    "city": "別府市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3875"
+  },
+  {
+    "id": "si-oita-3866",
+    "name": "別府鉄輪温泉やまなみの湯",
+    "prefecture": "大分県",
+    "city": "別府市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3866"
+  },
+  {
+    "id": "si-oita-78724",
+    "name": "Ryokan & Sauna Yorozuya Hita",
+    "prefecture": "大分県",
+    "city": "日田市",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78724"
+  },
+  {
+    "id": "si-oita-10236",
+    "name": "ロッジきよかわ - JOKI SAUNA -",
+    "prefecture": "大分県",
+    "city": "豊後大野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10236"
+  },
+  {
+    "id": "si-oita-35821",
+    "name": "SAUNA 竹〜take〜",
+    "prefecture": "大分県",
+    "city": "大分市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/35821"
+  },
+  {
+    "id": "si-oita-69481",
+    "name": "ROOFTOP SAUNA 空園",
+    "prefecture": "大分県",
+    "city": "大分市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/69481"
+  },
+  {
+    "id": "si-oita-78513",
+    "name": "Garden Sauna Rusk",
+    "prefecture": "大分県",
+    "city": "大分市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78513"
+  },
+  {
+    "id": "si-oita-78923",
+    "name": "AMANE RESORT SEIKAI",
+    "prefecture": "大分県",
+    "city": "別府市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78923"
+  },
+  {
+    "id": "si-oita-8036",
+    "name": "カフェ パラム",
+    "prefecture": "大分県",
+    "city": "豊後大野市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8036"
+  },
+  {
+    "id": "si-oita-3902",
+    "name": "まるた屋温泉 西方の湯",
+    "prefecture": "大分県",
+    "city": "大分市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3902"
+  },
+  {
+    "id": "si-oita-87367",
+    "name": "SAUNA MEGURIYU(HOTEL MEGURI内)",
+    "prefecture": "大分県",
+    "city": "宇佐市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87367"
+  },
+  {
+    "id": "si-oita-3963",
+    "name": "湯処 ゆの花 (長湯温泉 かじか庵)",
+    "prefecture": "大分県",
+    "city": "竹田市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3963"
+  },
+  {
+    "id": "si-oita-80820",
+    "name": "ロジウラサウナ(BEPPU ROJIURA STAY & SAUNA)",
+    "prefecture": "大分県",
+    "city": "別府市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80820"
+  },
+  {
+    "id": "si-oita-65950",
+    "name": "ととのいの宿 春燈庵",
+    "prefecture": "大分県",
+    "city": "別府市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65950"
+  },
+  {
+    "id": "si-oita-80667",
+    "name": "湯布院プライベートサウナ&温泉NOGIKU (湯布院旅館のぎく内)",
+    "prefecture": "大分県",
+    "city": "由布市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "宿泊可",
+      "温泉付き",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80667"
+  },
+  {
+    "id": "si-oita-94035",
+    "name": "大分サウナ",
+    "prefecture": "大分県",
+    "city": "大分市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/94035"
+  },
+  {
+    "id": "si-oita-3809",
+    "name": "八面山金色温泉",
+    "prefecture": "大分県",
+    "city": "中津市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3809"
+  },
+  {
+    "id": "si-miyazaki-4154",
+    "name": "サウナMIYAZAKI (宮崎第一ホテル)",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4154"
+  },
+  {
+    "id": "si-miyazaki-4145",
+    "name": "白鳥温泉上湯",
+    "prefecture": "宮崎県",
+    "city": "えびの市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4145"
+  },
+  {
+    "id": "si-miyazaki-4147",
+    "name": "こばやし温泉 美人の湯",
+    "prefecture": "宮崎県",
+    "city": "小林市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4147"
+  },
+  {
+    "id": "si-miyazaki-4167",
+    "name": "極楽温泉 匠の宿",
+    "prefecture": "宮崎県",
+    "city": "西諸郡高原町",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4167"
+  },
+  {
+    "id": "si-miyazaki-79856",
+    "name": "風サウナ",
+    "prefecture": "宮崎県",
+    "city": "延岡市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79856"
+  },
+  {
+    "id": "si-miyazaki-4211",
+    "name": "幸福温泉HappyYou",
+    "prefecture": "宮崎県",
+    "city": "都城市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4211"
+  },
+  {
+    "id": "si-miyazaki-69349",
+    "name": "kodomonokuni SAUNA PARK",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/69349"
+  },
+  {
+    "id": "si-miyazaki-80196",
+    "name": "The earth sauna",
+    "prefecture": "宮崎県",
+    "city": "都城市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80196"
+  },
+  {
+    "id": "si-miyazaki-6041",
+    "name": "源泉掛け流し温泉 妻湯",
+    "prefecture": "宮崎県",
+    "city": "西都市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6041"
+  },
+  {
+    "id": "si-miyazaki-4149",
+    "name": "シェラトン・グランデ・オーシャンリゾート 松泉宮",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4149"
+  },
+  {
+    "id": "si-miyazaki-4177",
+    "name": "青井岳温泉",
+    "prefecture": "宮崎県",
+    "city": "都城市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4177"
+  },
+  {
+    "id": "si-miyazaki-79489",
+    "name": "茶臼原ひみつのサウナ",
+    "prefecture": "宮崎県",
+    "city": "西都市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79489"
+  },
+  {
+    "id": "si-miyazaki-19388",
+    "name": "MISATO DE SAUNA joki",
+    "prefecture": "宮崎県",
+    "city": "東臼杵郡美郷��",
+    "trait": "urban",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/19388"
+  },
+  {
+    "id": "si-miyazaki-4159",
+    "name": "日向の湯 ドーミーイン宮崎",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4159"
+  },
+  {
+    "id": "si-miyazaki-80508",
+    "name": "SAUNA PARKING AEON MALL MIYAZAKI",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80508"
+  },
+  {
+    "id": "si-miyazaki-4185",
+    "name": "極上の湯 山田温泉(山田町温泉交流センター)",
+    "prefecture": "宮崎県",
+    "city": "都城市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4185"
+  },
+  {
+    "id": "si-miyazaki-78381",
+    "name": "AOSHIMA BEACH VILLAGE",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78381"
+  },
+  {
+    "id": "si-miyazaki-6719",
+    "name": "神話の湯(青島フィッシャーマンズ・ビーチサイドホステル&スパ)",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6719"
+  },
+  {
+    "id": "si-miyazaki-4917",
+    "name": "たまゆらの湯 (宮崎観光ホテル)",
+    "prefecture": "宮崎県",
+    "city": "宮崎市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4917"
+  },
+  {
+    "id": "si-miyazaki-4186",
+    "name": "かかしの里 ゆぽっぽ",
+    "prefecture": "宮崎県",
+    "city": "都城市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4186"
+  },
+  {
+    "id": "si-kagoshima-4371",
+    "name": "ニューニシノサウナ&天然温泉",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4371"
+  },
+  {
+    "id": "si-kagoshima-4134",
+    "name": "天然温泉ぬくもりの湯",
+    "prefecture": "鹿児島県",
+    "city": "出水市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4134"
+  },
+  {
+    "id": "si-kagoshima-11440",
+    "name": "Sankara Hotel & Spa 屋久島",
+    "prefecture": "鹿児島県",
+    "city": "熊毛郡屋久島町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11440"
+  },
+  {
+    "id": "si-kagoshima-4234",
+    "name": "薬師温泉",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4234"
+  },
+  {
+    "id": "si-kagoshima-78259",
+    "name": "プライベートサウナ moimoiモイモイ",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78259"
+  },
+  {
+    "id": "si-kagoshima-8770",
+    "name": "鹿児島温泉 時之栖(ときのすみか)",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8770"
+  },
+  {
+    "id": "si-kagoshima-78103",
+    "name": "sumu sauna",
+    "prefecture": "鹿児島県",
+    "city": "霧島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78103"
+  },
+  {
+    "id": "si-kagoshima-81268",
+    "name": "繋がるサウナ THE BARREL",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81268"
+  },
+  {
+    "id": "si-kagoshima-4195",
+    "name": "日当山温泉 花の湯",
+    "prefecture": "鹿児島県",
+    "city": "霧島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4195"
+  },
+  {
+    "id": "si-kagoshima-4237",
+    "name": "天然温泉 霧桜の湯 ドーミーイン鹿児島",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4237"
+  },
+  {
+    "id": "si-kagoshima-4202",
+    "name": "冠岳温泉",
+    "prefecture": "鹿児島県",
+    "city": "いちき串木野市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4202"
+  },
+  {
+    "id": "si-kagoshima-79622",
+    "name": "プライベートサウナ&スパ BAYBERRY(ベイベリー)",
+    "prefecture": "鹿児島県",
+    "city": "出水市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79622"
+  },
+  {
+    "id": "si-kagoshima-5128",
+    "name": "ゆかいだ温泉 つれづれの湯",
+    "prefecture": "鹿児島県",
+    "city": "日置市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5128"
+  },
+  {
+    "id": "si-kagoshima-4166",
+    "name": "硫黄谷温泉 霧島ホテル",
+    "prefecture": "鹿児島県",
+    "city": "霧島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4166"
+  },
+  {
+    "id": "si-kagoshima-4281",
+    "name": "砂むし会館砂楽",
+    "prefecture": "鹿児島県",
+    "city": "指宿市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4281"
+  },
+  {
+    "id": "si-kagoshima-4705",
+    "name": "城山ホテル鹿児島 さつま乃湯",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4705"
+  },
+  {
+    "id": "si-kagoshima-4180",
+    "name": "境田温泉",
+    "prefecture": "鹿児島県",
+    "city": "霧島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4180"
+  },
+  {
+    "id": "si-kagoshima-78960",
+    "name": "翠嵐 貸切温泉サウナ郷",
+    "prefecture": "鹿児島県",
+    "city": "薩摩川内市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78960"
+  },
+  {
+    "id": "si-kagoshima-8078",
+    "name": "湯どころ あったろう",
+    "prefecture": "鹿児島県",
+    "city": "日置市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8078"
+  },
+  {
+    "id": "si-kagoshima-4235",
+    "name": "桜島マグマ温泉 国民宿舎 レインボー桜島",
+    "prefecture": "鹿児島県",
+    "city": "鹿児島市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4235"
+  },
+  {
+    "id": "si-okinawa-69910",
+    "name": "亜熱帯サウナ",
+    "prefecture": "沖縄県",
+    "city": "国頭郡本部町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/69910"
+  },
+  {
+    "id": "si-okinawa-4327",
+    "name": "天然温泉 りっかりっか湯(那覇セントラルホテル)",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4327"
+  },
+  {
+    "id": "si-okinawa-7178",
+    "name": "サ郷 kakeRu | アースバッグサウナ発祥の地",
+    "prefecture": "沖縄県",
+    "city": "国頭郡恩納村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7178"
+  },
+  {
+    "id": "si-okinawa-82301",
+    "name": "サウナの珠湯",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82301"
+  },
+  {
+    "id": "si-okinawa-6928",
+    "name": "CABIN & HOTEL ReTIME/137(ワンノサウナ)",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6928"
+  },
+  {
+    "id": "si-okinawa-29716",
+    "name": "ホテル・アンドルームス那覇ポート",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/29716"
+  },
+  {
+    "id": "si-okinawa-78457",
+    "name": "BUNA SAUNA",
+    "prefecture": "沖縄県",
+    "city": "国頭郡大宜味村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78457"
+  },
+  {
+    "id": "si-okinawa-85984",
+    "name": "Thida sauna",
+    "prefecture": "沖縄県",
+    "city": "中頭郡読谷村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85984"
+  },
+  {
+    "id": "si-okinawa-13447",
+    "name": "Hotel SANSUI Naha 琉球温泉 波之上の湯",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13447"
+  },
+  {
+    "id": "si-okinawa-30013",
+    "name": "サウナ 森の巣箱",
+    "prefecture": "沖縄県",
+    "city": "国頭郡今帰仁村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/30013"
+  },
+  {
+    "id": "si-okinawa-4323",
+    "name": "大山サウナ",
+    "prefecture": "沖縄県",
+    "city": "宜野湾市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4323"
+  },
+  {
+    "id": "si-okinawa-6382",
+    "name": "オリエンタルホテル 沖縄リゾート&スパ",
+    "prefecture": "沖縄県",
+    "city": "名護市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6382"
+  },
+  {
+    "id": "si-okinawa-4322",
+    "name": "エナジック天然温泉アロマ",
+    "prefecture": "沖縄県",
+    "city": "宜野湾市",
+    "trait": "onsen",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "温泉付き"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4322"
+  },
+  {
+    "id": "si-okinawa-5213",
+    "name": "ワイズキャビン&ホテル 那覇国際通り",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5213"
+  },
+  {
+    "id": "si-okinawa-4333",
+    "name": "猿人の湯 (ユインチホテル南城)",
+    "prefecture": "沖縄県",
+    "city": "南城市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強",
+      "ロウリュあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4333"
+  },
+  {
+    "id": "si-okinawa-79079",
+    "name": "那覇プライベートサウナ TOTONOI LABO",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79079"
+  },
+  {
+    "id": "si-okinawa-5850",
+    "name": "海人の湯 (ロワジールスパタワー那覇)",
+    "prefecture": "沖縄県",
+    "city": "那覇市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5850"
+  },
+  {
+    "id": "si-okinawa-7344",
+    "name": "ベッセルホテルカンパーナ沖縄別館",
+    "prefecture": "沖縄県",
+    "city": "中頭郡北谷町",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7344"
+  },
+  {
+    "id": "si-okinawa-5185",
+    "name": "さふぃスパ沖縄 ラグナガーデンホテル",
+    "prefecture": "沖縄県",
+    "city": "宜野湾市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気なし",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5185"
+  },
+  {
+    "id": "si-okinawa-82201",
+    "name": "古宇利島サウナティーダ",
+    "prefecture": "沖縄県",
+    "city": "国頭郡今帰仁村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "貸切可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82201"
+  },
+  {
+    "id": "si-gunma-12822",
+    "name": "AKAGI LOG INN",
+    "prefecture": "群馬県",
+    "city": "前橋市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "個室",
+      "貸切可",
+      "宿泊可",
+      "男女共用"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12822"
+  },
+  {
+    "id": "si-nagano-11723",
+    "name": "ホテル五龍館",
+    "prefecture": "長野県",
+    "city": "北安曇郡白馬村",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "県別50件補強"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11723"
   }
 ];

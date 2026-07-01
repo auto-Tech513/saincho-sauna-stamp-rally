@@ -1037,10 +1037,24 @@ a {
   white-space: nowrap;
 }
 
+.source-badge-group {
+  flex: 0 1 auto;
+  display: inline-flex;
+  justify-content: flex-end;
+  gap: 4px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
 .source-badge {
   color: #2a3531;
   background: var(--mist);
   text-decoration: none;
+}
+
+.source-badge-official {
+  color: white;
+  background: var(--teal);
 }
 
 .status-badge {
