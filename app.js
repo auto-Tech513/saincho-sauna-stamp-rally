@@ -185,6 +185,7 @@ const el = {
   gearGrid: document.querySelector("#gearGrid"),
   gearCount: document.querySelector("#gearCount"),
   articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
+  guideGearRail: document.querySelector("#guideGearRail"),
   articleList: document.querySelector("#articleList"),
   articleCount: document.querySelector("#articleCount"),
   guideReferences: document.querySelector("#guideReferences"),
@@ -919,10 +920,27 @@ function renderGuidePage() {
       ${escapeHtml(category)}
     </button>
   `).join("");
+  renderGuideGearRail(articles);
   el.articleList.innerHTML = articles.map(renderArticleCard).join("");
   el.guideReferences.innerHTML = SAUNA_REFERENCES.map((item) => `
     <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.label)}</a>
   `).join("");
+}
+
+function renderGuideGearRail(articles) {
+  const products = getGuideGearProducts(articles).slice(0, 4);
+  el.guideGearRail.innerHTML = `
+    <div class="guide-gear-head">
+      <div>
+        <span>READ TO GEAR</span>
+        <strong>読んだら、次のサウナを快適にする</strong>
+      </div>
+      <button class="mini-button" type="button" data-open-view="Gear">Gear 30件</button>
+    </div>
+    <div class="guide-gear-grid">
+      ${products.map((item) => renderGuideGearCard(item)).join("")}
+    </div>
+  `;
 }
 
 function renderGearCard(item, mode) {
@@ -942,6 +960,7 @@ function renderGearCard(item, mode) {
 }
 
 function renderArticleCard(article, index) {
+  const products = getArticleGearProducts(article).slice(0, 2);
   return `
     <article class="article-card">
       <details ${index === 0 ? "open" : ""}>
@@ -962,10 +981,108 @@ function renderArticleCard(article, index) {
             <b>注意</b>
             <span>${escapeHtml(article.caution)}</span>
           </div>
+          <div class="article-gear">
+            <div class="article-gear-head">
+              <b>関連Gear</b>
+              <button class="mini-button" type="button" data-open-view="Gear">一覧へ</button>
+            </div>
+            ${products.map((item) => renderArticleGearItem(item)).join("")}
+          </div>
         </div>
       </details>
     </article>
   `;
+}
+
+function renderGuideGearCard(item) {
+  const links = getGearLinks(item);
+  return `
+    <article>
+      <span>${escapeHtml(item.category)}</span>
+      <strong>${escapeHtml(item.title)}</strong>
+      <div>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+      </div>
+    </article>
+  `;
+}
+
+function renderArticleGearItem(item) {
+  const links = getGearLinks(item);
+  return `
+    <div class="article-gear-item">
+      <span>${escapeHtml(item.title)}</span>
+      <div>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+      </div>
+    </div>
+  `;
+}
+
+function getGuideGearProducts(articles) {
+  if (selectedArticleCategory === "すべて") return PRODUCT_RECOMMENDATIONS;
+  const categories = uniqueStrings(articles.map((article) => article.category));
+  const picked = categories.flatMap((category) => getProductsForArticleCategory(category));
+  return uniqueProducts(picked.length ? picked : PRODUCT_RECOMMENDATIONS);
+}
+
+function getArticleGearProducts(article) {
+  const byCategory = getProductsForArticleCategory(article.category);
+  if (byCategory.length) return byCategory;
+  const text = normalizeText([article.title, article.lead, article.action].join(" "));
+  if (/水分|水風呂|汗|夏|遠征|移動/.test(text)) return productsByCategory("水分補給");
+  if (/ハット|髪|頭|熱/.test(text)) return productsByCategory("サウナハット");
+  if (/マット|座面|衛生/.test(text)) return productsByCategory("マット");
+  if (/タオル|拭く|洗う/.test(text)) return productsByCategory("タオル");
+  return PRODUCT_RECOMMENDATIONS;
+}
+
+function getProductsForArticleCategory(category) {
+  const map = {
+    基本: ["サウナハット", "マット", "タオル", "水分補給"],
+    安全: ["水分補給", "計測"],
+    水風呂: ["水分補給", "タオル"],
+    休憩: ["サウナハット", "タオル", "水分補給"],
+    水分: ["水分補給", "ボトル"],
+    マナー: ["タオル", "マット", "バッグ"],
+    ロウリュ: ["香り", "サウナハット", "水分補給"],
+    道具: ["サウナハット", "マット", "タオル", "バッグ"],
+    施設選び: ["バッグ", "タオル", "水分補給"],
+    種類: ["サウナハット", "マット", "水分補給"],
+    体調: ["水分補給", "計測"],
+    季節: ["水分補給", "ウェア"],
+    女性: ["ケア", "タオル", "バッグ"],
+    記録: ["計測", "遠征"],
+    用語: ["水分補給", "サウナハット"],
+    混雑: ["耳栓", "バッグ"],
+    ソロ: ["バッグ", "リラックス"],
+    遠征: ["遠征", "バッグ", "水分補給"],
+    サ飯: ["水分補給"],
+    買い物: ["サウナハット", "マット", "タオル", "水分補給"],
+    チェック: ["水分補給", "タオル", "マット"],
+    上達: ["計測", "水分補給"],
+  };
+  const productCategories = map[category] || [];
+  const firstPicks = productCategories.map((item) => productsByCategory(item)[0]).filter(Boolean);
+  return uniqueProducts([...firstPicks, ...productCategories.flatMap(productsByCategory)]);
+}
+
+function productsByCategory(category) {
+  if (category === "耳栓") {
+    return GEAR_PRODUCTS.filter((item) => /耳栓/.test(item.title));
+  }
+  return GEAR_PRODUCTS.filter((item) => item.category === category);
+}
+
+function uniqueProducts(products) {
+  const seen = new Set();
+  return products.filter((item) => {
+    if (!item || seen.has(item.title)) return false;
+    seen.add(item.title);
+    return true;
+  });
 }
 
 function renderPrefSelect() {

@@ -1608,6 +1608,10 @@ a {
   gap: 10px;
 }
 
+.article-list {
+  align-items: start;
+}
+
 .gear-card-full {
   position: relative;
   overflow: hidden;
@@ -1622,6 +1626,7 @@ a {
 }
 
 .article-card {
+  align-self: start;
   background: white;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -1630,6 +1635,7 @@ a {
 
 .article-card details {
   display: grid;
+  min-height: 0;
 }
 
 .article-card summary {
@@ -1665,6 +1671,126 @@ a {
   font-size: 13px;
   font-weight: 800;
   line-height: 1.55;
+}
+
+.guide-gear-rail {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 12px;
+  background: #fffdf6;
+  border: 1px solid #ead7a4;
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgb(16 20 23 / 0.08);
+}
+
+.guide-gear-head {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.guide-gear-head div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.guide-gear-head span {
+  color: #9b6e05;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.guide-gear-head strong {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.guide-gear-grid {
+  display: grid;
+  gap: 8px;
+}
+
+.guide-gear-grid article {
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #eadfca;
+  border-radius: 8px;
+}
+
+.guide-gear-grid span,
+.article-gear b {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.guide-gear-grid strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.guide-gear-grid div,
+.article-gear-item div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.guide-gear-grid a,
+.article-gear-item a {
+  display: grid;
+  min-height: 36px;
+  place-items: center;
+  color: white;
+  background: var(--night);
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.guide-gear-grid a:nth-child(2),
+.article-gear-item a:nth-child(2) {
+  color: var(--ink);
+  background: var(--gold);
+}
+
+.article-gear {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  background: #fffaf0;
+  border: 1px solid #ead7a4;
+  border-radius: 8px;
+}
+
+.article-gear-head {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-gear-item {
+  display: grid;
+  gap: 7px;
+  padding: 9px;
+  background: white;
+  border-radius: 7px;
+}
+
+.article-gear-item span {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.25;
 }
 
 .article-body p,
@@ -2209,6 +2335,10 @@ a {
   .gear-grid,
   .article-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-gear-grid {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   }
 }
 
