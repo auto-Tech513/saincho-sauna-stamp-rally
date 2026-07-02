@@ -6,6 +6,7 @@
 
 - https://saincho-sauna-stamp-rally.pages.dev/
 - https://saincho-sauna-stamp-rally.pages.dev/gear/
+- https://saincho-sauna-stamp-rally.pages.dev/sameshi/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
 
@@ -13,7 +14,9 @@
 
 - 全国47都道府県、それぞれ50件以上のサウナ候補検索
 - サ印の押印、取り消し、行きたい、施設メモ、X共有
+- サ印スロットによる次の一湯発見
 - 県別マスター、称号、サ印ランキング
+- 県別の人気サ飯候補と公式・参照リンク
 - サウナ初心者向けの入り方、持ち物、マナー、安全FAQ
 - サウナハット、サウナマット、水分補給、遠征用品などのGear比較
 

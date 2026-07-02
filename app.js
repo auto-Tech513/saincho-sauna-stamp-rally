@@ -1,5 +1,5 @@
 import { PREFECTURES, SEED_FACILITIES } from "./data.js";
-import { GEAR_PRODUCTS, GUIDE_FAQS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "./content.js";
+import { GEAR_PRODUCTS, GUIDE_FAQS, SAUNA_ARTICLES, SAUNA_REFERENCES, SAMESHI_SPOTS } from "./content.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -20,12 +20,12 @@ const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
-const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、県別マスター、称号、ランキング、サウナ入門、Gearまでスマホで使えます。";
+const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
 const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、行ったサウナをサ印として押印し、全国2376候補、今日の一湯、日次メモ、称号、ランキングでサ活を続けられる無料のサウナスタンプラリー・サ活記録アプリです。",
+    description: "サ印帳は、行ったサウナをサ印として押印し、全国2376候補、サ印スロット、サ飯、称号、ランキングでサ活を続けられる無料のサウナスタンプラリー・サ活記録アプリです。",
   },
   Passport: {
     path: "/passport/",
@@ -41,6 +41,11 @@ const VIEW_META = {
     path: "/gear/",
     title: "サウナグッズ30選 | サ印帳 Gear",
     description: "サウナハット、サウナマット、水分補給、タオル、遠征グッズなど、初心者が失敗しにくいサウナGearをAmazon・楽天で比較できます。",
+  },
+  Sameshi: {
+    path: "/sameshi/",
+    title: "県別サ飯ガイド | サ印帳",
+    description: "サウナ後に食べたい人気サ飯を県別に短く確認。公式・参照リンクから店舗やメニューへすぐ移動できます。",
   },
   Guide: {
     path: "/guide/",
@@ -161,14 +166,12 @@ const NON_DISPLAY_TAGS = new Set([
 ]);
 
 const AROMAS = ["檜", "白樺", "薄荷", "ほうじ茶", "ヴィヒタ", "柚子", "松葉"];
-const DAILY_MOODS = [
-  { label: "短く整える", hint: "今日は1件だけ候補を見る" },
-  { label: "旅を温める", hint: "行きたいを1件残す" },
-  { label: "余韻を残す", hint: "前回の気づきを一言メモ" },
-  { label: "県を進める", hint: "あと少しの県を確認" },
-  { label: "道具を整える", hint: "次の一湯の持ち物を見る" },
-  { label: "安全第一", hint: "入門記事で入り方を確認" },
-  { label: "サ飯まで想像", hint: "温泉付きや食事ありで探す" },
+const QUEST_COPY = [
+  "未押印から発見",
+  "県マスターを進める",
+  "行きたいを育てる",
+  "サ飯まで想像する",
+  "次の遠征を温める",
 ];
 
 const FACILITY_STATUS = {
@@ -182,6 +185,7 @@ let profile = loadProfile();
 let selectedPrefecture = "全国";
 let selectedGearCategory = "すべて";
 let selectedArticleCategory = "すべて";
+let selectedSameshiPrefecture = "東京都";
 let activeFilter = "all";
 let activeView = "Explore";
 let searchTerm = "";
@@ -197,6 +201,7 @@ let rankingPollTimer = 0;
 let searchRenderTimer = 0;
 let isSearchComposing = false;
 let visibleLimit = 36;
+let questFacilityId = "";
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
 
@@ -234,10 +239,14 @@ const el = {
   leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
   leaderboardSyncButton: document.querySelector("#leaderboardSyncButton"),
   shopGrid: document.querySelector("#shopGrid"),
-  dailyPanel: document.querySelector("#dailyPanel"),
+  questPanel: document.querySelector("#questPanel"),
   gearCategoryStrip: document.querySelector("#gearCategoryStrip"),
   gearGrid: document.querySelector("#gearGrid"),
   gearCount: document.querySelector("#gearCount"),
+  sameshiPrefStrip: document.querySelector("#sameshiPrefStrip"),
+  sameshiGrid: document.querySelector("#sameshiGrid"),
+  sameshiCount: document.querySelector("#sameshiCount"),
+  sameshiSource: document.querySelector("#sameshiSource"),
   articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
   guideGearRail: document.querySelector("#guideGearRail"),
   articleList: document.querySelector("#articleList"),
@@ -283,7 +292,6 @@ function init() {
   renderSearchClearButton();
   renderProfilePanel();
   renderShopPanel();
-  registerDailyOpen();
   renderAll();
   bindEvents();
   renderInstallPrompt();
@@ -418,6 +426,13 @@ function bindEvents() {
       return;
     }
 
+    const sameshiPrefectureButton = event.target.closest("[data-sameshi-prefecture]");
+    if (sameshiPrefectureButton) {
+      selectedSameshiPrefecture = sameshiPrefectureButton.dataset.sameshiPrefecture;
+      renderSameshiPage();
+      return;
+    }
+
     const moreButton = event.target.closest("[data-show-more]");
     if (moreButton) {
       visibleLimit += 36;
@@ -431,18 +446,23 @@ function bindEvents() {
       prefillAddFormFromSearch();
       return;
     }
-    if (button.dataset.action === "daily-focus") {
-      const facility = getFacilities().find((item) => item.id === button.dataset.id);
-      if (facility) focusDailyFacility(facility);
+    if (button.dataset.action === "draw-quest") {
+      drawQuestFacility();
       return;
     }
-    if (button.dataset.action === "daily-wishlist") {
+    if (button.dataset.action === "quest-focus") {
       const facility = getFacilities().find((item) => item.id === button.dataset.id);
-      if (facility) addDailyWishlist(facility);
+      if (facility) focusQuestFacility(facility);
       return;
     }
-    if (button.dataset.action === "save-daily-note") {
-      saveDailyNote();
+    if (button.dataset.action === "quest-wishlist") {
+      const facility = getFacilities().find((item) => item.id === button.dataset.id);
+      if (facility) addQuestWishlist(facility);
+      return;
+    }
+    if (button.dataset.action === "quest-sameshi") {
+      const facility = getFacilities().find((item) => item.id === button.dataset.id);
+      openSameshiForFacility(facility);
       return;
     }
 
@@ -565,7 +585,6 @@ function bindEvents() {
   el.resetButton.addEventListener("click", () => {
     if (!confirm("すべての押印・行きたい・追加データを削除します。")) return;
     state = createState();
-    registerDailyOpen();
     saveState();
     closeSettingsDialog();
     renderAll();
@@ -681,6 +700,7 @@ function isBottomNavTouch(clientY) {
 
 function setView(view) {
   if (!VIEW_META[view]) view = "Explore";
+  if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
   activeView = view;
   applyActiveView(view);
   pushViewUrl(view);
@@ -701,11 +721,12 @@ function applyActiveView(view) {
 
 function renderAll() {
   renderSummary();
-  renderDailyPanel();
+  renderQuestPanel();
   renderExplore();
   renderPassport();
   renderStats();
   renderGearPage();
+  renderSameshiPage();
   renderGuidePage();
 }
 
@@ -749,79 +770,49 @@ function renderRewardNudge(visitedTotal, wishlistTotal) {
   `).join("");
 }
 
-function renderDailyPanel() {
-  if (!el.dailyPanel) return;
-  const daily = state.daily || createDailyState();
-  const today = getLocalDateKey();
-  const note = daily.notes?.[today]?.text || "";
-  const visitedToday = getVisitedOnDate(today).length;
-  const dailyFacility = getDailyFacility();
-  const mood = getDailyMood(today);
-  const microGoal = getDailyMicroGoal(visitedToday);
-  const streakText = daily.streak > 1 ? `連続${daily.streak}日` : "今日から再開";
-  const bestText = Math.max(daily.bestStreak || 0, daily.streak || 0);
-
-  const facilityBlock = dailyFacility
-    ? `
-      <div class="daily-pick">
-        <div>
-          <span class="daily-sub">${escapeHtml(mood.label)}</span>
-          <h3>${escapeHtml(dailyFacility.name)}</h3>
-          <p>${escapeHtml(getFacilityMeta(dailyFacility))}</p>
-          <div class="daily-tag-row">
-            ${getDisplayTags(dailyFacility).slice(0, 3).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}
-          </div>
+function renderQuestPanel() {
+  if (!el.questPanel) return;
+  const facility = getQuestFacility();
+  const goal = getQuestGoal();
+  const copy = QUEST_COPY[hashString(`${selectedPrefecture}:${searchTerm}:${Object.keys(state.visited).length}`) % QUEST_COPY.length];
+  if (!facility) {
+    el.questPanel.innerHTML = `
+      <article class="quest-card quest-card-empty">
+        <div class="quest-copy">
+          <span>NEXT QUEST</span>
+          <strong>候補を追加して次の一湯を作る</strong>
+          <em>${escapeHtml(goal.hint)}</em>
         </div>
-        ${renderStamp(dailyFacility, false)}
-      </div>
-      <div class="daily-actions">
-        <button class="primary-button" type="button" data-action="daily-focus" data-id="${escapeAttr(dailyFacility.id)}">候補を見る</button>
-        <button class="secondary-button ${state.wishlist[dailyFacility.id] ? "is-active" : ""}" type="button" data-action="daily-wishlist" data-id="${escapeAttr(dailyFacility.id)}">${state.wishlist[dailyFacility.id] ? "候補入り" : "行きたい"}</button>
-        <button class="ghost-button" type="button" data-open-view="Gear">持ち物</button>
-      </div>
-    `
-    : `
-      <div class="daily-pick daily-pick-empty">
-        <div>
-          <span class="daily-sub">ALL CLEAR</span>
-          <h3>押印できる候補を集めきりました</h3>
-          <p>候補を追加すると、今日の一湯がまた始まります。</p>
+        <div class="quest-actions">
+          <button class="primary-button" type="button" data-open-view="Add">追加</button>
+          <button class="ghost-button" type="button" data-open-view="Passport">サ印</button>
+          <button class="secondary-button" type="button" data-open-view="Sameshi">サ飯</button>
         </div>
-      </div>
-      <div class="daily-actions">
-        <button class="primary-button" type="button" data-open-view="Add">候補を追加</button>
-        <button class="ghost-button" type="button" data-open-view="Passport">サ印を見る</button>
-      </div>
+      </article>
     `;
+    return;
+  }
 
-  el.dailyPanel.innerHTML = `
-    <article class="daily-card">
-      <div class="daily-card-head">
-        <div>
-          <p class="eyebrow">TODAY</p>
-          <h2>今日のサ活</h2>
-        </div>
-        <div class="daily-streak" aria-label="連続利用">
-          <strong>${escapeHtml(streakText)}</strong>
-          <span>最長${bestText}日</span>
-        </div>
+  const wished = Boolean(state.wishlist[facility.id]);
+  const tag = getDisplayTags(facility)[0] || getFacilitySourceLabel(facility) || "未押印";
+  el.questPanel.innerHTML = `
+    <article class="quest-card">
+      <div class="quest-copy">
+        <span>SAIN SLOT</span>
+        <strong>${escapeHtml(goal.value)}</strong>
+        <em>${escapeHtml(goal.hint)}</em>
       </div>
-      <div class="daily-metrics" aria-label="今日の状況">
-        <span><b>${visitedToday}</b> 今日の押印</span>
-        <span><b>${Object.keys(state.wishlist).length}</b> 行きたい</span>
-        <span><b>${escapeHtml(microGoal.value)}</b> ${escapeHtml(microGoal.label)}</span>
+      <div class="quest-target">
+        <span>${escapeHtml(copy)} / ${escapeHtml(tag)}</span>
+        <strong>${escapeHtml(facility.name)}</strong>
+        <em>${escapeHtml(getFacilityMeta(facility))}</em>
       </div>
-      ${facilityBlock}
-      <details class="daily-note">
-        <summary>
-          <span>${escapeHtml(mood.hint)}</span>
-          <strong>${note ? "メモ済み" : "一言残す"}</strong>
-        </summary>
-        <div class="daily-note-body">
-          <textarea id="dailyNoteInput" maxlength="160" rows="2" placeholder="今日の体調、行きたい理由、次に試したいこと">${escapeHtml(note)}</textarea>
-          <button class="secondary-button" type="button" data-action="save-daily-note">保存</button>
-        </div>
-      </details>
+      <div class="quest-actions">
+        <button class="secondary-button" type="button" data-action="draw-quest">候補を引く</button>
+        <button class="primary-button" type="button" data-action="quest-focus" data-id="${escapeAttr(facility.id)}">見る</button>
+        <button class="ghost-button ${wished ? "is-active" : ""}" type="button" data-action="quest-wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        <button class="sameshi-link-button" type="button" data-action="quest-sameshi" data-id="${escapeAttr(facility.id)}">サ飯</button>
+      </div>
     </article>
   `;
 }
@@ -1228,6 +1219,49 @@ function renderGearPage() {
   el.gearGrid.innerHTML = products.map((item) => renderGearCard(item, "full")).join("");
 }
 
+function renderSameshiPage() {
+  if (!el.sameshiGrid) return;
+  const prefecturesWithMeals = new Set(SAMESHI_SPOTS.map((item) => item.prefecture));
+  if (!prefecturesWithMeals.has(selectedSameshiPrefecture)) {
+    selectedSameshiPrefecture = selectedPrefecture !== "全国" && prefecturesWithMeals.has(selectedPrefecture)
+      ? selectedPrefecture
+      : "東京都";
+  }
+  const spots = SAMESHI_SPOTS.filter((item) => item.prefecture === selectedSameshiPrefecture);
+  el.sameshiCount.textContent = `${selectedSameshiPrefecture} ${spots.length}件`;
+  el.sameshiPrefStrip.innerHTML = PREFECTURES.map((pref) => {
+    const active = selectedSameshiPrefecture === pref.name;
+    const count = SAMESHI_SPOTS.filter((item) => item.prefecture === pref.name).length;
+    return `
+      <button class="pref-chip ${active ? "pref-chip-active" : ""}" type="button" data-sameshi-prefecture="${escapeAttr(pref.name)}">
+        ${escapeHtml(shortPrefName(pref.name))} ${count}
+      </button>
+    `;
+  }).join("");
+  el.sameshiGrid.innerHTML = spots.map(renderSameshiCard).join("");
+  el.sameshiSource.textContent = "リンクは公式ページまたは確認用の参照ページです。未確認の公式URLは推測で追加していません。";
+}
+
+function renderSameshiCard(item) {
+  const linkKind = item.linkLabel === "公式" ? "source-badge-official" : "";
+  return `
+    <article class="sameshi-card">
+      <div class="meal-photo meal-photo-${escapeAttr(item.photo || "teishoku")}" aria-hidden="true">
+        <span>${escapeHtml(item.category || "サ飯")}</span>
+      </div>
+      <div class="sameshi-body">
+        <div class="card-head">
+          <h3 class="facility-name">${escapeHtml(item.spot)}</h3>
+          <a class="source-badge ${linkKind}" href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "参照")}</a>
+        </div>
+        <p class="facility-meta">${escapeHtml([item.prefecture, item.area].filter(Boolean).join(" / "))}</p>
+        <strong>${escapeHtml(item.menu)}</strong>
+        <p>${escapeHtml(item.note)}</p>
+      </div>
+    </article>
+  `;
+}
+
 function renderGuidePage() {
   const categories = ["すべて", ...uniqueStrings(SAUNA_ARTICLES.map((item) => item.category))];
   if (!categories.includes(selectedArticleCategory)) selectedArticleCategory = "すべて";
@@ -1558,7 +1592,7 @@ function toggleWishlist(facility) {
   renderAll();
 }
 
-function focusDailyFacility(facility) {
+function focusQuestFacility(facility) {
   selectedPrefecture = facility.prefecture;
   activeFilter = "all";
   visibleLimit = 36;
@@ -1566,37 +1600,38 @@ function focusDailyFacility(facility) {
   renderSearchClearButton();
   setSearchTerm(facility.name);
   setView("Explore");
-  showToast(`${facility.name} を今日の候補に表示しました`);
+  showToast(`${facility.name} を表示しました`);
 }
 
-function addDailyWishlist(facility) {
+function addQuestWishlist(facility) {
   if (state.wishlist[facility.id]) {
     showToast(`${facility.name} はすでに行きたい候補です`);
     return;
   }
-  state.wishlist[facility.id] = { at: new Date().toISOString(), daily: getLocalDateKey() };
+  state.wishlist[facility.id] = { at: new Date().toISOString(), quest: true };
   saveState();
   renderAll();
-  showToast(`${facility.name} を今日の行きたいに入れました`);
+  showToast(`${facility.name} を行きたいに入れました`);
 }
 
-function saveDailyNote() {
-  const input = document.querySelector("#dailyNoteInput");
-  if (!input) return;
-  const today = getLocalDateKey();
-  const text = input.value.trim().slice(0, 160);
-  state.daily = normalizeDailyState(state.daily);
-  if (text) {
-    state.daily.notes[today] = {
-      text,
-      updatedAt: new Date().toISOString(),
-    };
-  } else {
-    delete state.daily.notes[today];
+function drawQuestFacility() {
+  const pool = getQuestPool();
+  if (!pool.length) {
+    questFacilityId = "";
+    renderQuestPanel();
+    showToast("今の条件で未押印候補がありません");
+    return;
   }
-  saveState();
-  renderDailyPanel();
-  showToast(text ? "今日のサ活メモを保存しました" : "今日のサ活メモを空にしました");
+  const currentIndex = pool.findIndex((facility) => facility.id === questFacilityId);
+  const nextIndex = pool.length === 1 ? 0 : (Math.floor(Math.random() * (pool.length - 1)) + currentIndex + 1) % pool.length;
+  questFacilityId = pool[nextIndex].id;
+  renderQuestPanel();
+  showToast(`${pool[nextIndex].name} が出ました`);
+}
+
+function openSameshiForFacility(facility) {
+  selectedSameshiPrefecture = facility?.prefecture || (selectedPrefecture !== "全国" ? selectedPrefecture : selectedSameshiPrefecture);
+  setView("Sameshi");
 }
 
 function saveFacilityMemo(facility, button) {
@@ -2039,69 +2074,42 @@ function getNearestPrefectureGoal() {
   };
 }
 
-function getDailyFacility() {
-  const eligible = countEligibleFacilities().filter((facility) => !state.visited[facility.id]);
-  if (!eligible.length) return null;
-  const wishlist = eligible.filter((facility) => state.wishlist[facility.id]);
-  const nearPref = getNearestPrefectureGoal();
-  const nearPrefName = PREFECTURES.find((pref) => shortPrefName(pref.name) === nearPref.label)?.name;
-  const nearPrefFacilities = nearPrefName ? eligible.filter((facility) => facility.prefecture === nearPrefName) : [];
-  const pool = wishlist.length ? wishlist : nearPrefFacilities.length ? nearPrefFacilities : eligible;
-  const seed = hashString(`${getLocalDateKey()}:${Object.keys(state.visited).length}:${state.daily?.streak || 0}`);
+function getQuestFacility() {
+  const facilities = getFacilities();
+  const current = facilities.find((facility) => facility.id === questFacilityId && !state.visited[facility.id] && !getFacilityStatus(facility));
+  if (current) return current;
+  const pool = getQuestPool();
+  if (!pool.length) return null;
+  const seed = hashString(`${selectedPrefecture}:${searchTerm}:${Object.keys(state.visited).length}:${Object.keys(state.wishlist).length}`);
   return pool[seed % pool.length];
 }
 
-function getDailyMood(dateKey) {
-  return DAILY_MOODS[hashString(dateKey) % DAILY_MOODS.length];
+function getQuestPool() {
+  const filtered = getFilteredFacilities().filter((facility) => !state.visited[facility.id] && !getFacilityStatus(facility));
+  if (filtered.length) return filtered.slice(0, selectedPrefecture === "全国" ? 180 : filtered.length);
+  const eligible = countEligibleFacilities().filter((facility) => !state.visited[facility.id]);
+  const wishlist = eligible.filter((facility) => state.wishlist[facility.id]);
+  if (wishlist.length) return wishlist;
+  const nearPref = getNearestPrefectureGoal();
+  const nearPrefName = PREFECTURES.find((pref) => shortPrefName(pref.name) === nearPref.label)?.name;
+  const nearPrefFacilities = nearPrefName ? eligible.filter((facility) => facility.prefecture === nearPrefName) : [];
+  if (nearPrefFacilities.length) return nearPrefFacilities;
+  return eligible.slice(0, 240);
 }
 
-function getDailyMicroGoal(visitedToday) {
-  if (visitedToday > 0) return { label: "余韻", value: "一言" };
-  const nextTitle = getNextTitle(Object.keys(state.visited).length);
-  if (nextTitle && nextTitle.count - Object.keys(state.visited).length <= 3) {
-    return { label: "称号", value: `あと${nextTitle.count - Object.keys(state.visited).length}` };
+function getQuestGoal() {
+  const visitedTotal = Object.keys(state.visited).length;
+  const nextTitle = getNextTitle(visitedTotal);
+  if (nextTitle && nextTitle.count - visitedTotal <= 3) {
+    return { value: `あと${nextTitle.count - visitedTotal}湯`, hint: `${nextTitle.title}が近い` };
   }
   const prefGoal = getNearestPrefectureGoal();
-  if (/あと\d+湯/.test(prefGoal.value) && Number(prefGoal.value.match(/\d+/)?.[0] || 99) <= 3) {
-    return { label: prefGoal.label, value: prefGoal.value.replace("湯", "") };
+  if (/あと\d+湯/.test(prefGoal.value)) {
+    return { value: prefGoal.value, hint: `${prefGoal.hint}: ${prefGoal.label}` };
   }
-  if (!Object.keys(state.wishlist).length) return { label: "候補", value: "あと1" };
-  return { label: "継続", value: "1分" };
-}
-
-function getVisitedOnDate(dateKey) {
-  return getFacilities().filter((facility) => {
-    const visited = state.visited[facility.id];
-    return visited?.at && getLocalDateKey(visited.at) === dateKey;
-  });
-}
-
-function registerDailyOpen() {
-  const today = getLocalDateKey();
-  state.daily = normalizeDailyState(state.daily);
-  if (state.daily.lastOpenDate === today) return;
-  const continued = state.daily.lastOpenDate === getDateOffsetKey(-1);
-  state.daily.streak = continued ? (state.daily.streak || 0) + 1 : 1;
-  state.daily.bestStreak = Math.max(state.daily.bestStreak || 0, state.daily.streak);
-  state.daily.lastOpenDate = today;
-  state.daily.lastOpenedAt = new Date().toISOString();
-  saveState();
-}
-
-function getLocalDateKey(value) {
-  const source = value === undefined ? new Date() : value;
-  const date = source instanceof Date ? source : new Date(source);
-  if (Number.isNaN(date.getTime())) return "";
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-}
-
-function getDateOffsetKey(offset) {
-  const date = new Date();
-  date.setDate(date.getDate() + offset);
-  return getLocalDateKey(date);
+  const wishlistTotal = Object.keys(state.wishlist).length;
+  if (!wishlistTotal) return { value: "あと1候補", hint: "未来の一湯を残す" };
+  return { value: `${wishlistTotal}件候補`, hint: "行きたいを押印へ進める" };
 }
 
 function hashString(value) {
@@ -2292,7 +2300,6 @@ async function importState(event) {
     const payload = JSON.parse(await file.text());
     const imported = payload.state || payload;
     state = normalizeState(imported);
-    registerDailyOpen();
     saveState();
     renderAll();
     showToast("記録を読み込みました");
@@ -2320,7 +2327,6 @@ function normalizeState(value) {
     wishlist: isPlainObject(value.wishlist) ? value.wishlist : fallback.wishlist,
     facilityMemos: isPlainObject(value.facilityMemos) ? normalizeFacilityMemos(value.facilityMemos) : fallback.facilityMemos,
     customFacilities: Array.isArray(value.customFacilities) ? value.customFacilities.filter(isValidCustomFacility) : [],
-    daily: normalizeDailyState(value.daily),
   };
 }
 
@@ -2330,41 +2336,7 @@ function createState() {
     wishlist: {},
     facilityMemos: {},
     customFacilities: [],
-    daily: createDailyState(),
   };
-}
-
-function createDailyState() {
-  return {
-    lastOpenDate: "",
-    lastOpenedAt: "",
-    streak: 0,
-    bestStreak: 0,
-    notes: {},
-  };
-}
-
-function normalizeDailyState(value) {
-  const fallback = createDailyState();
-  if (!value || typeof value !== "object") return fallback;
-  return {
-    lastOpenDate: typeof value.lastOpenDate === "string" ? value.lastOpenDate : "",
-    lastOpenedAt: typeof value.lastOpenedAt === "string" ? value.lastOpenedAt : "",
-    streak: Number.isFinite(Number(value.streak)) ? Math.max(0, Math.floor(Number(value.streak))) : 0,
-    bestStreak: Number.isFinite(Number(value.bestStreak)) ? Math.max(0, Math.floor(Number(value.bestStreak))) : 0,
-    notes: normalizeDailyNotes(value.notes),
-  };
-}
-
-function normalizeDailyNotes(value) {
-  if (!isPlainObject(value)) return {};
-  return Object.fromEntries(Object.entries(value)
-    .filter(([dateKey, note]) => /^\d{4}-\d{2}-\d{2}$/.test(dateKey) && note && typeof note === "object" && typeof note.text === "string" && note.text.trim())
-    .slice(-60)
-    .map(([dateKey, note]) => [dateKey, {
-      text: note.text.trim().slice(0, 160),
-      updatedAt: typeof note.updatedAt === "string" ? note.updatedAt : new Date().toISOString(),
-    }]));
 }
 
 function normalizeFacilityMemos(value) {
