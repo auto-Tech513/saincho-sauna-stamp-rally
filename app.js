@@ -18,6 +18,7 @@ const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
+const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、県別マスター、称号、ランキング、サウナ入門、Gearまでスマホで使えます。";
 const VIEW_META = {
@@ -184,6 +185,8 @@ let rankingConfigured = null;
 let toastTimer = 0;
 let rankingSyncTimer = 0;
 let rankingPollTimer = 0;
+let searchRenderTimer = 0;
+let isSearchComposing = false;
 let visibleLimit = 36;
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
@@ -324,24 +327,27 @@ function bindEvents() {
   });
 
   el.searchInput.addEventListener("input", (event) => {
-    setSearchTerm(event.target.value);
-    visibleLimit = 36;
     renderSearchClearButton();
-    const moved = moveToSearchPrefecture(event.target.value);
-    if (moved) {
-      renderAll();
-    } else {
-      renderExplore();
-    }
+    if (event.isComposing || isSearchComposing) return;
+    scheduleSearchRender(event.target.value);
+  });
+
+  el.searchInput.addEventListener("compositionstart", () => {
+    isSearchComposing = true;
+    clearSearchRenderTimer();
+  });
+
+  el.searchInput.addEventListener("compositionend", (event) => {
+    isSearchComposing = false;
+    scheduleSearchRender(event.target.value, { immediate: true });
   });
 
   el.searchClearButton.addEventListener("click", () => {
     if (!el.searchInput.value) return;
     el.searchInput.value = "";
-    setSearchTerm("");
-    visibleLimit = 36;
     renderSearchClearButton();
-    renderExplore();
+    clearSearchRenderTimer();
+    applySearchValue("");
     el.searchInput.focus();
   });
 
@@ -719,8 +725,8 @@ function renderRewardNudge(visitedTotal, wishlistTotal) {
 function renderExplore() {
   renderPrefStrip();
   renderSourceRow();
-  renderSpotlight();
   const facilities = getFilteredFacilities();
+  renderSpotlight(facilities);
 
   if (!facilities.length) {
     const addButton = searchTerm
@@ -741,6 +747,30 @@ function renderExplore() {
     ? `<button class="load-more-button" type="button" data-show-more="true">さらに${Math.min(36, moreCount)}件表示</button>`
     : "";
   el.facilityList.innerHTML = visibleFacilities.map(renderFacilityCard).join("") + moreButton;
+}
+
+function scheduleSearchRender(value, options = {}) {
+  clearSearchRenderTimer();
+  const delay = options.immediate ? 0 : SEARCH_RENDER_DELAY_MS;
+  searchRenderTimer = window.setTimeout(() => applySearchValue(value), delay);
+}
+
+function clearSearchRenderTimer() {
+  if (!searchRenderTimer) return;
+  window.clearTimeout(searchRenderTimer);
+  searchRenderTimer = 0;
+}
+
+function applySearchValue(value) {
+  searchRenderTimer = 0;
+  setSearchTerm(value);
+  visibleLimit = 36;
+  const moved = moveToSearchPrefecture(value);
+  if (moved) {
+    renderAll();
+  } else {
+    renderExplore();
+  }
 }
 
 function renderPrefStrip() {
@@ -775,8 +805,8 @@ function renderSourceRow() {
   el.sourceRow.innerHTML = links.map(([label, url]) => `<a href="${url}" target="_blank" rel="noreferrer">${label}</a>`).join("");
 }
 
-function renderSpotlight() {
-  const pool = getFilteredFacilities().filter((facility) => !state.visited[facility.id] && !getFacilityStatus(facility));
+function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
+  const pool = filteredFacilities.filter((facility) => !state.visited[facility.id] && !getFacilityStatus(facility));
   const facility = pool[0];
   if (!facility) {
     el.spotlight.innerHTML = "";
