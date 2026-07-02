@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="サ印帳は、行ったサウナをサ印として押印し、全国2376候補から次の一湯を探せる無料のサウナスタンプラリー・サ活記録アプリです。" />
+    <meta name="description" content="サ印帳は、行ったサウナをサ印として押印し、全国2376候補、今日の一湯、日次メモ、称号、ランキングでサ活を続けられる無料のサウナスタンプラリー・サ活記録アプリです。" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="application-name" content="サ印帳" />
     <meta name="format-detection" content="telephone=no" />
@@ -19,7 +19,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="サ印帳" />
     <meta property="og:title" content="サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ" />
-    <meta property="og:description" content="行ったサウナを押印。全国2376候補、県別マスター、称号、ランキング、メモ、Gearまでスマホで楽しめます。" />
+    <meta property="og:description" content="行ったサウナを押印。全国2376候補、今日の一湯、県別マスター、称号、ランキング、メモ、Gearまでスマホで楽しめます。" />
     <meta property="og:url" content="https://saincho-sauna-stamp-rally.pages.dev/" />
     <meta property="og:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta property="og:image:secure_url" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
@@ -29,7 +29,7 @@
     <meta property="og:image:alt" content="サ印帳の共有カード。全国2376候補から行ったサウナを押印して集める。" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="サ印帳 | 全国サウナスタンプラリー" />
-    <meta name="twitter:description" content="行ったサウナを押印。県別マスター、称号、ランキング、メモでサ活が続く無料PWA。" />
+    <meta name="twitter:description" content="行ったサウナを押印。今日の一湯、県別マスター、称号、ランキング、メモでサ活が続く無料PWA。" />
     <meta name="twitter:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta name="twitter:image:alt" content="サ印帳の共有カード。全国2376候補から行ったサウナを押印して集める。" />
     <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
@@ -61,7 +61,7 @@
             "name": "サ印帳",
             "alternateName": "サウナスタンプラリー",
             "inLanguage": "ja-JP",
-            "description": "行ったサウナをサ印として押印し、全国のサウナ候補から次の一湯を探せる無料Webアプリです。",
+            "description": "行ったサウナをサ印として押印し、全国のサウナ候補、今日の一湯、日次メモから次の一歩を探せる無料Webアプリです。",
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://saincho-sauna-stamp-rally.pages.dev/?q={search_term_string}",
@@ -131,7 +131,7 @@
             "browserRequirements": "Requires JavaScript and local storage.",
             "isAccessibleForFree": true,
             "inLanguage": "ja-JP",
-            "description": "全国2376候補からサウナを探し、押印、取り消し、メモ、X共有、県別マスター、称号、ランキングをスマホで管理できるサ活記録アプリです。",
+            "description": "全国2376候補からサウナを探し、今日の一湯、押印、取り消し、メモ、X共有、県別マスター、称号、ランキングをスマホで管理できるサ活記録アプリです。",
             "image": "https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png",
             "offers": {
               "@type": "Offer",
@@ -140,6 +140,7 @@
             },
             "featureList": [
               "全国サウナ候補の検索",
+              "今日の一湯と日次サ活メモ",
               "サ印の押印と取り消し",
               "施設メモとX共有",
               "県別マスター認定",
@@ -230,6 +231,7 @@
             <h1>サ印帳</h1>
             <div class="topbar-promise" aria-label="サ印帳の特徴">
               <span>押して集める</span>
+              <span>今日の一湯</span>
               <span>Gearで整える</span>
             </div>
           </div>
@@ -299,6 +301,8 @@
               <button type="button" data-filter="wishlist">行きたい</button>
             </div>
           </div>
+
+          <section class="daily-panel" id="dailyPanel" aria-label="今日のサ活"></section>
 
           <div class="pref-strip" id="prefStrip" aria-label="都道府県"></div>
           <div class="source-row" id="sourceRow"></div>
