@@ -6,7 +6,7 @@
 
 ローカルサーバーまたはCloudflare Pagesで配信してください。`/gear/` や `/guide/` の直リンク対応のため、ファイル直開きではなくHTTP配信が前提です。記録はブラウザの `localStorage` に保存され、記録タブから JSON で書き出し・読み込みできます。
 
-スマホでは画面上部の案内、または設定の「ホーム画面に追加」からPWAとして追加できます。iPhone/iPadでは共有メニューの「ホーム画面に追加」、Android/Chromeでは対応環境でネイティブの追加プロンプトを使います。
+スマホでは画面上部の案内、または設定の「ホーム画面に追加」からPWAとして追加できます。iPhone/iPadではSafariで開き、共有ボタンから「ホーム画面に追加」→「追加」。Android/Chromeでは右上メニューの「アプリをインストール」または「ホーム画面に追加」を使います。
 
 ## PWA / アイコン
 
@@ -14,15 +14,15 @@
 - iOS向けに `apple-touch-icon.png` と `apple-mobile-web-app-*` メタタグを追加しました。
 - ホーム画面用アイコンは添付PNGを `icon-source.png` として保持し、縦横比を歪ませない中央配置の正方形化を行ったうえで各サイズへ展開しています。
 - URL共有時の表示画像は Open Graph / X Card ともに `assets/saincho-og-v2.png` を指定しています。LINEやXで横長カードとして表示されるよう、1200×630pxの共有専用画像にしています。
-- `robots.txt`、`sitemap.xml`、canonical、FAQ/HowTo/WebApplicationの構造化データを追加し、検索エンジンとAI回答がアプリの目的を読み取りやすい形にしています。
+- `robots.txt`、`sitemap.xml`、canonical、FAQ/HowTo/WebApplicationの構造化データ、折りたたみの検索意図Q&Aを追加し、検索エンジンとAI回答が「サウナ スタンプラリー」「サウナ 御朱印」「サウナ 検索」「サウナ 記録」の文脈を読み取りやすい形にしています。
 - Google Search Console の URL プレフィックス確認用に `google4f1c271dfaceddbb.html` をルートへ配置しています。
 - Google Analytics 4 は専用プロパティ「サ印帳アプリ」とWebストリーム「サ印帳 Web」を作成し、測定ID `G-FHGXDGF0M7` を `index.html` に設定しています。
-- `sw.js` は `saincho-v25` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像/OG画像/称号イラスト/SEOファイルをキャッシュします。
+- `sw.js` は `saincho-v26` として、HTML/CSS/JS/データ/manifest/主要アイコン/ヒーロー画像/OG画像/称号イラスト/SEOファイルをキャッシュします。
 - `/gear/`、`/sameshi/`、`/guide/`、`/ranking/`、`/passport/` は Cloudflare Pages の `_redirects` で SPA として開けます。各画面の title、description、canonical、OG URL は JavaScript で更新します。
 - `llms.txt` を追加し、AI検索・回答エンジン向けにサ印帳の概要と主要URLを明示しています。
 - 記録画面と設定メニューに共有導線を追加し、Web Share API、LINE共有、URLコピーで紹介しやすい状態にしています。
 - Explore の「サ印スロット」から現在の検索・県・未押印条件に合う候補を短く引けます。候補を見る、行きたい追加、サ飯ページへの遷移を1枚の短尺カードにまとめ、スマホのスクロール量を増やさない設計にしています。
-- Gear の下に県別サ飯ページを追加し、47都道府県それぞれで人気サ飯候補へ移動できます。未確認の公式URLは推測で入れず、公式または参照リンクとして種別を明示します。
+- Gear の下に県別サ飯ページを追加し、47都道府県と全国追加枠を含む52件の人気サ飯候補へ移動できます。未確認の公式URLは推測で入れず、公式または参照リンクとして種別を明示します。
 
 ## 参照サイト分析
 

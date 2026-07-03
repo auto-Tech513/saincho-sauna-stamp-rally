@@ -25,7 +25,7 @@ const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、行ったサウナをサ印として押印し、全国2376候補、サ印スロット、サ飯、称号、ランキングでサ活を続けられる無料のサウナスタンプラリー・サ活記録アプリです。",
+    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国2376候補、サ飯、称号、ランキングに対応。",
   },
   Passport: {
     path: "/passport/",
@@ -45,7 +45,7 @@ const VIEW_META = {
   Sameshi: {
     path: "/sameshi/",
     title: "県別サ飯ガイド | サ印帳",
-    description: "サウナ後に食べたい人気サ飯を県別に短く確認。公式・参照リンクから店舗やメニューへすぐ移動できます。",
+    description: "サウナ後に食べたい人気サ飯を県別に短く確認。全国の追加人気枠、公式・参照リンク、写真付きカードから店舗やメニューへすぐ移動できます。",
   },
   Guide: {
     path: "/guide/",
@@ -1228,7 +1228,7 @@ function renderSameshiPage() {
       : "東京都";
   }
   const spots = SAMESHI_SPOTS.filter((item) => item.prefecture === selectedSameshiPrefecture);
-  el.sameshiCount.textContent = `${selectedSameshiPrefecture} ${spots.length}件`;
+  el.sameshiCount.textContent = `${selectedSameshiPrefecture} ${spots.length}件 / 全国${SAMESHI_SPOTS.length}件`;
   el.sameshiPrefStrip.innerHTML = PREFECTURES.map((pref) => {
     const active = selectedSameshiPrefecture === pref.name;
     const count = SAMESHI_SPOTS.filter((item) => item.prefecture === pref.name).length;
@@ -1244,9 +1244,12 @@ function renderSameshiPage() {
 
 function renderSameshiCard(item) {
   const linkKind = item.linkLabel === "公式" ? "source-badge-official" : "";
+  const imageStyle = isSafeHttpUrl(item.image)
+    ? ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.18), rgb(16 20 23 / 0.02)), url('${escapeAttr(item.image)}')"`
+    : "";
   return `
     <article class="sameshi-card">
-      <div class="meal-photo meal-photo-${escapeAttr(item.photo || "teishoku")}" aria-hidden="true">
+      <div class="meal-photo meal-photo-${escapeAttr(item.photo || "teishoku")}"${imageStyle} aria-hidden="true">
         <span>${escapeHtml(item.category || "サ飯")}</span>
       </div>
       <div class="sameshi-body">
@@ -2277,12 +2280,13 @@ function showInstallHelp() {
     el.installHelpDialog.showModal();
     return;
   }
-  alert("共有ボタンから「ホーム画面に追加」を選び、追加を押してください。");
+  alert("iPhone/iPadはSafariで開き、共有ボタンから「ホーム画面に追加」→「追加」。AndroidはChrome右上メニューから「アプリをインストール」または「ホーム画面に追加」を選んでください。");
 }
 
 function getInstallHint() {
-  if (isAppleTouchDevice()) return "共有からホーム画面に追加";
-  return "ブラウザのメニューから追加";
+  if (isAppleTouchDevice()) return "Safariの共有→ホーム画面に追加";
+  if (/Android/i.test(navigator.userAgent)) return "Chromeメニュー→インストール";
+  return "iPhoneはSafari共有 / AndroidはChromeメニュー";
 }
 
 function isStandaloneMode() {
@@ -2291,6 +2295,16 @@ function isStandaloneMode() {
 
 function isAppleTouchDevice() {
   return /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+}
+
+function isSafeHttpUrl(value) {
+  if (!value) return false;
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" || url.protocol === "http:";
+  } catch {
+    return false;
+  }
 }
 
 async function importState(event) {

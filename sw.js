@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v25";
+const CACHE_NAME = "saincho-v26";
 const ASSETS = [
   "./",
   "./index.html",

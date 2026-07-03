@@ -9,11 +9,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="サ印帳は、行ったサウナをサ印として押印し、全国2376候補、サ印スロット、サ飯、称号、ランキングでサ活を続けられる無料のサウナスタンプラリー・サ活記録アプリです。" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国2376候補、サ飯、称号、ランキングに対応。" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="application-name" content="サ印帳" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="keywords" content="サ印帳,サウナ,サウナスタンプラリー,サ活,サウナ記録,サウナアプリ,サウナマップ,サウナランキング" />
+    <meta name="keywords" content="サ印帳,サウナ,サウナスタンプラリー,サウナ御朱印,サウナ検索,サウナ記録,サ活,サウナアプリ,サウナマップ,サウナランキング" />
     <link rel="canonical" href="https://saincho-sauna-stamp-rally.pages.dev/" />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
@@ -33,6 +34,7 @@
     <meta name="twitter:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta name="twitter:image:alt" content="サ印帳の共有カード。全国2376候補から行ったサウナを押印して集める。" />
     <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
+    <link rel="alternate" type="text/plain" href="https://saincho-sauna-stamp-rally.pages.dev/llms.txt" title="サ印帳のAI向け概要" />
     <title>サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ</title>
     <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="./icons/favicon-16.png" sizes="16x16" type="image/png" />
@@ -61,7 +63,7 @@
             "name": "サ印帳",
             "alternateName": "サウナスタンプラリー",
             "inLanguage": "ja-JP",
-            "description": "行ったサウナをサ印として押印し、全国のサウナ候補、サ印スロット、サ飯から次の一歩を探せる無料Webアプリです。",
+            "description": "サウナ検索、サウナ記録、サウナ版御朱印のようなサ印集めを1つにした無料Webアプリです。全国のサウナ候補、サ印スロット、サ飯から次の一歩を探せます。",
             "potentialAction": {
               "@type": "SearchAction",
               "target": "https://saincho-sauna-stamp-rally.pages.dev/?q={search_term_string}",
@@ -140,7 +142,7 @@
             "browserRequirements": "Requires JavaScript and local storage.",
             "isAccessibleForFree": true,
             "inLanguage": "ja-JP",
-            "description": "全国2376候補からサウナを探し、サ印スロット、押印、取り消し、メモ、X共有、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。",
+            "description": "全国2376候補からサウナを検索し、サウナ版御朱印のようにサ印を押印、取り消し、メモ、X共有、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。",
             "image": "https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png",
             "offers": {
               "@type": "Offer",
@@ -167,7 +169,31 @@
                 "name": "サ印帳とは何ですか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "行ったサウナをサ印として押印し、サ活の記録、メモ、称号、県別マスターを楽しめる無料のWebアプリです。"
+                  "text": "行ったサウナをサ印として押印し、サ活の記録、メモ、称号、県別マスターを楽しめる無料のWebアプリです。サウナ版御朱印帳としても使えます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "サウナ スタンプラリーをスマホでできますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "できます。サ印帳はスマホでサウナを検索し、訪問した施設をサ印として押印できるサウナスタンプラリーです。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "サウナ 御朱印のように記録できますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "できます。行った施設ごとにサ印を集め、県別マスターや称号で進み具合を確認できます。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "サウナ 検索とサウナ 記録を一緒にできますか？",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "全国2376候補を都道府県、施設名、特徴で検索し、押印、行きたい、メモ、サ飯導線まで一緒に管理できます。"
                 }
               },
               {
@@ -183,7 +209,7 @@
                 "name": "スマホのホーム画面に追加できますか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "iPhone、Android、iPadのブラウザからホーム画面に追加できます。追加後はアプリのように1タップで開けます。"
+                  "text": "iPhoneとiPadはSafariの共有ボタンからホーム画面に追加、AndroidはChromeのインストールまたはホーム画面に追加から設定できます。追加後はアプリのように1タップで開けます。"
                 }
               },
               {
@@ -300,7 +326,7 @@
           <div class="tool-band">
             <label class="search-box">
               <span aria-hidden="true"></span>
-              <input id="searchInput" type="search" autocomplete="off" placeholder="サウナ名・県・特徴で検索" />
+              <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・特徴で検索" placeholder="サウナ名・県・特徴で検索" />
               <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
                 <span class="icon-close" aria-hidden="true"></span>
               </button>
@@ -313,6 +339,27 @@
           </div>
 
           <section class="quest-panel" id="questPanel" aria-label="次の一手"></section>
+
+          <details class="seo-answer-panel">
+            <summary>
+              <span>検索で来た方へ</span>
+              <strong>サウナ検索・記録・サ印</strong>
+            </summary>
+            <div class="seo-answer-grid">
+              <article>
+                <h2>サウナ スタンプラリーとして使える</h2>
+                <p>行ったサウナをサ印として押印し、全国候補から次の施設を探せます。紙の台帳のような収集感をスマホで続けられます。</p>
+              </article>
+              <article>
+                <h2>サウナ 御朱印のように集める</h2>
+                <p>サ印、県別マスター、称号で訪問履歴が育ちます。押し間違えても取り消せるので、気軽に記録できます。</p>
+              </article>
+              <article>
+                <h2>サウナ 検索とサウナ 記録をまとめる</h2>
+                <p>サウナ名、都道府県、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、メモ、X共有まで一つで管理できます。</p>
+              </article>
+            </div>
+          </details>
 
           <div class="pref-strip" id="prefStrip" aria-label="都道府県"></div>
           <div class="source-row" id="sourceRow"></div>
@@ -433,12 +480,12 @@
               <p class="eyebrow">SAUNA MEAL</p>
               <h2>サ飯</h2>
             </div>
-            <span class="count-badge" id="sameshiCount">47県</span>
+            <span class="count-badge" id="sameshiCount">全国52件</span>
           </div>
           <div class="sameshi-hero">
             <span>サウナ後のご褒美まで設計</span>
             <h3>県別の人気サ飯を短く選ぶ</h3>
-            <p>長く眺めるページではなく、県を選んで候補を絞り、公式・参照ページへすぐ移動できます。</p>
+            <p>長く眺めるページではなく、県を選んで候補を絞り、公式・参照ページへすぐ移動できます。全国の追加人気枠も順次反映します。</p>
           </div>
           <div class="sameshi-pref-strip" id="sameshiPrefStrip" aria-label="サ飯の都道府県切替"></div>
           <div class="sameshi-grid" id="sameshiGrid"></div>
@@ -558,9 +605,18 @@
         </button>
       </div>
       <ol class="install-steps">
-        <li>共有ボタンを開く</li>
-        <li>ホーム画面に追加を選ぶ</li>
-        <li>追加を押す</li>
+        <li>
+          <strong>iPhone / iPad / Safari</strong>
+          <span>Safariでこのページを開き、共有ボタンを押します。下へスクロールして「ホーム画面に追加」を選び、右上の「追加」を押します。</span>
+        </li>
+        <li>
+          <strong>Android / Chrome</strong>
+          <span>Chrome右上のメニューを開き、「アプリをインストール」または「ホーム画面に追加」を選びます。確認画面で「インストール」または「追加」を押します。</span>
+        </li>
+        <li>
+          <strong>見つからない時</strong>
+          <span>iPhoneはSafariで開き直してください。AndroidはChromeを最新版にして、ページを再読み込みしてからもう一度メニューを確認します。</span>
+        </li>
       </ol>
     </dialog>
 

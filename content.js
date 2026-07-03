@@ -375,6 +375,18 @@ export const SAMESHI_SPOTS = [
     "linkLabel": "参照"
   },
   {
+    "prefecture": "千葉県",
+    "area": "船橋市",
+    "spot": "カプセルホテル&サウナ ジートピア",
+    "menu": "悪魔のスンドゥブ",
+    "note": "サ飯推薦枠に掲載される船橋の人気候補。熱いサウナ後に辛味と旨味で満足を取りやすい一品です。",
+    "category": "鍋",
+    "photo": "hotpot",
+    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1786.jpg",
+    "url": "https://sauna-ikitai.com/saunas/1786",
+    "linkLabel": "参照"
+  },
+  {
     "prefecture": "東京都",
     "area": "台東区",
     "spot": "サウナ＆カプセルホテル北欧",
@@ -383,6 +395,18 @@ export const SAMESHI_SPOTS = [
     "category": "肉",
     "photo": "meat",
     "url": "https://sauna-ikitai.com/sameshi/recommendations",
+    "linkLabel": "参照"
+  },
+  {
+    "prefecture": "東京都",
+    "area": "墨田区",
+    "spot": "スパ&カプセル ニューウイング",
+    "menu": "長崎ちゃんぽん",
+    "note": "サウナ好きの投稿数が多い錦糸町の定番施設。サ飯推薦枠でも紹介される、遠征後に選びやすい麺です。",
+    "category": "麺",
+    "photo": "ramen",
+    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1823_newwing.jpg",
+    "url": "https://sauna-ikitai.com/saunas/1823",
     "linkLabel": "参照"
   },
   {
@@ -431,13 +455,13 @@ export const SAMESHI_SPOTS = [
   },
   {
     "prefecture": "福井県",
-    "area": "福井市",
-    "spot": "越のゆ 福井店",
-    "menu": "ととのうサ飯",
-    "note": "施設公式でサ飯訴求がある候補。食事まで迷わず移動できるのが強みです。",
+    "area": "鯖江市",
+    "spot": "越のゆ 鯖江店",
+    "menu": "お食事処のサウナ飯",
+    "note": "公式ページで食事処とサウナ飯の案内を確認できます。福井枠は営業中施設へ差し替えました。",
     "category": "定食",
     "photo": "teishoku",
-    "url": "https://www.yu-iwashita.jp/sauna/fukui-saunameshi/",
+    "url": "https://www.yu-iwashita.jp/sabae/eat",
     "linkLabel": "公式"
   },
   {
@@ -558,7 +582,7 @@ export const SAMESHI_SPOTS = [
     "note": "大型施設内で食事まで済ませやすい候補。家族利用や一日滞在にも向きます。",
     "category": "定食",
     "photo": "teishoku",
-    "url": "https://www.narakenkoland.net/restaurant",
+    "url": "https://www.narakenkoland.net/facility/gourmet_banquet",
     "linkLabel": "公式"
   },
   {
@@ -591,7 +615,7 @@ export const SAMESHI_SPOTS = [
     "note": "宿泊サウナ後に食事導線を作りやすい島根候補。遠征の余韻を残せます。",
     "category": "麺",
     "photo": "ramen",
-    "url": "https://sauna-ikitai.com/saunas/13786/foods",
+    "url": "https://sauna-ikitai.com/saunas/24337",
     "linkLabel": "参照"
   },
   {
@@ -606,6 +630,18 @@ export const SAMESHI_SPOTS = [
     "linkLabel": "参照"
   },
   {
+    "prefecture": "岡山県",
+    "area": "美作市",
+    "spot": "kobatoisa cafe&sauna",
+    "menu": "なぎビーフのとろとろ牛すじカレー",
+    "note": "カフェ併設サウナらしいご褒美感のあるカレー。サ飯推薦枠に掲載される岡山の追加人気候補です。",
+    "category": "カレー",
+    "photo": "curry",
+    "image": "https://media.sauna-ikitai.com/kb/food_recommend/78759.jpg",
+    "url": "https://sauna-ikitai.com/saunas/78759",
+    "linkLabel": "参照"
+  },
+  {
     "prefecture": "広島県",
     "area": "福山市",
     "spot": "お湯処 美福",
@@ -614,6 +650,18 @@ export const SAMESHI_SPOTS = [
     "category": "麺",
     "photo": "ramen",
     "url": "https://sauna-ikitai.com/sameshi/recommendations",
+    "linkLabel": "参照"
+  },
+  {
+    "prefecture": "広島県",
+    "area": "尾道市",
+    "spot": "尾道平原温泉 ぽっぽの湯",
+    "menu": "麻婆豆腐セット",
+    "note": "外気浴まで楽しめる温浴施設の追加候補。サウナ後にしっかり食べたい日に選びやすい中華系サ飯です。",
+    "category": "中華",
+    "photo": "friedrice",
+    "image": "https://media.sauna-ikitai.com/kb/food_recommend/3450.jpg",
+    "url": "https://sauna-ikitai.com/saunas/3450",
     "linkLabel": "参照"
   },
   {
@@ -647,6 +695,18 @@ export const SAMESHI_SPOTS = [
     "category": "肉",
     "photo": "meat",
     "url": "https://sauna-ikitai.com/sameshi/recommendations",
+    "linkLabel": "参照"
+  },
+  {
+    "prefecture": "香川県",
+    "area": "高松市",
+    "spot": "由良里の湯",
+    "menu": "とんかつ定食",
+    "note": "サ飯推薦枠に掲載される高松の温浴候補。汗をかいた後に塩気と満腹感を取りやすい定食です。",
+    "category": "定食",
+    "photo": "teishoku",
+    "image": "https://media.sauna-ikitai.com/kb/food_recommend/5011.jpg",
+    "url": "https://sauna-ikitai.com/saunas/5011",
     "linkLabel": "参照"
   },
   {
@@ -756,7 +816,7 @@ export const SAMESHI_SPOTS = [
     "note": "観光や空港動線と合わせやすい沖縄のサ飯候補。食事投稿からメニュー確認へ進めます。",
     "category": "地域",
     "photo": "teishoku",
-    "url": "https://sauna-ikitai.com/saunas/4362/foods",
+    "url": "https://sauna-ikitai.com/saunas/4332",
     "linkLabel": "参照"
   }
 ];

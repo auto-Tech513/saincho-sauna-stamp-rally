@@ -4096,14 +4096,25 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1589/"
   },
   {
-    "id": "st-gunma-52",
-    "name": "鮎川温泉 金井の湯(閉店)",
+    "id": "gunma-private-sauna-zero",
+    "name": "PRIVATE SAUNA ZERO",
     "prefecture": "群馬県",
-    "city": "",
-    "trait": "onsen",
-    "tags": [],
-    "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/52/"
+    "city": "高崎市",
+    "trait": "urban",
+    "tags": [
+      "個室",
+      "セルフロウリュ",
+      "アロマロウリュ",
+      "タオルレンタルあり"
+    ],
+    "features": [
+      "個室",
+      "セルフロウリュ",
+      "アロマロウリュ",
+      "タオルレンタルあり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://sauna-zero.jp/"
   },
   {
     "id": "st-gumma-1638",
@@ -5998,14 +6009,28 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/2135/"
   },
   {
-    "id": "st-niigata-200",
-    "name": "ホンマ健康ランド(閉店)",
+    "id": "si-niigata-80574",
+    "name": "サウナ&ヘッドスパ RETOLI",
     "prefecture": "新潟県",
-    "city": "",
-    "trait": "onsen",
-    "tags": [],
-    "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/200/"
+    "city": "新潟市",
+    "trait": "water",
+    "tags": [
+      "サウナイキタイ掲載",
+      "水風呂あり",
+      "セルフロウリュ",
+      "アロマロウリュ",
+      "熱波師あり",
+      "タオルレンタルあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "セルフロウリュ",
+      "アロマロウリュ",
+      "熱波師あり",
+      "タオルレンタルあり"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80574"
   },
   {
     "id": "st-niigata-4277",
@@ -6960,16 +6985,22 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/2211/"
   },
   {
-    "id": "st-ishikawa-4766",
-    "name": "伝泊小松 弘法の霊水サウナ（閉館）",
+    "id": "si-ishikawa-34534",
+    "name": "ROKU : 金沢 private sauna",
     "prefecture": "石川県",
-    "city": "",
-    "trait": "water",
+    "city": "金沢市",
+    "trait": "urban",
     "tags": [
-      "水辺"
+      "サウナイキタイ掲載",
+      "個室",
+      "貸切可"
     ],
-    "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4766/"
+    "features": [
+      "個室",
+      "貸切可"
+    ],
+    "source": "サウナイキタイ",
+    "sourceUrl": "https://sauna-ikitai.com/saunas/34534"
   },
   {
     "id": "st-ishikawa-4480",
@@ -7238,15 +7269,25 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/2275/"
   },
   {
-    "id": "st-fukui-489",
-    "name": "越のゆ 福井店",
+    "id": "fukui-kaihatsu-onsen-sauna-resort-2026",
+    "name": "ONSEN&SAUNA RESORT かいほつの湯",
     "prefecture": "福井県",
-    "city": "",
-    "trait": "urban",
-    "tags": [],
-    "features": [],
-    "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/489/"
+    "city": "福井市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定",
+      "温泉付き",
+      "水着必須",
+      "サ飯あり"
+    ],
+    "features": [
+      "温泉付き",
+      "水着必須",
+      "サ飯あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://kaihotsunoyu.jp/",
+    "status": "planned"
   },
   {
     "id": "st-fukui-494",

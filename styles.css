@@ -672,6 +672,12 @@ a {
   color: var(--ink);
 }
 
+.search-box input::-webkit-search-cancel-button,
+.search-box input::-webkit-search-decoration {
+  appearance: none;
+  display: none;
+}
+
 .search-clear-button {
   display: grid;
   place-items: center;
@@ -774,6 +780,70 @@ a {
   font-size: 12px;
   font-weight: 800;
   text-decoration: none;
+}
+
+.seo-answer-panel {
+  margin: 0 0 12px;
+  background: rgb(255 255 255 / 0.82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.seo-answer-panel summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 12px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.seo-answer-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.seo-answer-panel summary span {
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.seo-answer-panel summary strong {
+  color: #31413d;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: right;
+}
+
+.seo-answer-grid {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 12px;
+}
+
+.seo-answer-grid article {
+  padding: 10px;
+  background: #f8fbf8;
+  border: 1px solid #dce7e1;
+  border-radius: 8px;
+}
+
+.seo-answer-grid h2 {
+  margin: 0 0 5px;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.seo-answer-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
 }
 
 .feature-filter-panel {
@@ -2083,7 +2153,8 @@ a {
 .meal-photo-teishoku,
 .meal-photo-cafe,
 .meal-photo-gyoza,
-.meal-photo-pasta {
+.meal-photo-pasta,
+.meal-photo-hotpot {
   background-image:
     linear-gradient(135deg, rgb(16 20 23 / 0.18), rgb(16 20 23 / 0.02)),
     url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=640&q=80");
@@ -2708,9 +2779,49 @@ a {
   display: grid;
   gap: 10px;
   margin: 0;
-  padding: 0 0 0 22px;
+  padding: 0;
   color: #34413d;
   font-size: 14px;
+  font-weight: 800;
+  line-height: 1.5;
+  list-style: none;
+  counter-reset: installStep;
+}
+
+.install-steps li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 4px 10px;
+  padding: 10px;
+  background: #f8fbf8;
+  border: 1px solid #dce7e1;
+  border-radius: 8px;
+  counter-increment: installStep;
+}
+
+.install-steps li::before {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: white;
+  background: var(--teal);
+  border-radius: 50%;
+  content: counter(installStep);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.install-steps strong {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.install-steps span {
+  color: var(--muted);
+  font-size: 13px;
   font-weight: 800;
   line-height: 1.5;
 }
