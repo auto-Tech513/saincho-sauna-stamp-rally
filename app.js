@@ -21,6 +21,7 @@ const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
+const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
 const VIEW_META = {
   Explore: {
     path: "/",
@@ -77,6 +78,15 @@ const TITLE_MILESTONES = [
 const SEARCH_SYNONYM_GROUPS = [
   ["saunachelin", "サウナシュラン", "さうなしゅらん", "サウナシェラン", "サウナチェリン"],
   ["sauna", "サウナ", "さうな"],
+  ["monkey", "モンキー", "もんきー"],
+  ["wellbe", "ウェルビー", "うぇるびー"],
+  ["lab", "ラボ", "らぼ"],
+  ["hotel", "ホテル", "ほてる"],
+  ["capsule", "カプセル", "かぷせる"],
+  ["garden", "ガーデン", "がーでん"],
+  ["resort", "リゾート", "りぞーと"],
+  ["center", "センター", "せんたー"],
+  ["cafe", "カフェ", "かふぇ"],
   ["spa", "スパ", "すぱ"],
   ["ofuro", "おふろ", "オフロ"],
   ["onsen", "温泉", "おんせん", "オンセン"],
@@ -204,6 +214,9 @@ let visibleLimit = 36;
 let questFacilityId = "";
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
+let facilitiesCache = null;
+let facilitySearchCache = null;
+let facilitySearchMemoSignature = "";
 
 const el = {
   main: document.querySelector(".main"),
@@ -296,9 +309,16 @@ function init() {
   bindEvents();
   renderInstallPrompt();
   registerServiceWorker();
-  loadSharedFacilities();
-  loadRanking();
-  startRankingPolling();
+  if (IS_STATIC_LOCAL_PREVIEW) {
+    sharedFacilitiesConfigured = false;
+    rankingConfigured = false;
+    renderSharedHint();
+    renderLeaderboard();
+  } else {
+    loadSharedFacilities();
+    loadRanking();
+    startRankingPolling();
+  }
   window.addEventListener("popstate", () => {
     activeView = getViewFromLocation();
     applyActiveView(activeView);
@@ -565,6 +585,7 @@ function bindEvents() {
         updatedAt: new Date().toISOString(),
       };
     }
+    invalidateFacilityCaches();
     selectedPrefecture = addedFacility.prefecture;
     setSearchTerm(addedFacility.name);
     el.searchInput.value = addedFacility.name;
@@ -585,6 +606,7 @@ function bindEvents() {
   el.resetButton.addEventListener("click", () => {
     if (!confirm("すべての押印・行きたい・追加データを削除します。")) return;
     state = createState();
+    invalidateFacilityCaches();
     saveState();
     closeSettingsDialog();
     renderAll();
@@ -1649,6 +1671,7 @@ function saveFacilityMemo(facility, button) {
     text,
     updatedAt: new Date().toISOString(),
   };
+  invalidateFacilityCaches();
   saveState();
   renderAll();
   showToast(`${facility.name} のメモを保存しました`);
@@ -1657,6 +1680,7 @@ function saveFacilityMemo(facility, button) {
 function deleteFacilityMemo(facility) {
   if (!state.facilityMemos[facility.id]) return;
   delete state.facilityMemos[facility.id];
+  invalidateFacilityCaches();
   saveState();
   renderAll();
   showToast(`${facility.name} のメモを取り消しました`);
@@ -1738,6 +1762,7 @@ async function loadSharedFacilities() {
     const payload = await response.json();
     sharedFacilitiesConfigured = payload.configured !== false;
     sharedFacilities = normalizeSharedFacilities(payload.facilities || []);
+    invalidateFacilityCaches();
     renderAll();
   } catch {
     sharedFacilitiesConfigured = false;
@@ -1769,6 +1794,7 @@ function mergeSharedFacility(facility) {
     ...sharedFacilities.filter((item) => facilityDuplicateKey(item) !== key),
     facility,
   ].sort((a, b) => a.prefecture.localeCompare(b.prefecture, "ja") || a.name.localeCompare(b.name, "ja"));
+  invalidateFacilityCaches();
 }
 
 function normalizeSharedFacilities(values) {
@@ -1805,8 +1831,35 @@ function renderSharedHint() {
 }
 
 function getFilteredFacilities() {
-  return getFacilities().filter((facility) => {
+  return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
+    const matchesSearch = !searchNeedles.length || searchNeedles.every((needle) => haystack.includes(needle));
+    const matchesFeatures = [...selectedFeatureFilters].every((feature) => features.includes(feature));
+    const matchesFilter =
+      activeFilter === "all" ||
+      (activeFilter === "unvisited" && !state.visited[facility.id]) ||
+      (activeFilter === "wishlist" && state.wishlist[facility.id]);
+    return selected && matchesSearch && matchesFeatures && matchesFilter;
+  }).map(({ facility }) => facility);
+}
+
+function getFacilities() {
+  if (facilitiesCache) return facilitiesCache;
+  const custom = state.customFacilities.map((facility) => ({
+    ...facility,
+    features: normalizeFeatures(facility.features || facility.tags || []),
+    trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
+    tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
+  }));
+  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
+  return facilitiesCache;
+}
+
+function getFacilitySearchRecords() {
+  const memoSignature = getFacilityMemoSearchSignature();
+  if (facilitySearchCache && facilitySearchMemoSignature === memoSignature) return facilitySearchCache;
+  facilitySearchMemoSignature = memoSignature;
+  facilitySearchCache = getFacilities().map((facility) => {
     const memo = getFacilityMemo(facility.id);
     const features = getFacilityFeatures(facility);
     const haystack = buildSearchBlob([
@@ -1820,24 +1873,27 @@ function getFilteredFacilities() {
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
       ...facility.tags,
     ]);
-    const matchesSearch = !searchNeedles.length || searchNeedles.every((needle) => haystack.includes(needle));
-    const matchesFeatures = [...selectedFeatureFilters].every((feature) => features.includes(feature));
-    const matchesFilter =
-      activeFilter === "all" ||
-      (activeFilter === "unvisited" && !state.visited[facility.id]) ||
-      (activeFilter === "wishlist" && state.wishlist[facility.id]);
-    return selected && matchesSearch && matchesFeatures && matchesFilter;
+    return {
+      facility,
+      features,
+      haystack,
+      nameBlob: buildSearchBlob([facility.name]),
+    };
   });
+  return facilitySearchCache;
 }
 
-function getFacilities() {
-  const custom = state.customFacilities.map((facility) => ({
-    ...facility,
-    features: normalizeFeatures(facility.features || facility.tags || []),
-    trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
-    tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
-  }));
-  return dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
+function getFacilityMemoSearchSignature() {
+  return Object.entries(state.facilityMemos)
+    .map(([id, memo]) => `${id}:${memo?.updatedAt || ""}:${memo?.text || ""}`)
+    .sort()
+    .join("|");
+}
+
+function invalidateFacilityCaches() {
+  facilitiesCache = null;
+  facilitySearchCache = null;
+  facilitySearchMemoSignature = "";
 }
 
 function getFacilityMeta(facility) {
@@ -1969,27 +2025,12 @@ function moveToSearchPrefecture(value) {
   if (prefMatch) return setSelectedPrefecture(prefMatch.name);
 
   if (term.length < 2) return false;
-  const facilities = getFacilities();
-  const nameMatch = facilities.find((facility) => matchesSearchNeedles([facility.name], needles));
-  if (nameMatch) return setSelectedPrefecture(nameMatch.prefecture);
+  const records = getFacilitySearchRecords();
+  const nameMatch = records.find(({ nameBlob }) => needles.every((needle) => nameBlob.includes(needle)));
+  if (nameMatch) return setSelectedPrefecture(nameMatch.facility.prefecture);
 
-  const matchingFacilities = facilities.filter((facility) => {
-    const memo = getFacilityMemo(facility.id);
-    const features = getFacilityFeatures(facility);
-    const haystack = buildSearchBlob([
-      facility.name,
-      facility.prefecture,
-      facility.city,
-      facility.source,
-      facility.note,
-      memo?.text,
-      ...features,
-      ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
-      ...facility.tags,
-    ]);
-    return needles.every((needle) => haystack.includes(needle));
-  });
-  const matchedPrefectures = [...new Set(matchingFacilities.map((facility) => facility.prefecture))];
+  const matchingFacilities = records.filter(({ haystack }) => needles.every((needle) => haystack.includes(needle)));
+  const matchedPrefectures = [...new Set(matchingFacilities.map(({ facility }) => facility.prefecture))];
   if (matchedPrefectures.length === 1) return setSelectedPrefecture(matchedPrefectures[0]);
   return false;
 }
@@ -2142,6 +2183,7 @@ function getNextTitle(count) {
 }
 
 function startRankingPolling() {
+  if (rankingConfigured === false) return;
   clearInterval(rankingPollTimer);
   rankingPollTimer = window.setInterval(loadRanking, RANKING_REFRESH_MS);
 }
@@ -2156,6 +2198,7 @@ async function loadRanking() {
   } catch {
     rankingConfigured = false;
     leaderboardEntries = [];
+    clearInterval(rankingPollTimer);
   } finally {
     renderLeaderboard();
   }
@@ -2314,6 +2357,7 @@ async function importState(event) {
     const payload = JSON.parse(await file.text());
     const imported = payload.state || payload;
     state = normalizeState(imported);
+    invalidateFacilityCaches();
     saveState();
     renderAll();
     showToast("記録を読み込みました");
@@ -2578,15 +2622,37 @@ function matchesSearchNeedles(parts, needles) {
 }
 
 function buildSearchBlob(parts) {
-  const source = parts.filter(Boolean).join(" ");
+  const values = parts.filter(Boolean).map((part) => String(part));
+  const source = values.join(" ");
   const terms = [
     source,
     toHiragana(source),
     toKatakana(source),
     normalizeCompact(source),
     ...source.split(/\s+/).flatMap(expandSearchTerm),
+    ...values.flatMap(expandSearchPhrase),
+    ...expandSearchPhrase(source),
   ];
-  return terms.map(normalizeSearchToken).join(" ");
+  return uniqueStrings(terms.map(normalizeSearchToken)).join(" ");
+}
+
+function expandSearchPhrase(source) {
+  const words = normalizeText(source).split(/\s+/).filter(Boolean);
+  if (words.length < 2 || words.length > 5) return [];
+  let combinations = [""];
+  for (const word of words) {
+    const variants = uniqueStrings(expandSearchTerm(word)).slice(0, 7);
+    const next = [];
+    for (const prefix of combinations) {
+      for (const variant of variants) {
+        next.push(`${prefix}${variant}`);
+        if (next.length >= 64) break;
+      }
+      if (next.length >= 64) break;
+    }
+    combinations = next;
+  }
+  return combinations;
 }
 
 function expandSearchTerm(term) {
