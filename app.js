@@ -22,6 +22,7 @@ const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
+const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
 const VIEW_META = {
   Explore: {
     path: "/",
@@ -2673,7 +2674,7 @@ function normalizeSearchToken(value) {
 }
 
 function normalizeCompact(value) {
-  return normalizeText(value).replace(/[ \u3000・･＆&.．\-ー－〜～~（）()【】[\]「」『』：:]/g, "");
+  return normalizeText(value).replace(SEARCH_SEPARATOR_PATTERN, "");
 }
 
 function toKatakana(value) {
@@ -2686,7 +2687,7 @@ function toHiragana(value) {
 
 function normalizeFacilityName(value) {
   return normalizeText(value)
-    .replace(/[ \u3000・･＆&.．\-ー－〜～~（）()【】\[\]「」『』：:]/g, "")
+    .replace(SEARCH_SEPARATOR_PATTERN, "")
     .replace(/天然温泉かけ流し/g, "")
     .replace(/プレミア/g, "");
 }
