@@ -22,7 +22,76 @@ const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
-const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
+const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
+const SEARCH_WORD_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´（）()【】\[\]「」『』：:]+/g;
+const KANA_LOOSE_MAP = {
+  ァ: "ア", ィ: "イ", ゥ: "ウ", ェ: "エ", ォ: "オ",
+  ャ: "ヤ", ュ: "ユ", ョ: "ヨ", ッ: "ツ", ヮ: "ワ",
+  ヵ: "カ", ヶ: "ケ", ヰ: "イ", ヱ: "エ", ヲ: "オ", ヴ: "ブ",
+};
+const SEARCH_READING_REPLACEMENTS = [
+  ["湯", "ユ"],
+  ["温泉", "オンセン"],
+  ["銭湯", "セントウ"],
+  ["風呂", "フロ"],
+  ["水風呂", "ミズブロ"],
+  ["健康", "ケンコウ"],
+  ["宝", "タカラ"],
+  ["栄", "サカエ"],
+  ["楽", "ラク"],
+  ["竜泉寺", "リュウセンジ"],
+  ["水春", "スイシュン"],
+  ["富士", "フジ"],
+  ["森", "モリ"],
+  ["空", "ソラ"],
+  ["海", "ウミ"],
+  ["花", "ハナ"],
+  ["城", "シロ"],
+  ["亀", "カメ"],
+  ["荘", "ソウ"],
+  ["館", "カン"],
+  ["駅前", "エキマエ"],
+  ["湯処", "ユドコロ"],
+  ["湯どころ", "ユドコロ"],
+  ["湯所", "ユドコロ"],
+  ["湯元", "ユモト"],
+  ["湯屋", "ユヤ"],
+  ["湯楽", "ユラク"],
+  ["湯庵", "ユアン"],
+  ["湯音", "ユネ"],
+  ["楽の湯", "ラクノユ"],
+  ["宝乃湯", "タカラノユ"],
+  ["満天", "マンテン"],
+  ["万葉", "マンヨウ"],
+  ["極楽湯", "ゴクラクユ"],
+  ["喜多の湯", "キタノユ"],
+  ["平和温泉", "ヘイワオンセン"],
+  ["＆", "アンド"],
+  ["&", "アンド"],
+  ["×", "エックス"],
+  ["✕", "エックス"],
+  ["✖", "エックス"],
+];
+const ROMAJI_DIGRAPHS = {
+  キャ: "kya", キュ: "kyu", キョ: "kyo", シャ: "sha", シュ: "shu", ショ: "sho",
+  チャ: "cha", チュ: "chu", チョ: "cho", ニャ: "nya", ニュ: "nyu", ニョ: "nyo",
+  ヒャ: "hya", ヒュ: "hyu", ヒョ: "hyo", ミャ: "mya", ミュ: "myu", ミョ: "myo",
+  リャ: "rya", リュ: "ryu", リョ: "ryo", ギャ: "gya", ギュ: "gyu", ギョ: "gyo",
+  ジャ: "ja", ジュ: "ju", ジョ: "jo", ビャ: "bya", ビュ: "byu", ビョ: "byo",
+  ピャ: "pya", ピュ: "pyu", ピョ: "pyo", ファ: "fa", フィ: "fi", フェ: "fe", フォ: "fo",
+  ウィ: "wi", ウェ: "we", ウォ: "wo", ヴァ: "va", ヴィ: "vi", ヴェ: "ve", ヴォ: "vo",
+  ティ: "ti", ディ: "di", トゥ: "tu", ドゥ: "du", シェ: "she", ジェ: "je", チェ: "che",
+};
+const ROMAJI_CHARS = {
+  ア: "a", イ: "i", ウ: "u", エ: "e", オ: "o", カ: "ka", キ: "ki", ク: "ku", ケ: "ke", コ: "ko",
+  サ: "sa", シ: "shi", ス: "su", セ: "se", ソ: "so", タ: "ta", チ: "chi", ツ: "tsu", テ: "te", ト: "to",
+  ナ: "na", ニ: "ni", ヌ: "nu", ネ: "ne", ノ: "no", ハ: "ha", ヒ: "hi", フ: "fu", ヘ: "he", ホ: "ho",
+  マ: "ma", ミ: "mi", ム: "mu", メ: "me", モ: "mo", ヤ: "ya", ユ: "yu", ヨ: "yo",
+  ラ: "ra", リ: "ri", ル: "ru", レ: "re", ロ: "ro", ワ: "wa", ン: "n",
+  ガ: "ga", ギ: "gi", グ: "gu", ゲ: "ge", ゴ: "go", ザ: "za", ジ: "ji", ズ: "zu", ゼ: "ze", ゾ: "zo",
+  ダ: "da", ヂ: "ji", ヅ: "zu", デ: "de", ド: "do", バ: "ba", ビ: "bi", ブ: "bu", ベ: "be", ボ: "bo",
+  パ: "pa", ピ: "pi", プ: "pu", ペ: "pe", ポ: "po",
+};
 const VIEW_META = {
   Explore: {
     path: "/",
@@ -93,7 +162,23 @@ const SEARCH_SYNONYM_GROUPS = [
   ["onsen", "温泉", "おんせん", "オンセン"],
   ["loyly", "ロウリュ", "ロウリュウ", "ろうりゅ", "セルフロウリュ"],
   ["private", "プライベート", "個室", "貸切"],
+  ["yutopia", "湯とぴあ", "湯トピア", "ユートピア", "ゆーとぴあ", "ゆうとぴあ"],
+  ["yuraku", "湯楽", "ゆらく", "ユラク"],
+  ["yuyu", "ゆーゆー", "ゆうゆう", "ユーユー"],
+  ["honoka", "ほのか", "ホノカ"],
+  ["dormy", "ドーミー", "どーみー"],
+  ["inn", "イン", "いん"],
+  ["express", "エクスプレス", "えくすぷれす"],
+  ["cabin", "キャビン", "きゃびん"],
+  ["new", "ニュー", "にゅー"],
+  ["king", "キング", "きんぐ"],
+  ["queen", "クイーン", "くいーん"],
+  ["grand", "グランド", "ぐらんど"],
+  ["villa", "ヴィラ", "ビラ", "びら"],
+  ["wellness", "ウェルネス", "うぇるねす"],
+  ["and", "アンド", "あんど", "&", "＆"],
 ];
+const SEARCH_CONNECTOR_TERMS = ["and", "アンド", "あんど", "&", "＆"];
 
 const STAMP_STYLES = {
   wood: { kanji: "薪", color: "#2d6a4f", bg: "#eff7ef" },
@@ -1834,7 +1919,7 @@ function renderSharedHint() {
 function getFilteredFacilities() {
   return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
-    const matchesSearch = !searchNeedles.length || searchNeedles.every((needle) => haystack.includes(needle));
+    const matchesSearch = !searchNeedles.length || matchesSearchBlob(haystack, searchNeedles);
     const matchesFeatures = [...selectedFeatureFilters].every((feature) => features.includes(feature));
     const matchesFilter =
       activeFilter === "all" ||
@@ -2027,10 +2112,10 @@ function moveToSearchPrefecture(value) {
 
   if (term.length < 2) return false;
   const records = getFacilitySearchRecords();
-  const nameMatch = records.find(({ nameBlob }) => needles.every((needle) => nameBlob.includes(needle)));
+  const nameMatch = records.find(({ nameBlob }) => matchesSearchBlob(nameBlob, needles));
   if (nameMatch) return setSelectedPrefecture(nameMatch.facility.prefecture);
 
-  const matchingFacilities = records.filter(({ haystack }) => needles.every((needle) => haystack.includes(needle)));
+  const matchingFacilities = records.filter(({ haystack }) => matchesSearchBlob(haystack, needles));
   const matchedPrefectures = [...new Set(matchingFacilities.map(({ facility }) => facility.prefecture))];
   if (matchedPrefectures.length === 1) return setSelectedPrefecture(matchedPrefectures[0]);
   return false;
@@ -2609,31 +2694,86 @@ function setSearchTerm(value) {
 function createSearchNeedles(value) {
   const base = normalizeText(value);
   if (!base) return [];
-  return base.split(" ")
-    .flatMap(expandSearchTerm)
-    .map(normalizeSearchToken)
-    .filter((term) => term.length >= 1)
-    .filter((term, index, all) => all.indexOf(term) === index);
+  const words = tokenizeSearchInput(base)
+    .filter(Boolean)
+    .filter((word) => !isSearchConnectorNeedle(normalizeSearchToken(word)));
+  const tokens = words.length ? words : [base];
+  return tokens
+    .map(createSearchNeedleGroup)
+    .filter((group) => group.length);
+}
+
+function tokenizeSearchInput(value) {
+  return normalizeText(value)
+    .replace(/\band\b/g, " ")
+    .split(SEARCH_WORD_SEPARATOR_PATTERN)
+    .map((word) => word.trim())
+    .filter(Boolean);
+}
+
+function createSearchNeedleGroup(term) {
+  return uniqueStrings([
+    ...createSearchPrimaryVariants(term),
+    ...(shouldUseSynonymExpansion(term) ? expandSearchTerm(term) : []),
+  ].map(normalizeSearchToken))
+    .filter((needle) => needle.length >= 1)
+    .filter((needle) => !isSearchConnectorNeedle(needle))
+    .slice(0, 96);
+}
+
+function createSearchPrimaryVariants(term) {
+  const termVariants = uniqueStrings([term, ...expandSearchTextVariants(term)]).slice(0, 32);
+  return termVariants.flatMap((value) => [
+    value,
+    toHiragana(value),
+    toKatakana(value),
+    normalizeCompact(value),
+    normalizeKanaLoose(value),
+    normalizeKanaLongVowels(value),
+    romanizeSearchText(value),
+  ]);
+}
+
+function shouldUseSynonymExpansion(term) {
+  const compact = normalizeSearchToken(term);
+  const ascii = /^[a-z0-9]+$/.test(normalizeCompact(term));
+  return ascii || compact.length <= 3;
 }
 
 function matchesSearchNeedles(parts, needles) {
   if (!needles.length) return true;
   const blob = buildSearchBlob(parts);
-  return needles.every((needle) => blob.includes(needle));
+  return matchesSearchBlob(blob, needles);
+}
+
+function matchesSearchBlob(blob, needles) {
+  return needles.every((group) => group.some((needle) => blob.includes(needle)));
+}
+
+function isSearchConnectorNeedle(needle) {
+  return SEARCH_CONNECTOR_TERMS.some((term) => normalizeSearchToken(term) === needle);
 }
 
 function buildSearchBlob(parts) {
   const values = parts.filter(Boolean).map((part) => String(part));
   const source = values.join(" ");
-  const terms = [
+  const sourceVariants = uniqueStrings([
     source,
-    toHiragana(source),
-    toKatakana(source),
-    normalizeCompact(source),
-    ...source.split(/\s+/).flatMap(expandSearchTerm),
-    ...values.flatMap(expandSearchPhrase),
-    ...expandSearchPhrase(source),
-  ];
+    ...values,
+    ...values.flatMap(expandSearchTextVariants),
+    ...expandSearchTextVariants(source),
+  ]).slice(0, 96);
+  const terms = sourceVariants.flatMap((value) => [
+    value,
+    toHiragana(value),
+    toKatakana(value),
+    normalizeCompact(value),
+    normalizeKanaLoose(value),
+    normalizeKanaLongVowels(value),
+    romanizeSearchText(value),
+    ...value.split(/\s+/).flatMap(expandSearchTerm),
+    ...expandSearchPhrase(value),
+  ]);
   return uniqueStrings(terms.map(normalizeSearchToken)).join(" ");
 }
 
@@ -2658,15 +2798,53 @@ function expandSearchPhrase(source) {
 
 function expandSearchTerm(term) {
   const normalized = normalizeText(term);
-  const compact = normalizeCompact(normalized);
-  const variants = [normalized, toHiragana(normalized), toKatakana(normalized), compact];
+  const termVariants = uniqueStrings([normalized, ...expandSearchTextVariants(normalized)]).slice(0, 32);
+  const variants = termVariants.flatMap((value) => [
+    value,
+    toHiragana(value),
+    toKatakana(value),
+    normalizeCompact(value),
+    normalizeKanaLoose(value),
+    normalizeKanaLongVowels(value),
+    romanizeSearchText(value),
+  ]);
+  const normalizedCandidates = uniqueStrings(termVariants.flatMap((value) => [
+    normalizeCompact(value),
+    normalizeSearchToken(value),
+    normalizeKanaLoose(value),
+    normalizeKanaLongVowels(value),
+    romanizeSearchText(value),
+  ]));
   SEARCH_SYNONYM_GROUPS.forEach((group) => {
-    const normalizedGroup = group.map(normalizeSearchToken);
-    if (normalizedGroup.some((item) => compact.includes(item) || normalizeSearchToken(normalized).includes(item))) {
+    const normalizedGroup = uniqueStrings(group.flatMap((item) => [
+      normalizeSearchToken(item),
+      normalizeKanaLoose(item),
+      normalizeKanaLongVowels(item),
+      romanizeSearchText(item),
+    ])).filter(Boolean);
+    if (normalizedGroup.some((item) => normalizedCandidates.some((candidate) => {
+      if (candidate === item) return true;
+      return candidate.length >= 4 && item.length >= 3 && (candidate.includes(item) || item.includes(candidate));
+    }))) {
       variants.push(...group);
     }
   });
   return variants;
+}
+
+function expandSearchTextVariants(source) {
+  const normalized = normalizeText(source);
+  if (!normalized) return [];
+  const variants = new Set([normalized]);
+  for (const [from, to] of SEARCH_READING_REPLACEMENTS) {
+    const current = [...variants];
+    for (const value of current) {
+      if (!value.includes(from)) continue;
+      variants.add(value.split(from).join(to));
+      if (variants.size >= 80) return [...variants];
+    }
+  }
+  return [...variants];
 }
 
 function normalizeSearchToken(value) {
@@ -2675,6 +2853,46 @@ function normalizeSearchToken(value) {
 
 function normalizeCompact(value) {
   return normalizeText(value).replace(SEARCH_SEPARATOR_PATTERN, "");
+}
+
+function normalizeKanaLoose(value) {
+  return normalizeCompact(toKatakana(value)).replace(/[ァィゥェォャュョッヮヵヶヰヱヲヴ]/g, (char) => KANA_LOOSE_MAP[char] || char);
+}
+
+function normalizeKanaLongVowels(value) {
+  let folded = normalizeKanaLoose(value);
+  let previous = "";
+  while (folded !== previous) {
+    previous = folded;
+    folded = folded
+      .replace(/ユウ/g, "ユ")
+      .replace(/([キシチニヒミリギジヂビピ]ユ)ウ/g, "$1")
+      .replace(/ユ{3,}/g, "ユユ")
+      .replace(/([エケセテネヘメレゲゼデベペ])(イ|エ)/g, "$1")
+      .replace(/([オコソトノホモヨロゴゾドボポ])(ウ|オ)/g, "$1");
+  }
+  return folded;
+}
+
+function romanizeSearchText(value) {
+  const kana = normalizeKanaLongVowels(value);
+  if (/[一-龯々]/.test(kana)) return "";
+  let result = "";
+  for (let index = 0; index < kana.length; index += 1) {
+    const pair = kana.slice(index, index + 2);
+    if (ROMAJI_DIGRAPHS[pair]) {
+      result += ROMAJI_DIGRAPHS[pair];
+      index += 1;
+      continue;
+    }
+    const char = kana[index];
+    if (ROMAJI_CHARS[char]) {
+      result += ROMAJI_CHARS[char];
+    } else if (/[a-z0-9]/i.test(char)) {
+      result += char.toLowerCase();
+    }
+  }
+  return result;
 }
 
 function toKatakana(value) {
