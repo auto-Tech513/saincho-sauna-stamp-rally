@@ -1,6 +1,3 @@
-import { PREFECTURES, SEED_FACILITIES } from "./data.js";
-import { GEAR_PRODUCTS, GUIDE_FAQS, SAUNA_ARTICLES, SAUNA_REFERENCES, SAMESHI_SPOTS } from "./content.js";
-
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
 const SETTINGS_KEY = "saincho-settings-v1";
@@ -13,7 +10,8 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const PRODUCT_RECOMMENDATIONS = GEAR_PRODUCTS.slice(0, 4);
+const APP_BUILD_ID = "20260705-loadfix";
+const DATA_IMPORT_TIMEOUT_MS = 12000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
@@ -129,6 +127,15 @@ const VIEW_META = {
     description: "サ印帳に候補がないサウナを自分で登録し、特徴、メモ、押印候補として管理できます。",
   },
 };
+
+let PREFECTURES = [];
+let SEED_FACILITIES = [];
+let GEAR_PRODUCTS = [];
+let GUIDE_FAQS = [];
+let SAUNA_ARTICLES = [];
+let SAUNA_REFERENCES = [];
+let SAMESHI_SPOTS = [];
+let PRODUCT_RECOMMENDATIONS = [];
 
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -381,10 +388,22 @@ const el = {
 
 init();
 
-function init() {
+async function init() {
   activeView = getViewFromLocation();
   applyActiveView(activeView);
   updateDocumentMetaForView(activeView);
+  bindEvents();
+  renderInstallPrompt();
+  registerServiceWorker();
+  renderBootLoading();
+
+  try {
+    await loadAppModules();
+  } catch (error) {
+    renderBootError(error);
+    return;
+  }
+
   renderPrefSelect();
   renderFeatureControls();
   hydrateSearchFromUrl();
@@ -392,9 +411,6 @@ function init() {
   renderProfilePanel();
   renderShopPanel();
   renderAll();
-  bindEvents();
-  renderInstallPrompt();
-  registerServiceWorker();
   if (IS_STATIC_LOCAL_PREVIEW) {
     sharedFacilitiesConfigured = false;
     rankingConfigured = false;
@@ -412,6 +428,64 @@ function init() {
     renderAll();
     el.main.scrollTo({ top: 0, behavior: "smooth" });
   });
+}
+
+async function loadAppModules() {
+  const version = encodeURIComponent(APP_BUILD_ID);
+  const [dataModule, contentModule] = await Promise.all([
+    importWithTimeout(`./data.js?v=${version}`, DATA_IMPORT_TIMEOUT_MS, "候補データ"),
+    importWithTimeout(`./content.js?v=${version}`, DATA_IMPORT_TIMEOUT_MS, "コンテンツ"),
+  ]);
+
+  PREFECTURES = Array.isArray(dataModule.PREFECTURES) ? dataModule.PREFECTURES : [];
+  SEED_FACILITIES = Array.isArray(dataModule.SEED_FACILITIES) ? dataModule.SEED_FACILITIES : [];
+  GEAR_PRODUCTS = Array.isArray(contentModule.GEAR_PRODUCTS) ? contentModule.GEAR_PRODUCTS : [];
+  GUIDE_FAQS = Array.isArray(contentModule.GUIDE_FAQS) ? contentModule.GUIDE_FAQS : [];
+  SAUNA_ARTICLES = Array.isArray(contentModule.SAUNA_ARTICLES) ? contentModule.SAUNA_ARTICLES : [];
+  SAUNA_REFERENCES = Array.isArray(contentModule.SAUNA_REFERENCES) ? contentModule.SAUNA_REFERENCES : [];
+  SAMESHI_SPOTS = Array.isArray(contentModule.SAMESHI_SPOTS) ? contentModule.SAMESHI_SPOTS : [];
+  PRODUCT_RECOMMENDATIONS = GEAR_PRODUCTS.slice(0, 4);
+
+  if (!PREFECTURES.length || !SEED_FACILITIES.length) {
+    throw new Error("候補データが空です");
+  }
+}
+
+function importWithTimeout(specifier, timeoutMs, label) {
+  let timeoutId = 0;
+  const timeout = new Promise((_, reject) => {
+    timeoutId = window.setTimeout(() => reject(new Error(`${label}の読み込みが時間切れです`)), timeoutMs);
+  });
+  return Promise.race([import(specifier), timeout]).finally(() => window.clearTimeout(timeoutId));
+}
+
+function renderBootLoading() {
+  if (el.collectionScope) el.collectionScope.textContent = "候補データを読み込み中";
+  if (el.totalCandidateCount) el.totalCandidateCount.textContent = "0";
+  if (el.coveredPrefCount) el.coveredPrefCount.textContent = "0";
+  if (el.facilityList) {
+    el.facilityList.innerHTML = `
+      <div class="empty-state app-loading-state" role="status" aria-live="polite">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <p>全国のサウナ候補を読み込んでいます。</p>
+      </div>
+    `;
+  }
+}
+
+function renderBootError(error) {
+  console.error(error);
+  if (el.collectionScope) el.collectionScope.textContent = "候補データの更新待ち";
+  if (el.facilityList) {
+    el.facilityList.innerHTML = `
+      <div class="empty-state app-loading-state app-error-state" role="alert">
+        <strong>候補データの読み込みが止まっています</strong>
+        <p>古いService Workerや通信キャッシュを掴んでいる可能性があります。下のボタンで更新をやり直してください。</p>
+        <button class="primary-button" type="button" data-action="reload-app">更新して再読み込み</button>
+      </div>
+    `;
+  }
+  showToast("候補データの読み込みをやり直してください");
 }
 
 function bindEvents() {
@@ -548,6 +622,10 @@ function bindEvents() {
 
     const button = event.target.closest("[data-action]");
     if (!button) return;
+    if (button.dataset.action === "reload-app") {
+      reloadAppFresh();
+      return;
+    }
     if (button.dataset.action === "prefill-add") {
       prefillAddFormFromSearch();
       return;
@@ -830,13 +908,32 @@ function applyActiveView(view) {
 
 function renderAll() {
   renderSummary();
-  renderQuestPanel();
-  renderExplore();
-  renderPassport();
-  renderStats();
-  renderGearPage();
-  renderSameshiPage();
-  renderGuidePage();
+  if (activeView === "Explore") {
+    renderQuestPanel();
+    renderExplore();
+    return;
+  }
+  if (activeView === "Passport") {
+    renderPassport();
+    return;
+  }
+  if (activeView === "Stats") {
+    renderStats();
+    renderShopPanel();
+    return;
+  }
+  if (activeView === "Gear") {
+    renderGearPage();
+    return;
+  }
+  if (activeView === "Sameshi") {
+    renderSameshiPage();
+    return;
+  }
+  if (activeView === "Guide") {
+    renderGuidePage();
+    return;
+  }
 }
 
 function renderSummary() {
@@ -1948,7 +2045,36 @@ function renderSharedHint() {
     : "共有ストレージ未接続時は、この端末の候補として保存します。";
 }
 
+async function reloadAppFresh() {
+  try {
+    if ("serviceWorker" in navigator) {
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      await Promise.all(registrations.map((registration) => registration.update().catch(() => null)));
+    }
+    if ("caches" in window) {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter((key) => key.startsWith("saincho-")).map((key) => caches.delete(key)));
+    }
+  } catch {
+    // Reload still helps when cache APIs are unavailable or blocked.
+  } finally {
+    location.replace(`${location.pathname}${location.search ? `${location.search}&` : "?"}refresh=${Date.now()}${location.hash}`);
+  }
+}
+
 function getFilteredFacilities() {
+  const needsSearchIndex = searchNeedles.length > 0 || selectedFeatureFilters.size > 0;
+  if (!needsSearchIndex) {
+    return getFacilities().filter((facility) => {
+      const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
+      const matchesFilter =
+        activeFilter === "all" ||
+        (activeFilter === "unvisited" && !state.visited[facility.id]) ||
+        (activeFilter === "wishlist" && state.wishlist[facility.id]);
+      return selected && matchesFilter;
+    });
+  }
+
   return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
     const matchesSearch = !searchNeedles.length || matchesSearchBlob(haystack, searchNeedles);
@@ -2794,7 +2920,8 @@ function createSearchPrimaryVariants(term) {
 function shouldUseSynonymExpansion(term) {
   const compact = normalizeSearchToken(term);
   const ascii = /^[a-z0-9]+$/.test(normalizeCompact(term));
-  return ascii || compact.length <= 3;
+  const kana = /[ぁ-んァ-ン]/.test(term);
+  return ascii || kana || compact.length <= 3;
 }
 
 function matchesSearchNeedles(parts, needles) {
@@ -2813,44 +2940,54 @@ function isSearchConnectorNeedle(needle) {
 
 function buildSearchBlob(parts) {
   const values = parts.filter(Boolean).map((part) => String(part));
-  const source = values.join(" ");
-  const sourceVariants = uniqueStrings([
-    source,
-    ...values,
-    ...values.flatMap(expandSearchTextVariants),
-    ...expandSearchTextVariants(source),
-  ]).slice(0, 96);
-  const terms = sourceVariants.flatMap((value) => [
-    value,
-    toHiragana(value),
-    toKatakana(value),
-    normalizeCompact(value),
-    normalizeKanaLoose(value),
-    normalizeKanaLongVowels(value),
-    romanizeSearchText(value),
-    ...value.split(/\s+/).flatMap(expandSearchTerm),
-    ...expandSearchPhrase(value),
-  ]);
-  return uniqueStrings(terms.map(normalizeSearchToken)).join(" ");
+  const tokens = new Set();
+  values.forEach((value) => {
+    addSearchBlobTokens(tokens, value);
+    tokenizeSearchInput(value).slice(0, 16).forEach((word) => addSearchBlobTokens(tokens, word));
+  });
+  addMatchedSynonymTokens(tokens);
+  return [...tokens].filter(Boolean).join(" ");
 }
 
-function expandSearchPhrase(source) {
-  const words = normalizeText(source).split(/\s+/).filter(Boolean);
-  if (words.length < 2 || words.length > 5) return [];
-  let combinations = [""];
-  for (const word of words) {
-    const variants = uniqueStrings(expandSearchTerm(word)).slice(0, 7);
-    const next = [];
-    for (const prefix of combinations) {
-      for (const variant of variants) {
-        next.push(`${prefix}${variant}`);
-        if (next.length >= 64) break;
-      }
-      if (next.length >= 64) break;
-    }
-    combinations = next;
-  }
-  return combinations;
+function addSearchBlobTokens(tokens, value) {
+  const normalized = normalizeText(value);
+  if (!normalized) return;
+  const variants = uniqueStrings([
+    normalized,
+    ...expandSearchTextVariants(normalized).slice(0, 12),
+  ]);
+  variants.forEach((variant) => {
+    [
+      variant,
+      toHiragana(variant),
+      toKatakana(variant),
+      normalizeCompact(variant),
+      normalizeKanaLoose(variant),
+      normalizeKanaLongVowels(variant),
+      romanizeSearchText(variant),
+    ].forEach((token) => {
+      const normalizedToken = normalizeSearchToken(token);
+      if (normalizedToken) tokens.add(normalizedToken);
+    });
+  });
+}
+
+function addMatchedSynonymTokens(tokens) {
+  const currentTokens = [...tokens];
+  SEARCH_SYNONYM_GROUPS.forEach((group) => {
+    const groupTokens = uniqueStrings(group.flatMap((term) => [
+      normalizeSearchToken(term),
+      normalizeKanaLoose(term),
+      normalizeKanaLongVowels(term),
+      romanizeSearchText(term),
+    ])).filter(Boolean);
+    const matched = groupTokens.some((groupToken) => currentTokens.some((token) => {
+      if (token === groupToken) return true;
+      return groupToken.length >= 4 && token.length >= 4 && (token.includes(groupToken) || groupToken.includes(token));
+    }));
+    if (!matched) return;
+    group.forEach((term) => addSearchBlobTokens(tokens, term));
+  });
 }
 
 function expandSearchTerm(term) {
@@ -2879,8 +3016,10 @@ function expandSearchTerm(term) {
       normalizeKanaLongVowels(item),
       romanizeSearchText(item),
     ])).filter(Boolean);
+    const genericSaunaGroup = normalizedGroup.some((item) => item === "sauna" || item === "サウナ");
     if (normalizedGroup.some((item) => normalizedCandidates.some((candidate) => {
       if (candidate === item) return true;
+      if (genericSaunaGroup) return false;
       return candidate.length >= 4 && item.length >= 3 && (candidate.includes(item) || item.includes(candidate));
     }))) {
       variants.push(...group);
@@ -3000,5 +3139,16 @@ function escapeAttr(value) {
 
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
-  navigator.serviceWorker.register("./sw.js").catch(() => {});
+  let reloadedForController = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (reloadedForController) return;
+    reloadedForController = true;
+    const key = `saincho-controller-reload-${APP_BUILD_ID}`;
+    if (sessionStorage.getItem(key)) return;
+    sessionStorage.setItem(key, "1");
+    location.reload();
+  });
+  navigator.serviceWorker.register(`./sw.js?v=${encodeURIComponent(APP_BUILD_ID)}`)
+    .then((registration) => registration.update())
+    .catch(() => {});
 }

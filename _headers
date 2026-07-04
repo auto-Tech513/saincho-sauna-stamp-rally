@@ -3,6 +3,21 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
+/app.js
+  Cache-Control: no-cache, must-revalidate
+
+/data.js
+  Cache-Control: no-cache, must-revalidate
+
+/content.js
+  Cache-Control: no-cache, must-revalidate
+
+/styles.css
+  Cache-Control: no-cache, must-revalidate
+
+/sw.js
+  Cache-Control: no-cache, must-revalidate
+
 /assets/*
   Cache-Control: public, max-age=3600, must-revalidate
 
