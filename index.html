@@ -239,7 +239,7 @@
               {
                 "@type": "HowToStep",
                 "name": "探す",
-                "text": "サウナ名、都道府県、特徴で候補を検索します。"
+                "text": "サウナ名、都道府県、住所、特徴で候補を検索します。"
               },
               {
                 "@type": "HowToStep",
@@ -326,7 +326,7 @@
           <div class="tool-band">
             <label class="search-box">
               <span aria-hidden="true"></span>
-              <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・特徴で検索" placeholder="サウナ名・県・特徴で検索" />
+              <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="サウナ名・県・住所・特徴で検索" />
               <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
                 <span class="icon-close" aria-hidden="true"></span>
               </button>
@@ -356,7 +356,7 @@
               </article>
               <article>
                 <h2>サウナ 検索とサウナ 記録をまとめる</h2>
-                <p>サウナ名、都道府県、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、メモ、X共有まで一つで管理できます。</p>
+                <p>サウナ名、都道府県、住所、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、経路検索、メモ、X共有まで一つで管理できます。</p>
               </article>
             </div>
           </details>
@@ -539,6 +539,10 @@
             <label>
               <span>市区町村・エリア</span>
               <input name="city" maxlength="36" placeholder="例: 箱根町" />
+            </label>
+            <label>
+              <span>住所</span>
+              <input name="address" maxlength="96" placeholder="例: 神奈川県足柄下郡箱根町湯本..." />
             </label>
             <fieldset class="feature-picker">
               <legend>特徴（複数選択可）</legend>

@@ -630,6 +630,7 @@ function bindEvents() {
       name: String(form.get("name")).trim(),
       prefecture: String(form.get("prefecture")),
       city: String(form.get("city")).trim(),
+      address: String(form.get("address")).trim(),
       trait: inferTraitFromFeatures(selectedFeatures),
       tags: ["マイサウナ", ...selectedFeatures],
       features: selectedFeatures,
@@ -1031,11 +1032,13 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
         <span class="spotlight-label">次の一湯</span>
         <h3>${escapeHtml(facility.name)}</h3>
         <p>${escapeHtml(getFacilityMeta(facility))}</p>
+        ${getFacilityAddress(facility) ? `<p class="spotlight-address">${escapeHtml(getFacilityAddress(facility))}</p>` : ""}
       </div>
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        ${renderMapRouteLink(facility)}
         <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
       </div>
       ${renderFacilityGearNudge(facility)}
@@ -1091,13 +1094,38 @@ function renderFacilityCard(facility) {
           ${headBadge}
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
+        ${renderFacilityAddress(facility)}
         ${tags ? `<div class="tag-row">${tags}</div>` : ""}
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
-        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+        <div class="facility-utility-actions">
+          ${renderMapRouteLink(facility)}
+          <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+        </div>
         ${renderMemoPanel(facility)}
       </div>
     </article>
   `.trim();
+}
+
+function renderFacilityAddress(facility) {
+  const address = getFacilityAddress(facility);
+  if (!address) return "";
+  return `
+    <p class="facility-address">
+      <span class="map-route-icon" aria-hidden="true"></span>
+      <span>${escapeHtml(address)}</span>
+    </p>
+  `;
+}
+
+function renderMapRouteLink(facility) {
+  const label = getFacilityAddress(facility) ? "経路" : "地図で探す";
+  return `
+    <a class="map-route-button" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer" aria-label="Google Mapsで${escapeAttr(facility.name)}への経路を開く">
+      <span class="map-route-icon" aria-hidden="true"></span>
+      <span>${label}</span>
+    </a>
+  `;
 }
 
 function renderPassport() {
@@ -1790,10 +1818,12 @@ function shareFacilityMemo(facility) {
 
 function shareFacility(facility) {
   const detail = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
+  const address = getFacilityAddress(facility);
   const tags = normalizeFeatures(facility.tags || []).slice(0, 4);
   const text = [
     `サ印帳でおすすめ: ${facility.name}`,
     detail,
+    address ? `住所: ${address}` : "",
     tags.length ? `特徴: ${tags.join("・")}` : "",
     "#サ印帳 #サウナ",
   ].filter(Boolean).join("\n");
@@ -1865,6 +1895,7 @@ async function publishSharedFacility(facility) {
       name: facility.name,
       prefecture: facility.prefecture,
       city: facility.city,
+      address: facility.address || "",
       features: facility.features || [],
     }),
   });
@@ -1900,6 +1931,7 @@ function normalizeSharedFacility(value) {
     name,
     prefecture,
     city: String(value.city || "").trim().slice(0, 40),
+    address: String(value.address || "").trim().slice(0, 96),
     trait: value.trait || inferTraitFromFeatures(features),
     tags: ["みんなの追加", ...features],
     features,
@@ -1952,6 +1984,8 @@ function getFacilitySearchRecords() {
       facility.name,
       facility.prefecture,
       facility.city,
+      getFacilityAddress(facility),
+      getFacilityMapSearchText(facility),
       facility.source,
       facility.note,
       memo?.text,
@@ -1984,6 +2018,28 @@ function invalidateFacilityCaches() {
 
 function getFacilityMeta(facility) {
   return [facility.prefecture, facility.city, getFacilitySourceLabel(facility)].filter(Boolean).join(" / ");
+}
+
+function getFacilityAddress(facility) {
+  return String(facility.address || "").trim();
+}
+
+function getFacilityMapSearchText(facility) {
+  const address = getFacilityAddress(facility);
+  if (address) return [facility.name, address].filter(Boolean).join(" ");
+  return [
+    facility.name,
+    facility.prefecture,
+    facility.city,
+  ].filter(Boolean).join(" ");
+}
+
+function getFacilityDirectionsUrl(facility) {
+  const destination = getFacilityMapSearchText(facility);
+  const url = new URL("https://www.google.com/maps/dir/");
+  url.searchParams.set("api", "1");
+  url.searchParams.set("destination", destination || facility.name);
+  return url.href;
 }
 
 function getFacilitySourceLabel(facility) {
@@ -2032,6 +2088,7 @@ function getFacilityFeatures(facility) {
   const text = normalizeText([
     facility.name,
     facility.city,
+    getFacilityAddress(facility),
     facility.note,
     ...(facility.tags || []),
   ].join(" "));

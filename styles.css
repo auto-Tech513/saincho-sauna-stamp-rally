@@ -992,6 +992,12 @@ a {
   line-height: 1.45;
 }
 
+.spotlight-card .spotlight-address {
+  margin-top: 4px;
+  color: rgb(255 255 255 / 0.82);
+  font-size: 11px;
+}
+
 .spotlight-actions {
   grid-column: 1 / -1;
   display: grid;
@@ -1241,6 +1247,24 @@ a {
   line-height: 1.4;
 }
 
+.facility-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin: -2px 0 9px;
+  color: #41504b;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.45;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.facility-address .map-route-icon {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
 .tag-row {
   display: flex;
   flex-wrap: wrap;
@@ -1273,6 +1297,7 @@ a {
 .primary-button,
 .secondary-button,
 .undo-button,
+.map-route-button,
 .facility-share-button,
 .ghost-button,
 .danger-button,
@@ -1338,8 +1363,48 @@ a {
   box-shadow: 0 8px 16px rgb(16 20 23 / 0.12);
 }
 
+.facility-utility-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.facility-utility-actions .facility-share-button {
+  margin-top: 0;
+}
+
+.map-route-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #123f3b;
+  background: #e7f5f1;
+  border: 1px solid #b9ded8;
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgb(10 143 138 / 0.1);
+}
+
+.map-route-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  color: currentColor;
+  border: 2px solid currentColor;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+}
+
+.map-route-icon::after {
+  position: absolute;
+  inset: 3px;
+  content: "";
+  border-radius: 999px;
+  background: currentColor;
+}
+
 .spotlight-actions .facility-share-button {
-  grid-column: 1 / -1;
   margin-top: 0;
 }
 
@@ -3321,6 +3386,7 @@ a {
   .primary-button,
   .secondary-button,
   .undo-button,
+  .map-route-button,
   .facility-share-button,
   .ghost-button,
   .danger-button,

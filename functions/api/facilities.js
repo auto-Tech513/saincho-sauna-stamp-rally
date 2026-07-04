@@ -63,6 +63,7 @@ export async function onRequestPost(context) {
     name: candidate.name,
     prefecture: candidate.prefecture,
     city: candidate.city,
+    address: candidate.address,
     trait: inferTrait(candidate.features),
     tags: ["みんなの追加", ...candidate.features],
     features: candidate.features,
@@ -91,9 +92,10 @@ function normalizeCandidate(value) {
   const name = cleanText(value.name, 64);
   const prefecture = cleanText(value.prefecture, 12);
   const city = cleanText(value.city, 40);
+  const address = cleanText(value.address, 96);
   const features = normalizeFeatures(value.features);
   if (!name || !PREFECTURES.includes(prefecture)) return null;
-  return { name, prefecture, city, features };
+  return { name, prefecture, city, address, features };
 }
 
 function normalizeStoredFacility(value) {
@@ -107,6 +109,7 @@ function normalizeStoredFacility(value) {
     name: candidate.name,
     prefecture: candidate.prefecture,
     city: candidate.city,
+    address: candidate.address,
     trait: inferTrait(candidate.features),
     tags: ["みんなの追加", ...candidate.features],
     features: candidate.features,
