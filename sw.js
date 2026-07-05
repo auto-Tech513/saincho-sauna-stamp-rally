@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v33-growth-audit";
+const CACHE_NAME = "saincho-v36-dedupe-quicklog-v2";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 

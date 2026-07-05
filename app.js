@@ -12,7 +12,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-growth-audit";
+const APP_BUILD_ID = "20260705-dedupe-quicklog-v2";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -158,6 +158,24 @@ const PROMOTION_COPY_OPTIONS = [
   {
     label: "仲間共有",
     text: "どこのサウナ行った？を、サ印で見せられるように。お気に入り、口コミ、ランキングまであるサウナ巡り用Webアプリです。",
+  },
+];
+const QUICK_NOTE_TEMPLATES = [
+  {
+    label: "初回",
+    text: "初訪問。よかった点: / 水風呂: / 外気浴: / 次回試したいこと: ",
+  },
+  {
+    label: "3セット",
+    text: "1セット目: 軽め / 2セット目: 標準 / 3セット目: 仕上げ。体調: / ととのい度: ",
+  },
+  {
+    label: "熱波",
+    text: "熱波・ロウリュあり。香り: / 熱さ: / 休憩の気持ちよさ: / 次回の狙い: ",
+  },
+  {
+    label: "遠征",
+    text: "遠征サ活。移動: / サ飯: / 宿: / ここだけの魅力: / 誰にすすめたいか: ",
   },
 ];
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
@@ -469,6 +487,7 @@ let visibleLimit = 36;
 let questFacilityId = "";
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
+let memoDrafts = {};
 let facilitiesCache = null;
 let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
@@ -788,6 +807,12 @@ function bindEvents() {
     if (conflictInput) conflictInput.checked = false;
   });
 
+  el.main.addEventListener("input", (event) => {
+    const input = event.target instanceof Element ? event.target.closest("[data-note-input]") : null;
+    if (!(input instanceof HTMLTextAreaElement)) return;
+    memoDrafts[input.dataset.noteInput] = input.value;
+  });
+
   el.main.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
@@ -863,6 +888,7 @@ function bindEvents() {
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
     if (button.dataset.action === "favorite") toggleFavorite(facility);
+    if (button.dataset.action === "apply-note-template") applyNoteTemplate(facility, button.dataset.templateIndex);
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
@@ -1633,7 +1659,7 @@ function renderFacilityDetail() {
 }
 
 function getFacilityById(id) {
-  return getFacilities().find((facility) => facility.id === id);
+  return getFacilities().find((facility) => facility.id === id || (facility.legacyIds || []).includes(id));
 }
 
 function getFacilityDetailPath(facility) {
@@ -1777,7 +1803,15 @@ function renderMemoPanel(facility) {
 
 function renderDetailMemoPanel(facility) {
   const memo = getFacilityMemo(facility.id);
+  const draft = memoDrafts[facility.id];
+  const inputValue = draft !== undefined ? draft : (memo?.text || "");
   const updatedAt = memo?.updatedAt ? formatDate(memo.updatedAt) : "";
+  const quickTemplates = QUICK_NOTE_TEMPLATES.map((template, index) => `
+    <button class="quick-note-button" type="button" data-action="apply-note-template" data-id="${escapeAttr(facility.id)}" data-template-index="${index}">
+      <span>${escapeHtml(template.label)}</span>
+      <strong>${escapeHtml(template.text)}</strong>
+    </button>
+  `).join("");
   return `
     <section class="memo-panel detail-memo-panel" aria-label="施設メモ">
       <div class="detail-memo-head">
@@ -1788,7 +1822,10 @@ function renderDetailMemoPanel(facility) {
         ${updatedAt ? `<span>${escapeHtml(updatedAt)} 更新</span>` : `<span>未保存</span>`}
       </div>
       ${memo ? `<p class="memo-text">${escapeHtml(memo.text)}</p>` : ""}
-      <textarea data-note-input="${escapeAttr(facility.id)}" maxlength="240" rows="4" placeholder="感想、気付き、水風呂、再訪したい理由">${memo ? escapeHtml(memo.text) : ""}</textarea>
+      <div class="quick-note-grid" aria-label="サ活メモテンプレ">
+        ${quickTemplates}
+      </div>
+      <textarea data-note-input="${escapeAttr(facility.id)}" maxlength="240" rows="4" placeholder="感想、気付き、水風呂、再訪したい理由">${escapeHtml(inputValue)}</textarea>
       <div class="memo-actions detail-memo-actions">
         <button class="secondary-button" type="button" data-action="save-note" data-id="${escapeAttr(facility.id)}">${memo ? "メモ更新" : "メモ保存"}</button>
         ${memo ? `<button class="undo-button" type="button" data-action="delete-note" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
@@ -1796,6 +1833,32 @@ function renderDetailMemoPanel(facility) {
       </div>
     </section>
   `;
+}
+
+function applyNoteTemplate(facility, indexValue) {
+  const template = QUICK_NOTE_TEMPLATES[Number(indexValue)];
+  if (!template) return;
+  const textarea = [...el.main.querySelectorAll("[data-note-input]")]
+    .find((input) => input.dataset.noteInput === facility.id);
+  if (!(textarea instanceof HTMLTextAreaElement)) return;
+  const current = textarea.value.trim();
+  const next = current ? `${current}\n${template.text}` : template.text;
+  const text = next.slice(0, Number(textarea.maxLength) || 240);
+  state.facilityMemos[facility.id] = {
+    text,
+    updatedAt: new Date().toISOString(),
+  };
+  delete memoDrafts[facility.id];
+  invalidateFacilityCaches();
+  saveState();
+  renderAll();
+  const nextTextarea = [...el.main.querySelectorAll("[data-note-input]")]
+    .find((input) => input.dataset.noteInput === facility.id);
+  if (nextTextarea instanceof HTMLTextAreaElement) {
+    nextTextarea.focus();
+    nextTextarea.setSelectionRange(nextTextarea.value.length, nextTextarea.value.length);
+  }
+  showToast(`${template.label}テンプレをメモに保存しました`);
 }
 
 function renderReviewPanel(facility) {
@@ -2485,7 +2548,8 @@ function isInteractiveCardTarget(target) {
 
 function saveFacilityMemo(facility, button) {
   const panel = button.closest(".memo-panel");
-  const input = panel?.querySelector(`[data-note-input="${cssEscape(facility.id)}"]`);
+  const input = [...(panel?.querySelectorAll("[data-note-input]") || [])]
+    .find((item) => item.dataset.noteInput === facility.id);
   const text = input?.value.trim() || "";
   if (!text) {
     deleteFacilityMemo(facility);
@@ -2495,6 +2559,7 @@ function saveFacilityMemo(facility, button) {
     text,
     updatedAt: new Date().toISOString(),
   };
+  delete memoDrafts[facility.id];
   invalidateFacilityCaches();
   saveState();
   renderAll();
@@ -2502,7 +2567,11 @@ function saveFacilityMemo(facility, button) {
 }
 
 function deleteFacilityMemo(facility) {
-  if (!state.facilityMemos[facility.id]) return;
+  delete memoDrafts[facility.id];
+  if (!state.facilityMemos[facility.id]) {
+    renderAll();
+    return;
+  }
   delete state.facilityMemos[facility.id];
   invalidateFacilityCaches();
   saveState();
@@ -4107,23 +4176,94 @@ function toHiragana(value) {
 
 function normalizeFacilityName(value) {
   return normalizeText(value)
+    .split(/[\/／|｜]/)[0]
+    .replace(/（[^）]*）/g, "")
+    .replace(/\([^)]*\)/g, "")
     .replace(SEARCH_SEPARATOR_PATTERN, "")
     .replace(/天然温泉かけ流し/g, "")
     .replace(/プレミア/g, "");
 }
 
 function dedupeFacilities(facilities) {
-  const seen = new Set();
-  return facilities.filter((facility) => {
-    const key = facilityDuplicateKey(facility);
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
+  const keyToIndex = new Map();
+  const result = [];
+  facilities.forEach((facility) => {
+    const keys = facilityDuplicateKeys(facility);
+    const existingIndex = keys.map((key) => keyToIndex.get(key)).find((index) => Number.isInteger(index));
+    if (existingIndex === undefined) {
+      const index = result.push({ ...facility }) - 1;
+      keys.forEach((key) => keyToIndex.set(key, index));
+      return;
+    }
+    result[existingIndex] = mergeDuplicateFacility(result[existingIndex], facility);
+    facilityDuplicateKeys(result[existingIndex]).forEach((key) => keyToIndex.set(key, existingIndex));
+    keys.forEach((key) => keyToIndex.set(key, existingIndex));
   });
+  return result;
 }
 
-function facilityDuplicateKey(facility) {
-  return `${facility.prefecture}:${normalizeFacilityName(facility.name)}`;
+function facilityDuplicateKeys(facility) {
+  const pref = facility.prefecture || "";
+  const name = normalizeText(facility.name);
+  const nameParts = name.split(/[\/／|｜]/).map((part) => part.trim()).filter(Boolean);
+  const normalizedNames = uniqueStrings([
+    normalizeFacilityName(name),
+    ...nameParts.map(normalizeFacilityName),
+  ]).filter((value) => value.length >= 4);
+  return normalizedNames.map((value) => `${pref}:${value}`);
+}
+
+function mergeDuplicateFacility(current, incoming) {
+  const keepIncomingId = hasFacilityUserSignal(incoming) && !hasFacilityUserSignal(current);
+  const primary = keepIncomingId ? incoming : current;
+  const secondary = keepIncomingId ? current : incoming;
+  const legacyIds = uniqueStrings([
+    primary.id,
+    secondary.id,
+    ...(primary.legacyIds || []),
+    ...(secondary.legacyIds || []),
+  ]).filter((id) => id && id !== primary.id);
+  return {
+    ...secondary,
+    ...primary,
+    id: primary.id,
+    name: preferFacilityName(primary.name, secondary.name),
+    address: primary.address || secondary.address,
+    addressSource: primary.addressSource || secondary.addressSource,
+    city: primary.city || secondary.city,
+    lat: primary.lat || secondary.lat,
+    lng: primary.lng || secondary.lng,
+    image: primary.image || secondary.image,
+    imageSource: primary.imageSource || secondary.imageSource,
+    photoSourceUrl: primary.photoSourceUrl || secondary.photoSourceUrl,
+    rating: primary.rating || secondary.rating,
+    reviewCount: primary.reviewCount || secondary.reviewCount,
+    features: normalizeFeatures([...(secondary.features || []), ...(primary.features || [])]),
+    tags: uniqueStrings([...(secondary.tags || []), ...(primary.tags || [])]),
+    source: primary.source || secondary.source,
+    sourceUrl: primary.sourceUrl || secondary.sourceUrl,
+    legacyIds,
+  };
+}
+
+function preferFacilityName(primaryName, secondaryName) {
+  const primary = String(primaryName || "").trim();
+  const secondary = String(secondaryName || "").trim();
+  if (!primary) return secondary;
+  if (!secondary) return primary;
+  if (primary.includes("/") && !secondary.includes("/")) return secondary;
+  return primary.length <= secondary.length + 8 ? primary : secondary;
+}
+
+function hasFacilityUserSignal(facility) {
+  const ids = [facility.id, ...(facility.legacyIds || [])].filter(Boolean);
+  return ids.some((id) => (
+    state.visited[id] ||
+    state.wishlist[id] ||
+    state.favorites[id] ||
+    state.facilityMemos[id] ||
+    (state.facilityReviews[id] || []).length
+  ));
 }
 
 function cssEscape(value) {

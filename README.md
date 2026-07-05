@@ -17,7 +17,7 @@
 - `robots.txt`、`sitemap.xml`、canonical、FAQ/HowTo/WebApplicationの構造化データ、折りたたみの検索意図Q&Aを追加し、検索エンジンとAI回答が「サウナ スタンプラリー」「サウナ 御朱印」「サウナ 検索」「サウナ 記録」の文脈を読み取りやすい形にしています。
 - Google Search Console の URL プレフィックス確認用に `google4f1c271dfaceddbb.html` をルートへ配置しています。
 - Google Analytics 4 は専用プロパティ「サ印帳アプリ」とWebストリーム「サ印帳 Web」を作成し、測定ID `G-FHGXDGF0M7` を `index.html` に設定しています。
-- `sw.js` は `saincho-v33-growth-audit` として、HTML/manifest/主要アイコン/ヒーロー画像/OG画像/称号イラスト/SEOファイルをキャッシュします。`app.js`、`data.js`、`content.js`、`styles.css` は fresh-first で取得します。
+- `sw.js` は `saincho-v36-dedupe-quicklog-v2` として、HTML/manifest/主要アイコン/ヒーロー画像/OG画像/称号イラスト/SEOファイルをキャッシュします。`app.js`、`data.js`、`content.js`、`styles.css` は fresh-first で取得します。
 - `/gear/`、`/stay/`、`/contact/`、`/sameshi/`、`/guide/`、`/ranking/`、`/passport/`、`/facility/<id>/` は Cloudflare Pages の `_redirects` で SPA として開けます。各画面の title、description、canonical、OG URL は JavaScript で更新します。
 - `llms.txt` を追加し、AI検索・回答エンジン向けにサ印帳の概要と主要URLを明示しています。
 - 記録画面と設定メニューに共有導線を追加し、Web Share API、LINE共有、URLコピーで紹介しやすい状態にしています。
@@ -27,6 +27,7 @@
 - `/contact/` にサウナ施設、サウナ付き旅館、サウナ付き民泊、サ飯店舗向けの掲載・お問い合わせページを追加しました。広告バナー、プレミアム個別ページ、スポンサー次の一湯、サ飯セット送客、サウナ合宿先掲載、サ印特典導線、月次ミニレポートを提示します。
 - 記録画面にX向け告知文テンプレのコピー導線を追加し、ユーザーや運営が自然にサ印帳を紹介しやすい状態にしました。
 - SEO/AEO/AIO向けに、検索意図別の回答ブロック、Dataset構造化データ、OfferCatalog構造化データ、`llms.txt` の要約を整備しています。
+- スラッシュ区切りの別名や参照元違いで同じ施設が重複表示されないよう、施設名の別名を吸収して候補を統合します。施設詳細には「初回」「3セット」「熱波」「遠征」のクイックログを追加し、セット記録アプリより軽くサ活メモを残せるようにしています。
 
 ## 参照サイト分析
 
