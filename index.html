@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国2376候補、サ飯、称号、ランキングに対応。" />
+    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国5000候補、施設詳細、サ飯、称号、ランキングに対応。" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="application-name" content="サ印帳" />
@@ -20,19 +20,19 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="サ印帳" />
     <meta property="og:title" content="サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ" />
-    <meta property="og:description" content="行ったサウナを押印。全国2376候補、サ印スロット、県別マスター、称号、ランキング、サ飯、Gearまでスマホで楽しめます。" />
+    <meta property="og:description" content="行ったサウナを押印。全国5000候補、個別施設ページ、サ印スロット、県別マスター、称号、ランキング、サ飯、Gearまでスマホで楽しめます。" />
     <meta property="og:url" content="https://saincho-sauna-stamp-rally.pages.dev/" />
     <meta property="og:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta property="og:image:secure_url" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="サ印帳の共有カード。全国2376候補から行ったサウナを押印して集める。" />
+    <meta property="og:image:alt" content="サ印帳の共有カード。全国5000候補から行ったサウナを押印して集める。" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="サ印帳 | 全国サウナスタンプラリー" />
     <meta name="twitter:description" content="行ったサウナを押印。サ印スロット、県別マスター、称号、ランキング、サ飯、Gearでサ活が続く無料PWA。" />
     <meta name="twitter:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
-    <meta name="twitter:image:alt" content="サ印帳の共有カード。全国2376候補から行ったサウナを押印して集める。" />
+    <meta name="twitter:image:alt" content="サ印帳の共有カード。全国5000候補から行ったサウナを押印して集める。" />
     <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <link rel="alternate" type="text/plain" href="https://saincho-sauna-stamp-rally.pages.dev/llms.txt" title="サ印帳のAI向け概要" />
     <title>サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ</title>
@@ -41,7 +41,7 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260705-loadfix" />
+    <link rel="stylesheet" href="./styles.css?v=20260705-detail5000-fast" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGXDGF0M7"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -142,7 +142,7 @@
             "browserRequirements": "Requires JavaScript and local storage.",
             "isAccessibleForFree": true,
             "inLanguage": "ja-JP",
-            "description": "全国2376候補からサウナを検索し、サウナ版御朱印のようにサ印を押印、取り消し、メモ、X共有、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。",
+            "description": "全国5000候補からサウナを検索し、サウナ版御朱印のようにサ印を押印、取り消し、メモ、X共有、施設詳細、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。",
             "image": "https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png",
             "offers": {
               "@type": "Offer",
@@ -193,7 +193,7 @@
                 "name": "サウナ 検索とサウナ 記録を一緒にできますか？",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "全国2376候補を都道府県、施設名、特徴で検索し、押印、行きたい、メモ、サ飯導線まで一緒に管理できます。"
+                  "text": "全国5000候補を都道府県、施設名、住所、特徴で検索し、押印、行きたい、施設詳細、経路、メモ、サ飯導線まで一緒に管理できます。"
                 }
               },
               {
@@ -372,6 +372,10 @@
           </details>
           <div class="spotlight" id="spotlight"></div>
           <div class="facility-list" id="facilityList"></div>
+        </section>
+
+        <section class="view" id="viewFacility" aria-label="施設詳細">
+          <div class="facility-detail-shell" id="facilityDetail"></div>
         </section>
 
         <section class="view" id="viewPassport" aria-label="サ印">
@@ -638,6 +642,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260705-loadfix"></script>
+    <script type="module" src="./app.js?v=20260705-detail5000-fast"></script>
   </body>
 </html>

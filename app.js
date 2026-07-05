@@ -10,15 +10,15 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-loadfix";
-const DATA_IMPORT_TIMEOUT_MS = 12000;
+const APP_BUILD_ID = "20260705-detail5000-fast";
+const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
-const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国サウナ候補、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
+const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国5000候補、個別施設ページ、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
 const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
 const SEARCH_WORD_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´（）()【】\[\]「」『』：:]+/g;
@@ -94,7 +94,12 @@ const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国2376候補、サ飯、称号、ランキングに対応。",
+    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国5000候補、施設詳細、サ飯、称号、ランキングに対応。",
+  },
+  Facility: {
+    path: "/facility/",
+    title: "施設詳細 | サ印帳",
+    description: "サ印帳の施設詳細ページです。施設写真、住所、3行情報、経路、周辺サ飯検索、押印、メモ、Gear導線をまとめて確認できます。",
   },
   Passport: {
     path: "/passport/",
@@ -193,6 +198,7 @@ const STAMP_STYLES = {
   urban: { kanji: "街", color: "#39464f", bg: "#f1f3f4" },
   onsen: { kanji: "湯", color: "#d85a3a", bg: "#fff2ea" },
   award: { kanji: "熱", color: "#bb8d23", bg: "#fff7df" },
+  private: { kanji: "宿", color: "#6c4b9b", bg: "#f5f1fb" },
   custom: { kanji: "私", color: "#0a8f8a", bg: "#effaf7" },
 };
 
@@ -245,6 +251,7 @@ const TRAIT_FEATURES = {
   wood: ["薪サウナ"],
   water: ["水風呂あり"],
   onsen: ["温泉付き"],
+  private: ["宿泊可", "貸切可", "個室"],
 };
 
 const NON_DISPLAY_TAGS = new Set([
@@ -291,6 +298,7 @@ let selectedArticleCategory = "すべて";
 let selectedSameshiPrefecture = "東京都";
 let activeFilter = "all";
 let activeView = "Explore";
+let activeFacilityId = "";
 let searchTerm = "";
 let searchNeedles = [];
 let selectedFeatureFilters = new Set();
@@ -310,6 +318,7 @@ let menuSwipeStart = null;
 let facilitiesCache = null;
 let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
+let facilityFeatureCache = new Map();
 
 const el = {
   main: document.querySelector(".main"),
@@ -331,6 +340,7 @@ const el = {
   addFeatureGrid: document.querySelector("#addFeatureGrid"),
   spotlight: document.querySelector("#spotlight"),
   facilityList: document.querySelector("#facilityList"),
+  facilityDetail: document.querySelector("#facilityDetail"),
   passportPrefStrip: document.querySelector("#passportPrefStrip"),
   titleProgressPanel: document.querySelector("#titleProgressPanel"),
   stampGrid: document.querySelector("#stampGrid"),
@@ -394,8 +404,8 @@ async function init() {
   updateDocumentMetaForView(activeView);
   bindEvents();
   renderInstallPrompt();
-  registerServiceWorker();
   renderBootLoading();
+  await waitForNextFrame();
 
   try {
     await loadAppModules();
@@ -411,6 +421,8 @@ async function init() {
   renderProfilePanel();
   renderShopPanel();
   renderAll();
+  warmSearchIndex();
+  registerServiceWorkerWhenIdle();
   if (IS_STATIC_LOCAL_PREVIEW) {
     sharedFacilitiesConfigured = false;
     rankingConfigured = false;
@@ -459,6 +471,32 @@ function importWithTimeout(specifier, timeoutMs, label) {
   return Promise.race([import(specifier), timeout]).finally(() => window.clearTimeout(timeoutId));
 }
 
+function waitForNextFrame() {
+  return new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
+}
+
+function runWhenIdle(callback, timeout = 1600) {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(callback, { timeout });
+    return;
+  }
+  window.setTimeout(callback, Math.min(timeout, 800));
+}
+
+function warmSearchIndex() {
+  runWhenIdle(() => {
+    try {
+      getFacilitySearchRecords();
+    } catch {
+      // The first real search will rebuild if idle warming is interrupted.
+    }
+  }, 1800);
+}
+
+function registerServiceWorkerWhenIdle() {
+  runWhenIdle(registerServiceWorker, 2600);
+}
+
 function renderBootLoading() {
   if (el.collectionScope) el.collectionScope.textContent = "候補データを読み込み中";
   if (el.totalCandidateCount) el.totalCandidateCount.textContent = "0";
@@ -467,7 +505,7 @@ function renderBootLoading() {
     el.facilityList.innerHTML = `
       <div class="empty-state app-loading-state" role="status" aria-live="polite">
         <span class="loading-spinner" aria-hidden="true"></span>
-        <p>全国のサウナ候補を読み込んでいます。</p>
+        <p>全国5000件のサウナ候補を読み込んでいます。</p>
       </div>
     `;
   }
@@ -653,6 +691,10 @@ function bindEvents() {
     const facility = getFacilities().find((item) => item.id === button.dataset.id);
     if (!facility) return;
 
+    if (button.dataset.action === "detail") {
+      openFacilityDetail(facility);
+      return;
+    }
     if (button.dataset.action === "stamp") stampFacility(facility);
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
@@ -888,6 +930,7 @@ function isBottomNavTouch(clientY) {
 function setView(view) {
   if (!VIEW_META[view]) view = "Explore";
   if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
+  if (view !== "Facility") activeFacilityId = "";
   activeView = view;
   applyActiveView(view);
   pushViewUrl(view);
@@ -895,7 +938,21 @@ function setView(view) {
   el.main.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+function openFacilityDetail(facility) {
+  activeFacilityId = facility.id;
+  activeView = "Facility";
+  selectedPrefecture = facility.prefecture || selectedPrefecture;
+  applyActiveView(activeView);
+  pushViewUrl(activeView);
+  renderAll();
+  el.main.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 function applyActiveView(view) {
+  document.body.dataset.activeView = view.toLowerCase();
+  Object.keys(VIEW_META).forEach((key) => {
+    document.body.classList.toggle(`view-${key.toLowerCase()}`, key === view);
+  });
   document.querySelectorAll(".view").forEach((section) => {
     section.classList.toggle("view-active", section.id === `view${view}`);
   });
@@ -911,6 +968,10 @@ function renderAll() {
   if (activeView === "Explore") {
     renderQuestPanel();
     renderExplore();
+    return;
+  }
+  if (activeView === "Facility") {
+    renderFacilityDetail();
     return;
   }
   if (activeView === "Passport") {
@@ -1133,6 +1194,7 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       </div>
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
+        <button class="facility-detail-button" type="button" data-action="detail" data-id="${escapeAttr(facility.id)}">詳細</button>
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
         ${renderMapRouteLink(facility)}
@@ -1195,6 +1257,7 @@ function renderFacilityCard(facility) {
         ${tags ? `<div class="tag-row">${tags}</div>` : ""}
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="facility-utility-actions">
+          <button class="facility-detail-button" type="button" data-action="detail" data-id="${escapeAttr(facility.id)}">詳細</button>
           ${renderMapRouteLink(facility)}
           <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
         </div>
@@ -1206,23 +1269,189 @@ function renderFacilityCard(facility) {
 
 function renderFacilityAddress(facility) {
   const address = getFacilityAddress(facility);
-  if (!address) return "";
+  if (!address && !facility.city) return "";
+  const value = address || `公開エリア: ${getFacilityAreaLabel(facility)}`;
   return `
-    <p class="facility-address">
+    <p class="facility-address ${address ? "" : "facility-area"}">
       <span class="map-route-icon" aria-hidden="true"></span>
-      <span>${escapeHtml(address)}</span>
+      <span>${escapeHtml(value)}</span>
     </p>
   `;
 }
 
 function renderMapRouteLink(facility) {
-  const label = getFacilityAddress(facility) ? "経路" : "地図で探す";
+  const label = getFacilityAddress(facility) || getFacilityCoordinate(facility) ? "経路" : "地図で探す";
   return `
     <a class="map-route-button" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer" aria-label="Google Mapsで${escapeAttr(facility.name)}への経路を開く">
       <span class="map-route-icon" aria-hidden="true"></span>
       <span>${label}</span>
     </a>
   `;
+}
+
+function renderFacilityDetail() {
+  if (!el.facilityDetail) return;
+  const facility = getFacilityById(activeFacilityId);
+  if (!facility) {
+    updateDocumentMetaForView("Facility");
+    syncFacilityStructuredData(null);
+    el.facilityDetail.innerHTML = `
+      <div class="empty-state facility-detail-empty">
+        <strong>施設が見つかりません</strong>
+        <p>候補が更新された可能性があります。検索に戻って施設名で探してください。</p>
+        <button class="primary-button" type="button" data-open-view="Explore">検索へ戻る</button>
+      </div>
+    `;
+    return;
+  }
+
+  updateDocumentMetaForView("Facility", facility);
+  syncFacilityStructuredData(facility);
+
+  const visited = Boolean(state.visited[facility.id]);
+  const wished = Boolean(state.wishlist[facility.id]);
+  const status = getFacilityStatus(facility);
+  const address = getFacilityAddress(facility);
+  const area = getFacilityAreaLabel(facility);
+  const tags = getDisplayTags(facility).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+  const detailLines = getFacilityDetailLines(facility);
+  const photo = getFacilityPhoto(facility);
+  const photoStyle = ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.36), rgb(16 20 23 / 0.06)), url('${escapeAttr(photo.url)}')"`;
+  const gear = getFacilityGearProducts(facility).slice(0, 3);
+  const ratingCopy = facility.rating && facility.reviewCount
+    ? `Airbnb ${facility.rating} / ${facility.reviewCount}レビュー`
+    : "";
+
+  el.facilityDetail.innerHTML = `
+    <article class="facility-detail">
+      <button class="back-button" type="button" data-open-view="Explore">検索へ戻る</button>
+      <div class="facility-detail-hero">
+        <div class="facility-photo ${photo.isFallback ? "facility-photo-fallback" : ""}"${photoStyle}>
+          <span>${escapeHtml(photo.label)}</span>
+        </div>
+        <div class="facility-detail-copy">
+          <p class="eyebrow">SAUNA DETAIL</p>
+          <h2>${escapeHtml(facility.name)}</h2>
+          <p>${escapeHtml(getFacilityMeta(facility))}</p>
+          ${ratingCopy ? `<em>${escapeHtml(ratingCopy)}</em>` : ""}
+          <div class="tag-row">${tags || `<span class="tag">施設詳細</span>`}</div>
+        </div>
+      </div>
+
+      <section class="detail-info-card" aria-label="3行情報">
+        ${detailLines.map((line) => `
+          <div>
+            <span>${escapeHtml(line.label)}</span>
+            <strong>${escapeHtml(line.value)}</strong>
+          </div>
+        `).join("")}
+      </section>
+
+      <section class="detail-action-grid" aria-label="施設アクション">
+        <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+        <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        ${visited ? `<button class="undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">押印を取り消す</button>` : ""}
+        ${renderMapRouteLink(facility)}
+        <a class="sameshi-map-button" href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
+        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+      </section>
+
+      <section class="detail-panel detail-location-panel">
+        <div>
+          <p class="eyebrow">LOCATION</p>
+          <h3>すぐ向かうための情報</h3>
+        </div>
+        <dl>
+          <div>
+            <dt>住所</dt>
+            <dd>${address ? escapeHtml(address) : escapeHtml(area ? `公開エリア: ${area}` : "住所確認中")}</dd>
+          </div>
+          <div>
+            <dt>参照</dt>
+            <dd>${renderFacilitySourceBadge(facility)}</dd>
+          </div>
+          ${facility.access ? `<div><dt>アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
+        </dl>
+        <p>${address ? "住所が確認できる候補は経路ボタンで直接ルート検索できます。" : "番地住所が公開確認できない候補は、施設名と公開エリアでGoogle Maps検索を開きます。"}</p>
+      </section>
+
+      <section class="detail-panel detail-unique-panel">
+        <div>
+          <p class="eyebrow">NEXT MOVE</p>
+          <h3>サ印帳だけの使い方</h3>
+        </div>
+        <div class="detail-unique-grid">
+          <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">
+            <span>サ飯</span>
+            <strong>周辺の飲食店を地図で探す</strong>
+          </a>
+          <a href="${escapeAttr(getNearbyDrinkUrl(facility))}" target="_blank" rel="noreferrer">
+            <span>補給</span>
+            <strong>オロポ・水分補給を近くで探す</strong>
+          </a>
+          <a href="${escapeAttr(getAirbnbSaunaUrl(facility))}" target="_blank" rel="noreferrer">
+            <span>遠征</span>
+            <strong>Airbnbのサウナ付き宿を見る</strong>
+          </a>
+        </div>
+      </section>
+
+      <section class="detail-panel detail-gear-panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">GEAR</p>
+            <h3>この一湯の持ち物</h3>
+          </div>
+          <button class="mini-button" type="button" data-open-view="Gear">Gearへ</button>
+        </div>
+        <div class="detail-gear-grid">
+          ${gear.map(renderCompactGearLink).join("")}
+        </div>
+      </section>
+
+      ${renderMemoPanel(facility)}
+    </article>
+  `;
+}
+
+function getFacilityById(id) {
+  return getFacilities().find((facility) => facility.id === id);
+}
+
+function getFacilityDetailPath(facility) {
+  return `/facility/${encodeURIComponent(facility.id)}/`;
+}
+
+function getFacilityDetailUrl(facility) {
+  return new URL(getFacilityDetailPath(facility), APP_URL).href;
+}
+
+function getFacilityPhoto(facility) {
+  const image = String(facility.image || "").trim();
+  if (isSafeHttpUrl(image)) {
+    return {
+      url: image,
+      label: facility.imageSource ? `${facility.imageSource}掲載写真` : "施設写真",
+      isFallback: false,
+    };
+  }
+  return {
+    url: "./assets/saincho-header-ritual.jpg",
+    label: "サウナイメージ",
+    isFallback: true,
+  };
+}
+
+function getFacilityDetailLines(facility) {
+  const features = getDisplayTags(facility);
+  const address = getFacilityAddress(facility);
+  const source = getFacilitySourceLabel(facility);
+  const area = getFacilityAreaLabel(facility) || "全国候補";
+  return [
+    { label: "エリア", value: area },
+    { label: "住所", value: address || (facility.city ? `${facility.city}周辺` : "参照元で確認") },
+    { label: "特徴", value: features.slice(0, 3).join(" / ") || source || "サ印対象" },
+  ];
 }
 
 function renderPassport() {
@@ -1925,7 +2154,7 @@ function shareFacility(facility) {
     "#サ印帳 #サウナ",
   ].filter(Boolean).join("\n");
   const params = new URLSearchParams({ text });
-  params.set("url", facility.officialUrl || facility.sourceUrl || "https://saincho-sauna-stamp-rally.pages.dev/");
+  params.set("url", getFacilityDetailUrl(facility));
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
@@ -2114,10 +2343,13 @@ function getFacilitySearchRecords() {
       getFacilityMapSearchText(facility),
       facility.source,
       facility.note,
+      facility.access,
+      facility.facilityType,
+      facility.imageSource,
       memo?.text,
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
-      ...facility.tags,
+      ...(facility.tags || []),
     ]);
     return {
       facility,
@@ -2140,6 +2372,7 @@ function invalidateFacilityCaches() {
   facilitiesCache = null;
   facilitySearchCache = null;
   facilitySearchMemoSignature = "";
+  facilityFeatureCache = new Map();
 }
 
 function getFacilityMeta(facility) {
@@ -2150,9 +2383,22 @@ function getFacilityAddress(facility) {
   return String(facility.address || "").trim();
 }
 
+function getFacilityAreaLabel(facility) {
+  return [facility.prefecture, facility.city].filter(Boolean).join(" / ");
+}
+
+function getFacilityCoordinate(facility) {
+  const lat = Number(facility.lat);
+  const lng = Number(facility.lng);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return "";
+  return `${lat},${lng}`;
+}
+
 function getFacilityMapSearchText(facility) {
   const address = getFacilityAddress(facility);
   if (address) return [facility.name, address].filter(Boolean).join(" ");
+  const coordinate = getFacilityCoordinate(facility);
+  if (coordinate) return coordinate;
   return [
     facility.name,
     facility.prefecture,
@@ -2161,10 +2407,41 @@ function getFacilityMapSearchText(facility) {
 }
 
 function getFacilityDirectionsUrl(facility) {
-  const destination = getFacilityMapSearchText(facility);
+  const destination = getFacilityCoordinate(facility) || getFacilityMapSearchText(facility);
   const url = new URL("https://www.google.com/maps/dir/");
   url.searchParams.set("api", "1");
   url.searchParams.set("destination", destination || facility.name);
+  return url.href;
+}
+
+function getNearbySameshiUrl(facility) {
+  const query = [
+    getFacilityAddress(facility) || getFacilityCoordinate(facility) || getFacilityAreaLabel(facility),
+    facility.name,
+    "周辺 サ飯 レストラン",
+  ].filter(Boolean).join(" ");
+  const url = new URL("https://www.google.com/maps/search/");
+  url.searchParams.set("api", "1");
+  url.searchParams.set("query", query || `${facility.name} 周辺 サ飯`);
+  return url.href;
+}
+
+function getNearbyDrinkUrl(facility) {
+  const query = [
+    getFacilityAddress(facility) || getFacilityCoordinate(facility) || getFacilityAreaLabel(facility),
+    "周辺 オロポ ポカリ オロナミンC サウナ ドリンク",
+  ].filter(Boolean).join(" ");
+  const url = new URL("https://www.google.com/maps/search/");
+  url.searchParams.set("api", "1");
+  url.searchParams.set("query", query);
+  return url.href;
+}
+
+function getAirbnbSaunaUrl(facility) {
+  const url = new URL("https://www.airbnb.jp/japan/stays/sauna");
+  if (facility.prefecture || facility.city) {
+    url.searchParams.set("location", [facility.prefecture, facility.city].filter(Boolean).join(" "));
+  }
   return url.href;
 }
 
@@ -2205,9 +2482,25 @@ function getDisplayTags(facility) {
 }
 
 function getFacilityFeatures(facility) {
+  const signature = [
+    facility.id,
+    facility.name,
+    facility.city,
+    getFacilityAddress(facility),
+    facility.note,
+    facility.trait,
+    ...(facility.features || []),
+    ...(facility.tags || []),
+  ].join("|");
+  const cached = facilityFeatureCache.get(facility.id);
+  if (cached?.signature === signature) return cached.features;
+
   const explicit = normalizeFeatures(facility.features || []);
+  let features;
   if ((facility.tags || []).includes("ユーザー指定追加") || (facility.tags || []).includes("みんなの追加")) {
-    return normalizeFeatures([...explicit, ...(facility.tags || [])]);
+    features = normalizeFeatures([...explicit, ...(facility.tags || [])]);
+    facilityFeatureCache.set(facility.id, { signature, features });
+    return features;
   }
 
   const inferred = new Set([...explicit, ...(TRAIT_FEATURES[facility.trait] || [])]);
@@ -2245,7 +2538,9 @@ function getFacilityFeatures(facility) {
   if (/(飲み放題|ドリンク飲み放題)/.test(text)) inferred.add("サウナドリンク飲み放題");
   if (/サウナハット禁止/.test(text)) inferred.add("サウナハット禁止");
 
-  return normalizeFeatures([...inferred]);
+  features = normalizeFeatures([...inferred]);
+  facilityFeatureCache.set(facility.id, { signature, features });
+  return features;
 }
 
 function normalizeFeatures(values) {
@@ -2271,6 +2566,7 @@ function normalizeFeature(value) {
 function inferTraitFromFeatures(values) {
   const features = normalizeFeatures(values);
   if (features.some((feature) => ["薪サウナ", "テントサウナ", "バレルサウナ"].includes(feature))) return "wood";
+  if (features.some((feature) => ["宿泊可", "貸切可", "個室"].includes(feature))) return "private";
   if (features.includes("温泉付き")) return "onsen";
   if (features.includes("水風呂あり")) return "water";
   if (features.some((feature) => ["ドライサウナ", "遠赤外線サウナ", "熱波師あり"].includes(feature))) return "urban";
@@ -2789,6 +3085,12 @@ function formatDateTime(value) {
 
 function getViewFromLocation() {
   const path = location.pathname.replace(/\/+$/, "/") || "/";
+  const facilityMatch = path.match(/^\/facility\/([^/]+)\/$/);
+  if (facilityMatch) {
+    activeFacilityId = decodeURIComponent(facilityMatch[1]);
+    return "Facility";
+  }
+  activeFacilityId = "";
   const found = Object.entries(VIEW_META).find(([, meta]) => meta.path === path);
   return found?.[0] || "Explore";
 }
@@ -2796,14 +3098,17 @@ function getViewFromLocation() {
 function pushViewUrl(view) {
   updateDocumentMetaForView(view);
   if (!location.protocol.startsWith("http")) return;
-  const path = VIEW_META[view]?.path || "/";
+  const path = view === "Facility" && activeFacilityId
+    ? `/facility/${encodeURIComponent(activeFacilityId)}/`
+    : VIEW_META[view]?.path || "/";
   if (location.pathname === path) return;
   history.pushState({ view }, "", path);
 }
 
-function updateDocumentMetaForView(view) {
-  const meta = VIEW_META[view] || VIEW_META.Explore;
-  const url = new URL(meta.path, APP_URL).href;
+function updateDocumentMetaForView(view, facility = null) {
+  const baseMeta = VIEW_META[view] || VIEW_META.Explore;
+  const meta = facility ? getFacilityMetaTags(facility) : baseMeta;
+  const url = facility ? getFacilityDetailUrl(facility) : new URL(baseMeta.path, APP_URL).href;
   document.title = meta.title;
   updateMeta("name", "description", meta.description);
   updateMeta("property", "og:title", meta.title);
@@ -2815,9 +3120,89 @@ function updateDocumentMetaForView(view) {
   if (canonical) canonical.href = url;
 }
 
+function getFacilityMetaTags(facility) {
+  const area = getFacilityAreaLabel(facility);
+  const address = getFacilityAddress(facility);
+  const features = getDisplayTags(facility).slice(0, 3).join("、");
+  const title = `${facility.name} | サ印帳 施設詳細`;
+  const description = [
+    `${facility.name}のサ印帳施設詳細。`,
+    area ? `${area}。` : "",
+    address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Mapsで確認できます。",
+    features ? `特徴: ${features}。` : "",
+    "押印、メモ、経路検索、周辺サ飯、Gear導線をまとめて確認できます。",
+  ].join("");
+  return { title, description: description.slice(0, 180) };
+}
+
 function updateMeta(attribute, key, content) {
   const node = document.querySelector(`meta[${attribute}="${cssEscape(key)}"]`);
   if (node) node.setAttribute("content", content);
+}
+
+function syncFacilityStructuredData(facility) {
+  const id = "facilityStructuredData";
+  let node = document.querySelector(`#${id}`);
+  if (!facility) {
+    node?.remove();
+    return;
+  }
+  if (!node) {
+    node = document.createElement("script");
+    node.type = "application/ld+json";
+    node.id = id;
+    document.head.appendChild(node);
+  }
+  const address = getFacilityAddress(facility);
+  const coordinate = getFacilityCoordinate(facility);
+  const image = String(facility.image || "").trim();
+  const data = {
+    "@context": "https://schema.org",
+    "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
+    "@id": `${getFacilityDetailUrl(facility)}#place`,
+    name: facility.name,
+    url: getFacilityDetailUrl(facility),
+    sameAs: [facility.officialUrl, facility.sourceUrl].filter(Boolean),
+    image: isSafeHttpUrl(image) ? [image] : undefined,
+    address: address ? {
+      "@type": "PostalAddress",
+      streetAddress: address,
+      addressCountry: "JP",
+    } : undefined,
+    areaServed: getFacilityAreaLabel(facility) || undefined,
+    geo: coordinate ? {
+      "@type": "GeoCoordinates",
+      latitude: Number(facility.lat),
+      longitude: Number(facility.lng),
+    } : undefined,
+    amenityFeature: getDisplayTags(facility).slice(0, 8).map((tag) => ({
+      "@type": "LocationFeatureSpecification",
+      name: tag,
+      value: true,
+    })),
+    potentialAction: [
+      {
+        "@type": "ViewAction",
+        name: "Google Mapsで経路を見る",
+        target: getFacilityDirectionsUrl(facility),
+      },
+      {
+        "@type": "SearchAction",
+        name: "周辺のサ飯を探す",
+        target: getNearbySameshiUrl(facility),
+      },
+    ],
+  };
+  node.textContent = JSON.stringify(removeUndefinedDeep(data));
+}
+
+function removeUndefinedDeep(value) {
+  if (Array.isArray(value)) return value.map(removeUndefinedDeep).filter((item) => item !== undefined);
+  if (!value || typeof value !== "object") return value;
+  const entries = Object.entries(value)
+    .map(([key, item]) => [key, removeUndefinedDeep(item)])
+    .filter(([, item]) => item !== undefined && item !== "");
+  return Object.fromEntries(entries);
 }
 
 function getGearLinks(item) {

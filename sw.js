@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v28";
+const CACHE_NAME = "saincho-v30-detail5000-fast";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -7,7 +7,6 @@ const APP_SHELL_ASSETS = [
   "./index.html",
   "./manifest.webmanifest",
   "./robots.txt",
-  "./sitemap.xml",
   "./llms.txt",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
