@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v36-dedupe-quicklog-v2";
+const CACHE_NAME = "saincho-v37-header-home-v1";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 

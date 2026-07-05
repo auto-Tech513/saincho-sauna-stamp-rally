@@ -12,7 +12,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-dedupe-quicklog-v2";
+const APP_BUILD_ID = "20260705-header-home-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -718,6 +718,7 @@ function bindEvents() {
     if (!openViewButton || el.main.contains(openViewButton)) return;
     event.preventDefault();
     if (el.settingsDialog.open) closeSettingsDialog();
+    if (openViewButton.dataset.resetExplore === "true") resetExploreState();
     setView(openViewButton.dataset.openView);
   });
 
@@ -1131,6 +1132,21 @@ function isMenuOpenSwipeStart(touch, target) {
   if (touch.clientX < window.innerWidth - MENU_EDGE_WIDTH) return false;
   if (isBottomNavTouch(touch.clientY)) return false;
   return !target.closest("input, textarea, select, button, a, .bottom-nav, .category-strip, .pref-strip, .passport-scope-strip, .source-row, .gear-category-strip");
+}
+
+function resetExploreState() {
+  clearSearchRenderTimer();
+  searchTerm = "";
+  searchNeedles = [];
+  selectedPrefecture = "全国";
+  selectedFeatureFilters.clear();
+  activeFilter = "all";
+  visibleLimit = 36;
+  if (el.searchInput) el.searchInput.value = "";
+  renderSearchClearButton();
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    button.classList.toggle("segment-active", button.dataset.filter === "all");
+  });
 }
 
 function isBottomNavTouch(clientY) {
