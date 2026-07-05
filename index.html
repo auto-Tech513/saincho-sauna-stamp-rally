@@ -41,7 +41,7 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260705-detail5000-fast" />
+    <link rel="stylesheet" href="./styles.css?v=20260705-facility-ux" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGXDGF0M7"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -122,6 +122,15 @@
                   "name": "サ印ランキング",
                   "url": "https://saincho-sauna-stamp-rally.pages.dev/ranking/"
                 }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "WebPage",
+                  "name": "サウナ合宿先を探す",
+                  "url": "https://saincho-sauna-stamp-rally.pages.dev/stay/"
+                }
               }
             ]
           },
@@ -154,6 +163,8 @@
               "サ印スロットで次の一湯を発見",
               "サ印の押印と取り消し",
               "施設メモとX共有",
+              "お気に入り施設の保存",
+              "施設口コミの投稿",
               "県別マスター認定",
               "サ印数ランキング",
               "県別サ飯ガイド",
@@ -335,6 +346,7 @@
               <button class="segment-active" type="button" data-filter="all">全部</button>
               <button type="button" data-filter="unvisited">未押印</button>
               <button type="button" data-filter="wishlist">行きたい</button>
+              <button type="button" data-filter="favorite">お気に入り</button>
             </div>
           </div>
 
@@ -444,6 +456,16 @@
               <button type="button" data-app-action="copy-app-url">URLコピー</button>
             </div>
           </section>
+          <section class="favorites-panel" aria-label="お気に入り施設">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">FAVORITES</p>
+                <h3>後で行きたいお気に入り</h3>
+              </div>
+              <button class="mini-button" type="button" data-open-view="Explore">探す</button>
+            </div>
+            <div class="favorites-list" id="favoritesList"></div>
+          </section>
           <section class="shop-panel" aria-label="サウナグッズ">
             <div class="panel-head">
               <div>
@@ -476,6 +498,22 @@
           </div>
           <div class="category-strip" id="gearCategoryStrip" aria-label="Gearカテゴリ"></div>
           <div class="gear-grid" id="gearGrid"></div>
+        </section>
+
+        <section class="view" id="viewStay" aria-label="サウナ合宿先">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">SAUNA STAY</p>
+              <h2>サウナ合宿先</h2>
+            </div>
+            <span class="count-badge" id="stayCount">3件</span>
+          </div>
+          <div class="stay-hero">
+            <span>遠征は施設詳細と分けて探す</span>
+            <h3>サウナ付き宿は専用ページで確認</h3>
+            <p>各施設の詳細ページには近くの宿検索を置き、サウナ付き宿そのものはここで比較します。掲載内容・料金・空室は外部サイトで必ず確認してください。</p>
+          </div>
+          <div class="stay-grid" id="stayGrid"></div>
         </section>
 
         <section class="view" id="viewSameshi" aria-label="サ飯">
@@ -595,6 +633,7 @@
       </label>
       <div class="menu-actions" aria-label="メニュー">
         <button type="button" data-menu-view="Gear">Gearページ</button>
+        <button type="button" data-menu-view="Stay">サウナ合宿先を探す</button>
         <button type="button" data-menu-view="Sameshi">サ飯</button>
         <button type="button" data-menu-view="Guide">サウナ入門</button>
         <button type="button" data-menu-view="Stats">ランキング</button>
@@ -642,6 +681,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260705-detail5000-fast"></script>
+    <script type="module" src="./app.js?v=20260705-facility-ux"></script>
   </body>
 </html>

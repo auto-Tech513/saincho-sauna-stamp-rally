@@ -30,6 +30,12 @@
       "description": "県別の人気サ飯を探す"
     },
     {
+      "name": "サウナ合宿先を探す",
+      "short_name": "合宿",
+      "url": "./stay/",
+      "description": "Airbnbなどのサウナ付き宿を探す"
+    },
+    {
       "name": "Gear",
       "short_name": "Gear",
       "url": "./gear/",

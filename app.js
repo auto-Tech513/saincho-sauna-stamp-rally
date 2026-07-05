@@ -4,13 +4,14 @@ const SETTINGS_KEY = "saincho-settings-v1";
 const LEGACY_SETTINGS_KEY = "yuincho-settings-v1";
 const INSTALL_DISMISSED_KEY = "saincho-install-dismissed-v1";
 const SHARED_FACILITIES_ENDPOINT = "./api/facilities";
+const REVIEWS_ENDPOINT = "./api/reviews";
 const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
 const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-detail5000-fast";
+const APP_BUILD_ID = "20260705-facility-ux";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -19,6 +20,27 @@ const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国5000候補、個別施設ページ、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
+const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
+const SAUNA_STAY_LINKS = [
+  {
+    title: "Airbnb サウナ付き宿の公式検索",
+    label: "公式検索",
+    url: AIRBNB_SAUNA_STAY_URL,
+    note: "サウナ付き宿をAirbnb上で直接絞り込み、写真・料金・空室を確認できます。",
+  },
+  {
+    title: "Airbnb掲載サウナ宿 1288031974621802745",
+    label: "提供リンク",
+    url: "https://www.airbnb.jp/rooms/1288031974621802745?source_impression_id=p3_1783226684_P3znQkrzRJ-VlLlJ",
+    note: "ユーザー提供のAirbnb掲載ページです。施設名・所在地・最新条件はAirbnbページで確認してください。",
+  },
+  {
+    title: "Airbnb掲載サウナ宿 1128015069214234827",
+    label: "提供リンク",
+    url: "https://www.airbnb.jp/rooms/1128015069214234827?source_impression_id=p3_1783226763_P3KMiuAQYMEtiUZR",
+    note: "ユーザー提供のAirbnb掲載ページです。施設名・所在地・最新条件はAirbnbページで確認してください。",
+  },
+];
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
 const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
 const SEARCH_WORD_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´（）()【】\[\]「」『』：:]+/g;
@@ -99,7 +121,7 @@ const VIEW_META = {
   Facility: {
     path: "/facility/",
     title: "施設詳細 | サ印帳",
-    description: "サ印帳の施設詳細ページです。施設写真、住所、3行情報、経路、周辺サ飯検索、押印、メモ、Gear導線をまとめて確認できます。",
+    description: "サ印帳の施設詳細ページです。施設写真、住所、3行情報、経路、周辺サ飯検索、お気に入り、口コミ、近隣宿、Gear導線をまとめて確認できます。",
   },
   Passport: {
     path: "/passport/",
@@ -115,6 +137,11 @@ const VIEW_META = {
     path: "/gear/",
     title: "サウナグッズ30選 | サ印帳 Gear",
     description: "サウナハット、サウナマット、水分補給、タオル、遠征グッズなど、初心者が失敗しにくいサウナGearをAmazon・楽天で比較できます。",
+  },
+  Stay: {
+    path: "/stay/",
+    title: "サウナ合宿先を探す | サ印帳",
+    description: "サウナ付き宿をAirbnbなどの掲載ページで探すサ印帳の遠征ページです。施設詳細では近くの宿、遠征計画ではサウナ付き宿を分けて探せます。",
   },
   Sameshi: {
     path: "/sameshi/",
@@ -305,6 +332,9 @@ let selectedFeatureFilters = new Set();
 let sharedFacilities = [];
 let sharedFacilitiesConfigured = false;
 let leaderboardEntries = [];
+let facilityReviews = {};
+let facilityReviewLoadedIds = new Set();
+let reviewsConfigured = null;
 let rankingConfigured = null;
 let toastTimer = 0;
 let rankingSyncTimer = 0;
@@ -354,11 +384,14 @@ const el = {
   leaderboardSummary: document.querySelector("#leaderboardSummary"),
   leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
   leaderboardSyncButton: document.querySelector("#leaderboardSyncButton"),
+  favoritesList: document.querySelector("#favoritesList"),
   shopGrid: document.querySelector("#shopGrid"),
   questPanel: document.querySelector("#questPanel"),
   gearCategoryStrip: document.querySelector("#gearCategoryStrip"),
   gearGrid: document.querySelector("#gearGrid"),
   gearCount: document.querySelector("#gearCount"),
+  stayGrid: document.querySelector("#stayGrid"),
+  stayCount: document.querySelector("#stayCount"),
   sameshiPrefStrip: document.querySelector("#sameshiPrefStrip"),
   sameshiGrid: document.querySelector("#sameshiGrid"),
   sameshiCount: document.querySelector("#sameshiCount"),
@@ -534,6 +567,7 @@ function bindEvents() {
   document.addEventListener("click", (event) => {
     const openViewButton = event.target instanceof Element ? event.target.closest("[data-open-view]") : null;
     if (!openViewButton || el.main.contains(openViewButton)) return;
+    event.preventDefault();
     if (el.settingsDialog.open) closeSettingsDialog();
     setView(openViewButton.dataset.openView);
   });
@@ -624,41 +658,44 @@ function bindEvents() {
   });
 
   el.main.addEventListener("click", (event) => {
-    const openViewButton = event.target.closest("[data-open-view]");
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target) return;
+    const openViewButton = target.closest("[data-open-view]");
     if (openViewButton) {
+      event.preventDefault();
       setView(openViewButton.dataset.openView);
       return;
     }
 
-    const gearCategoryButton = event.target.closest("[data-gear-category]");
+    const gearCategoryButton = target.closest("[data-gear-category]");
     if (gearCategoryButton) {
       selectedGearCategory = gearCategoryButton.dataset.gearCategory;
       renderGearPage();
       return;
     }
 
-    const articleCategoryButton = event.target.closest("[data-article-category]");
+    const articleCategoryButton = target.closest("[data-article-category]");
     if (articleCategoryButton) {
       selectedArticleCategory = articleCategoryButton.dataset.articleCategory;
       renderGuidePage();
       return;
     }
 
-    const sameshiPrefectureButton = event.target.closest("[data-sameshi-prefecture]");
+    const sameshiPrefectureButton = target.closest("[data-sameshi-prefecture]");
     if (sameshiPrefectureButton) {
       selectedSameshiPrefecture = sameshiPrefectureButton.dataset.sameshiPrefecture;
       renderSameshiPage();
       return;
     }
 
-    const moreButton = event.target.closest("[data-show-more]");
+    const moreButton = target.closest("[data-show-more]");
     if (moreButton) {
       visibleLimit += 36;
       renderExplore();
       return;
     }
 
-    const button = event.target.closest("[data-action]");
+    const button = target.closest("[data-action]");
     if (!button) return;
     if (button.dataset.action === "reload-app") {
       reloadAppFresh();
@@ -691,17 +728,34 @@ function bindEvents() {
     const facility = getFacilities().find((item) => item.id === button.dataset.id);
     if (!facility) return;
 
-    if (button.dataset.action === "detail") {
-      openFacilityDetail(facility);
-      return;
-    }
     if (button.dataset.action === "stamp") stampFacility(facility);
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
+    if (button.dataset.action === "favorite") toggleFavorite(facility);
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
     if (button.dataset.action === "share-facility") shareFacility(facility);
+    if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
+    if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
+  });
+
+  el.main.addEventListener("click", (event) => {
+    const target = event.target instanceof Element ? event.target : null;
+    const card = target?.closest("[data-detail-card]");
+    if (!card || isInteractiveCardTarget(target)) return;
+    const facility = getFacilities().find((item) => item.id === card.dataset.detailCard);
+    if (facility) openFacilityDetail(facility);
+  });
+
+  el.main.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const target = event.target instanceof Element ? event.target : null;
+    const card = target?.closest("[data-detail-card]");
+    if (!card || target !== card) return;
+    event.preventDefault();
+    const facility = getFacilities().find((item) => item.id === card.dataset.detailCard);
+    if (facility) openFacilityDetail(facility);
   });
 
   el.prefBoard.addEventListener("click", (event) => {
@@ -811,7 +865,7 @@ function bindEvents() {
   });
 
   el.resetButton.addEventListener("click", () => {
-    if (!confirm("すべての押印・行きたい・追加データを削除します。")) return;
+    if (!confirm("すべての押印・行きたい・お気に入り・メモ・口コミ・追加データを削除します。")) return;
     state = createState();
     invalidateFacilityCaches();
     saveState();
@@ -985,6 +1039,10 @@ function renderAll() {
   }
   if (activeView === "Gear") {
     renderGearPage();
+    return;
+  }
+  if (activeView === "Stay") {
+    renderStayPage();
     return;
   }
   if (activeView === "Sameshi") {
@@ -1172,8 +1230,13 @@ function renderSourceRow() {
     ["スーパー銭湯全国検索", "https://www.supersento.com/"],
     ["Instabase", "https://www.instabase.jp/sauna"],
     ["SAUNACHELIN", "https://www.saunachelin.com/"],
+    ["Airbnbサウナ宿", VIEW_META.Stay.path, "Stay"],
   ];
-  el.sourceRow.innerHTML = links.map(([label, url]) => `<a href="${url}" target="_blank" rel="noreferrer">${label}</a>`).join("");
+  el.sourceRow.innerHTML = links.map(([label, url, view]) => (
+    view
+      ? `<a href="${escapeAttr(url)}" data-open-view="${escapeAttr(view)}">${escapeHtml(label)}</a>`
+      : `<a href="${escapeAttr(url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`
+  )).join("");
 }
 
 function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
@@ -1184,8 +1247,9 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
     return;
   }
   const wished = Boolean(state.wishlist[facility.id]);
+  const favorite = Boolean(state.favorites[facility.id]);
   el.spotlight.innerHTML = `
-    <article class="spotlight-card">
+    <article class="spotlight-card" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
       <div>
         <span class="spotlight-label">次の一湯</span>
         <h3>${escapeHtml(facility.name)}</h3>
@@ -1194,9 +1258,9 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       </div>
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
-        <button class="facility-detail-button" type="button" data-action="detail" data-id="${escapeAttr(facility.id)}">詳細</button>
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        ${renderFavoriteButton(facility, favorite)}
         ${renderMapRouteLink(facility)}
         <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
       </div>
@@ -1224,6 +1288,7 @@ function renderFacilityGearNudge(facility) {
 function renderFacilityCard(facility) {
   const visited = state.visited[facility.id];
   const wished = Boolean(state.wishlist[facility.id]);
+  const favorite = Boolean(state.favorites[facility.id]);
   const status = getFacilityStatus(facility);
   const meta = getFacilityMeta(facility);
   const displayTags = getDisplayTags(facility);
@@ -1245,19 +1310,21 @@ function renderFacilityCard(facility) {
     `;
 
   return `
-    <article class="facility-card">
+    <article class="facility-card" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
       ${renderStamp(facility, Boolean(visited))}
       <div class="card-body">
         <div class="card-head">
           <h3 class="facility-name">${escapeHtml(facility.name)}</h3>
-          ${headBadge}
+          <div class="card-head-actions">
+            ${headBadge}
+            ${renderFavoriteButton(facility, favorite, true)}
+          </div>
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
         ${renderFacilityAddress(facility)}
         ${tags ? `<div class="tag-row">${tags}</div>` : ""}
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="facility-utility-actions">
-          <button class="facility-detail-button" type="button" data-action="detail" data-id="${escapeAttr(facility.id)}">詳細</button>
           ${renderMapRouteLink(facility)}
           <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
         </div>
@@ -1265,6 +1332,14 @@ function renderFacilityCard(facility) {
       </div>
     </article>
   `.trim();
+}
+
+function renderFavoriteButton(facility, active, compact = false) {
+  return `
+    <button class="favorite-button ${active ? "is-active" : ""} ${compact ? "favorite-button-compact" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-pressed="${active}" aria-label="${active ? "お気に入りから外す" : "お気に入りに追加"}">
+      <span aria-hidden="true">${active ? "★" : "☆"}</span>
+    </button>
+  `;
 }
 
 function renderFacilityAddress(facility) {
@@ -1310,6 +1385,7 @@ function renderFacilityDetail() {
 
   const visited = Boolean(state.visited[facility.id]);
   const wished = Boolean(state.wishlist[facility.id]);
+  const favorite = Boolean(state.favorites[facility.id]);
   const status = getFacilityStatus(facility);
   const address = getFacilityAddress(facility);
   const area = getFacilityAreaLabel(facility);
@@ -1319,7 +1395,7 @@ function renderFacilityDetail() {
   const photoStyle = ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.36), rgb(16 20 23 / 0.06)), url('${escapeAttr(photo.url)}')"`;
   const gear = getFacilityGearProducts(facility).slice(0, 3);
   const ratingCopy = facility.rating && facility.reviewCount
-    ? `Airbnb ${facility.rating} / ${facility.reviewCount}レビュー`
+    ? `掲載評価 ${facility.rating} / ${facility.reviewCount}レビュー`
     : "";
 
   el.facilityDetail.innerHTML = `
@@ -1350,6 +1426,7 @@ function renderFacilityDetail() {
       <section class="detail-action-grid" aria-label="施設アクション">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        <button class="favorite-wide-button ${favorite ? "is-active" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-pressed="${favorite}">${favorite ? "★ お気に入り" : "☆ お気に入り"}</button>
         ${visited ? `<button class="undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">押印を取り消す</button>` : ""}
         ${renderMapRouteLink(facility)}
         <a class="sameshi-map-button" href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
@@ -1385,14 +1462,15 @@ function renderFacilityDetail() {
             <span>サ飯</span>
             <strong>周辺の飲食店を地図で探す</strong>
           </a>
-          <a href="${escapeAttr(getNearbyDrinkUrl(facility))}" target="_blank" rel="noreferrer">
+          <button type="button" data-open-view="Gear">
             <span>補給</span>
-            <strong>オロポ・水分補給を近くで探す</strong>
-          </a>
-          <a href="${escapeAttr(getAirbnbSaunaUrl(facility))}" target="_blank" rel="noreferrer">
+            <strong>オロポ・水分補給はGearで準備</strong>
+          </button>
+          <div class="lodging-search-card">
             <span>遠征</span>
-            <strong>Airbnbのサウナ付き宿を見る</strong>
-          </a>
+            <strong>近くの宿を予約サイトで探す</strong>
+            <div>${renderLodgingLinks(facility)}</div>
+          </div>
         </div>
       </section>
 
@@ -1409,9 +1487,11 @@ function renderFacilityDetail() {
         </div>
       </section>
 
-      ${renderMemoPanel(facility)}
+      ${renderDetailMemoPanel(facility)}
+      ${renderReviewPanel(facility)}
     </article>
   `;
+  loadFacilityReviews(facility.id);
 }
 
 function getFacilityById(id) {
@@ -1557,6 +1637,79 @@ function renderMemoPanel(facility) {
   `;
 }
 
+function renderDetailMemoPanel(facility) {
+  const memo = getFacilityMemo(facility.id);
+  const updatedAt = memo?.updatedAt ? formatDate(memo.updatedAt) : "";
+  return `
+    <section class="memo-panel detail-memo-panel" aria-label="施設メモ">
+      <div class="detail-memo-head">
+        <div>
+          <p class="eyebrow">MEMO</p>
+          <h3>自分用メモ</h3>
+        </div>
+        ${updatedAt ? `<span>${escapeHtml(updatedAt)} 更新</span>` : `<span>未保存</span>`}
+      </div>
+      ${memo ? `<p class="memo-text">${escapeHtml(memo.text)}</p>` : ""}
+      <textarea data-note-input="${escapeAttr(facility.id)}" maxlength="240" rows="4" placeholder="感想、気付き、水風呂、再訪したい理由">${memo ? escapeHtml(memo.text) : ""}</textarea>
+      <div class="memo-actions detail-memo-actions">
+        <button class="secondary-button" type="button" data-action="save-note" data-id="${escapeAttr(facility.id)}">${memo ? "メモ更新" : "メモ保存"}</button>
+        ${memo ? `<button class="undo-button" type="button" data-action="delete-note" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
+        ${memo ? `<button class="share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
+      </div>
+    </section>
+  `;
+}
+
+function renderReviewPanel(facility) {
+  const reviews = getFacilityReviews(facility.id);
+  const nickname = profile.nickname || "匿名サウナー";
+  return `
+    <section class="review-panel" aria-label="口コミ投稿">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">REVIEW</p>
+          <h3>口コミを投稿</h3>
+        </div>
+        <span>${reviews.length}件</span>
+      </div>
+      <div class="review-form">
+        <label>
+          <span>評価</span>
+          <select data-review-rating="${escapeAttr(facility.id)}" aria-label="口コミ評価">
+            <option value="5">5 とても良い</option>
+            <option value="4">4 良い</option>
+            <option value="3">3 普通</option>
+            <option value="2">2 合わなかった</option>
+            <option value="1">1 要確認</option>
+          </select>
+        </label>
+        <label class="review-text-label">
+          <span>${escapeHtml(nickname)}として投稿</span>
+          <textarea data-review-input="${escapeAttr(facility.id)}" maxlength="280" rows="3" placeholder="温度、水風呂、外気浴、混雑、再訪したい理由"></textarea>
+        </label>
+        <button class="primary-button" type="button" data-action="save-review" data-id="${escapeAttr(facility.id)}">口コミ投稿</button>
+      </div>
+      <div class="review-list" id="reviewList-${escapeAttr(facility.id)}">
+        ${reviews.length ? reviews.map((review) => renderReviewCard(facility, review)).join("") : `<p class="review-empty">${reviewsConfigured === false ? "共有口コミは未接続です。投稿するとこの端末に保存されます。" : "最初の口コミを待っています。"}</p>`}
+      </div>
+    </section>
+  `;
+}
+
+function renderReviewCard(facility, review) {
+  const owned = review.clientId && review.clientId === profile.id;
+  return `
+    <article class="review-card">
+      <div>
+        <strong>${"★".repeat(Math.max(1, Math.min(5, Number(review.rating) || 5)))}</strong>
+        <span>${escapeHtml(review.nickname || "匿名サウナー")} / ${escapeHtml(formatDate(review.createdAt) || "投稿日不明")}</span>
+      </div>
+      <p>${escapeHtml(review.text)}</p>
+      ${owned ? `<button class="tiny-undo-button" type="button" data-action="delete-review" data-id="${escapeAttr(facility.id)}" data-review-id="${escapeAttr(review.id)}">削除</button>` : ""}
+    </article>
+  `;
+}
+
 function renderStats() {
   const visitedTotal = Object.keys(state.visited).length;
   const prefectureTotal = Object.keys(countVisitedByPrefecture()).length;
@@ -1596,6 +1749,7 @@ function renderStats() {
     </button>
   `);
   renderLeaderboard();
+  renderFavoritesPanel();
 }
 
 function renderProfilePanel() {
@@ -1679,6 +1833,42 @@ function renderGearPage() {
     </button>
   `).join("");
   el.gearGrid.innerHTML = products.map((item) => renderGearCard(item, "full")).join("");
+}
+
+function renderStayPage() {
+  if (!el.stayGrid) return;
+  el.stayCount.textContent = `${SAUNA_STAY_LINKS.length}件`;
+  el.stayGrid.innerHTML = SAUNA_STAY_LINKS.map((item) => `
+    <article class="stay-card">
+      <span>${escapeHtml(item.label)}</span>
+      <h3>${escapeHtml(item.title)}</h3>
+      <p>${escapeHtml(item.note)}</p>
+      <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">掲載ページを見る</a>
+    </article>
+  `).join("");
+}
+
+function renderFavoritesPanel() {
+  if (!el.favoritesList) return;
+  const favorites = getFavoriteFacilities();
+  if (!favorites.length) {
+    el.favoritesList.innerHTML = `
+      <div class="favorites-empty">
+        <strong>まだお気に入りはありません</strong>
+        <span>施設カードの星を押すと、後でここから戻れます。</span>
+      </div>
+    `;
+    return;
+  }
+  el.favoritesList.innerHTML = favorites.slice(0, 12).map((facility) => `
+    <article class="favorite-row" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
+      <div>
+        <strong>${escapeHtml(facility.name)}</strong>
+        <span>${escapeHtml(getFacilityMeta(facility))}</span>
+      </div>
+      <button class="favorite-button is-active" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-label="お気に入りから外す" aria-pressed="true"><span aria-hidden="true">★</span></button>
+    </article>
+  `).join("");
 }
 
 function renderSameshiPage() {
@@ -2057,6 +2247,18 @@ function toggleWishlist(facility) {
   renderAll();
 }
 
+function toggleFavorite(facility) {
+  if (state.favorites[facility.id]) {
+    delete state.favorites[facility.id];
+    showToast(`${facility.name} をお気に入りから外しました`);
+  } else {
+    state.favorites[facility.id] = { at: new Date().toISOString() };
+    showToast(`${facility.name} をお気に入りに追加しました`);
+  }
+  saveState();
+  renderAll();
+}
+
 function focusQuestFacility(facility) {
   selectedPrefecture = facility.prefecture;
   activeFilter = "all";
@@ -2099,6 +2301,10 @@ function openSameshiForFacility(facility) {
   setView("Sameshi");
 }
 
+function isInteractiveCardTarget(target) {
+  return Boolean(target?.closest("button, a, input, textarea, select, label, summary, details, [data-no-card-open]"));
+}
+
 function saveFacilityMemo(facility, button) {
   const panel = button.closest(".memo-panel");
   const input = panel?.querySelector(`[data-note-input="${cssEscape(facility.id)}"]`);
@@ -2124,6 +2330,99 @@ function deleteFacilityMemo(facility) {
   saveState();
   renderAll();
   showToast(`${facility.name} のメモを取り消しました`);
+}
+
+async function loadFacilityReviews(facilityId) {
+  if (!facilityId || reviewsConfigured === false || IS_STATIC_LOCAL_PREVIEW || facilityReviewLoadedIds.has(facilityId)) return;
+  facilityReviewLoadedIds.add(facilityId);
+  try {
+    const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
+    url.searchParams.set("facilityId", facilityId);
+    const response = await fetch(url.href, { headers: { accept: "application/json" } });
+    if (!response.ok) throw new Error("reviews-load-failed");
+    const payload = await response.json();
+    reviewsConfigured = payload.configured !== false;
+    facilityReviews[facilityId] = normalizeReviews(payload.reviews || []);
+    if (activeView === "Facility" && activeFacilityId === facilityId) renderFacilityDetail();
+  } catch {
+    reviewsConfigured = false;
+  }
+}
+
+async function saveFacilityReview(facility, button) {
+  const panel = button.closest(".review-panel");
+  const text = panel?.querySelector(`[data-review-input="${cssEscape(facility.id)}"]`)?.value.trim() || "";
+  const rating = Number(panel?.querySelector(`[data-review-rating="${cssEscape(facility.id)}"]`)?.value || 5);
+  if (!text) {
+    showToast("口コミ本文を入力してください");
+    return;
+  }
+  const review = {
+    id: `local-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
+    facilityId: facility.id,
+    clientId: profile.id || createClientId(),
+    nickname: profile.nickname || "匿名サウナー",
+    rating: Math.max(1, Math.min(5, Math.floor(rating) || 5)),
+    text: text.slice(0, 280),
+    createdAt: new Date().toISOString(),
+  };
+
+  if (reviewsConfigured !== false && !IS_STATIC_LOCAL_PREVIEW) {
+    try {
+      const response = await fetch(REVIEWS_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify(review),
+      });
+      if (!response.ok) throw new Error("review-save-failed");
+      const payload = await response.json();
+      reviewsConfigured = payload.configured !== false;
+      facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
+      facilityReviewLoadedIds.add(facility.id);
+      renderAll();
+      showToast(`${facility.name} に口コミを投稿しました`);
+      return;
+    } catch {
+      reviewsConfigured = false;
+    }
+  }
+
+  const localReviews = normalizeReviews([review, ...(state.facilityReviews[facility.id] || [])]).slice(0, 20);
+  state.facilityReviews[facility.id] = localReviews;
+  saveState();
+  renderAll();
+  showToast(`${facility.name} の口コミをこの端末に保存しました`);
+}
+
+async function deleteFacilityReview(facility, reviewId) {
+  if (!reviewId) return;
+  if (reviewsConfigured && !IS_STATIC_LOCAL_PREVIEW) {
+    try {
+      const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
+      url.searchParams.set("facilityId", facility.id);
+      url.searchParams.set("reviewId", reviewId);
+      url.searchParams.set("clientId", profile.id || "");
+      const response = await fetch(url.href, { method: "DELETE", headers: { accept: "application/json" } });
+      if (response.ok) {
+        const payload = await response.json();
+        facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
+        renderAll();
+        showToast("口コミを削除しました");
+        return;
+      }
+    } catch {
+      reviewsConfigured = false;
+    }
+  }
+  const next = (state.facilityReviews[facility.id] || []).filter((review) => review.id !== reviewId);
+  state.facilityReviews[facility.id] = next;
+  saveState();
+  renderAll();
+  showToast("口コミを削除しました");
+}
+
+function getFacilityReviews(facilityId) {
+  return normalizeReviews(facilityReviews[facilityId] || state.facilityReviews[facilityId] || []);
 }
 
 function shareFacilityMemo(facility) {
@@ -2299,7 +2598,8 @@ function getFilteredFacilities() {
       const matchesFilter =
         activeFilter === "all" ||
         (activeFilter === "unvisited" && !state.visited[facility.id]) ||
-        (activeFilter === "wishlist" && state.wishlist[facility.id]);
+        (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
+        (activeFilter === "favorite" && state.favorites[facility.id]);
       return selected && matchesFilter;
     });
   }
@@ -2311,7 +2611,8 @@ function getFilteredFacilities() {
     const matchesFilter =
       activeFilter === "all" ||
       (activeFilter === "unvisited" && !state.visited[facility.id]) ||
-      (activeFilter === "wishlist" && state.wishlist[facility.id]);
+      (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
+      (activeFilter === "favorite" && state.favorites[facility.id]);
     return selected && matchesSearch && matchesFeatures && matchesFilter;
   }).map(({ facility }) => facility);
 }
@@ -2326,6 +2627,16 @@ function getFacilities() {
   }));
   facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
   return facilitiesCache;
+}
+
+function getFavoriteFacilities() {
+  return getFacilities()
+    .filter((facility) => state.favorites[facility.id])
+    .sort((a, b) => {
+      const aTime = state.favorites[a.id]?.at || "";
+      const bTime = state.favorites[b.id]?.at || "";
+      return bTime.localeCompare(aTime) || a.name.localeCompare(b.name, "ja");
+    });
 }
 
 function getFacilitySearchRecords() {
@@ -2426,23 +2737,26 @@ function getNearbySameshiUrl(facility) {
   return url.href;
 }
 
-function getNearbyDrinkUrl(facility) {
-  const query = [
-    getFacilityAddress(facility) || getFacilityCoordinate(facility) || getFacilityAreaLabel(facility),
-    "周辺 オロポ ポカリ オロナミンC サウナ ドリンク",
-  ].filter(Boolean).join(" ");
-  const url = new URL("https://www.google.com/maps/search/");
-  url.searchParams.set("api", "1");
-  url.searchParams.set("query", query);
-  return url.href;
+function renderLodgingLinks(facility) {
+  return getLodgingLinks(facility).map((item) => `
+    <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.label)}</a>
+  `).join("");
 }
 
-function getAirbnbSaunaUrl(facility) {
-  const url = new URL("https://www.airbnb.jp/japan/stays/sauna");
-  if (facility.prefecture || facility.city) {
-    url.searchParams.set("location", [facility.prefecture, facility.city].filter(Boolean).join(" "));
-  }
-  return url.href;
+function getLodgingLinks(facility) {
+  const query = getLodgingSearchQuery(facility);
+  return [
+    ["楽天トラベル", `https://travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(query)}`],
+    ["一休", `https://www.ikyu.com/search?kwd=${encodeURIComponent(query)}`],
+    ["Agoda", `https://www.agoda.com/search?text=${encodeURIComponent(query)}`],
+  ].map(([label, url]) => ({ label, url }));
+}
+
+function getLodgingSearchQuery(facility) {
+  return [
+    getFacilityAddress(facility) || getFacilityAreaLabel(facility) || facility.name,
+    "周辺 ホテル 宿",
+  ].filter(Boolean).join(" ");
 }
 
 function getFacilitySourceLabel(facility) {
@@ -2948,7 +3262,9 @@ function normalizeState(value) {
   return {
     visited: isPlainObject(value.visited) ? value.visited : fallback.visited,
     wishlist: isPlainObject(value.wishlist) ? value.wishlist : fallback.wishlist,
+    favorites: isPlainObject(value.favorites) ? value.favorites : fallback.favorites,
     facilityMemos: isPlainObject(value.facilityMemos) ? normalizeFacilityMemos(value.facilityMemos) : fallback.facilityMemos,
+    facilityReviews: isPlainObject(value.facilityReviews) ? normalizeLocalReviews(value.facilityReviews) : fallback.facilityReviews,
     customFacilities: Array.isArray(value.customFacilities) ? value.customFacilities.filter(isValidCustomFacility) : [],
   };
 }
@@ -2957,7 +3273,9 @@ function createState() {
   return {
     visited: {},
     wishlist: {},
+    favorites: {},
     facilityMemos: {},
+    facilityReviews: {},
     customFacilities: [],
   };
 }
@@ -2972,6 +3290,36 @@ function normalizeFacilityMemos(value) {
     text: memo.text.trim().slice(0, 240),
     updatedAt: typeof memo.updatedAt === "string" ? memo.updatedAt : new Date().toISOString(),
   }]));
+}
+
+function normalizeLocalReviews(value) {
+  return Object.fromEntries(Object.entries(value).map(([facilityId, reviews]) => {
+    if (!Array.isArray(reviews)) return [facilityId, []];
+    return [facilityId, normalizeReviews(reviews)];
+  }).filter(([, reviews]) => reviews.length));
+}
+
+function normalizeReviews(values) {
+  if (!Array.isArray(values)) return [];
+  const seen = new Set();
+  return values.map((review) => {
+    if (!review || typeof review !== "object") return null;
+    const id = typeof review.id === "string" && review.id ? review.id.slice(0, 80) : "";
+    const text = typeof review.text === "string" ? review.text.trim().slice(0, 280) : "";
+    if (!id || !text || seen.has(id)) return null;
+    seen.add(id);
+    return {
+      id,
+      facilityId: typeof review.facilityId === "string" ? review.facilityId.slice(0, 120) : "",
+      clientId: typeof review.clientId === "string" ? review.clientId.slice(0, 80) : "",
+      nickname: typeof review.nickname === "string" && review.nickname.trim() ? review.nickname.trim().slice(0, 16) : "匿名サウナー",
+      rating: Math.max(1, Math.min(5, Math.floor(Number(review.rating) || 5))),
+      text,
+      createdAt: typeof review.createdAt === "string" ? review.createdAt : new Date().toISOString(),
+    };
+  }).filter(Boolean)
+    .sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)))
+    .slice(0, 30);
 }
 
 function isValidCustomFacility(value) {
