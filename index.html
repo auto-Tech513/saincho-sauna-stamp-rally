@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国5000候補、施設詳細、サ飯、称号、ランキングに対応。" />
+    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、サ活帳、全国5000候補、施設詳細、サ飯、称号、ランキングに対応。" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="application-name" content="サ印帳" />
@@ -41,7 +41,7 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260705-business-contact" />
+    <link rel="stylesheet" href="./styles.css?v=20260705-growth-audit" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGXDGF0M7"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -61,7 +61,7 @@
             "@id": "https://saincho-sauna-stamp-rally.pages.dev/#website",
             "url": "https://saincho-sauna-stamp-rally.pages.dev/",
             "name": "サ印帳",
-            "alternateName": "サウナスタンプラリー",
+            "alternateName": ["サウナスタンプラリー", "サ活帳", "サウナ御朱印"],
             "inLanguage": "ja-JP",
             "description": "サウナ検索、サウナ記録、サウナ版御朱印のようなサ印集めを1つにした無料Webアプリです。全国のサウナ候補、サ印スロット、サ飯から次の一歩を探せます。",
             "potentialAction": {
@@ -178,6 +178,46 @@
               "サ印数ランキング",
               "県別サ飯ガイド",
               "サウナGearと入門記事"
+            ]
+          },
+          {
+            "@type": "Dataset",
+            "@id": "https://saincho-sauna-stamp-rally.pages.dev/#facility-dataset",
+            "name": "サ印帳 全国サウナ候補データ",
+            "description": "全国47都道府県のサウナ候補5000件を、都道府県、施設名、住所または公開エリア、特徴、参照リンクで検索できるサ印帳用候補データです。",
+            "inLanguage": "ja-JP",
+            "license": "https://saincho-sauna-stamp-rally.pages.dev/contact/",
+            "creator": {
+              "@id": "https://saincho-sauna-stamp-rally.pages.dev/#organization"
+            },
+            "variableMeasured": ["施設名", "都道府県", "住所", "特徴", "参照URL", "サ印状態"]
+          },
+          {
+            "@type": "OfferCatalog",
+            "@id": "https://saincho-sauna-stamp-rally.pages.dev/#business-offers",
+            "name": "サ印帳 掲載メニュー",
+            "url": "https://saincho-sauna-stamp-rally.pages.dev/contact/",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "県別・サ飯バナー",
+                "price": "29800",
+                "priceCurrency": "JPY",
+                "availability": "https://schema.org/LimitedAvailability"
+              },
+              {
+                "@type": "Offer",
+                "name": "トップ・検索上部バナー",
+                "price": "59800",
+                "priceCurrency": "JPY",
+                "availability": "https://schema.org/LimitedAvailability"
+              },
+              {
+                "@type": "Offer",
+                "name": "プレミアム個別ページ",
+                "price": "98000",
+                "priceCurrency": "JPY"
+              }
             ]
           },
           {
@@ -379,6 +419,18 @@
                 <h2>サウナ 検索とサウナ 記録をまとめる</h2>
                 <p>サウナ名、都道府県、住所、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、経路検索、メモ、X共有まで一つで管理できます。</p>
               </article>
+              <article>
+                <h2>サ活帳として続けやすい</h2>
+                <p>押印数、次の称号、県別マスター、ランキングが見えるので、次に行く理由が作りやすくなります。</p>
+              </article>
+              <article>
+                <h2>検索サイトとの違い</h2>
+                <p>施設を探すだけでなく、押印、メモ、口コミ、お気に入り、サ飯、Gearまで同じ画面導線でつなげます。</p>
+              </article>
+              <article>
+                <h2>事業者も掲載相談できる</h2>
+                <p>サウナ施設、サウナ付き宿、サ飯店舗は掲載・お問い合わせページから広告やプレミアム個別ページを相談できます。</p>
+              </article>
             </div>
           </details>
 
@@ -464,6 +516,7 @@
               <button type="button" data-app-action="share-line">LINE</button>
               <button type="button" data-app-action="copy-app-url">URLコピー</button>
             </div>
+            <div class="promotion-copy-grid" id="promotionCopyGrid" aria-label="告知文テンプレ"></div>
           </section>
           <section class="favorites-panel" aria-label="お気に入り施設">
             <div class="panel-head">
@@ -539,6 +592,7 @@
             <p>サ印帳は検索、押印、行きたい、お気に入り、サ飯、遠征、Gearが同じ導線にあります。露出だけでなく、ユーザーが次に動きやすい位置へ掲載します。</p>
           </div>
           <div class="business-plan-grid" id="businessPlanGrid" aria-label="掲載メニュー"></div>
+          <div class="business-value-grid" id="businessValueGrid" aria-label="掲載価値"></div>
           <section class="contact-form-panel" aria-label="お問い合わせフォーム">
             <div class="panel-head">
               <div>
@@ -749,6 +803,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260705-business-contact"></script>
+    <script type="module" src="./app.js?v=20260705-growth-audit"></script>
   </body>
 </html>

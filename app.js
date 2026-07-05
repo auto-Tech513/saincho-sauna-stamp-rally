@@ -12,7 +12,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-business-contact";
+const APP_BUILD_ID = "20260705-growth-audit";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -20,7 +20,7 @@ const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
-const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国5000候補、個別施設ページ、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
+const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
 const CONTACT_EMAIL = "fux25471@gmail.com";
 const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
 const SAUNA_STAY_LINKS = [
@@ -86,6 +86,27 @@ const BUSINESS_PLANS = [
     badge: "追加施策",
   },
   {
+    name: "スポンサー次の一湯",
+    price: "税込39,800円 / 3ヶ月",
+    target: "新規来店を増やしたい施設",
+    detail: "検索条件に合うユーザーへ、次の候補カードとして自然に掲出。押印、行きたい、経路まで短くつなぎます。",
+    badge: "発見枠",
+  },
+  {
+    name: "サ飯セット送客",
+    price: "税込34,800円 / 3ヶ月",
+    target: "飲食店・温浴施設の共同施策",
+    detail: "施設詳細の周辺サ飯導線や県別サ飯ページで、サウナ後の来店理由を作ります。限定メニューや特典と相性が良い枠です。",
+    badge: "地域回遊",
+  },
+  {
+    name: "月次ミニレポート",
+    price: "税込12,800円 / 月",
+    target: "掲載効果を見たい事業者",
+    detail: "表示位置、クリック導線、問い合わせ内容、改善提案を月1回まとめます。広告更新判断に使える軽量レポートです。",
+    badge: "改善支援",
+  },
+  {
     name: "撮影・編集オプション",
     price: "別途見積",
     target: "写真素材がない事業者",
@@ -98,8 +119,46 @@ const CONTACT_TYPES = [
   "プレミアム個別ページ",
   "サウナ合宿先掲載",
   "サ飯店舗掲載",
+  "サ印特典・クーポン",
+  "取材・撮影相談",
   "内容修正・権利連絡",
   "その他",
+];
+const BUSINESS_VALUE_POINTS = [
+  {
+    label: "来店直前",
+    title: "検索、押印、経路の直前に出せる",
+    text: "サウナに行く気持ちが高い瞬間へ出せるので、単なる認知広告より行動に近い導線になります。",
+  },
+  {
+    label: "再訪理由",
+    title: "サ印特典でまた行く理由を作る",
+    text: "押印後の小さな報酬や限定案内は、割引だけに頼らず再訪のきっかけを作れます。",
+  },
+  {
+    label: "地域回遊",
+    title: "サウナ、サ飯、宿泊をまとめる",
+    text: "サ飯店舗やサウナ付き宿と組み合わせることで、単発来店ではなく半日から一泊の回遊に変えます。",
+  },
+  {
+    label: "正直な希少性",
+    title: "枠数と期間を絞って効果を見やすく",
+    text: "無制限掲載ではなく3ヶ月更新にすることで、掲載枠の価値と改善サイクルを保ちます。",
+  },
+];
+const PROMOTION_COPY_OPTIONS = [
+  {
+    label: "収集欲",
+    text: "行ったサウナが、ただの記録じゃなく“集めた証”になる。サ印帳で押印、県マスター、称号、サ飯まで。次の一湯が少し楽しみになる。",
+  },
+  {
+    label: "検索意図",
+    text: "サウナ検索、サ活記録、サウナ版御朱印をひとつに。全国5000候補から探して、行った施設をサ印として残せます。",
+  },
+  {
+    label: "仲間共有",
+    text: "どこのサウナ行った？を、サ印で見せられるように。お気に入り、口コミ、ランキングまであるサウナ巡り用Webアプリです。",
+  },
 ];
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
 const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
@@ -458,9 +517,11 @@ const el = {
   stayGrid: document.querySelector("#stayGrid"),
   stayCount: document.querySelector("#stayCount"),
   businessPlanGrid: document.querySelector("#businessPlanGrid"),
+  businessValueGrid: document.querySelector("#businessValueGrid"),
   contactTypeGrid: document.querySelector("#contactTypeGrid"),
   contactForm: document.querySelector("#contactForm"),
   contactStatus: document.querySelector("#contactStatus"),
+  promotionCopyGrid: document.querySelector("#promotionCopyGrid"),
   sameshiPrefStrip: document.querySelector("#sameshiPrefStrip"),
   sameshiGrid: document.querySelector("#sameshiGrid"),
   sameshiCount: document.querySelector("#sameshiCount"),
@@ -655,6 +716,7 @@ function bindEvents() {
     if (appActionButton.dataset.appAction === "share-app") shareApp();
     if (appActionButton.dataset.appAction === "copy-app-url") copyAppUrl();
     if (appActionButton.dataset.appAction === "share-line") shareToLine();
+    if (appActionButton.dataset.appAction === "copy-promo") copyPromotionText(appActionButton.dataset.copyIndex);
   });
 
   document.querySelectorAll("[data-filter]").forEach((button) => {
@@ -1826,6 +1888,17 @@ function renderStats() {
   `);
   renderLeaderboard();
   renderFavoritesPanel();
+  renderPromotionCopyGrid();
+}
+
+function renderPromotionCopyGrid() {
+  if (!el.promotionCopyGrid) return;
+  el.promotionCopyGrid.innerHTML = PROMOTION_COPY_OPTIONS.map((item, index) => `
+    <button class="promotion-copy-card" type="button" data-app-action="copy-promo" data-copy-index="${index}">
+      <span>${escapeHtml(item.label)}</span>
+      <strong>${escapeHtml(item.text)}</strong>
+    </button>
+  `).join("");
 }
 
 function renderProfilePanel() {
@@ -1936,6 +2009,15 @@ function renderContactPage() {
       <em>${escapeHtml(plan.target)}</em>
     </article>
   `).join("");
+  if (el.businessValueGrid) {
+    el.businessValueGrid.innerHTML = BUSINESS_VALUE_POINTS.map((item) => `
+      <article class="business-value-card">
+        <span>${escapeHtml(item.label)}</span>
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.text)}</p>
+      </article>
+    `).join("");
+  }
   el.contactTypeGrid.innerHTML = CONTACT_TYPES.map((type, index) => `
     <label class="contact-choice">
       <input type="radio" name="type" value="${escapeAttr(type)}" ${index === 0 ? "checked" : ""} />
@@ -2653,6 +2735,18 @@ async function copyAppUrl() {
     showToast("URLをコピーしました");
   } catch {
     window.prompt("URLをコピーしてください", url);
+  }
+}
+
+async function copyPromotionText(indexValue) {
+  const index = Number(indexValue);
+  const item = PROMOTION_COPY_OPTIONS[index];
+  if (!item) return;
+  try {
+    await navigator.clipboard.writeText(item.text);
+    showToast(`${item.label}向け告知文をコピーしました`);
+  } catch {
+    window.prompt("告知文をコピーしてください", item.text);
   }
 }
 
@@ -3387,7 +3481,7 @@ function showInstallHelp() {
 function getInstallHint() {
   if (isAppleTouchDevice()) return "Safariの共有→ホーム画面に追加";
   if (/Android/i.test(navigator.userAgent)) return "Chromeメニュー→インストール";
-  return "iPhoneはSafari共有 / AndroidはChromeメニュー";
+  return "iPhoneはSafariの共有 / AndroidはChromeメニュー";
 }
 
 function isStandaloneMode() {
