@@ -41,7 +41,7 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./styles.css?v=20260705-facility-ux" />
+    <link rel="stylesheet" href="./styles.css?v=20260705-business-contact" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHGXDGF0M7"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -130,6 +130,15 @@
                   "@type": "WebPage",
                   "name": "サウナ合宿先を探す",
                   "url": "https://saincho-sauna-stamp-rally.pages.dev/stay/"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                  "@type": "ContactPage",
+                  "name": "掲載・お問い合わせ",
+                  "url": "https://saincho-sauna-stamp-rally.pages.dev/contact/"
                 }
               }
             ]
@@ -516,6 +525,64 @@
           <div class="stay-grid" id="stayGrid"></div>
         </section>
 
+        <section class="view" id="viewContact" aria-label="掲載・お問い合わせ">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">CONTACT</p>
+              <h2>掲載・お問い合わせ</h2>
+            </div>
+            <span class="count-badge">事業者向け</span>
+          </div>
+          <div class="contact-hero">
+            <span>サウナ施設・宿・サ飯店舗へ</span>
+            <h3>押印前後の行動に自然につながる掲載枠</h3>
+            <p>サ印帳は検索、押印、行きたい、お気に入り、サ飯、遠征、Gearが同じ導線にあります。露出だけでなく、ユーザーが次に動きやすい位置へ掲載します。</p>
+          </div>
+          <div class="business-plan-grid" id="businessPlanGrid" aria-label="掲載メニュー"></div>
+          <section class="contact-form-panel" aria-label="お問い合わせフォーム">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">FORM</p>
+                <h3>お問い合わせ内容</h3>
+              </div>
+              <span>返信先は非公開です</span>
+            </div>
+            <form class="contact-form" id="contactForm">
+              <fieldset class="contact-type-grid" id="contactTypeGrid" aria-label="お問い合わせ種別"></fieldset>
+              <div class="contact-form-grid">
+                <label>
+                  <span>事業者名・施設名</span>
+                  <input name="organization" maxlength="80" placeholder="例: ○○サウナ / ○○食堂" />
+                </label>
+                <label>
+                  <span>担当者名</span>
+                  <input name="name" maxlength="40" placeholder="例: 山田 太郎" />
+                </label>
+                <label>
+                  <span>返信先メールアドレス</span>
+                  <input name="email" type="email" required maxlength="120" placeholder="example@example.com" />
+                </label>
+                <label>
+                  <span>Web・予約ページ</span>
+                  <input name="website" type="url" maxlength="180" placeholder="https://..." />
+                </label>
+                <label>
+                  <span>都道府県・エリア</span>
+                  <input name="prefecture" maxlength="40" placeholder="例: 富山県富山市" />
+                </label>
+              </div>
+              <label class="contact-message">
+                <span>お問い合わせ内容</span>
+                <textarea name="message" required maxlength="1200" rows="6" placeholder="掲載したい枠、掲載期間、施設の強み、予約ページ、希望開始日など"></textarea>
+              </label>
+              <div class="contact-submit-row">
+                <p id="contactStatus" role="status"></p>
+                <button class="primary-button" type="submit">送信する</button>
+              </div>
+            </form>
+          </section>
+        </section>
+
         <section class="view" id="viewSameshi" aria-label="サ飯">
           <div class="section-title">
             <div>
@@ -634,6 +701,7 @@
       <div class="menu-actions" aria-label="メニュー">
         <button type="button" data-menu-view="Gear">Gearページ</button>
         <button type="button" data-menu-view="Stay">サウナ合宿先を探す</button>
+        <button type="button" data-menu-view="Contact">掲載・お問い合わせ</button>
         <button type="button" data-menu-view="Sameshi">サ飯</button>
         <button type="button" data-menu-view="Guide">サウナ入門</button>
         <button type="button" data-menu-view="Stats">ランキング</button>
@@ -681,6 +749,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260705-facility-ux"></script>
+    <script type="module" src="./app.js?v=20260705-business-contact"></script>
   </body>
 </html>

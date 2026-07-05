@@ -36,6 +36,12 @@
       "description": "Airbnbなどのサウナ付き宿を探す"
     },
     {
+      "name": "掲載・お問い合わせ",
+      "short_name": "掲載",
+      "url": "./contact/",
+      "description": "広告掲載、プレミアム個別ページ、内容修正を相談する"
+    },
+    {
       "name": "Gear",
       "short_name": "Gear",
       "url": "./gear/",

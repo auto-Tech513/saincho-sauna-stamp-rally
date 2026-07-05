@@ -7,6 +7,7 @@
 - https://saincho-sauna-stamp-rally.pages.dev/
 - https://saincho-sauna-stamp-rally.pages.dev/gear/
 - https://saincho-sauna-stamp-rally.pages.dev/stay/
+- https://saincho-sauna-stamp-rally.pages.dev/contact/
 - https://saincho-sauna-stamp-rally.pages.dev/sameshi/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
@@ -21,6 +22,7 @@
 - 県別マスター、称号、サ印ランキング
 - 県別の人気サ飯候補52件と公式・参照リンク
 - Airbnbなどのサウナ付き宿を探すサウナ合宿先ページ
+- サウナ施設、サウナ付き宿、サ飯店舗向けの広告掲載、プレミアム個別ページ、掲載問い合わせページ
 - iPhone/iPad Safari、Android Chrome向けのホーム画面追加手順
 - 「サウナ スタンプラリー」「サウナ 御朱印」「サウナ 検索」「サウナ 記録」に対応する説明とFAQ
 - サウナ初心者向けの入り方、持ち物、マナー、安全FAQ

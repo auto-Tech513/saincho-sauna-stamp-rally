@@ -2652,7 +2652,8 @@ body.view-facility .summary-band {
 .commerce-hero,
 .guide-hero,
 .sameshi-hero,
-.stay-hero {
+.stay-hero,
+.contact-hero {
   display: grid;
   gap: 8px;
   margin-bottom: 12px;
@@ -2684,10 +2685,17 @@ body.view-facility .summary-band {
     var(--cedar);
 }
 
+.contact-hero {
+  background:
+    linear-gradient(135deg, rgb(10 143 138 / 0.9), rgb(16 20 23 / 0.95)),
+    var(--teal);
+}
+
 .commerce-hero span,
 .guide-hero span,
 .sameshi-hero span,
-.stay-hero span {
+.stay-hero span,
+.contact-hero span {
   color: #f7d773;
   font-size: 12px;
   font-weight: 900;
@@ -2700,14 +2708,17 @@ body.view-facility .summary-band {
 .sameshi-hero h3,
 .sameshi-hero p,
 .stay-hero h3,
-.stay-hero p {
+.stay-hero p,
+.contact-hero h3,
+.contact-hero p {
   margin: 0;
 }
 
 .commerce-hero h3,
 .guide-hero h3,
 .sameshi-hero h3,
-.stay-hero h3 {
+.stay-hero h3,
+.contact-hero h3 {
   font-size: 20px;
   line-height: 1.2;
 }
@@ -2715,7 +2726,8 @@ body.view-facility .summary-band {
 .commerce-hero p,
 .guide-hero p,
 .sameshi-hero p,
-.stay-hero p {
+.stay-hero p,
+.contact-hero p {
   color: rgb(255 255 255 / 0.76);
   font-size: 13px;
   font-weight: 800;
@@ -2888,6 +2900,7 @@ body.view-facility .summary-band {
 }
 
 .stay-card h3,
+.stay-card strong,
 .stay-card p {
   margin: 0;
 }
@@ -2896,6 +2909,12 @@ body.view-facility .summary-band {
   color: var(--ink);
   font-size: 17px;
   line-height: 1.26;
+}
+
+.stay-card strong {
+  color: #33413d;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .stay-card p {
@@ -2914,6 +2933,175 @@ body.view-facility .summary-band {
   border-radius: 8px;
   font-weight: 900;
   text-decoration: none;
+}
+
+.business-plan-grid {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.business-plan-card {
+  display: grid;
+  gap: 7px;
+  padding: 12px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgb(16 20 23 / 0.06);
+}
+
+.business-plan-card span {
+  width: fit-content;
+  min-height: 24px;
+  padding: 4px 8px;
+  color: #6a4217;
+  background: #fff4ce;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.business-plan-card h3,
+.business-plan-card strong,
+.business-plan-card p,
+.business-plan-card em {
+  margin: 0;
+}
+
+.business-plan-card h3 {
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.business-plan-card strong {
+  color: var(--teal);
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.business-plan-card p,
+.business-plan-card em {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.48;
+}
+
+.business-plan-card em {
+  color: #43524e;
+  font-style: normal;
+}
+
+.contact-form-panel {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  background: rgb(255 255 255 / 0.82);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-type-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+}
+
+.contact-choice {
+  min-width: 0;
+}
+
+.contact-choice input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact-choice span {
+  display: grid;
+  place-items: center;
+  min-height: 42px;
+  padding: 8px;
+  color: #33413d;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.contact-choice input:checked + span {
+  color: white;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.contact-form label,
+.contact-message {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.contact-form input:not([type="radio"]),
+.contact-form textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 44px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 800;
+}
+
+.contact-form textarea {
+  min-height: 132px;
+  resize: vertical;
+}
+
+.contact-submit-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.contact-submit-row p {
+  min-height: 20px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.contact-submit-row p.is-error {
+  color: var(--accent);
 }
 
 .gear-grid,
@@ -3753,7 +3941,8 @@ body.view-facility .summary-band {
   .gear-grid,
   .article-list,
   .sameshi-grid,
-  .stay-grid {
+  .stay-grid,
+  .business-plan-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -4029,9 +4218,24 @@ body.view-facility .summary-band {
   .guide-hero,
   .sameshi-hero,
   .stay-hero,
+  .contact-hero,
   .faq-panel,
-  .reference-panel {
+  .reference-panel,
+  .contact-form-panel {
     padding: 12px;
+  }
+
+  .contact-type-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-form-grid,
+  .contact-submit-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit-row .primary-button {
+    width: 100%;
   }
 
   .panel-head h3 {

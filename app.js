@@ -5,13 +5,14 @@ const LEGACY_SETTINGS_KEY = "yuincho-settings-v1";
 const INSTALL_DISMISSED_KEY = "saincho-install-dismissed-v1";
 const SHARED_FACILITIES_ENDPOINT = "./api/facilities";
 const REVIEWS_ENDPOINT = "./api/reviews";
+const CONTACT_ENDPOINT = "./api/contact";
 const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
 const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-facility-ux";
+const APP_BUILD_ID = "20260705-business-contact";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -20,26 +21,85 @@ const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const APP_SHARE_TEXT = "サ印帳で、行ったサウナを押印して集めよう。全国5000候補、個別施設ページ、サ印スロット、県別マスター、称号、サ飯、ランキング、Gearまでスマホで使えます。";
+const CONTACT_EMAIL = "fux25471@gmail.com";
 const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
 const SAUNA_STAY_LINKS = [
   {
     title: "Airbnb サウナ付き宿の公式検索",
     label: "公式検索",
+    prefecture: "全国",
+    area: "Airbnb",
     url: AIRBNB_SAUNA_STAY_URL,
     note: "サウナ付き宿をAirbnb上で直接絞り込み、写真・料金・空室を確認できます。",
   },
   {
-    title: "Airbnb掲載サウナ宿 1288031974621802745",
+    title: "OLL GUESTHOUSE & SAUNA",
     label: "提供リンク",
+    prefecture: "富山県",
+    area: "富山市",
     url: "https://www.airbnb.jp/rooms/1288031974621802745?source_impression_id=p3_1783226684_P3znQkrzRJ-VlLlJ",
-    note: "ユーザー提供のAirbnb掲載ページです。施設名・所在地・最新条件はAirbnbページで確認してください。",
+    note: "一棟貸しのサウナ付き宿として公開されている掲載ページです。料金・空室・設備はAirbnbで確認してください。",
   },
   {
-    title: "Airbnb掲載サウナ宿 1128015069214234827",
+    title: "囲炉裏とサウナの古民家貸切",
     label: "提供リンク",
+    prefecture: "富山県",
+    area: "魚津市",
     url: "https://www.airbnb.jp/rooms/1128015069214234827?source_impression_id=p3_1783226763_P3KMiuAQYMEtiUZR",
-    note: "ユーザー提供のAirbnb掲載ページです。施設名・所在地・最新条件はAirbnbページで確認してください。",
+    note: "古民家貸切のサウナ付き宿として公開されている掲載ページです。料金・空室・設備はAirbnbで確認してください。",
   },
+];
+const BUSINESS_PLANS = [
+  {
+    name: "県別・サ飯バナー",
+    price: "税込29,800円 / 3ヶ月",
+    target: "飲食店・地域密着施設",
+    detail: "サ飯ページ、県別枠、検索下部に掲載。近くで探しているユーザーに自然に届く導線です。",
+    badge: "8枠限定",
+  },
+  {
+    name: "トップ・検索上部バナー",
+    price: "税込59,800円 / 3ヶ月",
+    target: "サウナ施設・温浴施設",
+    detail: "トップ画面や検索直後の視認位置に掲出。初回来訪者と再訪ユーザーの両方に届きます。",
+    badge: "4枠限定",
+  },
+  {
+    name: "プレミアム個別ページ",
+    price: "税込98,000円 / 3ヶ月",
+    target: "サウナ施設・旅館・民泊",
+    detail: "専用写真、おすすめポイント、予約ボタン、公式リンク、クーポン案内、口コミ導線を強化します。",
+    badge: "更新可",
+  },
+  {
+    name: "サウナ合宿先掲載",
+    price: "税込49,800円 / 3ヶ月",
+    target: "サウナ付き宿・民泊",
+    detail: "サウナ合宿ページへ掲載。宿泊前提のユーザーに料金・空室確認ページまで案内します。",
+    badge: "宿向け",
+  },
+  {
+    name: "サ印特典・クーポン導線",
+    price: "税込19,800円 / 3ヶ月",
+    target: "リピートを作りたい店舗",
+    detail: "押印後やお気に入り登録後に、再訪理由になる特典案内を表示します。割引内容は店舗側で設定します。",
+    badge: "追加施策",
+  },
+  {
+    name: "撮影・編集オプション",
+    price: "別途見積",
+    target: "写真素材がない事業者",
+    detail: "カメラマン代、往復移動費、撮り直し、編集代は別途。既存写真の提出だけでも掲載できます。",
+    badge: "任意",
+  },
+];
+const CONTACT_TYPES = [
+  "広告掲載・タイアップ",
+  "プレミアム個別ページ",
+  "サウナ合宿先掲載",
+  "サ飯店舗掲載",
+  "内容修正・権利連絡",
+  "その他",
 ];
 const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
 const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
@@ -142,6 +202,11 @@ const VIEW_META = {
     path: "/stay/",
     title: "サウナ合宿先を探す | サ印帳",
     description: "サウナ付き宿をAirbnbなどの掲載ページで探すサ印帳の遠征ページです。施設詳細では近くの宿、遠征計画ではサウナ付き宿を分けて探せます。",
+  },
+  Contact: {
+    path: "/contact/",
+    title: "掲載・お問い合わせ | サ印帳",
+    description: "サ印帳への広告掲載、プレミアム個別ページ、サウナ合宿先掲載、サ飯店舗掲載、内容修正や権利連絡はこちらからお問い合わせください。",
   },
   Sameshi: {
     path: "/sameshi/",
@@ -392,6 +457,10 @@ const el = {
   gearCount: document.querySelector("#gearCount"),
   stayGrid: document.querySelector("#stayGrid"),
   stayCount: document.querySelector("#stayCount"),
+  businessPlanGrid: document.querySelector("#businessPlanGrid"),
+  contactTypeGrid: document.querySelector("#contactTypeGrid"),
+  contactForm: document.querySelector("#contactForm"),
+  contactStatus: document.querySelector("#contactStatus"),
   sameshiPrefStrip: document.querySelector("#sameshiPrefStrip"),
   sameshiGrid: document.querySelector("#sameshiGrid"),
   sameshiCount: document.querySelector("#sameshiCount"),
@@ -856,6 +925,8 @@ function bindEvents() {
     showToast(shared ? `${addedFacility.name} をみんなの候補に追加しました` : `${addedFacility.name} を自分の候補に追加しました`);
   });
 
+  el.contactForm?.addEventListener("submit", submitContactForm);
+
   el.settingsButton.addEventListener("click", openSettingsDialog);
   el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
   el.vibrationToggle.checked = settings.vibration;
@@ -1045,6 +1116,10 @@ function renderAll() {
     renderStayPage();
     return;
   }
+  if (activeView === "Contact") {
+    renderContactPage();
+    return;
+  }
   if (activeView === "Sameshi") {
     renderSameshiPage();
     return;
@@ -1231,6 +1306,7 @@ function renderSourceRow() {
     ["Instabase", "https://www.instabase.jp/sauna"],
     ["SAUNACHELIN", "https://www.saunachelin.com/"],
     ["Airbnbサウナ宿", VIEW_META.Stay.path, "Stay"],
+    ["掲載・お問い合わせ", VIEW_META.Contact.path, "Contact"],
   ];
   el.sourceRow.innerHTML = links.map(([label, url, view]) => (
     view
@@ -1460,7 +1536,7 @@ function renderFacilityDetail() {
         <div class="detail-unique-grid">
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">
             <span>サ飯</span>
-            <strong>周辺の飲食店を地図で探す</strong>
+            <strong>施設名＋飲食店で探す</strong>
           </a>
           <button type="button" data-open-view="Gear">
             <span>補給</span>
@@ -1840,11 +1916,31 @@ function renderStayPage() {
   el.stayCount.textContent = `${SAUNA_STAY_LINKS.length}件`;
   el.stayGrid.innerHTML = SAUNA_STAY_LINKS.map((item) => `
     <article class="stay-card">
-      <span>${escapeHtml(item.label)}</span>
+      <span>${escapeHtml(item.label)} / ${escapeHtml(item.prefecture || "全国")}</span>
       <h3>${escapeHtml(item.title)}</h3>
+      <strong>${escapeHtml([item.prefecture, item.area].filter(Boolean).join(" / "))}</strong>
       <p>${escapeHtml(item.note)}</p>
       <a href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">掲載ページを見る</a>
     </article>
+  `).join("");
+}
+
+function renderContactPage() {
+  if (!el.businessPlanGrid || !el.contactTypeGrid) return;
+  el.businessPlanGrid.innerHTML = BUSINESS_PLANS.map((plan) => `
+    <article class="business-plan-card">
+      <span>${escapeHtml(plan.badge)}</span>
+      <h3>${escapeHtml(plan.name)}</h3>
+      <strong>${escapeHtml(plan.price)}</strong>
+      <p>${escapeHtml(plan.detail)}</p>
+      <em>${escapeHtml(plan.target)}</em>
+    </article>
+  `).join("");
+  el.contactTypeGrid.innerHTML = CONTACT_TYPES.map((type, index) => `
+    <label class="contact-choice">
+      <input type="radio" name="type" value="${escapeAttr(type)}" ${index === 0 ? "checked" : ""} />
+      <span>${escapeHtml(type)}</span>
+    </label>
   `).join("");
 }
 
@@ -2425,6 +2521,81 @@ function getFacilityReviews(facilityId) {
   return normalizeReviews(facilityReviews[facilityId] || state.facilityReviews[facilityId] || []);
 }
 
+async function submitContactForm(event) {
+  event.preventDefault();
+  const form = new FormData(el.contactForm);
+  const payload = {
+    type: String(form.get("type") || "").trim(),
+    organization: String(form.get("organization") || "").trim(),
+    name: String(form.get("name") || "").trim(),
+    email: String(form.get("email") || "").trim(),
+    website: String(form.get("website") || "").trim(),
+    prefecture: String(form.get("prefecture") || "").trim(),
+    message: String(form.get("message") || "").trim(),
+    page: location.href,
+  };
+  if (!payload.type || !payload.email || !payload.message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
+    setContactStatus("種別、返信先メール、内容を確認してください。", true);
+    return;
+  }
+
+  const submitButton = el.contactForm.querySelector('button[type="submit"]');
+  if (submitButton) submitButton.disabled = true;
+  setContactStatus("送信しています。", false);
+
+  if (!IS_STATIC_LOCAL_PREVIEW) {
+    try {
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error("contact-save-failed");
+      const result = await response.json();
+      if (result.configured !== false) {
+        el.contactForm.reset();
+        renderContactPage();
+        setContactStatus("送信しました。返信が必要な内容は確認後に連絡します。", false);
+        showToast("お問い合わせを送信しました");
+        return;
+      }
+    } catch {
+      // Fall back to a prefilled mail client below.
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  }
+
+  if (submitButton) submitButton.disabled = false;
+  openContactMail(payload);
+  setContactStatus("保存先が未接続のため、メール作成画面を開きました。", false);
+}
+
+function setContactStatus(message, isError) {
+  if (!el.contactStatus) return;
+  el.contactStatus.textContent = message;
+  el.contactStatus.classList.toggle("is-error", Boolean(isError));
+}
+
+function openContactMail(payload) {
+  const body = [
+    `お問い合わせ種別: ${payload.type}`,
+    `事業者名・施設名: ${payload.organization || "未入力"}`,
+    `担当者名: ${payload.name || "未入力"}`,
+    `返信先: ${payload.email}`,
+    `Web/予約ページ: ${payload.website || "未入力"}`,
+    `都道府県・エリア: ${payload.prefecture || "未入力"}`,
+    "",
+    payload.message,
+    "",
+    `送信ページ: ${payload.page}`,
+  ].join("\n");
+  const url = new URL(`mailto:${CONTACT_EMAIL}`);
+  url.searchParams.set("subject", `【サ印帳】${payload.type}`);
+  url.searchParams.set("body", body);
+  location.href = url.href;
+}
+
 function shareFacilityMemo(facility) {
   const memo = getFacilityMemo(facility.id);
   if (!memo) {
@@ -2727,13 +2898,14 @@ function getFacilityDirectionsUrl(facility) {
 
 function getNearbySameshiUrl(facility) {
   const query = [
-    getFacilityAddress(facility) || getFacilityCoordinate(facility) || getFacilityAreaLabel(facility),
+    "飲食店",
     facility.name,
-    "周辺 サ飯 レストラン",
+    getFacilityAreaLabel(facility),
+    "周辺",
   ].filter(Boolean).join(" ");
   const url = new URL("https://www.google.com/maps/search/");
   url.searchParams.set("api", "1");
-  url.searchParams.set("query", query || `${facility.name} 周辺 サ飯`);
+  url.searchParams.set("query", query || `${facility.name} 飲食店`);
   return url.href;
 }
 
@@ -2746,17 +2918,24 @@ function renderLodgingLinks(facility) {
 function getLodgingLinks(facility) {
   const query = getLodgingSearchQuery(facility);
   return [
-    ["楽天トラベル", `https://travel.rakuten.co.jp/keyword/Search.do?f_query=${encodeURIComponent(query)}`],
+    ["楽天トラベル候補", buildSearchUrl(`site:travel.rakuten.co.jp ${query} 楽天トラベル`)],
     ["一休", `https://www.ikyu.com/search?kwd=${encodeURIComponent(query)}`],
-    ["Agoda", `https://www.agoda.com/search?text=${encodeURIComponent(query)}`],
+    ["Agoda候補", buildSearchUrl(`site:agoda.com ${query} Agoda`)],
   ].map(([label, url]) => ({ label, url }));
 }
 
 function getLodgingSearchQuery(facility) {
   return [
-    getFacilityAddress(facility) || getFacilityAreaLabel(facility) || facility.name,
-    "周辺 ホテル 宿",
+    facility.name,
+    getFacilityAreaLabel(facility),
+    "近くの宿 ホテル",
   ].filter(Boolean).join(" ");
+}
+
+function buildSearchUrl(query) {
+  const url = new URL("https://www.google.com/search");
+  url.searchParams.set("q", query);
+  return url.href;
 }
 
 function getFacilitySourceLabel(facility) {

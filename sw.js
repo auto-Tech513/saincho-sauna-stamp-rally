@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v31-facility-ux";
+const CACHE_NAME = "saincho-v32-business-contact";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
