@@ -1,5 +1,6 @@
 const KV_KEY = "facilities:v1";
 const MAX_SHARED_FACILITIES = 2000;
+import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
 const PREFECTURES = [
   "北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県",
   "茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県",
@@ -41,6 +42,8 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "shared-storage-not-configured" }, 503);
+  const rateLimit = await checkRateLimit(storage, context.request, "facilities-post", { limit: 12, windowSeconds: 3600 });
+  if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
   let body;
   try {
@@ -171,12 +174,13 @@ function hashId(value) {
   return (hash >>> 0).toString(36);
 }
 
-function json(payload, status) {
+function json(payload, status, extraHeaders = {}) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
+      ...extraHeaders,
     },
   });
 }

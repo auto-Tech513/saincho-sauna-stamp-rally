@@ -1,9 +1,12 @@
 const KV_PREFIX = "contacts:v1:";
 const MAX_TEXT = 1200;
+import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
 
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ configured: false, error: "contact-storage-not-configured" }, 503);
+  const rateLimit = await checkRateLimit(storage, context.request, "contact-post", { limit: 5, windowSeconds: 3600 });
+  if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
   let body;
   try {
@@ -68,12 +71,13 @@ function hashId(value) {
   return (hash >>> 0).toString(36);
 }
 
-function json(payload, status) {
+function json(payload, status, extraHeaders = {}) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
+      ...extraHeaders,
     },
   });
 }

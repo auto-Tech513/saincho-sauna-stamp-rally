@@ -12,16 +12,19 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260705-header-home-v1";
+const APP_BUILD_ID = "20260706-seo-audit-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
+const DATA_MODULE_PATH = "./data.js";
+const CONTENT_MODULE_PATH = "./content.js";
+const GA_MEASUREMENT_ID = "G-FHGXDGF0M7";
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
-const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
-const CONTACT_EMAIL = "fux25471@gmail.com";
+const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国約5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
+const ALLOWED_IMAGE_HOSTS = new Set([location.hostname, new URL(APP_URL).hostname]);
 const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
 const SAUNA_STAY_LINKS = [
   {
@@ -56,6 +59,7 @@ const BUSINESS_PLANS = [
     target: "飲食店・地域密着施設",
     detail: "サ飯ページ、県別枠、検索下部に掲載。近くで探しているユーザーに自然に届く導線です。",
     badge: "8枠限定",
+    paymentUrl: "",
   },
   {
     name: "トップ・検索上部バナー",
@@ -63,6 +67,7 @@ const BUSINESS_PLANS = [
     target: "サウナ施設・温浴施設",
     detail: "トップ画面や検索直後の視認位置に掲出。初回来訪者と再訪ユーザーの両方に届きます。",
     badge: "4枠限定",
+    paymentUrl: "",
   },
   {
     name: "プレミアム個別ページ",
@@ -70,6 +75,7 @@ const BUSINESS_PLANS = [
     target: "サウナ施設・旅館・民泊",
     detail: "専用写真、おすすめポイント、予約ボタン、公式リンク、クーポン案内、口コミ導線を強化します。",
     badge: "更新可",
+    paymentUrl: "",
   },
   {
     name: "サウナ合宿先掲載",
@@ -77,6 +83,7 @@ const BUSINESS_PLANS = [
     target: "サウナ付き宿・民泊",
     detail: "サウナ合宿ページへ掲載。宿泊前提のユーザーに料金・空室確認ページまで案内します。",
     badge: "宿向け",
+    paymentUrl: "",
   },
   {
     name: "サ印特典・クーポン導線",
@@ -84,6 +91,7 @@ const BUSINESS_PLANS = [
     target: "リピートを作りたい店舗",
     detail: "押印後やお気に入り登録後に、再訪理由になる特典案内を表示します。割引内容は店舗側で設定します。",
     badge: "追加施策",
+    paymentUrl: "",
   },
   {
     name: "スポンサー次の一湯",
@@ -91,6 +99,7 @@ const BUSINESS_PLANS = [
     target: "新規来店を増やしたい施設",
     detail: "検索条件に合うユーザーへ、次の候補カードとして自然に掲出。押印、行きたい、経路まで短くつなぎます。",
     badge: "発見枠",
+    paymentUrl: "",
   },
   {
     name: "サ飯セット送客",
@@ -98,6 +107,7 @@ const BUSINESS_PLANS = [
     target: "飲食店・温浴施設の共同施策",
     detail: "施設詳細の周辺サ飯導線や県別サ飯ページで、サウナ後の来店理由を作ります。限定メニューや特典と相性が良い枠です。",
     badge: "地域回遊",
+    paymentUrl: "",
   },
   {
     name: "月次ミニレポート",
@@ -105,6 +115,7 @@ const BUSINESS_PLANS = [
     target: "掲載効果を見たい事業者",
     detail: "表示位置、クリック導線、問い合わせ内容、改善提案を月1回まとめます。広告更新判断に使える軽量レポートです。",
     badge: "改善支援",
+    paymentUrl: "",
   },
   {
     name: "撮影・編集オプション",
@@ -112,6 +123,7 @@ const BUSINESS_PLANS = [
     target: "写真素材がない事業者",
     detail: "カメラマン代、往復移動費、撮り直し、編集代は別途。既存写真の提出だけでも掲載できます。",
     badge: "任意",
+    paymentUrl: "",
   },
 ];
 const CONTACT_TYPES = [
@@ -153,7 +165,7 @@ const PROMOTION_COPY_OPTIONS = [
   },
   {
     label: "検索意図",
-    text: "サウナ検索、サ活記録、サウナ版御朱印をひとつに。全国5000候補から探して、行った施設をサ印として残せます。",
+    text: "サウナ検索、サ活記録、サウナ版御朱印をひとつに。全国約5000候補から探して、行った施設をサ印として残せます。",
   },
   {
     label: "仲間共有",
@@ -178,7 +190,8 @@ const QUICK_NOTE_TEMPLATES = [
     text: "遠征サ活。移動: / サ飯: / 宿: / ここだけの魅力: / 誰にすすめたいか: ",
   },
 ];
-const IS_STATIC_LOCAL_PREVIEW = ["127.0.0.1", "localhost", "::1"].includes(location.hostname) && ["4173", "8000", "8080"].includes(location.port);
+const IS_LOCAL_HOST = ["127.0.0.1", "localhost", "::1"].includes(location.hostname);
+const IS_STATIC_LOCAL_PREVIEW = IS_LOCAL_HOST && !["8787", "8788"].includes(location.port);
 const SEARCH_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´\-‐‑‒–—―ーｰ－−﹘﹣─━〜～~〰（）()【】\[\]「」『』：:]/g;
 const SEARCH_WORD_SEPARATOR_PATTERN = /[\s\u3000・･＆&.．,\u3001、/／\\+＋=＝_*＊'’"“”`´（）()【】\[\]「」『』：:]+/g;
 const KANA_LOOSE_MAP = {
@@ -253,7 +266,7 @@ const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国5000候補、施設詳細、サ飯、称号、ランキングに対応。",
+    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国約5000候補、施設詳細、サ飯、称号、ランキングに対応。",
   },
   Facility: {
     path: "/facility/",
@@ -487,10 +500,13 @@ let visibleLimit = 36;
 let questFacilityId = "";
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
+let pendingPrefectureSlug = "";
+let lastTrackedPagePath = "";
 let memoDrafts = {};
 let facilitiesCache = null;
 let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
+let searchWarmScheduled = false;
 let facilityFeatureCache = new Map();
 
 const el = {
@@ -596,6 +612,7 @@ async function init() {
     return;
   }
 
+  applyPendingRouteState();
   renderPrefSelect();
   renderFeatureControls();
   hydrateSearchFromUrl();
@@ -603,8 +620,10 @@ async function init() {
   renderProfilePanel();
   renderShopPanel();
   renderAll();
-  warmSearchIndex();
+  trackPageView();
+  prepareSearchIndexOnIntent();
   registerServiceWorkerWhenIdle();
+  loadAnalyticsWhenIdle();
   if (IS_STATIC_LOCAL_PREVIEW) {
     sharedFacilitiesConfigured = false;
     rankingConfigured = false;
@@ -620,6 +639,7 @@ async function init() {
     applyActiveView(activeView);
     updateDocumentMetaForView(activeView);
     renderAll();
+    trackPageView();
     el.main.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
@@ -627,8 +647,8 @@ async function init() {
 async function loadAppModules() {
   const version = encodeURIComponent(APP_BUILD_ID);
   const [dataModule, contentModule] = await Promise.all([
-    importWithTimeout(`./data.js?v=${version}`, DATA_IMPORT_TIMEOUT_MS, "候補データ"),
-    importWithTimeout(`./content.js?v=${version}`, DATA_IMPORT_TIMEOUT_MS, "コンテンツ"),
+    importWithTimeout(getVersionedModuleSpecifier(DATA_MODULE_PATH, version), DATA_IMPORT_TIMEOUT_MS, "候補データ"),
+    importWithTimeout(getVersionedModuleSpecifier(CONTENT_MODULE_PATH, version), DATA_IMPORT_TIMEOUT_MS, "コンテンツ"),
   ]);
 
   PREFECTURES = Array.isArray(dataModule.PREFECTURES) ? dataModule.PREFECTURES : [];
@@ -643,6 +663,17 @@ async function loadAppModules() {
   if (!PREFECTURES.length || !SEED_FACILITIES.length) {
     throw new Error("候補データが空です");
   }
+}
+
+function getVersionedModuleSpecifier(path, version) {
+  return /\.[0-9a-f]{8}\.js$/.test(path) ? path : `${path}?v=${version}`;
+}
+
+function applyPendingRouteState() {
+  if (!pendingPrefectureSlug) return;
+  const pref = PREFECTURES.find((item) => item.slug === pendingPrefectureSlug || item.saunaTimeSlug === pendingPrefectureSlug);
+  if (pref) selectedPrefecture = pref.name;
+  pendingPrefectureSlug = "";
 }
 
 function importWithTimeout(specifier, timeoutMs, label) {
@@ -665,29 +696,58 @@ function runWhenIdle(callback, timeout = 1600) {
   window.setTimeout(callback, Math.min(timeout, 800));
 }
 
+function track(name, params = {}) {
+  try {
+    if (typeof window.gtag === "function") window.gtag("event", name, params);
+  } catch {
+    // Analytics must never interrupt the app flow.
+  }
+}
+
 function warmSearchIndex() {
+  if (facilitySearchCache || searchWarmScheduled) return;
+  searchWarmScheduled = true;
   runWhenIdle(() => {
     try {
+      if (facilitySearchCache) return;
       getFacilitySearchRecords();
     } catch {
       // The first real search will rebuild if idle warming is interrupted.
+    } finally {
+      searchWarmScheduled = false;
     }
-  }, 1800);
+  }, 3000);
+}
+
+function prepareSearchIndexOnIntent() {
+  if (!el.searchInput) return;
+  const scheduleWarmup = () => warmSearchIndex();
+  el.searchInput.addEventListener("focus", scheduleWarmup, { once: true });
+  el.searchInput.addEventListener("pointerdown", scheduleWarmup, { once: true });
 }
 
 function registerServiceWorkerWhenIdle() {
   runWhenIdle(registerServiceWorker, 2600);
 }
 
+function loadAnalyticsWhenIdle() {
+  runWhenIdle(() => {
+    const measurementId = window.__SAINCHO_GA_ID;
+    if (!measurementId || document.querySelector("script[data-saincho-analytics]")) return;
+    const script = document.createElement("script");
+    script.async = true;
+    script.dataset.sainchoAnalytics = "true";
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+    document.head.append(script);
+  }, 5200);
+}
+
 function renderBootLoading() {
-  if (el.collectionScope) el.collectionScope.textContent = "候補データを読み込み中";
-  if (el.totalCandidateCount) el.totalCandidateCount.textContent = "0";
-  if (el.coveredPrefCount) el.coveredPrefCount.textContent = "0";
   if (el.facilityList) {
     el.facilityList.innerHTML = `
       <div class="empty-state app-loading-state" role="status" aria-live="polite">
         <span class="loading-spinner" aria-hidden="true"></span>
-        <p>全国5000件のサウナ候補を読み込んでいます。</p>
+        <p>全国約5000件のサウナ候補を読み込んでいます。</p>
       </div>
     `;
   }
@@ -737,6 +797,16 @@ function bindEvents() {
     if (appActionButton.dataset.appAction === "copy-app-url") copyAppUrl();
     if (appActionButton.dataset.appAction === "share-line") shareToLine();
     if (appActionButton.dataset.appAction === "copy-promo") copyPromotionText(appActionButton.dataset.copyIndex);
+  });
+
+  document.addEventListener("click", (event) => {
+    const affiliateLink = event.target instanceof Element ? event.target.closest("[data-affiliate-vendor]") : null;
+    if (!affiliateLink) return;
+    track("affiliate_click", {
+      vendor: affiliateLink.dataset.affiliateVendor || "unknown",
+      item_title: affiliateLink.dataset.affiliateItem || "",
+      surface: affiliateLink.dataset.affiliateSurface || activeView.toLowerCase(),
+    });
   });
 
   document.querySelectorAll("[data-filter]").forEach((button) => {
@@ -879,6 +949,10 @@ function bindEvents() {
     if (button.dataset.action === "quest-sameshi") {
       const facility = getFacilities().find((item) => item.id === button.dataset.id);
       openSameshiForFacility(facility);
+      return;
+    }
+    if (button.dataset.action === "contact-plan") {
+      focusContactPlan(button.dataset.planName);
       return;
     }
 
@@ -1051,6 +1125,7 @@ function bindEvents() {
     deferredInstallPrompt = null;
     localStorage.setItem(INSTALL_DISMISSED_KEY, "installed");
     renderInstallPrompt();
+    track("pwa_install");
     showToast("ホーム画面に追加しました");
   });
   window.addEventListener("resize", renderInstallPrompt);
@@ -1193,6 +1268,7 @@ function applyActiveView(view) {
 }
 
 function renderAll() {
+  removeSsrContent();
   renderSummary();
   if (activeView === "Explore") {
     renderQuestPanel();
@@ -1232,6 +1308,10 @@ function renderAll() {
     renderGuidePage();
     return;
   }
+}
+
+function removeSsrContent() {
+  document.getElementById("ssrContent")?.remove();
 }
 
 function renderSummary() {
@@ -1353,7 +1433,7 @@ function renderFilterButtons() {
   document.querySelectorAll("[data-filter]").forEach((button) => {
     const active = button.dataset.filter === activeFilter;
     button.classList.toggle("segment-active", active);
-    button.toggleAttribute("aria-selected", active);
+    button.setAttribute("aria-pressed", String(active));
   });
 }
 
@@ -1687,19 +1767,72 @@ function getFacilityDetailUrl(facility) {
 }
 
 function getFacilityPhoto(facility) {
-  const image = String(facility.image || "").trim();
-  if (isSafeHttpUrl(image)) {
+  const image = getDisplayImageUrl(facility);
+  if (image) {
     return {
       url: image,
-      label: facility.imageSource ? `${facility.imageSource}掲載写真` : "施設写真",
+      label: "施設写真",
       isFallback: false,
     };
   }
   return {
-    url: "./assets/saincho-header-ritual.jpg",
-    label: "サウナイメージ",
+    url: buildFacilityPlaceholderSvg(facility),
+    label: "サ印プレースホルダー",
     isFallback: true,
   };
+}
+
+function getDisplayImageUrl(value) {
+  const raw = typeof value === "object" && value ? String(value.image || "").trim() : String(value || "").trim();
+  if (!raw) return "";
+  try {
+    const url = new URL(raw, location.origin);
+    if (url.protocol !== "https:" && url.protocol !== "http:") return "";
+    if (!ALLOWED_IMAGE_HOSTS.has(url.hostname)) return "";
+    return url.href;
+  } catch {
+    return "";
+  }
+}
+
+function buildFacilityPlaceholderSvg(facility = {}) {
+  const style = STAMP_STYLES[facility.trait] || STAMP_STYLES.custom;
+  const name = String(facility.name || "サ印帳").trim();
+  const initial = (name.replace(/\s+/g, "")[0] || "湯").slice(0, 1);
+  const meta = [facility.prefecture, facility.city].filter(Boolean).join(" / ") || "SAUNA STAMP";
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+      <defs>
+        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+          <stop stop-color="${style.bg}" offset="0"/>
+          <stop stop-color="#f8f3e8" offset="1"/>
+        </linearGradient>
+        <radialGradient id="mist" cx=".72" cy=".18" r=".72">
+          <stop stop-color="#ffffff" stop-opacity=".78" offset="0"/>
+          <stop stop-color="#ffffff" stop-opacity="0" offset="1"/>
+        </radialGradient>
+      </defs>
+      <rect width="960" height="540" rx="40" fill="url(#bg)"/>
+      <rect width="960" height="540" fill="url(#mist)"/>
+      <circle cx="718" cy="122" r="94" fill="#fff" opacity=".42"/>
+      <circle cx="255" cy="265" r="142" fill="none" stroke="${style.color}" stroke-width="18" opacity=".86"/>
+      <circle cx="255" cy="265" r="110" fill="#fff" opacity=".52"/>
+      <text x="255" y="302" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="98" font-weight="900" fill="${style.color}">${escapeSvgText(initial)}</text>
+      <path d="M536 224c26-44 72-68 126-68s98 24 124 68" fill="none" stroke="${style.color}" stroke-width="18" stroke-linecap="round" opacity=".75"/>
+      <path d="M512 318c42 26 92 40 150 40s108-14 150-40" fill="none" stroke="${style.color}" stroke-width="18" stroke-linecap="round" opacity=".42"/>
+      <text x="510" y="270" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="40" font-weight="900" fill="#101417">${escapeSvgText(name.slice(0, 18))}</text>
+      <text x="512" y="326" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#435250">${escapeSvgText(meta.slice(0, 28))}</text>
+      <text x="54" y="500" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800" fill="#68736f">SAINCHO PLACEHOLDER</text>
+    </svg>
+  `;
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function escapeSvgText(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
 }
 
 function getFacilityDetailLines(facility) {
@@ -1780,7 +1913,7 @@ function renderTitleProgress() {
 
   el.titleProgressPanel.innerHTML = `
     <article class="title-card">
-      <img src="./assets/achievement-mascot.png" width="180" height="120" alt="" />
+      <img src="./assets/achievement-mascot.webp" width="180" height="120" alt="" />
       <div class="title-card-body">
         <span class="title-kicker">現在の称号</span>
         <strong>${escapeHtml(current.title)}</strong>
@@ -2086,6 +2219,9 @@ function renderContactPage() {
       <strong>${escapeHtml(plan.price)}</strong>
       <p>${escapeHtml(plan.detail)}</p>
       <em>${escapeHtml(plan.target)}</em>
+      ${plan.paymentUrl
+        ? `<a class="business-payment-button" href="${escapeAttr(plan.paymentUrl)}" target="_blank" rel="nofollow sponsored noreferrer">カードで申し込む</a>`
+        : `<button class="business-payment-button business-payment-button-inquiry" type="button" data-action="contact-plan" data-plan-name="${escapeAttr(plan.name)}">問い合わせる</button>`}
     </article>
   `).join("");
   if (el.businessValueGrid) {
@@ -2103,6 +2239,19 @@ function renderContactPage() {
       <span>${escapeHtml(type)}</span>
     </label>
   `).join("");
+}
+
+function focusContactPlan(planName = "") {
+  setView("Contact");
+  window.setTimeout(() => {
+    const message = el.contactForm?.elements?.message;
+    const organization = el.contactForm?.elements?.organization;
+    if (message && !message.value.trim()) {
+      message.value = `${planName}について相談したいです。\n施設名・エリア:\n掲載したい内容:\n希望開始時期:`;
+    }
+    organization?.focus();
+    track("contact_plan_intent", { plan_name: planName });
+  }, 120);
 }
 
 function renderFavoritesPanel() {
@@ -2153,8 +2302,9 @@ function renderSameshiPage() {
 
 function renderSameshiCard(item) {
   const linkKind = item.linkLabel === "公式" ? "source-badge-official" : "";
-  const imageStyle = isSafeHttpUrl(item.image)
-    ? ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.18), rgb(16 20 23 / 0.02)), url('${escapeAttr(item.image)}')"`
+  const displayImage = getDisplayImageUrl(item.image);
+  const imageStyle = displayImage
+    ? ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.18), rgb(16 20 23 / 0.02)), url('${escapeAttr(displayImage)}')"`
     : "";
   return `
     <article class="sameshi-card">
@@ -2232,8 +2382,8 @@ function renderGearCard(item, mode) {
       <p>${escapeHtml(item.reason)}</p>
       <em>${escapeHtml(item.proof)}</em>
       <div class="shop-card-actions">
-        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
-        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天 高評価順</a>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="${escapeAttr(mode)}">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="rakuten" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="${escapeAttr(mode)}">楽天 高評価順</a>
       </div>
     </article>
   `;
@@ -2281,8 +2431,8 @@ function renderGuideGearCard(item) {
       <span>${escapeHtml(item.category)}</span>
       <strong>${escapeHtml(item.title)}</strong>
       <div>
-        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
-        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="guide">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="rakuten" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="guide">楽天</a>
       </div>
     </article>
   `;
@@ -2294,8 +2444,8 @@ function renderArticleGearItem(item) {
     <div class="article-gear-item">
       <span>${escapeHtml(item.title)}</span>
       <div>
-        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
-        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="article">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="rakuten" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="article">楽天</a>
       </div>
     </div>
   `;
@@ -2308,8 +2458,8 @@ function renderCompactGearLink(item) {
       <span>${escapeHtml(item.category)}</span>
       <strong>${escapeHtml(item.title)}</strong>
       <div>
-        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer">Amazon</a>
-        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer">楽天</a>
+        <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="compact">Amazon</a>
+        <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="rakuten" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="compact">楽天</a>
       </div>
     </article>
   `;
@@ -2461,6 +2611,7 @@ function stampFacility(facility) {
   };
   delete state.wishlist[facility.id];
   saveState();
+  track("stamp_add", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name });
   queueRankingSync();
   if (settings.vibration && "vibrate" in navigator) navigator.vibrate([20, 30, 20]);
   renderAll();
@@ -2487,6 +2638,7 @@ function unstampFacility(facility) {
   if (!state.visited[facility.id]) return;
   delete state.visited[facility.id];
   saveState();
+  track("stamp_remove", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name });
   queueRankingSync();
   renderAll();
   showToast(`${facility.name} の押印を取り消しました`);
@@ -2496,9 +2648,11 @@ function toggleWishlist(facility) {
   if (state.wishlist[facility.id]) {
     delete state.wishlist[facility.id];
     showToast(`${facility.name} を候補から外しました`);
+    track("wishlist_remove", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   } else {
     state.wishlist[facility.id] = { at: new Date().toISOString() };
     showToast(`${facility.name} を行きたい候補に入れました`);
+    track("wishlist_add", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   }
   saveState();
   renderAll();
@@ -2508,9 +2662,11 @@ function toggleFavorite(facility) {
   if (state.favorites[facility.id]) {
     delete state.favorites[facility.id];
     showToast(`${facility.name} をお気に入りから外しました`);
+    track("favorite_remove", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   } else {
     state.favorites[facility.id] = { at: new Date().toISOString() };
     showToast(`${facility.name} をお気に入りに追加しました`);
+    track("favorite_add", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   }
   saveState();
   renderAll();
@@ -2723,6 +2879,7 @@ async function submitContactForm(event) {
         el.contactForm.reset();
         renderContactPage();
         setContactStatus("送信しました。返信が必要な内容は確認後に連絡します。", false);
+        track("contact_submit", { type: payload.type, configured: true });
         showToast("お問い合わせを送信しました");
         return;
       }
@@ -2735,7 +2892,8 @@ async function submitContactForm(event) {
 
   if (submitButton) submitButton.disabled = false;
   openContactMail(payload);
-  setContactStatus("保存先が未接続のため、メール作成画面を開きました。", false);
+  track("contact_submit", { type: payload.type, configured: false });
+  setContactStatus("保存先が未接続のため、問い合わせ本文をコピーできる形で表示しました。", false);
 }
 
 function setContactStatus(message, isError) {
@@ -2757,10 +2915,8 @@ function openContactMail(payload) {
     "",
     `送信ページ: ${payload.page}`,
   ].join("\n");
-  const url = new URL(`mailto:${CONTACT_EMAIL}`);
-  url.searchParams.set("subject", `【サ印帳】${payload.type}`);
-  url.searchParams.set("body", body);
-  location.href = url.href;
+  navigator.clipboard?.writeText(body).catch(() => null);
+  window.prompt("お問い合わせ本文をコピーして、運営者の連絡先へ送ってください", body);
 }
 
 function shareFacilityMemo(facility) {
@@ -2776,6 +2932,7 @@ function shareFacilityMemo(facility) {
     "#サ印帳 #サウナ",
   ].filter(Boolean).join("\n");
   const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+  track("share", { method: "x_note", facility_id: facility.id, prefecture: facility.prefecture || "" });
   window.open(url, "_blank", "noopener,noreferrer");
 }
 
@@ -2792,6 +2949,7 @@ function shareFacility(facility) {
   ].filter(Boolean).join("\n");
   const params = new URLSearchParams({ text });
   params.set("url", getFacilityDetailUrl(facility));
+  track("share", { method: "x_facility", facility_id: facility.id, prefecture: facility.prefecture || "" });
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
@@ -2804,12 +2962,14 @@ async function shareApp() {
   if (navigator.share) {
     try {
       await navigator.share(shareData);
+      track("share", { method: "webshare", view: activeView });
       return;
     } catch (error) {
       if (error?.name === "AbortError") return;
     }
   }
   const params = new URLSearchParams({ text: shareData.text, url: shareData.url });
+  track("share", { method: "x_app", view: activeView });
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
@@ -2817,6 +2977,7 @@ async function copyAppUrl() {
   const url = getCurrentShareUrl();
   try {
     await navigator.clipboard.writeText(url);
+    track("share", { method: "copy", view: activeView });
     showToast("URLをコピーしました");
   } catch {
     window.prompt("URLをコピーしてください", url);
@@ -2838,6 +2999,7 @@ async function copyPromotionText(indexValue) {
 function shareToLine() {
   const url = new URL("https://social-plugins.line.me/lineit/share");
   url.searchParams.set("url", getCurrentShareUrl());
+  track("share", { method: "line", view: activeView });
   window.open(url.href, "_blank", "noopener,noreferrer");
 }
 
@@ -3006,7 +3168,6 @@ function getFacilitySearchRecords() {
       facility.note,
       facility.access,
       facility.facilityType,
-      facility.imageSource,
       memo?.text,
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
@@ -3476,6 +3637,7 @@ async function syncRanking({ announce } = { announce: false }) {
     rankingConfigured = true;
     leaderboardEntries = normalizeRankingEntries(payload.entries || []);
     renderLeaderboard();
+    track("ranking_join", { stamps, title, announce: Boolean(announce) });
     if (announce) showToast("ランキングを更新しました");
   } catch {
     rankingConfigured = false;
@@ -3796,6 +3958,19 @@ function getViewFromLocation() {
     activeFacilityId = decodeURIComponent(facilityMatch[1]);
     return "Facility";
   }
+  const prefMatch = path.match(/^\/pref\/([^/]+)\/$/);
+  if (prefMatch) {
+    const slug = decodeURIComponent(prefMatch[1]);
+    const pref = PREFECTURES.find((item) => item.slug === slug || item.saunaTimeSlug === slug);
+    if (pref) selectedPrefecture = pref.name;
+    else pendingPrefectureSlug = slug;
+    activeFacilityId = "";
+    return "Explore";
+  }
+  if (/^\/guide\/[^/]+\/$/.test(path)) {
+    activeFacilityId = "";
+    return "Guide";
+  }
   activeFacilityId = "";
   const found = Object.entries(VIEW_META).find(([, meta]) => meta.path === path);
   return found?.[0] || "Explore";
@@ -3807,8 +3982,21 @@ function pushViewUrl(view) {
   const path = view === "Facility" && activeFacilityId
     ? `/facility/${encodeURIComponent(activeFacilityId)}/`
     : VIEW_META[view]?.path || "/";
-  if (location.pathname === path) return;
-  history.pushState({ view }, "", path);
+  if (location.pathname !== path) history.pushState({ view }, "", path);
+  trackPageView();
+}
+
+function trackPageView() {
+  if (!location.protocol.startsWith("http")) return;
+  const pagePath = `${location.pathname}${location.search}`;
+  if (lastTrackedPagePath === pagePath) return;
+  lastTrackedPagePath = pagePath;
+  if (typeof window.gtag !== "function") return;
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    page_path: pagePath,
+    page_location: location.href,
+    page_title: document.title,
+  });
 }
 
 function updateDocumentMetaForView(view, facility = null) {
@@ -3861,7 +4049,7 @@ function syncFacilityStructuredData(facility) {
   }
   const address = getFacilityAddress(facility);
   const coordinate = getFacilityCoordinate(facility);
-  const image = String(facility.image || "").trim();
+  const image = getDisplayImageUrl(facility);
   const data = {
     "@context": "https://schema.org",
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
@@ -3869,7 +4057,7 @@ function syncFacilityStructuredData(facility) {
     name: facility.name,
     url: getFacilityDetailUrl(facility),
     sameAs: [facility.officialUrl, facility.sourceUrl].filter(Boolean),
-    image: isSafeHttpUrl(image) ? [image] : undefined,
+    image: image ? [image] : undefined,
     address: address ? {
       "@type": "PostalAddress",
       streetAddress: address,
@@ -4250,8 +4438,6 @@ function mergeDuplicateFacility(current, incoming) {
     lat: primary.lat || secondary.lat,
     lng: primary.lng || secondary.lng,
     image: primary.image || secondary.image,
-    imageSource: primary.imageSource || secondary.imageSource,
-    photoSourceUrl: primary.photoSourceUrl || secondary.photoSourceUrl,
     rating: primary.rating || secondary.rating,
     reviewCount: primary.reviewCount || secondary.reviewCount,
     features: normalizeFeatures([...(secondary.features || []), ...(primary.features || [])]),

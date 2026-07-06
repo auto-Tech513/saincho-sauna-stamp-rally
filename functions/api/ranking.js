@@ -1,6 +1,9 @@
 const KV_KEY = "ranking:v1";
 const MAX_RANKING_ENTRIES = 5000;
 const PUBLIC_LIMIT = 10;
+const MAX_SINGLE_UPDATE_GAIN = 200;
+const MAX_STAMPS = 5000;
+import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
   { count: 1, title: "はじめの一湯" },
@@ -26,6 +29,8 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "ranking-storage-not-configured" }, 503);
+  const rateLimit = await checkRateLimit(storage, context.request, "ranking-post", { limit: 20, windowSeconds: 600 });
+  if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
   let body;
   try {
@@ -38,6 +43,10 @@ export async function onRequestPost(context) {
   if (!candidate) return json({ error: "invalid-profile" }, 400);
 
   const entries = await readEntries(storage);
+  const current = entries.find((entry) => entry.id === candidate.id || entry.emailHash === candidate.emailHash);
+  if (current && candidate.stamps - current.stamps > MAX_SINGLE_UPDATE_GAIN) {
+    return json({ error: "stamp-growth-too-large", maxGain: MAX_SINGLE_UPDATE_GAIN }, 400);
+  }
   const withoutCurrent = entries.filter((entry) => entry.id !== candidate.id && entry.emailHash !== candidate.emailHash);
   const next = [
     ...withoutCurrent,
@@ -70,7 +79,9 @@ async function normalizeCandidate(value) {
   const nickname = cleanText(value.nickname, 16);
   const email = cleanEmail(value.email);
   const participantId = cleanId(value.participantId);
-  const stamps = Math.max(0, Math.min(5000, Math.floor(Number(value.stamps) || 0)));
+  const rawStamps = Number(value.stamps);
+  if (!Number.isFinite(rawStamps) || rawStamps < 0 || rawStamps > MAX_STAMPS) return null;
+  const stamps = Math.floor(rawStamps);
   if (!nickname || !email) return null;
   const emailHash = await sha256(email);
   return {
@@ -86,7 +97,7 @@ function normalizeStoredEntry(value) {
   const id = cleanId(value.id);
   const nickname = cleanText(value.nickname, 16);
   const emailHash = typeof value.emailHash === "string" && /^[a-f0-9]{64}$/.test(value.emailHash) ? value.emailHash : "";
-  const stamps = Math.max(0, Math.min(5000, Math.floor(Number(value.stamps) || 0)));
+  const stamps = Math.max(0, Math.min(MAX_STAMPS, Math.floor(Number(value.stamps) || 0)));
   if (!id || !nickname) return null;
   return {
     id,
@@ -137,12 +148,13 @@ async function sha256(value) {
   return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
-function json(payload, status) {
+function json(payload, status, extraHeaders = {}) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
+      ...extraHeaders,
     },
   });
 }

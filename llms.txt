@@ -11,7 +11,9 @@
 - https://saincho-sauna-stamp-rally.pages.dev/sameshi/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
-- https://saincho-sauna-stamp-rally.pages.dev/facility/{facility-id}/
+- https://saincho-sauna-stamp-rally.pages.dev/pref/{prefecture-slug}/ （47都道府県別のサウナ一覧）
+- https://saincho-sauna-stamp-rally.pages.dev/facility/{facility-id}/ （全施設の個別ページ）
+- https://saincho-sauna-stamp-rally.pages.dev/guide/{article-slug}/ （サウナ入門記事30本の個別ページ）
 
 ## 主な内容
 

@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 dist/
+public/
+.public-stale-*/
 .wrangler/
 .playwright-cli/
 .env

@@ -61,6 +61,13 @@
       "type": "image/png",
       "form_factor": "wide",
       "label": "サ印帳の共有カード"
+    },
+    {
+      "src": "./assets/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "スマホでサウナ検索と押印を行う画面"
     }
   ],
   "icons": [
@@ -75,6 +82,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     },
     {
       "src": "./icons/saincho-icon-1024.png",

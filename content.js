@@ -382,7 +382,6 @@ export const SAMESHI_SPOTS = [
     "note": "サ飯推薦枠に掲載される船橋の人気候補。熱いサウナ後に辛味と旨味で満足を取りやすい一品です。",
     "category": "鍋",
     "photo": "hotpot",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1786.jpg",
     "url": "https://sauna-ikitai.com/saunas/1786",
     "linkLabel": "参照"
   },
@@ -405,7 +404,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナ好きの投稿数が多い錦糸町の定番施設。サ飯推薦枠でも紹介される、遠征後に選びやすい麺です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1823_newwing.jpg",
     "url": "https://sauna-ikitai.com/saunas/1823",
     "linkLabel": "参照"
   },
@@ -637,7 +635,6 @@ export const SAMESHI_SPOTS = [
     "note": "カフェ併設サウナらしいご褒美感のあるカレー。サ飯推薦枠に掲載される岡山の追加人気候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/78759.jpg",
     "url": "https://sauna-ikitai.com/saunas/78759",
     "linkLabel": "参照"
   },
@@ -660,7 +657,6 @@ export const SAMESHI_SPOTS = [
     "note": "外気浴まで楽しめる温浴施設の追加候補。サウナ後にしっかり食べたい日に選びやすい中華系サ飯です。",
     "category": "中華",
     "photo": "friedrice",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/3450.jpg",
     "url": "https://sauna-ikitai.com/saunas/3450",
     "linkLabel": "参照"
   },
@@ -705,7 +701,6 @@ export const SAMESHI_SPOTS = [
     "note": "サ飯推薦枠に掲載される高松の温浴候補。汗をかいた後に塩気と満腹感を取りやすい定食です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/5011.jpg",
     "url": "https://sauna-ikitai.com/saunas/5011",
     "linkLabel": "参照"
   },
@@ -827,7 +822,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/61033_wakkanai.jpg",
     "url": "https://sauna-ikitai.com/saunas/61033",
     "linkLabel": "参照"
   },
@@ -839,7 +833,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/56.jpg",
     "url": "https://sauna-ikitai.com/saunas/56",
     "linkLabel": "参照"
   },
@@ -994,7 +987,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/654.jpg",
     "url": "https://sauna-ikitai.com/saunas/654",
     "linkLabel": "参照"
   },
@@ -1160,7 +1152,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "丼",
     "photo": "don",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/78226.jpg",
     "url": "https://sauna-ikitai.com/saunas/78226",
     "linkLabel": "参照"
   },
@@ -1216,7 +1207,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/4464.jpg",
     "url": "https://sauna-ikitai.com/saunas/1380",
     "linkLabel": "参照"
   },
@@ -1228,7 +1218,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1191_hororu.jpg",
     "url": "https://sauna-ikitai.com/saunas/1191",
     "linkLabel": "参照"
   },
@@ -1240,7 +1229,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1141.jpg",
     "url": "https://sauna-ikitai.com/saunas/1141",
     "linkLabel": "参照"
   },
@@ -1274,7 +1262,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/78613.jpg",
     "url": "https://sauna-ikitai.com/saunas/78613",
     "linkLabel": "参照"
   },
@@ -1330,7 +1317,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "丼",
     "photo": "don",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/5223.jpg",
     "url": "https://sauna-ikitai.com/saunas/5223",
     "linkLabel": "参照"
   },
@@ -1386,7 +1372,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/1469_SPAHERBS.png",
     "url": "https://sauna-ikitai.com/saunas/1469",
     "linkLabel": "参照"
   },
@@ -1442,7 +1427,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/6291_yuneru.jpg",
     "url": "https://sauna-ikitai.com/saunas/6291",
     "linkLabel": "参照"
   },
@@ -1454,7 +1438,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2377.jpg",
     "url": "https://sauna-ikitai.com/saunas/2377",
     "linkLabel": "参照"
   },
@@ -1499,7 +1482,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2086_kamata.jpg",
     "url": "https://sauna-ikitai.com/saunas/2086",
     "linkLabel": "参照"
   },
@@ -1555,7 +1537,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "鍋",
     "photo": "hotpot",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2418.jpg",
     "url": "https://sauna-ikitai.com/saunas/2418",
     "linkLabel": "参照"
   },
@@ -1567,7 +1548,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "定食",
     "photo": "teishoku",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2146.jpg",
     "url": "https://sauna-ikitai.com/saunas/2146",
     "linkLabel": "参照"
   },
@@ -1579,7 +1559,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "鍋",
     "photo": "hotpot",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2423.jpg",
     "url": "https://sauna-ikitai.com/saunas/2423",
     "linkLabel": "参照"
   },
@@ -1943,7 +1922,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "丼",
     "photo": "don",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/2376.jpg",
     "url": "https://sauna-ikitai.com/saunas/2376",
     "linkLabel": "参照"
   },
@@ -1955,7 +1933,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/28499.jpg",
     "url": "https://sauna-ikitai.com/saunas/28499",
     "linkLabel": "参照"
   },
@@ -2275,7 +2252,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "鍋",
     "photo": "hotpot",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/3103.jpg",
     "url": "https://sauna-ikitai.com/saunas/3103",
     "linkLabel": "参照"
   },
@@ -2287,7 +2263,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/4393.jpg",
     "url": "https://sauna-ikitai.com/saunas/4393",
     "linkLabel": "参照"
   },
@@ -2332,7 +2307,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "中華",
     "photo": "friedrice",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/78727.jpg",
     "url": "https://sauna-ikitai.com/saunas/78727",
     "linkLabel": "参照"
   },
@@ -2608,7 +2582,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "カレー",
     "photo": "curry",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/16022.jpg",
     "url": "https://sauna-ikitai.com/saunas/16022",
     "linkLabel": "参照"
   },
@@ -2664,7 +2637,6 @@ export const SAMESHI_SPOTS = [
     "note": "サウナイキタイのおすすめサウナ飯掲載メニュー。料理名まで確認できるため、押印後の目的地として選びやすい候補です。",
     "category": "麺",
     "photo": "ramen",
-    "image": "https://media.sauna-ikitai.com/kb/food_recommend/3408.jpg",
     "url": "https://sauna-ikitai.com/saunas/3408",
     "linkLabel": "参照"
   },

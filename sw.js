@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v37-header-home-v1";
+const CACHE_NAME = "saincho-v39-seo-cache";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -10,23 +10,11 @@ const APP_SHELL_ASSETS = [
   "./llms.txt",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
-  "./icons/saincho-icon-1024.png",
+  "./icons/icon-512-maskable.png",
   "./icons/apple-touch-icon.png",
   "./icons/favicon-32.png",
   "./icons/favicon-16.png",
-  "./assets/sauna-hero.png",
-  "./assets/saincho-header-ritual.jpg",
-  "./assets/saincho-og-v2.png",
-  "./assets/achievement-mascot.png",
 ];
-
-const FRESH_FIRST_PATHS = new Set([
-  "/app.js",
-  "/data.js",
-  "/content.js",
-  "/styles.css",
-  "/sw.js",
-]);
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -59,11 +47,6 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  if (FRESH_FIRST_PATHS.has(url.pathname)) {
-    event.respondWith(fetchFreshFirst(event.request));
-    return;
-  }
-
   event.respondWith(
     caches.match(event.request).then((cached) => {
       const fetched = fetchAndCache(event.request).catch(() => cached);
@@ -71,13 +54,6 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
-
-function fetchFreshFirst(request) {
-  const freshRequest = new Request(request, { cache: "no-cache" });
-  return fetch(freshRequest)
-    .then((response) => putRuntimeCache(request, response))
-    .catch(() => caches.match(request));
-}
 
 function fetchAndCache(request) {
   return fetch(request).then((response) => putRuntimeCache(request, response));

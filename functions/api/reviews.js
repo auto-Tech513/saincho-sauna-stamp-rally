@@ -1,5 +1,6 @@
 const KV_PREFIX = "reviews:v1:";
 const MAX_REVIEWS_PER_FACILITY = 40;
+import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
 
 export async function onRequestGet(context) {
   const storage = getStorage(context.env);
@@ -13,6 +14,8 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "reviews-storage-not-configured" }, 503);
+  const rateLimit = await checkRateLimit(storage, context.request, "reviews-post", { limit: 12, windowSeconds: 600 });
+  if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
   let body;
   try {
@@ -40,6 +43,8 @@ export async function onRequestPost(context) {
 export async function onRequestDelete(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "reviews-storage-not-configured" }, 503);
+  const rateLimit = await checkRateLimit(storage, context.request, "reviews-delete", { limit: 40, windowSeconds: 600 });
+  if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
   const url = new URL(context.request.url);
   const facilityId = cleanId(url.searchParams.get("facilityId"));
   const reviewId = cleanId(url.searchParams.get("reviewId"));
@@ -104,12 +109,13 @@ function hashId(value) {
   return (hash >>> 0).toString(36);
 }
 
-function json(payload, status) {
+function json(payload, status, extraHeaders = {}) {
   return new Response(JSON.stringify(payload), {
     status,
     headers: {
       "content-type": "application/json; charset=utf-8",
       "cache-control": "no-store",
+      ...extraHeaders,
     },
   });
 }
