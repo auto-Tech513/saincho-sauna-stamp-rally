@@ -12,7 +12,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260706-seo-audit-v1";
+const APP_BUILD_ID = "20260707-washi-design-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -375,13 +375,13 @@ const SEARCH_SYNONYM_GROUPS = [
 const SEARCH_CONNECTOR_TERMS = ["and", "アンド", "あんど", "&", "＆"];
 
 const STAMP_STYLES = {
-  wood: { kanji: "薪", color: "#2d6a4f", bg: "#eff7ef" },
-  water: { kanji: "冷", color: "#2473a6", bg: "#eef7fb" },
-  urban: { kanji: "街", color: "#39464f", bg: "#f1f3f4" },
-  onsen: { kanji: "湯", color: "#d85a3a", bg: "#fff2ea" },
-  award: { kanji: "熱", color: "#bb8d23", bg: "#fff7df" },
-  private: { kanji: "宿", color: "#6c4b9b", bg: "#f5f1fb" },
-  custom: { kanji: "私", color: "#0a8f8a", bg: "#effaf7" },
+  wood: { kanji: "薪", color: "#B93A2B", bg: "#F6F3EC" },
+  water: { kanji: "冷", color: "#B93A2B", bg: "#F6F3EC" },
+  urban: { kanji: "街", color: "#B93A2B", bg: "#F6F3EC" },
+  onsen: { kanji: "湯", color: "#B93A2B", bg: "#F6F3EC" },
+  award: { kanji: "熱", color: "#B93A2B", bg: "#F6F3EC" },
+  private: { kanji: "宿", color: "#B93A2B", bg: "#F6F3EC" },
+  custom: { kanji: "私", color: "#B93A2B", bg: "#F6F3EC" },
 };
 
 const FEATURE_GROUPS = [
@@ -1652,7 +1652,7 @@ function renderFacilityDetail() {
   const tags = getDisplayTags(facility).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   const detailLines = getFacilityDetailLines(facility);
   const photo = getFacilityPhoto(facility);
-  const photoStyle = ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.36), rgb(16 20 23 / 0.06)), url('${escapeAttr(photo.url)}')"`;
+  const photoStyle = ` style="background-image: url('${escapeAttr(photo.url)}')"`;
   const gear = getFacilityGearProducts(facility).slice(0, 3);
   const ratingCopy = facility.rating && facility.reviewCount
     ? `掲載評価 ${facility.rating} / ${facility.reviewCount}レビュー`
@@ -1800,29 +1800,24 @@ function buildFacilityPlaceholderSvg(facility = {}) {
   const name = String(facility.name || "サ印帳").trim();
   const initial = (name.replace(/\s+/g, "")[0] || "湯").slice(0, 1);
   const meta = [facility.prefecture, facility.city].filter(Boolean).join(" / ") || "SAUNA STAMP";
+  const paper = "#F6F3EC";
+  const washi = "#EDE8DC";
+  const ink = "#1F1D18";
+  const softInk = "#5C5850";
+  const line = "#D9D2C2";
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
-      <defs>
-        <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-          <stop stop-color="${style.bg}" offset="0"/>
-          <stop stop-color="#f8f3e8" offset="1"/>
-        </linearGradient>
-        <radialGradient id="mist" cx=".72" cy=".18" r=".72">
-          <stop stop-color="#ffffff" stop-opacity=".78" offset="0"/>
-          <stop stop-color="#ffffff" stop-opacity="0" offset="1"/>
-        </radialGradient>
-      </defs>
-      <rect width="960" height="540" rx="40" fill="url(#bg)"/>
-      <rect width="960" height="540" fill="url(#mist)"/>
-      <circle cx="718" cy="122" r="94" fill="#fff" opacity=".42"/>
-      <circle cx="255" cy="265" r="142" fill="none" stroke="${style.color}" stroke-width="18" opacity=".86"/>
-      <circle cx="255" cy="265" r="110" fill="#fff" opacity=".52"/>
-      <text x="255" y="302" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="98" font-weight="900" fill="${style.color}">${escapeSvgText(initial)}</text>
-      <path d="M536 224c26-44 72-68 126-68s98 24 124 68" fill="none" stroke="${style.color}" stroke-width="18" stroke-linecap="round" opacity=".75"/>
-      <path d="M512 318c42 26 92 40 150 40s108-14 150-40" fill="none" stroke="${style.color}" stroke-width="18" stroke-linecap="round" opacity=".42"/>
-      <text x="510" y="270" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="40" font-weight="900" fill="#101417">${escapeSvgText(name.slice(0, 18))}</text>
-      <text x="512" y="326" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="800" fill="#435250">${escapeSvgText(meta.slice(0, 28))}</text>
-      <text x="54" y="500" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="800" fill="#68736f">SAINCHO PLACEHOLDER</text>
+      <rect width="960" height="540" rx="40" fill="${paper}"/>
+      <path d="M0 94h960M0 188h960M0 282h960M0 376h960M0 470h960" stroke="${washi}" stroke-width="2" opacity=".72"/>
+      <path d="M86 84h788v372H86z" fill="none" stroke="${line}" stroke-width="3"/>
+      <circle cx="256" cy="270" r="144" fill="none" stroke="${style.color}" stroke-width="18" opacity=".88"/>
+      <circle cx="256" cy="270" r="110" fill="none" stroke="${style.color}" stroke-width="5" stroke-dasharray="18 16" opacity=".62"/>
+      <path d="M182 318c42 24 106 24 148 0" fill="none" stroke="${style.color}" stroke-width="14" stroke-linecap="round" opacity=".82"/>
+      <path d="M192 238c18 20 18 46 0 66M248 224c18 24 18 54 0 82M304 238c18 20 18 46 0 66" fill="none" stroke="${style.color}" stroke-width="14" stroke-linecap="round" opacity=".82"/>
+      <text x="256" y="302" text-anchor="middle" font-family="Yu Mincho, serif" font-size="96" font-weight="700" fill="${style.color}">${escapeSvgText(initial)}</text>
+      <text x="506" y="258" font-family="Noto Sans JP, system-ui, sans-serif" font-size="42" font-weight="700" fill="${ink}">${escapeSvgText(name.slice(0, 18))}</text>
+      <text x="508" y="318" font-family="Noto Sans JP, system-ui, sans-serif" font-size="24" font-weight="700" fill="${softInk}">${escapeSvgText(meta.slice(0, 28))}</text>
+      <text x="86" y="500" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="${softInk}" letter-spacing="3">SAINCHO PLACE</text>
     </svg>
   `;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
@@ -2304,7 +2299,7 @@ function renderSameshiCard(item) {
   const linkKind = item.linkLabel === "公式" ? "source-badge-official" : "";
   const displayImage = getDisplayImageUrl(item.image);
   const imageStyle = displayImage
-    ? ` style="background-image: linear-gradient(135deg, rgb(16 20 23 / 0.18), rgb(16 20 23 / 0.02)), url('${escapeAttr(displayImage)}')"`
+    ? ` style="background-image: url('${escapeAttr(displayImage)}')"`
     : "";
   return `
     <article class="sameshi-card">

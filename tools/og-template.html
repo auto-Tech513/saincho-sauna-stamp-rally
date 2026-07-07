@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Noto+Sans+JP:wght@500;700&family=Shippori+Mincho+B1:wght@600;700&display=swap" rel="stylesheet" />
+    <title>サ印帳 OGP</title>
+    <style>
+      :root {
+        --paper: #f6f3ec;
+        --washi: #ede8dc;
+        --ink: #1f1d18;
+        --ink-soft: #5c5850;
+        --line: #d9d2c2;
+        --primary: #114b46;
+        --accent: #b93a2b;
+        --gold: #8a6a24;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        width: 1200px;
+        height: 630px;
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Noto Sans JP", sans-serif;
+      }
+
+      .card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 42px;
+        width: 1120px;
+        height: 550px;
+        padding: 54px 58px;
+        overflow: hidden;
+        background: #fffdf8;
+        border: 3px solid var(--line);
+        border-radius: 36px;
+      }
+
+      .card::before {
+        position: absolute;
+        inset: 48px;
+        pointer-events: none;
+        border: 2px solid var(--washi);
+        content: "";
+      }
+
+      .copy {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--gold);
+        font-family: "Inter", sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Shippori Mincho B1", serif;
+        font-size: 94px;
+        font-weight: 700;
+        line-height: 1.02;
+        letter-spacing: 0.08em;
+      }
+
+      .lead {
+        max-width: 650px;
+        margin: 26px 0 0;
+        color: var(--ink-soft);
+        font-size: 31px;
+        font-weight: 700;
+        line-height: 1.55;
+        letter-spacing: 0.05em;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 38px;
+      }
+
+      .chips span {
+        padding: 9px 16px;
+        color: var(--primary);
+        border: 2px solid var(--line);
+        border-radius: 999px;
+        font-size: 21px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+      }
+
+      .visual {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        place-items: center;
+      }
+
+      .stamp {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 304px;
+        height: 304px;
+        color: var(--accent);
+        border: 16px solid var(--accent);
+        border-radius: 50%;
+        transform: rotate(-8deg);
+      }
+
+      .stamp::before {
+        position: absolute;
+        inset: 27px;
+        border: 5px dashed var(--accent);
+        border-radius: 50%;
+        content: "";
+        opacity: 0.62;
+      }
+
+      .stamp::after {
+        position: absolute;
+        bottom: 58px;
+        left: 55px;
+        width: 170px;
+        height: 42px;
+        border-bottom: 18px solid var(--accent);
+        border-radius: 0 0 999px 999px;
+        content: "";
+      }
+
+      .stamp strong {
+        font-family: "Shippori Mincho B1", serif;
+        font-size: 126px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+      }
+
+      .note {
+        margin-top: 36px;
+        color: var(--primary);
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <section class="copy">
+        <p class="eyebrow">SAUNA STAMP RALLY</p>
+        <h1>サ印帳</h1>
+        <p class="lead">全国5,000超のサウナを探して、行った一湯を赤印で記録。</p>
+        <div class="chips" aria-label="主な機能">
+          <span>サウナ検索</span>
+          <span>施設詳細</span>
+          <span>サ飯</span>
+          <span>称号</span>
+        </div>
+      </section>
+      <section class="visual" aria-hidden="true">
+        <div class="stamp"><strong>熱</strong></div>
+        <div class="note">押して集める、次の一湯。</div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -7,8 +7,8 @@
   "scope": "./",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
-  "background_color": "#fbfbf7",
-  "theme_color": "#101417",
+  "background_color": "#F6F3EC",
+  "theme_color": "#114B46",
   "categories": ["lifestyle", "travel", "health"],
   "shortcuts": [
     {

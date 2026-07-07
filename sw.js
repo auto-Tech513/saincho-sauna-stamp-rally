@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v39-seo-cache";
+const CACHE_NAME = "saincho-v40-washi-design-v1";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
