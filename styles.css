@@ -5598,6 +5598,831 @@ a:focus-visible {
   border: 1px solid rgb(244 215 107 / 0.8);
 }
 
+/* Heat lodge design v2: rich visual background with readable mobile-first surfaces */
+:root {
+  color-scheme: light;
+  --paper: #f2eadf;
+  --washi: #eadfce;
+  --surface: #fffaf2;
+  --surface-strong: #ffffff;
+  --ink: #111817;
+  --ink-soft: #52625e;
+  --line: #d9c9b5;
+  --primary: #007a70;
+  --primary-soft: #dff3ef;
+  --accent: #c93a2b;
+  --accent-soft: #fee8df;
+  --gold: #f1c64b;
+  --gold-deep: #9b7217;
+  --night: #0b1514;
+  --night-soft: #132320;
+  --shadow: 0 18px 42px rgb(23 18 12 / 0.16);
+  --shadow-soft: 0 10px 26px rgb(23 18 12 / 0.1);
+  --radius-s: 6px;
+  --radius-m: 8px;
+  --hairline: 1px solid rgb(56 42 26 / 0.14);
+  --font-body: "Inter", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --font-display: "Inter", "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --muted: var(--ink-soft);
+  --mist: var(--primary-soft);
+  --coal: var(--night);
+  --teal: var(--primary);
+  --cedar: #7b4c27;
+  --coral: var(--accent);
+  --water: #087e91;
+}
+
+* {
+  letter-spacing: 0 !important;
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at 10% -10%, rgb(211 72 53 / 0.2), transparent 34rem),
+    radial-gradient(circle at 92% 4%, rgb(0 135 124 / 0.2), transparent 30rem),
+    linear-gradient(180deg, #13211f 0, #1a2520 10rem, var(--paper) 28rem, #f8f2e7 100%);
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.72;
+}
+
+.app-shell {
+  background:
+    linear-gradient(180deg, rgb(11 21 20 / 0.08), transparent 22rem),
+    radial-gradient(circle at 82% 18rem, rgb(241 198 75 / 0.12), transparent 26rem);
+}
+
+.topbar {
+  min-height: 132px;
+  padding: calc(18px + env(safe-area-inset-top)) 26px 18px;
+  color: #fffaf2;
+  background: var(--night);
+  border-bottom: 1px solid rgb(255 250 242 / 0.14);
+  box-shadow: 0 18px 46px rgb(5 9 9 / 0.34);
+  backdrop-filter: none;
+}
+
+.topbar::before,
+.topbar::after {
+  display: block;
+}
+
+.topbar::before {
+  background-image: url("./assets/saincho-header-ritual.webp");
+  background-position: center;
+  background-size: cover;
+  filter: saturate(1.06) contrast(1.04);
+  transform: scale(1.015);
+}
+
+.topbar::after {
+  background:
+    linear-gradient(90deg, rgb(5 9 9 / 0.88) 0%, rgb(5 9 9 / 0.62) 38%, rgb(5 9 9 / 0.3) 74%, rgb(5 9 9 / 0.68) 100%),
+    linear-gradient(180deg, rgb(5 9 9 / 0.1), rgb(5 9 9 / 0.44));
+  border-bottom: 1px solid rgb(255 255 255 / 0.12);
+}
+
+.brand-lockup,
+.brand-lockup:visited {
+  color: #fffaf2;
+}
+
+.brand-mark {
+  width: 54px;
+  height: 54px;
+  background: #fffaf2;
+  border: 2px solid rgb(255 250 242 / 0.82);
+  border-radius: 8px;
+  box-shadow: 0 18px 32px rgb(0 0 0 / 0.32);
+}
+
+.topbar h1 {
+  color: #fffaf2;
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.02;
+  text-shadow: 0 4px 26px rgb(0 0 0 / 0.55);
+}
+
+.topbar .eyebrow {
+  color: rgb(255 250 242 / 0.72);
+  font-weight: 800;
+}
+
+.topbar-promise {
+  display: flex;
+}
+
+.topbar-promise span {
+  color: #fffaf2;
+  background: rgb(255 250 242 / 0.12);
+  border-color: rgb(255 250 242 / 0.22);
+}
+
+.top-gear-button {
+  min-width: 94px;
+  color: #15140f;
+  background: linear-gradient(180deg, #ffe47c 0%, var(--gold) 100%);
+  border: 1px solid rgb(255 250 242 / 0.42);
+  border-radius: 8px;
+  box-shadow: 0 16px 30px rgb(0 0 0 / 0.28);
+}
+
+.menu-button,
+.icon-button#settingsButton {
+  color: #fffaf2;
+  background: rgb(255 250 242 / 0.12);
+  border: 1px solid rgb(255 250 242 / 0.2);
+  border-radius: 8px;
+  box-shadow: 0 14px 28px rgb(0 0 0 / 0.2);
+}
+
+.main {
+  background: transparent;
+}
+
+.install-card,
+.summary-band,
+.filter-panel,
+.daily-card,
+.detail-card,
+.log-card,
+.gear-card,
+.article-card,
+.sameshi-card,
+.stay-card,
+.contact-card,
+.ranking-card,
+.faq-panel,
+.reference-panel,
+.contact-form-panel,
+.settings-dialog,
+.achievement-card,
+.review-item,
+.memo-item,
+.leaderboard-row,
+.business-plan,
+.business-value-card {
+  color: var(--ink);
+  background: rgb(255 250 242 / 0.96);
+  border: 1px solid rgb(56 42 26 / 0.14);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.summary-band {
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  min-height: 282px;
+  padding: 24px;
+  color: #fffaf2;
+  background-color: var(--night);
+  background-image: url("./assets/saincho-header-ritual.webp");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgb(255 250 242 / 0.16);
+  box-shadow: var(--shadow);
+}
+
+.summary-band::before {
+  position: absolute;
+  inset: 0;
+  display: block;
+  min-height: auto;
+  background:
+    linear-gradient(90deg, rgb(7 13 13 / 0.82), rgb(7 13 13 / 0.54) 56%, rgb(7 13 13 / 0.26)),
+    linear-gradient(180deg, rgb(7 13 13 / 0.2), rgb(7 13 13 / 0.66));
+  content: "";
+  filter: none;
+  opacity: 1;
+}
+
+.summary-band::after {
+  display: none;
+}
+
+.summary-copy,
+.hero-metrics,
+.reward-nudge,
+.progress-ring {
+  position: relative;
+  z-index: 1;
+}
+
+.summary-copy {
+  padding: 0;
+}
+
+.summary-label,
+.summary-copy span,
+.summary-copy p,
+.summary-kicker,
+.summary-meta,
+#collectionScope {
+  color: rgb(255 250 242 / 0.82);
+}
+
+.summary-copy strong,
+.hero-metrics strong,
+.reward-pill strong {
+  color: #fffaf2;
+  font-family: var(--font-display);
+  font-weight: 900;
+}
+
+#collectionScope {
+  display: inline-flex;
+  width: fit-content;
+  padding: 4px 10px;
+  background: rgb(255 250 242 / 0.13);
+  border: 1px solid rgb(255 250 242 / 0.24);
+  border-radius: 999px;
+}
+
+.hero-metrics {
+  grid-column: 1 / -1;
+  padding: 0;
+}
+
+.hero-metrics div,
+.reward-pill {
+  color: #fffaf2;
+  background: rgb(8 14 14 / 0.58);
+  border: 1px solid rgb(255 250 242 / 0.2);
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.hero-metrics span,
+.reward-pill span,
+.reward-pill em {
+  color: rgb(255 250 242 / 0.78);
+}
+
+.progress-ring {
+  color: var(--accent);
+  background: rgb(255 250 242 / 0.94);
+  border: 5px solid rgb(255 250 242 / 0.42);
+  box-shadow: 0 18px 34px rgb(0 0 0 / 0.26);
+}
+
+.tool-band {
+  top: 8px;
+  gap: 10px;
+  padding: 10px;
+  background: rgb(255 250 242 / 0.92);
+  border: 1px solid rgb(56 42 26 / 0.12);
+  border-radius: 8px;
+  box-shadow: 0 14px 30px rgb(23 18 12 / 0.12);
+  backdrop-filter: blur(16px) saturate(1.08);
+}
+
+.search-box {
+  min-height: 54px;
+  background: var(--surface-strong);
+  border: 1px solid rgb(17 24 23 / 0.18);
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.68);
+}
+
+.search-box input {
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.search-box input::placeholder {
+  color: rgb(82 98 94 / 0.58);
+}
+
+.search-clear-button,
+.install-dismiss {
+  color: var(--ink);
+  background: #eef1ec;
+  border: 1px solid rgb(17 24 23 / 0.08);
+}
+
+.segment {
+  background: #dcebe5;
+  border: 1px solid rgb(0 135 124 / 0.08);
+  border-radius: 8px;
+}
+
+.segment button {
+  min-height: 42px;
+  color: #40514d;
+  font-weight: 800;
+}
+
+.segment .segment-active {
+  color: var(--ink);
+  background: #fff;
+  box-shadow: 0 8px 18px rgb(17 24 23 / 0.1);
+}
+
+.pref-chip,
+.source-row a,
+.feature-chip,
+.feature-option,
+.tag,
+.facility-source,
+.status-badge {
+  color: #334541;
+  background: rgb(255 250 242 / 0.94);
+  border: 1px solid rgb(56 42 26 / 0.14);
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.pref-chip-active,
+.pref-chip.is-active,
+.source-tab.is-active,
+.feature-chip.is-selected,
+.feature-chip.is-active,
+.feature-option.is-selected,
+.feature-option:has(input:checked) {
+  color: #fffaf2;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.source-row a {
+  color: #0d5f58;
+  background: rgb(0 135 124 / 0.11);
+  border-color: rgb(0 135 124 / 0.22);
+}
+
+.seo-answer-panel,
+.feature-filter-panel {
+  background: rgb(255 250 242 / 0.94);
+  border: 1px solid rgb(56 42 26 / 0.14);
+  box-shadow: var(--shadow-soft);
+}
+
+.quest-card,
+.spotlight-card {
+  position: relative;
+  color: #fffaf2;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(90deg, rgb(8 14 14 / 0.9), rgb(8 14 14 / 0.62) 58%, rgb(8 14 14 / 0.32)),
+    url("./assets/saincho-header-ritual.webp");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgb(255 250 242 / 0.16);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.spotlight-card h3,
+.spotlight-card p,
+.spotlight-card .spotlight-address,
+.quest-copy strong,
+.quest-target strong,
+.quest-copy em,
+.quest-target em {
+  color: #fffaf2;
+}
+
+.spotlight-label {
+  color: #ffe1b7;
+  background: rgb(211 72 53 / 0.26);
+  border-color: rgb(211 72 53 / 0.38);
+}
+
+.spotlight-gear {
+  color: var(--ink);
+  background: rgb(255 250 242 / 0.94);
+  border: 1px solid rgb(255 250 242 / 0.34);
+}
+
+.spotlight-gear-head strong,
+.spotlight-gear-links strong {
+  color: var(--ink);
+}
+
+.spotlight-gear-head span,
+.spotlight-gear-links span {
+  color: var(--gold-deep);
+}
+
+.facility-card {
+  color: var(--ink);
+  background: rgb(255 250 242 / 0.98);
+  border: 1px solid rgb(56 42 26 / 0.14);
+  border-left: 5px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.facility-card:hover {
+  border-color: rgb(0 135 124 / 0.42);
+  border-left-color: var(--accent);
+  box-shadow: var(--shadow);
+}
+
+.facility-card::before {
+  display: none;
+}
+
+.facility-name {
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 900;
+}
+
+.facility-meta,
+.facility-address,
+.memo-summary,
+.card-count,
+.panel-copy,
+.detail-value,
+.review-meta,
+.gear-note {
+  color: var(--ink-soft);
+}
+
+.facility-card .text-link,
+.facility-card a,
+.memo-add-button,
+.note-action {
+  color: var(--primary);
+}
+
+.tag-row {
+  gap: 7px;
+}
+
+.tag,
+.status-badge,
+.visited-badge {
+  min-height: 30px;
+  padding-inline: 10px;
+  color: #40514d;
+  background: #eef3ed;
+}
+
+.visited-badge {
+  color: #fffaf2;
+  background: var(--night);
+  border-color: var(--night);
+}
+
+.primary-button,
+.stamp-button,
+.add-submit,
+.contact-submit-row .primary-button {
+  color: #fffaf2;
+  background: var(--accent);
+  border: 1px solid #b83a29;
+  border-radius: 8px;
+  box-shadow: 0 12px 22px rgb(211 72 53 / 0.18);
+}
+
+.complete-button {
+  background: #40514d;
+  border-color: #40514d;
+  box-shadow: none;
+}
+
+.secondary-button,
+.ghost-button,
+.detail-link,
+.favorite-button,
+.favorite-wide-button,
+.undo-button,
+.install-button,
+.map-route-button,
+.facility-share-button {
+  color: var(--ink);
+  background: #fffaf2;
+  border: 1px solid rgb(56 42 26 / 0.18);
+  border-radius: 8px;
+}
+
+.map-route-button {
+  color: #0b4d47;
+  background: #e2f5f1;
+  border-color: rgb(0 135 124 / 0.22);
+}
+
+.facility-share-button,
+.amazon-button {
+  color: #fffaf2;
+  background: var(--night);
+  border-color: var(--night);
+}
+
+.favorite-button {
+  color: var(--gold-deep);
+  background: #fff8df;
+  border-color: rgb(241 198 75 / 0.7);
+}
+
+.favorite-button.is-active {
+  color: #15140f;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
+.stamp-art {
+  color: var(--accent);
+  background:
+    radial-gradient(circle at center, #fffaf2 0 55%, #fff2e1 100%);
+  border: 3px solid currentColor;
+  box-shadow: 0 8px 18px rgb(17 24 23 / 0.08);
+}
+
+.stamp-art.locked {
+  color: #a9b0ad;
+  background: #f3f4f1;
+  border-color: #cad0cc;
+}
+
+.commerce-hero,
+.guide-hero,
+.sameshi-hero,
+.stay-hero,
+.contact-hero {
+  color: #fffaf2;
+  background-color: var(--night);
+  background-image:
+    linear-gradient(90deg, rgb(8 14 14 / 0.86), rgb(8 14 14 / 0.54)),
+    url("./assets/saincho-header-ritual.webp");
+  background-position: center;
+  background-size: cover;
+  border: 1px solid rgb(255 250 242 / 0.14);
+  box-shadow: var(--shadow);
+}
+
+.commerce-hero h3,
+.guide-hero h3,
+.sameshi-hero h3,
+.stay-hero h3,
+.contact-hero h3,
+.commerce-hero p,
+.guide-hero p,
+.sameshi-hero p,
+.stay-hero p,
+.contact-hero p {
+  color: #fffaf2;
+}
+
+.commerce-hero span,
+.guide-hero span,
+.sameshi-hero span,
+.stay-hero span,
+.contact-hero span {
+  color: var(--gold);
+}
+
+.gear-card,
+.gear-card-full,
+.article-card,
+.sameshi-card,
+.stay-card,
+.contact-card {
+  background: rgb(255 250 242 / 0.98);
+  border: 1px solid rgb(56 42 26 / 0.14);
+  box-shadow: var(--shadow-soft);
+}
+
+.affiliate-button,
+.rakuten-button {
+  color: #17140a;
+  background: linear-gradient(180deg, #ffe47c, var(--gold));
+  border: 1px solid rgb(155 114 23 / 0.32);
+}
+
+.bottom-nav {
+  color: rgb(255 250 242 / 0.72);
+  background: rgb(11 21 20 / 0.96);
+  border-top: 1px solid rgb(255 250 242 / 0.12);
+  box-shadow: 0 -18px 36px rgb(0 0 0 / 0.24);
+}
+
+.bottom-nav button {
+  color: rgb(255 250 242 / 0.72);
+}
+
+.bottom-nav .nav-active {
+  color: #fffaf2;
+  background: rgb(211 72 53 / 0.22);
+}
+
+.bottom-nav .nav-active svg,
+.bottom-nav button:hover svg {
+  color: #fffaf2;
+}
+
+.settings-dialog[open],
+.achievement-card {
+  color: var(--ink);
+  background: var(--surface);
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 15px;
+  }
+
+  .topbar {
+    min-height: 124px;
+    padding: calc(14px + env(safe-area-inset-top)) 14px 14px;
+  }
+
+  .brand-mark {
+    width: 50px;
+    height: 50px;
+  }
+
+  .topbar h1 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .topbar-promise {
+    gap: 5px;
+    margin-top: 7px;
+  }
+
+  .topbar-promise span {
+    min-height: 22px;
+    padding-inline: 8px;
+    font-size: 12px;
+  }
+
+  .topbar-promise span:nth-child(3) {
+    display: none;
+  }
+
+  .top-gear-button {
+    min-width: 76px;
+    min-height: 50px;
+  }
+
+  .menu-button,
+  .icon-button#settingsButton {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main {
+    padding: 12px 12px calc(var(--nav-height) + 18px);
+  }
+
+  .install-card {
+    grid-template-columns: 44px minmax(0, 1fr) auto auto;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .summary-band {
+    min-height: 268px;
+    padding: 18px 16px;
+  }
+
+  .summary-copy strong {
+    font-size: clamp(46px, 14vw, 64px);
+    line-height: 0.95;
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .hero-metrics div,
+  .reward-pill {
+    min-height: 64px;
+    padding: 10px;
+  }
+
+  .tool-band {
+    top: 6px;
+    margin-inline: -2px;
+  }
+
+  .search-box {
+    min-height: 58px;
+  }
+
+  .segment {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .segment button {
+    min-height: 48px;
+    font-size: 13px;
+  }
+
+  .spotlight-card,
+  .facility-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 14px;
+  }
+
+  .spotlight-card .stamp-art {
+    width: 76px;
+    justify-self: end;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .facility-card > .stamp-art {
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    width: 76px;
+  }
+
+  .facility-card .card-head,
+  .facility-card .facility-meta,
+  .facility-card .facility-address,
+  .facility-card .tag-row {
+    padding-right: 88px;
+  }
+
+  .facility-name {
+    font-size: clamp(24px, 6.6vw, 32px);
+    line-height: 1.18;
+  }
+
+  .facility-address {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .card-actions,
+  .facility-utility-actions,
+  .spotlight-actions {
+    gap: 8px;
+  }
+
+  .spotlight-gear {
+    padding: 10px;
+  }
+
+  .spotlight-gear-head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .spotlight-gear-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .spotlight-gear-links article {
+    gap: 6px;
+    padding: 9px;
+  }
+
+  .spotlight-gear-links strong {
+    font-size: 12px;
+    line-height: 1.28;
+  }
+
+  .spotlight-gear-links div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .spotlight-gear-links a {
+    min-height: 32px;
+    font-size: 12px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .ghost-button,
+  .danger-button,
+  .map-route-button,
+  .facility-share-button,
+  .favorite-wide-button,
+  .undo-button {
+    min-height: 52px;
+    font-size: 16px;
+  }
+
+  .bottom-nav {
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+}
+
+@media (min-width: 761px) {
+  .bottom-nav {
+    border: 1px solid rgb(255 250 242 / 0.12);
+    border-radius: 8px;
+  }
+}
+
 @media (max-width: 760px) {
   .summary-band {
     grid-template-columns: minmax(0, 1fr) 74px;
