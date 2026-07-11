@@ -48,7 +48,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="preload" href="./assets/saincho-header-ritual.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="./styles.css?v=20260711-trust-performance-v1" />
+    <link rel="stylesheet" href="./styles.css?v=20260711-community-location-v1" />
     <script>
       window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
       window.dataLayer = window.dataLayer || [];
@@ -425,6 +425,20 @@
             </div>
           </div>
 
+          <section class="area-shortcut" id="areaShortcut" aria-label="マイエリア">
+            <button type="button" id="homePrefectureButton">
+              <span>MY AREA</span>
+              <strong id="homePrefectureLabel">マイ県を登録</strong>
+              <em>いつもの県をすぐ探す</em>
+            </button>
+            <button type="button" id="nearbySaunaButton">
+              <span>NEARBY</span>
+              <strong>現在地から探す</strong>
+              <em>座標確認済み候補のみ</em>
+            </button>
+            <div class="nearby-result" id="nearbyResult" role="status" aria-live="polite"></div>
+          </section>
+
           <section class="quest-panel" id="questPanel" aria-label="次の一手"></section>
 
           <details class="seo-answer-panel">
@@ -563,6 +577,23 @@
               <button class="mini-button" type="button" data-open-view="Gear">30件を見る</button>
             </div>
             <div class="shop-grid" id="shopGrid"></div>
+          </section>
+          <section class="japan-progress-panel" aria-label="都道府県別サ印地図">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">JAPAN MAP</p>
+                <h3>県別のサ印進捗</h3>
+              </div>
+              <span>県を選んで探す</span>
+            </div>
+            <div class="japan-map" id="japanMap" role="group" aria-label="日本地図"></div>
+            <div class="map-legend" aria-label="地図の凡例">
+              <span><i class="map-level-0"></i>未訪問</span>
+              <span><i class="map-level-1"></i>収集中</span>
+              <span><i class="map-level-2"></i>50%以上</span>
+              <span><i class="map-level-3"></i>マスター</span>
+            </div>
+            <a class="map-attribution" href="https://geolonia.github.io/japanese-prefectures/" target="_blank" rel="noreferrer">地図: Geolonia japanese-prefectures</a>
           </section>
           <div class="pref-board" id="prefBoard"></div>
           <label class="import-box">
@@ -713,6 +744,54 @@
           </section>
         </section>
 
+        <section class="view" id="viewCommunity" aria-label="サウナ仲間">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">COMMUNITY</p>
+              <h2>サウナ仲間</h2>
+            </div>
+            <span class="count-badge" id="communityCount">0件</span>
+          </div>
+          <div class="community-hero">
+            <span>少人数で、無理なくつながる</span>
+            <h3>次の一湯を一緒に楽しむ</h3>
+            <p>県、日時、集合施設が分かる募集だけを掲載します。連絡先は公開せず、参加表明までサ印帳の中で完結します。</p>
+          </div>
+          <div class="community-layout">
+            <section class="community-list-panel" aria-label="募集中のサ活">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">UPCOMING</p>
+                  <h3>募集中のサ活</h3>
+                </div>
+                <button class="mini-button" id="communityRefreshButton" type="button">更新</button>
+              </div>
+              <div class="community-filter" id="communityFilter"></div>
+              <div class="community-list" id="communityList"></div>
+            </section>
+            <section class="community-form-panel" aria-label="サ活募集を作る">
+              <div class="panel-head">
+                <div>
+                  <p class="eyebrow">HOST</p>
+                  <h3>サ活募集を作る</h3>
+                </div>
+                <span>連絡先は非公開</span>
+              </div>
+              <form class="community-form" id="communityForm">
+                <label><span>募集タイトル</span><input name="title" maxlength="48" required placeholder="例: 仕事帰りに軽めの2セット" /></label>
+                <div class="community-form-grid">
+                  <label><span>都道府県</span><select name="prefecture" id="communityPrefecture" required></select></label>
+                  <label><span>日時</span><input name="date" type="datetime-local" required /></label>
+                </div>
+                <label><span>集合施設</span><input name="venue" maxlength="64" required placeholder="施設名を入力" /></label>
+                <label><span>ひとこと</span><textarea name="note" maxlength="180" rows="3" placeholder="ペース、人数、初心者歓迎など"></textarea></label>
+                <button class="primary-button" type="submit">募集を公開</button>
+                <p class="community-status" id="communityStatus" role="status"></p>
+              </form>
+            </section>
+          </div>
+        </section>
+
         <section class="view" id="viewAdd" aria-label="追加">
           <div class="section-title">
             <div>
@@ -778,21 +857,49 @@
           <span class="icon-close" aria-hidden="true"></span>
         </button>
       </div>
-      <label class="toggle-row">
+      <section class="menu-group menu-area-group" aria-labelledby="menuAreaTitle">
+        <h3 id="menuAreaTitle">マイエリア</h3>
+        <label class="menu-select-row">
+          <span>よく行く県</span>
+          <select id="homePrefectureSelect"><option value="">未登録</option></select>
+        </label>
+        <label class="toggle-row">
+          <span><strong>近隣サウナ通知</strong><small>アプリを開いた時に確認</small></span>
+          <input id="nearbyNotificationToggle" type="checkbox" />
+        </label>
+        <button class="menu-location-button" id="settingsNearbyButton" type="button">現在地から近くを探す</button>
+      </section>
+      <section class="menu-group" aria-labelledby="menuMainTitle">
+        <h3 id="menuMainTitle">探す・記録</h3>
+        <div class="menu-actions menu-actions-grid" aria-label="探す・記録メニュー">
+          <button type="button" data-menu-view="Explore">サウナを探す</button>
+          <button type="button" data-menu-view="Passport">サ印を見る</button>
+          <button type="button" data-menu-view="Stats">記録・ランキング</button>
+          <button type="button" data-menu-view="Community">サウナ仲間</button>
+        </div>
+      </section>
+      <section class="menu-group" aria-labelledby="menuPlanTitle">
+        <h3 id="menuPlanTitle">次のサ活を計画</h3>
+        <div class="menu-actions menu-actions-grid" aria-label="サ活計画メニュー">
+          <button type="button" data-menu-view="Sameshi">サ飯</button>
+          <button type="button" data-menu-view="Stay">サウナ合宿</button>
+          <button type="button" data-menu-view="Guide">サウナ入門</button>
+          <button type="button" data-menu-view="Gear">Gear</button>
+        </div>
+      </section>
+      <section class="menu-group" aria-labelledby="menuServiceTitle">
+        <h3 id="menuServiceTitle">共有・サポート</h3>
+        <div class="menu-actions menu-actions-grid" aria-label="共有・サポートメニュー">
+          <button type="button" data-app-action="share-app">サ印帳を共有</button>
+          <button type="button" data-menu-view="Contact">掲載・問い合わせ</button>
+          <button type="button" data-menu-view="About">運営・データ方針</button>
+          <button type="button" data-app-action="copy-app-url">URLコピー</button>
+        </div>
+      </section>
+      <label class="toggle-row menu-vibration-row">
         <span>押印時の振動</span>
         <input id="vibrationToggle" type="checkbox" checked />
       </label>
-      <div class="menu-actions" aria-label="メニュー">
-        <button type="button" data-menu-view="Gear">Gearページ</button>
-        <button type="button" data-menu-view="Stay">サウナ合宿先を探す</button>
-        <button type="button" data-menu-view="Contact">掲載・お問い合わせ</button>
-        <button type="button" data-menu-view="Sameshi">サ飯</button>
-        <button type="button" data-menu-view="Guide">サウナ入門</button>
-        <button type="button" data-menu-view="Stats">ランキング</button>
-        <button type="button" data-menu-view="About">運営・データ方針</button>
-        <button type="button" data-app-action="share-app">サ印帳を共有</button>
-        <button type="button" data-app-action="copy-app-url">URLコピー</button>
-      </div>
       <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
       <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
     </dialog>
@@ -834,6 +941,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260711-trust-performance-v1"></script>
+    <script type="module" src="./app.js?v=20260711-community-location-v1"></script>
   </body>
 </html>

@@ -19,6 +19,8 @@ const ASSET_FILES = [
   "assets/achievement-mascot.webp",
   "assets/sauna-hero.webp",
   "assets/screenshot-mobile.png",
+  "assets/sameshi-sprite-v1.webp",
+  "assets/japan-map-mobile.svg",
 ];
 const ICON_FILES = [
   "icons/apple-touch-icon.png",
@@ -135,6 +137,7 @@ await emitStaticRoute("/ranking/", "サ印ランキング | サ印帳", "サ印�
 await emitStaticRoute("/passport/", "サ印 | サ印帳", "全国と都道府県別のサ印収集状況を確認。県マスター、称号、押印済み施設を一目で振り返れます。", renderGenericSsr("サ印", "全国・県別のサ印進捗と称号を確認できます。"));
 await emitStaticRoute("/add/", "サウナを追加 | サ印帳", "候補にないサウナを都道府県、住所、特徴付きで登録できます。KV接続時は他ユーザーにも公開候補として表示されます。", renderGenericSsr("候補にないサウナを追加", "施設名、都道府県、住所、特徴を追加して、自分と他のユーザーのサウナ探索を育てられます。"));
 await emitStaticRoute("/sameshi/", "サ飯 | サ印帳", "サウナーに人気のサ飯候補を県別に確認。施設周辺の飲食店検索にもつながるサ活後の導線です。", renderGenericSsr("サ飯", "都道府県別のサ飯候補と、施設周辺の飲食店検索でサウナ後の一食を探せます。"), LASTMOD.content);
+await emitStaticRoute("/community/", "サ活コミュニティ | サ印帳", "都道府県別のサ活募集を作成・確認できるサウナー向けコミュニティ。連絡先を公開せず、参加予定を共有できます。", renderGenericSsr("サ活コミュニティ", "都道府県、日時、集合場所を指定してサ活仲間を募集できます。連絡先や位置情報は公開しません。"));
 await emitStaticRoute("/stay/", "サウナ合宿先 | サ印帳", "サウナ付き宿や遠征先を探す専用ページ。施設詳細とは分けて、宿泊先選びの比較導線をまとめています。", renderGenericSsr("サウナ合宿先", "Airbnbなどのサウナ付き宿を、施設詳細とは別ページで比較できます。"));
 await emitStaticRoute("/contact/", "掲載・お問い合わせ | サ印帳", "サウナ施設、旅館、民泊、飲食店向けに広告バナー、プレミアム個別ページ、サ飯送客、サウナ合宿先掲載の相談を受け付けます。", renderGenericSsr("掲載・お問い合わせ", "広告掲載、プレミアム個別ページ、内容修正、権利連絡、サ飯掲載の相談窓口です。"));
 await emitStaticRoute("/about/", "運営・データ方針 | サ印帳", "サ印帳の施設データ確認基準、更新方法、広告・アフィリエイト方針、プライバシー、内容修正窓口を公開しています。", renderAboutSsr(), LASTMOD.site);
@@ -248,7 +251,7 @@ function renderHomeSsr() {
       ${prefLinks}
     </nav>
     <nav class="ssr-links" aria-label="主要ページ">
-      <a href="/guide/">サウナ入門</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
+      <a href="/guide/">サウナ入門</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/community/">サ活コミュニティ</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
     </nav>
   `);
 }

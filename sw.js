@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v42-trust-performance-v1";
+const CACHE_NAME = "saincho-v43-community-location-v1";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -51,6 +51,18 @@ self.addEventListener("fetch", (event) => {
     caches.match(event.request).then((cached) => {
       const fetched = fetchAndCache(event.request).catch(() => cached);
       return cached || fetched;
+    })
+  );
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const target = new URL(event.notification.data?.url || "/", self.location.origin).href;
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((windows) => {
+      const existing = windows.find((client) => client.url === target || client.url.startsWith(self.location.origin));
+      if (existing) return existing.navigate(target).then(() => existing.focus());
+      return self.clients.openWindow(target);
     })
   );
 });

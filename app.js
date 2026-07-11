@@ -8,11 +8,12 @@ const REVIEWS_ENDPOINT = "./api/reviews";
 const CONTACT_ENDPOINT = "./api/contact";
 const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
+const COMMUNITY_ENDPOINT = "./api/community";
 const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260711-trust-performance-v1";
+const APP_BUILD_ID = "20260711-community-location-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -23,6 +24,12 @@ const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
+const JAPAN_MAP_URL = "./assets/japan-map-mobile.svg";
+const CHECKIN_REQUIRED_MS = 10 * 60 * 1000;
+const CHECKIN_RADIUS_METERS = 300;
+const NEARBY_RESULT_RADIUS_KM = 15;
+const NEARBY_NOTIFICATION_RADIUS_KM = 5;
+const NEARBY_NOTIFICATION_COOLDOWN_MS = 12 * 60 * 60 * 1000;
 const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国約5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
 const ALLOWED_IMAGE_HOSTS = new Set([location.hostname, new URL(APP_URL).hostname]);
 const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
@@ -313,6 +320,11 @@ const VIEW_META = {
     title: "サウナ入門30記事 | 入り方・水風呂・持ち物・マナー",
     description: "初めてのサウナでも迷わない入り方、水風呂、休憩、水分補給、ロウリュ、サウナグッズ、マナーを30記事とFAQで確認できます。",
   },
+  Community: {
+    path: "/community/",
+    title: "サウナ仲間・サ活募集 | サ印帳",
+    description: "都道府県、日時、集合施設を決めて少人数のサ活仲間を募集。連絡先を公開せず、参加表明までサ印帳で管理できます。",
+  },
   Add: {
     path: "/add/",
     title: "候補にないサウナを追加 | サ印帳",
@@ -484,6 +496,7 @@ let selectedPrefecture = "全国";
 let selectedGearCategory = "すべて";
 let selectedArticleCategory = "すべて";
 let selectedSameshiPrefecture = "東京都";
+let selectedCommunityPrefecture = "全国";
 let activeFilter = "all";
 let activeView = "Explore";
 let activeFacilityId = "";
@@ -496,6 +509,8 @@ let leaderboardEntries = [];
 let facilityReviews = {};
 let facilityReviewLoadedIds = new Set();
 let reviewsConfigured = null;
+let communityEvents = [];
+let communityConfigured = null;
 let rankingConfigured = null;
 let toastTimer = 0;
 let rankingSyncTimer = 0;
@@ -514,6 +529,8 @@ let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
 let searchWarmScheduled = false;
 let facilityFeatureCache = new Map();
+let japanMapMarkup = "";
+let checkinTimer = 0;
 
 const el = {
   main: document.querySelector(".main"),
@@ -541,6 +558,7 @@ const el = {
   stampGrid: document.querySelector("#stampGrid"),
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
+  japanMap: document.querySelector("#japanMap"),
   profileForm: document.querySelector("#profileForm"),
   profileNickname: document.querySelector("#profileNickname"),
   profileEmail: document.querySelector("#profileEmail"),
@@ -568,6 +586,13 @@ const el = {
   sameshiGrid: document.querySelector("#sameshiGrid"),
   sameshiCount: document.querySelector("#sameshiCount"),
   sameshiSource: document.querySelector("#sameshiSource"),
+  communityCount: document.querySelector("#communityCount"),
+  communityFilter: document.querySelector("#communityFilter"),
+  communityList: document.querySelector("#communityList"),
+  communityForm: document.querySelector("#communityForm"),
+  communityPrefecture: document.querySelector("#communityPrefecture"),
+  communityStatus: document.querySelector("#communityStatus"),
+  communityRefreshButton: document.querySelector("#communityRefreshButton"),
   articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
   guideGearRail: document.querySelector("#guideGearRail"),
   articleList: document.querySelector("#articleList"),
@@ -581,6 +606,13 @@ const el = {
   settingsDialog: document.querySelector("#settingsDialog"),
   closeSettingsButton: document.querySelector("#closeSettingsButton"),
   vibrationToggle: document.querySelector("#vibrationToggle"),
+  homePrefectureSelect: document.querySelector("#homePrefectureSelect"),
+  nearbyNotificationToggle: document.querySelector("#nearbyNotificationToggle"),
+  settingsNearbyButton: document.querySelector("#settingsNearbyButton"),
+  homePrefectureButton: document.querySelector("#homePrefectureButton"),
+  homePrefectureLabel: document.querySelector("#homePrefectureLabel"),
+  nearbySaunaButton: document.querySelector("#nearbySaunaButton"),
+  nearbyResult: document.querySelector("#nearbyResult"),
   resetButton: document.querySelector("#resetButton"),
   exportButton: document.querySelector("#exportButton"),
   importInput: document.querySelector("#importInput"),
@@ -621,6 +653,8 @@ async function init() {
 
   applyPendingRouteState();
   renderPrefSelect();
+  renderHomePrefectureControls();
+  renderCommunityPrefectureSelect();
   renderFeatureControls();
   hydrateSearchFromUrl();
   renderSearchClearButton();
@@ -634,13 +668,17 @@ async function init() {
   if (IS_STATIC_LOCAL_PREVIEW) {
     sharedFacilitiesConfigured = false;
     rankingConfigured = false;
+    communityConfigured = false;
     renderSharedHint();
     renderLeaderboard();
   } else {
     loadSharedFacilities();
     loadRanking();
+    loadCommunityEvents();
     startRankingPolling();
   }
+  resumeActiveCheckin();
+  checkNearbyOnLaunch();
   window.addEventListener("popstate", () => {
     activeView = getViewFromLocation();
     applyActiveView(activeView);
@@ -930,6 +968,13 @@ function bindEvents() {
       return;
     }
 
+    const nearbyFacilityButton = target.closest("[data-nearby-facility]");
+    if (nearbyFacilityButton) {
+      const facility = getFacilityById(nearbyFacilityButton.dataset.nearbyFacility);
+      if (facility) openFacilityDetail(facility);
+      return;
+    }
+
     const moreButton = target.closest("[data-show-more]");
     if (moreButton) {
       visibleLimit += 36;
@@ -970,6 +1015,15 @@ function bindEvents() {
       focusContactPlan(button.dataset.planName);
       return;
     }
+    if (button.dataset.action === "community-filter") {
+      selectedCommunityPrefecture = button.dataset.prefecture || "全国";
+      renderCommunityPage();
+      return;
+    }
+    if (button.dataset.action === "community-join") {
+      joinCommunityEvent(button.dataset.eventId);
+      return;
+    }
 
     const facility = getFacilities().find((item) => item.id === button.dataset.id);
     if (!facility) return;
@@ -983,6 +1037,9 @@ function bindEvents() {
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
     if (button.dataset.action === "share-facility") shareFacility(facility);
+    if (button.dataset.action === "share-facility-native") shareFacilityNative(facility);
+    if (button.dataset.action === "start-checkin") startFacilityCheckin(facility);
+    if (button.dataset.action === "cancel-checkin") cancelFacilityCheckin(facility);
     if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
     if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
@@ -1011,6 +1068,23 @@ function bindEvents() {
     if (!button) return;
     selectedPrefecture = button.dataset.prefecture;
     setView("Explore");
+  });
+
+  el.japanMap?.addEventListener("click", (event) => {
+    const prefectureNode = event.target instanceof Element ? event.target.closest(".prefecture[data-code]") : null;
+    if (!prefectureNode) return;
+    const pref = PREFECTURES[Number(prefectureNode.dataset.code) - 1];
+    if (!pref) return;
+    selectedPrefecture = pref.name;
+    setView("Explore");
+  });
+
+  el.japanMap?.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const prefectureNode = event.target instanceof Element ? event.target.closest(".prefecture[data-code]") : null;
+    if (!prefectureNode) return;
+    event.preventDefault();
+    prefectureNode.dispatchEvent(new MouseEvent("click", { bubbles: true }));
   });
 
   el.passportPrefStrip.addEventListener("click", (event) => {
@@ -1105,6 +1179,8 @@ function bindEvents() {
   });
 
   el.contactForm?.addEventListener("submit", submitContactForm);
+  el.communityForm?.addEventListener("submit", submitCommunityEvent);
+  el.communityRefreshButton?.addEventListener("click", () => loadCommunityEvents({ announce: true }));
 
   el.settingsButton.addEventListener("click", openSettingsDialog);
   el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
@@ -1112,6 +1188,29 @@ function bindEvents() {
   el.vibrationToggle.addEventListener("change", () => {
     settings.vibration = el.vibrationToggle.checked;
     saveSettings();
+  });
+  el.homePrefectureSelect?.addEventListener("change", () => {
+    state.homePrefecture = el.homePrefectureSelect.value;
+    saveState();
+    renderHomePrefectureControls();
+    showToast(state.homePrefecture ? `${state.homePrefecture}をマイ県に登録しました` : "マイ県を解除しました");
+  });
+  el.nearbyNotificationToggle?.addEventListener("change", async () => {
+    if (el.nearbyNotificationToggle.checked) {
+      const enabled = await enableNearbyNotifications();
+      state.nearbyNotifications = enabled;
+      el.nearbyNotificationToggle.checked = enabled;
+    } else {
+      state.nearbyNotifications = false;
+    }
+    saveState();
+  });
+  el.homePrefectureButton?.addEventListener("click", openHomePrefecture);
+  el.nearbySaunaButton?.addEventListener("click", () => findNearbySaunas({ announce: true }));
+  el.settingsNearbyButton?.addEventListener("click", () => {
+    closeSettingsDialog();
+    setView("Explore");
+    findNearbySaunas({ announce: true });
   });
 
   el.resetButton.addEventListener("click", () => {
@@ -1328,6 +1427,10 @@ function renderAll() {
     renderGuidePage();
     return;
   }
+  if (activeView === "Community") {
+    renderCommunityPage();
+    return;
+  }
 }
 
 function removeSsrContent() {
@@ -1542,7 +1645,7 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
         ${renderFavoriteButton(facility, favorite)}
         ${renderMapRouteLink(facility)}
-        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+        ${renderFacilityShareButtons(facility)}
       </div>
       ${renderFacilityGearNudge(facility)}
     </article>
@@ -1606,7 +1709,7 @@ function renderFacilityCard(facility) {
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="facility-utility-actions">
           ${renderMapRouteLink(facility)}
-          <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+          ${renderFacilityShareButtons(facility)}
         </div>
         ${renderMemoPanel(facility)}
       </div>
@@ -1619,6 +1722,13 @@ function renderFavoriteButton(facility, active, compact = false) {
     <button class="favorite-button ${active ? "is-active" : ""} ${compact ? "favorite-button-compact" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-pressed="${active}" aria-label="${active ? "お気に入りから外す" : "お気に入りに追加"}">
       <span aria-hidden="true">${active ? "★" : "☆"}</span>
     </button>
+  `;
+}
+
+function renderFacilityShareButtons(facility) {
+  return `
+    <button class="facility-native-share-button" type="button" data-action="share-facility-native" data-id="${escapeAttr(facility.id)}">共有する</button>
+    <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
   `;
 }
 
@@ -1711,8 +1821,10 @@ function renderFacilityDetail() {
         ${visited ? `<button class="undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">押印を取り消す</button>` : ""}
         ${renderMapRouteLink(facility)}
         <a class="sameshi-map-button" href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
-        <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+        ${renderFacilityShareButtons(facility)}
       </section>
+
+      ${renderCheckinPanel(facility)}
 
       <section class="detail-panel detail-location-panel">
         <div>
@@ -1787,6 +1899,171 @@ function renderFacilityDetail() {
   loadFacilityReviews(facility.id);
 }
 
+function renderCheckinPanel(facility) {
+  const coordinate = getFacilityCoordinate(facility);
+  const active = state.activeCheckin?.facilityId === facility.id ? state.activeCheckin : null;
+  const visited = Boolean(state.visited[facility.id]);
+  if (visited) {
+    return `
+      <section class="detail-panel checkin-panel checkin-complete" aria-label="滞在チェックイン">
+        <div><p class="eyebrow">CHECK IN</p><h3>この施設は押印済みです</h3><p>訪問記録としてサ印帳に保存されています。</p></div>
+      </section>
+    `;
+  }
+  if (!coordinate) {
+    return `
+      <section class="detail-panel checkin-panel checkin-unavailable" aria-label="滞在チェックイン">
+        <div><p class="eyebrow">CHECK IN</p><h3>滞在チェックインは準備中</h3><p>座標確認済みの施設だけで利用できます。位置情報は端末内の距離判定にのみ使います。</p></div>
+      </section>
+    `;
+  }
+  if (active) {
+    const elapsed = Math.max(0, Date.now() - Date.parse(active.startedAt));
+    const percent = Math.min(100, Math.round((elapsed / CHECKIN_REQUIRED_MS) * 100));
+    const remainingMinutes = Math.max(0, Math.ceil((CHECKIN_REQUIRED_MS - elapsed) / 60000));
+    return `
+      <section class="detail-panel checkin-panel is-active" aria-label="滞在チェックイン">
+        <div>
+          <p class="eyebrow">CHECK IN</p>
+          <h3>滞在を確認中</h3>
+          <p>施設付近で10分経過後、位置をもう一度確認して自動押印します。位置情報は送信しません。</p>
+        </div>
+        <div class="checkin-meter" aria-label="滞在確認 ${percent}%">
+          <div><span class="checkin-progress-fill" style="width:${percent}%"></span></div>
+          <strong class="checkin-remaining">あと${remainingMinutes}分</strong>
+        </div>
+        <button class="undo-button" type="button" data-action="cancel-checkin" data-id="${escapeAttr(facility.id)}">チェックインを中止</button>
+      </section>
+    `;
+  }
+  return `
+    <section class="detail-panel checkin-panel" aria-label="滞在チェックイン">
+      <div>
+        <p class="eyebrow">CHECK IN</p>
+        <h3>滞在10分で自動押印</h3>
+        <p>ボタンを押した時だけ位置情報を確認します。300m以内で開始し、10分後の再確認に成功すると押印します。</p>
+      </div>
+      <button class="checkin-button" type="button" data-action="start-checkin" data-id="${escapeAttr(facility.id)}">滞在チェックインを開始</button>
+    </section>
+  `;
+}
+
+async function startFacilityCheckin(facility) {
+  if (state.visited[facility.id] || !getFacilityCoordinate(facility)) return;
+  if (state.activeCheckin && state.activeCheckin.facilityId !== facility.id) {
+    showToast("別の施設でチェックイン中です。先に中止してください");
+    return;
+  }
+  try {
+    const position = await getCurrentPosition({ highAccuracy: true, maximumAge: 0 });
+    const distanceMeters = getDistanceFromFacilityMeters(position, facility);
+    const allowance = CHECKIN_RADIUS_METERS + Math.min(100, Math.max(0, Number(position.coords.accuracy) || 0));
+    if (distanceMeters > allowance) {
+      showToast(`施設から約${Math.round(distanceMeters)}m離れています。300m以内で開始してください`);
+      return;
+    }
+    state.activeCheckin = {
+      facilityId: facility.id,
+      startedAt: new Date().toISOString(),
+      lastVerifiedAt: new Date().toISOString(),
+      distanceMeters: Math.round(distanceMeters),
+    };
+    saveState();
+    startCheckinTimer();
+    renderAll();
+    track("checkin_start", { facility_id: facility.id, prefecture: facility.prefecture || "" });
+    showToast("滞在チェックインを開始しました");
+  } catch (error) {
+    showToast(getGeolocationErrorMessage(error));
+  }
+}
+
+function cancelFacilityCheckin(facility) {
+  if (state.activeCheckin?.facilityId !== facility.id) return;
+  state.activeCheckin = null;
+  saveState();
+  stopCheckinTimer();
+  renderAll();
+  showToast("滞在チェックインを中止しました");
+}
+
+function resumeActiveCheckin() {
+  const checkin = state.activeCheckin;
+  if (!checkin) return;
+  const facility = getFacilityById(checkin.facilityId);
+  if (!facility || state.visited[checkin.facilityId]) {
+    state.activeCheckin = null;
+    saveState();
+    return;
+  }
+  startCheckinTimer();
+}
+
+function startCheckinTimer() {
+  stopCheckinTimer();
+  checkinTimer = window.setInterval(updateCheckinProgress, 1000);
+  updateCheckinProgress();
+}
+
+function stopCheckinTimer() {
+  if (!checkinTimer) return;
+  window.clearInterval(checkinTimer);
+  checkinTimer = 0;
+}
+
+function updateCheckinProgress() {
+  const checkin = state.activeCheckin;
+  if (!checkin) {
+    stopCheckinTimer();
+    return;
+  }
+  const elapsed = Math.max(0, Date.now() - Date.parse(checkin.startedAt));
+  const percent = Math.min(100, Math.round((elapsed / CHECKIN_REQUIRED_MS) * 100));
+  const remainingMinutes = Math.max(0, Math.ceil((CHECKIN_REQUIRED_MS - elapsed) / 60000));
+  document.querySelector(".checkin-progress-fill")?.style.setProperty("width", `${percent}%`);
+  const remaining = document.querySelector(".checkin-remaining");
+  if (remaining) remaining.textContent = remainingMinutes ? `あと${remainingMinutes}分` : "位置を再確認中";
+  if (elapsed >= CHECKIN_REQUIRED_MS) completeFacilityCheckin();
+}
+
+async function completeFacilityCheckin() {
+  const checkin = state.activeCheckin;
+  if (!checkin || checkin.completing) return;
+  checkin.completing = true;
+  const facility = getFacilityById(checkin.facilityId);
+  if (!facility) return;
+  try {
+    const position = await getCurrentPosition({ highAccuracy: true, maximumAge: 0 });
+    const distanceMeters = getDistanceFromFacilityMeters(position, facility);
+    const allowance = CHECKIN_RADIUS_METERS + Math.min(100, Math.max(0, Number(position.coords.accuracy) || 0));
+    if (distanceMeters > allowance) {
+      state.activeCheckin = null;
+      saveState();
+      stopCheckinTimer();
+      renderAll();
+      showToast("施設付近を確認できなかったため自動押印しませんでした");
+      return;
+    }
+    state.activeCheckin = null;
+    saveState();
+    stopCheckinTimer();
+    stampFacility(facility);
+    track("checkin_complete", { facility_id: facility.id, prefecture: facility.prefecture || "" });
+  } catch (error) {
+    checkin.completing = false;
+    showToast(`${getGeolocationErrorMessage(error)}。チェックインは継続します`);
+  }
+}
+
+function getDistanceFromFacilityMeters(position, facility) {
+  return haversineDistanceKm(
+    position.coords.latitude,
+    position.coords.longitude,
+    Number(facility.lat),
+    Number(facility.lng),
+  ) * 1000;
+}
+
 function getFacilityById(id) {
   return getFacilities().find((facility) => facility.id === id || (facility.legacyIds || []).includes(id));
 }
@@ -1810,7 +2087,7 @@ function getFacilityPhoto(facility) {
   }
   return {
     url: buildFacilityPlaceholderSvg(facility),
-    label: "サ印プレースホルダー",
+    label: "サ印コレクション",
     isFallback: true,
   };
 }
@@ -1831,26 +2108,36 @@ function getDisplayImageUrl(value) {
 function buildFacilityPlaceholderSvg(facility = {}) {
   const style = STAMP_STYLES[facility.trait] || STAMP_STYLES.custom;
   const name = String(facility.name || "サ印帳").trim();
-  const initial = (name.replace(/\s+/g, "")[0] || "湯").slice(0, 1);
   const meta = [facility.prefecture, facility.city].filter(Boolean).join(" / ") || "SAUNA STAMP";
-  const paper = "#F6F3EC";
-  const washi = "#EDE8DC";
-  const ink = "#1F1D18";
-  const softInk = "#5C5850";
-  const line = "#D9D2C2";
+  const serial = [...name].reduce((total, char) => (total * 31 + char.codePointAt(0)) % 10000, 173).toString().padStart(4, "0");
+  const paper = "#FFF9ED";
+  const ink = "#162321";
+  const softInk = "#52615D";
+  const line = "#DDD3C1";
+  const seal = style.color || "#D6422B";
   const svg = `
     <svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
-      <rect width="960" height="540" rx="40" fill="${paper}"/>
-      <path d="M0 94h960M0 188h960M0 282h960M0 376h960M0 470h960" stroke="${washi}" stroke-width="2" opacity=".72"/>
-      <path d="M86 84h788v372H86z" fill="none" stroke="${line}" stroke-width="3"/>
-      <circle cx="256" cy="270" r="144" fill="none" stroke="${style.color}" stroke-width="18" opacity=".88"/>
-      <circle cx="256" cy="270" r="110" fill="none" stroke="${style.color}" stroke-width="5" stroke-dasharray="18 16" opacity=".62"/>
-      <path d="M182 318c42 24 106 24 148 0" fill="none" stroke="${style.color}" stroke-width="14" stroke-linecap="round" opacity=".82"/>
-      <path d="M192 238c18 20 18 46 0 66M248 224c18 24 18 54 0 82M304 238c18 20 18 46 0 66" fill="none" stroke="${style.color}" stroke-width="14" stroke-linecap="round" opacity=".82"/>
-      <text x="256" y="302" text-anchor="middle" font-family="Yu Mincho, serif" font-size="96" font-weight="700" fill="${style.color}">${escapeSvgText(initial)}</text>
-      <text x="506" y="258" font-family="Noto Sans JP, system-ui, sans-serif" font-size="42" font-weight="700" fill="${ink}">${escapeSvgText(name.slice(0, 18))}</text>
-      <text x="508" y="318" font-family="Noto Sans JP, system-ui, sans-serif" font-size="24" font-weight="700" fill="${softInk}">${escapeSvgText(meta.slice(0, 28))}</text>
-      <text x="86" y="500" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="${softInk}" letter-spacing="3">SAINCHO PLACE</text>
+      <defs>
+        <pattern id="grain" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="3" r="1" fill="#B9AD98" opacity=".22"/><circle cx="13" cy="12" r="1" fill="#B9AD98" opacity=".16"/></pattern>
+        <linearGradient id="wash" x1="0" x2="1"><stop stop-color="#FFF9ED"/><stop offset="1" stop-color="#F2E8D6"/></linearGradient>
+      </defs>
+      <rect width="960" height="540" rx="38" fill="url(#wash)"/>
+      <rect width="960" height="540" rx="38" fill="url(#grain)"/>
+      <path d="M78 72h804v396H78z" fill="none" stroke="${line}" stroke-width="3"/>
+      <path d="M392 72v396" stroke="${line}" stroke-width="3"/>
+      <circle cx="235" cy="270" r="132" fill="#FFFDF7" stroke="${seal}" stroke-width="18"/>
+      <circle cx="235" cy="270" r="101" fill="none" stroke="${seal}" stroke-width="5" stroke-dasharray="15 13" opacity=".72"/>
+      <path d="M160 312c31-28 58-28 88 0 31-28 58-28 88 0" fill="none" stroke="#0B7771" stroke-width="15" stroke-linecap="round"/>
+      <path d="M180 254c-18-24-14-47 7-69M235 254c-18-24-14-51 8-76M290 254c-18-24-14-47 7-69" fill="none" stroke="${seal}" stroke-width="15" stroke-linecap="round"/>
+      <path d="M169 347c34 18 98 18 132 0" fill="none" stroke="${seal}" stroke-width="12" stroke-linecap="round"/>
+      <rect x="112" y="95" width="98" height="36" rx="18" fill="${ink}"/>
+      <text x="161" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="800" fill="${paper}" letter-spacing="2">NO.${serial}</text>
+      <text x="447" y="152" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="${seal}" letter-spacing="4">NEXT SAUNA</text>
+      <text x="447" y="254" font-family="system-ui, sans-serif" font-size="48" font-weight="800" fill="${ink}">${escapeSvgText(name.slice(0, 16))}</text>
+      <text x="449" y="307" font-family="system-ui, sans-serif" font-size="25" font-weight="700" fill="${softInk}">${escapeSvgText(meta.slice(0, 30))}</text>
+      <rect x="447" y="352" width="116" height="48" rx="24" fill="${seal}"/>
+      <text x="505" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#FFF9ED">${escapeSvgText(style.kanji)}の一湯</text>
+      <text x="447" y="444" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="${softInk}" letter-spacing="3">SAINCHO COLLECTION</text>
     </svg>
   `;
   return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
@@ -2126,9 +2413,44 @@ function renderStats() {
       <span>${masteredTotal}/${PREFECTURES.length}県</span>
     </button>
   `);
+  renderJapanMap();
   renderLeaderboard();
   renderFavoritesPanel();
   renderPromotionCopyGrid();
+}
+
+async function renderJapanMap() {
+  if (!el.japanMap) return;
+  if (!japanMapMarkup) {
+    el.japanMap.innerHTML = `<div class="map-loading"><span class="loading-spinner" aria-hidden="true"></span><strong>日本地図を読み込み中</strong></div>`;
+    try {
+      const response = await fetch(JAPAN_MAP_URL);
+      if (!response.ok) throw new Error("map-load-failed");
+      japanMapMarkup = await response.text();
+    } catch {
+      el.japanMap.innerHTML = `<div class="community-empty"><strong>地図を読み込めませんでした</strong><span>下の県一覧は引き続き利用できます。</span></div>`;
+      return;
+    }
+  }
+  if (activeView !== "Stats") return;
+  el.japanMap.innerHTML = japanMapMarkup;
+  const countsByPref = countVisitedByPrefecture();
+  const candidatesByPref = countEligibleFacilitiesByPrefecture();
+  el.japanMap.querySelectorAll(".prefecture[data-code]").forEach((node) => {
+    const pref = PREFECTURES[Number(node.dataset.code) - 1];
+    if (!pref) return;
+    const visited = countsByPref[pref.name] || 0;
+    const total = candidatesByPref[pref.name] || 0;
+    const ratio = total ? visited / total : 0;
+    const level = ratio >= 1 ? 3 : ratio >= 0.5 ? 2 : ratio > 0 ? 1 : 0;
+    node.classList.add(`map-progress-${level}`);
+    node.setAttribute("role", "button");
+    node.setAttribute("tabindex", "0");
+    node.setAttribute("aria-label", `${pref.name} ${visited}/${total}湯${level === 3 ? " マスター" : ""}`);
+    const title = node.querySelector("title") || document.createElementNS("http://www.w3.org/2000/svg", "title");
+    title.textContent = `${pref.name} ${visited}/${total}湯`;
+    if (!title.parentNode) node.prepend(title);
+  });
 }
 
 function renderPromotionCopyGrid() {
@@ -2448,6 +2770,185 @@ function renderSameshiCard(item) {
   `;
 }
 
+function renderCommunityPage() {
+  if (!el.communityList) return;
+  const localEvents = state.localCommunityEvents || [];
+  const events = normalizeCommunityEvents([...communityEvents, ...localEvents]);
+  const filtered = selectedCommunityPrefecture === "全国"
+    ? events
+    : events.filter((item) => item.prefecture === selectedCommunityPrefecture);
+  el.communityCount.textContent = `${filtered.length}件`;
+  const activePrefectures = uniqueStrings(events.map((item) => item.prefecture));
+  const filterPrefs = ["全国", ...activePrefectures];
+  el.communityFilter.innerHTML = filterPrefs.map((prefecture) => `
+    <button class="feature-chip ${selectedCommunityPrefecture === prefecture ? "is-active" : ""}" type="button" data-action="community-filter" data-prefecture="${escapeAttr(prefecture)}">${escapeHtml(prefecture === "全国" ? "全国" : shortPrefName(prefecture))}</button>
+  `).join("");
+  if (!filtered.length) {
+    el.communityList.innerHTML = `
+      <div class="community-empty">
+        <strong>${selectedCommunityPrefecture === "全国" ? "最初のサ活募集を作れます" : `${escapeHtml(selectedCommunityPrefecture)}の募集はまだありません`}</strong>
+        <span>日時と集合施設を決め、無理のない少人数募集から始めましょう。</span>
+      </div>
+    `;
+    return;
+  }
+  el.communityList.innerHTML = filtered.map(renderCommunityCard).join("");
+}
+
+function renderCommunityCard(item) {
+  const joined = Boolean(state.joinedCommunityEvents[item.id]) || item.attendees.includes(profile.id);
+  const date = new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", weekday: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(item.date));
+  return `
+    <article class="community-card">
+      <div class="community-date"><strong>${escapeHtml(date)}</strong><span>${escapeHtml(item.prefecture)}</span></div>
+      <div class="community-copy">
+        <span class="community-host">${escapeHtml(item.nickname || "匿名サウナー")}さん主催</span>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p><strong>${escapeHtml(item.venue)}</strong>${item.note ? `<span>${escapeHtml(item.note)}</span>` : ""}</p>
+      </div>
+      <div class="community-participation">
+        <span>${item.attendeeCount + 1}人参加予定</span>
+        <button class="${joined ? "secondary-button is-active" : "primary-button"}" type="button" data-action="community-join" data-event-id="${escapeAttr(item.id)}" ${joined ? "disabled" : ""}>${joined ? "参加予定" : "参加する"}</button>
+      </div>
+    </article>
+  `;
+}
+
+async function loadCommunityEvents(options = {}) {
+  if (IS_STATIC_LOCAL_PREVIEW || communityConfigured === false) {
+    renderCommunityPage();
+    return;
+  }
+  try {
+    const response = await fetch(COMMUNITY_ENDPOINT, { headers: { accept: "application/json" } });
+    if (!response.ok) throw new Error("community-load-failed");
+    const payload = await response.json();
+    communityConfigured = payload.configured !== false;
+    communityEvents = normalizeCommunityEvents(payload.events || []);
+    if (activeView === "Community") renderCommunityPage();
+    if (options.announce) showToast("サ活募集を更新しました");
+  } catch {
+    communityConfigured = false;
+    if (activeView === "Community") renderCommunityPage();
+    if (options.announce) showToast("共有募集を読み込めませんでした。端末内の募集を表示します");
+  }
+}
+
+async function submitCommunityEvent(event) {
+  event.preventDefault();
+  const form = new FormData(el.communityForm);
+  const payload = {
+    action: "create",
+    title: String(form.get("title") || "").trim(),
+    prefecture: String(form.get("prefecture") || "").trim(),
+    date: String(form.get("date") || "").trim(),
+    venue: String(form.get("venue") || "").trim(),
+    note: String(form.get("note") || "").trim(),
+    clientId: profile.id || createClientId(),
+    nickname: profile.nickname || "匿名サウナー",
+  };
+  const normalized = normalizeCommunityEvent({ ...payload, id: `local-event-${Date.now().toString(36)}`, createdAt: new Date().toISOString(), attendees: [] });
+  if (!normalized || Date.parse(normalized.date) <= Date.now()) {
+    setCommunityStatus("未来の日時と必須項目を確認してください。", true);
+    return;
+  }
+  setCommunityStatus("公開しています。", false);
+  if (!IS_STATIC_LOCAL_PREVIEW && communityConfigured !== false) {
+    try {
+      const response = await fetch(COMMUNITY_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) throw new Error("community-save-failed");
+      const result = await response.json();
+      communityConfigured = result.configured !== false;
+      communityEvents = normalizeCommunityEvents(result.events || []);
+      el.communityForm.reset();
+      renderCommunityPrefectureSelect();
+      renderCommunityPage();
+      setCommunityStatus("サ活募集を公開しました。", false);
+      track("community_create", { prefecture: payload.prefecture });
+      return;
+    } catch {
+      communityConfigured = false;
+    }
+  }
+  state.localCommunityEvents = normalizeCommunityEvents([normalized, ...(state.localCommunityEvents || [])]).slice(0, 30);
+  saveState();
+  el.communityForm.reset();
+  renderCommunityPrefectureSelect();
+  renderCommunityPage();
+  setCommunityStatus("この端末に募集を保存しました。共有ストレージ接続後に全ユーザーへ公開できます。", false);
+}
+
+async function joinCommunityEvent(eventId) {
+  const item = normalizeCommunityEvents([...communityEvents, ...(state.localCommunityEvents || [])]).find((event) => event.id === eventId);
+  if (!item || state.joinedCommunityEvents[eventId]) return;
+  if (!IS_STATIC_LOCAL_PREVIEW && communityConfigured !== false && !eventId.startsWith("local-event-")) {
+    try {
+      const response = await fetch(COMMUNITY_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify({ action: "join", eventId, clientId: profile.id || createClientId(), nickname: profile.nickname || "匿名サウナー" }),
+      });
+      if (!response.ok) throw new Error("community-join-failed");
+      const result = await response.json();
+      communityEvents = normalizeCommunityEvents(result.events || []);
+    } catch {
+      communityConfigured = false;
+    }
+  } else if (eventId.startsWith("local-event-")) {
+    state.localCommunityEvents = (state.localCommunityEvents || []).map((event) => event.id === eventId
+      ? { ...event, attendees: uniqueStrings([...(event.attendees || []), profile.id || createClientId()]) }
+      : event);
+  }
+  state.joinedCommunityEvents[eventId] = { at: new Date().toISOString() };
+  saveState();
+  renderCommunityPage();
+  showToast(`${item.title}に参加予定として登録しました`);
+  track("community_join", { event_id: eventId, prefecture: item.prefecture });
+}
+
+function normalizeCommunityEvents(values) {
+  if (!Array.isArray(values)) return [];
+  const seen = new Set();
+  return values.map(normalizeCommunityEvent).filter((item) => {
+    if (!item || seen.has(item.id) || Date.parse(item.date) < Date.now() - 6 * 60 * 60 * 1000) return false;
+    seen.add(item.id);
+    return true;
+  }).sort((a, b) => String(a.date).localeCompare(String(b.date))).slice(0, 80);
+}
+
+function normalizeCommunityEvent(value) {
+  if (!value || typeof value !== "object") return null;
+  const id = String(value.id || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 100);
+  const title = String(value.title || "").normalize("NFKC").replace(/[<>]/g, "").trim().slice(0, 48);
+  const prefecture = String(value.prefecture || "").trim().slice(0, 12);
+  const date = String(value.date || "").trim();
+  const venue = String(value.venue || "").normalize("NFKC").replace(/[<>]/g, "").trim().slice(0, 64);
+  if (!id || !title || !prefecture || !venue || !Number.isFinite(Date.parse(date))) return null;
+  return {
+    id,
+    title,
+    prefecture,
+    date: new Date(date).toISOString(),
+    venue,
+    note: String(value.note || "").normalize("NFKC").replace(/[<>]/g, "").trim().slice(0, 180),
+    hostId: String(value.hostId || value.clientId || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 80),
+    nickname: String(value.nickname || "匿名サウナー").normalize("NFKC").replace(/[<>]/g, "").trim().slice(0, 16) || "匿名サウナー",
+    attendees: uniqueStrings(Array.isArray(value.attendees) ? value.attendees.map((id) => String(id).replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 80)) : []).slice(0, 30),
+    attendeeCount: Math.max(0, Math.min(30, Math.floor(Number(value.attendeeCount) || (Array.isArray(value.attendees) ? value.attendees.length : 0)))),
+    createdAt: typeof value.createdAt === "string" ? value.createdAt : "",
+  };
+}
+
+function setCommunityStatus(message, isError) {
+  if (!el.communityStatus) return;
+  el.communityStatus.textContent = message;
+  el.communityStatus.classList.toggle("is-error", Boolean(isError));
+}
+
 function renderGuidePage() {
   const categories = ["すべて", ...uniqueStrings(SAUNA_ARTICLES.map((item) => item.category))];
   if (!categories.includes(selectedArticleCategory)) selectedArticleCategory = "すべて";
@@ -2670,6 +3171,151 @@ function uniqueProducts(products) {
 
 function renderPrefSelect() {
   el.prefSelect.innerHTML = PREFECTURES.map((pref) => `<option value="${escapeAttr(pref.name)}">${escapeHtml(pref.name)}</option>`).join("");
+}
+
+function renderHomePrefectureControls() {
+  const options = [
+    `<option value="">未登録</option>`,
+    ...PREFECTURES.map((pref) => `<option value="${escapeAttr(pref.name)}">${escapeHtml(pref.name)}</option>`),
+  ].join("");
+  if (el.homePrefectureSelect) {
+    el.homePrefectureSelect.innerHTML = options;
+    el.homePrefectureSelect.value = PREFECTURES.some((pref) => pref.name === state.homePrefecture) ? state.homePrefecture : "";
+  }
+  if (el.homePrefectureLabel) el.homePrefectureLabel.textContent = state.homePrefecture || "マイ県を登録";
+  if (el.nearbyNotificationToggle) el.nearbyNotificationToggle.checked = state.nearbyNotifications === true;
+}
+
+function renderCommunityPrefectureSelect() {
+  if (!el.communityPrefecture) return;
+  el.communityPrefecture.innerHTML = PREFECTURES.map((pref) => `<option value="${escapeAttr(pref.name)}">${escapeHtml(pref.name)}</option>`).join("");
+  el.communityPrefecture.value = state.homePrefecture || "東京都";
+}
+
+function openHomePrefecture() {
+  if (!state.homePrefecture) {
+    openSettingsDialog();
+    window.setTimeout(() => el.homePrefectureSelect?.focus(), 50);
+    return;
+  }
+  selectedPrefecture = state.homePrefecture;
+  visibleLimit = 36;
+  renderAll();
+  el.prefStrip?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  showToast(`${state.homePrefecture}の候補を表示しました`);
+}
+
+async function findNearbySaunas(options = {}) {
+  if (!navigator.geolocation) {
+    showToast("この端末では位置情報を利用できません");
+    return [];
+  }
+  if (el.nearbyResult) el.nearbyResult.innerHTML = `<span class="loading-spinner" aria-hidden="true"></span><strong>現在地を確認しています</strong>`;
+  try {
+    const position = await getCurrentPosition();
+    const candidates = getNearestFacilities(position.coords.latitude, position.coords.longitude, 5);
+    renderNearbyResults(candidates);
+    if (options.notify) await notifyNearestFacility(candidates[0]);
+    if (options.announce) {
+      showToast(candidates.length ? `${candidates.length}件の近隣候補を表示しました` : "15km以内に座標確認済み候補がありません");
+    }
+    track("nearby_search", { result_count: candidates.length });
+    return candidates;
+  } catch (error) {
+    if (el.nearbyResult) el.nearbyResult.innerHTML = `<strong>位置情報を確認できませんでした</strong><span>端末の設定で位置情報を許可してください。</span>`;
+    if (options.announce) showToast(getGeolocationErrorMessage(error));
+    return [];
+  }
+}
+
+function renderNearbyResults(candidates) {
+  if (!el.nearbyResult) return;
+  if (!candidates.length) {
+    el.nearbyResult.innerHTML = `<strong>近隣候補なし</strong><span>15km以内に座標確認済み施設がありません。</span>`;
+    return;
+  }
+  el.nearbyResult.innerHTML = candidates.slice(0, 3).map(({ facility, distanceKm }) => `
+    <button type="button" data-nearby-facility="${escapeAttr(facility.id)}">
+      <span>${distanceKm < 1 ? `${Math.round(distanceKm * 1000)}m` : `${distanceKm.toFixed(1)}km`}</span>
+      <strong>${escapeHtml(facility.name)}</strong>
+      <em>${escapeHtml(facility.prefecture || "")}</em>
+    </button>
+  `).join("");
+}
+
+function getNearestFacilities(latitude, longitude, limit = 5) {
+  return getFacilities()
+    .map((facility) => {
+      const lat = Number(facility.lat);
+      const lng = Number(facility.lng);
+      if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+      return { facility, distanceKm: haversineDistanceKm(latitude, longitude, lat, lng) };
+    })
+    .filter((item) => item && item.distanceKm <= NEARBY_RESULT_RADIUS_KM)
+    .sort((a, b) => a.distanceKm - b.distanceKm)
+    .slice(0, limit);
+}
+
+function haversineDistanceKm(lat1, lng1, lat2, lng2) {
+  const toRadians = (value) => value * Math.PI / 180;
+  const earthRadiusKm = 6371;
+  const latDelta = toRadians(lat2 - lat1);
+  const lngDelta = toRadians(lng2 - lng1);
+  const a = Math.sin(latDelta / 2) ** 2
+    + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(lngDelta / 2) ** 2;
+  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+function getCurrentPosition(options = {}) {
+  return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject, {
+    enableHighAccuracy: options.highAccuracy === true,
+    timeout: 12000,
+    maximumAge: options.maximumAge ?? 120000,
+  }));
+}
+
+function getGeolocationErrorMessage(error) {
+  if (error?.code === 1) return "位置情報が許可されていません";
+  if (error?.code === 2) return "現在地を取得できませんでした";
+  if (error?.code === 3) return "位置情報の取得が時間切れです";
+  return "位置情報を確認できませんでした";
+}
+
+async function enableNearbyNotifications() {
+  if (!("Notification" in window) || !("serviceWorker" in navigator)) {
+    showToast("このブラウザは近隣通知に対応していません");
+    return false;
+  }
+  const permission = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
+  if (permission !== "granted") {
+    showToast("通知が許可されていません");
+    return false;
+  }
+  showToast("アプリを開いた時に近隣候補を通知します");
+  await findNearbySaunas({ notify: true });
+  return true;
+}
+
+async function checkNearbyOnLaunch() {
+  if (!state.nearbyNotifications || !("Notification" in window) || Notification.permission !== "granted") return;
+  runWhenIdle(() => findNearbySaunas({ notify: true }), 4000);
+}
+
+async function notifyNearestFacility(item) {
+  if (!item || item.distanceKm > NEARBY_NOTIFICATION_RADIUS_KM || Notification.permission !== "granted") return;
+  const lastAt = Date.parse(state.nearbyNotificationLog[item.facility.id] || "") || 0;
+  if (Date.now() - lastAt < NEARBY_NOTIFICATION_COOLDOWN_MS) return;
+  const registration = await navigator.serviceWorker.ready.catch(() => null);
+  if (!registration) return;
+  await registration.showNotification("近くにサ印候補があります", {
+    body: `${item.facility.name}まで約${item.distanceKm < 1 ? `${Math.round(item.distanceKm * 1000)}m` : `${item.distanceKm.toFixed(1)}km`}`,
+    icon: "/icons/icon-192.png",
+    badge: "/icons/icon-192.png",
+    tag: `nearby-${item.facility.id}`,
+    data: { url: getFacilityDetailPath(item.facility) },
+  });
+  state.nearbyNotificationLog[item.facility.id] = new Date().toISOString();
+  saveState();
 }
 
 function renderFeatureControls() {
@@ -3077,6 +3723,31 @@ function shareFacility(facility) {
   window.open(`https://twitter.com/intent/tweet?${params.toString()}`, "_blank", "noopener,noreferrer");
 }
 
+async function shareFacilityNative(facility) {
+  const detail = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
+  const shareData = {
+    title: `${facility.name} | サ印帳`,
+    text: [`次のサウナ候補: ${facility.name}`, detail].filter(Boolean).join("\n"),
+    url: getFacilityDetailUrl(facility),
+  };
+  if (navigator.share) {
+    try {
+      await navigator.share(shareData);
+      track("share", { method: "webshare_facility", facility_id: facility.id, prefecture: facility.prefecture || "" });
+      return;
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+    }
+  }
+  try {
+    await navigator.clipboard.writeText(`${shareData.text}\n${shareData.url}`);
+    track("share", { method: "copy_facility", facility_id: facility.id, prefecture: facility.prefecture || "" });
+    showToast("施設URLをコピーしました。LINEなどに貼り付けられます");
+  } catch {
+    window.prompt("施設URLをコピーしてください", shareData.url);
+  }
+}
+
 async function shareApp() {
   const shareData = {
     title: "サ印帳 | サウナスタンプラリー",
@@ -3414,9 +4085,9 @@ function renderLodgingLinks(facility) {
 function getLodgingLinks(facility) {
   const query = getLodgingSearchQuery(facility);
   return [
-    ["楽天トラベル候補", buildSearchUrl(`site:travel.rakuten.co.jp ${query} 楽天トラベル`)],
+    ["楽天トラベル", buildSearchUrl(`site:travel.rakuten.co.jp ${query} 楽天トラベル`)],
     ["一休", `https://www.ikyu.com/search?kwd=${encodeURIComponent(query)}`],
-    ["Agoda候補", buildSearchUrl(`site:agoda.com ${query} Agoda`)],
+    ["Agoda", buildSearchUrl(`site:agoda.com ${query} Agoda`)],
   ].map(([label, url]) => ({ label, url }));
 }
 
@@ -3942,6 +4613,12 @@ function normalizeState(value) {
     facilityMemos: isPlainObject(value.facilityMemos) ? normalizeFacilityMemos(value.facilityMemos) : fallback.facilityMemos,
     facilityReviews: isPlainObject(value.facilityReviews) ? normalizeLocalReviews(value.facilityReviews) : fallback.facilityReviews,
     customFacilities: Array.isArray(value.customFacilities) ? value.customFacilities.filter(isValidCustomFacility) : [],
+    homePrefecture: typeof value.homePrefecture === "string" ? value.homePrefecture.slice(0, 12) : "",
+    nearbyNotifications: value.nearbyNotifications === true,
+    nearbyNotificationLog: isPlainObject(value.nearbyNotificationLog) ? value.nearbyNotificationLog : {},
+    activeCheckin: normalizeActiveCheckin(value.activeCheckin),
+    localCommunityEvents: Array.isArray(value.localCommunityEvents) ? value.localCommunityEvents.map(normalizeCommunityEvent).filter(Boolean).slice(0, 30) : [],
+    joinedCommunityEvents: isPlainObject(value.joinedCommunityEvents) ? value.joinedCommunityEvents : {},
   };
 }
 
@@ -3953,6 +4630,25 @@ function createState() {
     facilityMemos: {},
     facilityReviews: {},
     customFacilities: [],
+    homePrefecture: "",
+    nearbyNotifications: false,
+    nearbyNotificationLog: {},
+    activeCheckin: null,
+    localCommunityEvents: [],
+    joinedCommunityEvents: {},
+  };
+}
+
+function normalizeActiveCheckin(value) {
+  if (!value || typeof value !== "object") return null;
+  const facilityId = typeof value.facilityId === "string" ? value.facilityId.slice(0, 120) : "";
+  const startedAt = typeof value.startedAt === "string" ? value.startedAt : "";
+  if (!facilityId || !startedAt || !Number.isFinite(Date.parse(startedAt))) return null;
+  return {
+    facilityId,
+    startedAt,
+    lastVerifiedAt: typeof value.lastVerifiedAt === "string" ? value.lastVerifiedAt : startedAt,
+    distanceMeters: Math.max(0, Math.round(Number(value.distanceMeters) || 0)),
   };
 }
 

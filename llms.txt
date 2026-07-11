@@ -10,6 +10,7 @@
 - https://saincho-sauna-stamp-rally.pages.dev/contact/
 - https://saincho-sauna-stamp-rally.pages.dev/about/
 - https://saincho-sauna-stamp-rally.pages.dev/sameshi/
+- https://saincho-sauna-stamp-rally.pages.dev/community/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
 - https://saincho-sauna-stamp-rally.pages.dev/pref/{prefecture-slug}/ （47都道府県別のサウナ一覧）
@@ -20,7 +21,9 @@
 
 - 全国47都道府県、それぞれ80件以上、合計5000件のサウナ候補検索
 - 各施設の個別ページ、施設写真、住所または公開エリア、3行情報、Google Maps経路、周辺サ飯検索、近隣宿検索
-- サ印の押印、取り消し、行きたい、お気に入り、施設メモ、口コミ、X共有
+- サ印の押印、取り消し、行きたい、お気に入り、施設メモ、口コミ、端末の共有メニュー、X共有
+- 座標確認済み施設で、明示的に開始する10分滞在チェックインと自動押印
+- よく行く県、現在地からの近隣検索、都道府県別サ活コミュニティ
 - サ印スロットによる次の一湯発見
 - 県別マスター、称号、サ印ランキング
 - 県別の人気サ飯候補52件と公式・参照リンク
