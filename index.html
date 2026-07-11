@@ -632,6 +632,7 @@
             <h3>サウナ付き宿は専用ページで確認</h3>
             <p>各施設の詳細ページには近くの宿検索を置き、サウナ付き宿そのものはここで比較します。掲載内容・料金・空室は外部サイトで必ず確認してください。</p>
           </div>
+          <div class="pref-strip stay-pref-strip" id="stayPrefStrip" aria-label="都道府県でサウナ合宿先を絞り込む"></div>
           <div class="stay-grid" id="stayGrid"></div>
         </section>
 
@@ -850,9 +851,10 @@
       </nav>
     </div>
 
-    <dialog class="settings-dialog" id="settingsDialog">
+    <button class="settings-scrim" id="settingsScrim" type="button" aria-label="設定を閉じる" hidden></button>
+    <dialog class="settings-dialog" id="settingsDialog" aria-labelledby="settingsTitle">
       <div class="dialog-head">
-        <h2>設定</h2>
+        <h2 id="settingsTitle">設定</h2>
         <button class="icon-button" id="closeSettingsButton" type="button" aria-label="設定を閉じる">
           <span class="icon-close" aria-hidden="true"></span>
         </button>

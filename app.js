@@ -13,7 +13,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260711-community-location-v1";
+const APP_BUILD_ID = "20260711-stability-type-stay-v3";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -25,7 +25,7 @@ const MENU_SWIPE_MAX_VERTICAL = 64;
 const SEARCH_RENDER_DELAY_MS = 120;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const JAPAN_MAP_URL = "./assets/japan-map-mobile.svg";
-const CHECKIN_REQUIRED_MS = 10 * 60 * 1000;
+const CHECKIN_REQUIRED_MS = 60 * 60 * 1000;
 const CHECKIN_RADIUS_METERS = 300;
 const NEARBY_RESULT_RADIUS_KM = 15;
 const NEARBY_NOTIFICATION_RADIUS_KM = 5;
@@ -57,6 +57,254 @@ const SAUNA_STAY_LINKS = [
     area: "魚津市",
     url: "https://www.airbnb.jp/rooms/1128015069214234827?source_impression_id=p3_1783226763_P3KMiuAQYMEtiUZR",
     note: "古民家貸切のサウナ付き宿として公開されている掲載ページです。料金・空室・設備はAirbnbで確認してください。",
+  },
+  {
+    title: "整う家｜プライベートサウナ付き一棟貸し",
+    label: "Airbnb掲載",
+    prefecture: "茨城県",
+    area: "龍ケ崎市",
+    url: "https://www.airbnb.jp/rooms/763351679868128955",
+    note: "貸切サウナを備えた一棟貸し。設備・料金・空室は掲載ページで確認してください。",
+  },
+  {
+    title: "海を望むサウナハウス",
+    label: "Airbnb掲載",
+    prefecture: "茨城県",
+    area: "大洗町",
+    url: "https://www.airbnb.jp/rooms/1494699472118716899",
+    note: "海辺での滞在とサウナを組み合わせられる一棟貸しです。",
+  },
+  {
+    title: "Sauna & Stay Kitsunichiso",
+    label: "Airbnb掲載",
+    prefecture: "栃木県",
+    area: "益子町",
+    url: "https://www.airbnb.jp/rooms/1287442554843809685",
+    note: "益子の滞在拠点として掲載されているサウナ付き宿です。",
+  },
+  {
+    title: "Earthboat Nasu｜温泉・サウナ付き",
+    label: "Airbnb掲載",
+    prefecture: "栃木県",
+    area: "那須町",
+    url: "https://www.airbnb.jp/rooms/1598351303897168016",
+    note: "貸切露天風呂とプライベートサウナを備えたアウトドア滞在先です。",
+  },
+  {
+    title: "サウナ付き古民家一棟貸し宿",
+    label: "4.83 / 53件",
+    prefecture: "宮城県",
+    area: "丸森町",
+    url: "https://www.airbnb.jp/rooms/818299841716584135",
+    note: "囲炉裏、薪ストーブ、サウナを備えた古民家宿。掲載評価は確認時点の表示です。",
+  },
+  {
+    title: "woodbell sauna サウナコテージ秋保",
+    label: "4.81 / 32件",
+    prefecture: "宮城県",
+    area: "仙台市",
+    url: "https://www.airbnb.jp/rooms/1199564465085875363",
+    note: "フィンランド式サウナとチラー付き水風呂を備えた一棟貸しです。",
+  },
+  {
+    title: "Edge Sauna 9 Shirakawa",
+    label: "5.0",
+    prefecture: "福島県",
+    area: "白河市",
+    url: "https://www.airbnb.jp/rooms/1571457663588771628",
+    note: "薪サウナ、伏流水の水風呂、里山外気浴を楽しめる古民家宿です。",
+  },
+  {
+    title: "羊蹄山を望む SAUNA＆VILLA 焚火",
+    label: "5.0",
+    prefecture: "北海道",
+    area: "真狩村",
+    url: "https://www.airbnb.jp/rooms/1362686063189065697",
+    note: "大型薪ストーブのフィンランド式サウナを備えた貸切ヴィラです。",
+  },
+  {
+    title: "Ko Niseko Sauna",
+    label: "ゲストチョイス 4.95",
+    prefecture: "北海道",
+    area: "ニセコ町",
+    url: "https://www.airbnb.jp/rooms/1047509053369096396",
+    note: "確認時点でゲストチョイス、39件のレビューが表示されたサウナ付き宿です。",
+  },
+  {
+    title: "オーシャンビューのサウナヴィラ",
+    label: "Airbnb掲載",
+    prefecture: "北海道",
+    area: "石狩市",
+    url: "https://www.airbnb.jp/rooms/1466311946387082296",
+    note: "海を望む滞在とプライベートサウナを組み合わせられるヴィラです。",
+  },
+  {
+    title: "函館クラシックホテルズ｜サウナ付き古民家",
+    label: "ゲストチョイス",
+    prefecture: "北海道",
+    area: "函館市",
+    url: "https://www.airbnb.jp/rooms/1445983407970963978",
+    note: "函館西部地区の古民家を改装したサウナ付き一棟貸しです。",
+  },
+  {
+    title: "Sauna Villa Yoichi",
+    label: "Airbnb掲載",
+    prefecture: "北海道",
+    area: "余市町",
+    url: "https://www.airbnb.jp/rooms/874881942890005273",
+    note: "余市でサウナ滞在を計画できる貸切ヴィラです。",
+  },
+  {
+    title: "Villa Harunire Otaru",
+    label: "Airbnb掲載",
+    prefecture: "北海道",
+    area: "小樽市",
+    url: "https://www.airbnb.jp/rooms/1269252662212235130",
+    note: "小樽で利用できるサウナ付きの貸切宿です。",
+  },
+  {
+    title: "妙高高原 薪サウナ付きリトリート｜永遠",
+    label: "4.89",
+    prefecture: "新潟県",
+    area: "妙高市",
+    url: "https://www.airbnb.jp/rooms/1556923966755090576",
+    note: "本格コンテナ薪サウナを備えた妙高高原の滞在先です。",
+  },
+  {
+    title: "丘庭｜木曽の森のサウナ付き一棟貸し",
+    label: "4.70 / 43件",
+    prefecture: "長野県",
+    area: "南木曽町",
+    url: "https://www.airbnb.jp/rooms/1392486979508290682",
+    note: "屋外デッキとエストニア式プライベートサウナを備えた1日1組の宿です。",
+  },
+  {
+    title: "軽井沢パノラミックハウス｜サウナ付き",
+    label: "ゲストチョイス 4.96",
+    prefecture: "長野県",
+    area: "御代田町",
+    url: "https://www.airbnb.jp/rooms/1370285251598154050",
+    note: "軽井沢と浅間山を望むサウナ付きヴィラ。確認時点で51件のレビュー表示があります。",
+  },
+  {
+    title: "安曇野プライベートサウナヴィラ",
+    label: "Airbnb掲載",
+    prefecture: "長野県",
+    area: "安曇野市",
+    url: "https://www.airbnb.jp/rooms/1670297019991399559",
+    note: "安曇野の自然と貸切サウナを楽しめるヴィラです。",
+  },
+  {
+    title: "飛騨高山 テントサウナ付き貸切宿",
+    label: "5.0",
+    prefecture: "岐阜県",
+    area: "高山市",
+    url: "https://www.airbnb.jp/rooms/1476628804271272943",
+    note: "自然の中でテントサウナ、焚き火、BBQを楽しめる一棟貸しです。",
+  },
+  {
+    title: "古民家サウナ一棟貸し｜京丹波",
+    label: "4.62 / 13件",
+    prefecture: "京都府",
+    area: "京丹波町",
+    url: "https://www.airbnb.jp/rooms/1552626394634102635",
+    note: "蔵を生かしたサウナ、水風呂、外部シャワーを備えた貸切宿です。",
+  },
+  {
+    title: "久美浜 バレルサウナ付き貸切宿",
+    label: "ゲストチョイス 4.98",
+    prefecture: "京都府",
+    area: "京丹後市",
+    url: "https://www.airbnb.jp/rooms/1471362459426364108",
+    note: "箱石浜近くのバレル型フィンランド式サウナ付き一棟貸しです。",
+  },
+  {
+    title: "SEIMU SAUNA Tamade",
+    label: "ゲストチョイス 5.0",
+    prefecture: "大阪府",
+    area: "大阪市",
+    url: "https://www.airbnb.jp/rooms/1622145907799765019",
+    note: "確認時点でゲストチョイス、13件のレビューが表示されたプライベートサウナ宿です。",
+  },
+  {
+    title: "SAUNA & CURRY URI 東大阪",
+    label: "Airbnb掲載",
+    prefecture: "大阪府",
+    area: "東大阪市",
+    url: "https://www.airbnb.jp/rooms/1402033608137367707",
+    note: "HARVIA製ストーブ、チラー水風呂、セルフロウリュを備えた一棟貸しです。",
+  },
+  {
+    title: "野村の宿 かまどと壺湯の宿",
+    label: "4.93 / 30件",
+    prefecture: "大阪府",
+    area: "大阪市西成区",
+    url: "https://www.airbnb.jp/rooms/1052525694300605844",
+    note: "壺湯とサウナを備えた最大7名の一棟貸しです。",
+  },
+  {
+    title: "Hub.Hanazonocho｜プライベートサウナ宿",
+    label: "Airbnb掲載",
+    prefecture: "大阪府",
+    area: "大阪市西成区",
+    url: "https://www.airbnb.jp/rooms/1177298102056302429",
+    note: "なんばへ電車で4分、最大8名で利用できるサウナ付き貸切宿です。",
+  },
+  {
+    title: "中津・梅田 プライベートサウナ＆水風呂付き宿",
+    label: "4.94",
+    prefecture: "大阪府",
+    area: "大阪市北区",
+    url: "https://www.airbnb.jp/rooms/1548942927350646385",
+    note: "最大7名でサウナと水風呂を貸切利用できる和モダンの宿です。",
+  },
+  {
+    title: "なんば7分 プライベートサウナ付き一棟貸し",
+    label: "5.0",
+    prefecture: "大阪府",
+    area: "大阪市",
+    url: "https://www.airbnb.jp/rooms/1525725500893711125",
+    note: "最大8名、天王寺・関西空港からアクセスしやすいサウナ付き宿です。",
+  },
+  {
+    title: "USJ近くのサウナ付き貸切ハウス",
+    label: "ゲストチョイス 5.0",
+    prefecture: "大阪府",
+    area: "大阪市此花区",
+    url: "https://www.airbnb.jp/rooms/1446205544692386441",
+    note: "確認時点でゲストチョイス、17件のレビューが表示された貸切宿です。",
+  },
+  {
+    title: "HOUS_AGAL Beach Club&Villa 淡路",
+    label: "4.71",
+    prefecture: "兵庫県",
+    area: "洲本市",
+    url: "https://www.airbnb.jp/rooms/803899886083214123",
+    note: "海沿いのプールと薪火サウナを備えた一棟貸切ヴィラです。",
+  },
+  {
+    title: "LOOP-shiso｜サウナ付き貸別荘",
+    label: "4.84 / 19件",
+    prefecture: "兵庫県",
+    area: "宍粟市",
+    url: "https://www.airbnb.jp/rooms/964912437005256559",
+    note: "BBQとサウナ付き大浴場を楽しめる最大12名の貸別荘です。",
+  },
+  {
+    title: "ACOA Takashima｜琵琶湖サウナコテージ",
+    label: "4.88 / 16件",
+    prefecture: "滋賀県",
+    area: "高島市",
+    url: "https://www.airbnb.jp/rooms/1302638279946837333",
+    note: "琵琶湖まで1分、約200㎡のサウナ付き一棟貸しです。",
+  },
+  {
+    title: "SETO CLAS TSUDA 瀬戸内TABITO",
+    label: "4.81 / 63件",
+    prefecture: "香川県",
+    area: "さぬき市",
+    url: "https://www.airbnb.jp/rooms/1053169751388897626",
+    note: "サウナ、焚き火、プールを備えた一棟貸し。確認時点で63件のレビュー表示があります。",
   },
 ];
 const BUSINESS_PLANS = [
@@ -496,6 +744,7 @@ let selectedPrefecture = "全国";
 let selectedGearCategory = "すべて";
 let selectedArticleCategory = "すべて";
 let selectedSameshiPrefecture = "東京都";
+let selectedStayPrefecture = "全国";
 let selectedCommunityPrefecture = "全国";
 let activeFilter = "all";
 let activeView = "Explore";
@@ -575,6 +824,7 @@ const el = {
   gearCount: document.querySelector("#gearCount"),
   stayGrid: document.querySelector("#stayGrid"),
   stayCount: document.querySelector("#stayCount"),
+  stayPrefStrip: document.querySelector("#stayPrefStrip"),
   businessPlanGrid: document.querySelector("#businessPlanGrid"),
   businessValueGrid: document.querySelector("#businessValueGrid"),
   contactTypeGrid: document.querySelector("#contactTypeGrid"),
@@ -604,6 +854,7 @@ const el = {
   toast: document.querySelector("#toast"),
   settingsButton: document.querySelector("#settingsButton"),
   settingsDialog: document.querySelector("#settingsDialog"),
+  settingsScrim: document.querySelector("#settingsScrim"),
   closeSettingsButton: document.querySelector("#closeSettingsButton"),
   vibrationToggle: document.querySelector("#vibrationToggle"),
   homePrefectureSelect: document.querySelector("#homePrefectureSelect"),
@@ -968,6 +1219,13 @@ function bindEvents() {
       return;
     }
 
+    const stayPrefectureButton = target.closest("[data-stay-prefecture]");
+    if (stayPrefectureButton) {
+      selectedStayPrefecture = stayPrefectureButton.dataset.stayPrefecture;
+      renderStayPage();
+      return;
+    }
+
     const nearbyFacilityButton = target.closest("[data-nearby-facility]");
     if (nearbyFacilityButton) {
       const facility = getFacilityById(nearbyFacilityButton.dataset.nearbyFacility);
@@ -1184,6 +1442,11 @@ function bindEvents() {
 
   el.settingsButton.addEventListener("click", openSettingsDialog);
   el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
+  el.settingsScrim?.addEventListener("click", closeSettingsDialog);
+  el.settingsDialog.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeSettingsDialog();
+  });
   el.vibrationToggle.checked = settings.vibration;
   el.vibrationToggle.addEventListener("change", () => {
     settings.vibration = el.vibrationToggle.checked;
@@ -1266,20 +1529,20 @@ function bindEvents() {
 
 function openSettingsDialog() {
   if (el.settingsDialog.open) return;
-  if (typeof el.settingsDialog.showModal === "function") {
-    el.settingsDialog.showModal();
-    return;
-  }
-  el.settingsDialog.setAttribute("open", "");
+  if (typeof el.settingsDialog.show === "function") el.settingsDialog.show();
+  else el.settingsDialog.setAttribute("open", "");
+  el.settingsScrim.hidden = false;
+  document.body.classList.add("settings-open");
+  window.requestAnimationFrame(() => el.closeSettingsButton.focus({ preventScroll: true }));
 }
 
 function closeSettingsDialog() {
-  if (!el.settingsDialog.open) return;
-  if (typeof el.settingsDialog.close === "function") {
-    el.settingsDialog.close();
-    return;
+  if (el.settingsDialog.open) {
+    if (typeof el.settingsDialog.close === "function") el.settingsDialog.close();
+    else el.settingsDialog.removeAttribute("open");
   }
-  el.settingsDialog.removeAttribute("open");
+  el.settingsScrim.hidden = true;
+  document.body.classList.remove("settings-open");
 }
 
 function bindSwipeMenu() {
@@ -1633,9 +1896,12 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
   const favorite = Boolean(state.favorites[facility.id]);
   el.spotlight.innerHTML = `
     <article class="spotlight-card" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
-      <div>
+      <div class="spotlight-copy">
         <span class="spotlight-label">次の一湯</span>
-        <h3>${escapeHtml(facility.name)}</h3>
+        <div class="spotlight-title-row">
+          <h3>${escapeHtml(facility.name)}</h3>
+          ${renderFavoriteButton(facility, favorite, true)}
+        </div>
         <p>${escapeHtml(getFacilityMeta(facility))}</p>
         ${getFacilityAddress(facility) ? `<p class="spotlight-address">${escapeHtml(getFacilityAddress(facility))}</p>` : ""}
       </div>
@@ -1643,7 +1909,6 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
         <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
-        ${renderFavoriteButton(facility, favorite)}
         ${renderMapRouteLink(facility)}
         ${renderFacilityShareButtons(facility)}
       </div>
@@ -1785,6 +2050,7 @@ function renderFacilityDetail() {
   const photo = getFacilityPhoto(facility);
   const photoStyle = ` style="background-image: url('${escapeAttr(photo.url)}')"`;
   const gear = getFacilityGearProducts(facility).slice(0, 3);
+  const detailTitleClass = Array.from(facility.name).length > 28 ? "is-long" : "";
   const ratingCopy = facility.rating && facility.reviewCount
     ? `掲載評価 ${facility.rating} / ${facility.reviewCount}レビュー`
     : "";
@@ -1794,11 +2060,11 @@ function renderFacilityDetail() {
       <button class="back-button" type="button" data-open-view="Explore">検索へ戻る</button>
       <div class="facility-detail-hero">
         <div class="facility-photo ${photo.isFallback ? "facility-photo-fallback" : ""}"${photoStyle}>
-          <span>${escapeHtml(photo.label)}</span>
+          ${photo.label ? `<span>${escapeHtml(photo.label)}</span>` : ""}
         </div>
         <div class="facility-detail-copy">
           <p class="eyebrow">SAUNA DETAIL</p>
-          <h2>${escapeHtml(facility.name)}</h2>
+          <h2 class="${detailTitleClass}">${escapeHtml(facility.name)}</h2>
           <p>${escapeHtml(getFacilityMeta(facility))}</p>
           ${ratingCopy ? `<em>${escapeHtml(ratingCopy)}</em>` : ""}
           <div class="tag-row">${tags || `<span class="tag">施設詳細</span>`}</div>
@@ -1926,7 +2192,7 @@ function renderCheckinPanel(facility) {
         <div>
           <p class="eyebrow">CHECK IN</p>
           <h3>滞在を確認中</h3>
-          <p>施設付近で10分経過後、位置をもう一度確認して自動押印します。位置情報は送信しません。</p>
+          <p>施設付近で60分経過後、位置をもう一度確認して自動押印します。位置情報は送信しません。</p>
         </div>
         <div class="checkin-meter" aria-label="滞在確認 ${percent}%">
           <div><span class="checkin-progress-fill" style="width:${percent}%"></span></div>
@@ -1940,8 +2206,8 @@ function renderCheckinPanel(facility) {
     <section class="detail-panel checkin-panel" aria-label="滞在チェックイン">
       <div>
         <p class="eyebrow">CHECK IN</p>
-        <h3>滞在10分で自動押印</h3>
-        <p>ボタンを押した時だけ位置情報を確認します。300m以内で開始し、10分後の再確認に成功すると押印します。</p>
+        <h3>滞在60分で自動押印</h3>
+        <p>ボタンを押した時だけ位置情報を確認します。300m以内で開始し、60分後の再確認に成功すると押印します。</p>
       </div>
       <button class="checkin-button" type="button" data-action="start-checkin" data-id="${escapeAttr(facility.id)}">滞在チェックインを開始</button>
     </section>
@@ -2001,7 +2267,7 @@ function resumeActiveCheckin() {
 
 function startCheckinTimer() {
   stopCheckinTimer();
-  checkinTimer = window.setInterval(updateCheckinProgress, 1000);
+  checkinTimer = window.setInterval(updateCheckinProgress, 15000);
   updateCheckinProgress();
 }
 
@@ -2087,7 +2353,7 @@ function getFacilityPhoto(facility) {
   }
   return {
     url: buildFacilityPlaceholderSvg(facility),
-    label: "サ印コレクション",
+    label: "",
     isFallback: true,
   };
 }
@@ -2108,7 +2374,10 @@ function getDisplayImageUrl(value) {
 function buildFacilityPlaceholderSvg(facility = {}) {
   const style = STAMP_STYLES[facility.trait] || STAMP_STYLES.custom;
   const name = String(facility.name || "サ印帳").trim();
+  const displayName = [...name].length > 18 ? `${[...name].slice(0, 17).join("")}…` : name;
+  const nameSize = [...displayName].length > 14 ? 34 : [...displayName].length > 10 ? 40 : 48;
   const meta = [facility.prefecture, facility.city].filter(Boolean).join(" / ") || "SAUNA STAMP";
+  const displayMeta = [...meta].length > 24 ? `${[...meta].slice(0, 23).join("")}…` : meta;
   const serial = [...name].reduce((total, char) => (total * 31 + char.codePointAt(0)) % 10000, 173).toString().padStart(4, "0");
   const paper = "#FFF9ED";
   const ink = "#162321";
@@ -2133,8 +2402,8 @@ function buildFacilityPlaceholderSvg(facility = {}) {
       <rect x="112" y="95" width="98" height="36" rx="18" fill="${ink}"/>
       <text x="161" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="17" font-weight="800" fill="${paper}" letter-spacing="2">NO.${serial}</text>
       <text x="447" y="152" font-family="system-ui, sans-serif" font-size="18" font-weight="800" fill="${seal}" letter-spacing="4">NEXT SAUNA</text>
-      <text x="447" y="254" font-family="system-ui, sans-serif" font-size="48" font-weight="800" fill="${ink}">${escapeSvgText(name.slice(0, 16))}</text>
-      <text x="449" y="307" font-family="system-ui, sans-serif" font-size="25" font-weight="700" fill="${softInk}">${escapeSvgText(meta.slice(0, 30))}</text>
+      <text x="447" y="254" font-family="system-ui, sans-serif" font-size="${nameSize}" font-weight="760" fill="${ink}">${escapeSvgText(displayName)}</text>
+      <text x="449" y="307" font-family="system-ui, sans-serif" font-size="23" font-weight="650" fill="${softInk}">${escapeSvgText(displayMeta)}</text>
       <rect x="447" y="352" width="116" height="48" rx="24" fill="${seal}"/>
       <text x="505" y="385" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="#FFF9ED">${escapeSvgText(style.kanji)}の一湯</text>
       <text x="447" y="444" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="${softInk}" letter-spacing="3">SAINCHO COLLECTION</text>
@@ -2548,8 +2817,18 @@ function renderGearPage() {
 
 function renderStayPage() {
   if (!el.stayGrid) return;
-  el.stayCount.textContent = `${SAUNA_STAY_LINKS.length}件`;
-  el.stayGrid.innerHTML = SAUNA_STAY_LINKS.map((item) => `
+  const prefectures = ["全国", ...uniqueStrings(SAUNA_STAY_LINKS.map((item) => item.prefecture).filter((name) => name && name !== "全国"))];
+  if (!prefectures.includes(selectedStayPrefecture)) selectedStayPrefecture = "全国";
+  const stays = selectedStayPrefecture === "全国"
+    ? SAUNA_STAY_LINKS
+    : SAUNA_STAY_LINKS.filter((item) => item.prefecture === selectedStayPrefecture);
+  el.stayCount.textContent = `${stays.length}/${SAUNA_STAY_LINKS.length}件`;
+  el.stayPrefStrip.innerHTML = prefectures.map((prefecture) => `
+    <button class="pref-chip ${selectedStayPrefecture === prefecture ? "pref-chip-active" : ""}" type="button" data-stay-prefecture="${escapeAttr(prefecture)}">
+      ${escapeHtml(prefecture)}
+    </button>
+  `).join("");
+  el.stayGrid.innerHTML = stays.map((item) => `
     <article class="stay-card">
       <span>${escapeHtml(item.label)} / ${escapeHtml(item.prefecture || "全国")}</span>
       <h3>${escapeHtml(item.title)}</h3>
@@ -4410,7 +4689,9 @@ function getNextTitle(count) {
 function startRankingPolling() {
   if (rankingConfigured === false) return;
   clearInterval(rankingPollTimer);
-  rankingPollTimer = window.setInterval(loadRanking, RANKING_REFRESH_MS);
+  rankingPollTimer = window.setInterval(() => {
+    if (!document.hidden && activeView === "Stats") loadRanking();
+  }, Math.max(RANKING_REFRESH_MS, 30000));
 }
 
 async function loadRanking() {
@@ -5339,14 +5620,8 @@ function escapeAttr(value) {
 
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
-  let reloadedForController = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
-    if (reloadedForController) return;
-    reloadedForController = true;
-    const key = `saincho-controller-reload-${APP_BUILD_ID}`;
-    if (sessionStorage.getItem(key)) return;
-    sessionStorage.setItem(key, "1");
-    location.reload();
+    showToast("最新版の準備ができました。次の画面移動から反映します");
   });
   navigator.serviceWorker.register(`./sw.js?v=${encodeURIComponent(APP_BUILD_ID)}`)
     .then((registration) => registration.update())

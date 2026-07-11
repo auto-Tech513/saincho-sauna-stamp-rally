@@ -1,9 +1,11 @@
 // Generated data for サ印帳. Edit source lists carefully; keep sourceUrl as the verification page.
 export const DATASET_META = {
-  catalogReviewedAt: "2026-07-06",
-  methodologyVersion: "2026-07-11",
-  minimumFacilitiesPerPrefecture: 80,
-  notes: "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
+  "catalogReviewedAt": "2026-07-11",
+  "methodologyVersion": "2026-07-11",
+  "minimumFacilitiesPerPrefecture": 80,
+  "notes": "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
+  "addressEnrichedAt": "2026-07-11T12:29:06.524Z",
+  "addressMethod": "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。"
 };
 
 export const PREFECTURES = [
@@ -10070,7 +10072,9 @@ export const SEED_FACILITIES = [
       "予約制"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/13581"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13581",
+    "address": "静岡県 裾野市 須山2255番地3644",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-shizuoka-aratama-no-yu",
@@ -10184,7 +10188,9 @@ export const SEED_FACILITIES = [
       "天竜"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12697"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12697",
+    "address": "静岡県 浜松市 天竜区上野1494",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-shizuoka-superhotel-hamamatsu",
@@ -10266,7 +10272,9 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9579"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9579",
+    "address": "静岡県 富士市 大淵676",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-shizuoka-ole-inn",
@@ -10880,7 +10888,9 @@ export const SEED_FACILITIES = [
       "刈谷"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80448"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80448",
+    "address": "愛知県 刈谷市 一色町3-7-10 ミキビル1F-A",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-aichi-raku-spa-garden-nagoya",
@@ -11809,7 +11819,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/62848",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 志摩市 志摩町和具4442",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-sauna152",
@@ -11854,7 +11866,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/65059",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 いなべ市 大安町石榑南2999−26",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-aquaignis",
@@ -11885,7 +11899,9 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2642"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2642",
+    "address": "三重県 三重郡朝日町 大字小向181",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-ageki-onsen",
@@ -11933,7 +11949,9 @@ export const SEED_FACILITIES = [
       "クアハウス"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2606"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2606",
+    "address": "三重県 桑名市 長島町福吉879-5",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-sauna-shinkai",
@@ -11946,7 +11964,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/118729",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 津市 久居一色町223-16",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-sun-urashima",
@@ -11990,7 +12010,9 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/6401"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6401",
+    "address": "三重県 四日市市 堀木1-4-12",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-bl-kuwana",
@@ -12021,7 +12043,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/96489",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 三重郡菰野町 杉谷2302−1",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-sunpia-iga",
@@ -12051,7 +12075,9 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2596"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2596",
+    "address": "三重県 桑名市 星川719",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-hot-space",
@@ -12064,7 +12090,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/111570",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 四日市市 馳出1045−1",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-mitasunoyu",
@@ -12094,7 +12122,9 @@ export const SEED_FACILITIES = [
       "四日市"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2739"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2739",
+    "address": "三重県 四日市市 智積町3359",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-toyohama",
@@ -12125,7 +12155,9 @@ export const SEED_FACILITIES = [
       "伊勢"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4499"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4499",
+    "address": "三重県 伊勢市 神久1-1-16",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "st-mie-4821",
@@ -12173,7 +12205,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/79433",
-    "status": "verify"
+    "status": "verify",
+    "address": "三重県 鈴鹿市 小岐須町 祓塚",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-gokurakuyu-tsu",
@@ -12204,7 +12238,9 @@ export const SEED_FACILITIES = [
       "四日市"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/5184"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5184",
+    "address": "三重県 四日市市 中部4-3 玉の湯2F",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-sorairo-tent-sauna",
@@ -12250,7 +12286,9 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/47371"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/47371",
+    "address": "三重県 津市 榊原町6103番地",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-mantennoyu",
@@ -12264,7 +12302,9 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2758"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2758",
+    "address": "三重県 四日市市 末永町6-6",
+    "addressSource": "サウナイキタイ参照ページ"
   },
   {
     "id": "manual-mie-guruspa",

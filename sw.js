@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v43-community-location-v1";
+const CACHE_NAME = "saincho-v45-stability-type-stay-v3";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
