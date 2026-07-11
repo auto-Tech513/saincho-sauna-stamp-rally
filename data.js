@@ -1,4 +1,11 @@
 // Generated data for サ印帳. Edit source lists carefully; keep sourceUrl as the verification page.
+export const DATASET_META = {
+  catalogReviewedAt: "2026-07-06",
+  methodologyVersion: "2026-07-11",
+  minimumFacilitiesPerPrefecture: 80,
+  notes: "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
+};
+
 export const PREFECTURES = [
   {
     "region": "北海道・東北",

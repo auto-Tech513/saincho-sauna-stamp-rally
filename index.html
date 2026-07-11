@@ -47,11 +47,8 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" /></noscript>
-    <link rel="stylesheet" href="./styles.css?v=20260708-heat-lodge-v2" />
+    <link rel="preload" href="./assets/saincho-header-ritual.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="stylesheet" href="./styles.css?v=20260711-trust-performance-v1" />
     <script>
       window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
       window.dataLayer = window.dataLayer || [];
@@ -158,7 +155,8 @@
             "@id": "https://saincho-sauna-stamp-rally.pages.dev/#organization",
             "name": "サ印帳",
             "url": "https://saincho-sauna-stamp-rally.pages.dev/",
-            "logo": "https://saincho-sauna-stamp-rally.pages.dev/icons/icon-512.png"
+            "logo": "https://saincho-sauna-stamp-rally.pages.dev/icons/icon-512.png",
+            "publishingPrinciples": "https://saincho-sauna-stamp-rally.pages.dev/about/"
           },
           {
             "@type": "WebApplication",
@@ -584,7 +582,7 @@
           <div class="commerce-hero">
             <span>公式アフィリエイト</span>
             <h3>初心者が失敗しにくい30アイテム</h3>
-            <p>固定の古い星評価ではなく、Amazonはレビュー順検索、楽天はレビュー評価順の検索へ送ります。今の高評価品をその場で比較できます。</p>
+            <p>固定の古い星評価ではなく、Amazonはレビュー順検索、楽天はレビュー評価順の検索へ送ります。リンク経由の購入で運営が紹介料を受け取る場合がありますが、価格・在庫・評価はリンク先の最新情報を優先します。</p>
           </div>
           <div class="category-strip" id="gearCategoryStrip" aria-label="Gearカテゴリ"></div>
           <div class="gear-grid" id="gearGrid"></div>
@@ -663,6 +661,10 @@
               </div>
             </form>
           </section>
+        </section>
+
+        <section class="view" id="viewAbout" aria-label="運営・データ方針">
+          <div class="about-shell" id="aboutContent"></div>
         </section>
 
         <section class="view" id="viewSameshi" aria-label="サ飯">
@@ -787,6 +789,7 @@
         <button type="button" data-menu-view="Sameshi">サ飯</button>
         <button type="button" data-menu-view="Guide">サウナ入門</button>
         <button type="button" data-menu-view="Stats">ランキング</button>
+        <button type="button" data-menu-view="About">運営・データ方針</button>
         <button type="button" data-app-action="share-app">サ印帳を共有</button>
         <button type="button" data-app-action="copy-app-url">URLコピー</button>
       </div>
@@ -822,7 +825,7 @@
         <button class="achievement-close" id="closeAchievementButton" type="button" aria-label="閉じる">
           <span class="icon-close" aria-hidden="true"></span>
         </button>
-        <img src="./assets/achievement-mascot.webp" width="360" height="240" alt="" />
+        <img src="./assets/achievement-mascot.webp" width="360" height="240" loading="lazy" decoding="async" alt="" />
         <p class="eyebrow" id="achievementEyebrow">ACHIEVEMENT</p>
         <h2 id="achievementTitle">称号獲得</h2>
         <p id="achievementBody">サ印帳が育ちました。</p>
@@ -831,6 +834,6 @@
     </dialog>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260708-heat-lodge-v2"></script>
+    <script type="module" src="./app.js?v=20260711-trust-performance-v1"></script>
   </body>
 </html>

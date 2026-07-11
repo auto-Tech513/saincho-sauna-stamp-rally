@@ -12,7 +12,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260708-heat-lodge-v2";
+const APP_BUILD_ID = "20260711-trust-performance-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -298,6 +298,11 @@ const VIEW_META = {
     title: "掲載・お問い合わせ | サ印帳",
     description: "サ印帳への広告掲載、プレミアム個別ページ、サウナ合宿先掲載、サ飯店舗掲載、内容修正や権利連絡はこちらからお問い合わせください。",
   },
+  About: {
+    path: "/about/",
+    title: "運営・データ方針 | サ印帳",
+    description: "サ印帳の施設データの確認基準、更新方法、広告・アフィリエイト方針、プライバシー、内容修正窓口を公開しています。",
+  },
   Sameshi: {
     path: "/sameshi/",
     title: "県別サ飯ガイド | サ印帳",
@@ -317,6 +322,7 @@ const VIEW_META = {
 
 let PREFECTURES = [];
 let SEED_FACILITIES = [];
+let DATASET_META = {};
 let GEAR_PRODUCTS = [];
 let GUIDE_FAQS = [];
 let SAUNA_ARTICLES = [];
@@ -556,6 +562,7 @@ const el = {
   contactTypeGrid: document.querySelector("#contactTypeGrid"),
   contactForm: document.querySelector("#contactForm"),
   contactStatus: document.querySelector("#contactStatus"),
+  aboutContent: document.querySelector("#aboutContent"),
   promotionCopyGrid: document.querySelector("#promotionCopyGrid"),
   sameshiPrefStrip: document.querySelector("#sameshiPrefStrip"),
   sameshiGrid: document.querySelector("#sameshiGrid"),
@@ -653,6 +660,7 @@ async function loadAppModules() {
 
   PREFECTURES = Array.isArray(dataModule.PREFECTURES) ? dataModule.PREFECTURES : [];
   SEED_FACILITIES = Array.isArray(dataModule.SEED_FACILITIES) ? dataModule.SEED_FACILITIES : [];
+  DATASET_META = dataModule.DATASET_META && typeof dataModule.DATASET_META === "object" ? dataModule.DATASET_META : {};
   GEAR_PRODUCTS = Array.isArray(contentModule.GEAR_PRODUCTS) ? contentModule.GEAR_PRODUCTS : [];
   GUIDE_FAQS = Array.isArray(contentModule.GUIDE_FAQS) ? contentModule.GUIDE_FAQS : [];
   SAUNA_ARTICLES = Array.isArray(contentModule.SAUNA_ARTICLES) ? contentModule.SAUNA_ARTICLES : [];
@@ -731,7 +739,10 @@ function registerServiceWorkerWhenIdle() {
 }
 
 function loadAnalyticsWhenIdle() {
-  runWhenIdle(() => {
+  let loaded = false;
+  const load = () => {
+    if (loaded) return;
+    loaded = true;
     const measurementId = window.__SAINCHO_GA_ID;
     if (!measurementId || document.querySelector("script[data-saincho-analytics]")) return;
     const script = document.createElement("script");
@@ -739,7 +750,11 @@ function loadAnalyticsWhenIdle() {
     script.dataset.sainchoAnalytics = "true";
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
     document.head.append(script);
-  }, 5200);
+  };
+  ["pointerdown", "keydown", "touchstart"].forEach((eventName) => {
+    window.addEventListener(eventName, load, { once: true, passive: true });
+  });
+  window.setTimeout(load, 8000);
 }
 
 function renderBootLoading() {
@@ -968,6 +983,7 @@ function bindEvents() {
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
     if (button.dataset.action === "share-facility") shareFacility(facility);
+    if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
     if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
   });
@@ -1298,6 +1314,10 @@ function renderAll() {
   }
   if (activeView === "Contact") {
     renderContactPage();
+    return;
+  }
+  if (activeView === "About") {
+    renderAboutPage();
     return;
   }
   if (activeView === "Sameshi") {
@@ -1651,6 +1671,7 @@ function renderFacilityDetail() {
   const area = getFacilityAreaLabel(facility);
   const tags = getDisplayTags(facility).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   const detailLines = getFacilityDetailLines(facility);
+  const dataQuality = getFacilityDataQuality(facility);
   const photo = getFacilityPhoto(facility);
   const photoStyle = ` style="background-image: url('${escapeAttr(photo.url)}')"`;
   const gear = getFacilityGearProducts(facility).slice(0, 3);
@@ -1710,6 +1731,18 @@ function renderFacilityDetail() {
           ${facility.access ? `<div><dt>アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
         <p>${address ? "住所が確認できる候補は経路ボタンで直接ルート検索できます。" : "番地住所が公開確認できない候補は、施設名と公開エリアでGoogle Maps検索を開きます。"}</p>
+      </section>
+
+      <section class="detail-panel detail-trust-panel" aria-label="掲載情報の確認状態">
+        <div>
+          <p class="eyebrow">DATA STATUS</p>
+          <h3>${escapeHtml(dataQuality.label)}</h3>
+          <p>${escapeHtml(dataQuality.description)}</p>
+        </div>
+        <div class="detail-trust-actions">
+          ${renderFacilitySourceBadge(facility)}
+          <button class="secondary-button" type="button" data-action="report-facility" data-id="${escapeAttr(facility.id)}">情報修正を知らせる</button>
+        </div>
       </section>
 
       <section class="detail-panel detail-unique-panel">
@@ -2236,6 +2269,74 @@ function renderContactPage() {
   `).join("");
 }
 
+function renderAboutPage() {
+  if (!el.aboutContent) return;
+  const facilities = getFacilities();
+  const withAddress = facilities.filter((facility) => getFacilityAddress(facility)).length;
+  const withArea = facilities.filter((facility) => facility.city || getFacilityAddress(facility)).length;
+  const withOfficial = facilities.filter((facility) => facility.officialUrl).length;
+  const directSources = facilities.filter((facility) => facility.sourceUrl && !/[?&](keyword|q)=/i.test(facility.sourceUrl)).length;
+  const reviewedAt = formatDate(DATASET_META.catalogReviewedAt) || "未設定";
+  const methodologyAt = formatDate(DATASET_META.methodologyVersion) || "未設定";
+  const percent = (value) => facilities.length ? `${Math.round((value / facilities.length) * 100)}%` : "0%";
+
+  el.aboutContent.innerHTML = `
+    <div class="section-title">
+      <div>
+        <p class="eyebrow">TRUST & METHODOLOGY</p>
+        <h2>運営・データ方針</h2>
+      </div>
+      <span class="count-badge">透明性</span>
+    </div>
+    <section class="about-hero">
+      <span>件数より、判断できる情報へ</span>
+      <h3>確認できた事実と未確認を分けて表示します</h3>
+      <p>サ印帳は施設名、都道府県、参照URLを基礎にし、住所、公式URL、設備タグは公開確認できた項目だけを掲載します。未確認項目を推測で埋めません。</p>
+    </section>
+    <section class="about-metrics" aria-label="掲載データの品質指標">
+      <article><span>表示候補</span><strong>${facilities.length.toLocaleString("ja-JP")}</strong><em>重複統合後</em></article>
+      <article><span>番地住所あり</span><strong>${percent(withAddress)}</strong><em>${withAddress.toLocaleString("ja-JP")}件</em></article>
+      <article><span>市区町村以上</span><strong>${percent(withArea)}</strong><em>${withArea.toLocaleString("ja-JP")}件</em></article>
+      <article><span>直接参照URL</span><strong>${percent(directSources)}</strong><em>${directSources.toLocaleString("ja-JP")}件</em></article>
+    </section>
+    <div class="about-grid">
+      <section class="about-card">
+        <p class="eyebrow">EDITORIAL</p>
+        <h3>掲載と検証の基準</h3>
+        <ol>
+          <li>同一県の名称・別名・旧称を正規化し、重複候補を統合します。</li>
+          <li>住所と特徴は参照ページまたは公式情報で公開確認できた場合のみ表示します。</li>
+          <li>開業予定・要確認は県マスターの対象外にし、訪問済み施設と混同させません。</li>
+          <li>営業時間、料金、休館日は変動するため、訪問前の公式確認を案内します。</li>
+        </ol>
+        <p>カタログ確認日: ${escapeHtml(reviewedAt)} / 方針更新日: ${escapeHtml(methodologyAt)}</p>
+      </section>
+      <section class="about-card">
+        <p class="eyebrow">CORRECTIONS</p>
+        <h3>誤りを直す最短経路</h3>
+        <p>施設詳細の「情報修正を知らせる」から、施設ID、現在値、正しい内容、確認できる公式URLを送れます。ユーザー追加候補は共有ストレージ接続時に他の利用者へ反映されます。</p>
+        <button class="secondary-button" type="button" data-open-view="Contact">掲載・修正窓口を開く</button>
+      </section>
+      <section class="about-card">
+        <p class="eyebrow">PRIVACY</p>
+        <h3>記録と個人情報</h3>
+        <p>押印、行きたい、お気に入り、メモは原則として端末内に保存します。ランキングのメールアドレスはサーバー側でハッシュ化し、画面には表示しません。お問い合わせ内容は返信対応のため保存される場合があります。</p>
+      </section>
+      <section class="about-card">
+        <p class="eyebrow">MONETIZATION</p>
+        <h3>広告・アフィリエイト</h3>
+        <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。表示順や説明は報酬額ではなく用途別に整理し、価格、在庫、レビューはリンク先の最新情報を優先します。広告掲載は広告であることが分かる表示にします。</p>
+      </section>
+      <section class="about-card about-card-wide">
+        <p class="eyebrow">AUTOMATION</p>
+        <h3>自動化できること、できないこと</h3>
+        <p>GitHubへの変更はCloudflare Pagesへ自動デプロイされ、ビルド時にID、都道府県件数、重複、URL形式、記事数、サ飯数を検査します。外部施設の閉店、移転、料金変更を推測で自動上書きはしません。監査で異常を検出し、根拠を確認してから更新します。</p>
+        <div class="about-inline-stats"><span>公式URLあり ${withOfficial.toLocaleString("ja-JP")}件</span><span>サ飯 ${SAMESHI_SPOTS.length.toLocaleString("ja-JP")}件</span><span>入門記事 ${SAUNA_ARTICLES.length}本</span><span>Gear ${GEAR_PRODUCTS.length}件</span></div>
+      </section>
+    </div>
+  `;
+}
+
 function focusContactPlan(planName = "") {
   setView("Contact");
   window.setTimeout(() => {
@@ -2246,6 +2347,34 @@ function focusContactPlan(planName = "") {
     }
     organization?.focus();
     track("contact_plan_intent", { plan_name: planName });
+  }, 120);
+}
+
+function requestFacilityCorrection(facility) {
+  setView("Contact");
+  window.setTimeout(() => {
+    const typeInput = [...(el.contactForm?.elements?.type || [])]
+      .find((input) => input.value === "内容修正・権利連絡");
+    if (typeInput) typeInput.checked = true;
+    const organization = el.contactForm?.elements?.organization;
+    const website = el.contactForm?.elements?.website;
+    const prefecture = el.contactForm?.elements?.prefecture;
+    const message = el.contactForm?.elements?.message;
+    if (organization) organization.value = facility.name;
+    if (website && !website.value) website.value = facility.officialUrl || facility.sourceUrl || "";
+    if (prefecture) prefecture.value = getFacilityAreaLabel(facility);
+    if (message && !message.value.trim()) {
+      message.value = [
+        `施設ID: ${facility.id}`,
+        `施設名: ${facility.name}`,
+        `現在の掲載住所: ${getFacilityAddress(facility) || "未掲載"}`,
+        "修正したい項目:",
+        "正しい内容:",
+        "確認できる公式URL:",
+      ].join("\n");
+    }
+    message?.focus();
+    track("facility_correction_intent", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   }, 120);
 }
 
@@ -3198,6 +3327,38 @@ function getFacilityMeta(facility) {
 
 function getFacilityAddress(facility) {
   return String(facility.address || "").trim();
+}
+
+function getFacilityDataQuality(facility) {
+  const hasAddress = Boolean(getFacilityAddress(facility));
+  const hasOfficial = Boolean(String(facility.officialUrl || "").trim());
+  const hasArea = Boolean(String(facility.city || "").trim());
+  if (hasAddress && hasOfficial) {
+    return {
+      level: "official-address",
+      label: "住所・公式リンク掲載あり",
+      description: "住所と公式ページを掲載しています。営業時間、料金、休館日は訪問前に公式ページで再確認してください。",
+    };
+  }
+  if (hasAddress) {
+    return {
+      level: "address",
+      label: "住所掲載あり",
+      description: "参照ページで確認できた住所を掲載しています。最新の営業状況は参照元または施設公式情報で確認してください。",
+    };
+  }
+  if (hasArea) {
+    return {
+      level: "area",
+      label: "市区町村まで掲載",
+      description: "番地住所は未確認です。地図検索と参照ページを併用し、正確な場所を確認してから向かってください。",
+    };
+  }
+  return {
+    level: "name-only",
+    label: "施設名・都道府県のみ",
+    description: "詳細情報の補完を待っている候補です。参照ページで最新情報を確認し、誤りは修正窓口から知らせてください。",
+  };
 }
 
 function getFacilityAreaLabel(facility) {

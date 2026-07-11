@@ -8,6 +8,7 @@
 - https://saincho-sauna-stamp-rally.pages.dev/gear/
 - https://saincho-sauna-stamp-rally.pages.dev/stay/
 - https://saincho-sauna-stamp-rally.pages.dev/contact/
+- https://saincho-sauna-stamp-rally.pages.dev/about/
 - https://saincho-sauna-stamp-rally.pages.dev/sameshi/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
@@ -32,6 +33,8 @@
 - サウナハット、サウナマット、水分補給、遠征用品などのGear比較
 - 記録画面の告知文コピー導線。XやLINEで紹介しやすい短文を用意
 - 参照元違い、英字・かな併記、スラッシュ区切りの別名による施設重複を統合
+- 運営・データ方針ページで住所掲載率、確認基準、修正窓口、広告・アフィリエイト方針を公開
+- 施設詳細ごとに「住所・公式リンク掲載あり」「市区町村まで」など情報の確認状態を表示
 - 施設詳細のクイックログ。「初回」「3セット」「熱波」「遠征」のテンプレからサ活メモをすぐ書き始められる
 
 ## 推奨する引用説明

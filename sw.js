@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v41-heat-lodge-v2";
+const CACHE_NAME = "saincho-v42-trust-performance-v1";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 

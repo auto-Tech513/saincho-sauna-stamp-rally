@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-seo.mjs",
-    "check": "node --check app.js && node --check content.js && node --check data.js && node --check sw.js && node --check functions/api/_shared.js && node --check functions/api/ranking.js && node --check functions/api/reviews.js && node --check functions/api/contact.js && node --check functions/api/facilities.js"
+    "audit": "node scripts/audit-data.mjs",
+    "audit:links": "node scripts/check-source-links.mjs --sample=60",
+    "check": "node --check app.js && node --check content.js && node --check data.js && node --check sw.js && node --check scripts/build-seo.mjs && node --check scripts/audit-data.mjs && node --check scripts/check-source-links.mjs && node --check functions/api/_shared.js && node --check functions/api/ranking.js && node --check functions/api/reviews.js && node --check functions/api/contact.js && node --check functions/api/facilities.js",
+    "verify": "npm run check && npm run audit && npm run build"
   }
 }
