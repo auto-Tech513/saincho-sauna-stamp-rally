@@ -1296,6 +1296,7 @@ function bindEvents() {
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
     if (button.dataset.action === "share-facility") shareFacility(facility);
     if (button.dataset.action === "share-facility-native") shareFacilityNative(facility);
+    if (button.dataset.action === "jump-reviews") focusFacilityReviews(facility);
     if (button.dataset.action === "start-checkin") startFacilityCheckin(facility);
     if (button.dataset.action === "cancel-checkin") cancelFacilityCheckin(facility);
     if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
@@ -1993,7 +1994,10 @@ function renderFavoriteButton(facility, active, compact = false) {
 function renderFacilityShareButtons(facility) {
   return `
     <button class="facility-native-share-button" type="button" data-action="share-facility-native" data-id="${escapeAttr(facility.id)}">共有する</button>
-    <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+    <div class="facility-social-pair">
+      <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
+      <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
+    </div>
   `;
 }
 
@@ -2598,7 +2602,7 @@ function renderReviewPanel(facility) {
   const reviews = getFacilityReviews(facility.id);
   const nickname = profile.nickname || "匿名サウナー";
   return `
-    <section class="review-panel" aria-label="口コミ投稿">
+    <section class="review-panel" id="reviews-${escapeAttr(facility.id)}" tabindex="-1" aria-label="口コミの確認と投稿">
       <div class="panel-head">
         <div>
           <p class="eyebrow">REVIEW</p>
@@ -2628,6 +2632,20 @@ function renderReviewPanel(facility) {
       </div>
     </section>
   `;
+}
+
+function focusFacilityReviews(facility) {
+  if (activeView !== "Facility" || activeFacilityId !== facility.id) {
+    openFacilityDetail(facility);
+  }
+  window.requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
+      const panel = document.querySelector(`#reviews-${cssEscape(facility.id)}`);
+      if (!(panel instanceof HTMLElement)) return;
+      panel.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.setTimeout(() => panel.focus({ preventScroll: true }), 320);
+    });
+  });
 }
 
 function renderReviewCard(facility, review) {
@@ -3279,18 +3297,34 @@ function renderGuideGearRail(articles) {
 
 function renderGearCard(item, mode) {
   const links = getGearLinks(item);
+  const visual = getGearVisualType(item);
   return `
     <article class="shop-card ${mode === "full" ? "gear-card-full" : ""}">
-      <span>${escapeHtml(item.category)}</span>
-      <h4>${escapeHtml(item.title)}</h4>
-      <p>${escapeHtml(item.reason)}</p>
-      <em>${escapeHtml(item.proof)}</em>
+      <div class="gear-card-visual gear-card-visual-${visual}" role="img" aria-label="${escapeAttr(item.title)}の使用イメージ">
+        <span>${escapeHtml(item.category)}</span>
+      </div>
+      <div class="gear-card-copy">
+        <h4>${escapeHtml(item.title)}</h4>
+        <p>${escapeHtml(item.reason)}</p>
+        <em>${escapeHtml(item.proof)}</em>
+      </div>
       <div class="shop-card-actions">
         <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="${escapeAttr(mode)}">Amazon</a>
         <a href="${escapeAttr(links.rakuten)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="rakuten" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="${escapeAttr(mode)}">楽天 高評価順</a>
       </div>
     </article>
   `;
+}
+
+function getGearVisualType(item) {
+  const text = `${item.category || ""} ${item.title || ""}`;
+  if (/水分|ドリンク|オロポ|ボトル/.test(text)) return "hydration";
+  if (/ハット|タオル|ポンチョ/.test(text)) return "textile";
+  if (/マット|足元|サンダル/.test(text)) return "mat";
+  if (/バッグ|ポーチ|遠征/.test(text)) return "bag";
+  if (/ケア|スキン|ヘア|アロマ/.test(text)) return "care";
+  if (/計測|時計|タイマー|温度/.test(text)) return "timer";
+  return "kit";
 }
 
 function renderArticleCard(article, index) {

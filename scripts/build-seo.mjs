@@ -20,6 +20,7 @@ const ASSET_FILES = [
   "assets/sauna-hero.webp",
   "assets/screenshot-mobile.png",
   "assets/sameshi-sprite-v1.webp",
+  "assets/saincho-gear-editorial-v1.jpg",
   "assets/japan-map-mobile.svg",
 ];
 const ICON_FILES = [
@@ -460,14 +461,17 @@ function breadcrumbJsonLd(items) {
 
 function localBusinessJsonLd(facility) {
   const address = getAddress(facility);
+  const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${APP_URL}/facility/${encodeURIComponent(facility.id)}/#place`,
     name: facility.name,
     url: `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`,
-    image: OG_IMAGE,
+    description: getFacilityDescription(facility),
     address: address ? { "@type": "PostalAddress", streetAddress: address, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
-    sameAs: [facility.officialUrl, facility.sourceUrl].filter(Boolean),
+    hasMap: mapQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}` : undefined,
+    sameAs: [facility.officialUrl].filter(Boolean),
+    subjectOf: facility.sourceUrl ? { "@type": "WebPage", url: facility.sourceUrl } : undefined,
   };
 }
 
