@@ -42,12 +42,29 @@ const eligibleFacilities = SEED_FACILITIES.filter((facility) => (
 ));
 assert(eligibleFacilities.length > 0, "住所・座標確認済みの近隣検索対象がありません");
 
+const requiredNearbyFacilities = [
+  ["天然温泉アーバンクア SPA＆LIVING", 35.151703, 136.90863],
+  ["山王温泉 喜多の湯", 35.153732, 136.890625],
+];
+for (const [name, latitude, longitude] of requiredNearbyFacilities) {
+  const facilityRecord = SEED_FACILITIES.find((item) => item.name === name);
+  assert.ok(facilityRecord, `${name} が候補に必要です`);
+  assert.ok(String(facilityRecord.address || "").trim(), `${name} に確認済み住所が必要です`);
+  const atFacility = findNearestFacilities([facilityRecord], latitude, longitude, {
+    radiusKm: NEARBY_RADIUS_KM,
+    requireAddress: true,
+  });
+  assert.equal(atFacility.length, 1, `${name} が2km検索の対象になる必要があります`);
+  assert.ok(atFacility[0].distanceKm < 0.01, `${name} の座標が住所検索結果と一致する必要があります`);
+}
+
 console.log(JSON.stringify({
   ok: true,
   radiusKm: NEARBY_RADIUS_KM,
   included: results.map((item) => ({ id: item.facility.id, distanceKm: Number(item.distanceKm.toFixed(3)) })),
   excluded: ["outside", "far", "airbnb", "no-address"],
   eligibleCatalogFacilities: eligibleFacilities.length,
+  requiredFacilities: requiredNearbyFacilities.map(([name]) => name),
 }, null, 2));
 
 function facility(id, lat, lng) {

@@ -48,7 +48,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="preload" href="./assets/saincho-header-ritual.webp" as="image" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="./styles.css?v=20260712-nearby-seo-v2" />
+    <link rel="stylesheet" href="./styles.css?v=20260712-nearby-logshare-v3" />
     <script>
       window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
       window.dataLayer = window.dataLayer || [];
@@ -838,7 +838,27 @@
       </div>
     </dialog>
 
+    <dialog class="visit-log-share-dialog" id="visitLogShareDialog" aria-labelledby="visitLogShareTitle">
+      <div class="dialog-head">
+        <div>
+          <p class="eyebrow">SHARE CARD</p>
+          <h2 id="visitLogShareTitle">サ活ログを画像で共有</h2>
+        </div>
+        <button class="icon-button" id="closeVisitLogShareButton" type="button" aria-label="共有画像を閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="visit-log-share-preview">
+        <img id="visitLogShareImage" width="1080" height="1350" alt="" />
+      </div>
+      <p id="visitLogShareStatus" role="status" aria-live="polite">共有画像を作成しています</p>
+      <div class="visit-log-share-actions">
+        <button class="facility-native-share-button" id="shareVisitLogImageButton" type="button" disabled>画像を共有</button>
+        <button class="secondary-button" id="downloadVisitLogImageButton" type="button" disabled>画像を保存</button>
+      </div>
+    </dialog>
+
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="./app.js?v=20260712-nearby-seo-v2"></script>
+    <script type="module" src="./app.js?v=20260712-nearby-logshare-v3"></script>
   </body>
 </html>

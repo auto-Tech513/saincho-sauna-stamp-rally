@@ -11074,12 +11074,12 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "manual-aichi-urban-quar",
-    "name": "アーバンクア SPA＆LIVING",
+    "name": "天然温泉アーバンクア SPA＆LIVING",
     "prefecture": "愛知県",
     "address": "〒460-0014 名古屋市中区富士見町16-17 キャッスルタウン記念橋3F",
     "addressSource": "公式/参照ページ",
-    "lat": 0,
-    "lng": 0,
+    "lat": 35.151703,
+    "lng": 136.90863,
     "city": "名古屋市中区富士見町",
     "trait": "onsen",
     "tags": [
@@ -11088,7 +11088,8 @@ export const SEED_FACILITIES = [
       "都市型"
     ],
     "source": "公式",
-    "sourceUrl": "https://p-castle.co.jp/urban_quar/"
+    "sourceUrl": "https://p-castle.co.jp/urban_quar/access/",
+    "officialUrl": "https://p-castle.co.jp/urban_quar/"
   },
   {
     "id": "manual-aichi-apz",
@@ -39064,7 +39065,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "si-2524",
-    "name": "天然温泉アーバンクア SPA & LIVING",
+    "name": "天然温泉アーバンクア SPA＆LIVING",
     "prefecture": "愛知県",
     "city": "名古屋市",
     "trait": "onsen",
@@ -49440,13 +49441,18 @@ export const SEED_FACILITIES = [
     "id": "si-2522",
     "name": "山王温泉 喜多の湯",
     "prefecture": "愛知県",
-    "city": "名古屋市",
+    "address": "〒454-0011 愛知県名古屋市中川区山王1-601",
+    "addressSource": "公式/国土地理院住所検索",
+    "lat": 35.153732,
+    "lng": 136.890625,
+    "city": "名古屋市中川区山王",
     "trait": "onsen",
     "features": [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2522"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2522",
+    "officialUrl": "https://super-sentou.com/shop-information/sanno-onsen/"
   },
   {
     "id": "si-2409",

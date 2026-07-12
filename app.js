@@ -21,7 +21,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260712-nearby-seo-v2";
+const APP_BUILD_ID = "20260712-nearby-logshare-v3";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -798,6 +798,8 @@ let searchWarmScheduled = false;
 let facilityFeatureCache = new Map();
 let japanMapMarkup = "";
 let checkinTimer = 0;
+let pendingVisitLogShare = null;
+let pendingVisitLogShareObjectUrl = "";
 
 const el = {
   main: document.querySelector(".main"),
@@ -901,6 +903,12 @@ const el = {
   achievementBody: document.querySelector("#achievementBody"),
   closeAchievementButton: document.querySelector("#closeAchievementButton"),
   achievementOkButton: document.querySelector("#achievementOkButton"),
+  visitLogShareDialog: document.querySelector("#visitLogShareDialog"),
+  visitLogShareImage: document.querySelector("#visitLogShareImage"),
+  visitLogShareStatus: document.querySelector("#visitLogShareStatus"),
+  closeVisitLogShareButton: document.querySelector("#closeVisitLogShareButton"),
+  shareVisitLogImageButton: document.querySelector("#shareVisitLogImageButton"),
+  downloadVisitLogImageButton: document.querySelector("#downloadVisitLogImageButton"),
 };
 
 init();
@@ -1323,6 +1331,7 @@ function bindEvents() {
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
     if (button.dataset.action === "save-visit-log") saveVisitLog(facility, button);
     if (button.dataset.action === "delete-visit-log") deleteVisitLog(facility, button.dataset.logId);
+    if (button.dataset.action === "share-visit-log") openVisitLogShare(facility, button.dataset.logId);
   });
 
   el.main.addEventListener("click", (event) => {
@@ -1546,6 +1555,14 @@ function bindEvents() {
   el.closeInstallHelpButton.addEventListener("click", () => el.installHelpDialog.close());
   el.closeAchievementButton.addEventListener("click", () => el.achievementDialog.close());
   el.achievementOkButton.addEventListener("click", () => el.achievementDialog.close());
+  el.closeVisitLogShareButton?.addEventListener("click", closeVisitLogShareDialog);
+  el.shareVisitLogImageButton?.addEventListener("click", shareVisitLogImage);
+  el.downloadVisitLogImageButton?.addEventListener("click", downloadVisitLogShareImage);
+  el.visitLogShareDialog?.addEventListener("cancel", (event) => {
+    event.preventDefault();
+    closeVisitLogShareDialog();
+  });
+  el.visitLogShareDialog?.addEventListener("close", clearVisitLogSharePreview);
   bindSwipeMenu();
 }
 
@@ -2479,7 +2496,7 @@ function renderPassport() {
     const memo = getFacilityMemo(facility.id);
     const date = visited ? formatDate(visited.at) : "未押印";
     return `
-      <article class="stamp-tile">
+      <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の施設詳細を見る">
         ${renderStamp(facility, Boolean(visited))}
         <p class="stamp-title">${escapeHtml(facility.name)}</p>
         <span class="stamp-date">${escapeHtml(date)}</span>
@@ -2620,7 +2637,10 @@ function renderVisitLogPanel(facility) {
           <article>
             <div><strong>${escapeHtml(log.date)} / ${log.sets}セット</strong><span>体感 ${"★".repeat(log.feeling)}</span></div>
             <p>サウナ ${log.saunaMinutes}分・水風呂 ${log.waterMinutes}分・休憩 ${log.restMinutes}分${log.note ? ` / ${escapeHtml(log.note)}` : ""}</p>
-            <button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">削除</button>
+            <div class="visit-log-actions">
+              <button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">画像で共有</button>
+              <button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">削除</button>
+            </div>
           </article>
         `).join("") : `<p class="visit-log-empty">まだ記録はありません。時間は1セットの目安を入力できます。</p>`}
       </div>
@@ -2676,9 +2696,281 @@ function renderVisitLogSummary() {
     <div class="visit-log-metrics"><div><strong>${averageSets}</strong><span>平均セット</span></div><div><strong>${averageFeeling}</strong><span>平均体感 / 5</span></div></div>
     <div class="visit-log-recent">${entries.slice(0, 5).map((log) => {
       const facility = getFacilityById(log.facilityId);
-      return `<button type="button" data-nearby-facility="${escapeAttr(log.facilityId)}"><strong>${escapeHtml(facility?.name || "施設記録")}</strong><span>${escapeHtml(log.date)} / ${log.sets}セット / 体感${log.feeling}</span></button>`;
+      return `<article class="visit-log-recent-item">
+        <button type="button" data-nearby-facility="${escapeAttr(log.facilityId)}"><strong>${escapeHtml(facility?.name || "施設記録")}</strong><span>${escapeHtml(log.date)} / ${log.sets}セット / 体感${log.feeling}</span></button>
+        ${facility ? `<button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">画像で共有</button>` : ""}
+      </article>`;
     }).join("")}</div>
   `;
+}
+
+async function openVisitLogShare(facility, logId) {
+  const log = (state.visitLogs[facility.id] || []).find((item) => item.id === logId);
+  if (!log || !el.visitLogShareDialog || !el.visitLogShareImage) {
+    showToast("共有するサ活ログを確認できませんでした");
+    return;
+  }
+  clearVisitLogSharePreview();
+  el.visitLogShareImage.removeAttribute("src");
+  el.visitLogShareImage.alt = `${facility.name}のサ活ログ共有画像`;
+  el.visitLogShareStatus.textContent = "共有画像を作成しています";
+  el.shareVisitLogImageButton.disabled = true;
+  el.downloadVisitLogImageButton.disabled = true;
+  if (typeof el.visitLogShareDialog.showModal === "function") el.visitLogShareDialog.showModal();
+  else el.visitLogShareDialog.setAttribute("open", "");
+  try {
+    const blob = await createVisitLogShareImage(facility, log);
+    const fileName = buildVisitLogShareFileName(facility, log);
+    pendingVisitLogShareObjectUrl = URL.createObjectURL(blob);
+    pendingVisitLogShare = { facility, log, blob, fileName };
+    el.visitLogShareImage.src = pendingVisitLogShareObjectUrl;
+    el.visitLogShareStatus.textContent = "この画像だけが共有されます。端末内の他の記録は含みません。";
+    el.shareVisitLogImageButton.disabled = false;
+    el.downloadVisitLogImageButton.disabled = false;
+    track("visit_log_share_preview", { facility_id: facility.id, prefecture: facility.prefecture || "" });
+  } catch (error) {
+    console.error(error);
+    el.visitLogShareStatus.textContent = "画像を作成できませんでした。再度お試しください。";
+    showToast("サ活ログ画像を作成できませんでした");
+  }
+}
+
+async function shareVisitLogImage() {
+  if (!pendingVisitLogShare) return;
+  const { facility, log, blob, fileName } = pendingVisitLogShare;
+  const file = new File([blob], fileName, { type: "image/png" });
+  const shareData = {
+    title: `${facility.name}のサ活ログ | サ印帳`,
+    text: `${formatVisitLogDate(log.date)}、${facility.name}で${log.sets}セット。体感${log.feeling}/5。`,
+    url: getFacilityDetailUrl(facility),
+    files: [file],
+  };
+  if (navigator.share && (!navigator.canShare || navigator.canShare({ files: [file] }))) {
+    try {
+      await navigator.share(shareData);
+      track("share", { method: "webshare_visit_log_image", facility_id: facility.id, prefecture: facility.prefecture || "" });
+      return;
+    } catch (error) {
+      if (error?.name === "AbortError") return;
+    }
+  }
+  if (navigator.clipboard && window.ClipboardItem) {
+    try {
+      await navigator.clipboard.write([new ClipboardItem({ "image/png": blob })]);
+      track("share", { method: "clipboard_visit_log_image", facility_id: facility.id, prefecture: facility.prefecture || "" });
+      showToast("サ活ログ画像をコピーしました");
+      return;
+    } catch {
+      // Image clipboard support varies by browser; saving is the reliable fallback.
+    }
+  }
+  downloadVisitLogShareImage();
+}
+
+function downloadVisitLogShareImage() {
+  if (!pendingVisitLogShare || !pendingVisitLogShareObjectUrl) return;
+  const link = document.createElement("a");
+  link.href = pendingVisitLogShareObjectUrl;
+  link.download = pendingVisitLogShare.fileName;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  track("share", { method: "download_visit_log_image", facility_id: pendingVisitLogShare.facility.id, prefecture: pendingVisitLogShare.facility.prefecture || "" });
+  showToast("サ活ログ画像を保存しました");
+}
+
+function closeVisitLogShareDialog() {
+  if (el.visitLogShareDialog?.open) el.visitLogShareDialog.close();
+  else el.visitLogShareDialog?.removeAttribute("open");
+  clearVisitLogSharePreview();
+}
+
+function clearVisitLogSharePreview() {
+  if (pendingVisitLogShareObjectUrl) URL.revokeObjectURL(pendingVisitLogShareObjectUrl);
+  pendingVisitLogShareObjectUrl = "";
+  pendingVisitLogShare = null;
+}
+
+async function createVisitLogShareImage(facility, log) {
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1350;
+  const context = canvas.getContext("2d");
+  if (!context) throw new Error("canvas-unavailable");
+  const headerImage = await loadCanvasImage(new URL("/assets/saincho-header-ritual.webp", location.origin).href).catch(() => null);
+  const appIcon = await loadCanvasImage(new URL("/icons/saincho-icon-1024.png", location.origin).href).catch(() => null);
+
+  context.fillStyle = "#F2EBDD";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  if (headerImage) drawCanvasImageCover(context, headerImage, 0, 0, 1080, 300);
+  else {
+    context.fillStyle = "#122421";
+    context.fillRect(0, 0, 1080, 300);
+  }
+  context.fillStyle = "rgba(7, 17, 15, 0.62)";
+  context.fillRect(0, 0, 1080, 300);
+
+  if (appIcon) {
+    drawCanvasRoundedRect(context, 56, 54, 124, 124, 24, "#FFF9EE");
+    context.drawImage(appIcon, 64, 62, 108, 108);
+  }
+  context.fillStyle = "#FFFFFF";
+  context.font = '800 30px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("SAUNA STAMP RALLY", 210, 94);
+  context.font = '900 62px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("サ印帳", 208, 166);
+  context.fillStyle = "#F5D661";
+  context.font = '800 26px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("サ活の余韻を、一枚に。", 208, 214);
+
+  drawCanvasRoundedRect(context, 46, 258, 988, 1018, 30, "#FFFDF8");
+  context.fillStyle = "#D9402E";
+  context.font = '900 24px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("SAUNA LOG", 92, 322);
+  context.fillStyle = "#12201E";
+  context.font = '900 52px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  const facilityBottom = drawCanvasWrappedText(context, facility.name, 92, 392, 620, 66, 2);
+  context.fillStyle = "#5C6965";
+  context.font = '750 28px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  const area = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
+  context.fillText(area || "サウナ記録", 92, facilityBottom + 46);
+  context.fillText(formatVisitLogDate(log.date), 92, facilityBottom + 90);
+
+  const sealX = 818;
+  const sealY = facilityBottom + 62;
+  context.strokeStyle = "#D9402E";
+  context.lineWidth = 12;
+  context.beginPath();
+  context.arc(sealX, sealY, 84, 0, Math.PI * 2);
+  context.stroke();
+  context.setLineDash([12, 10]);
+  context.lineWidth = 4;
+  context.beginPath();
+  context.arc(sealX, sealY, 65, 0, Math.PI * 2);
+  context.stroke();
+  context.setLineDash([]);
+  context.fillStyle = "#D9402E";
+  context.font = '900 48px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.textAlign = "center";
+  context.fillText(String(log.sets), sealX, sealY + 8);
+  context.font = '800 19px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("SETS", sealX, sealY + 39);
+  context.textAlign = "left";
+
+  const metricsY = Math.max(620, facilityBottom + 190);
+  const metrics = [
+    ["サウナ", `${log.saunaMinutes}分`],
+    ["水風呂", `${log.waterMinutes}分`],
+    ["休憩", `${log.restMinutes}分`],
+  ];
+  metrics.forEach(([label, value], index) => {
+    const x = 92 + index * 300;
+    drawCanvasRoundedRect(context, x, metricsY, 276, 150, 20, index === 0 ? "#E64A37" : index === 1 ? "#DFF2EF" : "#F2E5C9");
+    context.fillStyle = index === 0 ? "#FFFFFF" : "#52615D";
+    context.font = '800 23px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+    context.fillText(label, x + 24, metricsY + 43);
+    context.fillStyle = index === 0 ? "#FFFFFF" : "#12201E";
+    context.font = '900 46px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+    context.fillText(value, x + 24, metricsY + 108);
+  });
+
+  const feelingY = metricsY + 206;
+  context.fillStyle = "#52615D";
+  context.font = '800 24px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("今日の体感", 92, feelingY);
+  context.fillStyle = "#D6A719";
+  context.font = '900 50px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText(`${"★".repeat(log.feeling)}${"☆".repeat(5 - log.feeling)}`, 92, feelingY + 62);
+
+  const noteY = feelingY + 118;
+  drawCanvasRoundedRect(context, 92, noteY, 876, 190, 22, "#EDF4F1");
+  context.fillStyle = "#007F77";
+  context.font = '900 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("TODAY'S NOTE", 120, noteY + 42);
+  context.fillStyle = "#12201E";
+  context.font = '750 30px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  drawCanvasWrappedText(context, log.note || "今日のコンディションを記録しました。", 120, noteY + 92, 816, 44, 2);
+
+  context.fillStyle = "#52615D";
+  context.font = '700 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("自分に合う入り方を、次の一湯へ。", 92, 1220);
+  context.fillStyle = "#007F77";
+  context.font = '800 22px -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif';
+  context.fillText("saincho-sauna-stamp-rally.pages.dev", 92, 1252);
+
+  return new Promise((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("canvas-encode-failed")), "image/png", 0.92));
+}
+
+function drawCanvasRoundedRect(context, x, y, width, height, radius, fillStyle) {
+  const r = Math.min(radius, width / 2, height / 2);
+  context.beginPath();
+  context.moveTo(x + r, y);
+  context.arcTo(x + width, y, x + width, y + height, r);
+  context.arcTo(x + width, y + height, x, y + height, r);
+  context.arcTo(x, y + height, x, y, r);
+  context.arcTo(x, y, x + width, y, r);
+  context.closePath();
+  context.fillStyle = fillStyle;
+  context.fill();
+}
+
+function drawCanvasWrappedText(context, text, x, y, maxWidth, lineHeight, maxLines) {
+  const units = String(text || "").match(/[A-Za-z0-9][A-Za-z0-9＆&.\-]*|./gu) || [];
+  const lines = [];
+  let line = "";
+  const lineStartProhibited = /^[、。，．・：；？！!?)）］｝」』】〉》〕〙〗〟’”]$/u;
+  units.forEach((unit) => {
+    const candidate = line + unit;
+    if (line && context.measureText(candidate).width > maxWidth) {
+      if (lineStartProhibited.test(unit)) {
+        lines.push(candidate);
+        line = "";
+      } else {
+        lines.push(line.trimEnd());
+        line = unit.trimStart();
+      }
+    } else {
+      line = candidate;
+    }
+  });
+  if (line) lines.push(line.trimEnd());
+  const visible = lines.slice(0, maxLines);
+  if (lines.length > maxLines && visible.length) {
+    let last = visible[visible.length - 1];
+    while (last && context.measureText(`${last}…`).width > maxWidth) last = last.slice(0, -1);
+    visible[visible.length - 1] = `${last}…`;
+  }
+  visible.forEach((value, index) => context.fillText(value, x, y + index * lineHeight));
+  return y + Math.max(0, visible.length - 1) * lineHeight;
+}
+
+function drawCanvasImageCover(context, image, x, y, width, height) {
+  const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+  const sourceWidth = width / scale;
+  const sourceHeight = height / scale;
+  const sourceX = (image.naturalWidth - sourceWidth) / 2;
+  const sourceY = (image.naturalHeight - sourceHeight) / 2;
+  context.drawImage(image, sourceX, sourceY, sourceWidth, sourceHeight, x, y, width, height);
+}
+
+function loadCanvasImage(url) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => resolve(image);
+    image.onerror = reject;
+    image.src = url;
+  });
+}
+
+function buildVisitLogShareFileName(facility, log) {
+  const safeName = facility.name.normalize("NFKC").replace(/[^\p{L}\p{N}]+/gu, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "sauna";
+  return `saincho-${log.date}-${safeName}.png`;
+}
+
+function formatVisitLogDate(value) {
+  const [year, month, day] = String(value || "").split("-");
+  return year && month && day ? `${year}年${Number(month)}月${Number(day)}日` : value;
 }
 
 function applyNoteTemplate(facility, indexValue) {

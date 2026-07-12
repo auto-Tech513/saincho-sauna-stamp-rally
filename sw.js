@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v46-nearby-seo-v2";
+const CACHE_NAME = "saincho-v47-nearby-logshare-v3";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
