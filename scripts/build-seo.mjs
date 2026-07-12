@@ -132,6 +132,8 @@ const template = sourceIndex
 const urls = [];
 let generatedPages = 0;
 await emitPage("/", { ...pageMeta("サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ", "全国約5000件のサウナ候補から行った施設を押印。サウナ検索、サウナ御朱印、サ活記録、県別マスター、ランキング、サ飯、Gearをスマホで使える無料PWAです。"), lastmod: LASTMOD.site }, renderHomeSsr());
+await emitStaticRoute("/sauna-stamp-rally/", "サウナスタンプラリーをスマホで楽しむ | サ印帳", "サウナスタンプラリーの始め方、紙との違い、押印・行きたい・県別マスター・サ活ログの使い分けを、無料Webアプリのサ印帳で具体的に確認できます。", renderSearchIntentSsr("stamp-rally"), LASTMOD.content);
+await emitStaticRoute("/sauna-goshuin/", "サウナ御朱印のように訪問記録を集める | サ印帳", "サウナ御朱印のように訪問の証をスマホへ残す方法を解説。施設公式の御朱印や物理スタンプとの違い、サ印・メモ・サ活ログの使い方を確認できます。", renderSearchIntentSsr("goshuin"), LASTMOD.content);
 await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウナマット、水分補給、サウナバッグなど、サウナ前後に役立つ30カテゴリのGearをAmazon・楽天のレビュー検索導線で比較できます。", renderGearSsr(), LASTMOD.content);
 await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", "初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を30記事で確認できます。", renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
 await emitStaticRoute("/ranking/", "サ印ランキング | サ印帳", "サ印数と称号で上位10名を表示するランキング。押印の上達実感と次の一湯の動機づくりに使えます。", renderGenericSsr("サ印ランキング", "ニックネーム、サ印数、称号で全国のサウナーと進捗を比べられます。"));
@@ -174,6 +176,7 @@ for (const [aliasId, canonical] of FACILITY_ALIASES) {
 await emit404();
 await emitSitemaps(urls);
 await write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${APP_URL}/sitemap.xml\n`);
+await pruneDuplicateOutputFiles();
 
 console.log(`Built ${generatedPages} pages (${urls.length} indexable) into ${path.relative(ROOT, OUT)}/`);
 console.log(`Canonical facilities: ${CANONICAL_FACILITIES.length}; aliases: ${FACILITY_ALIASES.size}`);
@@ -433,6 +436,51 @@ function renderGenericSsr(title, text) {
     <h1>${escapeHtml(title)}</h1>
     <p>${escapeHtml(text)}</p>
   `);
+}
+
+function renderSearchIntentSsr(kind) {
+  const isStampRally = kind === "stamp-rally";
+  const title = isStampRally ? "サウナスタンプラリーをスマホで楽しむ" : "サウナ御朱印のように訪問記録を集める";
+  const lead = isStampRally
+    ? "サ印帳は、行ったサウナを押印し、次の一湯を探し、訪問後のサ活ログまで一つにつなぐ無料Webアプリです。"
+    : "サ印帳のサ印は、施設が発行する物理的な御朱印ではなく、自分の訪問記録を育てるデジタルな印です。";
+  const sections = isStampRally
+    ? [
+        ["紙の台紙との違い", "スマホで施設検索、押印の取り消し、行きたい、お気に入り、県別進捗をまとめて管理できます。端末内の記録は書き出して保管できます。"],
+        ["続けやすい遊び方", "最初は1湯、次はよく行く県の5湯を目標にします。称号や県マスターは実際の押印数だけで進み、購入や抽選で達成を早める仕組みはありません。"],
+        ["訪問後まで役立つ", "セット数、サウナ・水風呂・休憩時間、ととのい体感を自分用サ活ログとして残せます。次回の入り方を考える材料になります。"],
+      ]
+    : [
+        ["サ印と公式御朱印の違い", "サ印はサ印帳内の個人記録です。施設独自の御朱印、記念印、物理スタンプの発行有無を示すものではありません。"],
+        ["訪問の証を育てる", "施設ごとのサ印、訪問日、メモ、県別コレクションを一緒に残せます。誤って押した場合は取り消せます。"],
+        ["公開と非公開を分ける", "自分用メモとサ活ログは端末内に保存されます。口コミは投稿操作をした内容だけが公開対象になります。"],
+      ];
+  const route = isStampRally ? "sauna-stamp-rally" : "sauna-goshuin";
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([["サ印帳", APP_URL], [title, `${APP_URL}/${route}/`]]),
+      {
+        "@type": "Article",
+        headline: title,
+        description: lead,
+        inLanguage: "ja-JP",
+        mainEntityOfPage: `${APP_URL}/${route}/`,
+        author: { "@type": "Organization", name: "サ印帳" },
+        publisher: { "@type": "Organization", name: "サ印帳", logo: { "@type": "ImageObject", url: `${APP_URL}/icons/icon-512.png` } },
+      },
+    ],
+  }, null, 2);
+  return wrapSsr(`
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › ${escapeHtml(title)}</nav>
+    <p class="eyebrow">SAINCHO GUIDE</p>
+    <h1>${escapeHtml(title)}</h1>
+    <p>${escapeHtml(lead)}</p>
+    <div class="ssr-grid">${sections.map(([heading, body]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p></article>`).join("")}</div>
+    <h2>3ステップで始める</h2>
+    <ol><li>施設名、県、住所、特徴から候補を探す</li><li>訪問した施設だけを押印する</li><li>サ活ログを残し、次の一湯を選ぶ</li></ol>
+    <p><a href="/">全国のサウナを探して始める</a> / <a href="/guide/">安全な入り方を確認する</a></p>
+  `, { jsonLd });
 }
 
 function wrapSsr(content, options = {}) {
@@ -723,4 +771,20 @@ async function rotatePreviousOutput() {
       .filter((name) => name.startsWith(".public-stale-"))
       .map((name) => fs.rm(path.join(ROOT, name), { recursive: true, force: true }).catch(() => null))
   );
+}
+
+async function pruneDuplicateOutputFiles() {
+  const duplicatePattern = / \d+(?=\.[^/]+$)/;
+  const walk = async (directory) => {
+    const entries = await fs.readdir(directory, { withFileTypes: true }).catch(() => []);
+    await Promise.all(entries.map(async (entry) => {
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await walk(target);
+        return;
+      }
+      if (duplicatePattern.test(entry.name)) await fs.rm(target, { force: true });
+    }));
+  };
+  await walk(OUT);
 }

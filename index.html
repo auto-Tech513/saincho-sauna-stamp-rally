@@ -450,10 +450,12 @@
               <article>
                 <h2>サウナ スタンプラリーとして使える</h2>
                 <p>行ったサウナをサ印として押印し、全国候補から次の施設を探せます。紙の台帳のような収集感をスマホで続けられます。</p>
+                <button class="text-link-button" type="button" data-open-view="StampRally">始め方を詳しく見る</button>
               </article>
               <article>
                 <h2>サウナ 御朱印のように集める</h2>
                 <p>サ印、県別マスター、称号で訪問履歴が育ちます。押し間違えても取り消せるので、気軽に記録できます。</p>
+                <button class="text-link-button" type="button" data-open-view="Goshuin">サ印との違いを見る</button>
               </article>
               <article>
                 <h2>サウナ 検索とサウナ 記録をまとめる</h2>
@@ -513,6 +515,7 @@
             <button class="ghost-button" id="exportButton" type="button">書き出し</button>
           </div>
           <div class="stats-grid" id="statsGrid"></div>
+          <section class="visit-log-summary" id="visitLogSummary" aria-label="自分用サ活ログ"></section>
           <section class="profile-panel" aria-label="ランキングプロフィール">
             <div class="panel-head">
               <div>
@@ -828,6 +831,36 @@
             </label>
             <button class="primary-button" type="submit">追加して押印候補へ</button>
           </form>
+        </section>
+
+        <section class="view" id="viewStampRally" aria-label="サウナスタンプラリーの始め方">
+          <article class="intent-page">
+            <p class="eyebrow">SAUNA STAMP RALLY</p>
+            <h2>サウナスタンプラリーをスマホで楽しむ</h2>
+            <p class="intent-lead">サ印帳は、行ったサウナを押印し、次の一湯を探し、訪問後のサ活ログまで一つにつなぐ無料Webアプリです。</p>
+            <div class="intent-grid">
+              <section><span>01</span><h3>県・住所・特徴で探す</h3><p>施設名だけでなく、都道府県、住所、温泉付き、個室、セルフロウリュなどから候補を絞れます。</p></section>
+              <section><span>02</span><h3>訪問したら押印</h3><p>誤って押したサ印は取り消せます。行きたいとお気に入りは別々に管理できます。</p></section>
+              <section><span>03</span><h3>サ活を振り返る</h3><p>セット数、サウナ・水風呂・休憩時間、体感を端末内の個人ログとして残せます。</p></section>
+            </div>
+            <section class="intent-note"><h3>達成は正直に積み上がる</h3><p>称号と県マスターは実際の押印数だけで進みます。購入や抽選で達成を早める仕組みはありません。最初は1湯、次はよく行く県の5湯を目標にすると続けやすくなります。</p></section>
+            <div class="intent-actions"><button class="primary-button" type="button" data-open-view="Explore">サウナを探す</button><button class="secondary-button" type="button" data-open-view="Guide">安全な入り方を見る</button></div>
+          </article>
+        </section>
+
+        <section class="view" id="viewGoshuin" aria-label="サウナ御朱印のような訪問記録">
+          <article class="intent-page">
+            <p class="eyebrow">DIGITAL SAIN</p>
+            <h2>サウナ御朱印のように訪問記録を集める</h2>
+            <p class="intent-lead">サ印帳のサ印は、施設が発行する物理的な御朱印ではなく、自分の訪問記録を育てるデジタルな印です。</p>
+            <div class="intent-grid">
+              <section><span>記録</span><h3>施設ごとの訪問日</h3><p>押印日と施設メモを残し、全県・県別のコレクションで振り返れます。</p></section>
+              <section><span>安心</span><h3>取り消しに対応</h3><p>押し間違いはいつでも取り消せます。開業予定・要確認の候補はマスター判定から除外します。</p></section>
+              <section><span>私用</span><h3>公開範囲を分ける</h3><p>自分用メモとサ活ログは端末内保存です。口コミは投稿した内容だけが公開対象です。</p></section>
+            </div>
+            <section class="intent-note"><h3>公式の御朱印・記念印とは別物です</h3><p>サ印はサ印帳内の個人記録であり、各施設による御朱印、記念印、物理スタンプの発行有無を示しません。施設独自の企画は必ず公式情報で確認してください。</p></section>
+            <div class="intent-actions"><button class="primary-button" type="button" data-open-view="Explore">最初のサ印を探す</button><button class="secondary-button" type="button" data-open-view="Passport">コレクションを見る</button></div>
+          </article>
         </section>
       </main>
 

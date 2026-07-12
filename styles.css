@@ -33,6 +33,254 @@
   --nav-height: 74px;
 }
 
+/* Search-intent guides and private post-visit log */
+.text-link-button {
+  border: 0;
+  padding: 0;
+  color: #087f78;
+  background: transparent;
+  font: inherit;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+}
+
+.intent-page {
+  display: grid;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 52px);
+  border: 1px solid rgba(13, 56, 53, .14);
+  border-radius: 8px;
+  background: rgba(255, 253, 248, .96);
+}
+
+.view-stamprally .summary-band,
+.view-goshuin .summary-band {
+  display: none;
+}
+
+.intent-page > h2 {
+  max-width: 18ch;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.16;
+}
+
+.intent-lead {
+  max-width: 46rem;
+  margin: 0;
+  color: #455c58;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.intent-grid section {
+  min-width: 0;
+  padding: 20px;
+  border-top: 3px solid #d94332;
+  background: #f2f7f3;
+}
+
+.intent-grid span {
+  color: #b72f22;
+  font-weight: 900;
+}
+
+.intent-grid h3 {
+  margin: 8px 0;
+  font-size: 1.08rem;
+}
+
+.intent-grid p,
+.intent-note p {
+  margin: 0;
+  color: #536561;
+  line-height: 1.8;
+}
+
+.intent-note {
+  padding: 22px;
+  border-left: 4px solid #e6b936;
+  background: #fff8df;
+}
+
+.intent-note h3 {
+  margin: 0 0 8px;
+}
+
+.intent-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.visit-log-panel,
+.visit-log-summary {
+  padding: 22px;
+  border: 1px solid rgba(8, 127, 120, .2);
+  border-left: 4px solid #0b8179;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .96);
+}
+
+.visit-log-form {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.visit-log-form label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.visit-log-form label span {
+  color: #536561;
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.visit-log-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid #cad8d3;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+}
+
+.visit-log-note {
+  grid-column: span 4;
+}
+
+.visit-log-form .primary-button {
+  grid-column: span 2;
+  align-self: end;
+}
+
+.visit-log-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.visit-log-list article {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px 12px;
+  padding: 12px;
+  background: #f1f7f4;
+}
+
+.visit-log-list article div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.visit-log-list article p {
+  grid-column: 1;
+  margin: 0;
+  color: #536561;
+}
+
+.visit-log-list .tiny-undo-button {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.visit-log-empty {
+  margin: 0;
+  color: #60716d;
+}
+
+.visit-log-summary {
+  margin-top: 16px;
+}
+
+.visit-log-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.visit-log-metrics div {
+  display: grid;
+  padding: 14px;
+  background: #eef6f2;
+}
+
+.visit-log-metrics strong {
+  font-size: 1.6rem;
+}
+
+.visit-log-recent {
+  display: grid;
+  gap: 8px;
+}
+
+.visit-log-recent button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #d7e1dd;
+  border-radius: 6px;
+  background: #fff;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .intent-page {
+    padding: 22px 18px;
+  }
+
+  .intent-page > h2 {
+    font-size: 1.8rem;
+  }
+
+  .intent-grid,
+  .intent-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-log-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .visit-log-note,
+  .visit-log-form .primary-button {
+    grid-column: 1 / -1;
+  }
+
+  .visit-log-list article {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-log-list .tiny-undo-button {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .visit-log-recent button {
+    display: grid;
+  }
+}
+
 /* 2026-07 stability and typography pass. Keep this final layer authoritative. */
 html {
   -webkit-text-size-adjust: 100%;

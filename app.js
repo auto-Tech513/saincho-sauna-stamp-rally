@@ -13,7 +13,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260711-stability-type-stay-v3";
+const APP_BUILD_ID = "20260712-visit-log-intent-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -578,6 +578,16 @@ const VIEW_META = {
     title: "候補にないサウナを追加 | サ印帳",
     description: "サ印帳に候補がないサウナを自分で登録し、特徴、メモ、押印候補として管理できます。",
   },
+  StampRally: {
+    path: "/sauna-stamp-rally/",
+    title: "サウナスタンプラリーをスマホで楽しむ | サ印帳",
+    description: "サウナスタンプラリーの始め方、押印・行きたい・県別マスター・サ活ログの使い分けを、無料Webアプリのサ印帳で具体的に確認できます。",
+  },
+  Goshuin: {
+    path: "/sauna-goshuin/",
+    title: "サウナ御朱印のように訪問記録を集める | サ印帳",
+    description: "サウナ御朱印のように訪問の証をスマホへ残す方法と、施設公式の御朱印や物理スタンプとの違いを確認できます。",
+  },
 };
 
 let PREFECTURES = [];
@@ -808,6 +818,7 @@ const el = {
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
   japanMap: document.querySelector("#japanMap"),
+  visitLogSummary: document.querySelector("#visitLogSummary"),
   profileForm: document.querySelector("#profileForm"),
   profileNickname: document.querySelector("#profileNickname"),
   profileEmail: document.querySelector("#profileEmail"),
@@ -1302,6 +1313,8 @@ function bindEvents() {
     if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
     if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
+    if (button.dataset.action === "save-visit-log") saveVisitLog(facility, button);
+    if (button.dataset.action === "delete-visit-log") deleteVisitLog(facility, button.dataset.logId);
   });
 
   el.main.addEventListener("click", (event) => {
@@ -1664,6 +1677,7 @@ function renderAll() {
   }
   if (activeView === "Stats") {
     renderStats();
+    renderVisitLogSummary();
     renderShopPanel();
     return;
   }
@@ -1695,6 +1709,7 @@ function renderAll() {
     renderCommunityPage();
     return;
   }
+  if (activeView === "StampRally" || activeView === "Goshuin") return;
 }
 
 function removeSsrContent() {
@@ -2163,6 +2178,7 @@ function renderFacilityDetail() {
       </section>
 
       ${renderDetailMemoPanel(facility)}
+      ${renderVisitLogPanel(facility)}
       ${renderReviewPanel(facility)}
     </article>
   `;
@@ -2569,6 +2585,91 @@ function renderDetailMemoPanel(facility) {
         ${memo ? `<button class="share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
       </div>
     </section>
+  `;
+}
+
+function renderVisitLogPanel(facility) {
+  const logs = state.visitLogs[facility.id] || [];
+  const today = new Date().toISOString().slice(0, 10);
+  return `
+    <section class="visit-log-panel" aria-label="自分用サ活ログ">
+      <div class="panel-head">
+        <div><p class="eyebrow">PRIVATE LOG</p><h3>今回のサ活を残す</h3></div>
+        <span>端末内だけに保存</span>
+      </div>
+      <form class="visit-log-form" data-visit-log-form="${escapeAttr(facility.id)}">
+        <label><span>訪問日</span><input name="date" type="date" value="${today}" required /></label>
+        <label><span>セット</span><input name="sets" type="number" inputmode="numeric" min="1" max="8" value="3" required /></label>
+        <label><span>サウナ 分</span><input name="saunaMinutes" type="number" inputmode="numeric" min="1" max="40" value="8" required /></label>
+        <label><span>水風呂 分</span><input name="waterMinutes" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="1" /></label>
+        <label><span>休憩 分</span><input name="restMinutes" type="number" inputmode="numeric" min="0" max="40" value="8" /></label>
+        <label><span>体感 1〜5</span><input name="feeling" type="number" inputmode="numeric" min="1" max="5" value="4" required /></label>
+        <label class="visit-log-note"><span>ひとこと</span><input name="note" maxlength="100" placeholder="例: 2セット目がちょうどよかった" /></label>
+        <button class="primary-button" type="button" data-action="save-visit-log" data-id="${escapeAttr(facility.id)}">サ活ログを保存</button>
+      </form>
+      <div class="visit-log-list">
+        ${logs.length ? logs.map((log) => `
+          <article>
+            <div><strong>${escapeHtml(log.date)} / ${log.sets}セット</strong><span>体感 ${"★".repeat(log.feeling)}</span></div>
+            <p>サウナ ${log.saunaMinutes}分・水風呂 ${log.waterMinutes}分・休憩 ${log.restMinutes}分${log.note ? ` / ${escapeHtml(log.note)}` : ""}</p>
+            <button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">削除</button>
+          </article>
+        `).join("") : `<p class="visit-log-empty">まだ記録はありません。時間は1セットの目安を入力できます。</p>`}
+      </div>
+    </section>
+  `;
+}
+
+function saveVisitLog(facility, button) {
+  const form = button.closest("[data-visit-log-form]");
+  if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
+  const data = new FormData(form);
+  const log = normalizeVisitLog({
+    id: createClientId(),
+    date: data.get("date"),
+    sets: data.get("sets"),
+    saunaMinutes: data.get("saunaMinutes"),
+    waterMinutes: data.get("waterMinutes"),
+    restMinutes: data.get("restMinutes"),
+    feeling: data.get("feeling"),
+    note: data.get("note"),
+    createdAt: new Date().toISOString(),
+  });
+  if (!log) return;
+  const logs = state.visitLogs[facility.id] || [];
+  state.visitLogs[facility.id] = [log, ...logs].slice(0, 24);
+  saveState();
+  renderFacilityDetail();
+  showToast("サ活ログを端末内に保存しました");
+}
+
+function deleteVisitLog(facility, logId) {
+  const logs = state.visitLogs[facility.id] || [];
+  state.visitLogs[facility.id] = logs.filter((log) => log.id !== logId);
+  if (!state.visitLogs[facility.id].length) delete state.visitLogs[facility.id];
+  saveState();
+  renderFacilityDetail();
+  showToast("サ活ログを削除しました");
+}
+
+function renderVisitLogSummary() {
+  if (!el.visitLogSummary) return;
+  const entries = Object.entries(state.visitLogs)
+    .flatMap(([facilityId, logs]) => logs.map((log) => ({ facilityId, ...log })))
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)) || String(b.createdAt).localeCompare(String(a.createdAt)));
+  if (!entries.length) {
+    el.visitLogSummary.innerHTML = `<div><p class="eyebrow">PRIVATE LOG</p><h3>サ活ログ</h3><p>施設詳細からセット数と体感を残すと、ここで振り返れます。</p></div>`;
+    return;
+  }
+  const averageSets = (entries.reduce((sum, log) => sum + log.sets, 0) / entries.length).toFixed(1);
+  const averageFeeling = (entries.reduce((sum, log) => sum + log.feeling, 0) / entries.length).toFixed(1);
+  el.visitLogSummary.innerHTML = `
+    <div class="panel-head"><div><p class="eyebrow">PRIVATE LOG</p><h3>サ活ログ</h3></div><span>${entries.length}回</span></div>
+    <div class="visit-log-metrics"><div><strong>${averageSets}</strong><span>平均セット</span></div><div><strong>${averageFeeling}</strong><span>平均体感 / 5</span></div></div>
+    <div class="visit-log-recent">${entries.slice(0, 5).map((log) => {
+      const facility = getFacilityById(log.facilityId);
+      return `<button type="button" data-nearby-facility="${escapeAttr(log.facilityId)}"><strong>${escapeHtml(facility?.name || "施設記録")}</strong><span>${escapeHtml(log.date)} / ${log.sets}セット / 体感${log.feeling}</span></button>`;
+    }).join("")}</div>
   `;
 }
 
@@ -4927,6 +5028,7 @@ function normalizeState(value) {
     favorites: isPlainObject(value.favorites) ? value.favorites : fallback.favorites,
     facilityMemos: isPlainObject(value.facilityMemos) ? normalizeFacilityMemos(value.facilityMemos) : fallback.facilityMemos,
     facilityReviews: isPlainObject(value.facilityReviews) ? normalizeLocalReviews(value.facilityReviews) : fallback.facilityReviews,
+    visitLogs: isPlainObject(value.visitLogs) ? normalizeVisitLogs(value.visitLogs) : fallback.visitLogs,
     customFacilities: Array.isArray(value.customFacilities) ? value.customFacilities.filter(isValidCustomFacility) : [],
     homePrefecture: typeof value.homePrefecture === "string" ? value.homePrefecture.slice(0, 12) : "",
     nearbyNotifications: value.nearbyNotifications === true,
@@ -4944,6 +5046,7 @@ function createState() {
     favorites: {},
     facilityMemos: {},
     facilityReviews: {},
+    visitLogs: {},
     customFacilities: [],
     homePrefecture: "",
     nearbyNotifications: false,
@@ -4984,6 +5087,30 @@ function normalizeLocalReviews(value) {
     if (!Array.isArray(reviews)) return [facilityId, []];
     return [facilityId, normalizeReviews(reviews)];
   }).filter(([, reviews]) => reviews.length));
+}
+
+function normalizeVisitLogs(value) {
+  return Object.fromEntries(Object.entries(value).map(([facilityId, logs]) => {
+    if (!Array.isArray(logs)) return [facilityId, []];
+    return [facilityId, logs.map(normalizeVisitLog).filter(Boolean).slice(0, 24)];
+  }).filter(([, logs]) => logs.length));
+}
+
+function normalizeVisitLog(value) {
+  if (!value || typeof value !== "object") return null;
+  const date = typeof value.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value.date) ? value.date : "";
+  if (!date) return null;
+  return {
+    id: typeof value.id === "string" && value.id ? value.id.slice(0, 80) : createClientId(),
+    date,
+    sets: Math.max(1, Math.min(8, Math.round(Number(value.sets) || 1))),
+    saunaMinutes: Math.max(1, Math.min(40, Number(value.saunaMinutes) || 1)),
+    waterMinutes: Math.max(0, Math.min(10, Number(value.waterMinutes) || 0)),
+    restMinutes: Math.max(0, Math.min(40, Number(value.restMinutes) || 0)),
+    feeling: Math.max(1, Math.min(5, Math.round(Number(value.feeling) || 3))),
+    note: typeof value.note === "string" ? value.note.trim().slice(0, 100) : "",
+    createdAt: typeof value.createdAt === "string" ? value.createdAt : new Date().toISOString(),
+  };
 }
 
 function normalizeReviews(values) {
