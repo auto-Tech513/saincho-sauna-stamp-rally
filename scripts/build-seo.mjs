@@ -12,6 +12,8 @@ const execFileAsync = promisify(execFile);
 const OUT = path.join(ROOT, "public");
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev";
 const OG_IMAGE = `${APP_URL}/assets/saincho-og-v2.png`;
+const OFFICIAL_BLOG_URL = "https://saincho-official.hatenablog.com/";
+const INDEXNOW_KEY = createHash("sha256").update(APP_URL).digest("hex").slice(0, 32);
 const CHUNK_SIZE = 2500;
 const ASSET_FILES = [
   "assets/saincho-header-ritual.webp",
@@ -80,6 +82,7 @@ const SUBPAGE_SITE_LD = {
       url: `${APP_URL}/`,
       logo: `${APP_URL}/icons/icon-512.png`,
       publishingPrinciples: `${APP_URL}/about/`,
+      sameAs: [OFFICIAL_BLOG_URL],
     },
   ],
 };
@@ -96,11 +99,14 @@ const sourceIndex = await read("index.html");
 const sourceStyles = await read("styles.css");
 const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
+const sourceNearby = await read("nearby.js");
 const sourceSw = await read("sw.js");
 const dataFile = `data.${hash(sourceData)}.js`;
 const contentFile = `content.${hash(sourceContent)}.js`;
 const stylesFile = `styles.${hash(sourceStyles)}.css`;
+const nearbyFile = `nearby.${hash(sourceNearby)}.js`;
 const appSource = (await read("app.js"))
+  .replace('from "./nearby.js";', `from "./${nearbyFile}";`)
   .replace('const DATA_MODULE_PATH = "./data.js";', `const DATA_MODULE_PATH = "./${dataFile}";`)
   .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`);
 const appFile = `app.${hash(appSource)}.js`;
@@ -108,8 +114,10 @@ const appFile = `app.${hash(appSource)}.js`;
 await write(dataFile, sourceData);
 await write(contentFile, sourceContent);
 await write(stylesFile, sourceStyles);
+await write(nearbyFile, sourceNearby);
 await write(appFile, appSource);
 await write("sw.js", sourceSw);
+await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 await copyFile("manifest.webmanifest");
 await copyFile("llms.txt");
@@ -174,13 +182,15 @@ for (const [aliasId, canonical] of FACILITY_ALIASES) {
 }
 
 await emit404();
+await emitFeed();
 await emitSitemaps(urls);
 await write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${APP_URL}/sitemap.xml\n`);
 await pruneDuplicateOutputFiles();
 
 console.log(`Built ${generatedPages} pages (${urls.length} indexable) into ${path.relative(ROOT, OUT)}/`);
 console.log(`Canonical facilities: ${CANONICAL_FACILITIES.length}; aliases: ${FACILITY_ALIASES.size}`);
-console.log(`Assets: ${appFile}, ${dataFile}, ${contentFile}, ${stylesFile}`);
+console.log(`Assets: ${appFile}, ${nearbyFile}, ${dataFile}, ${contentFile}, ${stylesFile}`);
+console.log(`IndexNow key file: ${INDEXNOW_KEY}.txt`);
 
 async function emitStaticRoute(route, title, description, ssrHtml, lastmod = LASTMOD.site) {
   await emitPage(route, { ...pageMeta(title, description), lastmod }, ssrHtml);
@@ -202,7 +212,6 @@ function renderHtml(route, meta, ssrHtml) {
     `    <meta name="googlebot" content="${meta.noindex ? "noindex, follow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"}" />`,
     `    <meta name="application-name" content="サ印帳" />`,
     `    <meta name="format-detection" content="telephone=no" />`,
-    `    <meta name="keywords" content="${escapeAttr(meta.keywords || "サ印帳,サウナ,サウナスタンプラリー,サウナ御朱印,サウナ検索,サウナ記録,サ活")}" />`,
     `    <link rel="canonical" href="${escapeAttr(canonicalUrl)}" />`,
     `    <meta property="og:locale" content="ja_JP" />`,
     `    <meta property="og:type" content="${meta.type || "website"}" />`,
@@ -277,6 +286,7 @@ function renderAboutSsr() {
     </dl>
     <h2>確認・更新</h2>
     <p>同一施設の別名を正規化して統合し、開業予定・要確認は県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
+    <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
     <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。</p>
     <h2>プライバシー</h2>
@@ -308,6 +318,7 @@ function renderGuideSsr(articles) {
 }
 
 function renderArticleSsr(article, route) {
+  const modifiedAt = LASTMOD.content || undefined;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -323,7 +334,11 @@ function renderArticleSsr(article, route) {
         inLanguage: "ja-JP",
         articleSection: article.category,
         description: article.lead,
-        mainEntityOfPage: `${APP_URL}${route}`,
+        image: [OG_IMAGE],
+        datePublished: modifiedAt,
+        dateModified: modifiedAt,
+        author: { "@id": `${APP_URL}/#organization` },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
         publisher: { "@id": `${APP_URL}/#organization` },
       },
     ],
@@ -332,6 +347,7 @@ function renderArticleSsr(article, route) {
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/guide/">サウナ入門</a> › ${escapeHtml(article.title)}</nav>
     <p class="eyebrow">${escapeHtml(article.category)}</p>
     <h1>${escapeHtml(article.title)}</h1>
+    ${modifiedAt ? `<p><small>最終更新 <time datetime="${modifiedAt}">${modifiedAt}</time></small></p>` : ""}
     <p>${escapeHtml(article.lead)}</p>
     <ul>${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
     <p><strong>実践:</strong> ${escapeHtml(article.action)}</p>
@@ -456,6 +472,7 @@ function renderSearchIntentSsr(kind) {
         ["公開と非公開を分ける", "自分用メモとサ活ログは端末内に保存されます。口コミは投稿操作をした内容だけが公開対象になります。"],
       ];
   const route = isStampRally ? "sauna-stamp-rally" : "sauna-goshuin";
+  const modifiedAt = LASTMOD.site || undefined;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -465,9 +482,12 @@ function renderSearchIntentSsr(kind) {
         headline: title,
         description: lead,
         inLanguage: "ja-JP",
-        mainEntityOfPage: `${APP_URL}/${route}/`,
-        author: { "@type": "Organization", name: "サ印帳" },
-        publisher: { "@type": "Organization", name: "サ印帳", logo: { "@type": "ImageObject", url: `${APP_URL}/icons/icon-512.png` } },
+        image: [OG_IMAGE],
+        datePublished: modifiedAt,
+        dateModified: modifiedAt,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}/${route}/` },
+        author: { "@id": `${APP_URL}/#organization` },
+        publisher: { "@id": `${APP_URL}/#organization` },
       },
     ],
   }, null, 2);
@@ -475,6 +495,7 @@ function renderSearchIntentSsr(kind) {
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › ${escapeHtml(title)}</nav>
     <p class="eyebrow">SAINCHO GUIDE</p>
     <h1>${escapeHtml(title)}</h1>
+    ${modifiedAt ? `<p><small>最終更新 <time datetime="${modifiedAt}">${modifiedAt}</time></small></p>` : ""}
     <p>${escapeHtml(lead)}</p>
     <div class="ssr-grid">${sections.map(([heading, body]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p></article>`).join("")}</div>
     <h2>3ステップで始める</h2>
@@ -509,6 +530,9 @@ function breadcrumbJsonLd(items) {
 
 function localBusinessJsonLd(facility) {
   const address = getAddress(facility);
+  const latitude = Number(facility.lat);
+  const longitude = Number(facility.lng);
+  const hasCoordinates = address && Number.isFinite(latitude) && Number.isFinite(longitude);
   const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
@@ -516,7 +540,8 @@ function localBusinessJsonLd(facility) {
     name: facility.name,
     url: `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`,
     description: getFacilityDescription(facility),
-    address: address ? { "@type": "PostalAddress", streetAddress: address, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
+    address: address ? { "@type": "PostalAddress", streetAddress: address, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
+    geo: hasCoordinates ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
     hasMap: mapQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}` : undefined,
     sameAs: [facility.officialUrl].filter(Boolean),
     subjectOf: facility.sourceUrl ? { "@type": "WebPage", url: facility.sourceUrl } : undefined,
@@ -636,6 +661,46 @@ async function emitSitemaps(entries) {
     ...sitemapFiles.map((file) => `  <sitemap><loc>${APP_URL}/${file}</loc></sitemap>`),
     '</sitemapindex>',
     '',
+  ].join("\n"));
+}
+
+async function emitFeed() {
+  const items = [
+    {
+      title: "サウナスタンプラリーをスマホで楽しむ",
+      route: "/sauna-stamp-rally/",
+      description: "押印、行きたい、県別マスター、サ活ログを使ったサウナスタンプラリーの始め方。",
+      updatedAt: LASTMOD.site,
+    },
+    {
+      title: "サウナ御朱印のように訪問記録を集める",
+      route: "/sauna-goshuin/",
+      description: "施設公式の御朱印とサ印帳の個人記録の違い、サ印・メモ・サ活ログの使い方。",
+      updatedAt: LASTMOD.site,
+    },
+    ...ARTICLE_ROUTES.map(({ article, route }) => ({ title: article.title, route, description: article.lead, updatedAt: LASTMOD.content })),
+  ];
+  await write("feed.xml", [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    "  <channel>",
+    "    <title>サ印帳 サウナ入門・更新情報</title>",
+    `    <link>${APP_URL}/</link>`,
+    "    <description>サウナスタンプラリー、サウナ御朱印、サウナの安全な入り方と記録方法を更新します。</description>",
+    "    <language>ja</language>",
+    `    <atom:link href="${APP_URL}/feed.xml" rel="self" type="application/rss+xml" />`,
+    ...items.map((item) => [
+      "    <item>",
+      `      <title>${escapeXml(item.title)}</title>`,
+      `      <link>${APP_URL}/${escapeXml(item.route.replace(/^\//, ""))}</link>`,
+      `      <guid isPermaLink="true">${APP_URL}/${escapeXml(item.route.replace(/^\//, ""))}</guid>`,
+      `      <description>${escapeXml(item.description)}</description>`,
+      item.updatedAt ? `      <pubDate>${new Date(`${item.updatedAt}T00:00:00Z`).toUTCString()}</pubDate>` : "",
+      "    </item>",
+    ].filter(Boolean).join("\n")),
+    "  </channel>",
+    "</rss>",
+    "",
   ].join("\n"));
 }
 

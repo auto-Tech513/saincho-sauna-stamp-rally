@@ -1,3 +1,11 @@
+import {
+  MAX_NEARBY_GEO_ACCURACY_METERS,
+  NEARBY_RADIUS_KM,
+  findNearestFacilities,
+  haversineDistanceKm,
+  isUsableNearbyPosition,
+} from "./nearby.js";
+
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
 const SETTINGS_KEY = "saincho-settings-v1";
@@ -13,7 +21,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260712-visit-log-intent-v1";
+const APP_BUILD_ID = "20260712-nearby-seo-v2";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -27,8 +35,8 @@ const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const JAPAN_MAP_URL = "./assets/japan-map-mobile.svg";
 const CHECKIN_REQUIRED_MS = 60 * 60 * 1000;
 const CHECKIN_RADIUS_METERS = 300;
-const NEARBY_RESULT_RADIUS_KM = 15;
-const NEARBY_NOTIFICATION_RADIUS_KM = 5;
+const NEARBY_RESULT_RADIUS_KM = NEARBY_RADIUS_KM;
+const NEARBY_NOTIFICATION_RADIUS_KM = NEARBY_RADIUS_KM;
 const NEARBY_NOTIFICATION_COOLDOWN_MS = 12 * 60 * 60 * 1000;
 const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国約5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
 const ALLOWED_IMAGE_HOSTS = new Set([location.hostname, new URL(APP_URL).hostname]);
@@ -3036,6 +3044,7 @@ function renderAboutPage() {
         <h3>誤りを直す最短経路</h3>
         <p>施設詳細の「情報修正を知らせる」から、施設ID、現在値、正しい内容、確認できる公式URLを送れます。ユーザー追加候補は共有ストレージ接続時に他の利用者へ反映されます。</p>
         <button class="secondary-button" type="button" data-open-view="Contact">掲載・修正窓口を開く</button>
+        <a class="secondary-button" href="https://saincho-official.hatenablog.com/" rel="me noreferrer">公式ブログで更新情報を見る</a>
       </section>
       <section class="about-card">
         <p class="eyebrow">PRIVACY</p>
@@ -3626,17 +3635,23 @@ async function findNearbySaunas(options = {}) {
   }
   if (el.nearbyResult) el.nearbyResult.innerHTML = `<span class="loading-spinner" aria-hidden="true"></span><strong>現在地を確認しています</strong>`;
   try {
-    const position = await getCurrentPosition();
+    const position = await getCurrentPosition({ highAccuracy: true, maximumAge: 30000 });
+    if (!isUsableNearbyPosition(position)) {
+      throw new Error(`position-accuracy:${Math.round(Number(position?.coords?.accuracy) || 0)}`);
+    }
     const candidates = getNearestFacilities(position.coords.latitude, position.coords.longitude, 5);
     renderNearbyResults(candidates);
     if (options.notify) await notifyNearestFacility(candidates[0]);
     if (options.announce) {
-      showToast(candidates.length ? `${candidates.length}件の近隣候補を表示しました` : "15km以内に座標確認済み候補がありません");
+      showToast(candidates.length ? `${candidates.length}件の近隣候補を表示しました` : "2km以内に住所・座標確認済み候補がありません");
     }
     track("nearby_search", { result_count: candidates.length });
     return candidates;
   } catch (error) {
-    if (el.nearbyResult) el.nearbyResult.innerHTML = `<strong>位置情報を確認できませんでした</strong><span>端末の設定で位置情報を許可してください。</span>`;
+    const accuracyError = String(error?.message || "").startsWith("position-accuracy:");
+    if (el.nearbyResult) el.nearbyResult.innerHTML = accuracyError
+      ? `<strong>現在地の精度が不足しています</strong><span>屋外や窓の近くで、位置情報を再取得してください。</span>`
+      : `<strong>位置情報を確認できませんでした</strong><span>端末の設定で位置情報を許可してください。</span>`;
     if (options.announce) showToast(getGeolocationErrorMessage(error));
     return [];
   }
@@ -3645,7 +3660,7 @@ async function findNearbySaunas(options = {}) {
 function renderNearbyResults(candidates) {
   if (!el.nearbyResult) return;
   if (!candidates.length) {
-    el.nearbyResult.innerHTML = `<strong>近隣候補なし</strong><span>15km以内に座標確認済み施設がありません。</span>`;
+    el.nearbyResult.innerHTML = `<strong>2km以内に候補なし</strong><span>住所・座標を確認できたサウナだけを表示します。</span>`;
     return;
   }
   el.nearbyResult.innerHTML = candidates.slice(0, 3).map(({ facility, distanceKm }) => `
@@ -3658,26 +3673,12 @@ function renderNearbyResults(candidates) {
 }
 
 function getNearestFacilities(latitude, longitude, limit = 5) {
-  return getFacilities()
-    .map((facility) => {
-      const lat = Number(facility.lat);
-      const lng = Number(facility.lng);
-      if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
-      return { facility, distanceKm: haversineDistanceKm(latitude, longitude, lat, lng) };
-    })
-    .filter((item) => item && item.distanceKm <= NEARBY_RESULT_RADIUS_KM)
-    .sort((a, b) => a.distanceKm - b.distanceKm)
-    .slice(0, limit);
-}
-
-function haversineDistanceKm(lat1, lng1, lat2, lng2) {
-  const toRadians = (value) => value * Math.PI / 180;
-  const earthRadiusKm = 6371;
-  const latDelta = toRadians(lat2 - lat1);
-  const lngDelta = toRadians(lng2 - lng1);
-  const a = Math.sin(latDelta / 2) ** 2
-    + Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) * Math.sin(lngDelta / 2) ** 2;
-  return earthRadiusKm * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return findNearestFacilities(getFacilities(), latitude, longitude, {
+    limit,
+    radiusKm: NEARBY_RESULT_RADIUS_KM,
+    requireAddress: true,
+    excludeSources: ["Airbnb"],
+  });
 }
 
 function getCurrentPosition(options = {}) {
@@ -3689,6 +3690,9 @@ function getCurrentPosition(options = {}) {
 }
 
 function getGeolocationErrorMessage(error) {
+  if (String(error?.message || "").startsWith("position-accuracy:")) {
+    return `位置精度が${MAX_NEARBY_GEO_ACCURACY_METERS}mを超えています。場所を変えて再取得してください`;
+  }
   if (error?.code === 1) return "位置情報が許可されていません";
   if (error?.code === 2) return "現在地を取得できませんでした";
   if (error?.code === 3) return "位置情報の取得が時間切れです";

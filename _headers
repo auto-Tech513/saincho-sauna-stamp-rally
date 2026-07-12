@@ -1,7 +1,7 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Permissions-Policy: geolocation=(self), microphone=(), camera=()
 
 /app.js
   Cache-Control: no-cache, must-revalidate
@@ -28,6 +28,9 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /styles.*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/nearby.*.js
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/*
