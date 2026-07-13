@@ -125,15 +125,10 @@ await copyAssetFiles(ASSET_FILES);
 await copyAssetFiles(ICON_FILES);
 await copyFile("_headers");
 await write("_redirects", [
-  "/api/* /api/:splat 200",
-  "/sitemap.xml /sitemap.xml 200",
-  "/robots.txt /robots.txt 200",
-  "/sitemap-facilities-2.xml /404.html 404",
-  "/llms.txt /404.html 404",
-  "/404.html /404.html 404",
   ...[...FACILITY_ALIASES.entries()].map(([aliasId, canonical]) =>
     `/facility/${encodeURIComponent(aliasId)}/ /facility/${encodeURIComponent(canonical.id)}/ 301`
   ),
+  "/api/* /api/:splat 200",
   "",
 ].join("\n"));
 

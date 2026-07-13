@@ -14,6 +14,7 @@ const pageSitemap = await read("sitemap-pages.xml");
 const redirects = await read("_redirects");
 const sourceRedirects = await fs.readFile(path.join(root, "_redirects"), "utf8");
 const headers = await fs.readFile(path.join(root, "_headers"), "utf8");
+const retiredFunctions = ["functions/llms.txt.js", "functions/sitemap-facilities-2.xml.js"];
 
 assert(!rootHtml.includes('name="keywords"'), "廃止済みのmeta keywordsが残っています");
 assert(!rootHtml.includes('"@type": "SearchAction"'), "廃止済みのサイト内検索表示を意図したSearchActionが残っています");
@@ -25,9 +26,18 @@ for (const route of ["/sitemap.xml", "/sitemap-*.xml", "/robots.txt", "/feed.xml
 }
 assert(!sourceRedirects.includes("/* /index.html 200"), "ソースのSPAフォールバックがsoft 404を再発させます");
 assert(!redirects.includes("/* /index.html 200"), "公開物のSPAフォールバックがsoft 404を再発させます");
-for (const retired of ["/sitemap-facilities-2.xml /404.html 404", "/llms.txt /404.html 404"]) {
-  assert(sourceRedirects.includes(retired), `廃止URLのソース404指定がありません: ${retired}`);
-  assert(redirects.includes(retired), `廃止URLの公開404指定がありません: ${retired}`);
+for (const [label, value] of [["ソース", sourceRedirects], ["公開物", redirects]]) {
+  const rules = value.split("\n").map((line) => line.trim()).filter((line) => line && !line.startsWith("#"));
+  for (const rule of rules) {
+    const status = Number(rule.split(/\s+/).at(-1));
+    assert([200, 301, 302, 303, 307, 308].includes(status), `${label}_redirectsにCloudflare Pagesで無効なステータスがあります: ${rule}`);
+  }
+}
+for (const relative of retiredFunctions) {
+  const source = await fs.readFile(path.join(root, relative), "utf8");
+  assert(source.includes("status: 410"), `${relative}が廃止URLを410で終了していません`);
+  assert(source.includes('"Cache-Control": "no-store, max-age=0"'), `${relative}がキャッシュを禁止していません`);
+  assert(source.includes('"X-Robots-Tag": "noindex, nofollow"'), `${relative}が検索除外を明示していません`);
 }
 
 const rootLd = structuredData(rootHtml);
@@ -118,6 +128,8 @@ for (const entry of await fs.readdir(prefDirectory, { withFileTypes: true })) {
 
 const aliasRedirects = redirects.split("\n").filter((line) => /^\/facility\/\S+\/ \/facility\/\S+\/ 301$/.test(line));
 assert(aliasRedirects.length >= 1, "施設別名の301リダイレクトがありません");
+const apiRuleIndex = redirects.split("\n").findIndex((line) => line === "/api/* /api/:splat 200");
+assert(apiRuleIndex > redirects.split("\n").findLastIndex((line) => line.endsWith(" 301")), "APIのsplatルールが施設別名301より前にあります");
 for (const line of aliasRedirects) {
   const [from, to] = line.split(" ");
   await fs.access(urlToOutputPath(`https://saincho-sauna-stamp-rally.pages.dev${to}`));
