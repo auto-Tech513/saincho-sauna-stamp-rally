@@ -20,8 +20,15 @@ assert(!rootHtml.includes('"@type": "SearchAction"'), "廃止済みのサイト�
 assert(!rootHtml.includes("/llms.txt"), "Googleが使用しないllms.txtをSEO発見リンクとして宣言しています");
 assert(rootHtml.includes('type="application/rss+xml"'), "RSSフィードの発見リンクがありません");
 assert(headers.includes("Permissions-Policy: geolocation=(self)"), "位置情報がPermissions-Policyで許可されていません");
+for (const route of ["/sitemap.xml", "/sitemap-*.xml", "/robots.txt", "/feed.xml"]) {
+  assert(headers.includes(`${route}\n  Cache-Control: no-cache, must-revalidate`), `${route}の再検証キャッシュ指定がありません`);
+}
 assert(!sourceRedirects.includes("/* /index.html 200"), "ソースのSPAフォールバックがsoft 404を再発させます");
 assert(!redirects.includes("/* /index.html 200"), "公開物のSPAフォールバックがsoft 404を再発させます");
+for (const retired of ["/sitemap-facilities-2.xml /404.html 404", "/llms.txt /404.html 404"]) {
+  assert(sourceRedirects.includes(retired), `廃止URLのソース404指定がありません: ${retired}`);
+  assert(redirects.includes(retired), `廃止URLの公開404指定がありません: ${retired}`);
+}
 
 const rootLd = structuredData(rootHtml);
 const allTypes = collectTypes(rootLd);
