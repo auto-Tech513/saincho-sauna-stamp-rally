@@ -120,7 +120,6 @@ await write("sw.js", sourceSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 await copyFile("manifest.webmanifest");
-await copyFile("llms.txt");
 await copyFile("google4f1c271dfaceddbb.html");
 await copyAssetFiles(ASSET_FILES);
 await copyAssetFiles(ICON_FILES);
@@ -130,6 +129,9 @@ await write("_redirects", [
   "/sitemap.xml /sitemap.xml 200",
   "/robots.txt /robots.txt 200",
   "/404.html /404.html 404",
+  ...[...FACILITY_ALIASES.entries()].map(([aliasId, canonical]) =>
+    `/facility/${encodeURIComponent(aliasId)}/ /facility/${encodeURIComponent(canonical.id)}/ 301`
+  ),
   "",
 ].join("\n"));
 
@@ -155,7 +157,8 @@ await emitStaticRoute("/about/", "運営・データ方針 | サ印帳", "サ印
 
 for (const pref of PREFECTURES) {
   const facilities = CANONICAL_FACILITIES.filter((facility) => facility.prefecture === pref.name);
-  await emitStaticRoute(`/pref/${pref.slug}/`, `${pref.name}のサウナ検索 | サ印帳`, `${pref.name}のサウナ候補${facilities.length}件をサ印帳で検索。押印、行きたい、経路、住所検索、特徴タグから次の一湯を探せます。`, renderPrefSsr(pref, facilities), LASTMOD.data);
+  const verifiedFacilities = facilities.filter(isIndexableFacility).length;
+  await emitStaticRoute(`/pref/${pref.slug}/`, `${pref.name}のサウナ検索 | サ印帳`, `${pref.name}のサウナ候補${facilities.length}件をアプリ内で検索。番地住所・公式URL・固有の宿情報を確認できた${verifiedFacilities}件は検索エンジン向け一覧から個別ページへ移動できます。`, renderPrefSsr(pref, facilities), LASTMOD.data);
 }
 
 for (const { article, route } of ARTICLE_ROUTES) {
@@ -163,22 +166,13 @@ for (const { article, route } of ARTICLE_ROUTES) {
 }
 
 for (const facility of CANONICAL_FACILITIES) {
+  const titleArea = [facility.prefecture, facility.city].filter(Boolean).join("・");
   const meta = {
-    ...pageMeta(`${facility.name} | サ印帳 施設詳細`, getFacilityDescription(facility)),
+    ...pageMeta(`${facility.name}${titleArea ? `（${titleArea}）` : ""} | サ印帳 施設詳細`, getFacilityDescription(facility)),
     lastmod: LASTMOD.data,
     noindex: !isIndexableFacility(facility),
   };
   await emitPage(`/facility/${encodeURIComponent(facility.id)}/`, meta, renderFacilitySsr(facility));
-}
-
-for (const [aliasId, canonical] of FACILITY_ALIASES) {
-  const canonicalUrl = `${APP_URL}/facility/${encodeURIComponent(canonical.id)}/`;
-  await emitPage(`/facility/${encodeURIComponent(aliasId)}/`, {
-    ...pageMeta(`${canonical.name} | サ印帳 施設詳細`, getFacilityDescription(canonical)),
-    noindex: true,
-    canonical: canonicalUrl,
-    lastmod: LASTMOD.data,
-  }, renderFacilityAliasSsr(canonical));
 }
 
 await emit404();
@@ -235,11 +229,26 @@ function renderHtml(route, meta, ssrHtml) {
     .replace(/<!-- SEO:BEGIN -->[\s\S]*?<!-- SEO:END -->/, `<!-- SEO:BEGIN -->\n${seo}\n    <!-- SEO:END -->`)
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(meta.title)}</title>`);
   if (route !== "/") {
-    // サイト全体のFAQ/Dataset/OfferCatalog構造化データはトップのみに置き、
-    // 下層ページでは WebSite / Organization の最小グラフに差し替える。
+    const subpageLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        ...SUBPAGE_SITE_LD["@graph"],
+        {
+          "@type": "WebPage",
+          "@id": `${canonicalUrl}#webpage`,
+          url: canonicalUrl,
+          name: meta.title,
+          description: meta.description,
+          inLanguage: "ja-JP",
+          isPartOf: { "@id": `${APP_URL}/#website` },
+          image: OG_IMAGE,
+          dateModified: meta.lastmod || undefined,
+        },
+      ],
+    };
     html = html.replace(
       /<script type="application\/ld\+json">[\s\S]*?<\/script>/,
-      `<script type="application/ld+json">${escapeScript(JSON.stringify(SUBPAGE_SITE_LD))}</script>`
+      `<script type="application/ld+json">${escapeScript(JSON.stringify(subpageLd))}</script>`
     );
   }
   return html.replace("<!-- SSR:SLOT -->", ssrHtml);
@@ -253,7 +262,9 @@ function renderHomeSsr() {
   return wrapSsr(`
     <p class="eyebrow">SAUNA STAMP RALLY</p>
     <h1>サ印帳</h1>
-    <p>全国約${total}件のサウナ候補を検索し、行った施設をサ印として押印できる無料のサウナスタンプラリーです。</p>
+    <h2>サ印帳とは</h2>
+    <p>全国約${total}件のサウナ候補を検索し、実際に行った施設を「サ印」として記録できる無料のサウナスタンプラリー・サ活記録アプリです。施設が発行する物理スタンプではなく、自分の訪問履歴をスマホで育てます。</p>
+    <h2>検索から次のサ活まで</h2>
     <ul>
       <li>施設カードから詳細、経路、周辺サ飯、Gearを確認できます。</li>
       <li>県別マスター、称号、ランキングで続ける理由が見えます。</li>
@@ -272,6 +283,7 @@ function renderHomeSsr() {
 function renderAboutSsr() {
   const withAddress = CANONICAL_FACILITIES.filter((facility) => getAddress(facility)).length;
   const withArea = CANONICAL_FACILITIES.filter((facility) => getAddress(facility) || facility.city).length;
+  const indexable = CANONICAL_FACILITIES.filter(isIndexableFacility).length;
   const percent = (value) => `${Math.round((value / CANONICAL_FACILITIES.length) * 100)}%`;
   return wrapSsr(`
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › 運営・データ方針</nav>
@@ -282,10 +294,12 @@ function renderAboutSsr() {
       <div><dt>重複統合後の候補</dt><dd>${CANONICAL_FACILITIES.length}件</dd></div>
       <div><dt>番地住所あり</dt><dd>${withAddress}件（${percent(withAddress)}）</dd></div>
       <div><dt>市区町村以上</dt><dd>${withArea}件（${percent(withArea)}）</dd></div>
+      <div><dt>検索対象の個別ページ</dt><dd>${indexable}件</dd></div>
       <div><dt>カタログ確認日</dt><dd>${escapeHtml(DATASET_META.catalogReviewedAt || "未設定")}</dd></div>
     </dl>
     <h2>確認・更新</h2>
     <p>同一施設の別名を正規化して統合し、開業予定・要確認は県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
+    <p>検索エンジン向けの個別ページは、番地住所、施設公式URL、または所在地と固有説明のあるサウナ宿を確認できた候補に限定します。未確認候補はアプリ内検索には残し、情報を補完できるまでサイトマップへ載せません。</p>
     <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
     <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。</p>
@@ -357,7 +371,8 @@ function renderArticleSsr(article, route) {
 }
 
 function renderPrefSsr(pref, facilities) {
-  const facilityLinks = facilities
+  const indexableFacilities = facilities.filter(isIndexableFacility);
+  const facilityLinks = indexableFacilities
     .map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>${facility.city ? ` <span>${escapeHtml(facility.city)}</span>` : ""}</li>`)
     .join("");
   const jsonLd = JSON.stringify({
@@ -371,8 +386,8 @@ function renderPrefSsr(pref, facilities) {
         "@type": "ItemList",
         "@id": `${APP_URL}/pref/${pref.slug}/#list`,
         name: `${pref.name}のサウナ候補`,
-        numberOfItems: facilities.length,
-        itemListElement: facilities.slice(0, 30).map((facility, index) => ({
+        numberOfItems: indexableFacilities.length,
+        itemListElement: indexableFacilities.slice(0, 30).map((facility, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: facility.name,
@@ -385,8 +400,9 @@ function renderPrefSsr(pref, facilities) {
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › ${escapeHtml(pref.name)}のサウナ</nav>
     <p class="eyebrow">PREFECTURE</p>
     <h1>${escapeHtml(pref.name)}のサウナ検索</h1>
-    <p>${escapeHtml(pref.name)}の候補${facilities.length}件を収録。住所、特徴、参照元を見ながら次の一湯を選べます。</p>
+    <p>${escapeHtml(pref.name)}の候補${facilities.length}件をアプリ内で検索できます。この一覧では、番地住所・公式URL・固有の宿情報を確認できた${indexableFacilities.length}件を掲載しています。</p>
     <ul class="ssr-list">${facilityLinks}</ul>
+    <p>未確認候補は検索画面で確認できます。番地、営業状況、料金は参照元または施設公式情報を訪問前に再確認してください。</p>
     <p><a href="/">サ印帳トップへ戻る</a></p>
   `, { jsonLd });
 }
@@ -398,25 +414,28 @@ function renderFacilitySsr(facility) {
   const prefSlug = PREF_SLUG.get(facility.prefecture) || "";
   const facilityUrl = `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`;
   const source = facility.sourceUrl ? `<a href="${escapeAttr(facility.sourceUrl)}" rel="nofollow noreferrer">${escapeHtml(facility.source || "参照")}</a>` : escapeHtml(facility.source || "参照元確認中");
+  const official = facility.officialUrl ? `<a href="${escapeAttr(facility.officialUrl)}" rel="nofollow noreferrer">施設公式ページ</a>` : "";
+  const note = String(facility.note || "").trim();
   const quality = getFacilityQuality(facility);
   const breadcrumb = prefSlug
     ? `<nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/pref/${prefSlug}/">${escapeHtml(facility.prefecture)}のサウナ</a> › ${escapeHtml(facility.name)}</nav>`
     : `<nav aria-label="パンくず"><a href="/">サ印帳</a> › ${escapeHtml(facility.name)}</nav>`;
+  const graph = [
+    breadcrumbJsonLd(prefSlug
+      ? [
+          ["サ印帳", `${APP_URL}/`],
+          [`${facility.prefecture}のサウナ`, `${APP_URL}/pref/${prefSlug}/`],
+          [facility.name, facilityUrl],
+        ]
+      : [
+          ["サ印帳", `${APP_URL}/`],
+          [facility.name, facilityUrl],
+        ]),
+  ];
+  if (isIndexableFacility(facility)) graph.push(localBusinessJsonLd(facility));
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
-    "@graph": [
-      breadcrumbJsonLd(prefSlug
-        ? [
-            ["サ印帳", `${APP_URL}/`],
-            [`${facility.prefecture}のサウナ`, `${APP_URL}/pref/${prefSlug}/`],
-            [facility.name, facilityUrl],
-          ]
-        : [
-            ["サ印帳", `${APP_URL}/`],
-            [facility.name, facilityUrl],
-          ]),
-      localBusinessJsonLd(facility),
-    ],
+    "@graph": graph,
   }, null, 2);
   return wrapSsr(`
     ${breadcrumb}
@@ -427,6 +446,8 @@ function renderFacilitySsr(facility) {
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
       <div><dt>特徴</dt><dd>${escapeHtml(tags.length ? tags.join(" / ") : "施設詳細")}</dd></div>
       <div><dt>参照</dt><dd>${source}</dd></div>
+      ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
+      ${note ? `<div><dt>施設情報</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
     </dl>
     <p>${escapeHtml(getFacilityDescription(facility))}</p>
@@ -434,16 +455,6 @@ function renderFacilitySsr(facility) {
     <p><a href="/contact/">情報修正を知らせる</a></p>
     ${prefSlug ? `<p><a href="/pref/${prefSlug}/">${escapeHtml(facility.prefecture)}のサウナ一覧へ戻る</a></p>` : ""}
   `, { jsonLd });
-}
-
-function renderFacilityAliasSsr(canonical) {
-  return wrapSsr(`
-    <nav aria-label="パンくず"><a href="/">サ印帳</a> › 施設情報を統合しました</nav>
-    <p class="eyebrow">MERGED FACILITY</p>
-    <h1>${escapeHtml(canonical.name)}</h1>
-    <p>同一施設の別名ページを統合しました。正規の施設詳細ページへ移動してください。</p>
-    <p><a href="/facility/${encodeURIComponent(canonical.id)}/">${escapeHtml(canonical.name)}の施設詳細を見る</a></p>
-  `);
 }
 
 function renderGenericSsr(title, text) {
@@ -472,7 +483,7 @@ function renderSearchIntentSsr(kind) {
         ["公開と非公開を分ける", "自分用メモとサ活ログは端末内に保存されます。口コミは投稿操作をした内容だけが公開対象になります。"],
       ];
   const route = isStampRally ? "sauna-stamp-rally" : "sauna-goshuin";
-  const modifiedAt = LASTMOD.site || undefined;
+  const modifiedAt = LASTMOD.content || undefined;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -555,7 +566,8 @@ function pageMeta(title, description) {
 function getFacilityDescription(facility) {
   const address = getAddress(facility);
   const tags = displayTags(facility).slice(0, 4).join("、");
-  return cleanMeta(`${facility.name}のサ印帳施設詳細。${facility.prefecture}${facility.city ? ` / ${facility.city}` : ""}の候補です。${address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Maps検索で確認できます。"}${tags ? `特徴は${tags}。` : ""}押印、行きたい、メモ、口コミ、経路、周辺サ飯、Gear導線をまとめて確認できます。`);
+  const note = String(facility.note || "").trim();
+  return cleanMeta(`${facility.name}のサ印帳施設詳細。${facility.prefecture}${facility.city ? ` / ${facility.city}` : ""}の候補です。${address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Maps検索で確認できます。"}${note ? `施設情報は${note}。` : ""}${tags ? `特徴は${tags}。` : ""}押印、行きたい、メモ、口コミ、経路、周辺サ飯、Gear導線を確認できます。`);
 }
 
 function displayTags(facility) {
@@ -583,7 +595,13 @@ function getFacilityQuality(facility) {
 }
 
 function isIndexableFacility(facility) {
-  return Boolean(getAddress(facility) || facility.city || facility.officialUrl || facility.note);
+  const hasVerifiedAddress = Boolean(getAddress(facility));
+  const hasOfficialPage = /^https?:\/\//.test(String(facility.officialUrl || "").trim());
+  const hasSpecificStayDetails = facility.source === "Airbnb"
+    && Boolean(String(facility.city || "").trim())
+    && String(facility.note || "").trim().length >= 12
+    && /^https?:\/\//.test(String(facility.sourceUrl || "").trim());
+  return hasVerifiedAddress || hasOfficialPage || hasSpecificStayDetails;
 }
 
 function slugify(value) {
@@ -649,19 +667,24 @@ async function emitSitemaps(entries) {
   const facilityEntries = entries.filter((entry) => entry.loc.includes("/facility/"));
   const sitemapFiles = [];
   await write("sitemap-pages.xml", urlset(pageEntries));
-  sitemapFiles.push("sitemap-pages.xml");
+  sitemapFiles.push({ file: "sitemap-pages.xml", lastmod: maxLastmod(pageEntries) });
   for (let index = 0; index < facilityEntries.length; index += CHUNK_SIZE) {
     const file = `sitemap-facilities-${Math.floor(index / CHUNK_SIZE) + 1}.xml`;
     await write(file, urlset(facilityEntries.slice(index, index + CHUNK_SIZE)));
-    sitemapFiles.push(file);
+    const chunk = facilityEntries.slice(index, index + CHUNK_SIZE);
+    sitemapFiles.push({ file, lastmod: maxLastmod(chunk) });
   }
   await write("sitemap.xml", [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...sitemapFiles.map((file) => `  <sitemap><loc>${APP_URL}/${file}</loc></sitemap>`),
+    ...sitemapFiles.map(({ file, lastmod }) => `  <sitemap><loc>${APP_URL}/${file}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}</sitemap>`),
     '</sitemapindex>',
     '',
   ].join("\n"));
+}
+
+function maxLastmod(entries) {
+  return entries.map((entry) => entry.lastmod).filter(Boolean).sort().at(-1) || "";
 }
 
 async function emitFeed() {

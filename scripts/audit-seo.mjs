@@ -9,13 +9,19 @@ const rootHtml = await read("index.html");
 const stampHtml = await read("sauna-stamp-rally/index.html");
 const guideHtml = await firstGuideHtml();
 const feed = await read("feed.xml");
-const sitemap = await read("sitemap-pages.xml");
+const sitemapIndex = await read("sitemap.xml");
+const pageSitemap = await read("sitemap-pages.xml");
+const redirects = await read("_redirects");
+const sourceRedirects = await fs.readFile(path.join(root, "_redirects"), "utf8");
 const headers = await fs.readFile(path.join(root, "_headers"), "utf8");
 
 assert(!rootHtml.includes('name="keywords"'), "廃止済みのmeta keywordsが残っています");
 assert(!rootHtml.includes('"@type": "SearchAction"'), "廃止済みのサイト内検索表示を意図したSearchActionが残っています");
+assert(!rootHtml.includes("/llms.txt"), "Googleが使用しないllms.txtをSEO発見リンクとして宣言しています");
 assert(rootHtml.includes('type="application/rss+xml"'), "RSSフィードの発見リンクがありません");
 assert(headers.includes("Permissions-Policy: geolocation=(self)"), "位置情報がPermissions-Policyで許可されていません");
+assert(!sourceRedirects.includes("/* /index.html 200"), "ソースのSPAフォールバックがsoft 404を再発させます");
+assert(!redirects.includes("/* /index.html 200"), "公開物のSPAフォールバックがsoft 404を再発させます");
 
 const rootLd = structuredData(rootHtml);
 const allTypes = collectTypes(rootLd);
@@ -30,7 +36,13 @@ assert(organization?.sameAs?.includes("https://saincho-official.hatenablog.com/"
 assert((await read("about/index.html")).includes("https://saincho-official.hatenablog.com/"), "運営ページに公式ブログの可視リンクがありません");
 
 for (const [label, html] of [["検索意図ページ", stampHtml], ["入門記事", guideHtml]]) {
-  const article = findNode(structuredData(html), "Article");
+  const data = structuredData(html);
+  const page = findNode(data, "WebPage");
+  assert(page, `${label}にWebPage構造化データがありません`);
+  for (const property of ["url", "name", "description", "inLanguage", "isPartOf", "image", "dateModified"]) {
+    assert(page[property], `${label}のWebPage.${property}がありません`);
+  }
+  const article = findNode(data, "Article");
   assert(article, `${label}にArticle構造化データがありません`);
   for (const property of ["headline", "description", "image", "datePublished", "dateModified", "author", "publisher", "mainEntityOfPage"]) {
     assert(article[property], `${label}のArticle.${property}がありません`);
@@ -39,20 +51,109 @@ for (const [label, html] of [["検索意図ページ", stampHtml], ["入門記�
 }
 
 const feedItems = (feed.match(/<item>/g) || []).length;
-const pageUrls = (sitemap.match(/<loc>/g) || []).length;
+const pageUrls = xmlLocs(pageSitemap).length;
 assert(feedItems >= 32, `RSSの記事数が不足しています: ${feedItems}`);
 assert(pageUrls >= 80, `固定ページサイトマップのURL数が不足しています: ${pageUrls}`);
+
+assert(sitemapIndex.includes("<sitemapindex"), "ルートサイトマップがsitemapindexではありません");
+const childRecords = [...sitemapIndex.matchAll(/<sitemap><loc>([^<]+)<\/loc><lastmod>([^<]+)<\/lastmod><\/sitemap>/g)]
+  .map((match) => ({ url: decodeXml(match[1]), lastmod: match[2] }));
+assert(childRecords.length >= 2, `子サイトマップが不足しています: ${childRecords.length}`);
+for (const child of childRecords) {
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(child.lastmod), `子サイトマップのlastmodが不正です: ${child.url}`);
+}
+
+const allUrls = [];
+for (const child of childRecords) {
+  const filename = path.basename(new URL(child.url).pathname);
+  const xml = await read(filename);
+  assert(xml.includes("<urlset"), `${filename}がurlsetではありません`);
+  allUrls.push(...xmlLocs(xml));
+}
+assert.equal(new Set(allUrls).size, allUrls.length, "サイトマップ内に重複URLがあります");
+
+const facilityUrls = allUrls.filter((url) => new URL(url).pathname.startsWith("/facility/"));
+assert(facilityUrls.length >= 1000, `確認済み施設URLが想定より少なすぎます: ${facilityUrls.length}`);
+const titles = new Set();
+const descriptions = new Set();
+const evidence = { address: 0, official: 0, stay: 0 };
+for (const url of facilityUrls) {
+  const html = await readUrl(url);
+  const title = capture(html, /<title>([^<]+)<\/title>/, `title: ${url}`);
+  const description = capture(html, /<meta name="description" content="([^"]+)"/, `description: ${url}`);
+  const canonical = capture(html, /<link rel="canonical" href="([^"]+)"/, `canonical: ${url}`);
+  assert.equal(canonical, url, `自己参照canonicalではありません: ${url}`);
+  assert(!html.includes('content="noindex, follow"'), `サイトマップURLがnoindexです: ${url}`);
+  assert(html.includes("<h1>"), `施設ページに可視h1がありません: ${url}`);
+  assert(!titles.has(title), `施設titleが重複しています: ${title}`);
+  assert(!descriptions.has(description), `施設descriptionが重複しています: ${description}`);
+  titles.add(title);
+  descriptions.add(description);
+
+  const data = structuredData(html);
+  const business = findNode(data, "LocalBusiness") || findNode(data, "LodgingBusiness");
+  assert(business, `施設の構造化データがありません: ${url}`);
+  if (business.address) evidence.address += 1;
+  else if (Array.isArray(business.sameAs) && business.sameAs.length) evidence.official += 1;
+  else if (business["@type"] === "LodgingBusiness" && business.subjectOf?.url && String(business.description || "").length >= 60) evidence.stay += 1;
+  else assert.fail(`住所・公式URL・固有の宿情報のいずれもない施設がindex対象です: ${url}`);
+}
+
+const facilityUrlSet = new Set(facilityUrls);
+const prefDirectory = path.join(out, "pref");
+for (const entry of await fs.readdir(prefDirectory, { withFileTypes: true })) {
+  if (!entry.isDirectory()) continue;
+  const html = await fs.readFile(path.join(prefDirectory, entry.name, "index.html"), "utf8");
+  for (const href of [...html.matchAll(/href="(\/facility\/[^"]+\/)"/g)].map((match) => match[1])) {
+    assert(facilityUrlSet.has(`https://saincho-sauna-stamp-rally.pages.dev${href}`), `県ページがnoindex施設へリンクしています: ${href}`);
+  }
+}
+
+const aliasRedirects = redirects.split("\n").filter((line) => /^\/facility\/\S+\/ \/facility\/\S+\/ 301$/.test(line));
+assert(aliasRedirects.length >= 1, "施設別名の301リダイレクトがありません");
+for (const line of aliasRedirects) {
+  const [from, to] = line.split(" ");
+  await fs.access(urlToOutputPath(`https://saincho-sauna-stamp-rally.pages.dev${to}`));
+  await assert.rejects(fs.access(urlToOutputPath(`https://saincho-sauna-stamp-rally.pages.dev${from}`)), undefined, `別名HTMLが残っています: ${from}`);
+}
 
 console.log(JSON.stringify({
   ok: true,
   rootStructuredDataTypes: [...allTypes].sort(),
   feedItems,
   pageUrls,
+  facilityUrls: facilityUrls.length,
+  indexEvidence: evidence,
+  aliasRedirects: aliasRedirects.length,
+  sitemapChildren: childRecords.map((child) => child.url),
   geolocationPolicy: "self",
 }, null, 2));
 
 async function read(relative) {
   return fs.readFile(path.join(out, relative), "utf8");
+}
+
+async function readUrl(url) {
+  return fs.readFile(urlToOutputPath(url), "utf8");
+}
+
+function urlToOutputPath(url) {
+  const pathname = decodeURIComponent(new URL(url).pathname).replace(/^\/+/, "");
+  return path.join(out, pathname, "index.html");
+}
+
+function xmlLocs(xml) {
+  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => decodeXml(match[1]));
+}
+
+function decodeXml(value) {
+  return value.replaceAll("&amp;", "&").replaceAll("&quot;", '"').replaceAll("&apos;", "'").replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+}
+
+function capture(value, pattern, label) {
+  const match = value.match(pattern);
+  assert(match, `${label}がありません`);
+  return decodeXml(match[1]);
 }
 
 async function firstGuideHtml() {

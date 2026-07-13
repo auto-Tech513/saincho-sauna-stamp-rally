@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /llms.txt
 
 Sitemap: https://saincho-sauna-stamp-rally.pages.dev/sitemap.xml
