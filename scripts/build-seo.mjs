@@ -820,7 +820,7 @@ async function writeRoute(route, html) {
 }
 
 async function read(file) {
-  return fs.readFile(path.join(ROOT, file), "utf8");
+  return readSource(file, "utf8");
 }
 
 async function write(file, content) {
@@ -832,7 +832,22 @@ async function write(file, content) {
 async function copyFile(file) {
   const target = path.join(OUT, file);
   await fs.mkdir(path.dirname(target), { recursive: true });
-  await fs.copyFile(path.join(ROOT, file), target);
+  await fs.writeFile(target, await readSource(file));
+}
+
+async function readSource(file, encoding) {
+  const source = path.join(ROOT, file);
+  if (process.platform === "darwin") {
+    await execFileAsync("/usr/bin/brctl", ["download", source]).catch(() => null);
+  }
+  try {
+    return await fs.readFile(source, { encoding, signal: AbortSignal.timeout(60_000) });
+  } catch (error) {
+    if (error?.name === "AbortError") {
+      throw new Error(`Timed out while hydrating build input: ${file}`);
+    }
+    throw error;
+  }
 }
 
 async function copyAssetFiles(files) {
