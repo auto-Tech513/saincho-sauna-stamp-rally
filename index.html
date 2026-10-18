@@ -214,77 +214,36 @@
 
       <main class="main">
         <!-- SSR:SLOT -->
-        <section class="install-card" id="installCard" aria-label="ホーム画面に追加">
-          <img src="./icons/icon-192.png" width="56" height="56" alt="" />
-          <div>
-            <strong>サ印帳をホームに追加</strong>
-            <span id="installHint">次から1タップで開けます</span>
-          </div>
-          <button class="install-button" id="installButton" type="button">追加</button>
-          <button class="install-dismiss" id="installDismissButton" type="button" aria-label="閉じる">
-            <span class="icon-close" aria-hidden="true"></span>
-          </button>
-        </section>
-
-        <section class="summary-band" aria-label="進捗">
-          <div class="summary-copy">
-            <span class="summary-label">押印済み</span>
-            <strong id="visitedCount">0</strong>
-            <span id="nextMilestone">あと1湯ではじめの一湯</span>
-            <span id="collectionScope">約5000候補 / 47都道府県</span>
-          </div>
-          <div class="progress-ring" id="progressRing" aria-label="収録候補達成率">
-            <span id="progressPercent">0%</span>
-          </div>
-          <div class="hero-metrics" aria-label="候補状況">
-            <div>
-              <strong id="totalCandidateCount">4975</strong>
-              <span>候補</span>
-            </div>
-            <div>
-              <strong id="coveredPrefCount">47</strong>
-              <span>県</span>
-            </div>
-            <div>
-              <strong id="heroWishlistCount">0</strong>
-              <span>行きたい</span>
-            </div>
-          </div>
-          <div class="reward-nudge" id="rewardNudge" aria-label="次の目標">
-            <div class="reward-pill">
-              <span>次の称号</span>
-              <strong>あと1湯</strong>
-              <em>はじめの一湯</em>
-            </div>
-            <div class="reward-pill">
-              <span>県マスター</span>
-              <strong>あと50湯</strong>
-              <em>最初の県へ</em>
-            </div>
-            <div class="reward-pill">
-              <span>行きたい</span>
-              <strong>あと1件</strong>
-              <em>候補を残す</em>
-            </div>
-          </div>
-        </section>
-
         <section class="view view-active" id="viewExplore" aria-label="探す">
-          <h2 class="visually-hidden">サウナを探す</h2>
+          <h2 class="explore-title">サウナを探す</h2>
           <div class="tool-band">
-            <label class="search-box">
-              <span aria-hidden="true"></span>
-              <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="サウナ名・県・住所・特徴で検索" />
-              <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
-                <span class="icon-close" aria-hidden="true"></span>
-              </button>
-            </label>
+            <form class="search-form" id="searchForm" role="search">
+              <label class="search-box">
+                <span aria-hidden="true"></span>
+                <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="施設名・住所・特徴" enterkeyhint="search" aria-controls="facilityList" />
+                <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
+                  <span class="icon-close" aria-hidden="true"></span>
+                </button>
+              </label>
+              <button class="search-submit-button" type="submit">検索</button>
+            </form>
             <div class="segment" role="group" aria-label="表示切替">
               <button class="segment-active" type="button" data-filter="all" aria-pressed="true">全部</button>
               <button type="button" data-filter="unvisited">未押印</button>
               <button type="button" data-filter="wishlist">行きたい</button>
               <button type="button" data-filter="favorite">お気に入り</button>
             </div>
+            <div class="search-refiners">
+              <label class="search-prefecture-label">
+                <span class="visually-hidden">都道府県で絞り込む</span>
+                <select id="searchPrefectureSelect" aria-label="都道府県で絞り込む"><option value="全国">全国</option></select>
+              </label>
+              <button class="feature-filter-toggle" id="featureFilterToggle" type="button" aria-expanded="false" aria-controls="featureFilterPanel">特徴 <strong id="featureFilterCount">指定なし</strong></button>
+            </div>
+            <section class="feature-filter-panel" id="featureFilterPanel" aria-label="特徴で絞り込み" hidden>
+              <div class="feature-filter-grid" id="featureFilterGrid"></div>
+              <button class="search-submit-button" id="featureFilterApply" type="button">結果を見る</button>
+            </section>
           </div>
 
           <section class="area-shortcut" id="areaShortcut" aria-label="マイエリア">
@@ -301,54 +260,106 @@
             <div class="nearby-result" id="nearbyResult" role="status" aria-live="polite"></div>
           </section>
 
-          <section class="quest-panel" id="questPanel" aria-label="次の一手"></section>
+          <details class="explore-extras" id="exploreExtras">
+            <summary>サ活の進捗・次の一湯</summary>
+            <div class="explore-extras-content">
+              <section class="install-card" id="installCard" aria-label="ホーム画面に追加">
+                <img src="./icons/icon-192.png" width="56" height="56" alt="" />
+                <div>
+                  <strong>サ印帳をホームに追加</strong>
+                  <span id="installHint">次から1タップで開けます</span>
+                </div>
+                <button class="install-button" id="installButton" type="button">追加</button>
+                <button class="install-dismiss" id="installDismissButton" type="button" aria-label="閉じる">
+                  <span class="icon-close" aria-hidden="true"></span>
+                </button>
+              </section>
 
-          <details class="seo-answer-panel">
-            <summary>
-              <span>検索で来た方へ</span>
-              <strong>サウナ検索・記録・サ印</strong>
-            </summary>
-            <div class="seo-answer-grid">
-              <article>
-                <h2>サウナ スタンプラリーとして使える</h2>
-                <p>行ったサウナをサ印として押印し、全国候補から次の施設を探せます。紙の台帳のような収集感をスマホで続けられます。</p>
-                <button class="text-link-button" type="button" data-open-view="StampRally">始め方を詳しく見る</button>
-              </article>
-              <article>
-                <h2>サウナ 御朱印のように集める</h2>
-                <p>サ印、県別マスター、称号で訪問履歴が育ちます。押し間違えても取り消せるので、気軽に記録できます。</p>
-                <button class="text-link-button" type="button" data-open-view="Goshuin">サ印との違いを見る</button>
-              </article>
-              <article>
-                <h2>サウナ 検索とサウナ 記録をまとめる</h2>
-                <p>サウナ名、都道府県、住所、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、経路検索、メモ、X共有まで一つで管理できます。</p>
-              </article>
-              <article>
-                <h2>サ活帳として続けやすい</h2>
-                <p>押印数、次の称号、県別マスター、ランキングが見えるので、次に行く理由が作りやすくなります。</p>
-              </article>
-              <article>
-                <h2>検索サイトとの違い</h2>
-                <p>施設を探すだけでなく、押印、メモ、口コミ、お気に入り、サ飯、Gearまで同じ画面導線でつなげます。</p>
-              </article>
-              <article>
-                <h2>事業者も掲載相談できる</h2>
-                <p>サウナ施設、サウナ付き宿、サ飯店舗は掲載・お問い合わせページから広告やプレミアム個別ページを相談できます。</p>
-              </article>
+              <section class="summary-band" aria-label="進捗">
+                <div class="summary-copy">
+                  <span class="summary-label">押印済み</span>
+                  <strong id="visitedCount">0</strong>
+                  <span id="nextMilestone">あと1湯ではじめの一湯</span>
+                  <span id="collectionScope">約5000候補 / 47都道府県</span>
+                </div>
+                <div class="progress-ring" id="progressRing" aria-label="収録候補達成率">
+                  <span id="progressPercent">0%</span>
+                </div>
+                <div class="hero-metrics" aria-label="候補状況">
+                  <div>
+                    <strong id="totalCandidateCount">4975</strong>
+                    <span>候補</span>
+                  </div>
+                  <div>
+                    <strong id="coveredPrefCount">47</strong>
+                    <span>県</span>
+                  </div>
+                  <div>
+                    <strong id="heroWishlistCount">0</strong>
+                    <span>行きたい</span>
+                  </div>
+                </div>
+                <div class="reward-nudge" id="rewardNudge" aria-label="次の目標">
+                  <div class="reward-pill">
+                    <span>次の称号</span>
+                    <strong>あと1湯</strong>
+                    <em>はじめの一湯</em>
+                  </div>
+                  <div class="reward-pill">
+                    <span>県マスター</span>
+                    <strong>あと50湯</strong>
+                    <em>最初の県へ</em>
+                  </div>
+                  <div class="reward-pill">
+                    <span>行きたい</span>
+                    <strong>あと1件</strong>
+                    <em>候補を残す</em>
+                  </div>
+                </div>
+              </section>
+              <section class="quest-panel" id="questPanel" aria-label="次の一手"></section>
+
+              <details class="seo-answer-panel">
+                <summary>
+                  <span>検索で来た方へ</span>
+                  <strong>サウナ検索・記録・サ印</strong>
+                </summary>
+                <div class="seo-answer-grid">
+                  <article>
+                    <h2>サウナ スタンプラリーとして使える</h2>
+                    <p>行ったサウナをサ印として押印し、全国候補から次の施設を探せます。紙の台帳のような収集感をスマホで続けられます。</p>
+                    <button class="text-link-button" type="button" data-open-view="StampRally">始め方を詳しく見る</button>
+                  </article>
+                  <article>
+                    <h2>サウナ 御朱印のように集める</h2>
+                    <p>サ印、県別マスター、称号で訪問履歴が育ちます。押し間違えても取り消せるので、気軽に記録できます。</p>
+                    <button class="text-link-button" type="button" data-open-view="Goshuin">サ印との違いを見る</button>
+                  </article>
+                  <article>
+                    <h2>サウナ 検索とサウナ 記録をまとめる</h2>
+                    <p>サウナ名、都道府県、住所、温泉付き、個室、セルフロウリュなどの特徴で探し、行きたい、経路検索、メモ、X共有まで一つで管理できます。</p>
+                  </article>
+                  <article>
+                    <h2>サ活帳として続けやすい</h2>
+                    <p>押印数、次の称号、県別マスター、ランキングが見えるので、次に行く理由が作りやすくなります。</p>
+                  </article>
+                  <article>
+                    <h2>検索サイトとの違い</h2>
+                    <p>施設を探すだけでなく、押印、メモ、口コミ、お気に入り、サ飯、Gearまで同じ画面導線でつなげます。</p>
+                  </article>
+                  <article>
+                    <h2>事業者も掲載相談できる</h2>
+                    <p>サウナ施設、サウナ付き宿、サ飯店舗は掲載・お問い合わせページから広告やプレミアム個別ページを相談できます。</p>
+                  </article>
+                </div>
+              </details>
+
+              <div class="pref-strip" id="prefStrip" aria-label="都道府県" hidden></div>
+              <div class="source-row" id="sourceRow"></div>
+              <div class="spotlight" id="spotlight"></div>
             </div>
           </details>
-
-          <div class="pref-strip" id="prefStrip" aria-label="都道府県"></div>
-          <div class="source-row" id="sourceRow"></div>
-          <details class="feature-filter-panel" id="featureFilterPanel">
-            <summary>
-              <span>特徴で絞り込み</span>
-              <strong id="featureFilterCount">指定なし</strong>
-            </summary>
-            <div class="feature-filter-grid" id="featureFilterGrid"></div>
-          </details>
-          <div class="spotlight" id="spotlight"></div>
-          <p class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+          <p tabindex="-1" class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="facility-list" id="facilityList"></div>
         </section>
 

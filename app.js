@@ -21,7 +21,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261018-audit-v2";
+const APP_BUILD_ID = "20261019-search-flow-v3";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -827,6 +827,12 @@ const el = {
   searchInput: document.querySelector("#searchInput"),
   searchClearButton: document.querySelector("#searchClearButton"),
   searchResultsStatus: document.querySelector("#searchResultsStatus"),
+  searchForm: document.querySelector("#searchForm"),
+  searchPrefectureSelect: document.querySelector("#searchPrefectureSelect"),
+  featureFilterToggle: document.querySelector("#featureFilterToggle"),
+  featureFilterPanel: document.querySelector("#featureFilterPanel"),
+  featureFilterApply: document.querySelector("#featureFilterApply"),
+  exploreExtras: document.querySelector("#exploreExtras"),
   prefStrip: document.querySelector("#prefStrip"),
   sourceRow: document.querySelector("#sourceRow"),
   featureFilterGrid: document.querySelector("#featureFilterGrid"),
@@ -1165,7 +1171,41 @@ function bindEvents() {
       visibleLimit = 36;
       document.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("segment-active", item === button));
       renderExplore();
+      el.main.scrollTo({ top: 0, behavior: "instant" });
     });
+  });
+
+  el.searchForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    clearSearchRenderTimer();
+    const value = el.searchInput.value;
+    const submit = el.searchForm.querySelector('[type="submit"]');
+    submit.disabled = true;
+    try {
+      const applied = await applySearchValue(value);
+      if (applied && activeView === "Explore") {
+        el.searchInput.blur();
+        el.main.scrollTo({ top: 0, behavior: "instant" });
+        el.searchResultsStatus.focus({ preventScroll: true });
+      }
+    } finally { submit.disabled = false; }
+  });
+
+  el.searchPrefectureSelect.addEventListener("change", () => {
+    selectedPrefecture = el.searchPrefectureSelect.value;
+    visibleLimit = 36;
+    renderAll();
+    el.main.scrollTo({ top: 0, behavior: "instant" });
+  });
+  el.featureFilterToggle.addEventListener("click", () => {
+    el.featureFilterPanel.hidden = !el.featureFilterPanel.hidden;
+    el.featureFilterToggle.setAttribute("aria-expanded", String(!el.featureFilterPanel.hidden));
+  });
+  el.featureFilterApply.addEventListener("click", () => {
+    el.featureFilterPanel.hidden = true;
+    el.featureFilterToggle.setAttribute("aria-expanded", "false");
+    el.main.scrollTo({ top: 0, behavior: "instant" });
+    el.searchResultsStatus.focus({ preventScroll: true });
   });
 
   el.searchInput.addEventListener("input", (event) => {
@@ -1308,6 +1348,17 @@ function bindEvents() {
       prefillAddFormFromSearch();
       return;
     }
+    if (button.dataset.action === "clear-search-filters") {
+      selectedPrefecture = "全国";
+      selectedFeatureFilters.clear();
+      activeFilter = "all";
+      visibleLimit = 36;
+      renderFeatureFilterGrid();
+      renderAll();
+      el.main.scrollTo({ top: 0, behavior: "instant" });
+      el.searchResultsStatus.focus({ preventScroll: true });
+      return;
+    }
     if (button.dataset.action === "draw-quest") {
       drawQuestFacility();
       return;
@@ -1348,6 +1399,7 @@ function bindEvents() {
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
     if (button.dataset.action === "favorite") toggleFavorite(facility);
+    if (button.dataset.action === "open-detail") openFacilityDetail(facility);
     if (button.dataset.action === "apply-note-template") applyNoteTemplate(facility, button.dataset.templateIndex);
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
@@ -1864,29 +1916,43 @@ function renderQuestPanel() {
 }
 
 function renderExplore() {
+  document.body.classList.toggle("has-search-query", Boolean(searchTerm.trim()));
+  if (searchTerm.trim()) el.exploreExtras.open = false;
   renderFilterButtons();
   renderPrefStrip();
   renderSourceRow();
   if ((searchNeedles.length || selectedFeatureFilters.size) && !facilitySearchCache) {
     el.facilityList.setAttribute("aria-busy", "true");
+    el.facilityList.inert = true;
     if (el.searchResultsStatus) el.searchResultsStatus.textContent = "検索を準備しています…";
     ensureFacilitySearchRecords().then(() => {
       if (activeView === "Explore" && !isSearchComposing) applySearchValue(el.searchInput.value);
+    }).catch((error) => {
+      console.error("Search preparation failed", error);
+      el.facilityList.setAttribute("aria-busy", "false");
+      el.facilityList.inert = false;
+      el.searchResultsStatus.textContent = "検索の準備に失敗しました。もう一度検索してください。";
     });
     return;
   }
   el.facilityList.setAttribute("aria-busy", "false");
+  el.facilityList.inert = false;
   const facilities = getFilteredFacilities();
   if (el.searchResultsStatus) el.searchResultsStatus.textContent = `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
-  renderSpotlight(facilities);
+  if (!searchTerm.trim()) renderSpotlight(facilities);
 
   if (!facilities.length) {
+    const hasFilters = selectedPrefecture !== "全国" || selectedFeatureFilters.size > 0 || activeFilter !== "all";
+    const resetButton = hasFilters
+      ? `<button class="search-submit-button" type="button" data-action="clear-search-filters">絞り込みを解除</button>`
+      : "";
     const addButton = searchTerm
       ? `<button class="ghost-button empty-add-button" type="button" data-action="prefill-add">このサウナを候補に追加</button>`
       : "";
     el.facilityList.innerHTML = `
       <div class="empty-state">
-        <p>${searchTerm ? "該当する候補が見つかりません。候補にないサウナは自分で登録できます。" : `${escapeHtml(selectedPrefecture)}の候補はまだありません。参照リンクで探して、追加タブから登録できます。`}</p>
+        <p>${hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
+        ${resetButton}
         ${addButton}
       </div>
     `;
@@ -1925,8 +1991,25 @@ function clearSearchRenderTimer() {
 async function applySearchValue(value) {
   const generation = ++searchGeneration;
   searchRenderTimer = 0;
-  if (value.trim()) await ensureFacilitySearchRecords();
-  if (generation !== searchGeneration || isSearchComposing || el.searchInput.value !== value) return;
+  if (value.trim()) {
+    if (!facilitySearchCache) {
+      el.facilityList.setAttribute("aria-busy", "true");
+      el.facilityList.inert = true;
+      el.searchResultsStatus.textContent = "検索を準備しています…";
+    }
+    try {
+      await ensureFacilitySearchRecords();
+    } catch (error) {
+      console.error("Search preparation failed", error);
+      if (generation === searchGeneration) {
+        el.facilityList.setAttribute("aria-busy", "false");
+        el.facilityList.inert = false;
+        el.searchResultsStatus.textContent = "検索の準備に失敗しました。もう一度検索してください。";
+      }
+      return false;
+    }
+  }
+  if (generation !== searchGeneration || isSearchComposing || el.searchInput.value !== value) return false;
   setSearchTerm(value);
   visibleLimit = 36;
   const moved = moveToSearchPrefecture(value);
@@ -1935,6 +2018,8 @@ async function applySearchValue(value) {
   } else {
     renderExplore();
   }
+  if (document.activeElement === el.searchInput) el.main.scrollTo({ top: 0, behavior: "instant" });
+  return true;
 }
 
 function renderPrefStrip() {
@@ -1952,6 +2037,11 @@ function renderPrefStrip() {
     }),
   ];
   el.prefStrip.innerHTML = chips.join("");
+  el.searchPrefectureSelect.innerHTML = [
+    `<option value="全国">全国</option>`,
+    ...PREFECTURES.map(pref => `<option value="${escapeAttr(pref.name)}">${escapeHtml(pref.name)}</option>`),
+  ].join("");
+  el.searchPrefectureSelect.value = selectedPrefecture;
 }
 
 function renderSourceRow() {
@@ -2028,8 +2118,8 @@ function renderFacilityCard(facility) {
   const wished = Boolean(state.wishlist[facility.id]);
   const favorite = Boolean(state.favorites[facility.id]);
   const status = getFacilityStatus(facility);
-  const meta = getFacilityMeta(facility);
-  const displayTags = getDisplayTags(facility);
+  const meta = getFacilityAreaLabel(facility) || facility.prefecture;
+  const displayTags = getDisplayTags(facility).slice(0, 3);
   const tags = displayTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   const sourceBadge = renderFacilitySourceBadge(facility);
   const headBadge = visited
@@ -2043,7 +2133,7 @@ function renderFacilityCard(facility) {
       <button class="undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">取り消す</button>
     `
     : `
-      <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${status ? "disabled" : ""}>${status ? escapeHtml(status.action) : "押印する"}</button>
+      <button class="stamp-outline-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${status ? "disabled" : ""}>${status ? escapeHtml(status.action) : "押印する"}</button>
       <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "候補入り" : "行きたい"}</button>
     `;
 
@@ -2054,19 +2144,25 @@ function renderFacilityCard(facility) {
         <div class="card-head">
           <h3 class="facility-name">${escapeHtml(facility.name)}</h3>
           <div class="card-head-actions">
-            ${headBadge}
             ${renderFavoriteButton(facility, favorite, true)}
           </div>
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
         ${renderFacilityAddress(facility)}
-        ${tags ? `<div class="tag-row">${tags}</div>` : ""}
-        <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="facility-utility-actions">
-          ${renderMapRouteLink(facility)}
-          ${renderFacilityShareButtons(facility)}
+          <button class="facility-detail-button" type="button" data-action="open-detail" data-id="${escapeAttr(facility.id)}">詳細</button>
+          ${renderMapRouteLink(facility, { compact: true })}
+          <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
         </div>
-        ${renderMemoPanel(facility)}
+        <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
+        <div class="card-evidence">${headBadge}${tags}</div>
+        <details class="card-more-actions">
+          <summary>共有・メモ</summary>
+          <div class="card-more-body">
+            ${renderFacilityShareButtons(facility, { includeReview: false })}
+            ${renderMemoPanel(facility)}
+          </div>
+        </details>
       </div>
     </article>
   `.trim();
@@ -2080,13 +2176,12 @@ function renderFavoriteButton(facility, active, compact = false) {
   `;
 }
 
-function renderFacilityShareButtons(facility) {
+function renderFacilityShareButtons(facility, { includeReview = true } = {}) {
   return `
     <button class="facility-native-share-button" type="button" data-action="share-facility-native" data-id="${escapeAttr(facility.id)}">共有する</button>
-    <div class="facility-social-pair">
+    ${includeReview ? `<div class="facility-social-pair">` : ""}
       <button class="facility-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">Xでおすすめ</button>
-      <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
-    </div>
+      ${includeReview ? `<button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button></div>` : ""}
   `;
 }
 
@@ -2102,10 +2197,12 @@ function renderFacilityAddress(facility) {
   `;
 }
 
-function renderMapRouteLink(facility) {
-  const label = getFacilityAddress(facility) || getFacilityCoordinate(facility) ? "経路" : "地図で探す";
+function renderMapRouteLink(facility, { compact = false } = {}) {
+  const hasLocation = Boolean(getFacilityAddress(facility) || getFacilityCoordinate(facility));
+  const label = hasLocation ? "経路" : compact ? "地図" : "地図で探す";
+  const accessibleLabel = hasLocation ? `${facility.name}への経路を開く` : `${facility.name}を地図で探す`;
   return `
-    <a class="map-route-button" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer" aria-label="Google Mapsで${escapeAttr(facility.name)}への経路を開く">
+    <a class="map-route-button" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer" aria-label="Google Mapsで${escapeAttr(accessibleLabel)}">
       <span class="map-route-icon" aria-hidden="true"></span>
       <span>${label}</span>
     </a>
@@ -2664,9 +2761,14 @@ function renderDetailMemoPanel(facility) {
   `;
 }
 
+function getLocalDateInputValue(date = new Date()) {
+  const localTime = date.getTime() - date.getTimezoneOffset() * 60000;
+  return new Date(localTime).toISOString().slice(0, 10);
+}
+
 function renderVisitLogPanel(facility) {
   const logs = state.visitLogs[facility.id] || [];
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getLocalDateInputValue();
   return `
     <section class="visit-log-panel" aria-label="自分用サ活ログ">
       <div class="panel-head">
@@ -5304,7 +5406,7 @@ function exportState() {
   const url = URL.createObjectURL(blob);
   const anchor = document.createElement("a");
   anchor.href = url;
-  anchor.download = `saincho-${new Date().toISOString().slice(0, 10)}.json`;
+  anchor.download = `saincho-${getLocalDateInputValue()}.json`;
   anchor.click();
   URL.revokeObjectURL(url);
 }
@@ -5878,7 +5980,7 @@ function createSearchNeedleGroup(term) {
 }
 
 function createSearchPrimaryVariants(term) {
-  const termVariants = uniqueStrings([term, ...expandSearchTextVariants(term)]).slice(0, 32);
+  const termVariants = uniqueStrings([term, ...createSearchCompoundVariants(term), ...expandSearchTextVariants(term)]).slice(0, 32);
   return termVariants.flatMap((value) => [
     value,
     toHiragana(value),
@@ -5888,6 +5990,24 @@ function createSearchPrimaryVariants(term) {
     normalizeKanaLongVowels(value),
     romanizeSearchText(value),
   ]);
+}
+
+function createSearchCompoundVariants(term) {
+  const variants = new Set([normalizeSearchToken(term)]);
+  for (const group of SEARCH_SYNONYM_GROUPS) {
+    const aliases = uniqueStrings(group.map(normalizeSearchToken)).filter(alias => alias.length >= 3);
+    const current = [...variants];
+    for (const value of current) {
+      for (const from of aliases) {
+        if (!value.includes(from)) continue;
+        for (const to of aliases) {
+          variants.add(value.split(from).join(to));
+          if (variants.size >= 32) return [...variants];
+        }
+      }
+    }
+  }
+  return [...variants];
 }
 
 function shouldUseSynonymExpansion(term) {
@@ -5998,12 +6118,8 @@ function expandSearchTerm(term) {
       normalizeKanaLongVowels(item),
       romanizeSearchText(item),
     ])).filter(Boolean);
-    const genericSaunaGroup = normalizedGroup.some((item) => item === "sauna" || item === "サウナ");
-    if (normalizedGroup.some((item) => normalizedCandidates.some((candidate) => {
-      if (candidate === item) return true;
-      if (genericSaunaGroup) return false;
-      return candidate.length >= 4 && item.length >= 3 && (candidate.includes(item) || item.includes(candidate));
-    }))) {
+    // A facility name containing "hotel" must not become a generic lodging query.
+    if (normalizedGroup.some((item) => normalizedCandidates.includes(item))) {
       variants.push(...group);
     }
   });
