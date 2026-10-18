@@ -2324,7 +2324,7 @@ function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
 
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
-  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "サウナ・水風呂", "水風呂", "利用条件"].includes(row.label)).slice(0, 3) || [];
+  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "設備・温度", "水風呂", "利用条件"].includes(row.label)).slice(0, 3) || [];
   return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? "公式照合 2026-10-19 · 条件・出典は詳細へ" : "料金・営業時間・設備は未再照合 · 参照元で確認"}</p>`;
 }
 function renderCheckinPanel(facility) {
