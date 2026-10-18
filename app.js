@@ -5,6 +5,7 @@ import {
   haversineDistanceKm,
   isUsableNearbyPosition,
 } from "./nearby.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures } from "./facility-evidence.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -21,7 +22,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261019-search-flow-v3";
+const APP_BUILD_ID = "20261019-facility-notebook-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -799,7 +800,9 @@ let facilityCacheVersion = 0;
 let searchGeneration = 0;
 let searchSynonymTokens = null;
 const searchTokenCache = new Map();
-const reviewDrafts = new Map();
+const activityDrafts = new Map();
+const activitySaves = new Set();
+let facilityDetailTab = "info";
 const reviewRequests = new Set();
 let rankingLoading = false;
 let rankingSaving = false;
@@ -1270,15 +1273,26 @@ function bindEvents() {
   });
 
   el.main.addEventListener("input", (event) => {
-    const reviewPanel = event.target.closest?.(".review-panel");
-    if (reviewPanel) rememberReviewDraft(reviewPanel);
+    const notebook = event.target.closest?.("[data-activity-form]");
+    if (notebook) rememberActivityDraft(notebook);
     const input = event.target instanceof Element ? event.target.closest("[data-note-input]") : null;
     if (!(input instanceof HTMLTextAreaElement)) return;
     memoDrafts[input.dataset.noteInput] = input.value;
   });
   el.main.addEventListener("change", (event) => {
-    const reviewPanel = event.target.closest?.(".review-panel");
-    if (reviewPanel) rememberReviewDraft(reviewPanel);
+    const notebook = event.target.closest?.("[data-activity-form]");
+    if (notebook) {
+      rememberActivityDraft(notebook);
+      syncActivityOptions(notebook);
+    }
+  });
+
+  el.main.addEventListener("submit", (event) => {
+    const form = event.target.closest?.("[data-activity-form]");
+    if (!form) return;
+    event.preventDefault();
+    const facility = getFacilityById(form.dataset.activityForm);
+    if (facility) saveActivityNote(facility, form.querySelector(".activity-save"));
   });
 
   el.main.addEventListener("click", (event) => {
@@ -1395,12 +1409,29 @@ function bindEvents() {
     const facility = getFacilities().find((item) => item.id === button.dataset.id);
     if (!facility) return;
 
+    if (button.dataset.action === "detail-tab") showFacilityDetailTab(facility, button.dataset.tab, { focus: true });
+    if (button.dataset.action === "open-activity") showFacilityDetailTab(facility, "note", { focus: true });
+    if (button.dataset.action === "save-activity") saveActivityNote(facility, button);
+    if (button.dataset.action === "new-activity") {
+      const draft = activityDrafts.get(facility.id);
+      if (draft?.dirty && (draft.text.trim() || draft.recordVisit) && !window.confirm("保存していない入力を破棄して、新しい記録を始めますか？")) return;
+      activityDrafts.set(facility.id, createActivityDraft(facility, { fresh: true }));
+      renderFacilityDetail();
+    }
+    if (button.dataset.action === "edit-activity") {
+      const log = (state.visitLogs[facility.id] || []).find(item => item.id === button.dataset.logId);
+      if (log) {
+        activityDrafts.set(facility.id, { ...createActivityDraft(facility, { fresh: true }), ...log, text: log.note, logId: log.id, recordVisit: true });
+        facilityDetailTab = "note";
+        renderFacilityDetail();
+        el.main.scrollTo({ top: 0, behavior: "instant" });
+      }
+    }
     if (button.dataset.action === "stamp") stampFacility(facility);
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
     if (button.dataset.action === "favorite") toggleFavorite(facility);
     if (button.dataset.action === "open-detail") openFacilityDetail(facility);
-    if (button.dataset.action === "apply-note-template") applyNoteTemplate(facility, button.dataset.templateIndex);
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
     if (button.dataset.action === "share-note") shareFacilityMemo(facility);
@@ -1410,10 +1441,8 @@ function bindEvents() {
     if (button.dataset.action === "start-checkin") startFacilityCheckin(facility);
     if (button.dataset.action === "cancel-checkin") cancelFacilityCheckin(facility);
     if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
-    if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
     if (button.dataset.action === "retry-reviews") loadFacilityReviews(facility.id, { force: true });
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
-    if (button.dataset.action === "save-visit-log") saveVisitLog(facility, button);
     if (button.dataset.action === "delete-visit-log") deleteVisitLog(facility, button.dataset.logId);
     if (button.dataset.action === "share-visit-log") openVisitLogShare(facility, button.dataset.logId);
   });
@@ -1745,6 +1774,7 @@ function setView(view) {
 }
 
 function openFacilityDetail(facility) {
+  facilityDetailTab = "info";
   activeFacilityId = facility.id;
   activeView = "Facility";
   selectedPrefecture = facility.prefecture || selectedPrefecture;
@@ -2149,18 +2179,18 @@ function renderFacilityCard(facility) {
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
         ${renderFacilityAddress(facility)}
+        ${renderFacilityCardFacts(facility)}
         <div class="facility-utility-actions">
-          <button class="facility-detail-button" type="button" data-action="open-detail" data-id="${escapeAttr(facility.id)}">詳細</button>
+          <button class="facility-detail-button" type="button" data-action="open-activity" data-id="${escapeAttr(facility.id)}">サ活を書く</button>
           ${renderMapRouteLink(facility, { compact: true })}
           <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
         </div>
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="card-evidence">${headBadge}${tags}</div>
         <details class="card-more-actions">
-          <summary>共有・メモ</summary>
+          <summary>共有</summary>
           <div class="card-more-body">
             ${renderFacilityShareButtons(facility, { includeReview: false })}
-            ${renderMemoPanel(facility)}
           </div>
         </details>
       </div>
@@ -2215,147 +2245,88 @@ function renderFacilityDetail() {
   if (!facility) {
     updateDocumentMetaForView("Facility");
     syncFacilityStructuredData(null);
-    el.facilityDetail.innerHTML = `
-      <div class="empty-state facility-detail-empty">
-        <strong>施設が見つかりません</strong>
-        <p>候補が更新された可能性があります。検索に戻って施設名で探してください。</p>
-        <button class="primary-button" type="button" data-open-view="Explore">検索へ戻る</button>
-      </div>
-    `;
+    el.facilityDetail.innerHTML = '<div class="empty-state"><h2>施設が見つかりません</h2><button class="secondary-button" data-open-view="Explore">検索へ戻る</button></div>';
     return;
   }
-
   updateDocumentMetaForView("Facility", facility);
   syncFacilityStructuredData(facility);
-
+  const id = escapeAttr(facility.id);
   const visited = Boolean(state.visited[facility.id]);
+  const status = getFacilityStatus(facility);
   const wished = Boolean(state.wishlist[facility.id]);
   const favorite = Boolean(state.favorites[facility.id]);
-  const status = getFacilityStatus(facility);
+  const evidence = getFacilityEvidence(facility);
+  const facts = evidence?.facts || [];
   const address = getFacilityAddress(facility);
-  const area = getFacilityAreaLabel(facility);
-  const tags = getDisplayTags(facility).map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
-  const detailLines = getFacilityDetailLines(facility);
-  const dataQuality = getFacilityDataQuality(facility);
+  const legacyFeatures = uniqueStrings([...(facility.features || []), ...(facility.tags || [])])
+    .filter(value => normalizeFeature(value));
   const photo = getFacilityPhoto(facility);
-  const photoStyle = ` style="background-image: url('${escapeAttr(photo.url)}')"`;
-  const gear = getFacilityGearProducts(facility).slice(0, 3);
-  const detailTitleClass = Array.from(facility.name).length > 28 ? "is-long" : "";
-  const ratingCopy = facility.rating && facility.reviewCount
-    ? `掲載評価 ${facility.rating} / ${facility.reviewCount}レビュー`
-    : "";
-
   el.facilityDetail.innerHTML = `
-    <article class="facility-detail">
+    <article class="facility-detail facility-workspace">
       <button class="back-button" type="button" data-open-view="Explore">検索へ戻る</button>
-      <div class="facility-detail-hero">
-        <div class="facility-photo ${photo.isFallback ? "facility-photo-fallback" : ""}"${photoStyle}>
-          ${photo.label ? `<span>${escapeHtml(photo.label)}</span>` : ""}
-        </div>
-        <div class="facility-detail-copy">
-          <p class="eyebrow">SAUNA DETAIL</p>
-          <h2 class="${detailTitleClass}">${escapeHtml(facility.name)}</h2>
-          <p>${escapeHtml(getFacilityMeta(facility))}</p>
-          ${ratingCopy ? `<em>${escapeHtml(ratingCopy)}</em>` : ""}
-          <div class="tag-row">${tags || `<span class="tag">施設詳細</span>`}</div>
-        </div>
-      </div>
-
-      <section class="detail-info-card" aria-label="3行情報">
-        ${detailLines.map((line) => `
-          <div>
-            <span>${escapeHtml(line.label)}</span>
-            <strong>${escapeHtml(line.value)}</strong>
-          </div>
-        `).join("")}
-      </section>
-
-      <section class="detail-action-grid" aria-label="施設アクション">
-        <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
-        <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
-        <button class="favorite-wide-button ${favorite ? "is-active" : ""}" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-pressed="${favorite}">${favorite ? "★ お気に入り" : "☆ お気に入り"}</button>
-        ${visited ? `<button class="undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">押印を取り消す</button>` : ""}
+      <header class="facility-masthead">
+        ${renderStamp(facility, visited)}
+        <div><h2>${escapeHtml(facility.name)}</h2><p>${escapeHtml(getFacilityAreaLabel(facility))}${visited ? " · 押印済み" : ""}</p></div>
+        ${renderFavoriteButton(facility, favorite, true)}
+      </header>
+      <div class="facility-primary-actions" ${facilityDetailTab !== "info" ? "hidden" : ""}>
+        <button class="facility-detail-button" type="button" data-action="open-activity" data-id="${id}">サ活を書く</button>
         ${renderMapRouteLink(facility)}
-        <a class="sameshi-map-button" href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
-        ${renderFacilityShareButtons(facility)}
-      </section>
-
-      ${renderCheckinPanel(facility)}
-
-      <section class="detail-panel detail-location-panel">
-        <div>
-          <p class="eyebrow">LOCATION</p>
-          <h3>すぐ向かうための情報</h3>
-        </div>
-        <dl>
-          <div>
-            <dt>住所</dt>
-            <dd>${address ? escapeHtml(address) : escapeHtml(area ? `公開エリア: ${area}` : "住所確認中")}</dd>
-          </div>
-          <div>
-            <dt>参照</dt>
-            <dd>${renderFacilitySourceBadge(facility)}</dd>
-          </div>
-          ${facility.access ? `<div><dt>アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
+        <button class="facility-stamp-action" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+      </div>
+      <nav class="facility-tabs" aria-label="施設詳細の表示">
+        ${[["info","施設情報"],["note","サ活ノート"],["reviews","口コミ"]].map(([tab,label]) => `<button type="button" data-action="detail-tab" data-tab="${tab}" data-id="${id}" aria-controls="facility-pane-${tab}" aria-current="${facilityDetailTab === tab ? "page" : "false"}">${label}</button>`).join("")}
+      </nav>
+      <section id="facility-pane-info" class="facility-pane" aria-label="施設情報" ${facilityDetailTab !== "info" ? "hidden" : ""}>
+        ${status ? `<p class="facility-notice">${escapeHtml(status.badge)} — 訪問前に公式で営業状況を確認してください。</p>` : ""}
+        <dl class="facility-facts">
+          ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></dd></div>`).join("")}
+          <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
+          ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
+          ${!evidence ? `<div><dt>料金・時間・設備</dt><dd>公式情報の再照合が未完了です。未掲載は「設備なし」を意味しません。</dd></div>` : ""}
         </dl>
-        <p>${address ? "住所が確認できる候補は経路ボタンで直接ルート検索できます。" : "番地住所が公開確認できない候補は、施設名と公開エリアでGoogle Maps検索を開きます。"}</p>
+        <p class="facility-provenance">${evidence ? "上記の公式出典を2026年10月19日に照合。臨時休業・料金変更は訪問前にも確認してください。" : `全項目の最新性は未確認です。${facility.sourceCheckedAt ? `参照ページの確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}`}</p>
+        <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
+        ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
+        <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
       </section>
-
-      <section class="detail-panel detail-trust-panel" aria-label="掲載情報の確認状態">
-        <div>
-          <p class="eyebrow">DATA STATUS</p>
-          <h3>${escapeHtml(dataQuality.label)}</h3>
-          <p>${escapeHtml(dataQuality.description)}</p>
-        </div>
-        <div class="detail-trust-actions">
-          ${renderFacilitySourceBadge(facility)}
-          <button class="secondary-button" type="button" data-action="report-facility" data-id="${escapeAttr(facility.id)}">情報修正を知らせる</button>
-        </div>
+      <section id="facility-pane-note" class="facility-pane" aria-label="サ活ノート" ${facilityDetailTab !== "note" ? "hidden" : ""}>${renderActivityNotebook(facility)}</section>
+      <section id="facility-pane-reviews" class="facility-pane review-panel" data-review-facility="${id}" aria-label="口コミ" ${facilityDetailTab !== "reviews" ? "hidden" : ""}>
+        <div class="panel-head"><h3>口コミ</h3><span>${getFacilityReviews(facility.id).length}件</span></div>
+        <button class="secondary-button" type="button" data-action="open-activity" data-id="${id}">サ活ノートから投稿</button>
+        <div class="review-list" id="reviewList-${id}">${renderReviewList(facility)}</div>
       </section>
-
-      <section class="detail-panel detail-unique-panel">
-        <div>
-          <p class="eyebrow">NEXT MOVE</p>
-          <h3>サ印帳だけの使い方</h3>
+      <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
+        <div class="facility-secondary-actions">
+          <button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい登録済み" : "行きたいに保存"}</button>
+          <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
+          <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
+          <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
+          <button type="button" data-open-view="Gear">持ち物・Gear</button>
         </div>
-        <div class="detail-unique-grid">
-          <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">
-            <span>サ飯</span>
-            <strong>施設名＋飲食店で探す</strong>
-          </a>
-          <button type="button" data-open-view="Gear">
-            <span>補給</span>
-            <strong>オロポ・水分補給はGearで準備</strong>
-          </button>
-          <div class="lodging-search-card">
-            <span>遠征</span>
-            <strong>近くの宿を予約サイトで探す</strong>
-            <div>${renderLodgingLinks(facility)}</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="detail-panel detail-gear-panel">
-        <div class="panel-head">
-          <div>
-            <p class="eyebrow">GEAR</p>
-            <h3>この一湯の持ち物</h3>
-          </div>
-          <button class="mini-button" type="button" data-open-view="Gear">Gearへ</button>
-        </div>
-        <div class="detail-gear-grid">
-          ${gear.map(renderCompactGearLink).join("")}
-        </div>
-      </section>
-
-      ${renderDetailMemoPanel(facility)}
-      ${renderVisitLogPanel(facility)}
-      ${renderReviewPanel(facility)}
-    </article>
-  `;
+        <div class="lodging-search-card"><strong>周辺の宿</strong><div>${renderLodgingLinks(facility)}</div></div>
+        ${!visited ? renderCheckinPanel(facility) : `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${id}">押印を取り消す</button>`}
+      </details>
+    </article>`;
   loadFacilityReviews(facility.id);
 }
 
+function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
+  if (!["info", "note", "reviews"].includes(tab)) return;
+  if (activeView !== "Facility" || activeFacilityId !== facility.id) openFacilityDetail(facility);
+  facilityDetailTab = tab;
+  el.facilityDetail.querySelector(".facility-primary-actions").hidden = tab !== "info";
+  el.facilityDetail.querySelectorAll(".facility-pane").forEach(pane => { pane.hidden = pane.id !== `facility-pane-${tab}`; });
+  el.facilityDetail.querySelectorAll('[data-action="detail-tab"]').forEach(button => button.setAttribute("aria-current", button.dataset.tab === tab ? "page" : "false"));
+  el.main.scrollTo({ top: 0, behavior: "instant" });
+  if (focus) el.facilityDetail.querySelector(`[data-tab="${tab}"]`)?.focus({ preventScroll: true });
+}
+
+function renderFacilityCardFacts(facility) {
+  const evidence = getFacilityEvidence(facility);
+  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "サウナ・水風呂", "水風呂", "利用条件"].includes(row.label)).slice(0, 3) || [];
+  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? "公式照合 2026-10-19 · 条件・出典は詳細へ" : "料金・営業時間・設備は未再照合 · 参照元で確認"}</p>`;
+}
 function renderCheckinPanel(facility) {
   const coordinate = getFacilityCoordinate(facility);
   const active = state.activeCheckin?.facilityId === facility.id ? state.activeCheckin : null;
@@ -2704,130 +2675,162 @@ function renderTitleProgress() {
   `;
 }
 
-function renderMemoPanel(facility) {
-  const memo = getFacilityMemo(facility.id);
-  const updatedAt = memo?.updatedAt ? formatDate(memo.updatedAt) : "";
-  return `
-    <details class="memo-panel" ${memo ? "open" : ""}>
-      <summary>
-        <span>メモ</span>
-        <strong>${memo ? "保存済み" : "追加"}</strong>
-      </summary>
-      <div class="memo-body">
-        ${memo ? `<p class="memo-text">${escapeHtml(memo.text)}</p>` : ""}
-        ${updatedAt ? `<span class="memo-date">${escapeHtml(updatedAt)} 更新</span>` : ""}
-        <textarea data-note-input="${escapeAttr(facility.id)}" maxlength="240" rows="3" placeholder="感想、気付き、水風呂、再訪したい理由">${memo ? escapeHtml(memo.text) : ""}</textarea>
-        <div class="memo-actions">
-          <button class="secondary-button" type="button" data-action="save-note" data-id="${escapeAttr(facility.id)}">${memo ? "更新" : "保存"}</button>
-          ${memo ? `<button class="undo-button" type="button" data-action="delete-note" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
-          ${memo ? `<button class="share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
-        </div>
-      </div>
-    </details>
-  `;
-}
-
-function renderDetailMemoPanel(facility) {
-  const memo = getFacilityMemo(facility.id);
-  const draft = memoDrafts[facility.id];
-  const inputValue = draft !== undefined ? draft : (memo?.text || "");
-  const updatedAt = memo?.updatedAt ? formatDate(memo.updatedAt) : "";
-  const quickTemplates = QUICK_NOTE_TEMPLATES.map((template, index) => `
-    <button class="quick-note-button" type="button" data-action="apply-note-template" data-id="${escapeAttr(facility.id)}" data-template-index="${index}">
-      <span>${escapeHtml(template.label)}</span>
-      <strong>${escapeHtml(template.text)}</strong>
-    </button>
-  `).join("");
-  return `
-    <section class="memo-panel detail-memo-panel" aria-label="施設メモ">
-      <div class="detail-memo-head">
-        <div>
-          <p class="eyebrow">MEMO</p>
-          <h3>自分用メモ</h3>
-        </div>
-        ${updatedAt ? `<span>${escapeHtml(updatedAt)} 更新</span>` : `<span>未保存</span>`}
-      </div>
-      ${memo ? `<p class="memo-text">${escapeHtml(memo.text)}</p>` : ""}
-      <div class="quick-note-grid" aria-label="サ活メモテンプレ">
-        ${quickTemplates}
-      </div>
-      <textarea data-note-input="${escapeAttr(facility.id)}" maxlength="240" rows="4" placeholder="感想、気付き、水風呂、再訪したい理由">${escapeHtml(inputValue)}</textarea>
-      <div class="memo-actions detail-memo-actions">
-        <button class="secondary-button" type="button" data-action="save-note" data-id="${escapeAttr(facility.id)}">${memo ? "メモ更新" : "メモ保存"}</button>
-        ${memo ? `<button class="undo-button" type="button" data-action="delete-note" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
-        ${memo ? `<button class="share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
-      </div>
-    </section>
-  `;
-}
 
 function getLocalDateInputValue(date = new Date()) {
   const localTime = date.getTime() - date.getTimezoneOffset() * 60000;
   return new Date(localTime).toISOString().slice(0, 10);
 }
 
-function renderVisitLogPanel(facility) {
-  const logs = state.visitLogs[facility.id] || [];
-  const today = getLocalDateInputValue();
-  return `
-    <section class="visit-log-panel" aria-label="自分用サ活ログ">
-      <div class="panel-head">
-        <div><p class="eyebrow">PRIVATE LOG</p><h3>今回のサ活を残す</h3></div>
-        <span>端末内だけに保存</span>
-      </div>
-      <form class="visit-log-form" data-visit-log-form="${escapeAttr(facility.id)}">
-        <label><span>訪問日</span><input name="date" type="date" value="${today}" required /></label>
-        <label><span>セット</span><input name="sets" type="number" inputmode="numeric" min="1" max="8" value="3" required /></label>
-        <label><span>サウナ 分</span><input name="saunaMinutes" type="number" inputmode="numeric" min="1" max="40" value="8" required /></label>
-        <label><span>水風呂 分</span><input name="waterMinutes" type="number" inputmode="decimal" min="0" max="10" step="0.5" value="1" /></label>
-        <label><span>休憩 分</span><input name="restMinutes" type="number" inputmode="numeric" min="0" max="40" value="8" /></label>
-        <label><span>体感 1〜5</span><input name="feeling" type="number" inputmode="numeric" min="1" max="5" value="4" required /></label>
-        <label class="visit-log-note"><span>ひとこと</span><input name="note" maxlength="100" placeholder="例: 2セット目がちょうどよかった" /></label>
-        <button class="primary-button" type="button" data-action="save-visit-log" data-id="${escapeAttr(facility.id)}">サ活ログを保存</button>
-      </form>
-      <div class="visit-log-list">
-        ${logs.length ? logs.map((log) => `
-          <article>
-            <div><strong>${escapeHtml(log.date)} / ${log.sets}セット</strong><span>体感 ${"★".repeat(log.feeling)}</span></div>
-            <p>サウナ ${log.saunaMinutes}分・水風呂 ${log.waterMinutes}分・休憩 ${log.restMinutes}分${log.note ? ` / ${escapeHtml(log.note)}` : ""}</p>
-            <div class="visit-log-actions">
-              <button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">画像で共有</button>
-              <button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${escapeAttr(facility.id)}" data-log-id="${escapeAttr(log.id)}">削除</button>
-            </div>
-          </article>
-        `).join("") : `<p class="visit-log-empty">まだ記録はありません。時間は1セットの目安を入力できます。</p>`}
-      </div>
-    </section>
-  `;
+function createActivityDraft(facility, { fresh = false } = {}) {
+  return {
+    text: fresh ? "" : (memoDrafts[facility.id] ?? state.facilityMemos[facility.id]?.text ?? ""),
+    date: getLocalDateInputValue(), sets: "3", saunaMinutes: "8", waterMinutes: "1", restMinutes: "8", feeling: "4",
+    recordVisit: false, publish: false, rating: "5", nickname: profile.nickname || "", logId: "", createdAt: "",
+  };
 }
 
-function saveVisitLog(facility, button) {
-  const form = button.closest("[data-visit-log-form]");
-  if (!(form instanceof HTMLFormElement) || !form.reportValidity()) return;
-  const data = new FormData(form);
-  const log = normalizeVisitLog({
-    id: createClientId(),
-    date: data.get("date"),
-    sets: data.get("sets"),
-    saunaMinutes: data.get("saunaMinutes"),
-    waterMinutes: data.get("waterMinutes"),
-    restMinutes: data.get("restMinutes"),
-    feeling: data.get("feeling"),
-    note: data.get("note"),
-    createdAt: new Date().toISOString(),
-  });
-  if (!log) return;
+function renderActivityNotebook(facility) {
+  const id = escapeAttr(facility.id);
+  const draft = activityDrafts.get(facility.id) || createActivityDraft(facility);
+  activityDrafts.set(facility.id, draft);
   const logs = state.visitLogs[facility.id] || [];
-  state.visitLogs[facility.id] = [log, ...logs].slice(0, 24);
-  saveState();
-  renderFacilityDetail();
-  showToast("サ活ログを端末内に保存しました");
+  const memo = state.facilityMemos[facility.id];
+  return `
+    <div class="notebook-head"><h3>サ活ノート</h3><button type="button" data-action="new-activity" data-id="${id}">新しい記録</button></div>
+    <form class="activity-form" data-activity-form="${id}">
+      <label class="activity-text"><span>感想・自分用メモ</span><textarea name="text" maxlength="280" rows="3" placeholder="水風呂、混雑、再訪したい理由">${escapeHtml(draft.text)}</textarea></label>
+      <p class="notebook-privacy">${memo ? `前回のメモ保存: ${escapeHtml(formatDate(memo.updatedAt))}。` : ""}通常はこの端末だけに保存します。</p>
+      <label class="notebook-toggle"><input type="checkbox" name="recordVisit" ${draft.recordVisit ? "checked" : ""} /><span>セット数・時間も記録する</span></label>
+      <fieldset class="activity-measurements" ${!draft.recordVisit ? "hidden disabled" : ""}>
+        <legend>今回のサ活</legend>
+        <label class="activity-date"><span>訪問日</span><input type="date" name="date" value="${escapeAttr(draft.date)}" required /></label>
+        ${[["sets","セット数",1,8,1],["saunaMinutes","サウナ（分）",1,40,1],["waterMinutes","水風呂（分）",0,10,0.5],["restMinutes","休憩（分）",0,40,1],["feeling","体感（1〜5）",1,5,1]].map(([name,label,min,max,step]) => `<label><span>${label}</span><input type="number" inputmode="${step === 0.5 ? "decimal" : "numeric"}" name="${name}" min="${min}" max="${max}" step="${step}" required value="${escapeAttr(String(draft[name]))}" /></label>`).join("")}
+      </fieldset>
+      <label class="notebook-toggle"><input type="checkbox" name="publish" ${draft.publish ? "checked" : ""} /><span>この感想を口コミとして公開する</span></label>
+      <fieldset class="activity-public" ${!draft.publish ? "hidden disabled" : ""}>
+        <legend>公開する内容</legend>
+        <p>上の感想が全員に公開されます。個人の連絡先は書かないでください。セット数・時間は公開しません。</p>
+        <label><span>公開名（任意）</span><input name="nickname" maxlength="16" autocomplete="nickname" value="${escapeAttr(draft.nickname)}" placeholder="匿名サウナー" /></label>
+        <label><span>評価</span><select name="rating">${[[5,"とても良い"],[4,"良い"],[3,"普通"],[2,"合わなかった"],[1,"良くなかった"]].map(([value,label]) => `<option value="${value}" ${Number(draft.rating) === value ? "selected" : ""}>${value} ${label}</option>`).join("")}</select></label>
+      </fieldset>
+      <p class="activity-save-status" role="status"></p>
+      <button class="facility-detail-button activity-save" type="button" data-action="save-activity" data-id="${id}" ${activitySaves.has(facility.id) ? "disabled" : ""}>${draft.publish ? "保存して口コミを公開" : "端末に保存"}</button>
+    </form>
+    ${memo ? `<details class="facility-disclosure"><summary>保存済みメモの管理</summary><p>${escapeHtml(memo.text)}</p><button class="tiny-undo-button" type="button" data-action="delete-note" data-id="${id}">メモを削除</button></details>` : ""}
+    <details class="facility-disclosure activity-history"><summary>保存済みのサ活（${logs.length}件）</summary>
+      <div class="visit-log-list">${logs.length ? logs.map(log => `<article><strong>${escapeHtml(log.date)} · ${log.sets}セット · 体感${log.feeling}/5</strong><p>サウナ${log.saunaMinutes}分 / 水風呂${log.waterMinutes}分 / 休憩${log.restMinutes}分</p>${log.note ? `<p>${escapeHtml(log.note)}</p>` : ""}<div class="visit-log-actions"><button type="button" data-action="edit-activity" data-id="${id}" data-log-id="${escapeAttr(log.id)}">編集</button><button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">画像で共有</button><button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">削除</button></div></article>`).join("") : "<p>保存済みの訪問記録はありません。</p>"}</div>
+    </details>`;
 }
+
+function rememberActivityDraft(form) {
+  const previous = activityDrafts.get(form.dataset.activityForm) || {};
+  const value = name => form.elements.namedItem(name)?.value || "";
+  const draft = { ...previous, dirty: true };
+  for (const name of ["text", "date", "sets", "saunaMinutes", "waterMinutes", "restMinutes", "feeling", "nickname", "rating"]) draft[name] = value(name);
+  draft.recordVisit = Boolean(form.elements.namedItem("recordVisit")?.checked);
+  draft.publish = Boolean(form.elements.namedItem("publish")?.checked);
+  activityDrafts.set(form.dataset.activityForm, draft);
+  return draft;
+}
+
+function syncActivityOptions(form) {
+  for (const [name, selector] of [["recordVisit", ".activity-measurements"], ["publish", ".activity-public"]]) {
+    const enabled = form.elements.namedItem(name).checked;
+    const fields = form.querySelector(selector);
+    fields.hidden = !enabled;
+    fields.disabled = !enabled;
+  }
+  form.querySelector(".activity-save").textContent = form.elements.namedItem("publish").checked ? "保存して口コミを公開" : "端末に保存";
+}
+
+async function saveActivityNote(facility, button) {
+  if (button.disabled || activitySaves.has(facility.id)) return;
+  const form = button.closest("[data-activity-form]");
+  if (!form.reportValidity()) return;
+  const draft = rememberActivityDraft(form);
+  const text = draft.text.trim().slice(0, 280);
+  const status = form.querySelector(".activity-save-status");
+  if (!text && (!draft.recordVisit || draft.publish)) {
+    status.textContent = "感想を入力してください。時間だけ残す場合は口コミ公開を外してください。";
+    return;
+  }
+  const previousMemo = state.facilityMemos[facility.id];
+  const previousLogs = state.visitLogs[facility.id];
+  const now = new Date().toISOString();
+  if (text) state.facilityMemos[facility.id] = { text, updatedAt: now };
+  if (draft.recordVisit) {
+    draft.logId ||= createClientId();
+    draft.createdAt ||= now;
+    const log = normalizeVisitLog({ ...draft, id: draft.logId, note: text, createdAt: draft.createdAt });
+    state.visitLogs[facility.id] = [log, ...(previousLogs || []).filter(item => item.id !== log.id)].slice(0, 24);
+  }
+  try { saveState(); } catch {
+    if (previousMemo) state.facilityMemos[facility.id] = previousMemo; else delete state.facilityMemos[facility.id];
+    if (previousLogs) state.visitLogs[facility.id] = previousLogs; else delete state.visitLogs[facility.id];
+    status.textContent = "端末への保存に失敗しました。空き容量やブラウザの保存設定を確認してください。入力は保持しています。";
+    return;
+  }
+  delete memoDrafts[facility.id];
+  draft.dirty = false;
+  invalidateFacilityCaches();
+  if (!draft.publish) {
+    renderFacilityDetail();
+    el.facilityDetail.querySelector(".activity-save-status").textContent = "端末に保存しました。口コミは公開していません。";
+    el.facilityDetail.querySelector(".activity-save")?.focus?.({ preventScroll: true });
+    return;
+  }
+  if (IS_STATIC_LOCAL_PREVIEW) {
+    status.textContent = "端末に保存しました。このプレビューでは口コミを公開できません。";
+    return;
+  }
+  button.disabled = true;
+  activitySaves.add(facility.id);
+  status.textContent = "端末に保存済み。口コミを送信しています…";
+  try {
+    const response = await fetch(REVIEWS_ENDPOINT, {
+      method: "POST", headers: { "content-type": "application/json", accept: "application/json", authorization: `Bearer ${profile.authToken}` },
+      body: JSON.stringify({ facilityId: facility.id, clientId: profile.id, nickname: draft.nickname.trim() || "匿名サウナー", rating: Number(draft.rating), text }),
+      signal: AbortSignal.timeout(12000),
+    });
+    if (!response.ok) throw new Error(response.status === 429 ? "投稿回数の制限です。時間を置いて再試行してください。" : "口コミを公開できませんでした。通信を確認して再試行してください。");
+    const payload = await response.json();
+    const submittedText = text.normalize("NFKC").replace(/[<>]/g, "").replace(/\s+/g, " ").trim().slice(0, 280);
+    if (payload.configured === false || !Array.isArray(payload.reviews) || !payload.reviews.some(review => review.id && review.owned === true && review.facilityId === facility.id && review.text === submittedText)) throw new Error("口コミの公開を確認できませんでした。");
+    facilityReviews[facility.id] = normalizeReviews(payload.reviews);
+    facilityReviewLoadedIds.add(facility.id);
+    reviewsConfigured = true;
+    const latestDraft = activityDrafts.get(facility.id);
+    if (latestDraft === draft) draft.publish = false;
+    activitySaves.delete(facility.id);
+    if (activeView === "Facility" && activeFacilityId === facility.id) {
+      renderFacilityDetail();
+      el.facilityDetail.querySelector(".activity-save-status").textContent = latestDraft === draft ? "端末に保存し、口コミを公開しました。口コミタブで確認できます。" : "送信した感想を公開しました。送信後に編集した内容は、まだ保存・公開していません。";
+    } else {
+      showToast(`${facility.name}の口コミを公開しました`);
+    }
+  } catch (error) {
+    const message = `端末への保存は完了。${error.name === "TimeoutError" ? "公開の確認が時間切れです。" : error.message} 入力は保持しています。`;
+    if (activeView === "Facility" && activeFacilityId === facility.id) {
+      el.facilityDetail.querySelector(".activity-save-status").textContent = message;
+    } else {
+      showToast(`${facility.name}: ${message}`);
+    }
+  } finally {
+    activitySaves.delete(facility.id);
+    button.disabled = false;
+    if (activeView === "Facility" && activeFacilityId === facility.id) {
+      const currentButton = el.facilityDetail.querySelector(".activity-save");
+      if (currentButton) currentButton.disabled = false;
+    }
+  }
+}
+
 
 function deleteVisitLog(facility, logId) {
   const logs = state.visitLogs[facility.id] || [];
   state.visitLogs[facility.id] = logs.filter((log) => log.id !== logId);
   if (!state.visitLogs[facility.id].length) delete state.visitLogs[facility.id];
+  if (activityDrafts.get(facility.id)?.logId === logId) activityDrafts.delete(facility.id);
   saveState();
   renderFacilityDetail();
   showToast("サ活ログを削除しました");
@@ -3126,74 +3129,6 @@ function formatVisitLogDate(value) {
   return year && month && day ? `${year}年${Number(month)}月${Number(day)}日` : value;
 }
 
-function applyNoteTemplate(facility, indexValue) {
-  const template = QUICK_NOTE_TEMPLATES[Number(indexValue)];
-  if (!template) return;
-  const textarea = [...el.main.querySelectorAll("[data-note-input]")]
-    .find((input) => input.dataset.noteInput === facility.id);
-  if (!(textarea instanceof HTMLTextAreaElement)) return;
-  const current = textarea.value.trim();
-  const next = current ? `${current}\n${template.text}` : template.text;
-  const text = next.slice(0, Number(textarea.maxLength) || 240);
-  state.facilityMemos[facility.id] = {
-    text,
-    updatedAt: new Date().toISOString(),
-  };
-  delete memoDrafts[facility.id];
-  invalidateFacilityCaches();
-  saveState();
-  renderAll();
-  const nextTextarea = [...el.main.querySelectorAll("[data-note-input]")]
-    .find((input) => input.dataset.noteInput === facility.id);
-  if (nextTextarea instanceof HTMLTextAreaElement) {
-    nextTextarea.focus();
-    nextTextarea.setSelectionRange(nextTextarea.value.length, nextTextarea.value.length);
-  }
-  showToast(`${template.label}テンプレをメモに保存しました`);
-}
-
-function renderReviewPanel(facility) {
-  const reviews = getFacilityReviews(facility.id);
-  const nickname = profile.nickname || "匿名サウナー";
-  const draft = reviewDrafts.get(facility.id) || { text: "", rating: 5, nickname };
-  return `
-    <section class="review-panel" id="reviews-${escapeAttr(facility.id)}" data-review-facility="${escapeAttr(facility.id)}" tabindex="-1" aria-label="口コミの確認と投稿">
-      <div class="panel-head">
-        <div>
-          <p class="eyebrow">REVIEW</p>
-          <h3>口コミを投稿</h3>
-        </div>
-        <span>${reviews.length}件</span>
-      </div>
-      <div class="review-form">
-        <label><span>公開ニックネーム（任意）</span><input data-review-nickname maxlength="16" autocomplete="nickname" value="${escapeAttr(draft.nickname)}" placeholder="匿名サウナー" /></label>
-        <label>
-          <span>評価</span>
-          <select data-review-rating="${escapeAttr(facility.id)}" aria-label="口コミ評価">
-            ${[[5,"とても良い"],[4,"良い"],[3,"普通"],[2,"合わなかった"],[1,"良くなかった"]].map(([value,label]) => `<option value="${value}" ${Number(draft.rating) === value ? "selected" : ""}>${value} ${label}</option>`).join("")}
-          </select>
-        </label>
-        <label class="review-text-label">
-          <span>感想（公開・280文字以内）</span>
-          <textarea data-review-input="${escapeAttr(facility.id)}" maxlength="280" rows="3" placeholder="温度、水風呂、外気浴、混雑、再訪したい理由">${escapeHtml(draft.text)}</textarea>
-        </label>
-        <p class="form-help">訪問した感想を投稿できます。メールアドレスや個人の連絡先は書かないでください。</p>
-        <button class="primary-button" type="button" data-action="save-review" data-id="${escapeAttr(facility.id)}">口コミを公開する</button>
-      </div>
-      <div class="review-list" id="reviewList-${escapeAttr(facility.id)}">
-        ${renderReviewList(facility)}
-      </div>
-    </section>
-  `;
-}
-
-function rememberReviewDraft(panel) {
-  reviewDrafts.set(panel.dataset.reviewFacility, {
-    text: panel.querySelector("textarea")?.value || "",
-    nickname: panel.querySelector("[data-review-nickname]")?.value || "",
-    rating: Number(panel.querySelector("select")?.value || 5),
-  });
-}
 
 function renderReviewList(facility) {
   const reviews = getFacilityReviews(facility.id);
@@ -3203,17 +3138,7 @@ function renderReviewList(facility) {
 }
 
 function focusFacilityReviews(facility) {
-  if (activeView !== "Facility" || activeFacilityId !== facility.id) {
-    openFacilityDetail(facility);
-  }
-  window.requestAnimationFrame(() => {
-    window.requestAnimationFrame(() => {
-      const panel = document.querySelector(`#reviews-${cssEscape(facility.id)}`);
-      if (!(panel instanceof HTMLElement)) return;
-      panel.scrollIntoView({ behavior: "smooth", block: "start" });
-      window.setTimeout(() => panel.focus({ preventScroll: true }), 320);
-    });
-  });
+  showFacilityDetailTab(facility, "reviews", { focus: true });
 }
 
 function renderReviewCard(facility, review) {
@@ -4382,6 +4307,7 @@ function saveFacilityMemo(facility, button) {
 
 function deleteFacilityMemo(facility) {
   delete memoDrafts[facility.id];
+  activityDrafts.delete(facility.id);
   if (!state.facilityMemos[facility.id]) {
     renderAll();
     return;
@@ -4419,64 +4345,6 @@ async function loadFacilityReviews(facilityId, { force = false } = {}) {
   }
 }
 
-async function saveFacilityReview(facility, button) {
-  const panel = button.closest(".review-panel");
-  if (button.disabled) return;
-  rememberReviewDraft(panel);
-  const text = panel?.querySelector(`[data-review-input="${cssEscape(facility.id)}"]`)?.value.trim() || "";
-  const rating = Number(panel?.querySelector(`[data-review-rating="${cssEscape(facility.id)}"]`)?.value || 5);
-  if (!text) {
-    showToast("口コミ本文を入力してください");
-    return;
-  }
-  const review = {
-    id: `local-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
-    facilityId: facility.id,
-    clientId: profile.id || createClientId(),
-    nickname: panel.querySelector("[data-review-nickname]")?.value.trim().slice(0,16) || "匿名サウナー",
-    rating: Math.max(1, Math.min(5, Math.floor(rating) || 5)),
-    text: text.slice(0, 280),
-    createdAt: new Date().toISOString(),
-  };
-
-  if (!IS_STATIC_LOCAL_PREVIEW) {
-    button.disabled = true;
-    button.textContent = "投稿しています…";
-    try {
-      const response = await fetch(REVIEWS_ENDPOINT, {
-        method: "POST",
-        headers: { "content-type": "application/json", accept: "application/json", authorization: `Bearer ${profile.authToken}` },
-        body: JSON.stringify(review),
-        signal: AbortSignal.timeout(12000),
-      });
-      if (!response.ok) throw new Error(response.status === 429 ? "投稿が多いため少し時間を置いて再試行してください" : "投稿できませんでした。入力を保持しています。再試行してください");
-      const payload = await response.json();
-      reviewsConfigured = payload.configured !== false;
-      facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
-      facilityReviewLoadedIds.add(facility.id);
-      reviewDrafts.delete(facility.id);
-      renderAll();
-      showToast(`${facility.name} に口コミを投稿しました`);
-      return;
-    } catch (error) {
-      reviewsConfigured = false;
-      showToast(error.name === "TimeoutError" ? "通信が時間切れになりました。入力を保持しています" : error.message);
-      const list = panel.querySelector(".review-list");
-      if (list) list.innerHTML = renderReviewList(facility);
-      return;
-    } finally {
-      button.disabled = false;
-      button.textContent = "口コミを公開する";
-    }
-  }
-
-  const localReviews = normalizeReviews([review, ...(state.facilityReviews[facility.id] || [])]).slice(0, 20);
-  state.facilityReviews[facility.id] = localReviews;
-  saveState();
-  reviewDrafts.delete(facility.id);
-  renderAll();
-  showToast(`${facility.name} の口コミをこの端末に保存しました`);
-}
 
 async function deleteFacilityReview(facility, reviewId) {
   if (!reviewId) return;
@@ -4831,7 +4699,7 @@ function getFacilities() {
     trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
     tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
   }));
-  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom]);
+  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom].map(applyFacilityEvidence));
   return facilitiesCache;
 }
 
@@ -4889,7 +4757,7 @@ function createFacilitySearchRecord(facility) {
       memo?.text,
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
-      ...(facility.tags || []),
+      ...(facility.tags || []).filter(tag => !normalizeFeature(tag)),
     ]);
     return {
       facility,
@@ -5055,7 +4923,7 @@ function renderFacilitySourceBadge(facility) {
   if (officialUrl) {
     links.push(`<a class="source-badge source-badge-official" href="${escapeAttr(officialUrl)}" target="_blank" rel="noreferrer">公式</a>`);
   }
-  if (sourceUrl) {
+  if (sourceUrl && sourceUrl !== officialUrl && !(officialUrl && sourceLabel === "公式")) {
     links.push(`<a class="source-badge" href="${escapeAttr(sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel)}</a>`);
   }
   if (!links.length) return `<span class="source-badge">${escapeHtml(sourceLabel)}</span>`;
@@ -5063,10 +4931,7 @@ function renderFacilitySourceBadge(facility) {
 }
 
 function getDisplayTags(facility) {
-  const features = getFacilityFeatures(facility);
-  const sourceTags = (facility.tags || []).filter((tag) => !NON_DISPLAY_TAGS.has(tag) && !features.includes(tag) && !features.includes(normalizeFeature(tag)));
-  const tags = uniqueStrings([...features, ...sourceTags]).slice(0, 8);
-  return tags;
+  return getFacilityFeatures(facility).slice(0, 8);
 }
 
 function getFacilityFeatures(facility) {
@@ -5085,14 +4950,14 @@ function getFacilityFeatures(facility) {
 
   const explicit = normalizeFeatures([...(facility.features || []), ...(facility.tags || [])]);
   let features;
-  if ((facility.tags || []).includes("ユーザー指定追加") || (facility.tags || []).includes("みんなの追加")) {
+  if (!getFacilityEvidence(facility) && ((facility.tags || []).includes("ユーザー指定追加") || (facility.tags || []).includes("みんなの追加"))) {
     features = normalizeFeatures([...explicit, ...(facility.tags || [])]);
     facilityFeatureCache.set(facility.id, { signature, features });
     return features;
   }
 
-  /* Only recorded equipment is filterable; a place name is not equipment evidence. */
-  features = explicit;
+  /* Legacy tags have no field-level evidence and must not imply verified equipment. */
+  features = normalizeFeatures(getVerifiedFeatures(facility));
   facilityFeatureCache.set(facility.id, { signature, features });
   return features;
 }
@@ -5563,7 +5428,7 @@ function normalizeFacilityMemos(value) {
     typeof memo.text === "string" &&
     memo.text.trim()
   )).map(([id, memo]) => [id, {
-    text: memo.text.trim().slice(0, 240),
+    text: memo.text.trim().slice(0, 280),
     updatedAt: typeof memo.updatedAt === "string" ? memo.updatedAt : new Date().toISOString(),
   }]));
 }
@@ -5594,7 +5459,7 @@ function normalizeVisitLog(value) {
     waterMinutes: Math.max(0, Math.min(10, Number(value.waterMinutes) || 0)),
     restMinutes: Math.max(0, Math.min(40, Number(value.restMinutes) || 0)),
     feeling: Math.max(1, Math.min(5, Math.round(Number(value.feeling) || 3))),
-    note: typeof value.note === "string" ? value.note.trim().slice(0, 100) : "",
+    note: typeof value.note === "string" ? value.note.trim().slice(0, 280) : "",
     createdAt: typeof value.createdAt === "string" ? value.createdAt : new Date().toISOString(),
   };
 }

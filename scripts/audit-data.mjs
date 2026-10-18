@@ -1,4 +1,5 @@
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
+import { FACILITY_EVIDENCE } from "../facility-evidence.js";
 import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
 
 const errors = [];
@@ -42,6 +43,8 @@ const aliases = findAliasGroups(SEED_FACILITIES);
 const metrics = {
   catalogReviewedAt: DATASET_META.catalogReviewedAt || "",
   facilitiesRaw: SEED_FACILITIES.length,
+  officialProfilesWithFieldEvidence: FACILITY_EVIDENCE.length,
+  officialFactsWithSources: FACILITY_EVIDENCE.reduce((sum, profile) => sum + profile.facts.length, 0),
   prefectures: PREFECTURES.length,
   minFacilitiesPerPrefecture: Math.min(...Object.values(prefCounts)),
   maxFacilitiesPerPrefecture: Math.max(...Object.values(prefCounts)),

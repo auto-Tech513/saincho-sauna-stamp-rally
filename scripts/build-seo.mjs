@@ -6,6 +6,7 @@ import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, SAUNA_ARTICLES } from "../content.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures } from "../facility-evidence.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const execFileAsync = promisify(execFile);
@@ -57,7 +58,7 @@ const HIDDEN_TAGS = new Set([
 ]);
 
 const PREF_SLUG = new Map(PREFECTURES.map((pref) => [pref.name, pref.slug]));
-const { facilities: CANONICAL_FACILITIES, aliases: FACILITY_ALIASES } = dedupeFacilitiesForSeo(SEED_FACILITIES);
+const { facilities: CANONICAL_FACILITIES, aliases: FACILITY_ALIASES } = dedupeFacilitiesForSeo(SEED_FACILITIES.map(applyFacilityEvidence));
 const ARTICLE_ROUTES = SAUNA_ARTICLES.map((article, index) => ({
   article,
   route: `/guide/${encodeURIComponent(`${index + 1}-${slugify(article.title)}`)}/`,
@@ -91,7 +92,7 @@ await rotatePreviousOutput();
 await fs.mkdir(OUT, { recursive: true });
 const LASTMOD = {
   site: await getGitLastModified(["index.html", "app.js", "styles.css", "scripts/build-seo.mjs"]),
-  data: await getGitLastModified(["data.js"]),
+  data: await getGitLastModified(["data.js", "facility-evidence.js"]),
   content: await getGitLastModified(["content.js"]),
 };
 
@@ -100,13 +101,16 @@ const sourceStyles = await read("styles.css");
 const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
 const sourceNearby = await read("nearby.js");
+const sourceEvidence = await read("facility-evidence.js");
 const sourceSw = await read("sw.js");
 const dataFile = `data.${hash(sourceData)}.js`;
 const contentFile = `content.${hash(sourceContent)}.js`;
 const stylesFile = `styles.${hash(sourceStyles)}.css`;
 const nearbyFile = `nearby.${hash(sourceNearby)}.js`;
+const evidenceFile = `facility-evidence.${hash(sourceEvidence)}.js`;
 const appSource = (await read("app.js"))
   .replace('from "./nearby.js";', `from "./${nearbyFile}";`)
+  .replace('from "./facility-evidence.js";', `from "./${evidenceFile}";`)
   .replace('const DATA_MODULE_PATH = "./data.js";', `const DATA_MODULE_PATH = "./${dataFile}";`)
   .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`);
 const appFile = `app.${hash(appSource)}.js`;
@@ -115,6 +119,7 @@ await write(dataFile, sourceData);
 await write(contentFile, sourceContent);
 await write(stylesFile, sourceStyles);
 await write(nearbyFile, sourceNearby);
+await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
 await write("sw.js", sourceSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
@@ -405,6 +410,7 @@ function renderPrefSsr(pref, facilities) {
 }
 
 function renderFacilitySsr(facility) {
+  const evidence = getFacilityEvidence(facility);
   const tags = displayTags(facility);
   const address = getAddress(facility);
   const area = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
@@ -441,10 +447,11 @@ function renderFacilitySsr(facility) {
     <p>${escapeHtml(area)}</p>
     <dl>
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
-      <div><dt>特徴</dt><dd>${escapeHtml(tags.length ? tags.join(" / ") : "施設詳細")}</dd></div>
+      <div><dt>設備</dt><dd>${escapeHtml(tags.length ? tags.join(" / ") : "公式再照合が未完了。未掲載は設備なしを意味しません。")}</dd></div>
+      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}照合）</dd></div>`).join("")}
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
-      ${note ? `<div><dt>施設情報</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
+      ${note && !evidence ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
       ${facility.addressCheckedAt || facility.sourceCheckedAt ? `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(facility.addressCheckedAt || facility.sourceCheckedAt)}">${escapeHtml(facility.addressCheckedAt || facility.sourceCheckedAt)}</time></dd></div>` : ""}
     </dl>
@@ -564,14 +571,12 @@ function pageMeta(title, description) {
 function getFacilityDescription(facility) {
   const address = getAddress(facility);
   const tags = displayTags(facility).slice(0, 4).join("、");
-  const note = String(facility.note || "").trim();
+  const note = getFacilityEvidence(facility)?.facts.slice(0, 2).map(row => `${row.label}: ${row.value}`).join("。") || "";
   return cleanMeta(`${facility.name}のサ印帳施設詳細。${facility.prefecture}${facility.city ? ` / ${facility.city}` : ""}の候補です。${address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Maps検索で確認できます。"}${note ? `施設情報は${note}。` : ""}${tags ? `特徴は${tags}。` : ""}押印、行きたい、メモ、口コミ、経路、周辺サ飯、Gear導線を確認できます。`);
 }
 
 function displayTags(facility) {
-  return unique([...(facility.features || []), ...(facility.tags || [])])
-    .filter((tag) => tag && !HIDDEN_TAGS.has(tag))
-    .slice(0, 6);
+  return getVerifiedFeatures(facility).slice(0, 6);
 }
 
 function getAddress(facility) {
