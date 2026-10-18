@@ -21,7 +21,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20260712-nearby-logshare-v3";
+const APP_BUILD_ID = "20261018-audit-v1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -794,6 +794,17 @@ let memoDrafts = {};
 let facilitiesCache = null;
 let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
+let facilitySearchBuild = null;
+let facilityCacheVersion = 0;
+let searchGeneration = 0;
+let searchSynonymTokens = null;
+const searchTokenCache = new Map();
+const reviewDrafts = new Map();
+const reviewRequests = new Set();
+let rankingLoading = false;
+let rankingSaving = false;
+let rankingLastError = "";
+let rankingUpdatedAt = "";
 let searchWarmScheduled = false;
 let facilityFeatureCache = new Map();
 let japanMapMarkup = "";
@@ -814,6 +825,7 @@ const el = {
   progressPercent: document.querySelector("#progressPercent"),
   searchInput: document.querySelector("#searchInput"),
   searchClearButton: document.querySelector("#searchClearButton"),
+  searchResultsStatus: document.querySelector("#searchResultsStatus"),
   prefStrip: document.querySelector("#prefStrip"),
   sourceRow: document.querySelector("#sourceRow"),
   featureFilterGrid: document.querySelector("#featureFilterGrid"),
@@ -833,6 +845,7 @@ const el = {
   profileNickname: document.querySelector("#profileNickname"),
   profileEmail: document.querySelector("#profileEmail"),
   profileStatus: document.querySelector("#profileStatus"),
+  profileFeedback: document.querySelector("#profileFeedback"),
   leaderboardList: document.querySelector("#leaderboardList"),
   leaderboardSummary: document.querySelector("#leaderboardSummary"),
   leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
@@ -916,7 +929,7 @@ init();
 async function init() {
   activeView = getViewFromLocation();
   applyActiveView(activeView);
-  updateDocumentMetaForView(activeView);
+  if (!isArticleRoute() && !/^\/pref\//.test(location.pathname)) updateDocumentMetaForView(activeView);
   bindEvents();
   renderInstallPrompt();
   renderBootLoading();
@@ -937,8 +950,10 @@ async function init() {
   hydrateSearchFromUrl();
   renderSearchClearButton();
   renderProfilePanel();
+  saveProfile();
   renderShopPanel();
   renderAll();
+  warmSearchIndex();
   trackPageView();
   prepareSearchIndexOnIntent();
   registerServiceWorkerWhenIdle();
@@ -958,6 +973,10 @@ async function init() {
   resumeActiveCheckin();
   checkNearbyOnLaunch();
   window.addEventListener("popstate", () => {
+    if (/^\/guide\/[^/]+\/$/.test(location.pathname) && !document.getElementById("ssrContent")) {
+      location.reload();
+      return;
+    }
     activeView = getViewFromLocation();
     applyActiveView(activeView);
     updateDocumentMetaForView(activeView);
@@ -1031,16 +1050,9 @@ function track(name, params = {}) {
 function warmSearchIndex() {
   if (facilitySearchCache || searchWarmScheduled) return;
   searchWarmScheduled = true;
-  runWhenIdle(() => {
-    try {
-      if (facilitySearchCache) return;
-      getFacilitySearchRecords();
-    } catch {
-      // The first real search will rebuild if idle warming is interrupted.
-    } finally {
-      searchWarmScheduled = false;
-    }
-  }, 3000);
+  runWhenIdle(() => ensureFacilitySearchRecords().finally(() => {
+    searchWarmScheduled = false;
+  }), 1200);
 }
 
 function prepareSearchIndexOnIntent() {
@@ -1117,6 +1129,12 @@ function bindEvents() {
     button.addEventListener("click", () => {
       closeSettingsDialog();
       setView(button.dataset.menuView);
+      if (button.dataset.menuTarget) {
+        requestAnimationFrame(() => {
+          document.getElementById(button.dataset.menuTarget)?.scrollIntoView({ block: "start", behavior: "instant" });
+          el.profileNickname.focus({ preventScroll: true });
+        });
+      }
     });
   });
 
@@ -1157,6 +1175,7 @@ function bindEvents() {
 
   el.searchInput.addEventListener("compositionstart", () => {
     isSearchComposing = true;
+    searchGeneration += 1;
     clearSearchRenderTimer();
   });
 
@@ -1210,9 +1229,15 @@ function bindEvents() {
   });
 
   el.main.addEventListener("input", (event) => {
+    const reviewPanel = event.target.closest?.(".review-panel");
+    if (reviewPanel) rememberReviewDraft(reviewPanel);
     const input = event.target instanceof Element ? event.target.closest("[data-note-input]") : null;
     if (!(input instanceof HTMLTextAreaElement)) return;
     memoDrafts[input.dataset.noteInput] = input.value;
+  });
+  el.main.addEventListener("change", (event) => {
+    const reviewPanel = event.target.closest?.(".review-panel");
+    if (reviewPanel) rememberReviewDraft(reviewPanel);
   });
 
   el.main.addEventListener("click", (event) => {
@@ -1328,6 +1353,7 @@ function bindEvents() {
     if (button.dataset.action === "cancel-checkin") cancelFacilityCheckin(facility);
     if (button.dataset.action === "report-facility") requestFacilityCorrection(facility);
     if (button.dataset.action === "save-review") saveFacilityReview(facility, button);
+    if (button.dataset.action === "retry-reviews") loadFacilityReviews(facility.id, { force: true });
     if (button.dataset.action === "delete-review") deleteFacilityReview(facility, button.dataset.reviewId);
     if (button.dataset.action === "save-visit-log") saveVisitLog(facility, button);
     if (button.dataset.action === "delete-visit-log") deleteVisitLog(facility, button.dataset.logId);
@@ -1397,13 +1423,13 @@ function bindEvents() {
       nickname: nickname.slice(0, 16),
       email: email.slice(0, 80),
       registeredAt: profile.registeredAt || new Date().toISOString(),
+      authToken: profile.authToken || createClientId() + createClientId(),
     };
     saveProfile();
-    renderProfilePanel();
     syncRanking({ announce: true });
   });
 
-  el.leaderboardSyncButton.addEventListener("click", () => syncRanking({ announce: true }));
+  el.leaderboardSyncButton.addEventListener("click", () => loadRanking());
 
   el.addForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -1685,6 +1711,8 @@ function applyActiveView(view) {
 }
 
 function renderAll() {
+  document.body.classList.toggle("is-article", isArticleRoute());
+  if (isArticleRoute()) return;
   removeSsrContent();
   renderSummary();
   if (activeView === "Explore") {
@@ -1832,7 +1860,17 @@ function renderExplore() {
   renderFilterButtons();
   renderPrefStrip();
   renderSourceRow();
+  if ((searchNeedles.length || selectedFeatureFilters.size) && !facilitySearchCache) {
+    el.facilityList.setAttribute("aria-busy", "true");
+    if (el.searchResultsStatus) el.searchResultsStatus.textContent = "検索を準備しています…";
+    ensureFacilitySearchRecords().then(() => {
+      if (activeView === "Explore" && !isSearchComposing) applySearchValue(el.searchInput.value);
+    });
+    return;
+  }
+  el.facilityList.setAttribute("aria-busy", "false");
   const facilities = getFilteredFacilities();
+  if (el.searchResultsStatus) el.searchResultsStatus.textContent = `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
   renderSpotlight(facilities);
 
   if (!facilities.length) {
@@ -1848,7 +1886,7 @@ function renderExplore() {
     return;
   }
 
-  const visibleFacilities = selectedPrefecture === "全国" ? facilities.slice(0, visibleLimit) : facilities;
+  const visibleFacilities = facilities.slice(0, visibleLimit);
   const moreCount = Math.max(0, facilities.length - visibleFacilities.length);
   const moreButton = moreCount
     ? `<button class="load-more-button" type="button" data-show-more="true">さらに${Math.min(36, moreCount)}件表示</button>`
@@ -1871,13 +1909,17 @@ function scheduleSearchRender(value, options = {}) {
 }
 
 function clearSearchRenderTimer() {
+  searchGeneration += 1;
   if (!searchRenderTimer) return;
   window.clearTimeout(searchRenderTimer);
   searchRenderTimer = 0;
 }
 
-function applySearchValue(value) {
+async function applySearchValue(value) {
+  const generation = ++searchGeneration;
   searchRenderTimer = 0;
+  if (value.trim()) await ensureFacilitySearchRecords();
+  if (generation !== searchGeneration || isSearchComposing || el.searchInput.value !== value) return;
   setSearchTerm(value);
   visibleLimit = 36;
   const moved = moveToSearchPrefecture(value);
@@ -3002,8 +3044,9 @@ function applyNoteTemplate(facility, indexValue) {
 function renderReviewPanel(facility) {
   const reviews = getFacilityReviews(facility.id);
   const nickname = profile.nickname || "匿名サウナー";
+  const draft = reviewDrafts.get(facility.id) || { text: "", rating: 5, nickname };
   return `
-    <section class="review-panel" id="reviews-${escapeAttr(facility.id)}" tabindex="-1" aria-label="口コミの確認と投稿">
+    <section class="review-panel" id="reviews-${escapeAttr(facility.id)}" data-review-facility="${escapeAttr(facility.id)}" tabindex="-1" aria-label="口コミの確認と投稿">
       <div class="panel-head">
         <div>
           <p class="eyebrow">REVIEW</p>
@@ -3012,27 +3055,40 @@ function renderReviewPanel(facility) {
         <span>${reviews.length}件</span>
       </div>
       <div class="review-form">
+        <label><span>公開ニックネーム（任意）</span><input data-review-nickname maxlength="16" autocomplete="nickname" value="${escapeAttr(draft.nickname)}" placeholder="匿名サウナー" /></label>
         <label>
           <span>評価</span>
           <select data-review-rating="${escapeAttr(facility.id)}" aria-label="口コミ評価">
-            <option value="5">5 とても良い</option>
-            <option value="4">4 良い</option>
-            <option value="3">3 普通</option>
-            <option value="2">2 合わなかった</option>
-            <option value="1">1 要確認</option>
+            ${[[5,"とても良い"],[4,"良い"],[3,"普通"],[2,"合わなかった"],[1,"良くなかった"]].map(([value,label]) => `<option value="${value}" ${Number(draft.rating) === value ? "selected" : ""}>${value} ${label}</option>`).join("")}
           </select>
         </label>
         <label class="review-text-label">
-          <span>${escapeHtml(nickname)}として投稿</span>
-          <textarea data-review-input="${escapeAttr(facility.id)}" maxlength="280" rows="3" placeholder="温度、水風呂、外気浴、混雑、再訪したい理由"></textarea>
+          <span>感想（公開・280文字以内）</span>
+          <textarea data-review-input="${escapeAttr(facility.id)}" maxlength="280" rows="3" placeholder="温度、水風呂、外気浴、混雑、再訪したい理由">${escapeHtml(draft.text)}</textarea>
         </label>
-        <button class="primary-button" type="button" data-action="save-review" data-id="${escapeAttr(facility.id)}">口コミ投稿</button>
+        <p class="form-help">訪問した感想を投稿できます。メールアドレスや個人の連絡先は書かないでください。</p>
+        <button class="primary-button" type="button" data-action="save-review" data-id="${escapeAttr(facility.id)}">口コミを公開する</button>
       </div>
       <div class="review-list" id="reviewList-${escapeAttr(facility.id)}">
-        ${reviews.length ? reviews.map((review) => renderReviewCard(facility, review)).join("") : `<p class="review-empty">${reviewsConfigured === false ? "共有口コミは未接続です。投稿するとこの端末に保存されます。" : "最初の口コミを待っています。"}</p>`}
+        ${renderReviewList(facility)}
       </div>
     </section>
   `;
+}
+
+function rememberReviewDraft(panel) {
+  reviewDrafts.set(panel.dataset.reviewFacility, {
+    text: panel.querySelector("textarea")?.value || "",
+    nickname: panel.querySelector("[data-review-nickname]")?.value || "",
+    rating: Number(panel.querySelector("select")?.value || 5),
+  });
+}
+
+function renderReviewList(facility) {
+  const reviews = getFacilityReviews(facility.id);
+  return `${reviews.map(review => renderReviewCard(facility, review)).join("")}${reviewsConfigured === false
+    ? `<p class="review-empty" role="status">口コミを取得できませんでした。入力内容は保持しています。</p><button class="secondary-button" type="button" data-action="retry-reviews" data-id="${escapeAttr(facility.id)}">口コミを再取得</button>`
+    : reviews.length ? "" : `<p class="review-empty">まだ口コミはありません。最初の感想を残しませんか。</p>`}`;
 }
 
 function focusFacilityReviews(facility) {
@@ -3050,7 +3106,7 @@ function focusFacilityReviews(facility) {
 }
 
 function renderReviewCard(facility, review) {
-  const owned = review.clientId && review.clientId === profile.id;
+  const owned = review.owned || (review.clientId && review.clientId === profile.id);
   return `
     <article class="review-card">
       <div>
@@ -3058,6 +3114,7 @@ function renderReviewCard(facility, review) {
         <span>${escapeHtml(review.nickname || "匿名サウナー")} / ${escapeHtml(formatDate(review.createdAt) || "投稿日不明")}</span>
       </div>
       <p>${escapeHtml(review.text)}</p>
+      ${String(review.id).startsWith("local-") ? `<small>この端末のみの記録・未公開</small>` : ""}
       ${owned ? `<button class="tiny-undo-button" type="button" data-action="delete-review" data-id="${escapeAttr(facility.id)}" data-review-id="${escapeAttr(review.id)}">削除</button>` : ""}
     </article>
   `;
@@ -3154,29 +3211,18 @@ function renderPromotionCopyGrid() {
 function renderProfilePanel() {
   el.profileNickname.value = profile.nickname || "";
   el.profileEmail.value = profile.email || "";
-  el.profileStatus.textContent = isProfileComplete() ? "参加中" : "未登録";
+  el.profileStatus.textContent = isProfileComplete() ? "端末に保存済み" : "未登録";
 }
 
 function renderLeaderboard() {
   const visitedTotal = Object.keys(state.visited).length;
-  const currentTitle = getCurrentTitle(visitedTotal).title;
-  const localEntry = isProfileComplete()
-    ? {
-      id: profile.id,
-      nickname: profile.nickname,
-      stamps: visitedTotal,
-      title: currentTitle,
-      local: true,
-      updatedAt: new Date().toISOString(),
-    }
-    : null;
-  const entries = mergeRankingEntries(leaderboardEntries, localEntry);
+  const ownEntry = leaderboardEntries.find(entry => entry.id === profile.id);
+  const publicStamps = ownEntry?.stamps ?? 0;
+  const entries = mergeRankingEntries(leaderboardEntries, null);
   const sorted = [...entries]
     .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
     .slice(0, 10);
-  const ownRank = localEntry ? sorted.findIndex((entry) => entry.id === profile.id) + 1 : 0;
-  const entryAbove = ownRank > 1 ? sorted[ownRank - 2] : null;
-  const gapToAbove = entryAbove ? Math.max(1, entryAbove.stamps - visitedTotal + 1) : 0;
+  const ownRank = ownEntry ? sorted.findIndex((entry) => entry.id === profile.id) + 1 : 0;
   const topTenEdge = sorted.length >= 10 ? sorted[9] : null;
   const gapToTopTen = topTenEdge && !ownRank ? Math.max(1, topTenEdge.stamps - visitedTotal + 1) : 0;
 
@@ -3184,14 +3230,14 @@ function renderLeaderboard() {
     el.leaderboardSummary.textContent = "登録すると上位10名ランキングに同期されます。メールは表示されません。";
   } else if (rankingConfigured) {
     el.leaderboardSummary.textContent = ownRank > 1
-      ? `あなたは${ownRank}位。あと${gapToAbove}湯で${ownRank - 1}位が見えます。`
+      ? `あなたは${ownRank}位。${publicStamps}湯の記録を公開中です。`
       : ownRank === 1
-        ? `あなたは1位。${visitedTotal}湯で首位キープ中です。`
+        ? `あなたは1位。${publicStamps}湯の記録を公開中です。`
         : gapToTopTen
           ? `上位10名まであと${gapToTopTen}湯。${visitedTotal}湯で追走中です。`
-          : `${visitedTotal}湯で同期中`;
+          : "公開ランキングの上位10名にあなたの記録はありません。";
   } else {
-    el.leaderboardSummary.textContent = "共有ランキングは未接続です。登録内容は端末内で保持しています。";
+    el.leaderboardSummary.textContent = rankingLastError || "ランキングを確認しています。登録内容は端末内に保存されます。";
   }
 
   if (!sorted.length) {
@@ -3208,10 +3254,15 @@ function renderLeaderboard() {
       </article>
     `).join("");
   }
-  const latest = sorted.map((entry) => entry.updatedAt).filter(Boolean).sort().at(-1);
   el.leaderboardUpdatedAt.textContent = rankingConfigured
-    ? `10秒ごとに自動更新${latest ? ` / ${formatDateTime(latest)}` : ""}`
-    : "Cloudflare KV接続後に全ユーザーランキングが有効になります";
+    ? `表示中は30秒ごとに確認${rankingUpdatedAt ? ` / 取得 ${formatDateTime(rankingUpdatedAt)}` : ""}`
+    : "通信状態を確認して「更新」から再試行できます。";
+  if (el.profileFeedback) {
+    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。公開されるのはニックネーム・サ印数・称号です。");
+    el.profileFeedback.classList.toggle("is-error", Boolean(rankingLastError));
+  }
+  el.profileForm.querySelector('[type="submit"]').disabled = rankingSaving;
+  el.profileStatus.textContent = rankingSaving ? "送信中" : isProfileComplete() ? (rankingLastError ? "再送信が必要" : "端末に保存済み") : "未登録";
 }
 
 function renderShopPanel() {
@@ -4231,25 +4282,36 @@ function deleteFacilityMemo(facility) {
   showToast(`${facility.name} のメモを取り消しました`);
 }
 
-async function loadFacilityReviews(facilityId) {
-  if (!facilityId || reviewsConfigured === false || IS_STATIC_LOCAL_PREVIEW || facilityReviewLoadedIds.has(facilityId)) return;
-  facilityReviewLoadedIds.add(facilityId);
+async function loadFacilityReviews(facilityId, { force = false } = {}) {
+  if (!facilityId || IS_STATIC_LOCAL_PREVIEW || reviewRequests.has(facilityId) || (!force && facilityReviewLoadedIds.has(facilityId))) return;
+  reviewRequests.add(facilityId);
   try {
     const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
     url.searchParams.set("facilityId", facilityId);
-    const response = await fetch(url.href, { headers: { accept: "application/json" } });
+    const response = await fetch(url.href, { headers: { accept: "application/json", authorization: `Bearer ${profile.authToken}` }, signal: AbortSignal.timeout(12000) });
     if (!response.ok) throw new Error("reviews-load-failed");
     const payload = await response.json();
     reviewsConfigured = payload.configured !== false;
     facilityReviews[facilityId] = normalizeReviews(payload.reviews || []);
-    if (activeView === "Facility" && activeFacilityId === facilityId) renderFacilityDetail();
+    facilityReviewLoadedIds.add(facilityId);
   } catch {
     reviewsConfigured = false;
+  } finally {
+    reviewRequests.delete(facilityId);
+    const facility = getFacilityById(facilityId);
+    const list = document.getElementById(`reviewList-${facilityId}`);
+    if (facility && list) {
+      list.innerHTML = renderReviewList(facility);
+      const count = list.closest(".review-panel")?.querySelector(".panel-head > span");
+      if (count) count.textContent = `${getFacilityReviews(facilityId).length}件`;
+    }
   }
 }
 
 async function saveFacilityReview(facility, button) {
   const panel = button.closest(".review-panel");
+  if (button.disabled) return;
+  rememberReviewDraft(panel);
   const text = panel?.querySelector(`[data-review-input="${cssEscape(facility.id)}"]`)?.value.trim() || "";
   const rating = Number(panel?.querySelector(`[data-review-rating="${cssEscape(facility.id)}"]`)?.value || 5);
   if (!text) {
@@ -4260,48 +4322,60 @@ async function saveFacilityReview(facility, button) {
     id: `local-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`,
     facilityId: facility.id,
     clientId: profile.id || createClientId(),
-    nickname: profile.nickname || "匿名サウナー",
+    nickname: panel.querySelector("[data-review-nickname]")?.value.trim().slice(0,16) || "匿名サウナー",
     rating: Math.max(1, Math.min(5, Math.floor(rating) || 5)),
     text: text.slice(0, 280),
     createdAt: new Date().toISOString(),
   };
 
-  if (reviewsConfigured !== false && !IS_STATIC_LOCAL_PREVIEW) {
+  if (!IS_STATIC_LOCAL_PREVIEW) {
+    button.disabled = true;
+    button.textContent = "投稿しています…";
     try {
       const response = await fetch(REVIEWS_ENDPOINT, {
         method: "POST",
-        headers: { "content-type": "application/json", accept: "application/json" },
+        headers: { "content-type": "application/json", accept: "application/json", authorization: `Bearer ${profile.authToken}` },
         body: JSON.stringify(review),
+        signal: AbortSignal.timeout(12000),
       });
-      if (!response.ok) throw new Error("review-save-failed");
+      if (!response.ok) throw new Error(response.status === 429 ? "投稿が多いため少し時間を置いて再試行してください" : "投稿できませんでした。入力を保持しています。再試行してください");
       const payload = await response.json();
       reviewsConfigured = payload.configured !== false;
       facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
       facilityReviewLoadedIds.add(facility.id);
+      reviewDrafts.delete(facility.id);
       renderAll();
       showToast(`${facility.name} に口コミを投稿しました`);
       return;
-    } catch {
+    } catch (error) {
       reviewsConfigured = false;
+      showToast(error.name === "TimeoutError" ? "通信が時間切れになりました。入力を保持しています" : error.message);
+      const list = panel.querySelector(".review-list");
+      if (list) list.innerHTML = renderReviewList(facility);
+      return;
+    } finally {
+      button.disabled = false;
+      button.textContent = "口コミを公開する";
     }
   }
 
   const localReviews = normalizeReviews([review, ...(state.facilityReviews[facility.id] || [])]).slice(0, 20);
   state.facilityReviews[facility.id] = localReviews;
   saveState();
+  reviewDrafts.delete(facility.id);
   renderAll();
   showToast(`${facility.name} の口コミをこの端末に保存しました`);
 }
 
 async function deleteFacilityReview(facility, reviewId) {
   if (!reviewId) return;
-  if (reviewsConfigured && !IS_STATIC_LOCAL_PREVIEW) {
+  if (!IS_STATIC_LOCAL_PREVIEW && !String(reviewId).startsWith("local-")) {
     try {
       const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
       url.searchParams.set("facilityId", facility.id);
       url.searchParams.set("reviewId", reviewId);
       url.searchParams.set("clientId", profile.id || "");
-      const response = await fetch(url.href, { method: "DELETE", headers: { accept: "application/json" } });
+      const response = await fetch(url.href, { method: "DELETE", headers: { accept: "application/json", authorization: `Bearer ${profile.authToken}` }, signal: AbortSignal.timeout(12000) });
       if (response.ok) {
         const payload = await response.json();
         facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
@@ -4309,8 +4383,12 @@ async function deleteFacilityReview(facility, reviewId) {
         showToast("口コミを削除しました");
         return;
       }
+      showToast(response.status === 403 ? "この端末では削除できない口コミです。修正窓口へご連絡ください" : "削除できませんでした。再試行してください");
+      return;
     } catch {
       reviewsConfigured = false;
+      showToast("削除できませんでした。通信を確認して再試行してください");
+      return;
     }
   }
   const next = (state.facilityReviews[facility.id] || []).filter((review) => review.id !== reviewId);
@@ -4321,7 +4399,7 @@ async function deleteFacilityReview(facility, reviewId) {
 }
 
 function getFacilityReviews(facilityId) {
-  return normalizeReviews(facilityReviews[facilityId] || state.facilityReviews[facilityId] || []);
+  return normalizeReviews([...(facilityReviews[facilityId] || []), ...(state.facilityReviews[facilityId] || [])]);
 }
 
 async function submitContactForm(event) {
@@ -4657,10 +4735,34 @@ function getFavoriteFacilities() {
 }
 
 function getFacilitySearchRecords() {
+  return facilitySearchCache || [];
+}
+
+function ensureFacilitySearchRecords() {
   const memoSignature = getFacilityMemoSearchSignature();
-  if (facilitySearchCache && facilitySearchMemoSignature === memoSignature) return facilitySearchCache;
-  facilitySearchMemoSignature = memoSignature;
-  facilitySearchCache = getFacilities().map((facility) => {
+  if (facilitySearchCache && facilitySearchMemoSignature === memoSignature) return Promise.resolve(facilitySearchCache);
+  if (facilitySearchBuild) return facilitySearchBuild;
+  const version = facilityCacheVersion;
+  const facilities = getFacilities();
+  facilitySearchBuild = (async () => {
+    const records = [];
+    let sliceStart = performance.now();
+    for (const facility of facilities) {
+      records.push(createFacilitySearchRecord(facility));
+      if (performance.now() - sliceStart >= 6) {
+        await new Promise(resolve => window.setTimeout(resolve, 0));
+        if (version !== facilityCacheVersion) return null;
+        sliceStart = performance.now();
+      }
+    }
+    facilitySearchMemoSignature = memoSignature;
+    facilitySearchCache = records;
+    return records;
+  })().finally(() => { facilitySearchBuild = null; });
+  return facilitySearchBuild.then(records => records || ensureFacilitySearchRecords());
+}
+
+function createFacilitySearchRecord(facility) {
     const memo = getFacilityMemo(facility.id);
     const features = getFacilityFeatures(facility);
     const haystack = buildSearchBlob([
@@ -4684,8 +4786,6 @@ function getFacilitySearchRecords() {
       haystack,
       nameBlob: buildSearchBlob([facility.name]),
     };
-  });
-  return facilitySearchCache;
 }
 
 function getFacilityMemoSearchSignature() {
@@ -4696,6 +4796,7 @@ function getFacilityMemoSearchSignature() {
 }
 
 function invalidateFacilityCaches() {
+  facilityCacheVersion += 1;
   facilitiesCache = null;
   facilitySearchCache = null;
   facilitySearchMemoSignature = "";
@@ -4711,6 +4812,12 @@ function getFacilityAddress(facility) {
 }
 
 function getFacilityDataQuality(facility) {
+  const date = facility.addressCheckedAt || facility.sourceCheckedAt;
+  if (date) return {
+    level: facility.addressCheckedAt ? "address" : "source",
+    label: facility.addressCheckedAt ? "住所を参照元で照合済み" : "参照ページ確認済み",
+    description: `${date}に参照ページを確認しました。営業状況・料金は訪問前に施設公式で確認してください。`,
+  };
   const hasAddress = Boolean(getFacilityAddress(facility));
   const hasOfficial = Boolean(String(facility.officialUrl || "").trim());
   const hasArea = Boolean(String(facility.city || "").trim());
@@ -4865,7 +4972,7 @@ function getFacilityFeatures(facility) {
   const cached = facilityFeatureCache.get(facility.id);
   if (cached?.signature === signature) return cached.features;
 
-  const explicit = normalizeFeatures(facility.features || []);
+  const explicit = normalizeFeatures([...(facility.features || []), ...(facility.tags || [])]);
   let features;
   if ((facility.tags || []).includes("ユーザー指定追加") || (facility.tags || []).includes("みんなの追加")) {
     features = normalizeFeatures([...explicit, ...(facility.tags || [])]);
@@ -4873,45 +4980,12 @@ function getFacilityFeatures(facility) {
     return features;
   }
 
-  const inferred = new Set([...explicit, ...(TRAIT_FEATURES[facility.trait] || [])]);
-  const text = normalizeText([
-    facility.name,
-    facility.city,
-    getFacilityAddress(facility),
-    facility.note,
-    ...(facility.tags || []),
-  ].join(" "));
-
-  if (/(天然温泉|温泉|源泉)/.test(text)) inferred.add("温泉付き");
-  if (/(個室|完全個室|プライベート|private|貸切|貸し切り)/.test(text)) inferred.add("個室");
-  if (/(貸切|貸し切り|一棟貸|予約制)/.test(text)) inferred.add("貸切可");
-  if (/(ドライサウナ|高温サウナ|昭和ストロング|遠赤外線)/.test(text)) inferred.add("ドライサウナ");
-  if (/遠赤外線/.test(text)) inferred.add("遠赤外線サウナ");
-  if (/(薪サウナ|薪|まきサウナ|wood)/.test(text)) inferred.add("薪サウナ");
-  if (/(スチーム|ミスト|蒸し|薬草|漢方)/.test(text)) inferred.add("スチーム(ミスト)サウナ");
-  if (/塩サウナ/.test(text)) inferred.add("塩サウナ");
-  if (/テントサウナ/.test(text)) inferred.add("テントサウナ");
-  if (/バレルサウナ/.test(text)) inferred.add("バレルサウナ");
-  if (/(熱波|アウフグース)/.test(text)) inferred.add("熱波師あり");
-  if (/セルフロウリュ/.test(text)) inferred.add("セルフロウリュ");
-  if (/アロマロウリュ/.test(text)) inferred.add("アロマロウリュ");
-  if (/(水風呂|天然水|冷水)/.test(text)) inferred.add("水風呂あり");
-  if (/(水着必須|水着着用|男女共用)/.test(text)) inferred.add("水着必須");
-  if (/男女共用/.test(text)) inferred.add("男女共用");
-  if (/(宿泊|カプセル|ホテル|旅館)/.test(text)) inferred.add("宿泊可");
-  if (/(タオルレンタルあり|タオルあり|手ぶら)/.test(text)) inferred.add("タオルレンタルあり");
-  if (/(タオルレンタルなし|タオルなし|要持参)/.test(text)) inferred.add("タオルレンタルなし");
-  if (/(外気浴なし|外気なし)/.test(text)) inferred.add("外気なし");
-  if (!inferred.has("外気なし") && /(外気浴|外気あり|露天|テラス|川|森|海|湖)/.test(text)) inferred.add("外気あり");
-  if (/(サ飯なし|食事なし|レストランなし)/.test(text)) inferred.add("サ飯なし");
-  if (!inferred.has("サ飯なし") && /(サ飯|食堂|レストラン|カフェ|蕎麦|ごはん|食事)/.test(text)) inferred.add("サ飯あり");
-  if (/(飲み放題|ドリンク飲み放題)/.test(text)) inferred.add("サウナドリンク飲み放題");
-  if (/サウナハット禁止/.test(text)) inferred.add("サウナハット禁止");
-
-  features = normalizeFeatures([...inferred]);
+  /* Only recorded equipment is filterable; a place name is not equipment evidence. */
+  features = explicit;
   facilityFeatureCache.set(facility.id, { signature, features });
   return features;
 }
+
 
 function normalizeFeatures(values) {
   if (!Array.isArray(values)) return [];
@@ -4955,19 +5029,16 @@ function moveToSearchPrefecture(value) {
   const prefMatch = PREFECTURES.find((pref) => {
     const full = buildSearchBlob([pref.name]);
     const short = buildSearchBlob([shortPrefName(pref.name)]);
-    return full === term || short === term || (term.length >= 2 && (full.includes(term) || short.includes(term)));
+    return matchesSearchBlob(full, needles) || matchesSearchBlob(short, needles);
   });
   if (prefMatch) return setSelectedPrefecture(prefMatch.name);
 
   if (term.length < 2) return false;
   const records = getFacilitySearchRecords();
-  const nameMatch = records.find(({ nameBlob }) => matchesSearchBlob(nameBlob, needles));
-  if (nameMatch) return setSelectedPrefecture(nameMatch.facility.prefecture);
-
   const matchingFacilities = records.filter(({ haystack }) => matchesSearchBlob(haystack, needles));
   const matchedPrefectures = [...new Set(matchingFacilities.map(({ facility }) => facility.prefecture))];
   if (matchedPrefectures.length === 1) return setSelectedPrefecture(matchedPrefectures[0]);
-  return false;
+  return setSelectedPrefecture("全国");
 }
 
 function setSelectedPrefecture(prefecture) {
@@ -5118,7 +5189,6 @@ function getNextTitle(count) {
 }
 
 function startRankingPolling() {
-  if (rankingConfigured === false) return;
   clearInterval(rankingPollTimer);
   rankingPollTimer = window.setInterval(() => {
     if (!document.hidden && activeView === "Stats") loadRanking();
@@ -5126,17 +5196,21 @@ function startRankingPolling() {
 }
 
 async function loadRanking() {
+  if (rankingLoading) return;
+  rankingLoading = true;
   try {
-    const response = await fetch(RANKING_ENDPOINT, { headers: { accept: "application/json" } });
+    const response = await fetch(RANKING_ENDPOINT, { headers: { accept: "application/json" }, signal: AbortSignal.timeout(12000) });
     if (!response.ok) throw new Error("ranking-load-failed");
     const payload = await response.json();
     rankingConfigured = payload.configured !== false;
     leaderboardEntries = normalizeRankingEntries(payload.entries || []);
+    rankingUpdatedAt = new Date().toISOString();
+    rankingLastError = payload.configured === false ? "現在ランキングを公開できません。時間を置いて再試行してください。" : "";
   } catch {
     rankingConfigured = false;
-    leaderboardEntries = [];
-    clearInterval(rankingPollTimer);
+    rankingLastError = "最新ランキングを取得できませんでした。前回の表示を保持しています。「更新」で再試行できます。";
   } finally {
+    rankingLoading = false;
     renderLeaderboard();
   }
 }
@@ -5148,21 +5222,20 @@ function queueRankingSync() {
 }
 
 async function syncRanking({ announce } = { announce: false }) {
+  if (rankingSaving) return;
   if (!isProfileComplete()) {
     if (announce) showToast("ランキング参加登録をしてください");
     return;
   }
-  if (rankingConfigured === false) {
-    renderLeaderboard();
-    if (announce) showToast("共有ランキングは未接続です");
-    return;
-  }
+  rankingSaving = true;
+  rankingLastError = "";
+  renderLeaderboard();
   const stamps = Object.keys(state.visited).length;
   const title = getCurrentTitle(stamps).title;
   try {
     const response = await fetch(RANKING_ENDPOINT, {
       method: "POST",
-      headers: { "content-type": "application/json", accept: "application/json" },
+      headers: { "content-type": "application/json", accept: "application/json", authorization: `Bearer ${profile.authToken}` },
       body: JSON.stringify({
         participantId: profile.id,
         nickname: profile.nickname,
@@ -5170,18 +5243,22 @@ async function syncRanking({ announce } = { announce: false }) {
         stamps,
         title,
       }),
+      signal: AbortSignal.timeout(12000),
     });
-    if (!response.ok) throw new Error("ranking-save-failed");
+    if (!response.ok) throw new Error(response.status === 429 ? "送信が多いため少し時間を置いて再試行してください。" : response.status === 403 ? "この参加情報は別の端末で登録済みです。保存した元の端末で更新してください。" : "ランキングへ送信できませんでした。入力は保存されています。再度「ランキングに参加」を押してください。");
     const payload = await response.json();
     rankingConfigured = true;
     leaderboardEntries = normalizeRankingEntries(payload.entries || []);
-    renderLeaderboard();
+    rankingUpdatedAt = new Date().toISOString();
     track("ranking_join", { stamps, title, announce: Boolean(announce) });
     if (announce) showToast("ランキングを更新しました");
-  } catch {
+  } catch (error) {
     rankingConfigured = false;
+    rankingLastError = error.name === "TimeoutError" ? "通信が時間切れになりました。登録内容は保存されています。再送信してください。" : error.message;
+    if (announce) showToast("ランキングへの送信に失敗しました。登録欄で再試行できます");
+  } finally {
+    rankingSaving = false;
     renderLeaderboard();
-    if (announce) showToast("共有ランキングは未接続です");
   }
 }
 
@@ -5422,6 +5499,7 @@ function normalizeReviews(values) {
       id,
       facilityId: typeof review.facilityId === "string" ? review.facilityId.slice(0, 120) : "",
       clientId: typeof review.clientId === "string" ? review.clientId.slice(0, 80) : "",
+      owned: review.owned === true,
       nickname: typeof review.nickname === "string" && review.nickname.trim() ? review.nickname.trim().slice(0, 16) : "匿名サウナー",
       rating: Math.max(1, Math.min(5, Math.floor(Number(review.rating) || 5))),
       text,
@@ -5453,6 +5531,7 @@ function loadProfile() {
       nickname: typeof value.nickname === "string" ? value.nickname.trim().slice(0, 16) : "",
       email: typeof value.email === "string" ? value.email.trim().slice(0, 80) : "",
       registeredAt: typeof value.registeredAt === "string" ? value.registeredAt : "",
+      authToken: typeof value.authToken === "string" && value.authToken.length >= 32 ? value.authToken : createClientId() + createClientId(),
     };
   } catch {
     return createProfile();
@@ -5465,11 +5544,13 @@ function createProfile() {
     nickname: "",
     email: "",
     registeredAt: "",
+    authToken: createClientId() + createClientId(),
   };
 }
 
 function saveProfile() {
-  localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+  try { localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); }
+  catch { showToast("端末の保存容量を確認してください。登録内容を保存できませんでした"); }
 }
 
 function isProfileComplete() {
@@ -5566,13 +5647,20 @@ function getViewFromLocation() {
   return found?.[0] || "Explore";
 }
 
+function isArticleRoute() {
+  return /^\/guide\/[^/]+\/$/.test(location.pathname) && Boolean(document.getElementById("ssrContent"));
+}
+
 function pushViewUrl(view) {
-  updateDocumentMetaForView(view);
-  if (!location.protocol.startsWith("http")) return;
+  if (!location.protocol.startsWith("http")) {
+    updateDocumentMetaForView(view);
+    return;
+  }
   const path = view === "Facility" && activeFacilityId
     ? `/facility/${encodeURIComponent(activeFacilityId)}/`
     : VIEW_META[view]?.path || "/";
   if (location.pathname !== path) history.pushState({ view }, "", path);
+  updateDocumentMetaForView(view);
   trackPageView();
 }
 
@@ -5590,9 +5678,11 @@ function trackPageView() {
 }
 
 function updateDocumentMetaForView(view, facility = null) {
+  if (isArticleRoute()) return;
   const baseMeta = VIEW_META[view] || VIEW_META.Explore;
-  const meta = facility ? getFacilityMetaTags(facility) : baseMeta;
-  const url = facility ? getFacilityDetailUrl(facility) : new URL(baseMeta.path, APP_URL).href;
+  const pref = view === "Explore" && /^\/pref\//.test(location.pathname) ? PREFECTURES.find(item => item.name === selectedPrefecture) : null;
+  const meta = facility ? getFacilityMetaTags(facility) : pref ? {title:`${pref.name}のサウナ検索・サ活記録 | サ印帳`, description:`${pref.name}のサウナ候補を検索。住所・参照情報を確認して、訪問した施設をサ印として記録できます。`} : baseMeta;
+  const url = facility ? getFacilityDetailUrl(facility) : pref ? new URL(`/pref/${pref.slug}/`, APP_URL).href : new URL(baseMeta.path, APP_URL).href;
   document.title = meta.title;
   updateMeta("name", "description", meta.description);
   updateMeta("property", "og:title", meta.title);
@@ -5602,6 +5692,9 @@ function updateDocumentMetaForView(view, facility = null) {
   updateMeta("name", "twitter:description", meta.description);
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) canonical.href = url;
+  const indexable = !facility || Boolean(getFacilityAddress(facility) || facility.officialUrl || (facility.source === "Airbnb" && facility.city && facility.note));
+  updateMeta("name", "robots", indexable ? "index, follow, max-image-preview:large" : "noindex, follow");
+  updateMeta("name", "googlebot", indexable ? "index, follow, max-image-preview:large" : "noindex, follow");
 }
 
 function getFacilityMetaTags(facility) {
@@ -5821,6 +5914,12 @@ function buildSearchBlob(parts) {
 function addSearchBlobTokens(tokens, value) {
   const normalized = normalizeText(value);
   if (!normalized) return;
+  const cached = searchTokenCache.get(normalized);
+  if (cached) {
+    cached.forEach(token => tokens.add(token));
+    return;
+  }
+  const added = new Set();
   const variants = uniqueStrings([
     normalized,
     ...expandSearchTextVariants(normalized).slice(0, 12),
@@ -5836,20 +5935,23 @@ function addSearchBlobTokens(tokens, value) {
       romanizeSearchText(variant),
     ].forEach((token) => {
       const normalizedToken = normalizeSearchToken(token);
-      if (normalizedToken) tokens.add(normalizedToken);
+      if (normalizedToken) added.add(normalizedToken);
     });
   });
+  if (searchTokenCache.size >= 12000) searchTokenCache.clear();
+  searchTokenCache.set(normalized, [...added]);
+  added.forEach(token => tokens.add(token));
 }
 
 function addMatchedSynonymTokens(tokens) {
   const currentTokens = [...tokens];
-  SEARCH_SYNONYM_GROUPS.forEach((group) => {
-    const groupTokens = uniqueStrings(group.flatMap((term) => [
+  searchSynonymTokens ||= SEARCH_SYNONYM_GROUPS.map(group => ({ group, groupTokens: uniqueStrings(group.flatMap((term) => [
       normalizeSearchToken(term),
       normalizeKanaLoose(term),
       normalizeKanaLongVowels(term),
       romanizeSearchText(term),
-    ])).filter(Boolean);
+    ])).filter(Boolean) }));
+  searchSynonymTokens.forEach(({group, groupTokens}) => {
     const matched = groupTokens.some((groupToken) => currentTokens.some((token) => {
       if (token === groupToken) return true;
       return groupToken.length >= 4 && token.length >= 4 && (token.includes(groupToken) || groupToken.includes(token));

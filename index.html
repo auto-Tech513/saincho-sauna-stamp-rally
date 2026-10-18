@@ -348,6 +348,7 @@
             <div class="feature-filter-grid" id="featureFilterGrid"></div>
           </details>
           <div class="spotlight" id="spotlight"></div>
+          <p class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="facility-list" id="facilityList"></div>
         </section>
 
@@ -382,21 +383,23 @@
             <div class="panel-head">
               <div>
                 <p class="eyebrow">RANKING</p>
-                <h3>参加登録</h3>
+                <h3>ランキングに参加する</h3>
               </div>
               <span id="profileStatus">未登録</span>
             </div>
             <form class="profile-form" id="profileForm">
               <label>
                 <span>ニックネーム</span>
-                <input id="profileNickname" name="nickname" maxlength="16" autocomplete="nickname" placeholder="例: ととのい太郎" required />
+                <input id="profileNickname" name="nickname" maxlength="16" autocomplete="nickname" placeholder="例: ととのい太郎" aria-describedby="profileFeedback" required />
               </label>
               <label>
                 <span>メールアドレス</span>
-                <input id="profileEmail" name="email" type="email" maxlength="80" autocomplete="email" placeholder="name@example.com" required />
+                <input id="profileEmail" name="email" type="email" maxlength="80" autocomplete="email" placeholder="name@example.com" aria-describedby="profileVisibility" required />
               </label>
               <button class="primary-button" type="submit">ランキングに参加</button>
             </form>
+            <p class="form-help" id="profileVisibility">公開されるのはニックネーム・サ印数・称号です。メールアドレスは公開されません。サ印数は自己申告の記録です。</p>
+            <p class="form-help" id="profileFeedback" role="status" aria-live="polite">ニックネーム・サ印数・称号が公開されます。メールアドレスは公開されません。</p>
           </section>
           <section class="leaderboard-panel" aria-label="サ印ランキング">
             <div class="panel-head">
@@ -774,6 +777,7 @@
           <button type="button" data-menu-view="Stats">記録・ランキング</button>
           <button type="button" data-menu-view="Community">サウナ仲間</button>
         </div>
+        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="profileForm">ランキングに参加する</button>
       </section>
       <section class="menu-group" aria-labelledby="menuPlanTitle">
         <h3 id="menuPlanTitle">次のサ活を計画</h3>

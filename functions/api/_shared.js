@@ -27,6 +27,13 @@ export function rateLimitHeaders(result) {
   };
 }
 
+export async function ownershipHash(request) {
+  const token = request.headers.get("authorization")?.match(/^Bearer ([A-Za-z0-9_-]{32,160})$/)?.[1];
+  if (!token) return "";
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token));
+  return [...new Uint8Array(digest)].map(byte => byte.toString(16).padStart(2,"0")).join("");
+}
+
 async function clientHash(request) {
   const ip = request.headers.get("cf-connecting-ip")
     || request.headers.get("x-forwarded-for")?.split(",")[0]?.trim()

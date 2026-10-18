@@ -446,6 +446,7 @@ function renderFacilitySsr(facility) {
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
       ${note ? `<div><dt>施設情報</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
+      ${facility.addressCheckedAt || facility.sourceCheckedAt ? `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(facility.addressCheckedAt || facility.sourceCheckedAt)}">${escapeHtml(facility.addressCheckedAt || facility.sourceCheckedAt)}</time></dd></div>` : ""}
     </dl>
     <p>${escapeHtml(getFacilityDescription(facility))}</p>
     <p>${escapeHtml(quality.description)}</p>
@@ -540,7 +541,7 @@ function localBusinessJsonLd(facility) {
   const address = getAddress(facility);
   const latitude = Number(facility.lat);
   const longitude = Number(facility.lng);
-  const hasCoordinates = address && Number.isFinite(latitude) && Number.isFinite(longitude);
+  const hasCoordinates = address && latitude >= 20 && latitude <= 46 && longitude >= 122 && longitude <= 154;
   const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",

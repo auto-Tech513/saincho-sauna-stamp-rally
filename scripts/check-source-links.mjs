@@ -15,22 +15,24 @@ for (let index = 0; index < urls.length; index += 6) {
 }
 
 const missing = results.filter((item) => item.status === 404 || item.status === 410);
-const blocked = results.filter((item) => [401, 403, 429].includes(item.status));
+const blocked = results.filter((item) => [401, 403, 429].includes(item.status) || item.challenge);
 const errors = results.filter((item) => item.error);
-console.log(JSON.stringify({ checked: results.length, missing, blocked: blocked.length, networkErrors: errors.length }, null, 2));
-if (missing.length) process.exitCode = 1;
+console.log(JSON.stringify({ checked: results.length, reachable: results.filter(item => item.status >= 200 && item.status < 300 && !item.challenge).length, missing, blocked: blocked.length, networkErrors: errors.length }, null, 2));
+if (missing.length || blocked.length || errors.length) process.exitCode = 1;
 
 async function checkUrl(url) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
     const response = await fetch(url, {
-      method: "HEAD",
+      method: "GET",
       redirect: "follow",
       signal: controller.signal,
       headers: { "user-agent": "SainchoCatalogAudit/1.0 (+https://saincho-sauna-stamp-rally.pages.dev/about/)" },
     });
-    return { url, status: response.status, finalUrl: response.url };
+    const html = (response.headers.get("content-type") || "").includes("text/html") ? await response.text() : "";
+    const challenge = /Human Verification|captcha-container|aws-waf-token|cf-chl-widget/i.test(html);
+    return { url, status: response.status, finalUrl: response.url, challenge };
   } catch (error) {
     return { url, status: 0, error: error?.name || "request-failed" };
   } finally {

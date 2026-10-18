@@ -3,7 +3,7 @@ const MAX_RANKING_ENTRIES = 5000;
 const PUBLIC_LIMIT = 10;
 const MAX_SINGLE_UPDATE_GAIN = 200;
 const MAX_STAMPS = 5000;
-import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
+import { checkRateLimit, rateLimitHeaders, ownershipHash } from "./_shared.js";
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
   { count: 1, title: "はじめの一湯" },
@@ -29,6 +29,8 @@ export async function onRequestGet(context) {
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "ranking-storage-not-configured" }, 503);
+  const ownerHash = await ownershipHash(context.request);
+  if (!ownerHash) return json({ error: "registration-token-required" }, 401);
   const rateLimit = await checkRateLimit(storage, context.request, "ranking-post", { limit: 20, windowSeconds: 600 });
   if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
@@ -44,6 +46,9 @@ export async function onRequestPost(context) {
 
   const entries = await readEntries(storage);
   const current = entries.find((entry) => entry.id === candidate.id || entry.emailHash === candidate.emailHash);
+  if (current && (current.emailHash !== candidate.emailHash || current.id !== candidate.id || (current.ownerHash && current.ownerHash !== ownerHash))) {
+    return json({ error: "profile-ownership-required" }, 403);
+  }
   if (current && candidate.stamps - current.stamps > MAX_SINGLE_UPDATE_GAIN) {
     return json({ error: "stamp-growth-too-large", maxGain: MAX_SINGLE_UPDATE_GAIN }, 400);
   }
@@ -54,6 +59,7 @@ export async function onRequestPost(context) {
       id: candidate.id,
       nickname: candidate.nickname,
       emailHash: candidate.emailHash,
+      ownerHash,
       stamps: candidate.stamps,
       title: getTitle(candidate.stamps),
       updatedAt: new Date().toISOString(),
@@ -103,6 +109,7 @@ function normalizeStoredEntry(value) {
     id,
     nickname,
     emailHash,
+    ownerHash: typeof value.ownerHash === "string" ? value.ownerHash : "",
     stamps,
     title: getTitle(stamps),
     updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : "",

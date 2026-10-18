@@ -19,10 +19,12 @@ let completed = 0;
 let enriched = 0;
 let unavailable = 0;
 let failed = 0;
+let verificationBlocked = false;
 
 await runPool(targets, concurrency, async (facility) => {
   const cachedValue = cache[facility.sourceUrl];
-  const cached = cachedValue?.address || cachedValue?.status === 404 ? cachedValue : null;
+  const cacheAge = Date.now() - Date.parse(cachedValue?.checkedAt || "");
+  const cached = Number.isFinite(cacheAge) && cacheAge >= 0 && cacheAge <= 30 * 86400000 && (cachedValue?.address || cachedValue?.status === 404) ? cachedValue : null;
   let result = cached;
   if (!result) {
     result = await fetchAddress(facility);
@@ -33,6 +35,7 @@ await runPool(targets, concurrency, async (facility) => {
   if (result.address) {
     facility.address = result.address;
     facility.addressSource = "サウナイキタイ参照ページ";
+    facility.addressCheckedAt = new Intl.DateTimeFormat("en-CA", {timeZone:"Asia/Tokyo"}).format(new Date(result.checkedAt));
     enriched += 1;
   } else if (result.error) {
     failed += 1;
@@ -46,8 +49,8 @@ await runPool(targets, concurrency, async (facility) => {
 });
 
 await writeFile(cachePath, JSON.stringify(cache), "utf8");
-DATASET_META.catalogReviewedAt = new Date().toISOString().slice(0, 10);
 DATASET_META.addressEnrichedAt = new Date().toISOString();
+DATASET_META.addressEnrichmentScope = `住所取得対象${targets.length}件、反映${enriched}件。全施設の営業確認は未実施。`;
 DATASET_META.addressMethod = "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。";
 
 const output = [
@@ -76,6 +79,7 @@ async function runPool(items, size, worker) {
 }
 
 async function fetchAddress(facility) {
+  if (verificationBlocked) return { address: "", error: "human-verification-required" };
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     try {
       const response = await fetch(facility.sourceUrl, {
@@ -85,16 +89,24 @@ async function fetchAddress(facility) {
         },
         signal: AbortSignal.timeout(20000),
       });
-      if (response.status === 404) return { address: "", status: 404 };
+      if (response.status === 404) return { address: "", status: 404, checkedAt: new Date().toISOString() };
+      if ([403, 429].includes(response.status)) {
+        verificationBlocked = true;
+        return { address: "", error: `HTTP ${response.status}` };
+      }
       if (response.status !== 200) throw new Error(`HTTP ${response.status}`);
       const html = await response.text();
       if (html.length < 1000) throw new Error("empty-response");
+      if (/Human Verification|captcha|aws-waf/i.test(html)) {
+        verificationBlocked = true;
+        return {address:"",error:"human-verification-required"};
+      }
       const match = html.match(/<th[^>]*>\s*住所\s*<\/th>\s*<td[^>]*>([\s\S]*?)<\/td>/i);
       const address = normalizeAddress(match?.[1] || "", facility.prefecture);
       if (address && !address.includes(facility.prefecture)) {
         return { address: "", error: "prefecture-mismatch" };
       }
-      return { address, status: response.status };
+      return { address, status: response.status, checkedAt: new Date().toISOString() };
     } catch (error) {
       if (attempt === 3) return { address: "", error: String(error?.message || error) };
       await wait(350 * attempt);

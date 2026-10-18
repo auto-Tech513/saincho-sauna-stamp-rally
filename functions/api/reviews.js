@@ -1,6 +1,6 @@
 const KV_PREFIX = "reviews:v1:";
 const MAX_REVIEWS_PER_FACILITY = 40;
-import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
+import { checkRateLimit, rateLimitHeaders, ownershipHash } from "./_shared.js";
 
 export async function onRequestGet(context) {
   const storage = getStorage(context.env);
@@ -8,12 +8,14 @@ export async function onRequestGet(context) {
   const facilityId = cleanId(new URL(context.request.url).searchParams.get("facilityId"));
   if (!facilityId) return json({ error: "facility-id-required" }, 400);
   const reviews = await readReviews(storage, facilityId);
-  return json({ reviews, configured: true }, 200);
+  return json({ reviews: publicReviews(reviews, await ownershipHash(context.request)), configured: true }, 200);
 }
 
 export async function onRequestPost(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "reviews-storage-not-configured" }, 503);
+  const ownerHash = await ownershipHash(context.request);
+  if (!ownerHash) return json({ error: "review-token-required" }, 401);
   const rateLimit = await checkRateLimit(storage, context.request, "reviews-post", { limit: 12, windowSeconds: 600 });
   if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
 
@@ -28,21 +30,26 @@ export async function onRequestPost(context) {
   if (!review) return json({ error: "invalid-review" }, 400);
 
   const current = await readReviews(storage, review.facilityId);
+  const duplicate = current.find(item => item.ownerHash === ownerHash && item.text === review.text && item.rating === review.rating && Date.now() - Date.parse(item.createdAt) < 600000);
+  if (duplicate) return json({ reviews: publicReviews(current, ownerHash), configured: true }, 200);
   const next = [
     {
       ...review,
+      ownerHash,
       id: `review-${hashId(`${review.facilityId}:${review.clientId}:${review.text}:${Date.now()}`)}`,
       createdAt: new Date().toISOString(),
     },
     ...current,
   ].slice(0, MAX_REVIEWS_PER_FACILITY);
   await storage.put(storageKey(review.facilityId), JSON.stringify(next));
-  return json({ reviews: next, configured: true }, 201);
+  return json({ reviews: publicReviews(next, ownerHash), configured: true }, 201);
 }
 
 export async function onRequestDelete(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ error: "reviews-storage-not-configured" }, 503);
+  const ownerHash = await ownershipHash(context.request);
+  if (!ownerHash) return json({ error: "review-token-required" }, 401);
   const rateLimit = await checkRateLimit(storage, context.request, "reviews-delete", { limit: 40, windowSeconds: 600 });
   if (!rateLimit.ok) return json({ error: "rate-limited" }, 429, rateLimitHeaders(rateLimit));
   const url = new URL(context.request.url);
@@ -51,9 +58,11 @@ export async function onRequestDelete(context) {
   const clientId = cleanId(url.searchParams.get("clientId"));
   if (!facilityId || !reviewId || !clientId) return json({ error: "delete-params-required" }, 400);
   const current = await readReviews(storage, facilityId);
-  const next = current.filter((review) => !(review.id === reviewId && review.clientId === clientId));
+  const target = current.find(review => review.id === reviewId);
+  if (target && (!target.ownerHash || target.ownerHash !== ownerHash)) return json({ error: "review-ownership-required" }, 403);
+  const next = current.filter((review) => review.id !== reviewId);
   await storage.put(storageKey(facilityId), JSON.stringify(next));
-  return json({ reviews: next, configured: true }, 200);
+  return json({ reviews: publicReviews(next, ownerHash), configured: true }, 200);
 }
 
 function getStorage(env) {
@@ -84,8 +93,16 @@ function normalizeStoredReview(value) {
   return {
     ...review,
     id,
+    ownerHash: typeof value.ownerHash === "string" ? value.ownerHash : "",
     createdAt: typeof value.createdAt === "string" ? value.createdAt : "",
   };
+}
+
+function publicReviews(reviews, ownerHash) {
+  return reviews.map(({clientId, ownerHash: storedHash, ...review}) => ({
+    ...review,
+    owned: Boolean(ownerHash && storedHash && ownerHash === storedHash),
+  }));
 }
 
 function storageKey(facilityId) {

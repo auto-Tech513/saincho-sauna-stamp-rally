@@ -51,6 +51,8 @@ const metrics = {
   withOfficialUrl: count(SEED_FACILITIES, (facility) => isHttpUrl(facility.officialUrl)),
   withNote: count(SEED_FACILITIES, (facility) => facility.note),
   withAccess: count(SEED_FACILITIES, (facility) => facility.access),
+  sourcesCheckedInLast60Days: count(SEED_FACILITIES, facility => isRecent(facility.sourceCheckedAt)),
+  addressesCheckedInLast60Days: count(SEED_FACILITIES, facility => isRecent(facility.addressCheckedAt)),
   gearProducts: GEAR_PRODUCTS.length,
   guideArticles: SAUNA_ARTICLES.length,
   guideFaqs: GUIDE_FAQS.length,
@@ -66,6 +68,7 @@ assert(reviewAgeDays <= 60, `カタログ確認日から60日を超えていま�
 if (metrics.withAddress / metrics.facilitiesRaw < 0.5) warnings.push(`番地住所の掲載率が50%未満です: ${ratio(metrics.withAddress, metrics.facilitiesRaw)}`);
 if (metrics.withOfficialUrl / metrics.facilitiesRaw < 0.2) warnings.push(`公式URLの掲載率が20%未満です: ${ratio(metrics.withOfficialUrl, metrics.facilitiesRaw)}`);
 if (metrics.withNote / metrics.facilitiesRaw < 0.5) warnings.push(`施設固有の紹介文掲載率が50%未満です: ${ratio(metrics.withNote, metrics.facilitiesRaw)}`);
+if (metrics.sourcesCheckedInLast60Days / metrics.facilitiesRaw < .95) warnings.push(`60日以内に参照元を照合した施設が95%未満です: ${ratio(metrics.sourcesCheckedInLast60Days, metrics.facilitiesRaw)}`);
 if (aliases.length) warnings.push(`別名候補${metrics.aliasesToCanonicalize}件をビルド時に正規URLへ統合します`);
 
 console.log(JSON.stringify({ ok: errors.length === 0, metrics, warnings, errors }, null, 2));
@@ -73,6 +76,12 @@ if (errors.length) process.exitCode = 1;
 
 function assert(condition, message) {
   if (!condition) errors.push(message);
+}
+
+function isRecent(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || "")) return false;
+  const age = Date.now() - Date.parse(`${value}T00:00:00Z`);
+  return age >= -86400000 && age <= 60 * 86400000;
 }
 
 function count(values, predicate) {

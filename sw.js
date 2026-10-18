@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v47-nearby-logshare-v3";
+const CACHE_NAME = "saincho-v48-audit-20261018";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -28,7 +28,7 @@ self.addEventListener("install", (event) => {
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((key) => !key.startsWith(CACHE_NAME)).map((key) => caches.delete(key))))
+      .then((keys) => Promise.all(keys.filter((key) => key.startsWith("saincho-") && !key.startsWith(CACHE_NAME)).map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
@@ -36,6 +36,7 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
 
   if (url.pathname.startsWith("/api/")) {
     event.respondWith(fetch(event.request));

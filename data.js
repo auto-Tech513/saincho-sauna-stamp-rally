@@ -5,7 +5,9 @@ export const DATASET_META = {
   "minimumFacilitiesPerPrefecture": 80,
   "notes": "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
   "addressEnrichedAt": "2026-07-11T12:29:06.524Z",
-  "addressMethod": "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。"
+  "addressMethod": "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。",
+  "lastSourceAuditAt": "2026-10-18",
+  "lastSourceAuditScope": "SaunaTime施設別参照ページ1189件。全施設の営業状況確認を意味しません。"
 };
 
 export const PREFECTURES = [
@@ -298,68 +300,86 @@ export const SEED_FACILITIES = [
     "id": "st-hokkaido-4701",
     "name": "RENOSAUNA",
     "prefecture": "北海道",
-    "address": "〒002-8043 北海道札幌市北区東茨戸１３２ シャトレーゼガトーキングダムサッポロ特設会場",
-    "addressSource": "SaunaTime",
+    "address": "〒002-8043 北海道札幌市北区東茨戸132 シャトレーゼガトーキングダムサッポロ特設会場",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.172639,
     "lng": 141.355641,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4701/"
+    "sourceUrl": "https://saunatime.jp/saunas/4701/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://renosauna.studio.site/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4701/"
   },
   {
     "id": "st-hokkaido-4690",
     "name": "SNOWY",
     "prefecture": "北海道",
-    "address": "〒061-1101 北海道北広島市中の沢３１６−２",
-    "addressSource": "SaunaTime",
+    "address": "〒061-1101 北海道北広島市中の沢316−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.972825,
     "lng": 141.528153,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4690/"
+    "sourceUrl": "https://saunatime.jp/saunas/4690/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://savebleu.amebaownd.com/pages/5461528/page_202110251045",
+    "officialUrlSource": "https://saunatime.jp/saunas/4690/"
   },
   {
     "id": "st-hokkaido-4719",
     "name": "TKDHOUSE旭川",
     "prefecture": "北海道",
-    "address": "〒070-0035 北海道旭川市５条通５丁目１１８４−３",
-    "addressSource": "SaunaTime",
+    "address": "〒070-0035 北海道旭川市5条通5丁目1184−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.772256,
     "lng": 142.358224,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4719/"
+    "sourceUrl": "https://saunatime.jp/saunas/4719/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hokkaido-232",
     "name": "えにわ温泉ほのか",
     "prefecture": "北海道",
-    "address": "〒061-1405 北海道恵庭市戸磯３９７−２",
-    "addressSource": "SaunaTime",
+    "address": "〒061-1405 北海道恵庭市戸磯397−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.876205,
     "lng": 141.607148,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/232/"
+    "sourceUrl": "https://saunatime.jp/saunas/232/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yudokoro-honoka.jp/eniwa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/232/"
   },
   {
     "id": "st-hokkaido-1083",
     "name": "シャトレーゼ ガトーキングダムサッポロ",
     "prefecture": "北海道",
     "address": "〒002-8043 北海道札幌市北区東茨戸132番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.17102,
     "lng": 141.355531,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1083/"
+    "sourceUrl": "https://saunatime.jp/saunas/1083/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.gateauxkingdom.com/pool-spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1083/"
   },
   {
     "id": "st-hokkaido-409",
     "name": "スパ・イン メープルロッジ",
     "prefecture": "北海道",
-    "address": "〒068-3188 北海道岩見沢市毛陽町１８３",
-    "addressSource": "SaunaTime",
+    "address": "〒068-3188 北海道岩見沢市毛陽町183",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.156792,
     "lng": 141.930133,
     "trait": "onsen",
@@ -370,38 +390,50 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/409/"
+    "sourceUrl": "https://saunatime.jp/saunas/409/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.maplelodge.or.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/409/"
   },
   {
     "id": "st-hokkaido-4551",
     "name": "スパアルパ",
     "prefecture": "北海道",
-    "address": "〒004-0052 北海道札幌市厚別区厚別中央２条５丁目５−２５ ホテルエミシア地下1階",
-    "addressSource": "SaunaTime",
+    "address": "〒004-0052 北海道札幌市厚別区厚別中央2条5丁目5−25 ホテルエミシア地下1階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.04108,
     "lng": 141.473518,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4551/"
+    "sourceUrl": "https://saunatime.jp/saunas/4551/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotel-emisia.com/relaxation/spa/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4551/"
   },
   {
     "id": "st-hokkaido-15",
     "name": "ニコーリフレ",
     "prefecture": "北海道",
     "address": "北海道札幌市中央区南3条西2丁目14番地 ニコービル4F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.057323,
     "lng": 141.355451,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/15/"
+    "sourceUrl": "https://saunatime.jp/saunas/15/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.nikoh.info/",
+    "officialUrlSource": "https://saunatime.jp/saunas/15/"
   },
   {
     "id": "st-hokkaido-226",
     "name": "のんたの湯",
     "prefecture": "北海道",
-    "address": "〒099-2102 北海道北見市端野町二区７９２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒099-2102 北海道北見市端野町二区792−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.862366,
     "lng": 143.927221,
     "trait": "onsen",
@@ -412,14 +444,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/226/"
+    "sourceUrl": "https://saunatime.jp/saunas/226/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.kitami.lg.jp/docs/7030/",
+    "officialUrlSource": "https://saunatime.jp/saunas/226/"
   },
   {
     "id": "st-hokkaido-256",
     "name": "ひまわり温泉 森の郷",
     "prefecture": "北海道",
-    "address": "〒080-0021 北海道帯広市西１１条南３２丁目７−２",
-    "addressSource": "SaunaTime",
+    "address": "〒080-0021 北海道帯広市西11条南32丁目7−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.89434,
     "lng": 143.191085,
     "trait": "wood",
@@ -432,26 +468,32 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/256/"
+    "sourceUrl": "https://saunatime.jp/saunas/256/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://himawari-morinosato.com/home/",
+    "officialUrlSource": "https://saunatime.jp/saunas/256/"
   },
   {
     "id": "st-hokkaido-1968",
     "name": "ふれあいセンターフロックス",
     "prefecture": "北海道",
     "address": "〒099-3244 北海道大空町 北海道大空町東藻琴378番地の8",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.840766,
     "lng": 144.296063,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1968/"
+    "sourceUrl": "https://saunatime.jp/saunas/1968/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hokkaido-4588",
     "name": "プレミアホテル-CABIN-札幌",
     "prefecture": "北海道",
-    "address": "〒064-0805 北海道札幌市中央区南５条西７丁目",
-    "addressSource": "SaunaTime",
+    "address": "〒064-0805 北海道札幌市中央区南5条西7丁目",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.053542,
     "lng": 141.347879,
     "trait": "award",
@@ -463,14 +505,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4588/",
-    "city": "札幌市"
+    "city": "札幌市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://cabin.premierhotel-group.com/sapporo/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4588/"
   },
   {
     "id": "st-hokkaido-1131",
     "name": "ホテルモントレエーデルホフ札幌 カルロビ・バリ・スパ",
     "prefecture": "北海道",
-    "address": "〒060-0002 北海道札幌市中央区北２条西１丁目１",
-    "addressSource": "SaunaTime",
+    "address": "〒060-0002 北海道札幌市中央区北2条西1丁目1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.064435,
     "lng": 141.355612,
     "trait": "onsen",
@@ -484,14 +530,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1131/",
-    "city": "札幌市 宿泊者限定"
+    "city": "札幌市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hokkaido-1138",
     "name": "ほろしん温泉ほたる館",
     "prefecture": "北海道",
-    "address": "〒078-2225 北海道雨竜郡沼田町幌新３７７",
-    "addressSource": "SaunaTime",
+    "address": "〒078-2225 北海道雨竜郡沼田町幌新377",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.887013,
     "lng": 141.92325,
     "trait": "onsen",
@@ -502,26 +550,34 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1138/"
+    "sourceUrl": "https://saunatime.jp/saunas/1138/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.horosin-onsen.com/spa.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1138/"
   },
   {
     "id": "st-hokkaido-1032",
     "name": "観月苑",
     "prefecture": "北海道",
-    "address": "〒080-0263 北海道河東郡音更町十勝川温泉南１４丁目２",
-    "addressSource": "SaunaTime",
+    "address": "〒080-0263 北海道河東郡音更町十勝川温泉南14丁目2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.930397,
     "lng": 143.299655,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1032/"
+    "sourceUrl": "https://saunatime.jp/saunas/1032/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kangetsuen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1032/"
   },
   {
     "id": "st-hokkaido-970",
     "name": "極楽湯さっぽろ弥生店",
     "prefecture": "北海道",
-    "address": "〒060-0004 北海道札幌市中央区北３条西１２丁目１",
-    "addressSource": "SaunaTime",
+    "address": "〒060-0004 北海道札幌市中央区北3条西12丁目1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.063481,
     "lng": 141.337575,
     "trait": "onsen",
@@ -532,14 +588,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/970/"
+    "sourceUrl": "https://saunatime.jp/saunas/970/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hokkaido-4715",
     "name": "琴似温泉",
     "prefecture": "北海道",
-    "address": "〒063-0867 北海道札幌市西区八軒７条東１丁目１−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒063-0867 北海道札幌市西区八軒7条東1丁目1−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.089123,
     "lng": 141.316909,
     "trait": "onsen",
@@ -550,39 +608,51 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4715/"
+    "sourceUrl": "https://saunatime.jp/saunas/4715/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kita-no-sento.com/sento/146-2/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4715/"
   },
   {
     "id": "st-hokkaido-178",
     "name": "黒松内温泉ぶなの森",
     "prefecture": "北海道",
-    "address": "〒048-0101 北海道寿都郡黒松内町黒松内５４５",
-    "addressSource": "SaunaTime",
+    "address": "〒048-0101 北海道寿都郡黒松内町黒松内545",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.657132,
     "lng": 140.309196,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/178/"
+    "sourceUrl": "https://saunatime.jp/saunas/178/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://bunanosato.jimdosite.com/%E9%BB%92%E6%9D%BE%E5%86%85%E6%B8%A9%E6%B3%89%E3%81%B6%E3%81%AA%E3%81%AE%E6%A3%AE/",
+    "officialUrlSource": "https://saunatime.jp/saunas/178/"
   },
   {
     "id": "st-hokkaido-1140",
     "name": "三笠天然温泉 太古の湯",
     "prefecture": "北海道",
-    "address": "〒068-2165 北海道三笠市岡山１０４２−２０",
-    "addressSource": "SaunaTime",
+    "address": "〒068-2165 北海道三笠市岡山1042−20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.247512,
     "lng": 141.806141,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1140/",
-    "city": "三笠市"
+    "city": "三笠市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.clh-kk.com/taikonoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1140/"
   },
   {
     "id": "st-hokkaido-976",
     "name": "森のスパリゾート 北海道ホテル",
     "prefecture": "北海道",
-    "address": "〒080-8511 北海道帯広市西７条南１９丁目 西７条南19丁目1",
-    "addressSource": "SaunaTime",
+    "address": "〒080-8511 北海道帯広市西7条南19丁目 西7条南19丁目1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 42.910291,
     "lng": 143.196984,
     "trait": "wood",
@@ -598,14 +668,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/976/",
-    "city": "帯広市"
+    "city": "帯広市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hokkaidohotel.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/976/"
   },
   {
     "id": "st-hokkaido-170",
     "name": "森林公園温泉 きよら",
     "prefecture": "北海道",
-    "address": "〒004-0004 北海道札幌市厚別区厚別東４条７丁目１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒004-0004 北海道札幌市厚別区厚別東4条7丁目1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.052001,
     "lng": 141.48516,
     "trait": "wood",
@@ -619,7 +693,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/170/",
-    "city": "札幌市"
+    "city": "札幌市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.onsen-kiyora.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/170/"
   },
   {
     "id": "sc2025-shiriuchi-onsen",
@@ -639,8 +717,8 @@ export const SEED_FACILITIES = [
     "id": "st-hokkaido-407",
     "name": "秩父別温泉",
     "prefecture": "北海道",
-    "address": "〒078-2100 北海道雨竜郡秩父別町秩父別 秩父別町２０８５",
-    "addressSource": "SaunaTime",
+    "address": "〒078-2100 北海道雨竜郡秩父別町秩父別 秩父別町2085",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.765029,
     "lng": 141.966414,
     "trait": "onsen",
@@ -651,14 +729,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/407/"
+    "sourceUrl": "https://saunatime.jp/saunas/407/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://chipsk.jp/yuuyu/onsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/407/"
   },
   {
     "id": "st-hokkaido-1065",
     "name": "天然温泉ＡＣＢ屯田店",
     "prefecture": "北海道",
-    "address": "〒002-0857 北海道札幌市北区屯田７条７丁目２−６ 天然温泉ＡＣＢ屯田店",
-    "addressSource": "SaunaTime",
+    "address": "〒002-0857 北海道札幌市北区屯田7条7丁目2−6 天然温泉ACB屯田店",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.137021,
     "lng": 141.329584,
     "trait": "onsen",
@@ -669,14 +751,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1065/"
+    "sourceUrl": "https://saunatime.jp/saunas/1065/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://acb-tonden.sakura.ne.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1065/"
   },
   {
     "id": "st-hokkaido-1114",
     "name": "湯の郷 絢ほのか",
     "prefecture": "北海道",
-    "address": "〒004-0842 北海道札幌市清田区清田２条３丁目２−２６",
-    "addressSource": "SaunaTime",
+    "address": "〒004-0842 北海道札幌市清田区清田2条3丁目2−26",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.001119,
     "lng": 141.4357,
     "trait": "onsen",
@@ -688,14 +774,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1114/",
-    "city": "札幌市"
+    "city": "札幌市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yudokoro-honoka.jp/kiyota/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1114/"
   },
   {
     "id": "st-hokkaido-1150",
     "name": "湯屋サーモン",
     "prefecture": "北海道",
-    "address": "〒063-0827 北海道札幌市西区発寒７条１４丁目１６−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒063-0827 北海道札幌市西区発寒7条14丁目16−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.099372,
     "lng": 141.269415,
     "trait": "onsen",
@@ -707,7 +797,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1150/",
-    "city": "札幌市"
+    "city": "札幌市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yuya-salmon.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1150/"
   },
   {
     "id": "sc2025-yuyado-daiichi",
@@ -726,8 +820,8 @@ export const SEED_FACILITIES = [
     "id": "st-hokkaido-169",
     "name": "湯処ほのか",
     "prefecture": "北海道",
-    "address": "〒061-1103 北海道北広島市虹ヶ丘１丁目８−６",
-    "addressSource": "SaunaTime",
+    "address": "〒061-1103 北海道北広島市虹ヶ丘1丁目8−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.018004,
     "lng": 141.489769,
     "trait": "onsen",
@@ -739,14 +833,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/169/",
-    "city": "北広島市"
+    "city": "北広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yudokoro-honoka.jp/kitahiro/",
+    "officialUrlSource": "https://saunatime.jp/saunas/169/"
   },
   {
     "id": "st-hokkaido-4636",
     "name": "北見温泉 金の湯",
     "prefecture": "北海道",
-    "address": "〒099-2102 北海道北見市端野町二区８２９",
-    "addressSource": "SaunaTime",
+    "address": "〒099-2102 北海道北見市端野町二区829",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.870763,
     "lng": 143.92448,
     "trait": "onsen",
@@ -757,14 +855,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4636/"
+    "sourceUrl": "https://saunatime.jp/saunas/4636/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kitamikanko.jp/kanko/heal/heal06.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4636/"
   },
   {
     "id": "st-hokkaido-1151",
     "name": "北見湯元のつけ乃湯",
     "prefecture": "北海道",
-    "address": "〒090-0810 北海道北見市ひかり野３丁目２−４",
-    "addressSource": "SaunaTime",
+    "address": "〒090-0810 北海道北見市ひかり野3丁目2−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 43.828006,
     "lng": 143.930843,
     "trait": "onsen",
@@ -775,20 +877,28 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1151/"
+    "sourceUrl": "https://saunatime.jp/saunas/1151/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://paper333.sakura.ne.jp/test/notsukenoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1151/"
   },
   {
     "id": "st-aomori-180",
     "name": "あおもり健康ランド",
     "prefecture": "青森県",
-    "address": "〒038-0042 青森県青森市新城平岡４０４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒038-0042 青森県青森市新城平岡404−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.834103,
     "lng": 140.692041,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/180/",
-    "city": "青森市"
+    "city": "青森市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.aomorikenkouland.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/180/"
   },
   {
     "id": "st-aomori-953",
@@ -803,7 +913,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/953/",
-    "city": "青森市"
+    "city": "青森市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-963",
@@ -811,7 +922,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/963/"
+    "sourceUrl": "https://saunatime.jp/saunas/963/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1206",
@@ -825,7 +937,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1206/"
+    "sourceUrl": "https://saunatime.jp/saunas/1206/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1191",
@@ -839,7 +952,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1191/"
+    "sourceUrl": "https://saunatime.jp/saunas/1191/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1230",
@@ -853,7 +967,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1230/"
+    "sourceUrl": "https://saunatime.jp/saunas/1230/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1212",
@@ -868,7 +983,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1212/",
-    "city": "上北郡六ヶ所村"
+    "city": "上北郡六ヶ所村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1214",
@@ -876,7 +992,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1214/"
+    "sourceUrl": "https://saunatime.jp/saunas/1214/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1200",
@@ -892,7 +1009,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1200/"
+    "sourceUrl": "https://saunatime.jp/saunas/1200/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1203",
@@ -900,7 +1018,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1203/"
+    "sourceUrl": "https://saunatime.jp/saunas/1203/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4282",
@@ -914,7 +1033,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4282/"
+    "sourceUrl": "https://saunatime.jp/saunas/4282/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-183",
@@ -922,7 +1042,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/183/"
+    "sourceUrl": "https://saunatime.jp/saunas/183/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4283",
@@ -936,7 +1057,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4283/"
+    "sourceUrl": "https://saunatime.jp/saunas/4283/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1185",
@@ -951,7 +1073,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1185/",
-    "city": "西津軽郡深浦町"
+    "city": "西津軽郡深浦町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-942",
@@ -965,7 +1088,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/942/"
+    "sourceUrl": "https://saunatime.jp/saunas/942/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4281",
@@ -979,7 +1103,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4281/"
+    "sourceUrl": "https://saunatime.jp/saunas/4281/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4166",
@@ -994,7 +1119,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4166/",
-    "city": "青森市"
+    "city": "青森市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1219",
@@ -1008,7 +1134,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1219/"
+    "sourceUrl": "https://saunatime.jp/saunas/1219/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1205",
@@ -1022,7 +1149,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1205/"
+    "sourceUrl": "https://saunatime.jp/saunas/1205/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1231",
@@ -1036,7 +1164,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1231/"
+    "sourceUrl": "https://saunatime.jp/saunas/1231/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4285",
@@ -1050,32 +1179,37 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4285/"
+    "sourceUrl": "https://saunatime.jp/saunas/4285/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-944",
     "name": "青森まちなかおんせん",
     "prefecture": "青森県",
-    "address": "〒030-0862 青森県青森市古川１丁目１０−１４",
-    "addressSource": "SaunaTime",
+    "address": "〒030-0862 青森県青森市古川1丁目10−14",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.824777,
     "lng": 140.735354,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/944/"
+    "sourceUrl": "https://saunatime.jp/saunas/944/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4376",
     "name": "浅虫温泉 椿館",
     "prefecture": "青森県",
     "address": "〒039-3501青森県青森市浅虫内野14",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.88774,
     "lng": 140.864221,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4376/",
-    "city": "青森市 宿泊者限定"
+    "city": "青森市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-270",
@@ -1084,7 +1218,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/270/",
-    "city": "平川市"
+    "city": "平川市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1210",
@@ -1099,7 +1234,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1210/",
-    "city": "上北郡七戸町"
+    "city": "上北郡七戸町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-265",
@@ -1107,7 +1243,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/265/"
+    "sourceUrl": "https://saunatime.jp/saunas/265/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1186",
@@ -1121,7 +1258,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1186/"
+    "sourceUrl": "https://saunatime.jp/saunas/1186/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-4286",
@@ -1129,7 +1267,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4286/"
+    "sourceUrl": "https://saunatime.jp/saunas/4286/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-1216",
@@ -1137,7 +1276,8 @@ export const SEED_FACILITIES = [
     "prefecture": "青森県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1216/"
+    "sourceUrl": "https://saunatime.jp/saunas/1216/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-aomori-3357",
@@ -1151,7 +1291,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3357/"
+    "sourceUrl": "https://saunatime.jp/saunas/3357/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1333",
@@ -1165,7 +1306,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1333/"
+    "sourceUrl": "https://saunatime.jp/saunas/1333/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1305",
@@ -1181,19 +1323,24 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1305/"
+    "sourceUrl": "https://saunatime.jp/saunas/1305/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-187",
     "name": "サウナ＆カプセル宮古",
     "prefecture": "岩手県",
-    "address": "〒027-0053 岩手県宮古市長町１丁目４−３",
-    "addressSource": "SaunaTime",
+    "address": "〒027-0053 岩手県宮古市長町1丁目4−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.637906,
     "lng": 141.929511,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/187/"
+    "sourceUrl": "https://saunatime.jp/saunas/187/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sauna-capsule.fhd.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/187/"
   },
   {
     "id": "st-iwate-1350",
@@ -1201,19 +1348,24 @@ export const SEED_FACILITIES = [
     "prefecture": "岩手県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1350/"
+    "sourceUrl": "https://saunatime.jp/saunas/1350/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-65",
     "name": "ゆファミリーレストラン古戦場",
     "prefecture": "岩手県",
     "address": "岩手県一関市赤荻字堺78-2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.939439,
     "lng": 141.107322,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/65/"
+    "sourceUrl": "https://saunatime.jp/saunas/65/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kosenjyo.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/65/"
   },
   {
     "id": "st-iwate-1330",
@@ -1228,14 +1380,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1330/",
-    "city": "紫波郡紫波町"
+    "city": "紫波郡紫波町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-117",
     "name": "安比温泉 白樺の湯",
     "prefecture": "岩手県",
     "address": "〒028-7306 岩手県八幡平市安比高原605-365",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.999749,
     "lng": 140.975257,
     "trait": "onsen",
@@ -1247,14 +1400,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/117/",
-    "city": "八幡平市"
+    "city": "八幡平市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.appi.co.jp/heal/shirakaba_spa",
+    "officialUrlSource": "https://saunatime.jp/saunas/117/"
   },
   {
     "id": "st-iwate-68",
     "name": "一関温泉 山桜 桃の湯",
     "prefecture": "岩手県",
     "address": "岩手県一関市赤荻字笹谷393-6",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.950443,
     "lng": 141.106938,
     "trait": "wood",
@@ -1268,7 +1425,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/68/",
-    "city": "一関市"
+    "city": "一関市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.momonoyu.info/index2.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/68/"
   },
   {
     "id": "st-iwate-1314",
@@ -1283,19 +1444,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1314/",
-    "city": "胆沢郡金ケ崎町"
+    "city": "胆沢郡金ケ崎町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-3881",
     "name": "開運の湯",
     "prefecture": "岩手県",
-    "address": "〒020-0866 岩手県盛岡市本宮３丁目３−８",
-    "addressSource": "SaunaTime",
+    "address": "〒020-0866 岩手県盛岡市本宮3丁目3−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.692532,
     "lng": 141.133936,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3881/"
+    "sourceUrl": "https://saunatime.jp/saunas/3881/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kaiunnoyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3881/"
   },
   {
     "id": "st-iwate-1345",
@@ -1309,14 +1475,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1345/"
+    "sourceUrl": "https://saunatime.jp/saunas/1345/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1337",
     "name": "喜盛の湯",
     "prefecture": "岩手県",
-    "address": "〒020-0863 岩手県盛岡市南仙北１丁目１８−５０",
-    "addressSource": "SaunaTime",
+    "address": "〒020-0863 岩手県盛岡市南仙北1丁目18−50",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.678644,
     "lng": 141.151476,
     "trait": "onsen",
@@ -1328,14 +1495,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1337/",
-    "city": "盛岡市"
+    "city": "盛岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-3692",
     "name": "久慈サウナ",
     "prefecture": "岩手県",
-    "address": "〒028-0051 岩手県久慈市川崎町１１−７ レジャーセンター三光 4F",
-    "addressSource": "SaunaTime",
+    "address": "〒028-0051 岩手県久慈市川崎町11−7 レジャーセンター三光 4F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.19091,
     "lng": 141.771583,
     "trait": "award",
@@ -1344,7 +1513,9 @@ export const SEED_FACILITIES = [
     "city": "久慈市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1326",
@@ -1358,7 +1529,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1326/"
+    "sourceUrl": "https://saunatime.jp/saunas/1326/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1349",
@@ -1374,7 +1546,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1349/"
+    "sourceUrl": "https://saunatime.jp/saunas/1349/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1325",
@@ -1389,7 +1562,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1325/",
-    "city": "和賀郡西和賀町"
+    "city": "和賀郡西和賀町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1327",
@@ -1403,7 +1577,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1327/"
+    "sourceUrl": "https://saunatime.jp/saunas/1327/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1315",
@@ -1419,7 +1594,8 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1315/"
+    "sourceUrl": "https://saunatime.jp/saunas/1315/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1361",
@@ -1433,31 +1609,40 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1361/"
+    "sourceUrl": "https://saunatime.jp/saunas/1361/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-3362",
     "name": "新鉛温泉 愛隣館",
     "prefecture": "岩手県",
-    "address": "〒025-0252 岩手県花巻市鉛西鉛西鉛２３",
-    "addressSource": "SaunaTime",
+    "address": "〒025-0252 岩手県花巻市鉛西鉛西鉛23",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.46961,
     "lng": 140.988527,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3362/"
+    "sourceUrl": "https://saunatime.jp/saunas/3362/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.airinkan.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3362/"
   },
   {
     "id": "st-iwate-1324",
     "name": "瀬峯坂温泉宝珠の湯",
     "prefecture": "岩手県",
-    "address": "〒024-0321 岩手県北上市和賀町岩崎２地割３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒024-0321 岩手県北上市和賀町岩崎2地割3−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.242572,
     "lng": 141.000771,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1324/"
+    "sourceUrl": "https://saunatime.jp/saunas/1324/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://houjunoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1324/"
   },
   {
     "id": "st-iwate-1323",
@@ -1472,14 +1657,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1323/",
-    "city": "盛岡市"
+    "city": "盛岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1309",
     "name": "胆沢川温泉さくらの湯",
     "prefecture": "岩手県",
-    "address": "〒023-0003 岩手県奥州市水沢区佐倉河字明神堂２７",
-    "addressSource": "SaunaTime",
+    "address": "〒023-0003 岩手県奥州市水沢区佐倉河字明神堂27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.164395,
     "lng": 141.090384,
     "trait": "onsen",
@@ -1490,7 +1676,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1309/"
+    "sourceUrl": "https://saunatime.jp/saunas/1309/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.e-sakuranoyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1309/"
   },
   {
     "id": "st-iwate-1353",
@@ -1504,7 +1694,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1353/"
+    "sourceUrl": "https://saunatime.jp/saunas/1353/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1359",
@@ -1519,7 +1710,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1359/",
-    "city": "宮古市"
+    "city": "宮古市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1313",
@@ -1528,7 +1720,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1313/",
-    "city": "八幡平市"
+    "city": "八幡平市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1320",
@@ -1542,20 +1735,25 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1320/"
+    "sourceUrl": "https://saunatime.jp/saunas/1320/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1312",
     "name": "舞鶴の湯",
     "prefecture": "岩手県",
-    "address": "〒029-4205 岩手県奥州市前沢区徳沢１−４５",
-    "addressSource": "SaunaTime",
+    "address": "〒029-4205 岩手県奥州市前沢区徳沢1−45",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.030046,
     "lng": 141.108645,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1312/",
-    "city": "奥州市"
+    "city": "奥州市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.oshu.iwate.jp/site/kanko/5894.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1312/"
   },
   {
     "id": "st-iwate-1343",
@@ -1570,40 +1768,49 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1343/",
-    "city": "八幡平市"
+    "city": "八幡平市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-iwate-1316",
     "name": "悠久の湯平泉温泉",
     "prefecture": "岩手県",
-    "address": "〒029-4102 岩手県西磐井郡平泉町平泉大沢１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒029-4102 岩手県西磐井郡平泉町平泉大沢1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.990959,
     "lng": 141.110622,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1316/",
-    "city": "西磐井郡平泉町"
+    "city": "西磐井郡平泉町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.town.hiraizumi.iwate.jp/index.cfm/25,0,125,271,html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1316/"
   },
   {
     "id": "st-miyagi-4482",
     "name": "MARUMORI-SAUNA",
     "prefecture": "宮城県",
-    "address": "〒981-2116 宮城県伊具郡丸森町不動６４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒981-2116 宮城県伊具郡丸森町不動64−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.869281,
     "lng": 140.781476,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4482/",
-    "city": "伊具郡丸森町 事前予約制"
+    "city": "伊具郡丸森町 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.marumori-sauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4482/"
   },
   {
     "id": "st-miyagi-4331",
     "name": "カプセルホテル とぽす 仙台駅西口",
     "prefecture": "宮城県",
-    "address": "〒980-0021 宮城県仙台市青葉区中央２丁目１−１−２５",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0021 宮城県仙台市青葉区中央2丁目1−1−25",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.261549,
     "lng": 140.87833,
     "trait": "award",
@@ -1614,26 +1821,32 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4331/"
+    "sourceUrl": "https://saunatime.jp/saunas/4331/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-277",
     "name": "キュア国分町",
     "prefecture": "宮城県",
-    "address": "〒980-0803 宮城県仙台市青葉区国分町２丁目８−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0803 宮城県仙台市青葉区国分町2丁目8−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.263435,
     "lng": 140.867931,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/277/"
+    "sourceUrl": "https://saunatime.jp/saunas/277/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://cure-kokubuncho.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/277/"
   },
   {
     "id": "st-miyagi-194",
     "name": "スーパー銭湯極楽湯名取店",
     "prefecture": "宮城県",
-    "address": "〒981-1221 宮城県名取市田高字原原４６３",
-    "addressSource": "SaunaTime",
+    "address": "〒981-1221 宮城県名取市田高字原原463",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.179851,
     "lng": 140.876978,
     "trait": "onsen",
@@ -1644,14 +1857,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/194/"
+    "sourceUrl": "https://saunatime.jp/saunas/194/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.gokurakuyu.jp/natori/",
+    "officialUrlSource": "https://saunatime.jp/saunas/194/"
   },
   {
     "id": "st-miyagi-2900",
     "name": "ドーミーインEXPRESS仙台広瀬通",
     "prefecture": "宮城県",
-    "address": "〒980-0021 宮城県仙台市青葉区中央２丁目１０−１７",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0021 宮城県仙台市青葉区中央2丁目10−17",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.262632,
     "lng": 140.875468,
     "trait": "urban",
@@ -1660,7 +1877,11 @@ export const SEED_FACILITIES = [
     "city": "仙台市 宿泊者限定",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/sendai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2900/"
   },
   {
     "id": "st-miyagi-1414",
@@ -1675,14 +1896,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1414/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1441",
     "name": "ホテルモントレ仙台 サラ・テレナ",
     "prefecture": "宮城県",
-    "address": "〒980-0021 宮城県仙台市青葉区中央４丁目１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0021 宮城県仙台市青葉区中央4丁目1−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.258104,
     "lng": 140.88042,
     "trait": "award",
@@ -1694,7 +1916,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1441/",
-    "city": "仙台市 宿泊者限定"
+    "city": "仙台市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotelmonterey.co.jp/sendai/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1441/"
   },
   {
     "id": "st-miyagi-1409",
@@ -1708,14 +1934,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1409/"
+    "sourceUrl": "https://saunatime.jp/saunas/1409/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-4688",
     "name": "やまびこの湯 ベガロポリス仙台南",
     "prefecture": "宮城県",
-    "address": "〒982-0034 宮城県仙台市太白区西多賀５丁目２４−１ ベガロポリス仙台南 １階",
-    "addressSource": "SaunaTime",
+    "address": "〒982-0034 宮城県仙台市太白区西多賀5丁目24−1 ベガロポリス仙台南 1階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.220004,
     "lng": 140.848952,
     "trait": "onsen",
@@ -1726,7 +1953,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4688/"
+    "sourceUrl": "https://saunatime.jp/saunas/4688/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://spa-yamabiko.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4688/"
   },
   {
     "id": "st-miyagi-3331",
@@ -1735,7 +1966,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3331/",
-    "city": "富谷市"
+    "city": "富谷市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-278",
@@ -1744,62 +1976,79 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/278/",
-    "city": "多賀城市"
+    "city": "多賀城市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-4844",
     "name": "ルネサンス仙台卸町24",
     "prefecture": "宮城県",
-    "address": "〒984-0042 宮城県仙台市若林区大和町４丁目１９−７",
-    "addressSource": "SaunaTime",
+    "address": "〒984-0042 宮城県仙台市若林区大和町4丁目19−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.251195,
     "lng": 140.920311,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4844/"
+    "sourceUrl": "https://saunatime.jp/saunas/4844/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sendai-oroshimachi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4844/"
   },
   {
     "id": "st-miyagi-4843",
     "name": "ルネサンス仙台宮町24",
     "prefecture": "宮城県",
-    "address": "〒980-0004 宮城県仙台市青葉区宮町４丁目７−３",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0004 宮城県仙台市青葉区宮町4丁目7−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.274856,
     "lng": 140.884653,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4843/"
+    "sourceUrl": "https://saunatime.jp/saunas/4843/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sendai-miyamachi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4843/"
   },
   {
     "id": "st-miyagi-4841",
     "name": "ルネサンス仙台泉中央24",
     "prefecture": "宮城県",
-    "address": "〒981-3133 宮城県仙台市泉区泉中央４丁目４−３",
-    "addressSource": "SaunaTime",
+    "address": "〒981-3133 宮城県仙台市泉区泉中央4丁目4−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.323056,
     "lng": 140.884165,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4841/"
+    "sourceUrl": "https://saunatime.jp/saunas/4841/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sendai-izumichuo/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4841/"
   },
   {
     "id": "st-miyagi-4842",
     "name": "ルネサンス仙台南光台24",
     "prefecture": "宮城県",
-    "address": "〒981-8003 宮城県仙台市泉区南光台７丁目１−８６",
-    "addressSource": "SaunaTime",
+    "address": "〒981-8003 宮城県仙台市泉区南光台7丁目1−86",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.30118,
     "lng": 140.898396,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4842/"
+    "sourceUrl": "https://saunatime.jp/saunas/4842/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sendai-nankodai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4842/"
   },
   {
     "id": "st-miyagi-46",
     "name": "汗蒸幕のゆ",
     "prefecture": "宮城県",
-    "address": "宮城県仙台市泉区市名坂南前６７−１",
-    "addressSource": "SaunaTime",
+    "address": "宮城県仙台市泉区市名坂南前67−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.318812,
     "lng": 140.896647,
     "trait": "urban",
@@ -1811,14 +2060,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/46/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hanjunmakunoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/46/"
   },
   {
     "id": "st-miyagi-1436",
     "name": "喜代乃湯",
     "prefecture": "宮城県",
-    "address": "〒983-0803 宮城県仙台市宮城野区小田原１丁目８−５",
-    "addressSource": "SaunaTime",
+    "address": "〒983-0803 宮城県仙台市宮城野区小田原1丁目8−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.265169,
     "lng": 140.891307,
     "trait": "onsen",
@@ -1830,7 +2083,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1436/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1430",
@@ -1845,7 +2100,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1430/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1440",
@@ -1853,7 +2109,8 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1440/"
+    "sourceUrl": "https://saunatime.jp/saunas/1440/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1444",
@@ -1868,26 +2125,31 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1444/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1410",
     "name": "大江戸温泉物語 仙台コロナの湯",
     "prefecture": "宮城県",
-    "address": "〒983-0005 宮城県仙台市宮城野区福室字田中前一番５３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒983-0005 宮城県仙台市宮城野区福室字田中前一番53−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.260242,
     "lng": 140.96928,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1410/"
+    "sourceUrl": "https://saunatime.jp/saunas/1410/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://korona.ooedoonsen.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1410/"
   },
   {
     "id": "st-miyagi-2939",
     "name": "天然温泉 海神の湯 ドーミーインEXPRESS仙台シーサイド",
     "prefecture": "宮城県",
-    "address": "〒983-0013 宮城県仙台市宮城野区中野３丁目４−９",
-    "addressSource": "SaunaTime",
+    "address": "〒983-0013 宮城県仙台市宮城野区中野3丁目4−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.269917,
     "lng": 140.989894,
     "trait": "onsen",
@@ -1901,19 +2163,27 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2939/",
-    "city": "仙台市"
+    "city": "仙台市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/sendai_sea/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2939/"
   },
   {
     "id": "st-miyagi-1424",
     "name": "天然温泉青葉の湯ドーミーイン仙台ANNEX",
     "prefecture": "宮城県",
-    "address": "〒980-0021 宮城県仙台市青葉区中央２丁目１１−２６",
-    "addressSource": "SaunaTime",
+    "address": "〒980-0021 宮城県仙台市青葉区中央2丁目11−26",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.262722,
     "lng": 140.877765,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1424/"
+    "sourceUrl": "https://saunatime.jp/saunas/1424/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/sendai_ax/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1424/"
   },
   {
     "id": "st-miyagi-1437",
@@ -1928,19 +2198,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1437/",
-    "city": "仙台市 宿泊者限定"
+    "city": "仙台市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-4474",
     "name": "唐桑御殿つなかん",
     "prefecture": "宮城県",
-    "address": "〒988-0571 宮城県気仙沼市唐桑町鮪立８１",
-    "addressSource": "SaunaTime",
+    "address": "〒988-0571 宮城県気仙沼市唐桑町鮪立81",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.890921,
     "lng": 141.643003,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4474/"
+    "sourceUrl": "https://saunatime.jp/saunas/4474/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://moriyasuisan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4474/"
   },
   {
     "id": "st-miyagi-1435",
@@ -1948,7 +2223,8 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1435/"
+    "sourceUrl": "https://saunatime.jp/saunas/1435/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1419",
@@ -1962,7 +2238,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1419/"
+    "sourceUrl": "https://saunatime.jp/saunas/1419/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1432",
@@ -1970,7 +2247,8 @@ export const SEED_FACILITIES = [
     "prefecture": "宮城県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1432/"
+    "sourceUrl": "https://saunatime.jp/saunas/1432/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-1422",
@@ -1985,7 +2263,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1422/",
-    "city": "加美郡加美町"
+    "city": "加美郡加美町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyagi-276",
@@ -1999,14 +2278,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/276/"
+    "sourceUrl": "https://saunatime.jp/saunas/276/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1271",
     "name": "あいのの温泉 鶴ヶ池荘",
     "prefecture": "秋田県",
-    "address": "〒019-1108 秋田県横手市山内土渕鶴ケ池２４−２",
-    "addressSource": "SaunaTime",
+    "address": "〒019-1108 秋田県横手市山内土渕鶴ケ池24−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.281654,
     "lng": 140.620439,
     "trait": "onsen",
@@ -2017,14 +2297,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1271/"
+    "sourceUrl": "https://saunatime.jp/saunas/1271/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tsurugaikesou.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1271/"
   },
   {
     "id": "st-akita-3379",
     "name": "かしわ温泉",
     "prefecture": "秋田県",
-    "address": "〒018-0603 秋田県由利本荘市西目町西目釜ヶ沢９６−５",
-    "addressSource": "SaunaTime",
+    "address": "〒018-0603 秋田県由利本荘市西目町西目釜ヶ沢96−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.330713,
     "lng": 140.03152,
     "trait": "onsen",
@@ -2036,7 +2320,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3379/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yurihonjo-kanko.jp/modules/gnavi/index.php?lid=155",
+    "officialUrlSource": "https://saunatime.jp/saunas/3379/"
   },
   {
     "id": "st-akita-1255",
@@ -2051,26 +2339,31 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1255/",
-    "city": "大仙市"
+    "city": "大仙市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-274",
     "name": "こまち健康ランド",
     "prefecture": "秋田県",
-    "address": "〒010-0061 秋田県秋田市卸町１丁目２−３",
-    "addressSource": "SaunaTime",
+    "address": "〒010-0061 秋田県秋田市卸町1丁目2−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.701802,
     "lng": 140.107879,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/274/"
+    "sourceUrl": "https://saunatime.jp/saunas/274/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.spa-komachi.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/274/"
   },
   {
     "id": "st-akita-1248",
     "name": "にかほ市温泉保養センター はまなす",
     "prefecture": "秋田県",
-    "address": "〒018-0311 秋田県にかほ市金浦中谷地２０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒018-0311 秋田県にかほ市金浦中谷地20−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.239033,
     "lng": 139.913361,
     "trait": "onsen",
@@ -2082,14 +2375,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1248/",
-    "city": "にかほ市"
+    "city": "にかほ市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.nikaho-onsen-hamanasu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1248/"
   },
   {
     "id": "st-akita-1283",
     "name": "にしめ湯っ娘ランド",
     "prefecture": "秋田県",
-    "address": "〒018-0604 秋田県由利本荘市西目町沼田新道下１１１２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒018-0604 秋田県由利本荘市西目町沼田新道下1112−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.363049,
     "lng": 140.014237,
     "trait": "onsen",
@@ -2101,27 +2398,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1283/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.nisime-yukkoland.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1283/"
   },
   {
     "id": "st-akita-1279",
     "name": "はーとぽーと大内ぽぽろっこ",
     "prefecture": "秋田県",
-    "address": "〒018-0711 秋田県由利本荘市岩谷町西越３６",
-    "addressSource": "SaunaTime",
+    "address": "〒018-0711 秋田県由利本荘市岩谷町西越36",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.443481,
     "lng": 140.090453,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1279/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.popolocco.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1279/"
   },
   {
     "id": "st-akita-1278",
     "name": "ぱいんすぱ新山",
     "prefecture": "秋田県",
-    "address": "〒015-0012 秋田県由利本荘市石脇田尻３０−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒015-0012 秋田県由利本荘市石脇田尻30−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.403164,
     "lng": 140.025458,
     "trait": "wood",
@@ -2133,7 +2438,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1278/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yurihonjo-kanko.jp/modules/gnavi/index.php?lid=154&cid=33",
+    "officialUrlSource": "https://saunatime.jp/saunas/1278/"
   },
   {
     "id": "st-akita-4169",
@@ -2148,7 +2457,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4169/",
-    "city": "大館市"
+    "city": "大館市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-948",
@@ -2156,14 +2466,15 @@ export const SEED_FACILITIES = [
     "prefecture": "秋田県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/948/"
+    "sourceUrl": "https://saunatime.jp/saunas/948/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-3360",
     "name": "ホテルプラザ迎賓",
     "prefecture": "秋田県",
-    "address": "〒013-0036 秋田県横手市駅前町７−７",
-    "addressSource": "SaunaTime",
+    "address": "〒013-0036 秋田県横手市駅前町7−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.308769,
     "lng": 140.561501,
     "trait": "award",
@@ -2174,7 +2485,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3360/"
+    "sourceUrl": "https://saunatime.jp/saunas/3360/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yokote.co.jp/geihin/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3360/"
   },
   {
     "id": "st-akita-185",
@@ -2189,26 +2504,31 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/185/",
-    "city": "秋田市"
+    "city": "秋田市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-3556",
     "name": "ゆたろう",
     "prefecture": "秋田県",
-    "address": "〒018-5201 秋田県鹿角市花輪大川添大川添５５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒018-5201 秋田県鹿角市花輪大川添大川添55−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.194692,
     "lng": 140.780954,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3556/"
+    "sourceUrl": "https://saunatime.jp/saunas/3556/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.ink.or.jp/~purantos/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3556/"
   },
   {
     "id": "st-akita-1277",
     "name": "岩城温泉 港の湯",
     "prefecture": "秋田県",
-    "address": "〒018-1301 秋田県由利本荘市岩城内道川新鶴潟１９２−４３",
-    "addressSource": "SaunaTime",
+    "address": "〒018-1301 秋田県由利本荘市岩城内道川新鶴潟192−43",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.544075,
     "lng": 140.053582,
     "trait": "onsen",
@@ -2220,27 +2540,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1277/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://michinoeki-iwaki.com/onsen.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1277/"
   },
   {
     "id": "st-akita-4785",
     "name": "金浦温泉・学校の栖",
     "prefecture": "秋田県",
-    "address": "〒018-0321 秋田県にかほ市前川菱潟１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒018-0321 秋田県にかほ市前川菱潟1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.234848,
     "lng": 139.937621,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4785/",
-    "city": "にかほ市"
+    "city": "にかほ市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://onsen-sumika.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4785/"
   },
   {
     "id": "st-akita-1299",
     "name": "市民浴場東風の湯",
     "prefecture": "秋田県",
-    "address": "〒014-1201 秋田県仙北市田沢湖生保内武蔵野１１１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒014-1201 秋田県仙北市田沢湖生保内武蔵野111−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.70606,
     "lng": 140.730941,
     "trait": "onsen",
@@ -2251,32 +2579,44 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1299/"
+    "sourceUrl": "https://saunatime.jp/saunas/1299/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.heart-herb.co.jp/dashinoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1299/"
   },
   {
     "id": "st-akita-4579",
     "name": "鹿角トレーニングセンター アルパス",
     "prefecture": "秋田県",
-    "address": "〒018-5201 秋田県鹿角市花輪百合沢８１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒018-5201 秋田県鹿角市花輪百合沢81−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 40.189023,
     "lng": 140.822818,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4579/"
+    "sourceUrl": "https://saunatime.jp/saunas/4579/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.alpas.jp/facility/trainingcenter/#onsen",
+    "officialUrlSource": "https://saunatime.jp/saunas/4579/"
   },
   {
     "id": "st-akita-1242",
     "name": "秋田温泉プラザ",
     "prefecture": "秋田県",
-    "address": "〒010-0822 秋田県秋田市添川境内川原１４２−３",
-    "addressSource": "SaunaTime",
+    "address": "〒010-0822 秋田県秋田市添川境内川原142−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.749751,
     "lng": 140.131289,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1242/",
-    "city": "秋田市"
+    "city": "秋田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.akitaonsen.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1242/"
   },
   {
     "id": "st-akita-1254",
@@ -2290,20 +2630,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1254/"
+    "sourceUrl": "https://saunatime.jp/saunas/1254/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1272",
     "name": "西仙北ぬく森温泉ユメリア",
     "prefecture": "秋田県",
-    "address": "〒019-2112 秋田県大仙市刈和野山北ノ沢５−４",
-    "addressSource": "SaunaTime",
+    "address": "〒019-2112 秋田県大仙市刈和野山北ノ沢5−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.281654,
     "lng": 140.620439,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1272/",
-    "city": "大仙市"
+    "city": "大仙市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yumeria.site/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1272/"
   },
   {
     "id": "st-akita-1267",
@@ -2318,7 +2663,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1267/",
-    "city": "北秋田市"
+    "city": "北秋田市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1275",
@@ -2332,7 +2678,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1275/"
+    "sourceUrl": "https://saunatime.jp/saunas/1275/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1262",
@@ -2346,14 +2693,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1262/"
+    "sourceUrl": "https://saunatime.jp/saunas/1262/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1284",
     "name": "鶴舞温泉",
     "prefecture": "秋田県",
-    "address": "〒015-0882 秋田県由利本荘市 秋田県由利本荘市西小人町２３－１",
-    "addressSource": "SaunaTime",
+    "address": "〒015-0882 秋田県由利本荘市 秋田県由利本荘市西小人町23-1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.381957,
     "lng": 140.047074,
     "trait": "onsen",
@@ -2365,19 +2713,27 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1284/",
-    "city": "由利本荘市"
+    "city": "由利本荘市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.tohoku-daiken.com/contents/business/manager/facility/10.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1284/"
   },
   {
     "id": "st-akita-272",
     "name": "天王温泉くらら",
     "prefecture": "秋田県",
-    "address": "〒010-0201 秋田県潟上市天王江川上谷地１０９−２",
-    "addressSource": "SaunaTime",
+    "address": "〒010-0201 秋田県潟上市天王江川上谷地109−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.857016,
     "lng": 140.009035,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/272/"
+    "sourceUrl": "https://saunatime.jp/saunas/272/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kurara-spa.co.jp/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/272/"
   },
   {
     "id": "st-akita-1246",
@@ -2393,7 +2749,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1246/"
+    "sourceUrl": "https://saunatime.jp/saunas/1246/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1251",
@@ -2410,19 +2767,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1251/",
-    "city": "山本郡八峰町"
+    "city": "山本郡八峰町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1290",
     "name": "雄物川地域局えがおの丘",
     "prefecture": "秋田県",
-    "address": "〒013-0205 秋田県横手市雄物川町今宿末館５７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒013-0205 秋田県横手市雄物川町今宿末館57−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 39.281864,
     "lng": 140.402843,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1290/"
+    "sourceUrl": "https://saunatime.jp/saunas/1290/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://egaonooka.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1290/"
   },
   {
     "id": "st-akita-1249",
@@ -2436,7 +2798,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1249/"
+    "sourceUrl": "https://saunatime.jp/saunas/1249/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-akita-1274",
@@ -2450,33 +2813,42 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1274/"
+    "sourceUrl": "https://saunatime.jp/saunas/1274/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-4279",
     "name": "アイアイひらた",
     "prefecture": "山形県",
     "address": "〒999-6724 山形県酒田市 山形県酒田市山楯字南山32−8",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.898716,
     "lng": 139.945098,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4279/",
-    "city": "酒田市"
+    "city": "酒田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.aiaihirata.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4279/"
   },
   {
     "id": "st-yamagata-1365",
     "name": "あったまりランド深堀",
     "prefecture": "山形県",
     "address": "〒999-4134 山形県北村山郡大石田町大字豊田884−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.599537,
     "lng": 140.356861,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1365/",
-    "city": "北村山郡大石田町"
+    "city": "北村山郡大石田町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://attamariland-fukabori.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1365/"
   },
   {
     "id": "st-yamagata-1369",
@@ -2491,7 +2863,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1369/",
-    "city": "米沢市"
+    "city": "米沢市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1400",
@@ -2506,14 +2879,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1400/",
-    "city": "鶴岡市"
+    "city": "鶴岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-4423",
     "name": "がまの湯温泉 いいで旅館",
     "prefecture": "山形県",
-    "address": "〒999-0604 山形県西置賜郡飯豊町椿４４９４",
-    "addressSource": "SaunaTime",
+    "address": "〒999-0604 山形県西置賜郡飯豊町椿4494",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.042596,
     "lng": 139.992624,
     "trait": "onsen",
@@ -2526,20 +2900,28 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4423/"
+    "sourceUrl": "https://saunatime.jp/saunas/4423/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.gamanoyu.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4423/"
   },
   {
     "id": "st-yamagata-1371",
     "name": "クアハウス碁点",
     "prefecture": "山形県",
-    "address": "〒995-0209 山形県村山市碁点１０３４−７",
-    "addressSource": "SaunaTime",
+    "address": "〒995-0209 山形県村山市碁点1034−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.484823,
     "lng": 140.344444,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1371/",
-    "city": "村山市"
+    "city": "村山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kur-goten.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1371/"
   },
   {
     "id": "st-yamagata-1403",
@@ -2553,14 +2935,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1403/"
+    "sourceUrl": "https://saunatime.jp/saunas/1403/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1377",
     "name": "スーパー銭湯テルメ",
     "prefecture": "山形県",
-    "address": "〒990-2413 山形県山形市南原町１丁目２６−９",
-    "addressSource": "SaunaTime",
+    "address": "〒990-2413 山形県山形市南原町1丁目26−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.23588,
     "lng": 140.34676,
     "trait": "onsen",
@@ -2572,45 +2955,59 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1377/",
-    "city": "山形市"
+    "city": "山形市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1390",
     "name": "ハイジアパーク南陽",
     "prefecture": "山形県",
     "address": "〒999-2233 山形県南陽市上野1855−10",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.067778,
     "lng": 140.158053,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1390/"
+    "sourceUrl": "https://saunatime.jp/saunas/1390/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hygeia-park.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1390/"
   },
   {
     "id": "st-yamagata-1370",
     "name": "ひまわり温泉ゆ・ら・ら",
     "prefecture": "山形県",
-    "address": "〒990-0402 山形県東村山郡中山町いずみ１",
-    "addressSource": "SaunaTime",
+    "address": "〒990-0402 山形県東村山郡中山町いずみ1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.341322,
     "lng": 140.275458,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1370/",
-    "city": "東村山郡中山町"
+    "city": "東村山郡中山町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yurara.jp/#modal",
+    "officialUrlSource": "https://saunatime.jp/saunas/1370/"
   },
   {
     "id": "st-yamagata-1378",
     "name": "べに花温泉 ひなの湯",
     "prefecture": "山形県",
     "address": "〒999-3511 山形県西村山郡河北町谷地字下野269",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.417561,
     "lng": 140.321319,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1378/",
-    "city": "西村山郡河北町"
+    "city": "西村山郡河北町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hinanoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1378/"
   },
   {
     "id": "st-yamagata-4329",
@@ -2627,19 +3024,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4329/",
-    "city": "山形市"
+    "city": "山形市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-208",
     "name": "ゆ〜チェリー",
     "prefecture": "山形県",
     "address": "〒991-0041 山形県寒河江市寒河江久保 大字寒河江字久保15番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.363948,
     "lng": 140.258903,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/208/"
+    "sourceUrl": "https://saunatime.jp/saunas/208/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yu-cherry.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/208/"
   },
   {
     "id": "st-yamagata-1388",
@@ -2647,19 +3049,24 @@ export const SEED_FACILITIES = [
     "prefecture": "山形県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1388/"
+    "sourceUrl": "https://saunatime.jp/saunas/1388/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-4845",
     "name": "ルネサンス山形24",
     "prefecture": "山形県",
-    "address": "〒990-0038 山形県山形市幸町１８−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒990-0038 山形県山形市幸町18−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.246055,
     "lng": 140.326988,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4845/"
+    "sourceUrl": "https://saunatime.jp/saunas/4845/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/yamagata/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4845/"
   },
   {
     "id": "st-yamagata-1385",
@@ -2674,7 +3081,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1385/",
-    "city": "上山市"
+    "city": "上山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1381",
@@ -2691,7 +3099,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1381/",
-    "city": "東村山郡山辺町"
+    "city": "東村山郡山辺町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1402",
@@ -2700,14 +3109,15 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1402/",
-    "city": "鶴岡市"
+    "city": "鶴岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-2481",
     "name": "庄内町ギャラリー温泉 町湯",
     "prefecture": "山形県",
-    "address": "〒999-7781 山形県東田川郡庄内町余目土堤下３５番地２",
-    "addressSource": "SaunaTime",
+    "address": "〒999-7781 山形県東田川郡庄内町余目土堤下35番地2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.841959,
     "lng": 139.905409,
     "trait": "onsen",
@@ -2719,7 +3129,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2481/",
-    "city": "東田川郡庄内町"
+    "city": "東田川郡庄内町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.machiyu.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2481/"
   },
   {
     "id": "st-yamagata-1397",
@@ -2734,14 +3148,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1397/",
-    "city": "山形市"
+    "city": "山形市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-413",
     "name": "鷹山の湯",
     "prefecture": "山形県",
-    "address": "〒992-0011 山形県米沢市中田町４９１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒992-0011 山形県米沢市中田町491−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.936633,
     "lng": 140.123624,
     "trait": "wood",
@@ -2754,7 +3169,11 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/413/"
+    "sourceUrl": "https://saunatime.jp/saunas/413/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yozan.gokurakuyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/413/"
   },
   {
     "id": "st-yamagata-1364",
@@ -2769,14 +3188,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1364/",
-    "city": "天童市"
+    "city": "天童市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1391",
     "name": "添川温泉しらさぎ荘",
     "prefecture": "山形県",
     "address": "〒999-0605 山形県西置賜郡飯豊町添川 飯豊町大字添川3020-5",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.034773,
     "lng": 140.014105,
     "trait": "onsen",
@@ -2787,7 +3207,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1391/"
+    "sourceUrl": "https://saunatime.jp/saunas/1391/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.iide-shirasagi.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1391/"
   },
   {
     "id": "st-yamagata-191",
@@ -2802,7 +3226,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/191/",
-    "city": "鶴岡市"
+    "city": "鶴岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-3059",
@@ -2817,14 +3242,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3059/",
-    "city": "尾花沢市"
+    "city": "尾花沢市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1374",
     "name": "芭蕉の湯",
     "prefecture": "山形県",
-    "address": "〒990-0821 山形県山形市北町３丁目７−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒990-0821 山形県山形市北町3丁目7−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.272712,
     "lng": 140.326611,
     "trait": "onsen",
@@ -2835,14 +3261,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1374/"
+    "sourceUrl": "https://saunatime.jp/saunas/1374/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1373",
     "name": "平安の湯",
     "prefecture": "山形県",
-    "address": "〒992-0011 山形県米沢市中田町２６８−４",
-    "addressSource": "SaunaTime",
+    "address": "〒992-0011 山形県米沢市中田町268−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.936205,
     "lng": 140.117083,
     "trait": "onsen",
@@ -2854,7 +3282,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1373/",
-    "city": "米沢市"
+    "city": "米沢市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1379",
@@ -2870,7 +3300,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1379/",
     "city": "鶴岡市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1375",
@@ -2885,7 +3316,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1375/",
-    "city": "鶴岡市"
+    "city": "鶴岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamagata-1392",
@@ -2894,7 +3326,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1392/",
-    "city": "鶴岡市 宿泊者限定"
+    "city": "鶴岡市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-4629",
@@ -2902,50 +3335,63 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4629/"
+    "sourceUrl": "https://saunatime.jp/saunas/4629/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-199",
     "name": "こおりやま駅前サウナ24",
     "prefecture": "福島県",
-    "address": "〒963-8002 福島県郡山市駅前２丁目６−４",
-    "addressSource": "SaunaTime",
+    "address": "〒963-8002 福島県郡山市駅前2丁目6−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.39923,
     "lng": 140.38687,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/199/"
+    "sourceUrl": "https://saunatime.jp/saunas/199/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www13.plala.or.jp/ekimae-sauna24/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/199/"
   },
   {
     "id": "st-fukushima-1510",
     "name": "サウナ＆カプセルキュア いわき駅前店",
     "prefecture": "福島県",
-    "address": "〒970-8026 福島県いわき市平白銀町 平白銀町１０",
-    "addressSource": "SaunaTime",
+    "address": "〒970-8026 福島県いわき市平白銀町 平白銀町10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.057598,
     "lng": 140.894654,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1510/"
+    "sourceUrl": "https://saunatime.jp/saunas/1510/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://cure-iwakiekimae.jp/pc/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1510/"
   },
   {
     "id": "st-fukushima-3382",
     "name": "スパリゾートハワイアンズ　モノリスタワー",
     "prefecture": "福島県",
-    "address": "〒972-8326 福島県いわき市常磐藤原町蕨平５０",
-    "addressSource": "SaunaTime",
+    "address": "〒972-8326 福島県いわき市常磐藤原町蕨平50",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.993973,
     "lng": 140.815837,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3382/"
+    "sourceUrl": "https://saunatime.jp/saunas/3382/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hawaiians.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3382/"
   },
   {
     "id": "st-fukushima-72",
     "name": "バイパスサウナ",
     "prefecture": "福島県",
-    "address": "福島県二本松市杉田駄子内４７",
-    "addressSource": "SaunaTime",
+    "address": "福島県二本松市杉田駄子内47",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.571612,
     "lng": 140.418622,
     "trait": "award",
@@ -2954,14 +3400,16 @@ export const SEED_FACILITIES = [
     "city": "二本松市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-42",
     "name": "ヒーリングヴィラ湯元",
     "prefecture": "福島県",
     "address": "福島県郡山市大槻町堀切西11-3",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.382642,
     "lng": 140.356751,
     "trait": "onsen",
@@ -2972,62 +3420,82 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/42/"
+    "sourceUrl": "https://saunatime.jp/saunas/42/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hvyumoto.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/42/"
   },
   {
     "id": "st-fukushima-4628",
     "name": "ラビスパ裏磐梯",
     "prefecture": "福島県",
-    "address": "〒966-0402 福島県耶麻郡北塩原村大字大塩桜峠８６６４−５",
-    "addressSource": "SaunaTime",
+    "address": "〒966-0402 福島県耶麻郡北塩原村大字大塩桜峠8664−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.659968,
     "lng": 140.013739,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4628/"
+    "sourceUrl": "https://saunatime.jp/saunas/4628/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://laviespa.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4628/"
   },
   {
     "id": "st-fukushima-4846",
     "name": "ルネサンスいわき",
     "prefecture": "福島県",
-    "address": "〒970-8036 福島県いわき市平谷川瀬３丁目２０−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒970-8036 福島県いわき市平谷川瀬3丁目20−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.044466,
     "lng": 140.900197,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4846/"
+    "sourceUrl": "https://saunatime.jp/saunas/4846/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/iwaki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4846/"
   },
   {
     "id": "st-fukushima-4847",
     "name": "ルネサンス郡山24",
     "prefecture": "福島県",
-    "address": "〒963-8025 福島県郡山市桑野３丁目１２−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒963-8025 福島県郡山市桑野3丁目12−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.407446,
     "lng": 140.35591,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4847/"
+    "sourceUrl": "https://saunatime.jp/saunas/4847/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/koriyama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4847/"
   },
   {
     "id": "st-fukushima-4848",
     "name": "ルネサンス福島24",
     "prefecture": "福島県",
-    "address": "〒960-8152 福島県福島市鳥谷野日野２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒960-8152 福島県福島市鳥谷野日野2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.735511,
     "lng": 140.465453,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4848/"
+    "sourceUrl": "https://saunatime.jp/saunas/4848/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukushima/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4848/"
   },
   {
     "id": "st-fukushima-1475",
     "name": "温泉天国 さくら湯",
     "prefecture": "福島県",
-    "address": "〒963-8034 福島県郡山市島２丁目７−６",
-    "addressSource": "SaunaTime",
+    "address": "〒963-8034 福島県郡山市島2丁目7−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.396685,
     "lng": 140.347338,
     "trait": "onsen",
@@ -3038,14 +3506,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1475/"
+    "sourceUrl": "https://saunatime.jp/saunas/1475/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-4328",
     "name": "花ももの湯",
     "prefecture": "福島県",
-    "address": "〒960-0201 福島県福島市飯坂町西滝ノ町２７",
-    "addressSource": "SaunaTime",
+    "address": "〒960-0201 福島県福島市飯坂町西滝ノ町27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.835102,
     "lng": 140.45145,
     "trait": "onsen",
@@ -3056,14 +3526,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4328/"
+    "sourceUrl": "https://saunatime.jp/saunas/4328/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-36",
     "name": "郡山ユラックス熱海",
     "prefecture": "福島県",
     "address": "福島県郡山市熱海町熱海2丁目148-2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.480246,
     "lng": 140.27775,
     "trait": "wood",
@@ -3075,14 +3547,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/36/",
-    "city": "郡山市"
+    "city": "郡山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yracs.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/36/"
   },
   {
     "id": "st-fukushima-1499",
     "name": "郡山温泉",
     "prefecture": "福島県",
-    "address": "〒963-0201 福島県郡山市大槻町西勝ノ木３８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒963-0201 福島県郡山市大槻町西勝ノ木38−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.392417,
     "lng": 140.309578,
     "trait": "wood",
@@ -3096,14 +3572,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1499/",
-    "city": "郡山市"
+    "city": "郡山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1446",
     "name": "郡山湯処 まねきの湯",
     "prefecture": "福島県",
-    "address": "〒963-8801 福島県郡山市向河原町４−４０",
-    "addressSource": "SaunaTime",
+    "address": "〒963-8801 福島県郡山市向河原町4−40",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.402458,
     "lng": 140.394693,
     "trait": "wood",
@@ -3116,14 +3594,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1446/"
+    "sourceUrl": "https://saunatime.jp/saunas/1446/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1467",
     "name": "月光温泉クアハイム",
     "prefecture": "福島県",
-    "address": "〒963-0102 福島県郡山市安積町笹川四角坦４３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒963-0102 福島県郡山市安積町笹川四角坦43−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.35067,
     "lng": 140.357433,
     "trait": "onsen",
@@ -3135,14 +3615,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1467/",
-    "city": "郡山市"
+    "city": "郡山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-281",
     "name": "糸桜里の湯 ばんげ",
     "prefecture": "福島県",
-    "address": "〒969-6506 福島県河沼郡会津坂下町見明堤帰２１１５",
-    "addressSource": "SaunaTime",
+    "address": "〒969-6506 福島県河沼郡会津坂下町見明堤帰2115",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.588733,
     "lng": 139.79948,
     "trait": "onsen",
@@ -3153,27 +3635,35 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/281/"
+    "sourceUrl": "https://saunatime.jp/saunas/281/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.shiorinoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/281/"
   },
   {
     "id": "st-fukushima-1478",
     "name": "摺上亭大鳥",
     "prefecture": "福島県",
-    "address": "〒960-0201 福島県福島市飯坂町中ノ内２４−３",
-    "addressSource": "SaunaTime",
+    "address": "〒960-0201 福島県福島市飯坂町中ノ内24−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.839752,
     "lng": 140.443805,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1478/",
-    "city": "福島市"
+    "city": "福島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.surikamiteiohtori.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1478/"
   },
   {
     "id": "st-fukushima-1465",
     "name": "西会津温泉健康保養センター",
     "prefecture": "福島県",
-    "address": "〒969-4401 福島県耶麻郡西会津町登世島下小島１８７",
-    "addressSource": "SaunaTime",
+    "address": "〒969-4401 福島県耶麻郡西会津町登世島下小島187",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.596561,
     "lng": 139.64202,
     "trait": "onsen",
@@ -3184,7 +3674,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1465/"
+    "sourceUrl": "https://saunatime.jp/saunas/1465/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.lotosinn.com/stay/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1465/"
   },
   {
     "id": "st-fukushima-1450",
@@ -3192,7 +3686,8 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1450/"
+    "sourceUrl": "https://saunatime.jp/saunas/1450/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-2708",
@@ -3200,7 +3695,8 @@ export const SEED_FACILITIES = [
     "prefecture": "福島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2708/"
+    "sourceUrl": "https://saunatime.jp/saunas/2708/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1451",
@@ -3215,14 +3711,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1451/",
-    "city": "双葉郡楢葉町"
+    "city": "双葉郡楢葉町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1491",
     "name": "東日本健康ランドカッパ王国",
     "prefecture": "福島県",
-    "address": "〒960-0404 福島県伊達市原島６３",
-    "addressSource": "SaunaTime",
+    "address": "〒960-0404 福島県伊達市原島63",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.822975,
     "lng": 140.508349,
     "trait": "onsen",
@@ -3233,7 +3730,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1491/"
+    "sourceUrl": "https://saunatime.jp/saunas/1491/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1448",
@@ -3251,14 +3750,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1448/"
+    "sourceUrl": "https://saunatime.jp/saunas/1448/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-2901",
     "name": "磐梯の湯ドーミーインEXPRESS郡山",
     "prefecture": "福島県",
-    "address": "〒963-8001 福島県郡山市大町２丁目１８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒963-8001 福島県郡山市大町2丁目18−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.402119,
     "lng": 140.388777,
     "trait": "wood",
@@ -3272,14 +3772,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2901/",
-    "city": "郡山市"
+    "city": "郡山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1487",
     "name": "富士の湯(会津若松)",
     "prefecture": "福島県",
-    "address": "〒965-0041 福島県会津若松市駅前町２−１３",
-    "addressSource": "SaunaTime",
+    "address": "〒965-0041 福島県会津若松市駅前町2−13",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.505874,
     "lng": 139.928956,
     "trait": "onsen",
@@ -3290,14 +3792,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1487/"
+    "sourceUrl": "https://saunatime.jp/saunas/1487/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1500",
     "name": "北投の湯 いわき健康センター",
     "prefecture": "福島県",
-    "address": "〒974-8221 福島県いわき市小浜町中ノ作４５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒974-8221 福島県いわき市小浜町中ノ作45−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.921296,
     "lng": 140.839126,
     "trait": "onsen",
@@ -3309,14 +3813,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1500/",
-    "city": "いわき市"
+    "city": "いわき市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukushima-1452",
     "name": "勿来温泉 関の湯",
     "prefecture": "福島県",
-    "address": "〒979-0146 福島県いわき市勿来町関田須賀１−４",
-    "addressSource": "SaunaTime",
+    "address": "〒979-0146 福島県いわき市勿来町関田須賀1−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.874834,
     "lng": 140.789196,
     "trait": "onsen",
@@ -3327,14 +3833,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1452/"
+    "sourceUrl": "https://saunatime.jp/saunas/1452/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://sekinoyu-spa.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1452/"
   },
   {
     "id": "st-fukushima-4626",
     "name": "裏磐梯レイクリゾート 五色の森",
     "prefecture": "福島県",
-    "address": "〒969-2701 福島県耶麻郡北塩原村大字檜原湯平山１１７１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒969-2701 福島県耶麻郡北塩原村大字檜原湯平山1171−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.651698,
     "lng": 140.062551,
     "trait": "wood",
@@ -3345,40 +3855,52 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4626/"
+    "sourceUrl": "https://saunatime.jp/saunas/4626/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.lakeresort.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4626/"
   },
   {
     "id": "st-fukushima-4627",
     "name": "裏磐梯温泉センター",
     "prefecture": "福島県",
-    "address": "〒969-2701 福島県耶麻郡北塩原村大字檜原剣ケ峯１０９３−３６０",
-    "addressSource": "SaunaTime",
+    "address": "〒969-2701 福島県耶麻郡北塩原村大字檜原剣ケ峯1093−360",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.657725,
     "lng": 140.08762,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4627/",
-    "city": "耶麻郡北塩原村"
+    "city": "耶麻郡北塩原村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.u-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4627/"
   },
   {
     "id": "st-ibaraki-2480",
     "name": "あずま健康センター",
     "prefecture": "茨城県",
-    "address": "〒300-0616 茨城県稲敷市東大沼７１３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒300-0616 茨城県稲敷市東大沼713−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.934277,
     "lng": 140.357872,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2480/",
-    "city": "稲敷市"
+    "city": "稲敷市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://azumakenkoucenter.web.fc2.com/index2.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2480/"
   },
   {
     "id": "st-ibaraki-1666",
     "name": "あそう温泉白帆の湯",
     "prefecture": "茨城県",
-    "address": "〒311-3832 茨城県行方市麻生４２１−３",
-    "addressSource": "SaunaTime",
+    "address": "〒311-3832 茨城県行方市麻生421−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.987182,
     "lng": 140.475108,
     "trait": "onsen",
@@ -3390,27 +3912,33 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1666/",
-    "city": "行方市"
+    "city": "行方市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-4174",
     "name": "いこいの郷常総",
     "prefecture": "茨城県",
     "address": "〒302-0107 茨城県守谷市 茨城県守谷市大木1468",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.952948,
     "lng": 139.947225,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4174/",
-    "city": "守谷市"
+    "city": "守谷市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ikoinosato-joso.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4174/"
   },
   {
     "id": "st-ibaraki-1644",
     "name": "いちの湯 水戸店",
     "prefecture": "茨城県",
-    "address": "〒311-4152 茨城県水戸市河和田３丁目 河和田３丁目２３００−１",
-    "addressSource": "SaunaTime",
+    "address": "〒311-4152 茨城県水戸市河和田3丁目 河和田3丁目2300−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.37512,
     "lng": 140.40253,
     "trait": "onsen",
@@ -3422,26 +3950,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1644/",
-    "city": "水戸市"
+    "city": "水戸市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://itinoyu.com/mito/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1644/"
   },
   {
     "id": "st-ibaraki-4416",
     "name": "スパ＆サウナ ホテル日立プラザ",
     "prefecture": "茨城県",
-    "address": "〒317-0073 茨城県日立市幸町２丁目３−２５",
-    "addressSource": "SaunaTime",
+    "address": "〒317-0073 茨城県日立市幸町2丁目3−25",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.590469,
     "lng": 140.6582,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4416/"
+    "sourceUrl": "https://saunatime.jp/saunas/4416/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://breezbay-group.com/hitachiplaza/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4416/"
   },
   {
     "id": "st-ibaraki-4410",
     "name": "つくばウェルネスパーク",
     "prefecture": "茨城県",
-    "address": "〒300-4234茨城県つくば市山木１５６２",
-    "addressSource": "SaunaTime",
+    "address": "〒300-4234茨城県つくば市山木1562",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.162561,
     "lng": 140.071133,
     "trait": "onsen",
@@ -3452,14 +3988,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4410/"
+    "sourceUrl": "https://saunatime.jp/saunas/4410/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-4554",
     "name": "つくば温泉 喜楽里 別邸",
     "prefecture": "茨城県",
-    "address": "〒305-0831 茨城県つくば市西大橋６１４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒305-0831 茨城県つくば市西大橋614−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.075015,
     "lng": 140.084043,
     "trait": "onsen",
@@ -3471,14 +4009,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4554/",
-    "city": "つくば市"
+    "city": "つくば市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yurakirari.com/kirari/tsukuba/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4554/"
   },
   {
     "id": "st-ibaraki-38",
     "name": "とっぷ・さんて大洋",
     "prefecture": "茨城県",
     "address": "茨城県鉾田市上幡木1500-2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.086067,
     "lng": 140.604669,
     "trait": "urban",
@@ -3487,7 +4029,11 @@ export const SEED_FACILITIES = [
     "city": "鉾田市",
     "tags": [
       "休業・短縮営業"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sopia.or.jp/topsante/",
+    "officialUrlSource": "https://saunatime.jp/saunas/38/"
   },
   {
     "id": "st-ibaraki-1669",
@@ -3495,7 +4041,8 @@ export const SEED_FACILITIES = [
     "prefecture": "茨城県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1669/"
+    "sourceUrl": "https://saunatime.jp/saunas/1669/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1647",
@@ -3510,20 +4057,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1647/",
-    "city": "下妻市"
+    "city": "下妻市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1651",
     "name": "ひたちなか温泉 喜楽里別邸",
     "prefecture": "茨城県",
     "address": "〒312-0033 茨城県ひたちなか市市毛640番地2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.394585,
     "lng": 140.501508,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1651/",
-    "city": "ひたちなか市"
+    "city": "ひたちなか市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yurakirari.com/kirari/hitachinaka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1651/"
   },
   {
     "id": "st-ibaraki-1677",
@@ -3538,26 +4090,31 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1677/",
-    "city": "久慈郡大子町"
+    "city": "久慈郡大子町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-3080",
     "name": "ホテルテラスザガーデン水戸",
     "prefecture": "茨城県",
-    "address": "〒310-0015 茨城県水戸市宮町１丁目７",
-    "addressSource": "SaunaTime",
+    "address": "〒310-0015 茨城県水戸市宮町1丁目7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.369597,
     "lng": 140.476927,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3080/"
+    "sourceUrl": "https://saunatime.jp/saunas/3080/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-terrace.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3080/"
   },
   {
     "id": "st-ibaraki-1655",
     "name": "やまの湯",
     "prefecture": "茨城県",
-    "address": "〒310-0852 茨城県水戸市笠原町１４４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒310-0852 茨城県水戸市笠原町144−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.344728,
     "lng": 140.457994,
     "trait": "onsen",
@@ -3569,7 +4126,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1655/",
-    "city": "水戸市"
+    "city": "水戸市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yamanoyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1655/"
   },
   {
     "id": "st-ibaraki-295",
@@ -3578,7 +4139,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/295/",
-    "city": "東茨城郡大洗町"
+    "city": "東茨城郡大洗町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1678",
@@ -3592,14 +4154,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1678/"
+    "sourceUrl": "https://saunatime.jp/saunas/1678/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-4857",
     "name": "ルネサンス水戸24",
     "prefecture": "茨城県",
-    "address": "〒310-0802 茨城県水戸市柵町１丁目９−２",
-    "addressSource": "SaunaTime",
+    "address": "〒310-0802 茨城県水戸市柵町1丁目9−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.368352,
     "lng": 140.483589,
     "trait": "water",
@@ -3607,19 +4170,27 @@ export const SEED_FACILITIES = [
       "水辺"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4857/"
+    "sourceUrl": "https://saunatime.jp/saunas/4857/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/mito/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4857/"
   },
   {
     "id": "st-ibaraki-4858",
     "name": "ルネサンス竜ヶ崎ニュータウン",
     "prefecture": "茨城県",
-    "address": "〒301-0044 茨城県龍ケ崎市小柴５丁目2−２",
-    "addressSource": "SaunaTime",
+    "address": "〒301-0044 茨城県龍ケ崎市小柴5丁目2−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.933136,
     "lng": 140.159261,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4858/"
+    "sourceUrl": "https://saunatime.jp/saunas/4858/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/ryugasaki_newtown/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4858/"
   },
   {
     "id": "st-ibaraki-1645",
@@ -3634,19 +4205,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1645/",
-    "city": "ひたちなか市"
+    "city": "ひたちなか市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1659",
     "name": "関所の湯",
     "prefecture": "茨城県",
     "address": "〒319-3523 茨城県久慈郡大子町大字袋田字滝ノ上2642−7",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.747173,
     "lng": 140.388952,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1659/"
+    "sourceUrl": "https://saunatime.jp/saunas/1659/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://sekisyo-no-yu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1659/"
   },
   {
     "id": "st-ibaraki-1664",
@@ -3662,14 +4238,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1664/"
+    "sourceUrl": "https://saunatime.jp/saunas/1664/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1665",
     "name": "御老公の湯",
     "prefecture": "茨城県",
-    "address": "〒310-0914 茨城県水戸市 茨城県水戸市小吹町２６２４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒310-0914 茨城県水戸市 茨城県水戸市小吹町2624−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.339189,
     "lng": 140.436336,
     "trait": "onsen",
@@ -3680,14 +4257,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1665/"
+    "sourceUrl": "https://saunatime.jp/saunas/1665/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1661",
     "name": "鹿島セントラル天然温泉美人の湯 ゆの華",
     "prefecture": "茨城県",
-    "address": "〒314-0144 茨城県神栖市大野原４丁目７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒314-0144 茨城県神栖市大野原4丁目7−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.899208,
     "lng": 140.637233,
     "trait": "onsen",
@@ -3698,7 +4277,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1661/"
+    "sourceUrl": "https://saunatime.jp/saunas/1661/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://bijin-yunohana.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1661/"
   },
   {
     "id": "st-ibaraki-1671",
@@ -3713,7 +4296,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1671/",
-    "city": "ひたちなか市"
+    "city": "ひたちなか市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1648",
@@ -3728,14 +4312,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1648/",
-    "city": "東茨城郡城里町"
+    "city": "東茨城郡城里町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-4594",
     "name": "天然温泉 湯舞音",
     "prefecture": "茨城県",
-    "address": "〒301-0854 茨城県龍ケ崎市中里２丁目１",
-    "addressSource": "SaunaTime",
+    "address": "〒301-0854 茨城県龍ケ崎市中里2丁目1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.931283,
     "lng": 140.202411,
     "trait": "onsen",
@@ -3746,14 +4331,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4594/"
+    "sourceUrl": "https://saunatime.jp/saunas/4594/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yubune-ryugasaki.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4594/"
   },
   {
     "id": "st-ibaraki-1642",
     "name": "湯〜ワールド",
     "prefecture": "茨城県",
-    "address": "〒305-0063 茨城県つくば市下原３７０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒305-0063 茨城県つくば市下原370−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.048917,
     "lng": 140.13413,
     "trait": "onsen",
@@ -3764,14 +4353,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1642/"
+    "sourceUrl": "https://saunatime.jp/saunas/1642/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-1673",
     "name": "湯ったり館(茨城県)",
     "prefecture": "茨城県",
     "address": "〒301-0801 茨城県龍ケ崎市板橋町440番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.93181,
     "lng": 140.250643,
     "trait": "onsen",
@@ -3782,14 +4373,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1673/"
+    "sourceUrl": "https://saunatime.jp/saunas/1673/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ibaraki-357",
     "name": "湯楽の里 取手店",
     "prefecture": "茨城県",
-    "address": "〒302-0021 茨城県取手市寺田５００１−２",
-    "addressSource": "SaunaTime",
+    "address": "〒302-0021 茨城県取手市寺田5001−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.911845,
     "lng": 140.048302,
     "trait": "onsen",
@@ -3800,14 +4393,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/357/"
+    "sourceUrl": "https://saunatime.jp/saunas/357/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yurakirari.com/yura/toride/",
+    "officialUrlSource": "https://saunatime.jp/saunas/357/"
   },
   {
     "id": "st-ibaraki-1654",
     "name": "湯楽の里 土浦店",
     "prefecture": "茨城県",
-    "address": "〒300-0053 茨城県土浦市真鍋新町２０−４３",
-    "addressSource": "SaunaTime",
+    "address": "〒300-0053 茨城県土浦市真鍋新町20−43",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.088662,
     "lng": 140.207902,
     "trait": "onsen",
@@ -3819,26 +4416,32 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1654/",
-    "city": "土浦市"
+    "city": "土浦市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-4834",
     "name": "COCO VILLA 那須白河",
     "prefecture": "栃木県",
     "address": "栃木県那須郡那須町大字豊原乙1-1855",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.074989,
     "lng": 140.147726,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4834/"
+    "sourceUrl": "https://saunatime.jp/saunas/4834/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://coco-villa.jp/villa/nasushirakawa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4834/"
   },
   {
     "id": "st-tochigi-133",
     "name": "あさやホテル",
     "prefecture": "栃木県",
     "address": "栃木県日光市鬼怒川温泉滝813番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.835748,
     "lng": 139.719749,
     "trait": "award",
@@ -3850,7 +4453,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/133/",
-    "city": "日光市 宿泊者限定"
+    "city": "日光市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.asaya-hotel.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/133/"
   },
   {
     "id": "st-tochigi-2704",
@@ -3866,7 +4473,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2704/"
+    "sourceUrl": "https://saunatime.jp/saunas/2704/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1570",
@@ -3881,20 +4489,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1570/",
-    "city": "日光市"
+    "city": "日光市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-114",
     "name": "ザ・グランドスパ南大門",
     "prefecture": "栃木県",
     "address": "栃木県宇都宮市今泉3-2-18",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.564698,
     "lng": 139.894736,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/114/",
-    "city": "宇都宮市"
+    "city": "宇都宮市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.nandaimon.co.jp/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/114/"
   },
   {
     "id": "st-tochigi-300",
@@ -3909,7 +4522,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/300/",
-    "city": "宇都宮市"
+    "city": "宇都宮市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1523",
@@ -3923,20 +4537,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1523/"
+    "sourceUrl": "https://saunatime.jp/saunas/1523/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1547",
     "name": "ほたるの里 梵天の湯",
     "prefecture": "栃木県",
     "address": "〒321-0402 栃木県宇都宮市今里町 今里町18-4",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.685861,
     "lng": 139.905418,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1547/",
-    "city": "宇都宮市"
+    "city": "宇都宮市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.bonten-no-yu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1547/"
   },
   {
     "id": "st-tochigi-1531",
@@ -3952,7 +4571,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1531/"
+    "sourceUrl": "https://saunatime.jp/saunas/1531/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1564",
@@ -3966,7 +4586,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1564/"
+    "sourceUrl": "https://saunatime.jp/saunas/1564/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1538",
@@ -3981,7 +4602,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1538/",
-    "city": "那須郡那珂川町"
+    "city": "那須郡那珂川町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1536",
@@ -3995,7 +4617,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1536/"
+    "sourceUrl": "https://saunatime.jp/saunas/1536/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1579",
@@ -4009,7 +4632,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1579/"
+    "sourceUrl": "https://saunatime.jp/saunas/1579/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1533",
@@ -4023,7 +4647,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1533/"
+    "sourceUrl": "https://saunatime.jp/saunas/1533/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1566",
@@ -4039,14 +4664,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1566/"
+    "sourceUrl": "https://saunatime.jp/saunas/1566/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1559",
     "name": "鬼怒川温泉ホテル",
     "prefecture": "栃木県",
-    "address": "〒321-2592 栃木県日光市鬼怒川温泉滝５４５",
-    "addressSource": "SaunaTime",
+    "address": "〒321-2592 栃木県日光市鬼怒川温泉滝545",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.834042,
     "lng": 139.719133,
     "trait": "onsen",
@@ -4060,20 +4686,28 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1559/",
-    "city": "日光市"
+    "city": "日光市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kinugawaonsenhotel.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1559/"
   },
   {
     "id": "st-tochigi-1519",
     "name": "極楽湯宇都宮店",
     "prefecture": "栃木県",
-    "address": "〒321-0983 栃木県宇都宮市御幸本町４８８０",
-    "addressSource": "SaunaTime",
+    "address": "〒321-0983 栃木県宇都宮市御幸本町4880",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.581242,
     "lng": 139.924562,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1519/",
-    "city": "宇都宮市"
+    "city": "宇都宮市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.gokurakuyu.ne.jp/tempo/utsunomiya/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1519/"
   },
   {
     "id": "st-tochigi-1550",
@@ -4081,7 +4715,8 @@ export const SEED_FACILITIES = [
     "prefecture": "栃木県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1550/"
+    "sourceUrl": "https://saunatime.jp/saunas/1550/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1526",
@@ -4098,7 +4733,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1526/",
-    "city": "大田原市"
+    "city": "大田原市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-332",
@@ -4112,7 +4748,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/332/"
+    "sourceUrl": "https://saunatime.jp/saunas/332/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-331",
@@ -4128,20 +4765,25 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/331/"
+    "sourceUrl": "https://saunatime.jp/saunas/331/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-4759",
     "name": "森の天空サウナ＆露天風呂",
     "prefecture": "栃木県",
-    "address": "〒325-0114 栃木県那須塩原市戸田１７８−４",
-    "addressSource": "SaunaTime",
+    "address": "〒325-0114 栃木県那須塩原市戸田178−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.043535,
     "lng": 139.960438,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4759/",
-    "city": "那須塩原市 事前予約制"
+    "city": "那須塩原市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://lbcg.net/sauna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4759/"
   },
   {
     "id": "st-tochigi-1542",
@@ -4156,7 +4798,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1542/",
-    "city": "足利市"
+    "city": "足利市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1563",
@@ -4170,7 +4813,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1563/"
+    "sourceUrl": "https://saunatime.jp/saunas/1563/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1518",
@@ -4184,7 +4828,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1518/"
+    "sourceUrl": "https://saunatime.jp/saunas/1518/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1561",
@@ -4199,20 +4844,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1561/",
-    "city": "日光市"
+    "city": "日光市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1517",
     "name": "栃木温泉 湯楽の里",
     "prefecture": "栃木県",
-    "address": "〒328-0071 栃木県栃木市大町２２−７０",
-    "addressSource": "SaunaTime",
+    "address": "〒328-0071 栃木県栃木市大町22−70",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.39574,
     "lng": 139.733061,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1517/",
-    "city": "栃木市"
+    "city": "栃木市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yurakirari.com/yura/tochigi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1517/"
   },
   {
     "id": "st-tochigi-1520",
@@ -4228,7 +4878,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1520/"
+    "sourceUrl": "https://saunatime.jp/saunas/1520/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1524",
@@ -4244,7 +4895,8 @@ export const SEED_FACILITIES = [
       "塩サウナ"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1524/"
+    "sourceUrl": "https://saunatime.jp/saunas/1524/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tochigi-1544",
@@ -4260,14 +4912,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1544/"
+    "sourceUrl": "https://saunatime.jp/saunas/1544/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1633",
     "name": "アパホテル〈高崎駅前〉",
     "prefecture": "群馬県",
-    "address": "〒370-0849 群馬県高崎市八島町２３２−８",
-    "addressSource": "SaunaTime",
+    "address": "〒370-0849 群馬県高崎市八島町232−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.321428,
     "lng": 139.011968,
     "trait": "award",
@@ -4278,7 +4931,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1633/"
+    "sourceUrl": "https://saunatime.jp/saunas/1633/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.apahotel.com/hotel/shutoken/01_takasaki-ekimae/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1633/"
   },
   {
     "id": "st-gumma-1634",
@@ -4286,19 +4943,22 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1634/"
+    "sourceUrl": "https://saunatime.jp/saunas/1634/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gunma-1594",
     "name": "テルメテルメ",
     "prefecture": "群馬県",
-    "address": "〒377-1711 群馬県吾妻郡草津町草津６１８",
-    "addressSource": "SaunaTime",
+    "address": "〒377-1711 群馬県吾妻郡草津町草津618",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.627056,
     "lng": 138.602794,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1594/"
+    "sourceUrl": "https://saunatime.jp/saunas/1594/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-335",
@@ -4312,14 +4972,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/335/"
+    "sourceUrl": "https://saunatime.jp/saunas/335/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1604",
     "name": "ホテルグリーンプラザ軽井沢",
     "prefecture": "群馬県",
-    "address": "〒377-1512 群馬県吾妻郡嬬恋村大前細原２２７７",
-    "addressSource": "SaunaTime",
+    "address": "〒377-1512 群馬県吾妻郡嬬恋村大前細原2277",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.475325,
     "lng": 138.539455,
     "trait": "award",
@@ -4330,7 +4991,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1604/"
+    "sourceUrl": "https://saunatime.jp/saunas/1604/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hgp.co.jp/inf/Z10/hgp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1604/"
   },
   {
     "id": "st-gumma-1620",
@@ -4344,7 +5009,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1620/"
+    "sourceUrl": "https://saunatime.jp/saunas/1620/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1611",
@@ -4359,20 +5025,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1611/",
-    "city": "吾妻郡嬬恋村"
+    "city": "吾妻郡嬬恋村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gunma-336",
     "name": "まえばし駅前天然温泉 ゆ～ゆ",
     "prefecture": "群馬県",
-    "address": "〒371-0024 群馬県前橋市表町２丁目１０−３１",
-    "addressSource": "SaunaTime",
+    "address": "〒371-0024 群馬県前橋市表町2丁目10−31",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.386365,
     "lng": 139.073049,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/336/",
-    "city": "前橋市"
+    "city": "前橋市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yuyuspa.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/336/"
   },
   {
     "id": "st-gumma-1588",
@@ -4386,14 +5057,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1588/"
+    "sourceUrl": "https://saunatime.jp/saunas/1588/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-4492",
     "name": "みなかみホテルジュラク",
     "prefecture": "群馬県",
-    "address": "〒379-1617 群馬県利根郡みなかみ町湯原６６５",
-    "addressSource": "SaunaTime",
+    "address": "〒379-1617 群馬県利根郡みなかみ町湯原665",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "award",
@@ -4404,7 +5076,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4492/"
+    "sourceUrl": "https://saunatime.jp/saunas/4492/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotel-juraku.co.jp/minakami/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4492/"
   },
   {
     "id": "st-gumma-1589",
@@ -4413,7 +5089,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1589/",
-    "city": "北群馬郡吉岡町"
+    "city": "北群馬郡吉岡町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "gunma-private-sauna-zero",
@@ -4446,7 +5123,8 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1638/"
+    "sourceUrl": "https://saunatime.jp/saunas/1638/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1592",
@@ -4460,14 +5138,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1592/"
+    "sourceUrl": "https://saunatime.jp/saunas/1592/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-339",
     "name": "高崎 京ヶ島天然温泉 湯都里",
     "prefecture": "群馬県",
-    "address": "〒370-0015 群馬県高崎市島野町８９０−３",
-    "addressSource": "SaunaTime",
+    "address": "〒370-0015 群馬県高崎市島野町890−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.33998,
     "lng": 139.052477,
     "trait": "onsen",
@@ -4479,7 +5158,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/339/",
-    "city": "高崎市"
+    "city": "高崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yu-tori.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/339/"
   },
   {
     "id": "st-gumma-1641",
@@ -4497,7 +5180,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1641/"
+    "sourceUrl": "https://saunatime.jp/saunas/1641/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1614",
@@ -4511,7 +5195,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1614/"
+    "sourceUrl": "https://saunatime.jp/saunas/1614/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1607",
@@ -4525,7 +5210,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1607/"
+    "sourceUrl": "https://saunatime.jp/saunas/1607/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1631",
@@ -4533,7 +5219,8 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1631/"
+    "sourceUrl": "https://saunatime.jp/saunas/1631/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1635",
@@ -4541,7 +5228,8 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1635/"
+    "sourceUrl": "https://saunatime.jp/saunas/1635/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1612",
@@ -4556,20 +5244,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1612/",
-    "city": "吾妻郡草津町"
+    "city": "吾妻郡草津町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gunma-115",
     "name": "草津温泉 大滝乃湯",
     "prefecture": "群馬県",
     "address": "群馬県吾妻郡草津町大字草津596-13",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.622976,
     "lng": 138.601855,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/115/",
-    "city": "吾妻郡草津町"
+    "city": "吾妻郡草津町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ohtakinoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/115/"
   },
   {
     "id": "st-gumma-2701",
@@ -4577,19 +5270,24 @@ export const SEED_FACILITIES = [
     "prefecture": "群馬県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2701/"
+    "sourceUrl": "https://saunatime.jp/saunas/2701/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gunma-338",
     "name": "天神の湯",
     "prefecture": "群馬県",
-    "address": "〒370-0001 群馬県高崎市中尾町３２９−３",
-    "addressSource": "SaunaTime",
+    "address": "〒370-0001 群馬県高崎市中尾町329−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.372264,
     "lng": 139.023638,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/338/"
+    "sourceUrl": "https://saunatime.jp/saunas/338/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tenjinnoyu.com/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/338/"
   },
   {
     "id": "st-gumma-340",
@@ -4604,14 +5302,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/340/",
-    "city": "伊勢崎市"
+    "city": "伊勢崎市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1590",
     "name": "天然温泉湯楽部",
     "prefecture": "群馬県",
-    "address": "〒373-0014 群馬県太田市植木野町６９４",
-    "addressSource": "SaunaTime",
+    "address": "〒373-0014 群馬県太田市植木野町694",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.321755,
     "lng": 139.412964,
     "trait": "onsen",
@@ -4622,7 +5321,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1590/"
+    "sourceUrl": "https://saunatime.jp/saunas/1590/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yurabu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1590/"
   },
   {
     "id": "st-gumma-1591",
@@ -4636,7 +5339,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1591/"
+    "sourceUrl": "https://saunatime.jp/saunas/1591/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gumma-1603",
@@ -4650,14 +5354,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1603/"
+    "sourceUrl": "https://saunatime.jp/saunas/1603/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-gunma-4790",
     "name": "毎日サウナ 前橋本店",
     "prefecture": "群馬県",
-    "address": "〒371-0044 群馬県前橋市荒牧町２丁目３３−５",
-    "addressSource": "SaunaTime",
+    "address": "〒371-0044 群馬県前橋市荒牧町2丁目33−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.426299,
     "lng": 139.055493,
     "trait": "award",
@@ -4666,7 +5371,11 @@ export const SEED_FACILITIES = [
     "city": "前橋市荒牧町2丁目33-5 Maebashi,",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://everyday-sauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4790/"
   },
   {
     "id": "st-gumma-1606",
@@ -4681,26 +5390,31 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1606/",
-    "city": "富岡市"
+    "city": "富岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saitama-4839",
     "name": "KUUMA シェアサウナ",
     "prefecture": "埼玉県",
-    "address": "〒330-0845 埼玉県さいたま市大宮区仲町１丁目",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0845 埼玉県さいたま市大宮区仲町1丁目",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.90459,
     "lng": 139.627205,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4839/"
+    "sourceUrl": "https://saunatime.jp/saunas/4839/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kuuma-sauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4839/"
   },
   {
     "id": "st-saitama-4838",
     "name": "KUUMA 個室サウナ",
     "prefecture": "埼玉県",
-    "address": "〒330-0845 埼玉県さいたま市大宮区仲町１丁目２４ 大宮オリンピアビル３F",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0845 埼玉県さいたま市大宮区仲町1丁目24 大宮オリンピアビル3F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.904616,
     "lng": 139.627173,
     "trait": "award",
@@ -4711,52 +5425,68 @@ export const SEED_FACILITIES = [
       "個室"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4838/"
+    "sourceUrl": "https://saunatime.jp/saunas/4838/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kuuma-sauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4838/"
   },
   {
     "id": "st-saitama-4776",
     "name": "SAUNEA浦和",
     "prefecture": "埼玉県",
-    "address": "〒338-0835 埼玉県さいたま市桜区道場３丁目２３−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒338-0835 埼玉県さいたま市桜区道場3丁目23−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.855449,
     "lng": 139.612983,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4776/",
-    "city": "さいたま市 会員のみ"
+    "city": "さいたま市 会員のみ",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://saunea.jp/event-place/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4776/"
   },
   {
     "id": "st-saitama-4746",
     "name": "UUSIN by NEXT SAUNA",
     "prefecture": "埼玉県",
-    "address": "〒330-0062 埼玉県さいたま市浦和区仲町２丁目５−１ ロイヤルパインズホテル浦和 B1F",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0062 埼玉県さいたま市浦和区仲町2丁目5−1 ロイヤルパインズホテル浦和 B1F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.861284,
     "lng": 139.652572,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4746/",
-    "city": "さいたま市 事前予約制"
+    "city": "さいたま市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://next-sauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4746/"
   },
   {
     "id": "st-saitama-4840",
     "name": "アテンドサウナ レストハウス名栗",
     "prefecture": "埼玉県",
-    "address": "〒357-0112 埼玉県飯能市下名栗７７１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒357-0112 埼玉県飯能市下名栗771−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.864306,
     "lng": 139.187003,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4840/"
+    "sourceUrl": "https://saunatime.jp/saunas/4840/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.attend-sauna.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4840/"
   },
   {
     "id": "st-saitama-4691",
     "name": "おふろの王様 和光店",
     "prefecture": "埼玉県",
-    "address": "〒351-0106 埼玉県和光市広沢１−５−５５",
-    "addressSource": "SaunaTime",
+    "address": "〒351-0106 埼玉県和光市広沢1−5−55",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.784927,
     "lng": 139.606105,
     "trait": "onsen",
@@ -4768,50 +5498,66 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4691/",
-    "city": "和光市"
+    "city": "和光市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ousama2603.com/shop/wako/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4691/"
   },
   {
     "id": "st-saitama-4763",
     "name": "ジェクサー浦和",
     "prefecture": "埼玉県",
-    "address": "〒330-0063 埼玉県さいたま市浦和区高砂１丁目１６−１２ ５～７階",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0063 埼玉県さいたま市浦和区高砂1丁目16−12 5~7階 JR浦和駅西口ビル",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.859243,
     "lng": 139.656926,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4763/"
+    "sourceUrl": "https://saunatime.jp/saunas/4763/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/urawa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4763/"
   },
   {
     "id": "st-saitama-4799",
     "name": "ジェクサー戸田公園",
     "prefecture": "埼玉県",
-    "address": "〒335-0023 埼玉県戸田市本町４丁目１０−３",
-    "addressSource": "SaunaTime",
+    "address": "〒335-0023 埼玉県戸田市本町4丁目10−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.807052,
     "lng": 139.679898,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4799/"
+    "sourceUrl": "https://saunatime.jp/saunas/4799/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/toda/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4799/"
   },
   {
     "id": "st-saitama-4802",
     "name": "ジェクサー大宮",
     "prefecture": "埼玉県",
-    "address": "〒330-0853 埼玉県さいたま市大宮区錦町９１−４",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0853 埼玉県さいたま市大宮区錦町91−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.908935,
     "lng": 139.621061,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4802/"
+    "sourceUrl": "https://saunatime.jp/saunas/4802/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/omiya/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4802/"
   },
   {
     "id": "st-saitama-1686",
     "name": "にいざ温泉",
     "prefecture": "埼玉県",
-    "address": "〒352-0022 埼玉県新座市本多２丁目１−５",
-    "addressSource": "SaunaTime",
+    "address": "〒352-0022 埼玉県新座市本多2丁目1−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.786673,
     "lng": 139.552098,
     "trait": "onsen",
@@ -4822,38 +5568,48 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1686/"
+    "sourceUrl": "https://saunatime.jp/saunas/1686/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saitama-370",
     "name": "パークプラザ大宮",
     "prefecture": "埼玉県",
     "address": "〒330-0845 埼玉県さいたま市大宮区仲町1丁目119−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.904096,
     "lng": 139.626351,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/370/"
+    "sourceUrl": "https://saunatime.jp/saunas/370/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://parkplazahotel.net/ppo/room/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/370/"
   },
   {
     "id": "st-saitama-57",
     "name": "バーデン・ガーデン",
     "prefecture": "埼玉県",
-    "address": "埼玉県所沢市くすのき台1－13－1 ガーデンシティ所沢3F4F",
-    "addressSource": "SaunaTime",
+    "address": "埼玉県所沢市くすのき台1-13-1 ガーデンシティ所沢3F4F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.785747,
     "lng": 139.473805,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/57/"
+    "sourceUrl": "https://saunatime.jp/saunas/57/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://bed-spa.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/57/"
   },
   {
     "id": "st-saitama-374",
     "name": "ふく乃湯",
     "prefecture": "埼玉県",
-    "address": "〒332-0011 埼玉県川口市元郷５丁目５−１９−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒332-0011 埼玉県川口市元郷5丁目5−19−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.797546,
     "lng": 139.737267,
     "trait": "onsen",
@@ -4864,103 +5620,139 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/374/"
+    "sourceUrl": "https://saunatime.jp/saunas/374/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.art-kouba.com/kinrin/fukunoyu.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/374/"
   },
   {
     "id": "st-saitama-4854",
     "name": "ルネサンスイオンタウンふじみ野24",
     "prefecture": "埼玉県",
-    "address": "〒356-0011 埼玉県ふじみ野市福岡２丁目１−６",
-    "addressSource": "SaunaTime",
+    "address": "〒356-0011 埼玉県ふじみ野市福岡2丁目1−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.880041,
     "lng": 139.523326,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4854/"
+    "sourceUrl": "https://saunatime.jp/saunas/4854/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/aeontown-fujimino/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4854/"
   },
   {
     "id": "st-saitama-4849",
     "name": "ルネサンス浦和24",
     "prefecture": "埼玉県",
-    "address": "〒330-0075 埼玉県さいたま市浦和区針ヶ谷４丁目２−２０",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0075 埼玉県さいたま市浦和区針ヶ谷4丁目2−20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.879983,
     "lng": 139.640086,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4849/"
+    "sourceUrl": "https://saunatime.jp/saunas/4849/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/urawa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4849/"
   },
   {
     "id": "st-saitama-4903",
     "name": "ルネサンス浦和駅前24",
     "prefecture": "埼玉県",
     "address": "〒330-0056 埼玉県さいたま市浦和区東仲町2-21",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.861237,
     "lng": 139.656217,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4903/"
+    "sourceUrl": "https://saunatime.jp/saunas/4903/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh56/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4903/"
   },
   {
     "id": "st-saitama-4853",
     "name": "ルネサンス春日部",
     "prefecture": "埼玉県",
-    "address": "〒344-0061 埼玉県春日部市粕壁３丁目８−１ わいわい春日部パーク 内4階",
-    "addressSource": "SaunaTime",
+    "address": "〒344-0061 埼玉県春日部市粕壁3丁目8−1 わいわい春日部パーク 内4階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.983767,
     "lng": 139.751383,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4853/"
+    "sourceUrl": "https://saunatime.jp/saunas/4853/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kasukabe/facility/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4853/"
   },
   {
     "id": "st-saitama-4902",
     "name": "ルネサンス川口",
     "prefecture": "埼玉県",
-    "address": "〒332-0012 埼玉県川口市本町3－2－7 東急ドエルデュアルコート川口ウエストビュー1F",
-    "addressSource": "SaunaTime",
+    "address": "〒332-0012 埼玉県川口市本町3-2-7 東急ドエルデュアルコート川口ウエストビュー1F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.801495,
     "lng": 139.722211,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4902/"
+    "sourceUrl": "https://saunatime.jp/saunas/4902/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh52/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4902/"
   },
   {
     "id": "st-saitama-4852",
     "name": "ルネサンス北戸田24",
     "prefecture": "埼玉県",
-    "address": "〒335-0021 埼玉県戸田市新曽２１６０",
-    "addressSource": "SaunaTime",
+    "address": "〒335-0021 埼玉県戸田市新曽2160",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.825703,
     "lng": 139.660609,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4852/"
+    "sourceUrl": "https://saunatime.jp/saunas/4852/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kitatoda/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4852/"
   },
   {
     "id": "st-saitama-4851",
     "name": "ルネサンス北朝霞24",
     "prefecture": "埼玉県",
-    "address": "〒351-0034 埼玉県朝霞市西原１丁目２−２ リーヴ北朝霞ビル 2F",
-    "addressSource": "SaunaTime",
+    "address": "〒351-0034 埼玉県朝霞市西原1丁目2−2 リーヴ北朝霞ビル 2F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.816019,
     "lng": 139.586819,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4851/"
+    "sourceUrl": "https://saunatime.jp/saunas/4851/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kitaasaka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4851/"
   },
   {
     "id": "st-saitama-4850",
     "name": "ルネサンス蕨24",
     "prefecture": "埼玉県",
-    "address": "〒335-0004 埼玉県蕨市中央１丁目１９−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒335-0004 埼玉県蕨市中央1丁目19−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.823286,
     "lng": 139.693436,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4850/"
+    "sourceUrl": "https://saunatime.jp/saunas/4850/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/warabi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4850/"
   },
   {
     "id": "sc2025-king-and-queen",
@@ -4981,7 +5773,7 @@ export const SEED_FACILITIES = [
     "name": "極楽湯上尾店",
     "prefecture": "埼玉県",
     "address": "〒362-0013 埼玉県上尾市上尾村 大字上尾村500-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.986946,
     "lng": 139.594638,
     "trait": "onsen",
@@ -4993,14 +5785,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1698/",
-    "city": "上尾市"
+    "city": "上尾市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.gokurakuyu.ne.jp/tempo/ageo/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1698/"
   },
   {
     "id": "st-saitama-1727",
     "name": "健康ランド武蔵野",
     "prefecture": "埼玉県",
-    "address": "〒333-0861 埼玉県川口市柳崎１丁目２２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒333-0861 埼玉県川口市柳崎1丁目22−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.853211,
     "lng": 139.70248,
     "trait": "onsen",
@@ -5011,14 +5807,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1727/"
+    "sourceUrl": "https://saunatime.jp/saunas/1727/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://musashino-kaikan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1727/"
   },
   {
     "id": "st-saitama-1711",
     "name": "見沼天然温泉 小春日和",
     "prefecture": "埼玉県",
-    "address": "〒337-0026 埼玉県さいたま市見沼区見沼区染谷３丁目１９１",
-    "addressSource": "SaunaTime",
+    "address": "〒337-0026 埼玉県さいたま市見沼区見沼区染谷3丁目191",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.909432,
     "lng": 139.682214,
     "trait": "onsen",
@@ -5030,26 +5830,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1711/",
-    "city": "さいたま市"
+    "city": "さいたま市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.koharubiyori.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1711/"
   },
   {
     "id": "st-saitama-4935",
     "name": "祭の湯 個室サウナ「月-tsuki-」「滝-taki-」",
     "prefecture": "埼玉県",
-    "address": "〒368-0033 埼玉県秩父市野坂町１丁目１６−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒368-0033 埼玉県秩父市野坂町1丁目16−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.990781,
     "lng": 139.083925,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4935/"
+    "sourceUrl": "https://saunatime.jp/saunas/4935/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.seibu-leisure.co.jp/matsuri/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4935/"
   },
   {
     "id": "st-saitama-1697",
     "name": "春日部温泉 湯楽の里",
     "prefecture": "埼玉県",
-    "address": "〒344-0007 埼玉県春日部市小渕１０５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒344-0007 埼玉県春日部市小渕105−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.989294,
     "lng": 139.757361,
     "trait": "onsen",
@@ -5061,39 +5869,49 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1697/",
-    "city": "春日部市"
+    "city": "春日部市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saitama-4934",
     "name": "西武秩父駅前温泉 祭の湯",
     "prefecture": "埼玉県",
-    "address": "〒368-0033 埼玉県秩父市野坂町１丁目１６−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒368-0033 埼玉県秩父市野坂町1丁目16−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.990911,
     "lng": 139.083925,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4934/",
-    "city": "秩父市"
+    "city": "秩父市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.seibu-leisure.co.jp/matsuri/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4934/"
   },
   {
     "id": "st-saitama-20",
     "name": "草加健康センター",
     "prefecture": "埼玉県",
     "address": "埼玉県草加市北谷2-23-23",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.841165,
     "lng": 139.780824,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/20/"
+    "sourceUrl": "https://saunatime.jp/saunas/20/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yunoizumi.com/souka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/20/"
   },
   {
     "id": "st-saitama-1726",
     "name": "湯屋敷孝楽",
     "prefecture": "埼玉県",
-    "address": "〒330-0073 埼玉県さいたま市浦和区元町２丁目2−18−12",
-    "addressSource": "SaunaTime",
+    "address": "〒330-0073 埼玉県さいたま市浦和区元町2丁目2−18−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.871809,
     "lng": 139.651306,
     "trait": "onsen",
@@ -5105,20 +5923,28 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1726/",
-    "city": "さいたま市"
+    "city": "さいたま市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yuyashiki.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1726/"
   },
   {
     "id": "st-chiba-4796",
     "name": "PGF LAND",
     "prefecture": "千葉県",
-    "address": "〒292-1153 千葉県君津市市宿２５６",
-    "addressSource": "SaunaTime",
+    "address": "〒292-1153 千葉県君津市市宿256",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.268058,
     "lng": 139.994168,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4796/",
-    "city": "君津市 事前予約制"
+    "city": "君津市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://tentsauna.pgf.land/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4796/"
   },
   {
     "id": "sc2025-satoyama-terrace",
@@ -5138,20 +5964,24 @@ export const SEED_FACILITIES = [
     "id": "st-chiba-4749",
     "name": "SEASIDE SURF SAUNA",
     "prefecture": "千葉県",
-    "address": "〒296-0001 千葉県鴨川市横渚８０８−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒296-0001 千葉県鴨川市横渚808−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.106855,
     "lng": 140.10648,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4749/"
+    "sourceUrl": "https://saunatime.jp/saunas/4749/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.seasidesurfsauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4749/"
   },
   {
     "id": "st-chiba-4709",
     "name": "アジアンSOLA SPA牧の原モア温泉",
     "prefecture": "千葉県",
-    "address": "〒270-1331 千葉県印西市牧の原１丁目３",
-    "addressSource": "SaunaTime",
+    "address": "〒270-1331 千葉県印西市牧の原1丁目3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.805741,
     "lng": 140.166267,
     "trait": "onsen",
@@ -5162,14 +5992,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4709/"
+    "sourceUrl": "https://saunatime.jp/saunas/4709/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://spa-solani.com/store/80/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4709/"
   },
   {
     "id": "st-chiba-4807",
     "name": "オーシャンリゾート館山 Aハウス",
     "prefecture": "千葉県",
-    "address": "〒294-0051 千葉県館山市正木１２５６−１４２",
-    "addressSource": "SaunaTime",
+    "address": "〒294-0051 千葉県館山市正木1256−142",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.015741,
     "lng": 139.857144,
     "trait": "wood",
@@ -5180,26 +6014,34 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4807/"
+    "sourceUrl": "https://saunatime.jp/saunas/4807/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://oceanresort.asia/a_house.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4807/"
   },
   {
     "id": "st-chiba-4809",
     "name": "オーシャンリゾート館山 BBQハウス",
     "prefecture": "千葉県",
-    "address": "〒294-0051 千葉県館山市正木１１５９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒294-0051 千葉県館山市正木1159−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.016036,
     "lng": 139.858947,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4809/"
+    "sourceUrl": "https://saunatime.jp/saunas/4809/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://oceanresort.asia/bbq_house.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4809/"
   },
   {
     "id": "st-chiba-4805",
     "name": "オーシャンリゾート館山 Kハウス",
     "prefecture": "千葉県",
-    "address": "〒294-0056 千葉県館山市船形２９７−６７",
-    "addressSource": "SaunaTime",
+    "address": "〒294-0056 千葉県館山市船形297−67",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.02608,
     "lng": 139.851713,
     "trait": "wood",
@@ -5210,14 +6052,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4805/"
+    "sourceUrl": "https://saunatime.jp/saunas/4805/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://oceanresort.asia/k_house.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4805/"
   },
   {
     "id": "st-chiba-4806",
     "name": "オーシャンリゾート館山 Tハウス",
     "prefecture": "千葉県",
-    "address": "〒294-0051 千葉県館山市富浦町正木５４５−１２５６−１０９",
-    "addressSource": "SaunaTime",
+    "address": "〒294-0051 千葉県館山市富浦町正木545−1256−109",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.015846,
     "lng": 139.857055,
     "trait": "wood",
@@ -5228,14 +6074,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4806/"
+    "sourceUrl": "https://saunatime.jp/saunas/4806/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://oceanresort.asia/t_house.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4806/"
   },
   {
     "id": "st-chiba-4808",
     "name": "オーシャンリゾート館山 プールハウス",
     "prefecture": "千葉県",
-    "address": "〒294-0051 千葉県館山市正木１２５６−７",
-    "addressSource": "SaunaTime",
+    "address": "〒294-0051 千葉県館山市正木1256−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.016001,
     "lng": 139.858273,
     "trait": "wood",
@@ -5246,14 +6096,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4808/"
+    "sourceUrl": "https://saunatime.jp/saunas/4808/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://oceanresort.asia/pool_house.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4808/"
   },
   {
     "id": "st-chiba-367",
     "name": "カプセルホテルレインボー本八幡",
     "prefecture": "千葉県",
-    "address": "〒272-0023 千葉県市川市南八幡４丁目４−１−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒272-0023 千葉県市川市南八幡4丁目4−1−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.720517,
     "lng": 139.927346,
     "trait": "award",
@@ -5264,14 +6118,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/367/"
+    "sourceUrl": "https://saunatime.jp/saunas/367/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://rainbow-motoyawata.wix.com/rainbow",
+    "officialUrlSource": "https://saunatime.jp/saunas/367/"
   },
   {
     "id": "st-chiba-1781",
     "name": "かりんの湯",
     "prefecture": "千葉県",
-    "address": "〒287-0103 千葉県香取市西田部１３０９−３４",
-    "addressSource": "SaunaTime",
+    "address": "〒287-0103 千葉県香取市西田部1309−34",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.794524,
     "lng": 140.515616,
     "trait": "onsen",
@@ -5282,111 +6140,147 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1781/"
+    "sourceUrl": "https://saunatime.jp/saunas/1781/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.thefarm.jp/karinnoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1781/"
   },
   {
     "id": "st-chiba-4393",
     "name": "ジートピア",
     "prefecture": "千葉県",
     "address": "〒273-0005 千葉県船橋市本町5-18-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.70166,
     "lng": 139.988634,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4393/"
+    "sourceUrl": "https://saunatime.jp/saunas/4393/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.funabashi-sauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4393/"
   },
   {
     "id": "st-chiba-4767",
     "name": "セントラルウェルネスクラブ長沼",
     "prefecture": "千葉県",
-    "address": "〒263-0005 千葉県千葉市稲毛区長沼町３３０−５０ ワンズモール３Ｆ",
-    "addressSource": "SaunaTime",
+    "address": "〒263-0005 千葉県千葉市稲毛区長沼町330−50 ワンズモール3F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.656969,
     "lng": 140.11788,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4767/"
+    "sourceUrl": "https://saunatime.jp/saunas/4767/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.central.co.jp/club/naganuma/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4767/"
   },
   {
     "id": "st-chiba-4757",
     "name": "ととのい整作所",
     "prefecture": "千葉県",
-    "address": "〒279-0002 千葉県浦安市北栄１丁目１４−１ 西友浦安店 PartⅡ2F",
-    "addressSource": "SaunaTime",
+    "address": "〒279-0002 千葉県浦安市北栄1丁目14−1 西友浦安店 PartII2F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.666694,
     "lng": 139.893684,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4757/",
-    "city": "浦安市 事前予約制"
+    "city": "浦安市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://totonoi-seisakusyo.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4757/"
   },
   {
     "id": "st-chiba-4863",
     "name": "ルネサンスユーカリが丘24",
     "prefecture": "千葉県",
-    "address": "〒285-0858 千葉県佐倉市ユーカリが丘４丁目１−１ スカイプラザ・モール 3･4階",
-    "addressSource": "SaunaTime",
+    "address": "〒285-0858 千葉県佐倉市ユーカリが丘4丁目1−1 スカイプラザ・モール 3・4階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.724942,
     "lng": 140.155072,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4863/"
+    "sourceUrl": "https://saunatime.jp/saunas/4863/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/yukarigaoka/facility/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4863/"
   },
   {
     "id": "st-chiba-4859",
     "name": "ルネサンス稲毛24",
     "prefecture": "千葉県",
-    "address": "〒263-0043 千葉県千葉市稲毛区小仲台１丁目１−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒263-0043 千葉県千葉市稲毛区小仲台1丁目1−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.633955,
     "lng": 140.097091,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4859/"
+    "sourceUrl": "https://saunatime.jp/saunas/4859/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/inage/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4859/"
   },
   {
     "id": "st-chiba-4861",
     "name": "ルネサンス佐倉",
     "prefecture": "千葉県",
-    "address": "〒285-0817 千葉県佐倉市大崎台１丁目２１−６",
-    "addressSource": "SaunaTime",
+    "address": "〒285-0817 千葉県佐倉市大崎台1丁目21−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.708322,
     "lng": 140.222587,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4861/"
+    "sourceUrl": "https://saunatime.jp/saunas/4861/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sakura/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4861/"
   },
   {
     "id": "st-chiba-4862",
     "name": "ルネサンス土気あすみが丘",
     "prefecture": "千葉県",
-    "address": "〒267-0066 千葉県千葉市緑区あすみが丘１丁目１８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒267-0066 千葉県千葉市緑区あすみが丘1丁目18−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.530034,
     "lng": 140.270626,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4862/"
+    "sourceUrl": "https://saunatime.jp/saunas/4862/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/toke-asumigaoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4862/"
   },
   {
     "id": "st-chiba-4860",
     "name": "ルネサンス野田24",
     "prefecture": "千葉県",
-    "address": "〒278-0037 千葉県野田市野田３９４−２",
-    "addressSource": "SaunaTime",
+    "address": "〒278-0037 千葉県野田市野田394−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.945362,
     "lng": 139.867495,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4860/"
+    "sourceUrl": "https://saunatime.jp/saunas/4860/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/noda/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4860/"
   },
   {
     "id": "st-chiba-1780",
     "name": "君津の湯",
     "prefecture": "千葉県",
     "address": "〒299-1173 千葉県君津市外箕輪154",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.314561,
     "lng": 139.9277,
     "trait": "onsen",
@@ -5398,14 +6292,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1780/",
-    "city": "君津市"
+    "city": "君津市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kimitsu-yu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/1780/"
   },
   {
     "id": "st-chiba-365",
     "name": "船橋グランドサウナａｎｄカプセルホテル",
     "prefecture": "千葉県",
-    "address": "〒273-0005 千葉県船橋市本町４丁目５−２７",
-    "addressSource": "SaunaTime",
+    "address": "〒273-0005 千葉県船橋市本町4丁目5−27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.701352,
     "lng": 139.987143,
     "trait": "award",
@@ -5416,14 +6314,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/365/"
+    "sourceUrl": "https://saunatime.jp/saunas/365/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://funabashi-grandsauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/365/"
   },
   {
     "id": "st-chiba-1753",
     "name": "船橋温泉 湯楽の里",
     "prefecture": "千葉県",
-    "address": "〒273-0045 千葉県船橋市山手３丁目４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒273-0045 千葉県船橋市山手3丁目4−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.717509,
     "lng": 139.980023,
     "trait": "onsen",
@@ -5435,14 +6337,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1753/",
-    "city": "船橋市"
+    "city": "船橋市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-chiba-1750",
     "name": "大江戸温泉物語 浦安万華郷",
     "prefecture": "千葉県",
-    "address": "〒279-0013 千葉県浦安市日の出７丁目３−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒279-0013 千葉県浦安市日の出7丁目3−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.640438,
     "lng": 139.931968,
     "trait": "onsen",
@@ -5453,14 +6357,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1750/"
+    "sourceUrl": "https://saunatime.jp/saunas/1750/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://urayasu.ooedoonsen.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1750/"
   },
   {
     "id": "st-chiba-4582",
     "name": "天然温泉 湯～ねる",
     "prefecture": "千葉県",
-    "address": "〒275-0024 千葉県習志野市茜浜２丁目２−１ ミスターマックス新習志野ショッピングセンター2F",
-    "addressSource": "SaunaTime",
+    "address": "〒275-0024 千葉県習志野市茜浜2丁目2−1 ミスターマックス新習志野ショッピングセンター2F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.666531,
     "lng": 140.014241,
     "trait": "onsen",
@@ -5472,14 +6380,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4582/",
-    "city": "習志野市"
+    "city": "習志野市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://u-neru.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4582/"
   },
   {
     "id": "st-chiba-4737",
     "name": "天然温泉 湯舞音 袖ケ浦店",
     "prefecture": "千葉県",
-    "address": "〒299-0269 千葉県袖ケ浦市袖ケ浦駅前１丁目３９−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒299-0269 千葉県袖ケ浦市袖ケ浦駅前1丁目39−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.432597,
     "lng": 139.955133,
     "trait": "onsen",
@@ -5491,14 +6403,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4737/",
-    "city": "袖ケ浦市"
+    "city": "袖ケ浦市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yubune-sodegaura.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4737/"
   },
   {
     "id": "st-chiba-348",
     "name": "湯の郷かずさ",
     "prefecture": "千葉県",
-    "address": "〒292-0834 千葉県木更津市潮見５丁目５−７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒292-0834 千葉県木更津市潮見5丁目5−7−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.367573,
     "lng": 139.913714,
     "trait": "onsen",
@@ -5509,14 +6425,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/348/"
+    "sourceUrl": "https://saunatime.jp/saunas/348/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yunosato-kazusa.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/348/"
   },
   {
     "id": "st-chiba-1764",
     "name": "南増尾健美の湯",
     "prefecture": "千葉県",
-    "address": "〒277-0054 千葉県柏市南増尾１丁目１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒277-0054 千葉県柏市南増尾1丁目1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.820406,
     "lng": 139.97246,
     "trait": "onsen",
@@ -5528,14 +6448,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1764/",
-    "city": "柏市"
+    "city": "柏市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-chiba-4678",
     "name": "南柏天然温泉 すみれ",
     "prefecture": "千葉県",
-    "address": "〒270-0143 千葉県流山市向小金１丁目２７２−８",
-    "addressSource": "SaunaTime",
+    "address": "〒270-0143 千葉県流山市向小金1丁目272−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.842018,
     "lng": 139.945727,
     "trait": "onsen",
@@ -5547,26 +6469,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4678/",
-    "city": "流山市"
+    "city": "流山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://minamikashiwa-sumire.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4678/"
   },
   {
     "id": "st-chiba-76",
     "name": "舞浜ユーラシア",
     "prefecture": "千葉県",
-    "address": "千葉県浦安市千鳥１３−２０",
-    "addressSource": "SaunaTime",
+    "address": "千葉県浦安市千鳥13−20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.627391,
     "lng": 139.895663,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/76/"
+    "sourceUrl": "https://saunatime.jp/saunas/76/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.my-spa.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/76/"
   },
   {
     "id": "st-chiba-1971",
     "name": "龍宮城スパホテル三日月",
     "prefecture": "千葉県",
     "address": "〒292-0006 千葉県木更津市北浜1番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.421204,
     "lng": 139.89764,
     "trait": "onsen",
@@ -5579,7 +6509,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/1971/"
+    "sourceUrl": "https://saunatime.jp/saunas/1971/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.mikazuki.co.jp/ryugu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1971/"
   },
   {
     "id": "sc2025-janu-tokyo",
@@ -5627,333 +6561,439 @@ export const SEED_FACILITIES = [
     "id": "st-tokyo-4937",
     "name": "アカサカサウナ",
     "prefecture": "東京都",
-    "address": "〒107-0052 東京都港区赤坂３丁目１０−１７ マーカスビル 4階",
-    "addressSource": "SaunaTime",
+    "address": "〒107-0052 東京都港区赤坂3丁目10−17 マーカスビル 4階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.67637,
     "lng": 139.73649,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4937/",
-    "city": "港区 会員のみ"
+    "city": "港区 会員のみ",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://akasakasauna.hacomono.jp/reserve/schedule/1/1/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4937/"
   },
   {
     "id": "st-tokyo-524",
     "name": "サウナ&カプセル サンフラワー",
     "prefecture": "東京都",
-    "address": "〒170-0002 東京都豊島区巣鴨２丁目５−４",
-    "addressSource": "SaunaTime",
+    "address": "〒170-0002 東京都豊島区巣鴨2丁目5−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.734034,
     "lng": 139.739475,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/524/"
+    "sourceUrl": "https://saunatime.jp/saunas/524/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sunflower-capsule.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/524/"
   },
   {
     "id": "st-tokyo-4488",
     "name": "サウナセンター",
     "prefecture": "東京都",
-    "address": "〒110-0004 東京都台東区下谷２丁目４−７",
-    "addressSource": "SaunaTime",
+    "address": "〒110-0004 東京都台東区下谷2丁目4−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.720937,
     "lng": 139.781884,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4488/"
+    "sourceUrl": "https://saunatime.jp/saunas/4488/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://sauna-center.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4488/"
   },
   {
     "id": "st-tokyo-3127",
     "name": "センチュリオンホテル＆スパ上野駅前",
     "prefecture": "東京都",
-    "address": "〒110-0005 東京都台東区上野６丁目８−１６",
-    "addressSource": "SaunaTime",
+    "address": "〒110-0005 東京都台東区上野6丁目8−16",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.709971,
     "lng": 139.775752,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3127/"
+    "sourceUrl": "https://saunatime.jp/saunas/3127/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokyo-4872",
     "name": "ルネサンスKSC金町24",
     "prefecture": "東京都",
-    "address": "〒125-0041 東京都葛飾区東金町１丁目１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒125-0041 東京都葛飾区東金町1丁目1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.7696,
     "lng": 139.865002,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4872/"
+    "sourceUrl": "https://saunatime.jp/saunas/4872/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/ksc-kanamachi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4872/"
   },
   {
     "id": "st-tokyo-4880",
     "name": "ルネサンスひばりヶ丘24",
     "prefecture": "東京都",
-    "address": "〒202-0002 東京都西東京市ひばりが丘北２丁目８−２３",
-    "addressSource": "SaunaTime",
+    "address": "〒202-0002 東京都西東京市ひばりが丘北2丁目8−23",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.753493,
     "lng": 139.549407,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4880/"
+    "sourceUrl": "https://saunatime.jp/saunas/4880/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hibarigaoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4880/"
   },
   {
     "id": "st-tokyo-4868",
     "name": "ルネサンス曳舟24",
     "prefecture": "東京都",
-    "address": "〒131-0046 東京都墨田区京島１丁目４６−２",
-    "addressSource": "SaunaTime",
+    "address": "〒131-0046 東京都墨田区京島1丁目46−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.71838,
     "lng": 139.820911,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4868/"
+    "sourceUrl": "https://saunatime.jp/saunas/4868/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hikifune/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4868/"
   },
   {
     "id": "st-tokyo-4866",
     "name": "ルネサンス亀戸24",
     "prefecture": "東京都",
-    "address": "〒136-0071 東京都江東区亀戸２丁目１−１ ４F",
-    "addressSource": "SaunaTime",
+    "address": "〒136-0071 東京都江東区亀戸2丁目1−1 4F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.697847,
     "lng": 139.820283,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4866/"
+    "sourceUrl": "https://saunatime.jp/saunas/4866/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kameido/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4866/"
   },
   {
     "id": "st-tokyo-4904",
     "name": "ルネサンス金町駅前24",
     "prefecture": "東京都",
     "address": "〒125-0042 東京都葛飾区金町6-9-5",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.769251,
     "lng": 139.872293,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4904/"
+    "sourceUrl": "https://saunatime.jp/saunas/4904/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh67/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4904/"
   },
   {
     "id": "st-tokyo-4668",
     "name": "ルネサンス経堂",
     "prefecture": "東京都",
     "address": "〒156-0051 東京都 世田谷区宮坂3-1-45",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.653356,
     "lng": 139.639763,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4668/"
+    "sourceUrl": "https://saunatime.jp/saunas/4668/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kyodo/lp/campaign/?utm_source=google&utm_medium=cpc&utm_campaign=general&gclid=Cj0KCQjwu7OIBhCsARIsALxCUaMIojcMEQCxO3-UFg0LBV8o7a-TjVuyUqgQ7Uag-uhqaUDGd6sFBx8aAvJvEALw_wcB",
+    "officialUrlSource": "https://saunatime.jp/saunas/4668/"
   },
   {
     "id": "st-tokyo-4873",
     "name": "ルネサンス光が丘",
     "prefecture": "東京都",
-    "address": "〒179-0075 東京都練馬区高松５丁目８ J．CITYビル 1階",
-    "addressSource": "SaunaTime",
+    "address": "〒179-0075 東京都練馬区高松5丁目8 J.CITYビル 1階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.755435,
     "lng": 139.621547,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4873/"
+    "sourceUrl": "https://saunatime.jp/saunas/4873/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hikarigaoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4873/"
   },
   {
     "id": "st-tokyo-4865",
     "name": "ルネサンス国立24",
     "prefecture": "東京都",
-    "address": "〒186-0002 東京都国立市東１丁目７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒186-0002 東京都国立市東1丁目7−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.697812,
     "lng": 139.448509,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4865/"
+    "sourceUrl": "https://saunatime.jp/saunas/4865/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kunitachi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4865/"
   },
   {
     "id": "st-tokyo-4898",
     "name": "ルネサンス新宿24",
     "prefecture": "東京都",
-    "address": "〒160-0021 東京都新宿区歌舞伎町２丁目４４−１ 健康プラザ「ハイジア」5F",
-    "addressSource": "SaunaTime",
+    "address": "〒160-0021 東京都新宿区歌舞伎町2丁目44−1 健康プラザ「ハイジア」5F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.696837,
     "lng": 139.701086,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4898/"
+    "sourceUrl": "https://saunatime.jp/saunas/4898/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh53/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4898/"
   },
   {
     "id": "st-tokyo-4900",
     "name": "ルネサンス聖路加ガーデン",
     "prefecture": "東京都",
-    "address": "〒104-0044 東京都中央区明石町８ 聖路加タワ B2F",
-    "addressSource": "SaunaTime",
+    "address": "〒104-0044 東京都中央区明石町8 聖路加タワ B2F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.667246,
     "lng": 139.778661,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4900/"
+    "sourceUrl": "https://saunatime.jp/saunas/4900/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh65/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4900/"
   },
   {
     "id": "st-tokyo-4867",
     "name": "ルネサンス西国分寺24",
     "prefecture": "東京都",
-    "address": "〒185-0024 東京都国分寺市泉町２丁目９−２",
-    "addressSource": "SaunaTime",
+    "address": "〒185-0024 東京都国分寺市泉町2丁目9−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.699458,
     "lng": 139.467395,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4867/"
+    "sourceUrl": "https://saunatime.jp/saunas/4867/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/nishikokubunji/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4867/"
   },
   {
     "id": "st-tokyo-4870",
     "name": "ルネサンス青砥24",
     "prefecture": "東京都",
-    "address": "〒125-0062 東京都葛飾区青戸６丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒125-0062 東京都葛飾区青戸6丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.748115,
     "lng": 139.857406,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4870/"
+    "sourceUrl": "https://saunatime.jp/saunas/4870/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/aoto/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4870/"
   },
   {
     "id": "st-tokyo-4876",
     "name": "ルネサンス石神井公園24",
     "prefecture": "東京都",
-    "address": "〒177-0041 東京都練馬区石神井町２丁目１４−１４",
-    "addressSource": "SaunaTime",
+    "address": "〒177-0041 東京都練馬区石神井町2丁目14−14",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.745502,
     "lng": 139.607794,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4876/"
+    "sourceUrl": "https://saunatime.jp/saunas/4876/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/shakujiikoen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4876/"
   },
   {
     "id": "st-tokyo-4875",
     "name": "ルネサンス赤羽",
     "prefecture": "東京都",
-    "address": "〒115-0055 東京都北区赤羽西１丁目６−１ パルロード ２・４階",
-    "addressSource": "SaunaTime",
+    "address": "〒115-0055 東京都北区赤羽西1丁目6−1 パルロード 2・4階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.778129,
     "lng": 139.719302,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4875/"
+    "sourceUrl": "https://saunatime.jp/saunas/4875/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/akabane/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4875/"
   },
   {
     "id": "st-tokyo-4905",
     "name": "ルネサンス雪谷24",
     "prefecture": "東京都",
     "address": "〒145-0073 東京都大田区北嶺町43-18",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.588033,
     "lng": 139.67917,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4905/"
+    "sourceUrl": "https://saunatime.jp/saunas/4905/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh73/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4905/"
   },
   {
     "id": "st-tokyo-4874",
     "name": "ルネサンス仙川24",
     "prefecture": "東京都",
-    "address": "〒182-0002 東京都調布市仙川町２丁目１９−６",
-    "addressSource": "SaunaTime",
+    "address": "〒182-0002 東京都調布市仙川町2丁目19−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.663766,
     "lng": 139.583594,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4874/"
+    "sourceUrl": "https://saunatime.jp/saunas/4874/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sengawa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4874/"
   },
   {
     "id": "st-tokyo-4901",
     "name": "ルネサンス多摩川",
     "prefecture": "東京都",
     "address": "〒146-0093 東京都大田区矢口3-28-7 東急ドエルアルス多摩川内",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.560797,
     "lng": 139.693363,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4901/"
+    "sourceUrl": "https://saunatime.jp/saunas/4901/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh51/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4901/"
   },
   {
     "id": "st-tokyo-4879",
     "name": "ルネサンス東久留米24",
     "prefecture": "東京都",
-    "address": "〒203-0053 東京都東久留米市本町３丁目３−３８ スポーツクラブルネサンス東久留米",
-    "addressSource": "SaunaTime",
+    "address": "〒203-0053 東京都東久留米市本町3丁目3−38 スポーツクラブルネサンス東久留米",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.758366,
     "lng": 139.528421,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4879/"
+    "sourceUrl": "https://saunatime.jp/saunas/4879/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/higashikurume/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4879/"
   },
   {
     "id": "st-tokyo-4877",
     "name": "ルネサンス東伏見24",
     "prefecture": "東京都",
-    "address": "〒202-0021 東京都西東京市東伏見３丁目４−１ 東伏見Step22",
-    "addressSource": "SaunaTime",
+    "address": "〒202-0021 東京都西東京市東伏見3丁目4−1 東伏見Step22",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.727943,
     "lng": 139.564615,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4877/"
+    "sourceUrl": "https://saunatime.jp/saunas/4877/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/higashifushimi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4877/"
   },
   {
     "id": "st-tokyo-4878",
     "name": "ルネサンス富士見台24",
     "prefecture": "東京都",
-    "address": "〒176-0021 東京都練馬区貫井３丁目１２−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒176-0021 東京都練馬区貫井3丁目12−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.736217,
     "lng": 139.627954,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4878/"
+    "sourceUrl": "https://saunatime.jp/saunas/4878/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fujimidai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4878/"
   },
   {
     "id": "st-tokyo-4899",
     "name": "ルネサンス武蔵小金井24",
     "prefecture": "東京都",
     "address": "〒184-0004 東京都小金井市本町5-38-36",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.705091,
     "lng": 139.507308,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4899/"
+    "sourceUrl": "https://saunatime.jp/saunas/4899/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh64/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4899/"
   },
   {
     "id": "st-tokyo-4869",
     "name": "ルネサンス北砂",
     "prefecture": "東京都",
-    "address": "〒136-0073 東京都江東区北砂２丁目１６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒136-0073 東京都江東区北砂2丁目16−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.684453,
     "lng": 139.82524,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4869/"
+    "sourceUrl": "https://saunatime.jp/saunas/4869/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kitasuna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4869/"
   },
   {
     "id": "st-tokyo-4871",
     "name": "ルネサンス北千住24",
     "prefecture": "東京都",
-    "address": "〒120-0026 東京都足立区千住旭町５−２",
-    "addressSource": "SaunaTime",
+    "address": "〒120-0026 東京都足立区千住旭町5−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.747866,
     "lng": 139.805797,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4871/"
+    "sourceUrl": "https://saunatime.jp/saunas/4871/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kitasenju/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4871/"
   },
   {
     "id": "st-kanagawa-4827",
     "name": "【関東】テントサウナパーク In 高瀬野",
     "prefecture": "神奈川県",
-    "address": "〒252-0162 神奈川県相模原市緑区青根３２９７",
-    "addressSource": "SaunaTime",
+    "address": "〒252-0162 神奈川県相模原市緑区青根3297",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.537144,
     "lng": 139.123768,
     "trait": "wood",
@@ -5964,39 +7004,51 @@ export const SEED_FACILITIES = [
       "テントサウナ"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4827/"
+    "sourceUrl": "https://saunatime.jp/saunas/4827/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://reserve.saunaparadise.jp/kanagawa-sagamihara-sauna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4827/"
   },
   {
     "id": "st-kanagawa-4692",
     "name": "3S HOTEL HIRATSUKA",
     "prefecture": "神奈川県",
-    "address": "〒254-0042 神奈川県平塚市明石町２４−９",
-    "addressSource": "SaunaTime",
+    "address": "〒254-0042 神奈川県平塚市明石町24−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.330217,
     "lng": 139.346628,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4692/",
-    "city": "平塚市"
+    "city": "平塚市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://hiratsuka.3shotel.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4692/"
   },
   {
     "id": "st-kanagawa-4783",
     "name": "HUBHUB新百合ヶ丘",
     "prefecture": "神奈川県",
-    "address": "〒215-0004 神奈川県川崎市麻生区万福寺１丁目１２−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒215-0004 神奈川県川崎市麻生区万福寺1丁目12−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.605832,
     "lng": 139.505037,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4783/"
+    "sourceUrl": "https://saunatime.jp/saunas/4783/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://hubhub.vacationgo.jp/facilities/shinyurigaoka?infantNum=0&checkInDate&checkOutDate&area=&tagName=&planKbn=ALL",
+    "officialUrlSource": "https://saunatime.jp/saunas/4783/"
   },
   {
     "id": "st-kanagawa-4714",
     "name": "URBAN SPA",
     "prefecture": "神奈川県",
-    "address": "〒243-0018 神奈川県厚木市中町３丁目３−９",
-    "addressSource": "SaunaTime",
+    "address": "〒243-0018 神奈川県厚木市中町3丁目3−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.441006,
     "lng": 139.360843,
     "trait": "onsen",
@@ -6007,14 +7059,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4714/"
+    "sourceUrl": "https://saunatime.jp/saunas/4714/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.u-spa-sauna.com/#home",
+    "officialUrlSource": "https://saunatime.jp/saunas/4714/"
   },
   {
     "id": "st-kanagawa-1993",
     "name": "おふろの王様 港南台店",
     "prefecture": "神奈川県",
-    "address": "〒234-0053 神奈川県横浜市港南区日野中央２丁目４５−７",
-    "addressSource": "SaunaTime",
+    "address": "〒234-0053 神奈川県横浜市港南区日野中央2丁目45−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.384815,
     "lng": 139.580656,
     "trait": "onsen",
@@ -6026,75 +7082,99 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1993/",
-    "city": "横浜市"
+    "city": "横浜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ousama2603.com/shop/kounandai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/1993/"
   },
   {
     "id": "st-kanagawa-4761",
     "name": "サウナスポットエビナ",
     "prefecture": "神奈川県",
-    "address": "〒243-0405 神奈川県海老名市国分南１丁目２−１９ スモットビル",
-    "addressSource": "SaunaTime",
+    "address": "〒243-0405 神奈川県海老名市国分南1丁目2−19 スモットビル",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.455297,
     "lng": 139.396283,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4761/",
-    "city": "海老名市 事前予約制"
+    "city": "海老名市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://sauna-spot.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4761/"
   },
   {
     "id": "st-kanagawa-4762",
     "name": "ジェクサー横浜",
     "prefecture": "神奈川県",
-    "address": "〒221-0835 神奈川県横浜市神奈川区鶴屋町１丁目66−９ 横浜鶴屋町ビル ２F･３F",
-    "addressSource": "SaunaTime",
+    "address": "〒221-0835 神奈川県横浜市神奈川区鶴屋町1丁目66−9 横浜鶴屋町ビル 2F・3F JR",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.469593,
     "lng": 139.624631,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4762/"
+    "sourceUrl": "https://saunatime.jp/saunas/4762/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/yokohama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4762/"
   },
   {
     "id": "st-kanagawa-4801",
     "name": "ジェクサー新川崎",
     "prefecture": "神奈川県",
-    "address": "〒212-0058 神奈川県川崎市幸区鹿島田１丁目１−３ 4階",
-    "addressSource": "SaunaTime",
+    "address": "〒212-0058 神奈川県川崎市幸区鹿島田1丁目1−3 4階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.551133,
     "lng": 139.673138,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4801/"
+    "sourceUrl": "https://saunatime.jp/saunas/4801/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/shinkawasaki/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4801/"
   },
   {
     "id": "st-kanagawa-4781",
     "name": "ジェクサー川崎",
     "prefecture": "神奈川県",
-    "address": "〒212-0014 神奈川県川崎市幸区大宮町１−５",
-    "addressSource": "SaunaTime",
+    "address": "〒212-0014 神奈川県川崎市幸区大宮町1−5 JR川崎タワー商業棟3階~5階 JR川崎タワー",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.534849,
     "lng": 139.695124,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4781/"
+    "sourceUrl": "https://saunatime.jp/saunas/4781/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/kawasaki/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4781/"
   },
   {
     "id": "st-kanagawa-4800",
     "name": "ジェクサー東神奈川",
     "prefecture": "神奈川県",
-    "address": "〒221-0044 神奈川県横浜市神奈川区東神奈川１丁目２９",
-    "addressSource": "SaunaTime",
+    "address": "〒221-0044 神奈川県横浜市神奈川区東神奈川1丁目29",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.478818,
     "lng": 139.633748,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4800/"
+    "sourceUrl": "https://saunatime.jp/saunas/4800/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/higashikanagawa/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4800/"
   },
   {
     "id": "st-kanagawa-4",
     "name": "スカイスパYOKOHAMA",
     "prefecture": "神奈川県",
     "address": "神奈川県横浜市西区高島2-19-12 スカイビル14F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.464556,
     "lng": 139.624649,
     "trait": "onsen",
@@ -6106,14 +7186,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4/",
-    "city": "横浜市"
+    "city": "横浜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.skyspa.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4/"
   },
   {
     "id": "st-kanagawa-4736",
     "name": "プロスタイル旅館横濱馬車道",
     "prefecture": "神奈川県",
-    "address": "〒231-0014 神奈川県横浜市中区常盤町５丁目６４−5₋64 第一鳳ビル",
-    "addressSource": "SaunaTime",
+    "address": "〒231-0014 神奈川県横浜市中区常盤町5丁目64−5−64 第一鳳ビル",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.446865,
     "lng": 139.635017,
     "trait": "urban",
@@ -6124,14 +7208,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4736/"
+    "sourceUrl": "https://saunatime.jp/saunas/4736/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.prostyleryokan.com/yokohamabashamichi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4736/"
   },
   {
     "id": "st-kanagawa-4777",
     "name": "ホテルプラタナス新横浜",
     "prefecture": "神奈川県",
-    "address": "〒223-0059 神奈川県横浜市港北区北新横浜１丁目４−２ ４番地２",
-    "addressSource": "SaunaTime",
+    "address": "〒223-0059 神奈川県横浜市港北区北新横浜1丁目4−2 4番地2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.51842,
     "lng": 139.61376,
     "trait": "award",
@@ -6142,122 +7230,162 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4777/"
+    "sourceUrl": "https://saunatime.jp/saunas/4777/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-platanus.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4777/"
   },
   {
     "id": "st-kanagawa-4886",
     "name": "ルネサンスイオンモール座間24",
     "prefecture": "神奈川県",
-    "address": "〒252-0012 神奈川県座間市広野台２丁目１０−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒252-0012 神奈川県座間市広野台2丁目10−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.499759,
     "lng": 139.421674,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4886/"
+    "sourceUrl": "https://saunatime.jp/saunas/4886/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/aeonmall-zama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4886/"
   },
   {
     "id": "st-kanagawa-4884",
     "name": "ルネサンス海老名ビナガーデンズ24",
     "prefecture": "神奈川県",
-    "address": "〒243-0438 神奈川県海老名市めぐみ町３−１ ビナガーデンズパーチ ８ １０階",
-    "addressSource": "SaunaTime",
+    "address": "〒243-0438 神奈川県海老名市めぐみ町3−1 ビナガーデンズパーチ 8 10階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.453935,
     "lng": 139.389533,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4884/"
+    "sourceUrl": "https://saunatime.jp/saunas/4884/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/ebina-vinagardens/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4884/"
   },
   {
     "id": "st-kanagawa-4883",
     "name": "ルネサンス久里浜24",
     "prefecture": "神奈川県",
-    "address": "〒239-0831 神奈川県横須賀市久里浜４丁目３−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒239-0831 神奈川県横須賀市久里浜4丁目3−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.231546,
     "lng": 139.702801,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4883/"
+    "sourceUrl": "https://saunatime.jp/saunas/4883/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kurihama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4883/"
   },
   {
     "id": "st-kanagawa-4670",
     "name": "ルネサンス橋本24",
     "prefecture": "神奈川県",
-    "address": "〒252-0143 神奈川県相模原市緑区橋本３丁目３−１ 5F・6F・B1 ＳＩＮＧ橋本",
-    "addressSource": "SaunaTime",
+    "address": "〒252-0143 神奈川県相模原市緑区橋本3丁目3−1 5F・6F・B1 SING橋本",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.595218,
     "lng": 139.348773,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4670/"
+    "sourceUrl": "https://saunatime.jp/saunas/4670/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hashimoto/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4670/"
   },
   {
     "id": "st-kanagawa-4674",
     "name": "ルネサンス五月台24",
     "prefecture": "神奈川県",
-    "address": "〒215-0025 神奈川県川崎市麻生区五力田１丁目２０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒215-0025 神奈川県川崎市麻生区五力田1丁目20−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.600294,
     "lng": 139.494954,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4674/"
+    "sourceUrl": "https://saunatime.jp/saunas/4674/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/satsukidai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4674/"
   },
   {
     "id": "st-kanagawa-4672",
     "name": "ルネサンス港南台24",
     "prefecture": "神奈川県",
-    "address": "〒234-0054 神奈川県横浜市港南区港南台５丁目９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒234-0054 神奈川県横浜市港南区港南台5丁目9−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.369243,
     "lng": 139.579593,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4672/"
+    "sourceUrl": "https://saunatime.jp/saunas/4672/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/konandai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4672/"
   },
   {
     "id": "st-kanagawa-4881",
     "name": "ルネサンス港南中央24",
     "prefecture": "神奈川県",
-    "address": "〒233-0004 神奈川県横浜市港南区港南中央通１２−３１ gooday place3F",
-    "addressSource": "SaunaTime",
+    "address": "〒233-0004 神奈川県横浜市港南区港南中央通12−31 gooday place3F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.401877,
     "lng": 139.592103,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4881/"
+    "sourceUrl": "https://saunatime.jp/saunas/4881/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/konanchuo/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4881/"
   },
   {
     "id": "st-kanagawa-4885",
     "name": "ルネサンス蒔田24",
     "prefecture": "神奈川県",
-    "address": "〒232-0018 神奈川県横浜市南区花之木町３丁目４８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒232-0018 神奈川県横浜市南区花之木町3丁目48−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.431617,
     "lng": 139.608868,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4885/"
+    "sourceUrl": "https://saunatime.jp/saunas/4885/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/maita/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4885/"
   },
   {
     "id": "st-kanagawa-4882",
     "name": "ルネサンス大和24",
     "prefecture": "神奈川県",
-    "address": "〒242-0017 神奈川県大和市大和東３丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒242-0017 神奈川県大和市大和東3丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.471542,
     "lng": 139.463194,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4882/"
+    "sourceUrl": "https://saunatime.jp/saunas/4882/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/yamato/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4882/"
   },
   {
     "id": "st-kanagawa-4743",
     "name": "ロウリューランド川崎",
     "prefecture": "神奈川県",
-    "address": "〒210-0023 神奈川県川崎市川崎区小川町１−１８ ラチッタデッラ内ビバーチェ棟3F",
-    "addressSource": "SaunaTime",
+    "address": "〒210-0023 神奈川県川崎市川崎区小川町1−18 ラチッタデッラ内ビバーチェ棟3F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.529541,
     "lng": 139.698319,
     "trait": "urban",
@@ -6268,14 +7396,18 @@ export const SEED_FACILITIES = [
       "セルフロウリュ"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4743/"
+    "sourceUrl": "https://saunatime.jp/saunas/4743/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.loylyland.com/kawasaki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4743/"
   },
   {
     "id": "st-kanagawa-4795",
     "name": "個室サウナ&タイ古式マッサージ ワイルームSpa横浜鶴見店",
     "prefecture": "神奈川県",
-    "address": "〒230-0051 神奈川県横浜市鶴見区鶴見中央４丁目５−３ 木曽屋第２ビル 201号",
-    "addressSource": "SaunaTime",
+    "address": "〒230-0051 神奈川県横浜市鶴見区鶴見中央4丁目5−3 木曽屋第2ビル 201号",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.5064,
     "lng": 139.677307,
     "trait": "onsen",
@@ -6288,27 +7420,35 @@ export const SEED_FACILITIES = [
       "個室"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4795/"
+    "sourceUrl": "https://saunatime.jp/saunas/4795/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://wairoom-spa.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4795/"
   },
   {
     "id": "st-kanagawa-4786",
     "name": "公衆アウトドアサウナ ノサウナ",
     "prefecture": "神奈川県",
-    "address": "〒250-0055 神奈川県小田原市久野４２９４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒250-0055 神奈川県小田原市久野4294−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.261799,
     "lng": 139.122427,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4786/",
-    "city": "小田原市"
+    "city": "小田原市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://nosauna.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4786/"
   },
   {
     "id": "st-kanagawa-4837",
     "name": "山賊サウナ",
     "prefecture": "神奈川県",
-    "address": "〒250-0032 神奈川県小田原市風祭１４８",
-    "addressSource": "SaunaTime",
+    "address": "〒250-0032 神奈川県小田原市風祭148",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.242475,
     "lng": 139.124596,
     "trait": "wood",
@@ -6320,14 +7460,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4837/",
-    "city": "小田原市"
+    "city": "小田原市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://sanzokusauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4837/"
   },
   {
     "id": "st-kanagawa-1977",
     "name": "天然温泉・満天の湯",
     "prefecture": "神奈川県",
-    "address": "〒240-0042 神奈川県横浜市保土ケ谷区上星川３丁目１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒240-0042 神奈川県横浜市保土ケ谷区上星川3丁目1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.46711,
     "lng": 139.579879,
     "trait": "onsen",
@@ -6339,26 +7483,32 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1977/",
-    "city": "横浜市"
+    "city": "横浜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kanagawa-63",
     "name": "東名厚木健康センター",
     "prefecture": "神奈川県",
-    "address": "神奈川県厚木市岡田３丁目１７−１０",
-    "addressSource": "SaunaTime",
+    "address": "神奈川県厚木市岡田3丁目17−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.42515,
     "lng": 139.357711,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/63/"
+    "sourceUrl": "https://saunatime.jp/saunas/63/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yunoizumi.com/atsugi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/63/"
   },
   {
     "id": "st-kanagawa-11",
     "name": "藤沢　冨士見湯",
     "prefecture": "神奈川県",
     "address": "神奈川県藤沢市藤沢1003-8 クリオ藤沢弐番館 1F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.341764,
     "lng": 139.482954,
     "trait": "onsen",
@@ -6369,14 +7519,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/11/"
+    "sourceUrl": "https://saunatime.jp/saunas/11/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://k-o-i.jp/koten/fujimiyu-sho.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/11/"
   },
   {
     "id": "st-kanagawa-424",
     "name": "竜泉寺の湯湘南茅ヶ崎店",
     "prefecture": "神奈川県",
-    "address": "〒253-0073 神奈川県茅ヶ崎市中島１３３９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒253-0073 神奈川県茅ヶ崎市中島1339−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.330916,
     "lng": 139.381342,
     "trait": "onsen",
@@ -6387,14 +7541,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/424/"
+    "sourceUrl": "https://saunatime.jp/saunas/424/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://ryusenjinoyu.com/chigasaki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/424/"
   },
   {
     "id": "st-niigata-4278",
     "name": "アクアホテル 燕三条駅前店",
     "prefecture": "新潟県",
-    "address": "〒955-0092 新潟県三条市須頃１丁目７２",
-    "addressSource": "SaunaTime",
+    "address": "〒955-0092 新潟県三条市須頃1丁目72",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.647036,
     "lng": 138.937734,
     "trait": "award",
@@ -6405,14 +7563,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4278/"
+    "sourceUrl": "https://saunatime.jp/saunas/4278/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://aqa-hotel.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4278/"
   },
   {
     "id": "st-niigata-3890",
     "name": "いい湯らてい",
     "prefecture": "新潟県",
-    "address": "〒955-0128 新潟県三条市南五百川１６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒955-0128 新潟県三条市南五百川16−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.539061,
     "lng": 139.125407,
     "trait": "onsen",
@@ -6424,14 +7586,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3890/",
-    "city": "三条市"
+    "city": "三条市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.iiyuratei.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3890/"
   },
   {
     "id": "st-niigata-2109",
     "name": "うみてらす名立ホテル光鱗",
     "prefecture": "新潟県",
-    "address": "〒949-1602 新潟県上越市名立区名立大町４２８０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒949-1602 新潟県上越市名立区名立大町4280−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.163683,
     "lng": 138.086139,
     "trait": "award",
@@ -6442,14 +7608,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2109/"
+    "sourceUrl": "https://saunatime.jp/saunas/2109/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.umiterasu.co.jp/relax/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2109/"
   },
   {
     "id": "st-niigata-2126",
     "name": "えちご川口温泉",
     "prefecture": "新潟県",
-    "address": "〒949-7503 新潟県長岡市川口中山２５１５−５",
-    "addressSource": "SaunaTime",
+    "address": "〒949-7503 新潟県長岡市川口中山2515−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.268419,
     "lng": 138.868852,
     "trait": "onsen",
@@ -6461,14 +7631,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2126/",
-    "city": "長岡市"
+    "city": "長岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotel-sunrolla.jp/echigokawaguchionsen/#onsen",
+    "officialUrlSource": "https://saunatime.jp/saunas/2126/"
   },
   {
     "id": "st-niigata-2097",
     "name": "カーブドッチヴィネスパ",
     "prefecture": "新潟県",
-    "address": "〒953-0011 新潟県新潟市西蒲区角田浜１６６１",
-    "addressSource": "SaunaTime",
+    "address": "〒953-0011 新潟県新潟市西蒲区角田浜1661",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.803055,
     "lng": 138.847192,
     "trait": "onsen",
@@ -6480,14 +7654,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2097/",
-    "city": "新潟市"
+    "city": "新潟市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.docci.com/movement/dayspa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2097/"
   },
   {
     "id": "st-niigata-4274",
     "name": "くわどり湯ったり村",
     "prefecture": "新潟県",
     "address": "〒949-1738 新潟県上越市 新潟県上越市大字皆口601",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.084314,
     "lng": 138.135612,
     "trait": "onsen",
@@ -6498,39 +7676,51 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4274/"
+    "sourceUrl": "https://saunatime.jp/saunas/4274/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kuwadori.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4274/"
   },
   {
     "id": "st-niigata-4798",
     "name": "ジェクサー新潟",
     "prefecture": "新潟県",
-    "address": "〒950-0917 新潟県新潟市中央区天神１丁目１２ ７LEXEN2 9 11階",
-    "addressSource": "SaunaTime",
+    "address": "〒950-0917 新潟県新潟市中央区天神1丁目12 7LEXEN2 9 11階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.911016,
     "lng": 139.060586,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4798/"
+    "sourceUrl": "https://saunatime.jp/saunas/4798/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jexer.jp/fitness/niigata/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4798/"
   },
   {
     "id": "st-niigata-4653",
     "name": "スパ＆ラウンジ長潟",
     "prefecture": "新潟県",
-    "address": "〒950-0932 新潟県新潟市中央区長潟１２０３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒950-0932 新潟県新潟市中央区長潟1203−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.8849,
     "lng": 139.06849,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4653/",
-    "city": "新潟市"
+    "city": "新潟市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.vertex-group.co.jp/spa-lounge/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4653/"
   },
   {
     "id": "st-niigata-2071",
     "name": "ナステビュウ湯の山",
     "prefecture": "新潟県",
-    "address": "〒942-1431 新潟県十日町市松之山湯山１２５２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒942-1431 新潟県十日町市松之山湯山1252−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.073031,
     "lng": 138.611101,
     "trait": "wood",
@@ -6544,27 +7734,33 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2071/",
-    "city": "十日町市"
+    "city": "十日町市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yunoyama.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2071/"
   },
   {
     "id": "st-niigata-2075",
     "name": "ひすいの湯",
     "prefecture": "新潟県",
-    "address": "〒941-0071 新潟県糸魚川市大野２９８",
-    "addressSource": "SaunaTime",
+    "address": "〒941-0071 新潟県糸魚川市大野298",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.020891,
     "lng": 137.856938,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2075/",
-    "city": "糸魚川市"
+    "city": "糸魚川市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-niigata-2144",
     "name": "ホテルグリーンプラザ上越",
     "prefecture": "新潟県",
-    "address": "〒949-6431 新潟県南魚沼市樺野沢１１２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒949-6431 新潟県南魚沼市樺野沢112−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.031544,
     "lng": 138.820176,
     "trait": "award",
@@ -6575,14 +7771,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2144/"
+    "sourceUrl": "https://saunatime.jp/saunas/2144/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jkokusai.co.jp/spa",
+    "officialUrlSource": "https://saunatime.jp/saunas/2144/"
   },
   {
     "id": "st-niigata-4448",
     "name": "ホテル双葉",
     "prefecture": "新潟県",
-    "address": "〒949-6101 新潟県南魚沼郡湯沢町湯沢４１９",
-    "addressSource": "SaunaTime",
+    "address": "〒949-6101 新潟県南魚沼郡湯沢町湯沢419",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.937427,
     "lng": 138.811318,
     "trait": "award",
@@ -6593,14 +7793,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4448/"
+    "sourceUrl": "https://saunatime.jp/saunas/4448/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-futaba.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4448/"
   },
   {
     "id": "st-niigata-2135",
     "name": "ホテル米本陣",
     "prefecture": "新潟県",
-    "address": "〒943-0318 新潟県上越市三和区宮崎新田１２４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒943-0318 新潟県上越市三和区宮崎新田124−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.106582,
     "lng": 138.368917,
     "trait": "award",
@@ -6611,7 +7815,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2135/"
+    "sourceUrl": "https://saunatime.jp/saunas/2135/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.mypara.co.jp/?_ga=2.50920489.1499366173.1543056947-913236861.1543056947",
+    "officialUrlSource": "https://saunatime.jp/saunas/2135/"
   },
   {
     "id": "si-niigata-80574",
@@ -6645,8 +7853,8 @@ export const SEED_FACILITIES = [
     "id": "st-niigata-4277",
     "name": "みつけ健幸の湯 ほっとぴあ",
     "prefecture": "新潟県",
-    "address": "〒954-0053 新潟県見附市本町１丁目４−２３",
-    "addressSource": "SaunaTime",
+    "address": "〒954-0053 新潟県見附市本町1丁目4−23",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.528156,
     "lng": 138.92381,
     "trait": "onsen",
@@ -6658,50 +7866,64 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4277/",
-    "city": "見附市"
+    "city": "見附市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-niigata-2095",
     "name": "ゆーパーク薬師",
     "prefecture": "新潟県",
-    "address": "〒946-0072 新潟県魚沼市七日市新田６４３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒946-0072 新潟県魚沼市七日市新田643−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.234868,
     "lng": 138.991251,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2095/"
+    "sourceUrl": "https://saunatime.jp/saunas/2095/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yu-park.net/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2095/"
   },
   {
     "id": "st-niigata-4856",
     "name": "ルネサンス長岡24",
     "prefecture": "新潟県",
-    "address": "〒940-2108 新潟県長岡市千秋２丁目２２１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒940-2108 新潟県長岡市千秋2丁目221−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.457501,
     "lng": 138.827671,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4856/"
+    "sourceUrl": "https://saunatime.jp/saunas/4856/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/nagaoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4856/"
   },
   {
     "id": "st-niigata-4566",
     "name": "鵜の浜人魚館",
     "prefecture": "新潟県",
-    "address": "〒949-3102 新潟県上越市大潟区九戸浜２４１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒949-3102 新潟県上越市大潟区九戸浜241−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.241325,
     "lng": 138.34004,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4566/"
+    "sourceUrl": "https://saunatime.jp/saunas/4566/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.ningyokan.jp/index",
+    "officialUrlSource": "https://saunatime.jp/saunas/4566/"
   },
   {
     "id": "st-niigata-4501",
     "name": "釜ぶたの湯",
     "prefecture": "新潟県",
-    "address": "〒943-0861 新潟県上越市大和５丁目４",
-    "addressSource": "SaunaTime",
+    "address": "〒943-0861 新潟県上越市大和5丁目4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -6713,14 +7935,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4501/",
-    "city": "上越市"
+    "city": "上越市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hidakk.co.jp/kamabutanoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4501/"
   },
   {
     "id": "st-niigata-2114",
     "name": "魚沼市見晴らしの湯こまみ",
     "prefecture": "新潟県",
-    "address": "〒946-0043 新潟県魚沼市青島２０８３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒946-0043 新潟県魚沼市青島2083−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.224596,
     "lng": 138.950927,
     "trait": "onsen",
@@ -6731,14 +7957,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2114/"
+    "sourceUrl": "https://saunatime.jp/saunas/2114/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://park23.wakwak.com/~komami/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2114/"
   },
   {
     "id": "st-niigata-2080",
     "name": "桂の関温泉ゆーむ",
     "prefecture": "新潟県",
-    "address": "〒959-3265 新潟県岩船郡関川村下関１３０７−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒959-3265 新潟県岩船郡関川村下関1307−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 38.092456,
     "lng": 139.565804,
     "trait": "onsen",
@@ -6750,14 +7980,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2080/",
-    "city": "岩船郡関川村"
+    "city": "岩船郡関川村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-niigata-2087",
     "name": "五泉市村松さくらんど温泉",
     "prefecture": "新潟県",
-    "address": "〒959-1600 新潟県五泉市上木越甲４２３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒959-1600 新潟県五泉市上木越甲423−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.700485,
     "lng": 139.206229,
     "trait": "onsen",
@@ -6769,39 +8001,51 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2087/",
-    "city": "五泉市"
+    "city": "五泉市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://sakurand.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2087/"
   },
   {
     "id": "st-niigata-205",
     "name": "秋葉温泉 花水",
     "prefecture": "新潟県",
-    "address": "〒956-0833 新潟県新潟市秋葉区草水町１丁目１−４−５",
-    "addressSource": "SaunaTime",
+    "address": "〒956-0833 新潟県新潟市秋葉区草水町1丁目1−4−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.786945,
     "lng": 139.144071,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/205/",
-    "city": "新潟市"
+    "city": "新潟市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.casui.net/top/",
+    "officialUrlSource": "https://saunatime.jp/saunas/205/"
   },
   {
     "id": "st-niigata-2143",
     "name": "上越市上越リゾートセンター くるみ家族園",
     "prefecture": "新潟県",
-    "address": "〒942-0036 新潟県上越市大字東中島２４８７",
-    "addressSource": "SaunaTime",
+    "address": "〒942-0036 新潟県上越市大字東中島2487",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.166706,
     "lng": 138.301648,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2143/"
+    "sourceUrl": "https://saunatime.jp/saunas/2143/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kurumijoetu.jimdofree.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2143/"
   },
   {
     "id": "st-niigata-2128",
     "name": "神の宮温泉 かわら亭",
     "prefecture": "新潟県",
     "address": "〒944-0096 新潟県妙高市大字神宮寺31−3",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.053785,
     "lng": 138.239284,
     "trait": "onsen",
@@ -6813,27 +8057,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2128/",
-    "city": "妙高市"
+    "city": "妙高市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kawaratei.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2128/"
   },
   {
     "id": "st-niigata-2077",
     "name": "雪国の宿 高半",
     "prefecture": "新潟県",
-    "address": "〒949-6101 新潟県南魚沼郡湯沢町湯沢（大字）９２３",
-    "addressSource": "SaunaTime",
+    "address": "〒949-6101 新潟県南魚沼郡湯沢町湯沢(大字)923",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.947101,
     "lng": 138.799772,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2077/",
-    "city": "南魚沼郡湯沢町 宿泊者限定"
+    "city": "南魚沼郡湯沢町 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.takahan.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2077/"
   },
   {
     "id": "st-niigata-2093",
     "name": "百花の里 城山温泉",
     "prefecture": "新潟県",
-    "address": "〒957-0042 新潟県新発田市浦１０４０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒957-0042 新潟県新発田市浦1040−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.902203,
     "lng": 139.344026,
     "trait": "wood",
@@ -6847,14 +8099,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2093/",
-    "city": "新発田市"
+    "city": "新発田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.shiroyama-onsen.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2093/"
   },
   {
     "id": "st-niigata-2078",
     "name": "福寿温泉じょんのび館",
     "prefecture": "新潟県",
-    "address": "〒953-0076 新潟県新潟市西蒲区福井４０６７",
-    "addressSource": "SaunaTime",
+    "address": "〒953-0076 新潟県新潟市西蒲区福井4067",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.760194,
     "lng": 138.831511,
     "trait": "onsen",
@@ -6865,26 +8121,32 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2078/"
+    "sourceUrl": "https://saunatime.jp/saunas/2078/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-niigata-4172",
     "name": "妙高市ほっとランド",
     "prefecture": "新潟県",
     "address": "〒944-0013 新潟県妙高市 新潟県妙高市高柳972−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.040872,
     "lng": 138.266026,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4172/"
+    "sourceUrl": "https://saunatime.jp/saunas/4172/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.city.myoko.niigata.jp/introtourism/81.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4172/"
   },
   {
     "id": "st-niigata-203",
     "name": "弥彦温泉 さくらの湯",
     "prefecture": "新潟県",
     "address": "〒959-0318 新潟県西蒲原郡弥彦村麓 弥彦村弥彦大字麓1970",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.67747,
     "lng": 138.82604,
     "trait": "onsen",
@@ -6895,14 +8157,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/203/"
+    "sourceUrl": "https://saunatime.jp/saunas/203/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotel-juraku.co.jp/sakura/index.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/203/"
   },
   {
     "id": "st-toyama-4768",
     "name": "SAUNA CNOC",
     "prefecture": "富山県",
-    "address": "〒937-0033 富山県魚津市島尻９９９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒937-0033 富山県魚津市島尻999−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.789701,
     "lng": 137.472452,
     "trait": "award",
@@ -6911,14 +8177,18 @@ export const SEED_FACILITIES = [
     "city": "魚津市 事前予約制",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://saunacnoc.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4768/"
   },
   {
     "id": "st-toyama-125",
     "name": "おまき温泉スパガーデン和園",
     "prefecture": "富山県",
-    "address": "富山県砺波市庄川町小牧１０",
-    "addressSource": "SaunaTime",
+    "address": "富山県砺波市庄川町小牧10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.562876,
     "lng": 137.003707,
     "trait": "onsen",
@@ -6930,20 +8200,28 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/125/",
-    "city": "砺波市"
+    "city": "砺波市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kamishita.sakura.ne.jp/omakionsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/125/"
   },
   {
     "id": "st-toyama-4334",
     "name": "グリーンパーク吉峰ゆ～ランド",
     "prefecture": "富山県",
     "address": "〒930-1362 富山県中新川郡 富山県立山町吉峰野開12",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.614108,
     "lng": 137.32926,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4334/",
-    "city": "中新川郡立山町"
+    "city": "中新川郡立山町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yoshimine.or.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4334/"
   },
   {
     "id": "st-toyama-317",
@@ -6957,20 +8235,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/317/"
+    "sourceUrl": "https://saunatime.jp/saunas/317/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-287",
     "name": "スパ・アルプス",
     "prefecture": "富山県",
     "address": "〒939-8006 富山県富山市山室292−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.676854,
     "lng": 137.237716,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/287/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sauna-alps.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/287/"
   },
   {
     "id": "st-toyama-282",
@@ -6984,7 +8267,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/282/"
+    "sourceUrl": "https://saunatime.jp/saunas/282/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-2421",
@@ -6992,7 +8276,8 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2421/"
+    "sourceUrl": "https://saunatime.jp/saunas/2421/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-2157",
@@ -7009,33 +8294,42 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2157/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-329",
     "name": "ゆ～ゆうランド・花椿",
     "prefecture": "富山県",
-    "address": "〒939-1877 富山県南砺市井口（旧井口村）３５",
-    "addressSource": "SaunaTime",
+    "address": "〒939-1877 富山県南砺市井口(旧井口村)35",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.526679,
     "lng": 136.940986,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/329/",
-    "city": "南砺市"
+    "city": "南砺市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tonamigreen.co.jp/hanatsubaki/index.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/329/"
   },
   {
     "id": "st-toyama-3345",
     "name": "らくち～の",
     "prefecture": "富山県",
-    "address": "〒939-0729 富山県下新川郡朝日町舟川新３５",
-    "addressSource": "SaunaTime",
+    "address": "〒939-0729 富山県下新川郡朝日町舟川新35",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.939507,
     "lng": 137.541746,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3345/",
-    "city": "下新川郡朝日町"
+    "city": "下新川郡朝日町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.rakuchino.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3345/"
   },
   {
     "id": "st-toyama-2167",
@@ -7049,7 +8343,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2167/"
+    "sourceUrl": "https://saunatime.jp/saunas/2167/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-324",
@@ -7058,14 +8353,15 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/324/",
-    "city": "高岡市"
+    "city": "高岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-4520",
     "name": "温泉天国よつやのゆ",
     "prefecture": "富山県",
-    "address": "〒933-0949 富山県高岡市四屋６７２−２",
-    "addressSource": "SaunaTime",
+    "address": "〒933-0949 富山県高岡市四屋672−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.762031,
     "lng": 137.00439,
     "trait": "onsen",
@@ -7076,14 +8372,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4520/"
+    "sourceUrl": "https://saunatime.jp/saunas/4520/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-292",
     "name": "金太郎温泉 カルナの館",
     "prefecture": "富山県",
     "address": "〒937-0013 富山県魚津市天神野新6000",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.839313,
     "lng": 137.436156,
     "trait": "onsen",
@@ -7095,7 +8393,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/292/",
-    "city": "魚津市"
+    "city": "魚津市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kintarouonsen.co.jp/karuna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/292/"
   },
   {
     "id": "st-toyama-2164",
@@ -7111,7 +8413,8 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2164/"
+    "sourceUrl": "https://saunatime.jp/saunas/2164/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-2168",
@@ -7127,7 +8430,8 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2168/"
+    "sourceUrl": "https://saunatime.jp/saunas/2168/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-322",
@@ -7142,7 +8446,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/322/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-4335",
@@ -7156,53 +8461,66 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4335/"
+    "sourceUrl": "https://saunatime.jp/saunas/4335/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-288",
     "name": "高原鉱泉",
     "prefecture": "富山県",
-    "address": "〒939-8036 富山県富山市高屋敷４１９",
-    "addressSource": "SaunaTime",
+    "address": "〒939-8036 富山県富山市高屋敷419",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.673733,
     "lng": 137.241828,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/288/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://takaharakousen.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/288/"
   },
   {
     "id": "st-toyama-4574",
     "name": "桜ヶ池クアガーデン",
     "prefecture": "富山県",
     "address": "〒939-1835 富山県南砺市立野原東1514",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.500457,
     "lng": 136.871976,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4574/",
-    "city": "南砺市"
+    "city": "南砺市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://sakuragaike.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4574/"
   },
   {
     "id": "st-toyama-290",
     "name": "舟橋・立山天然温泉 湯めごこち",
     "prefecture": "富山県",
-    "address": "〒930-0285 富山県中新川郡舟橋村古海老江２５６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒930-0285 富山県中新川郡舟橋村古海老江256−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.687496,
     "lng": 137.303301,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/290/",
-    "city": "中新川郡舟橋村"
+    "city": "中新川郡舟橋村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yumegokochi.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/290/"
   },
   {
     "id": "st-toyama-37",
     "name": "川合田温泉",
     "prefecture": "富山県",
     "address": "富山県南砺市川西川合田温泉 1535番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.575899,
     "lng": 136.849831,
     "trait": "onsen",
@@ -7213,14 +8531,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/37/"
+    "sourceUrl": "https://saunatime.jp/saunas/37/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kawaidaonsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/37/"
   },
   {
     "id": "st-toyama-291",
     "name": "長八温泉 花の湯館",
     "prefecture": "富山県",
     "address": "〒939-8071 富山県富山市上袋545−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.661145,
     "lng": 137.214904,
     "trait": "onsen",
@@ -7231,7 +8553,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/291/"
+    "sourceUrl": "https://saunatime.jp/saunas/291/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://toyamaonsen.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/291/"
   },
   {
     "id": "st-toyama-2165",
@@ -7239,26 +8565,31 @@ export const SEED_FACILITIES = [
     "prefecture": "富山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2165/"
+    "sourceUrl": "https://saunatime.jp/saunas/2165/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-2912",
     "name": "天然温泉 富山 剱の湯 御宿 野乃",
     "prefecture": "富山県",
-    "address": "〒930-0083 富山県富山市総曲輪3丁目9-2",
-    "addressSource": "SaunaTime",
+    "address": "〒9300083 富山県富山市総曲輪3丁目9−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.689475,
     "lng": 137.21207,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2912/"
+    "sourceUrl": "https://saunatime.jp/saunas/2912/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/dormyinn/nono/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2912/"
   },
   {
     "id": "st-toyama-2152",
     "name": "湯来楽 砺波店",
     "prefecture": "富山県",
-    "address": "〒939-1327 富山県砺波市五郎丸 五郎丸６２２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒939-1327 富山県砺波市五郎丸 五郎丸622−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.622548,
     "lng": 136.953621,
     "trait": "onsen",
@@ -7269,7 +8600,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2152/"
+    "sourceUrl": "https://saunatime.jp/saunas/2152/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yu-yurara.jp/tonami/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2152/"
   },
   {
     "id": "st-toyama-2180",
@@ -7283,27 +8618,32 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2180/"
+    "sourceUrl": "https://saunatime.jp/saunas/2180/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-toyama-2159",
     "name": "八尾ゆめの森ゆうゆう館",
     "prefecture": "富山県",
-    "address": "〒939-2331 富山県富山市八尾町下笹原６７８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒939-2331 富山県富山市八尾町下笹原678−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.569082,
     "lng": 137.140941,
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2159/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.uu-kan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2159/"
   },
   {
     "id": "st-toyama-283",
     "name": "満天の湯 富山店",
     "prefecture": "富山県",
-    "address": "〒930-0966 富山県富山市石金２丁目１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒930-0966 富山県富山市石金2丁目1−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.687145,
     "lng": 137.233372,
     "trait": "wood",
@@ -7317,7 +8657,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/283/",
-    "city": "富山市"
+    "city": "富山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.manten-yu.co.jp/toyama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/283/"
   },
   {
     "id": "st-toyama-3341",
@@ -7332,14 +8676,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3341/",
-    "city": "氷見市"
+    "city": "氷見市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-2192",
     "name": "C.C.Z 松任海浜温泉",
     "prefecture": "石川県",
-    "address": "〒924-0071 石川県白山市徳光町２６６５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒924-0071 石川県白山市徳光町2665−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.536039,
     "lng": 136.530281,
     "trait": "onsen",
@@ -7352,14 +8697,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2192/"
+    "sourceUrl": "https://saunatime.jp/saunas/2192/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-453",
     "name": "アパホテル〈小松グランド〉",
     "prefecture": "石川県",
-    "address": "〒923-0957 石川県小松市本折町３３",
-    "addressSource": "SaunaTime",
+    "address": "〒923-0957 石川県小松市本折町33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.399523,
     "lng": 136.449357,
     "trait": "award",
@@ -7370,26 +8717,34 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/453/"
+    "sourceUrl": "https://saunatime.jp/saunas/453/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.apahotel.com/hotel/hokuriku/13_komatsugrand/",
+    "officialUrlSource": "https://saunatime.jp/saunas/453/"
   },
   {
     "id": "st-ishikawa-4681",
     "name": "エイトポイントイン金沢",
     "prefecture": "石川県",
-    "address": "〒920-0997 石川県金沢市竪町４５−２",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0997 石川県金沢市竪町45−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.560746,
     "lng": 136.654291,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4681/"
+    "sourceUrl": "https://saunatime.jp/saunas/4681/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.8pointinn.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4681/"
   },
   {
     "id": "st-ishikawa-2184",
     "name": "エキスパ(アパホテル〈金沢駅前〉)",
     "prefecture": "石川県",
     "address": "〒920-0031 石川県金沢市広岡1-9-28",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.577715,
     "lng": 136.646738,
     "trait": "onsen",
@@ -7402,14 +8757,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2184/"
+    "sourceUrl": "https://saunatime.jp/saunas/2184/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.apahotel.com/page.jsp?id=1431&spa_id=11&hotel_id=63",
+    "officialUrlSource": "https://saunatime.jp/saunas/2184/"
   },
   {
     "id": "st-ishikawa-2193",
     "name": "オータム天然温泉しあわせの湯",
     "prefecture": "石川県",
-    "address": "〒921-8817 石川県野々市市横宮町６−３",
-    "addressSource": "SaunaTime",
+    "address": "〒921-8817 石川県野々市市横宮町6−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.535944,
     "lng": 136.617845,
     "trait": "onsen",
@@ -7420,38 +8779,50 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2193/"
+    "sourceUrl": "https://saunatime.jp/saunas/2193/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://shiawasenoyu.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2193/"
   },
   {
     "id": "st-ishikawa-451",
     "name": "テルメ金沢",
     "prefecture": "石川県",
-    "address": "〒920-0364 石川県金沢市松島町１７",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0364 石川県金沢市松島町17",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.569793,
     "lng": 136.601384,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/451/"
+    "sourceUrl": "https://saunatime.jp/saunas/451/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.terume.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/451/"
   },
   {
     "id": "st-ishikawa-17",
     "name": "ドーミーイン金沢 加賀の湧泉",
     "prefecture": "石川県",
     "address": "〒920-0849 石川県金沢市堀川新町2-25",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.579248,
     "lng": 136.650619,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/17/"
+    "sourceUrl": "https://saunatime.jp/saunas/17/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/kanazawa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/17/"
   },
   {
     "id": "st-ishikawa-2190",
     "name": "ひょっこり温泉 島の湯",
     "prefecture": "石川県",
     "address": "〒926-0212 石川県七尾市能登島佐波町ラ−ラ部29−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 37.119255,
     "lng": 136.996893,
     "trait": "onsen",
@@ -7463,27 +8834,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2190/",
-    "city": "七尾市"
+    "city": "七尾市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://user.notojima.jp/shimanoyu/top.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2190/"
   },
   {
     "id": "st-ishikawa-2240",
     "name": "ホテルアローレ",
     "prefecture": "石川県",
-    "address": "〒922-0402 石川県加賀市柴山町と−５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒922-0402 石川県加賀市柴山町と−5−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.358313,
     "lng": 136.376049,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2240/",
-    "city": "加賀市"
+    "city": "加賀市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.arrowle.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2240/"
   },
   {
     "id": "st-ishikawa-2236",
     "name": "ホテルウェルネス能登路",
     "prefecture": "石川県",
-    "address": "〒929-1415 石川県羽咋郡宝達志水町敷浪５−４８－２",
-    "addressSource": "SaunaTime",
+    "address": "〒929-1415 石川県羽咋郡宝達志水町敷浪5−48-2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.851994,
     "lng": 136.764564,
     "trait": "award",
@@ -7494,39 +8873,51 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2236/"
+    "sourceUrl": "https://saunatime.jp/saunas/2236/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-wellness.jp/notoji/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2236/"
   },
   {
     "id": "st-ishikawa-2212",
     "name": "ユーフォリア千里浜",
     "prefecture": "石川県",
-    "address": "〒925-0054 石川県羽咋市千里浜町タ−１−６７",
-    "addressSource": "SaunaTime",
+    "address": "〒925-0054 石川県羽咋市千里浜町タ−1−67",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.889633,
     "lng": 136.768186,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2212/",
-    "city": "羽咋市"
+    "city": "羽咋市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hakui.ne.jp/euphoria/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2212/"
   },
   {
     "id": "st-ishikawa-4707",
     "name": "一里野高原ホテルろあん",
     "prefecture": "石川県",
-    "address": "〒920-2333 石川県白山市尾添７０−４",
-    "addressSource": "SaunaTime",
+    "address": "〒920-2333 石川県白山市尾添70−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.269149,
     "lng": 136.716742,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4707/"
+    "sourceUrl": "https://saunatime.jp/saunas/4707/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://ichirino.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4707/"
   },
   {
     "id": "st-ishikawa-2200",
     "name": "加賀観光ホテル",
     "prefecture": "石川県",
     "address": "〒922-0412 石川県加賀市片山津温泉ウ−41",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.343462,
     "lng": 136.371142,
     "trait": "award",
@@ -7537,27 +8928,35 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2200/"
+    "sourceUrl": "https://saunatime.jp/saunas/2200/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kagakankoh-hotel.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2200/"
   },
   {
     "id": "st-ishikawa-4770",
     "name": "吉田屋山王閣",
     "prefecture": "石川県",
-    "address": "〒922-0242 石川県加賀市山代温泉１３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒922-0242 石川県加賀市山代温泉13−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.288468,
     "lng": 136.363112,
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4770/",
-    "city": "加賀市 事前予約制"
+    "city": "加賀市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sannoukaku.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4770/"
   },
   {
     "id": "st-ishikawa-2187",
     "name": "極楽湯 金沢野々市店",
     "prefecture": "石川県",
-    "address": "〒921-8816 石川県野々市市若松町１８ 若松町18-1",
-    "addressSource": "SaunaTime",
+    "address": "〒921-8816 石川県野々市市若松町18 若松町18-1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.534961,
     "lng": 136.612418,
     "trait": "onsen",
@@ -7569,14 +8968,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2187/",
-    "city": "野々市市"
+    "city": "野々市市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2187/"
   },
   {
     "id": "st-ishikawa-2189",
     "name": "金城温泉元湯",
     "prefecture": "石川県",
-    "address": "〒920-0353 石川県金沢市赤土町ト−１００−２",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0353 石川県金沢市赤土町ト−100−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.580387,
     "lng": 136.597138,
     "trait": "onsen",
@@ -7588,39 +8991,49 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2189/",
-    "city": "金沢市"
+    "city": "金沢市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kinjo-onsen.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2189/"
   },
   {
     "id": "st-ishikawa-4381",
     "name": "金沢マンテンホテル",
     "prefecture": "石川県",
     "address": "〒920-0022 石川県金沢市北安江1-6-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.581681,
     "lng": 136.649735,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4381/"
+    "sourceUrl": "https://saunatime.jp/saunas/4381/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-152",
     "name": "金沢ゆめのゆ",
     "prefecture": "石川県",
     "address": "石川県金沢市藤江南3-26",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.582983,
     "lng": 136.620196,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/152/",
-    "city": "金沢市"
+    "city": "金沢市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yumenoyu.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/152/"
   },
   {
     "id": "st-ishikawa-3039",
     "name": "今江温泉元湯",
     "prefecture": "石川県",
-    "address": "〒923-0964 石川県小松市今江町７丁目２０５",
-    "addressSource": "SaunaTime",
+    "address": "〒923-0964 石川県小松市今江町7丁目205",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.38173,
     "lng": 136.436698,
     "trait": "onsen",
@@ -7632,14 +9045,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3039/",
-    "city": "小松市"
+    "city": "小松市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-4400",
     "name": "小松グリーンホテル",
     "prefecture": "石川県",
     "address": "〒923-0002 石川県小松市小島町ル20-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.419596,
     "lng": 136.4332,
     "trait": "award",
@@ -7651,14 +9066,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4400/",
-    "city": "小松市"
+    "city": "小松市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-2210",
     "name": "大江戸温泉物語 ながやま",
     "prefecture": "石川県",
-    "address": "〒922-0414 石川県加賀市片山津町ム−１６",
-    "addressSource": "SaunaTime",
+    "address": "〒922-0414 石川県加賀市片山津町ム−16",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.343392,
     "lng": 136.374861,
     "trait": "onsen",
@@ -7670,14 +9087,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2210/",
-    "city": "加賀市"
+    "city": "加賀市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://nagayama.ooedoonsen.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2210/"
   },
   {
     "id": "st-ishikawa-2243",
     "name": "辰口温泉 総湯 里山の湯",
     "prefecture": "石川県",
-    "address": "〒923-1245 石川県能美市辰口町ヌ−ヌ−３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒923-1245 石川県能美市辰口町ヌ−ヌ−3−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.443816,
     "lng": 136.547059,
     "trait": "wood",
@@ -7690,14 +9111,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2243/"
+    "sourceUrl": "https://saunatime.jp/saunas/2243/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.nomi.ishikawa.jp/www/contents/1001000000790/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2243/"
   },
   {
     "id": "st-ishikawa-2185",
     "name": "天然温泉 サウナ片町",
     "prefecture": "石川県",
-    "address": "〒920-0981 石川県金沢市片町１丁目５ 片町1-5-24 アパホテル〈金沢中央〉",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0981 石川県金沢市片町1丁目5 片町1-5-24 アパホテル〈金沢中央〉",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.560003,
     "lng": 136.652994,
     "trait": "onsen",
@@ -7708,14 +9133,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2185/"
+    "sourceUrl": "https://saunatime.jp/saunas/2185/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.apahotel.com/hotel/hokuriku/07_kanazawa-chuou/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2185/"
   },
   {
     "id": "st-ishikawa-2183",
     "name": "天然温泉 湯来楽 内灘店",
     "prefecture": "石川県",
-    "address": "〒920-0277 石川県河北郡内灘町字千鳥台４丁目4−2−1",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0277 石川県河北郡内灘町字千鳥台4丁目4−2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.638184,
     "lng": 136.623488,
     "trait": "onsen",
@@ -7726,14 +9155,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2183/"
+    "sourceUrl": "https://saunatime.jp/saunas/2183/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yu-yurara.jp/uchinada/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2183/"
   },
   {
     "id": "st-ishikawa-2211",
     "name": "展望温泉ほのぼの湯",
     "prefecture": "石川県",
-    "address": "〒920-0264 石川県河北郡内灘町宮坂に−４５５",
-    "addressSource": "SaunaTime",
+    "address": "〒920-0264 石川県河北郡内灘町宮坂に−455",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.662165,
     "lng": 136.653019,
     "trait": "onsen",
@@ -7745,7 +9178,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2211/",
-    "city": "内灘町"
+    "city": "内灘町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.notozi.com/2honobonoyu.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/2211/"
   },
   {
     "id": "si-ishikawa-34534",
@@ -7773,8 +9210,8 @@ export const SEED_FACILITIES = [
     "id": "st-ishikawa-4480",
     "name": "比咩の湯",
     "prefecture": "石川県",
-    "address": "〒920-2331 石川県白山市瀬戸辰３",
-    "addressSource": "SaunaTime",
+    "address": "〒920-2331 石川県白山市瀬戸辰3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -7786,26 +9223,32 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4480/",
-    "city": "白山市"
+    "city": "白山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.himenoyu.jp/#",
+    "officialUrlSource": "https://saunatime.jp/saunas/4480/"
   },
   {
     "id": "st-ishikawa-2231",
     "name": "法師",
     "prefecture": "石川県",
-    "address": "〒923-0000 石川県小松市粟津町ワ−４６",
-    "addressSource": "SaunaTime",
+    "address": "〒923-0000 石川県小松市粟津町ワ−46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.331494,
     "lng": 136.44724,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2231/"
+    "sourceUrl": "https://saunatime.jp/saunas/2231/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ishikawa-4456",
     "name": "満天の湯 白山インター店",
     "prefecture": "石川県",
     "address": "〒921-8848 石川県野々市市柳町土地区画整理事業施行地区11街区",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.528237,
     "lng": 136.58171,
     "trait": "wood",
@@ -7819,14 +9262,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4456/",
-    "city": "野々市市"
+    "city": "野々市市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.manten-yu.co.jp/hakusan/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4456/"
   },
   {
     "id": "st-ishikawa-4336",
     "name": "萬歳湯",
     "prefecture": "石川県",
     "address": "〒923-0024 石川県小松市 石川県小松市茶屋町リ−112",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.4174,
     "lng": 136.454059,
     "trait": "onsen",
@@ -7837,7 +9284,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4336/"
+    "sourceUrl": "https://saunatime.jp/saunas/4336/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-492",
@@ -7851,7 +9300,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/492/"
+    "sourceUrl": "https://saunatime.jp/saunas/492/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2267",
@@ -7865,31 +9315,40 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2267/"
+    "sourceUrl": "https://saunatime.jp/saunas/2267/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-126",
     "name": "オンリーゆー",
     "prefecture": "福井県",
     "address": "福井県あわら市大溝2-36-22",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.209936,
     "lng": 136.219668,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/126/"
+    "sourceUrl": "https://saunatime.jp/saunas/126/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://only-you.sakura.ne.jp/wp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/126/"
   },
   {
     "id": "st-fukui-490",
     "name": "コミュニティリゾート リライム",
     "prefecture": "福井県",
-    "address": "〒910-0842 福井県福井市開発５丁目１２０７",
-    "addressSource": "SaunaTime",
+    "address": "〒910-0842 福井県福井市開発5丁目1207",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.086441,
     "lng": 136.244724,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/490/"
+    "sourceUrl": "https://saunatime.jp/saunas/490/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.relaim.co.jp/Spa/list.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/490/"
   },
   {
     "id": "st-fukui-2254",
@@ -7904,7 +9363,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2254/",
-    "city": "越前市"
+    "city": "越前市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2270",
@@ -7912,7 +9372,8 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2270/"
+    "sourceUrl": "https://saunatime.jp/saunas/2270/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-4351",
@@ -7930,20 +9391,25 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4351/",
     "city": "坂井市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2260",
     "name": "セントピアあわら",
     "prefecture": "福井県",
-    "address": "〒910-4104 福井県あわら市温泉４丁目３０５",
-    "addressSource": "SaunaTime",
+    "address": "〒910-4104 福井県あわら市温泉4丁目305",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.225798,
     "lng": 136.194059,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2260/",
-    "city": "あわら市"
+    "city": "あわら市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.saintpia-awara.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2260/"
   },
   {
     "id": "st-fukui-491",
@@ -7951,7 +9417,8 @@ export const SEED_FACILITIES = [
     "prefecture": "福井県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/491/"
+    "sourceUrl": "https://saunatime.jp/saunas/491/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2279",
@@ -7960,32 +9427,39 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2279/",
-    "city": "大野市"
+    "city": "大野市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2272",
     "name": "ニューサンピア敦賀",
     "prefecture": "福井県",
-    "address": "〒914-0813 福井県敦賀市呉羽町１−2番地",
-    "addressSource": "SaunaTime",
+    "address": "〒914-0813 福井県敦賀市呉羽町1−2番地",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.640278,
     "lng": 136.05546,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2272/"
+    "sourceUrl": "https://saunatime.jp/saunas/2272/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-4533",
     "name": "ホテル リバージュ アケボノ",
     "prefecture": "福井県",
-    "address": "〒910-0006 福井県福井市中央３丁目１０−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒910-0006 福井県福井市中央3丁目10−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4533/",
-    "city": "福井市"
+    "city": "福井市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.riverge.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4533/"
   },
   {
     "id": "st-fukui-2268",
@@ -8001,7 +9475,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2268/"
+    "sourceUrl": "https://saunatime.jp/saunas/2268/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2278",
@@ -8016,7 +9491,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2278/",
-    "city": "あわら市 宿泊者限定"
+    "city": "あわら市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2276",
@@ -8031,7 +9507,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2276/",
-    "city": "福井市"
+    "city": "福井市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2275",
@@ -8046,7 +9523,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2275/",
-    "city": "吉田郡永平寺町"
+    "city": "吉田郡永平寺町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "fukui-kaihatsu-onsen-sauna-resort-2026",
@@ -8080,31 +9558,38 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/494/",
-    "city": "鯖江市"
+    "city": "鯖江市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-573",
     "name": "越のゆ敦賀店",
     "prefecture": "福井県",
     "address": "〒914-0814 福井県敦賀市木崎 木崎13松ノ角10",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.640616,
     "lng": 136.046891,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/573/"
+    "sourceUrl": "https://saunatime.jp/saunas/573/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yu-iwashita.jp/tsuruga/",
+    "officialUrlSource": "https://saunatime.jp/saunas/573/"
   },
   {
     "id": "st-fukui-2280",
     "name": "越前御老公の湯",
     "prefecture": "福井県",
-    "address": "〒915-0883 福井県越前市新町８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒915-0883 福井県越前市新町8−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.903154,
     "lng": 136.151741,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2280/"
+    "sourceUrl": "https://saunatime.jp/saunas/2280/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2256",
@@ -8119,7 +9604,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2256/",
-    "city": "南条郡南越前町"
+    "city": "南条郡南越前町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-3340",
@@ -8134,7 +9620,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3340/",
-    "city": "福井市"
+    "city": "福井市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2264",
@@ -8148,14 +9635,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2264/"
+    "sourceUrl": "https://saunatime.jp/saunas/2264/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2257",
     "name": "九頭竜温泉",
     "prefecture": "福井県",
-    "address": "〒912-0207 福井県大野市下山６３−２−２４",
-    "addressSource": "SaunaTime",
+    "address": "〒912-0207 福井県大野市下山63−2−24",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.922064,
     "lng": 136.644887,
     "trait": "onsen",
@@ -8166,7 +9654,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2257/"
+    "sourceUrl": "https://saunatime.jp/saunas/2257/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-4206",
@@ -8181,7 +9671,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4206/",
-    "city": "福井市"
+    "city": "福井市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2262",
@@ -8197,26 +9688,31 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2262/"
+    "sourceUrl": "https://saunatime.jp/saunas/2262/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-3055",
     "name": "松岡サウナ",
     "prefecture": "福井県",
-    "address": "〒910-1118 福井県吉田郡永平寺町松岡薬師３丁目８９",
-    "addressSource": "SaunaTime",
+    "address": "〒910-1118 福井県吉田郡永平寺町松岡薬師3丁目89",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.094548,
     "lng": 136.304725,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3055/"
+    "sourceUrl": "https://saunatime.jp/saunas/3055/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://matsuoka-sauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3055/"
   },
   {
     "id": "st-fukui-2251",
     "name": "敦賀きらめき温泉リラ・ポート",
     "prefecture": "福井県",
     "address": "〒914-0022 福井県敦賀市高野91−9−3",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.644069,
     "lng": 136.096975,
     "trait": "onsen",
@@ -8228,7 +9724,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2251/",
-    "city": "敦賀市"
+    "city": "敦賀市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-3053",
@@ -8243,14 +9741,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3053/",
-    "city": "福井市 宿泊者限定"
+    "city": "福井市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukui-2263",
     "name": "濱の湯",
     "prefecture": "福井県",
-    "address": "〒917-0081 福井県小浜市川崎３丁目４",
-    "addressSource": "SaunaTime",
+    "address": "〒917-0081 福井県小浜市川崎3丁目4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.501423,
     "lng": 135.737725,
     "trait": "onsen",
@@ -8262,14 +9761,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2263/",
-    "city": "小浜市"
+    "city": "小浜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2432",
     "name": " 大菩薩の湯",
     "prefecture": "山梨県",
-    "address": "〒404-0026 山梨県甲州市塩山上小田原７３０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒404-0026 山梨県甲州市塩山上小田原730−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.734308,
     "lng": 138.796598,
     "trait": "onsen",
@@ -8280,45 +9781,61 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2432/"
+    "sourceUrl": "https://saunatime.jp/saunas/2432/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.s-seiun.co.jp/shisetsu/daibosatsu/onsen.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2432/"
   },
   {
     "id": "st-yamanashi-4738",
     "name": "88PEAKS",
     "prefecture": "山梨県",
-    "address": "〒407-0301 山梨県北杜市高根町清里３５４５−５５２１",
-    "addressSource": "SaunaTime",
+    "address": "〒407-0301 山梨県北杜市高根町清里3545−5521",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.903214,
     "lng": 138.445599,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4738/",
-    "city": "北杜市 事前予約制"
+    "city": "北杜市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://88peaks.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4738/"
   },
   {
     "id": "st-yamanashi-4828",
     "name": "COCO VILLA 八ヶ岳",
     "prefecture": "山梨県",
-    "address": "〒409-1502 山梨県北杜市大泉町谷戸８９７６−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒409-1502 山梨県北杜市大泉町谷戸8976−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.890256,
     "lng": 138.377122,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4828/"
+    "sourceUrl": "https://saunatime.jp/saunas/4828/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://coco-villa.jp/villa/yatsugatake/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4828/"
   },
   {
     "id": "st-yamanashi-4732",
     "name": "FujiSauna",
     "prefecture": "山梨県",
     "address": "〒401-0301 山梨県南都留郡富士河口湖町船津5812",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.476267,
     "lng": 138.753818,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4732/",
-    "city": "南都留郡富士河口湖町 事前予約制"
+    "city": "南都留郡富士河口湖町 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://fujisauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4732/"
   },
   {
     "id": "st-yamanashi-2468",
@@ -8326,14 +9843,15 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2468/"
+    "sourceUrl": "https://saunatime.jp/saunas/2468/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2428",
     "name": "スパティオ小淵沢 延命の湯",
     "prefecture": "山梨県",
-    "address": "〒408-0044 山梨県北杜市小淵沢町２９６８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒408-0044 山梨県北杜市小淵沢町2968−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.87899,
     "lng": 138.317896,
     "trait": "onsen",
@@ -8345,7 +9863,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2428/",
-    "city": "北杜市"
+    "city": "北杜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.spatio.jp/hotspring/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2428/"
   },
   {
     "id": "st-yamanashi-2460",
@@ -8353,7 +9875,8 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2460/"
+    "sourceUrl": "https://saunatime.jp/saunas/2460/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2417",
@@ -8368,7 +9891,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2417/",
-    "city": "北都留郡丹波山村"
+    "city": "北都留郡丹波山村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2439",
@@ -8382,7 +9906,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2439/"
+    "sourceUrl": "https://saunatime.jp/saunas/2439/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2448",
@@ -8397,7 +9922,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2448/",
-    "city": "南アルプス市"
+    "city": "南アルプス市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2434",
@@ -8414,14 +9940,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2434/",
-    "city": "南巨摩郡南部町"
+    "city": "南巨摩郡南部町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-4486",
     "name": "玉川キャンプ村 ※テントサウナ利用時のみ",
     "prefecture": "山梨県",
     "address": "〒409-0211 山梨県北都留郡小菅村 2457−4",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.75965,
     "lng": 138.979691,
     "trait": "wood",
@@ -8432,7 +9959,11 @@ export const SEED_FACILITIES = [
       "テントサウナ"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4486/"
+    "sourceUrl": "https://saunatime.jp/saunas/4486/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www8.plala.or.jp/tamacamp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4486/"
   },
   {
     "id": "st-yamanashi-2418",
@@ -8447,7 +9978,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2418/",
-    "city": "甲府市"
+    "city": "甲府市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2455",
@@ -8463,26 +9995,31 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2455/"
+    "sourceUrl": "https://saunatime.jp/saunas/2455/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-425",
     "name": "桜庵",
     "prefecture": "山梨県",
-    "address": "〒401-0310 山梨県南都留郡富士河口湖町勝山３３３７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒401-0310 山梨県南都留郡富士河口湖町勝山3337−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.48548,
     "lng": 138.732466,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/425/"
+    "sourceUrl": "https://saunatime.jp/saunas/425/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://sakuraan.net/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/425/"
   },
   {
     "id": "st-yamanashi-385",
     "name": "山中湖温泉 紅富士の湯",
     "prefecture": "山梨県",
-    "address": "〒401-0501 山梨県南都留郡山中湖村山中８６５−７７６",
-    "addressSource": "SaunaTime",
+    "address": "〒401-0501 山梨県南都留郡山中湖村山中865−776",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.430152,
     "lng": 138.842491,
     "trait": "wood",
@@ -8496,14 +10033,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/385/",
-    "city": "南都留郡山中湖村"
+    "city": "南都留郡山中湖村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.benifuji.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/385/"
   },
   {
     "id": "st-yamanashi-2420",
     "name": "山梨日帰り温泉 湯めみの丘",
     "prefecture": "山梨県",
-    "address": "〒400-0105 山梨県甲斐市下今井２３６１−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒400-0105 山梨県甲斐市下今井2361−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.683098,
     "lng": 138.499914,
     "trait": "wood",
@@ -8516,14 +10057,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2420/"
+    "sourceUrl": "https://saunatime.jp/saunas/2420/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-4411",
     "name": "山梨泊まれる温泉 より道の湯",
     "prefecture": "山梨県",
-    "address": "〒402-0056山梨県都留市つる１丁目１３−３１",
-    "addressSource": "SaunaTime",
+    "address": "〒402-0056山梨県都留市つる1丁目13−31",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.559142,
     "lng": 138.908012,
     "trait": "wood",
@@ -8537,14 +10080,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4411/",
-    "city": "都留市"
+    "city": "都留市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yorimichinoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4411/"
   },
   {
     "id": "st-yamanashi-2408",
     "name": "秋山温泉",
     "prefecture": "山梨県",
-    "address": "〒401-0201 山梨県上野原市秋山２２１０",
-    "addressSource": "SaunaTime",
+    "address": "〒401-0201 山梨県上野原市秋山2210",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.580104,
     "lng": 139.123545,
     "trait": "wood",
@@ -8558,14 +10105,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2408/",
-    "city": "上野原市"
+    "city": "上野原市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.akiyamaonsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2408/"
   },
   {
     "id": "st-yamanashi-2415",
     "name": "正徳寺温泉初花",
     "prefecture": "山梨県",
-    "address": "〒405-0032 山梨県山梨市正徳寺１０９３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒405-0032 山梨県山梨市正徳寺1093−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.680589,
     "lng": 138.665115,
     "trait": "onsen",
@@ -8577,7 +10128,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2415/",
-    "city": "山梨市"
+    "city": "山梨市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hatsuhana.info/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2415/"
   },
   {
     "id": "st-yamanashi-2457",
@@ -8591,14 +10146,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2457/"
+    "sourceUrl": "https://saunatime.jp/saunas/2457/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2411",
     "name": "石和健康ランド",
     "prefecture": "山梨県",
     "address": "〒406-0021 山梨県笛吹市石和町松本868",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.659367,
     "lng": 138.623225,
     "trait": "onsen",
@@ -8610,7 +10166,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2411/",
-    "city": "笛吹市"
+    "city": "笛吹市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2456",
@@ -8618,7 +10176,8 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2456/"
+    "sourceUrl": "https://saunatime.jp/saunas/2456/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2688",
@@ -8626,14 +10185,15 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2688/"
+    "sourceUrl": "https://saunatime.jp/saunas/2688/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-447",
     "name": "湯殿館",
     "prefecture": "山梨県",
-    "address": "〒409-3803 山梨県中央市若宮３３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒409-3803 山梨県中央市若宮33−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.611833,
     "lng": 138.539964,
     "trait": "onsen",
@@ -8645,33 +10205,45 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/447/",
-    "city": "中央市"
+    "city": "中央市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yudenkan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/447/"
   },
   {
     "id": "st-yamanashi-2437",
     "name": "富士西湖温泉 いずみの湯",
     "prefecture": "山梨県",
-    "address": "〒401-0332 山梨県南都留郡富士河口湖町西湖 富士河口湖町西湖９８７",
-    "addressSource": "SaunaTime",
+    "address": "〒401-0332 山梨県南都留郡富士河口湖町西湖 富士河口湖町西湖987",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.503472,
     "lng": 138.685261,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2437/",
-    "city": "南都留郡富士河口湖町"
+    "city": "南都留郡富士河口湖町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hamayouresort.com/spa_top/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2437/"
   },
   {
     "id": "st-yamanashi-386",
     "name": "富士眺望の湯ゆらり",
     "prefecture": "山梨県",
-    "address": "〒401-0320 山梨県南都留郡鳴沢村鳴沢８５３２−５",
-    "addressSource": "SaunaTime",
+    "address": "〒401-0320 山梨県南都留郡鳴沢村鳴沢8532−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.476249,
     "lng": 138.691768,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/386/",
-    "city": "南都留郡鳴沢村"
+    "city": "南都留郡鳴沢村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.fuji-yurari.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/386/"
   },
   {
     "id": "st-yamanashi-2454",
@@ -8679,7 +10251,8 @@ export const SEED_FACILITIES = [
     "prefecture": "山梨県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2454/"
+    "sourceUrl": "https://saunatime.jp/saunas/2454/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2414",
@@ -8693,51 +10266,64 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2414/"
+    "sourceUrl": "https://saunatime.jp/saunas/2414/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamanashi-2409",
     "name": "瑰泉",
     "prefecture": "山梨県",
-    "address": "〒406-0032 山梨県笛吹市石和町四日市場１６７９",
-    "addressSource": "SaunaTime",
+    "address": "〒406-0032 山梨県笛吹市石和町四日市場1679",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.644289,
     "lng": 138.631275,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2409/"
+    "sourceUrl": "https://saunatime.jp/saunas/2409/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yu-kaisen.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2409/"
   },
   {
     "id": "st-nagano-4803",
     "name": "Farmer's Camp ポレポレ",
     "prefecture": "長野県",
-    "address": "〒399-1601 長野県下伊那郡売木村1−４６",
-    "addressSource": "SaunaTime",
+    "address": "〒399-1601 長野県下伊那郡売木村1−46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.277749,
     "lng": 137.725775,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4803/"
+    "sourceUrl": "https://saunatime.jp/saunas/4803/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://polepole.day/camp/sauna.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4803/"
   },
   {
     "id": "st-nagano-4544",
     "name": "The Sauna",
     "prefecture": "長野県",
     "address": "〒389-1303 長野県上水内郡信濃町野尻379−2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.825462,
     "lng": 138.20466,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4544/",
-    "city": "上水内郡信濃町 事前予約制"
+    "city": "上水内郡信濃町 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://lamp-guesthouse.com/sauna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4544/"
   },
   {
     "id": "st-nagano-2292",
     "name": "あぐりの湯こもろ",
     "prefecture": "長野県",
-    "address": "〒384-0071 長野県小諸市大久保１１４５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒384-0071 長野県小諸市大久保1145−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.324775,
     "lng": 138.397208,
     "trait": "onsen",
@@ -8749,50 +10335,66 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2292/",
-    "city": "小諸市"
+    "city": "小諸市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.komoron.com/agrinoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2292/"
   },
   {
     "id": "st-nagano-311",
     "name": "うるおい館",
     "prefecture": "長野県",
-    "address": "〒380-0872 長野県長野市南長野妻科９８",
-    "addressSource": "SaunaTime",
+    "address": "〒380-0872 長野県長野市南長野妻科98",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.654085,
     "lng": 138.174148,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/311/"
+    "sourceUrl": "https://saunatime.jp/saunas/311/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.uruoikan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/311/"
   },
   {
     "id": "st-nagano-446",
     "name": "かじかの湯(長野)",
     "prefecture": "長野県",
-    "address": "〒399-1505 長野県下伊那郡阿南町富草４９２３",
-    "addressSource": "SaunaTime",
+    "address": "〒399-1505 長野県下伊那郡阿南町富草4923",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.343801,
     "lng": 137.794544,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/446/"
+    "sourceUrl": "https://saunatime.jp/saunas/446/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kajikanoyu.com/kajikanoyu.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/446/"
   },
   {
     "id": "st-nagano-4415",
     "name": "グリーンビレッジ横川 かやぶきの館",
     "prefecture": "長野県",
     "address": "〒399-0511長野県上伊那郡辰野町横川2766番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.005621,
     "lng": 137.922635,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4415/"
+    "sourceUrl": "https://saunatime.jp/saunas/4415/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kayabukinoyakata.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4415/"
   },
   {
     "id": "st-nagano-4696",
     "name": "つたの湯",
     "prefecture": "長野県",
-    "address": "〒399-0214 長野県諏訪郡富士見町落合１９８４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒399-0214 長野県諏訪郡富士見町落合1984−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.863946,
     "lng": 138.276987,
     "trait": "onsen",
@@ -8804,14 +10406,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4696/",
-    "city": "諏訪郡富士見町"
+    "city": "諏訪郡富士見町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.tsutakijuku.jp/spa/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4696/"
   },
   {
     "id": "st-nagano-2317",
     "name": "ファインビュー室山",
     "prefecture": "長野県",
-    "address": "〒399-8103 長野県安曇野市三郷小倉６５２４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒399-8103 長野県安曇野市三郷小倉6524−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.251533,
     "lng": 137.845735,
     "trait": "wood",
@@ -8822,39 +10428,51 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2317/"
+    "sourceUrl": "https://saunatime.jp/saunas/2317/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.fineview.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2317/"
   },
   {
     "id": "st-nagano-2309",
     "name": "ホットプラザ浅間",
     "prefecture": "長野県",
-    "address": "〒390-0303 長野県松本市浅間温泉３丁目3−16−3",
-    "addressSource": "SaunaTime",
+    "address": "〒390-0303 長野県松本市浅間温泉3丁目3−16−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.262845,
     "lng": 137.988696,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2309/",
-    "city": "松本市"
+    "city": "松本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.asamaonsen.com/hot-plaza/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/2309/"
   },
   {
     "id": "st-nagano-2326",
     "name": "ほりでーゆー四季の郷",
     "prefecture": "長野県",
-    "address": "〒399-8211 長野県安曇野市堀金烏川１１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒399-8211 長野県安曇野市堀金烏川11−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.310738,
     "lng": 137.823851,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2326/"
+    "sourceUrl": "https://saunatime.jp/saunas/2326/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.holiday-you.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2326/"
   },
   {
     "id": "st-nagano-2304",
     "name": "みはらしの湯",
     "prefecture": "長野県",
     "address": "〒399-4501 長野県伊那市西箕輪3480−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.882673,
     "lng": 137.917947,
     "trait": "onsen",
@@ -8866,14 +10484,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2304/",
-    "city": "伊那市"
+    "city": "伊那市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ina-city-kankou.co.jp/miharashinoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2304/"
   },
   {
     "id": "st-nagano-2324",
     "name": "もみの湯",
     "prefecture": "長野県",
     "address": "〒391-0115 長野県諏訪郡原村原山17217−1729",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.967632,
     "lng": 138.254871,
     "trait": "onsen",
@@ -8884,20 +10506,28 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2324/"
+    "sourceUrl": "https://saunatime.jp/saunas/2324/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.lcv.ne.jp/~mominoki/hotspa.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2324/"
   },
   {
     "id": "st-nagano-4575",
     "name": "ラーラ松本",
     "prefecture": "長野県",
-    "address": "〒390-0851 長野県松本市大字島内７４１２",
-    "addressSource": "SaunaTime",
+    "address": "〒390-0851 長野県松本市大字島内7412",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.270422,
     "lng": 137.940874,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4575/",
-    "city": "松本市"
+    "city": "松本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.lala-matsumoto.jp/facility/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4575/"
   },
   {
     "id": "st-nagano-4855",
@@ -8905,14 +10535,22 @@ export const SEED_FACILITIES = [
     "prefecture": "長野県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4855/"
+    "sourceUrl": "https://saunatime.jp/saunas/4855/",
+    "sourceCheckedAt": "2026-10-18",
+    "address": "〒390-0841 長野県松本市渚1丁目7−1 なぎさライフサイト",
+    "addressSource": "SaunaTime参照ページ",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/matsumoto/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4855/",
+    "lat": 36.232934,
+    "lng": 137.954927
   },
   {
     "id": "st-nagano-2344",
     "name": "ロイヤルホテル長野",
     "prefecture": "長野県",
-    "address": "〒381-1215 長野県長野市松代町西寺尾１３７２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒381-1215 長野県長野市松代町西寺尾1372−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.571475,
     "lng": 138.200572,
     "trait": "award",
@@ -8923,14 +10561,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2344/"
+    "sourceUrl": "https://saunatime.jp/saunas/2344/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.daiwaresort.jp/nagano/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2344/"
   },
   {
     "id": "st-nagano-2349",
     "name": "金沢温泉 金鶏の湯",
     "prefecture": "長野県",
-    "address": "〒391-0012 長野県茅野市金沢２３１６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒391-0012 長野県茅野市金沢2316−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.948947,
     "lng": 138.18894,
     "trait": "onsen",
@@ -8941,14 +10583,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2349/"
+    "sourceUrl": "https://saunatime.jp/saunas/2349/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.chino.lg.jp/soshiki/chiikifukushi/1359.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2349/"
   },
   {
     "id": "st-nagano-2298",
     "name": "軽井沢千ケ滝温泉",
     "prefecture": "長野県",
     "address": "〒389-0111 長野県北佐久郡軽井沢町長倉 軽井沢町千ヶ滝温泉",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.366411,
     "lng": 138.584165,
     "trait": "onsen",
@@ -8959,14 +10605,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2298/"
+    "sourceUrl": "https://saunatime.jp/saunas/2298/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.princehotels.co.jp/sengataki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2298/"
   },
   {
     "id": "st-nagano-4559",
     "name": "山と渓流の宿 仙流荘",
     "prefecture": "長野県",
-    "address": "〒396-0403 長野県伊那市長谷黒河内１８４７−２",
-    "addressSource": "SaunaTime",
+    "address": "〒396-0403 長野県伊那市長谷黒河内1847−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.77005,
     "lng": 138.092209,
     "trait": "wood",
@@ -8977,14 +10627,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4559/"
+    "sourceUrl": "https://saunatime.jp/saunas/4559/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ina-city-kankou.co.jp/senryuso/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4559/"
   },
   {
     "id": "st-nagano-378",
     "name": "信州健康ランド",
     "prefecture": "長野県",
-    "address": "〒399-0701 長野県塩尻市広丘吉田３６６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒399-0701 長野県塩尻市広丘吉田366−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.170757,
     "lng": 137.954169,
     "trait": "onsen",
@@ -8996,14 +10650,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/378/",
-    "city": "塩尻市"
+    "city": "塩尻市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kur-hotel.co.jp/shinsyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/378/"
   },
   {
     "id": "st-nagano-2325",
     "name": "信州須坂 関谷温泉湯っ蔵んど",
     "prefecture": "長野県",
     "address": "〒382-0000 長野県須坂市仁礼7 番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.615865,
     "lng": 138.336901,
     "trait": "onsen",
@@ -9015,14 +10673,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2325/",
-    "city": "須坂市"
+    "city": "須坂市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yukkuland.jp/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/2325/"
   },
   {
     "id": "st-nagano-414",
     "name": "星野温泉 トンボの湯",
     "prefecture": "長野県",
     "address": "〒389-0111 長野県北佐久郡軽井沢町長倉2148",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.362651,
     "lng": 138.588983,
     "trait": "onsen",
@@ -9034,14 +10696,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/414/",
-    "city": "北佐久郡軽井沢町"
+    "city": "北佐久郡軽井沢町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hoshino-area.jp/archives/area/tonbo",
+    "officialUrlSource": "https://saunatime.jp/saunas/414/"
   },
   {
     "id": "st-nagano-2383",
     "name": "天然温泉梓の湯ドーミーイン松本",
     "prefecture": "長野県",
-    "address": "〒390-0815 長野県松本市深志２丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒390-0815 長野県松本市深志2丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.230917,
     "lng": 137.968755,
     "trait": "onsen",
@@ -9052,14 +10718,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2383/"
+    "sourceUrl": "https://saunatime.jp/saunas/2383/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/matsumoto/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2383/"
   },
   {
     "id": "st-nagano-2911",
     "name": "天然温泉善光の湯ドーミーイン長野",
     "prefecture": "長野県",
     "address": "〒380-0826 長野県長野市南長野北石堂町 南長野北石堂町1373-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.644826,
     "lng": 138.187681,
     "trait": "onsen",
@@ -9070,7 +10740,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2911/"
+    "sourceUrl": "https://saunatime.jp/saunas/2911/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/nagano/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2911/"
   },
   {
     "id": "st-nagano-2296",
@@ -9084,27 +10758,39 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2296/"
+    "sourceUrl": "https://saunatime.jp/saunas/2296/",
+    "sourceCheckedAt": "2026-10-18",
+    "address": "〒390-0841 長野県松本市渚1丁目7 渚1-7-1 なぎさライフサイト内",
+    "addressSource": "SaunaTime参照ページ",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://zui.sakura.ne.jp/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/2296/",
+    "lat": 36.232926,
+    "lng": 137.955024
   },
   {
     "id": "st-nagano-4769",
     "name": "湯田中温泉 よろづや",
     "prefecture": "長野県",
-    "address": "〒381-0401 長野県下高井郡山ノ内町平穏３１３７",
-    "addressSource": "SaunaTime",
+    "address": "〒381-0401 長野県下高井郡山ノ内町平穏3137",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.74048,
     "lng": 138.420538,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4769/",
-    "city": "下高井郡山ノ内町 事前予約制"
+    "city": "下高井郡山ノ内町 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yudanaka-yoroduya.com/concept.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4769/"
   },
   {
     "id": "st-nagano-2287",
     "name": "八ヶ岳海尻温泉 灯明の湯",
     "prefecture": "長野県",
     "address": "〒384-1301 長野県南佐久郡 長野県南佐久郡 南牧村大字海尻字栗谷上日向中1465-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.028104,
     "lng": 138.472666,
     "trait": "onsen",
@@ -9117,27 +10803,35 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2287/"
+    "sourceUrl": "https://saunatime.jp/saunas/2287/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.onsenkaihatsu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2287/"
   },
   {
     "id": "st-nagano-4684",
     "name": "八千穂SAUNA\t",
     "prefecture": "長野県",
     "address": "〒384-0704 長野県南佐久郡佐久穂町大字八郡2049-856",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.083853,
     "lng": 138.405818,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4684/",
-    "city": "南佐久郡佐久穂町 事前予約制"
+    "city": "南佐久郡佐久穂町 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yachiho-sauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4684/"
   },
   {
     "id": "st-nagano-2283",
     "name": "八峰の湯",
     "prefecture": "長野県",
-    "address": "〒384-1103 長野県南佐久郡小海町大字豊里５９１８−２",
-    "addressSource": "SaunaTime",
+    "address": "〒384-1103 長野県南佐久郡小海町大字豊里5918−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.058946,
     "lng": 138.440489,
     "trait": "onsen",
@@ -9148,14 +10842,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2283/"
+    "sourceUrl": "https://saunatime.jp/saunas/2283/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagano-4578",
     "name": "穂の香乃湯",
     "prefecture": "長野県",
-    "address": "〒384-2104 長野県佐久市甲１０７１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒384-2104 長野県佐久市甲1071−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.267573,
     "lng": 138.397432,
     "trait": "onsen",
@@ -9166,20 +10862,28 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4578/"
+    "sourceUrl": "https://saunatime.jp/saunas/4578/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.shinkou-saku.or.jp/honoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4578/"
   },
   {
     "id": "st-nagano-377",
     "name": "林檎の湯屋おぶ〜",
     "prefecture": "長野県",
-    "address": "〒390-0845 長野県松本市石芝３丁目９−４４",
-    "addressSource": "SaunaTime",
+    "address": "〒390-0845 長野県松本市石芝3丁目9−44",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 36.2042,
     "lng": 137.948707,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/377/",
-    "city": "松本市"
+    "city": "松本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.orchard.co.jp/obu/index.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/377/"
   },
   {
     "id": "st-gifu-4832",
@@ -9274,8 +10978,8 @@ export const SEED_FACILITIES = [
     "id": "st-gifu-2633",
     "name": "アクアリゾート 岐阜ふじの湯",
     "prefecture": "岐阜県",
-    "address": "〒502-0857 岐阜県岐阜市正木１２３５",
-    "addressSource": "SaunaTime",
+    "address": "〒502-0857 岐阜県岐阜市正木1235",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.451317,
     "lng": 136.746929,
     "city": "岐阜市正木",
@@ -9284,7 +10988,11 @@ export const SEED_FACILITIES = [
       "岐阜市"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2633/"
+    "sourceUrl": "https://saunatime.jp/saunas/2633/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://gifu-fujinoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2633/"
   },
   {
     "id": "manual-gifu-ibigawa-fujihashi",
@@ -9392,14 +11100,18 @@ export const SEED_FACILITIES = [
     "id": "st-gifu-4823",
     "name": "サウーニャ.エイワン",
     "prefecture": "岐阜県",
-    "address": "〒500-8238 岐阜県岐阜市細畑６丁目９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒500-8238 岐阜県岐阜市細畑6丁目9−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.402816,
     "lng": 136.786201,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4823/",
-    "city": "岐阜市 事前予約制"
+    "city": "岐阜市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://reserva.be/saunaneara1/reserve?mode=service_staff&search_evt_no=27eJyzNLI0swQAAzoBFA",
+    "officialUrlSource": "https://saunatime.jp/saunas/4823/"
   },
   {
     "id": "manual-gifu-nukui-onsen",
@@ -9510,8 +11222,8 @@ export const SEED_FACILITIES = [
     "id": "st-gifu-4833",
     "name": "ヤオツサウナ&スパイス",
     "prefecture": "岐阜県",
-    "address": "〒505-0301 岐阜県八百津町八百津４７８０−７",
-    "addressSource": "SaunaTime",
+    "address": "〒505-0301 岐阜県八百津町八百津4780−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.496326,
     "lng": 137.150269,
     "city": "加茂郡八百津町",
@@ -9521,14 +11233,18 @@ export const SEED_FACILITIES = [
       "スパイス"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4833/"
+    "sourceUrl": "https://saunatime.jp/saunas/4833/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.big-advance.site/s/137/2379",
+    "officialUrlSource": "https://saunatime.jp/saunas/4833/"
   },
   {
     "id": "st-shizuoka-4887",
     "name": "ルネサンス岐阜LCワールド24",
     "prefecture": "岐阜県",
-    "address": "〒501-0471 岐阜県本巣市政田 上 市場１４０４LCワールド本巣内 1F",
-    "addressSource": "SaunaTime",
+    "address": "〒501-0471 岐阜県本巣市政田 上 市場1404LCワールド本巣内 1F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.42858,
     "lng": 136.644618,
     "trait": "award",
@@ -9536,7 +11252,11 @@ export const SEED_FACILITIES = [
       "県補正"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4887/"
+    "sourceUrl": "https://saunatime.jp/saunas/4887/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/gifu-lcworld/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4887/"
   },
   {
     "id": "manual-gifu-kaizu-onsen",
@@ -9919,13 +11639,17 @@ export const SEED_FACILITIES = [
     "id": "st-shizuoka-4835",
     "name": "COCO VILLA 大室山",
     "prefecture": "静岡県",
-    "address": "〒413-0231 静岡県伊東市富戸１３１７−４１２",
-    "addressSource": "SaunaTime",
+    "address": "〒413-0231 静岡県伊東市富戸1317−412",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.906969,
     "lng": 139.099053,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4835/"
+    "sourceUrl": "https://saunatime.jp/saunas/4835/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://coco-villa.jp/villa/omuroyama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4835/"
   },
   {
     "id": "manual-shizuoka-hitoyado-sauna",
@@ -10365,8 +12089,8 @@ export const SEED_FACILITIES = [
     "id": "st-shizuoka-4888",
     "name": "ルネサンス トーア沼津",
     "prefecture": "静岡県",
-    "address": "〒410-0022 静岡県沼津市大岡１４３１",
-    "addressSource": "SaunaTime",
+    "address": "〒410-0022 静岡県沼津市大岡1431",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.10135,
     "lng": 138.876379,
     "city": "沼津市大岡1431",
@@ -10376,14 +12100,18 @@ export const SEED_FACILITIES = [
       "沼津"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4888/"
+    "sourceUrl": "https://saunatime.jp/saunas/4888/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/toua-numazu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4888/"
   },
   {
     "id": "st-shizuoka-4889",
     "name": "ルネサンス静岡24",
     "prefecture": "静岡県",
-    "address": "〒422-8062 静岡県静岡市駿河区稲川２丁目１−３２ 7階",
-    "addressSource": "SaunaTime",
+    "address": "〒422-8062 静岡県静岡市駿河区稲川2丁目1−32 7階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.969162,
     "lng": 138.392028,
     "city": "静岡市駿河区稲川2-1-32",
@@ -10393,7 +12121,11 @@ export const SEED_FACILITIES = [
       "駿河区"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4889/"
+    "sourceUrl": "https://saunatime.jp/saunas/4889/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/shizuoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4889/"
   },
   {
     "id": "manual-shizuoka-enshu-minaminoyu",
@@ -10658,13 +12390,17 @@ export const SEED_FACILITIES = [
     "id": "st-shizuoka-4772",
     "name": "熱海Moonlight",
     "prefecture": "静岡県",
-    "address": "〒413-0101 静岡県熱海市上多賀１０６５ １０２４",
-    "addressSource": "SaunaTime",
+    "address": "〒413-0101 静岡県熱海市上多賀1065 1024",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.075564,
     "lng": 139.051045,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4772/"
+    "sourceUrl": "https://saunatime.jp/saunas/4772/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://atami-moonlight.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4772/"
   },
   {
     "id": "manual-shizuoka-yuraginosato",
@@ -10913,13 +12649,17 @@ export const SEED_FACILITIES = [
     "id": "st-aichi-4824",
     "name": "reborn蒲郡店",
     "prefecture": "愛知県",
-    "address": "〒443-0021 愛知県蒲郡市三谷町十舗７６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒443-0021 愛知県蒲郡市三谷町十舗76−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.817768,
     "lng": 137.242946,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4824/"
+    "sourceUrl": "https://saunatime.jp/saunas/4824/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://mens-reborn.jp/sauna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4824/"
   },
   {
     "id": "manual-aichi-sauna-bug",
@@ -11077,7 +12817,11 @@ export const SEED_FACILITIES = [
     "name": "天然温泉アーバンクア SPA＆LIVING",
     "prefecture": "愛知県",
     "address": "〒460-0014 名古屋市中区富士見町16-17 キャッスルタウン記念橋3F",
-    "addressSource": "公式/参照ページ",
+    "addressSource": "施設公式アクセスページ",
+    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-10-18",
+    "note": "公式案内では東別院駅から徒歩7分。タオル・バスタオルは全コースに付属します。",
+    "access": "東別院駅から徒歩7分。キャッスルタウン記念橋3階。",
     "lat": 35.151703,
     "lng": 136.90863,
     "city": "名古屋市中区富士見町",
@@ -11400,44 +13144,56 @@ export const SEED_FACILITIES = [
     "id": "st-aichi-4891",
     "name": "ルネサンス 名古屋小幡",
     "prefecture": "愛知県",
-    "address": "〒463-0048 愛知県名古屋市守山区小幡南１丁目９−２５",
-    "addressSource": "SaunaTime",
+    "address": "〒463-0048 愛知県名古屋市守山区小幡南1丁目9−25",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.199652,
     "lng": 136.97618,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4891/"
+    "sourceUrl": "https://saunatime.jp/saunas/4891/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/nagoya-obata/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4891/"
   },
   {
     "id": "st-aichi-4676",
     "name": "ルネサンス甚目寺24",
     "prefecture": "愛知県",
-    "address": "〒490-1111 愛知県あま市甚目寺上沖田３６−４",
-    "addressSource": "SaunaTime",
+    "address": "〒490-1111 愛知県あま市甚目寺上沖田36−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.193597,
     "lng": 136.817998,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4676/"
+    "sourceUrl": "https://saunatime.jp/saunas/4676/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/jimokuji/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4676/"
   },
   {
     "id": "st-aichi-4890",
     "name": "ルネサンス名古屋熱田24",
     "prefecture": "愛知県",
-    "address": "〒456-0016 愛知県名古屋市熱田区五本松町９−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒456-0016 愛知県名古屋市熱田区五本松町9−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.135384,
     "lng": 136.90207,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4890/"
+    "sourceUrl": "https://saunatime.jp/saunas/4890/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/nagoya-atsuta/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4890/"
   },
   {
     "id": "st-aichi-4703",
     "name": "安心お宿プレミア名古屋栄店",
     "prefecture": "愛知県",
-    "address": "〒460-0003 愛知県名古屋市中区錦３丁目１９−２１",
-    "addressSource": "SaunaTime",
+    "address": "〒460-0003 愛知県名古屋市中区錦3丁目19−21",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.170444,
     "lng": 136.903966,
     "city": "名古屋市中区錦",
@@ -11447,7 +13203,11 @@ export const SEED_FACILITIES = [
       "栄"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4703/"
+    "sourceUrl": "https://saunatime.jp/saunas/4703/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.anshin-oyado.jp/nagoya/miryoku.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4703/"
   },
   {
     "id": "manual-aichi-kamenoi-chitamihama",
@@ -11770,13 +13530,17 @@ export const SEED_FACILITIES = [
     "id": "st-mie-2756",
     "name": "ＪＡ鈴鹿さつき温泉",
     "prefecture": "三重県",
-    "address": "〒513-0002 三重県鈴鹿市津賀町８５０−２",
-    "addressSource": "SaunaTime",
+    "address": "〒513-0002 三重県鈴鹿市津賀町850−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.888698,
     "lng": 136.518341,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2756/"
+    "sourceUrl": "https://saunatime.jp/saunas/2756/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://ja-suzuka.or.jp/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2756/"
   },
   {
     "id": "manual-mie-kabuku-resort",
@@ -11991,13 +13755,17 @@ export const SEED_FACILITIES = [
     "id": "st-mie-4604",
     "name": "スポーツマンハウス鈴鹿 天然温泉 天名乃湯",
     "prefecture": "三重県",
-    "address": "〒510-0261 三重県鈴鹿市御薗町１６６９",
-    "addressSource": "SaunaTime",
+    "address": "〒510-0261 三重県鈴鹿市御薗町1669",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.838009,
     "lng": 136.513789,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4604/"
+    "sourceUrl": "https://saunatime.jp/saunas/4604/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sportsmanhousesuzuka.com/facilities/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4604/"
   },
   {
     "id": "manual-mie-heal-in-yokkaichi",
@@ -12164,8 +13932,8 @@ export const SEED_FACILITIES = [
     "id": "st-mie-4821",
     "name": "伊勢パールピアホテル",
     "prefecture": "三重県",
-    "address": "〒516-0072 三重県伊勢市宮後２丁目２６−２２",
-    "addressSource": "SaunaTime",
+    "address": "〒516-0072 三重県伊勢市宮後2丁目26−22",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.491845,
     "lng": 136.712591,
     "city": "伊勢市",
@@ -12175,7 +13943,11 @@ export const SEED_FACILITIES = [
       "伊勢"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4821/"
+    "sourceUrl": "https://saunatime.jp/saunas/4821/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.pearlpier.com/facilities/#public",
+    "officialUrlSource": "https://saunatime.jp/saunas/4821/"
   },
   {
     "id": "manual-mie-nabetagawa",
@@ -12771,13 +14543,17 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-4436",
     "name": "サウナあど川",
     "prefecture": "滋賀県",
-    "address": "〒520-1221 滋賀県高島市安曇川町青柳１８３８",
-    "addressSource": "SaunaTime",
+    "address": "〒520-1221 滋賀県高島市安曇川町青柳1838",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4436/"
+    "sourceUrl": "https://saunatime.jp/saunas/4436/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.adogawasportscenter.com/rest/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4436/"
   },
   {
     "id": "shiga-user-1a6n533",
@@ -12795,13 +14571,17 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-4545",
     "name": "スポック富士見",
     "prefecture": "滋賀県",
-    "address": "〒520-0846 滋賀県大津市富士見台５４−４６",
-    "addressSource": "SaunaTime",
+    "address": "〒520-0846 滋賀県大津市富士見台54−46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4545/"
+    "sourceUrl": "https://saunatime.jp/saunas/4545/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://fujimi-pool.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4545/"
   },
   {
     "id": "shiga-user-negeea",
@@ -12846,14 +14626,18 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-4602",
     "name": "レストイン多賀",
     "prefecture": "滋賀県",
-    "address": "〒522-0342 滋賀県犬上郡多賀町大字敏満寺字西谷６６−３６",
-    "addressSource": "SaunaTime",
+    "address": "〒522-0342 滋賀県犬上郡多賀町大字敏満寺字西谷66−36",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.219569,
     "lng": 136.28527,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4602/",
-    "city": "犬上郡多賀町"
+    "city": "犬上郡多賀町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.greens.co.jp/taga/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4602/"
   },
   {
     "id": "shiga-user-1vk2426",
@@ -12925,14 +14709,18 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-2809",
     "name": "健康パークあざいバーデあざい",
     "prefecture": "滋賀県",
-    "address": "〒526-0203 滋賀県長浜市野瀬町８２８",
-    "addressSource": "SaunaTime",
+    "address": "〒526-0203 滋賀県長浜市野瀬町828",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.4633,
     "lng": 136.319257,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2809/",
-    "city": "長浜市"
+    "city": "長浜市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kenkoupark.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2809/"
   },
   {
     "id": "shiga-user-134ghnk",
@@ -12968,14 +14756,18 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-4534",
     "name": "守山湯元水春 ピエリ守山",
     "prefecture": "滋賀県",
-    "address": "〒524-0101 滋賀県守山市今浜町２６２０−５",
-    "addressSource": "SaunaTime",
+    "address": "〒524-0101 滋賀県守山市今浜町2620−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4534/",
-    "city": "守山市"
+    "city": "守山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://suisyun.jp/pieri-moriyama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4534/"
   },
   {
     "id": "shiga-user-1ptudij",
@@ -13011,14 +14803,18 @@ export const SEED_FACILITIES = [
     "id": "st-shiga-2795",
     "name": "草津湯元 水春",
     "prefecture": "滋賀県",
-    "address": "〒525-0067 滋賀県草津市新浜町新浜町３００",
-    "addressSource": "SaunaTime",
+    "address": "〒525-0067 滋賀県草津市新浜町新浜町300",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.997689,
     "lng": 135.918095,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2795/",
-    "city": "草津市"
+    "city": "草津市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://suisyun.jp/kusatsu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2795/"
   },
   {
     "id": "shiga-user-140ucsy",
@@ -13205,13 +15001,17 @@ export const SEED_FACILITIES = [
     "id": "st-kyoto-4811",
     "name": "FIRST THE SAUNA",
     "prefecture": "京都府",
-    "address": "〒600-8216 京都府京都市下京区東塩小路町６００−５２ NUP TERRACE京都駅前",
-    "addressSource": "SaunaTime",
+    "address": "〒600-8216 京都府京都市下京区東塩小路町600−52 NUP TERRACE京都駅前",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.989132,
     "lng": 135.756307,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4811/"
+    "sourceUrl": "https://saunatime.jp/saunas/4811/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://first-kyoto.com/sauna/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4811/"
   },
   {
     "id": "kyoto-user-1hze32m",
@@ -13359,7 +15159,7 @@ export const SEED_FACILITIES = [
     "name": "サウナ&カプセルホテル ルーマプラザ",
     "prefecture": "京都府",
     "address": "京都府京都市東山区祇園町南側575",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.00359,
     "lng": 135.774235,
     "trait": "urban",
@@ -13368,20 +15168,28 @@ export const SEED_FACILITIES = [
     "city": "京都市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.rumor-plaza.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/113/"
   },
   {
     "id": "st-kyoto-31",
     "name": "サウナの梅湯",
     "prefecture": "京都府",
-    "address": "京都府京都市下京区岩滝町１７５",
-    "addressSource": "SaunaTime",
+    "address": "京都府京都市下京区岩滝町175",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.992916,
     "lng": 135.765846,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/31/",
-    "city": "京都市"
+    "city": "京都市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://mobile.twitter.com/umeyu_rakuen",
+    "officialUrlSource": "https://saunatime.jp/saunas/31/"
   },
   {
     "id": "kyoto-user-dmr65k",
@@ -13499,25 +15307,33 @@ export const SEED_FACILITIES = [
     "id": "st-kyoto-4913",
     "name": "ルネサンスイオンタウン山科椥辻",
     "prefecture": "京都府",
-    "address": "〒607-8162 京都府京都市山科区椥辻草海道町15−１",
-    "addressSource": "SaunaTime",
+    "address": "〒607-8162 京都府京都市山科区椥辻草海道町15−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.973865,
     "lng": 135.816184,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4913/"
+    "sourceUrl": "https://saunatime.jp/saunas/4913/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/aeontown-yamashina/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4913/"
   },
   {
     "id": "st-kyoto-4910",
     "name": "ルネサンス桂川24",
     "prefecture": "京都府",
-    "address": "〒601-8211 京都府京都市南区久世高田町376番1（イオンモール京都桂川併設）",
-    "addressSource": "SaunaTime",
+    "address": "〒601-8211 京都府京都市南区久世高田町376番1(イオンモール京都桂川併設)",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.96555,
     "lng": 135.706747,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4910/"
+    "sourceUrl": "https://saunatime.jp/saunas/4910/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh17/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4910/"
   },
   {
     "id": "kyoto-user-1w868ny",
@@ -13802,13 +15618,17 @@ export const SEED_FACILITIES = [
     "id": "st-kyoto-2998",
     "name": "鶴の湯（京都）",
     "prefecture": "京都府",
-    "address": "〒612-8307 京都府京都市伏見区景勝町３３−５",
-    "addressSource": "SaunaTime",
+    "address": "〒612-8307 京都府京都市伏見区景勝町33−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.94369,
     "lng": 135.75761,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2998/"
+    "sourceUrl": "https://saunatime.jp/saunas/2998/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.turunoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2998/"
   },
   {
     "id": "kyoto-user-wazg8n",
@@ -14245,73 +16065,97 @@ export const SEED_FACILITIES = [
     "id": "st-osaka-4914",
     "name": "ルネサンスアルザ泉大津",
     "prefecture": "大阪府",
-    "address": "〒595-0025 大阪府泉大津市旭町１８−６ アルザ泉大津 3F",
-    "addressSource": "SaunaTime",
+    "address": "〒595-0025 大阪府泉大津市旭町18−6 アルザ泉大津 3F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.502354,
     "lng": 135.406292,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4914/"
+    "sourceUrl": "https://saunatime.jp/saunas/4914/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/alzar-izumiotsu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4914/"
   },
   {
     "id": "st-osaka-4911",
     "name": "ルネサンスもりのみやキューズモール24",
     "prefecture": "大阪府",
-    "address": "〒540-0003 大阪府大阪市中央区森ノ宮中央2丁目1番70号 （もりのみやキューズモールBASE",
-    "addressSource": "SaunaTime",
+    "address": "〒540-0003 大阪府大阪市中央区森ノ宮中央2丁目1番70号 (もりのみやキューズモールBASE",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.680803,
     "lng": 135.529935,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4911/"
+    "sourceUrl": "https://saunatime.jp/saunas/4911/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh18/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4911/"
   },
   {
     "id": "st-osaka-4917",
     "name": "ルネサンス久宝寺24",
     "prefecture": "大阪府",
-    "address": "〒581-0069 大阪府八尾市龍華町２丁目２−４ ゼビオスポーツタウン 久宝寺 内",
-    "addressSource": "SaunaTime",
+    "address": "〒581-0069 大阪府八尾市龍華町2丁目2−4 ゼビオスポーツタウン 久宝寺 内",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.623215,
     "lng": 135.580426,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4917/"
+    "sourceUrl": "https://saunatime.jp/saunas/4917/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kyuhoji/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4917/"
   },
   {
     "id": "st-osaka-4918",
     "name": "ルネサンス今里24",
     "prefecture": "大阪府",
-    "address": "〒537-0014 大阪府大阪市東成区大今里西１丁目２６−５ ロハスプラザ今里 3F～5F",
-    "addressSource": "SaunaTime",
+    "address": "〒537-0014 大阪府大阪市東成区大今里西1丁目26−5 ロハスプラザ今里 3F~5F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.671523,
     "lng": 135.542931,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4918/"
+    "sourceUrl": "https://saunatime.jp/saunas/4918/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/imazato/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4918/"
   },
   {
     "id": "st-osaka-4915",
     "name": "ルネサンス住之江",
     "prefecture": "大阪府",
-    "address": "〒559-0024 大阪府大阪市住之江区新北島１丁目２−１ オスカードリーム 6・7F",
-    "addressSource": "SaunaTime",
+    "address": "〒559-0024 大阪府大阪市住之江区新北島1丁目2−1 オスカードリーム 6・7F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.608899,
     "lng": 135.472062,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4915/"
+    "sourceUrl": "https://saunatime.jp/saunas/4915/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/suminoe/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4915/"
   },
   {
     "id": "st-osaka-4916",
     "name": "ルネサンス豊中",
     "prefecture": "大阪府",
-    "address": "〒560-0023 大阪府豊中市岡上の町２丁目１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒560-0023 大阪府豊中市岡上の町2丁目1−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.784411,
     "lng": 135.463807,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4916/"
+    "sourceUrl": "https://saunatime.jp/saunas/4916/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/toyonaka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4916/"
   },
   {
     "id": "osaka-user-2mx5ie",
@@ -14664,25 +16508,33 @@ export const SEED_FACILITIES = [
     "name": "GROUND ROCK CASTLE sauna",
     "prefecture": "兵庫県",
     "address": "〒669-3128 兵庫県丹波市山南町金屋 1023-5",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.091749,
     "lng": 135.031526,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4813/",
-    "city": "丹波市 事前予約制"
+    "city": "丹波市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://grc.dog/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4813/"
   },
   {
     "id": "st-hyogo-4819",
     "name": "HOTTERS24 西宮上ヶ原店",
     "prefecture": "兵庫県",
-    "address": "〒662-0883 兵庫県西宮市上ケ原九番町２−１０２",
-    "addressSource": "SaunaTime",
+    "address": "〒662-0883 兵庫県西宮市上ケ原九番町2−102",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.76069,
     "lng": 135.342654,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4819/"
+    "sourceUrl": "https://saunatime.jp/saunas/4819/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://hotters24.com/nishinomiyauegahara/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4819/"
   },
   {
     "id": "hyogo-user-ch6pzy",
@@ -14805,14 +16657,18 @@ export const SEED_FACILITIES = [
     "id": "st-hyogo-4822",
     "name": "simanoyadoya",
     "prefecture": "兵庫県",
-    "address": "〒656-2321 兵庫県淡路市中持５３１−３",
-    "addressSource": "SaunaTime",
+    "address": "〒656-2321 兵庫県淡路市中持531−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.545627,
     "lng": 134.969308,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4822/",
-    "city": "淡路市 宿泊者限定"
+    "city": "淡路市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://simanoyadoya.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4822/"
   },
   {
     "id": "hyogo-user-1pze2ds",
@@ -15037,43 +16893,55 @@ export const SEED_FACILITIES = [
     "id": "st-hyogo-4912",
     "name": "ルネサンスビエラ明舞24",
     "prefecture": "兵庫県",
-    "address": "〒655-0049 兵庫県神戸市垂水区狩口台１丁目１６−２ ビエラ明舞 1階2階",
-    "addressSource": "SaunaTime",
+    "address": "〒655-0049 兵庫県神戸市垂水区狩口台1丁目16−2 ビエラ明舞 1階2階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.652431,
     "lng": 135.02676,
     "city": "神戸市垂水区",
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4912/",
-    "note": "兵庫県神戸市垂水区狩口台1-16-2 ビエラ明舞 1・2階"
+    "note": "兵庫県神戸市垂水区狩口台1-16-2 ビエラ明舞 1・2階",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/vierra-meimai/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4912/"
   },
   {
     "id": "st-hyogo-4919",
     "name": "ルネサンス伊丹24",
     "prefecture": "兵庫県",
-    "address": "〒664-0845 兵庫県伊丹市東有岡１丁目２０",
-    "addressSource": "SaunaTime",
+    "address": "〒664-0845 兵庫県伊丹市東有岡1丁目20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.778846,
     "lng": 135.42221,
     "city": "伊丹市",
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4919/",
-    "note": "兵庫県伊丹市東有岡1-20"
+    "note": "兵庫県伊丹市東有岡1-20",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/itami/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4919/"
   },
   {
     "id": "st-hyogo-4675",
     "name": "ルネサンス神戸",
     "prefecture": "兵庫県",
-    "address": "〒652-0898 兵庫県神戸市兵庫区駅前通１丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒652-0898 兵庫県神戸市兵庫区駅前通1丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.668601,
     "lng": 135.163811,
     "city": "神戸市兵庫区",
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4675/",
-    "note": "兵庫県神戸市兵庫区駅前通1-2-1"
+    "note": "兵庫県神戸市兵庫区駅前通1-2-1",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kobe/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4675/"
   },
   {
     "id": "hyogo-user-egdok4",
@@ -15641,7 +17509,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2835/",
-    "city": "橿原市"
+    "city": "橿原市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2845",
@@ -15656,7 +17525,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2845/",
-    "city": "香芝市"
+    "city": "香芝市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2879",
@@ -15671,20 +17541,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2879/",
-    "city": "御所市"
+    "city": "御所市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2847",
     "name": "ほてい湯",
     "prefecture": "奈良県",
-    "address": "〒630-8142 奈良県奈良市肘塚町７",
-    "addressSource": "SaunaTime",
+    "address": "〒630-8142 奈良県奈良市肘塚町7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.670797,
     "lng": 135.82948,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2847/",
-    "city": "奈良市"
+    "city": "奈良市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hoteiyu.iiyudana.net/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/2847/"
   },
   {
     "id": "st-nara-2844",
@@ -15699,7 +17574,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2844/",
-    "city": "吉野郡天川村"
+    "city": "吉野郡天川村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2831",
@@ -15714,7 +17590,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2831/",
-    "city": "奈良市"
+    "city": "奈良市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2832",
@@ -15729,19 +17606,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2832/",
-    "city": "奈良市"
+    "city": "奈良市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-4673",
     "name": "ルネサンス登美ヶ丘",
     "prefecture": "奈良県",
-    "address": "〒631-0003 奈良県奈良市中登美ヶ丘６丁目３−３ リコラス登美ヶ丘 5F",
-    "addressSource": "SaunaTime",
+    "address": "〒631-0003 奈良県奈良市中登美ヶ丘6丁目3−3 リコラス登美ヶ丘 5F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.726543,
     "lng": 135.752208,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4673/"
+    "sourceUrl": "https://saunatime.jp/saunas/4673/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/tomigaoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4673/"
   },
   {
     "id": "st-nara-2848",
@@ -15756,7 +17638,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2848/",
-    "city": "橿原市"
+    "city": "橿原市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2830",
@@ -15771,7 +17654,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2830/",
-    "city": "生駒市"
+    "city": "生駒市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-581",
@@ -15788,7 +17672,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/581/",
-    "city": "吉野郡下北山村"
+    "city": "吉野郡下北山村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2838",
@@ -15803,7 +17688,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2838/",
-    "city": "橿原市"
+    "city": "橿原市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2826",
@@ -15817,7 +17703,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2826/"
+    "sourceUrl": "https://saunatime.jp/saunas/2826/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2829",
@@ -15834,7 +17721,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2829/",
-    "city": "五條市"
+    "city": "五條市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "ikitai-nara-gose-takarayu",
@@ -15862,13 +17750,17 @@ export const SEED_FACILITIES = [
     "name": "十津川温泉 ホテル昴",
     "prefecture": "奈良県",
     "address": "〒637-1554 奈良県吉野郡十津川村大字平谷909−4",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.938643,
     "lng": 135.752976,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2833/",
-    "city": "吉野郡十津川村"
+    "city": "吉野郡十津川村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotel-subaru.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2833/"
   },
   {
     "id": "st-nara-2849",
@@ -15883,7 +17775,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2849/",
-    "city": "生駒市"
+    "city": "生駒市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2827",
@@ -15898,7 +17791,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2827/",
-    "city": "宇陀郡曽爾村"
+    "city": "宇陀郡曽爾村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2824",
@@ -15913,7 +17807,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2824/",
-    "city": "宇陀市"
+    "city": "宇陀市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2839",
@@ -15928,19 +17823,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2839/",
-    "city": "五條市"
+    "city": "五條市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-4515",
     "name": "朝日温泉(奈良)",
     "prefecture": "奈良県",
-    "address": "〒630-8323 奈良県奈良市京終地方東側町２０",
-    "addressSource": "SaunaTime",
+    "address": "〒630-8323 奈良県奈良市京終地方東側町20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4515/"
+    "sourceUrl": "https://saunatime.jp/saunas/4515/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.asahionsen.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4515/"
   },
   {
     "id": "st-nara-2828",
@@ -15955,7 +17855,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2828/",
-    "city": "奈良市"
+    "city": "奈良市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2841",
@@ -15972,32 +17873,41 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2841/",
-    "city": "吉野郡川上村"
+    "city": "吉野郡川上村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2843",
     "name": "奈良ロイヤルホテル ラ・ロイヤル・スパ",
     "prefecture": "奈良県",
-    "address": "〒630-8001 奈良県奈良市法華寺町２５４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒630-8001 奈良県奈良市法華寺町254−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.687171,
     "lng": 135.805016,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2843/"
+    "sourceUrl": "https://saunatime.jp/saunas/2843/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://nara-royal.co.jp/onsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2843/"
   },
   {
     "id": "st-nara-2836",
     "name": "奈良健康ランド",
     "prefecture": "奈良県",
-    "address": "〒632-0084 奈良県天理市嘉幡町６００−１",
-    "addressSource": "SaunaTime",
+    "address": "〒632-0084 奈良県天理市嘉幡町600−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.592151,
     "lng": 135.796261,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2836/",
-    "city": "天理市"
+    "city": "天理市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.narakenkoland.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2836/"
   },
   {
     "id": "st-nara-616",
@@ -16012,7 +17922,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/616/",
-    "city": "北葛城郡上牧町"
+    "city": "北葛城郡上牧町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2825",
@@ -16027,7 +17938,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2825/",
-    "city": "奈良市"
+    "city": "奈良市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2834",
@@ -16042,7 +17954,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2834/",
-    "city": "宇陀郡御杖村"
+    "city": "宇陀郡御杖村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2842",
@@ -16056,7 +17969,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2842/"
+    "sourceUrl": "https://saunatime.jp/saunas/2842/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nara-2846",
@@ -16071,19 +17985,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2846/",
-    "city": "高市郡明日香村"
+    "city": "高市郡明日香村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-4792",
     "name": "SAUNA HOUSE on",
     "prefecture": "和歌山県",
-    "address": "〒649-2211 和歌山県西牟婁郡白浜町 JP １８２１",
-    "addressSource": "SaunaTime",
+    "address": "〒649-2211 和歌山県西牟婁郡白浜町 JP 1821",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.67687,
     "lng": 135.337386,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4792/"
+    "sourceUrl": "https://saunatime.jp/saunas/4792/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.keyterrace.co.jp/saunahouseon/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4792/"
   },
   {
     "id": "st-wakayama-2873",
@@ -16100,7 +18019,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2873/",
-    "city": "西牟婁郡白浜町"
+    "city": "西牟婁郡白浜町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2857",
@@ -16115,7 +18035,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2857/",
-    "city": "伊都郡かつらぎ町"
+    "city": "伊都郡かつらぎ町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-607",
@@ -16130,7 +18051,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/607/",
-    "city": "海南市"
+    "city": "海南市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2878",
@@ -16138,7 +18060,8 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2878/"
+    "sourceUrl": "https://saunatime.jp/saunas/2878/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2865",
@@ -16146,7 +18069,8 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2865/"
+    "sourceUrl": "https://saunatime.jp/saunas/2865/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2854",
@@ -16155,7 +18079,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2854/",
-    "city": "西牟婁郡白浜町"
+    "city": "西牟婁郡白浜町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-584",
@@ -16169,7 +18094,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/584/"
+    "sourceUrl": "https://saunatime.jp/saunas/584/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-3326",
@@ -16186,7 +18112,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3326/",
-    "city": "和歌山市"
+    "city": "和歌山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2858",
@@ -16201,7 +18128,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2858/",
-    "city": "西牟婁郡白浜町"
+    "city": "西牟婁郡白浜町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2877",
@@ -16209,20 +18137,25 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2877/"
+    "sourceUrl": "https://saunatime.jp/saunas/2877/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2851",
     "name": "ふくろうの湯",
     "prefecture": "和歌山県",
-    "address": "〒640-8033 和歌山県和歌山市本町２丁目１",
-    "addressSource": "SaunaTime",
+    "address": "〒640-8033 和歌山県和歌山市本町2丁目1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.234299,
     "lng": 135.173971,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2851/",
-    "city": "和歌山市"
+    "city": "和歌山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.fukurou-yu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2851/"
   },
   {
     "id": "st-wakayama-2860",
@@ -16230,7 +18163,8 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2860/"
+    "sourceUrl": "https://saunatime.jp/saunas/2860/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2875",
@@ -16238,7 +18172,8 @@ export const SEED_FACILITIES = [
     "prefecture": "和歌山県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2875/"
+    "sourceUrl": "https://saunatime.jp/saunas/2875/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2852",
@@ -16254,7 +18189,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2852/",
     "city": "西牟婁郡白浜町",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2850",
@@ -16263,7 +18199,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2850/",
-    "city": "和歌山市"
+    "city": "和歌山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2871",
@@ -16277,19 +18214,22 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2871/"
+    "sourceUrl": "https://saunatime.jp/saunas/2871/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-4547",
     "name": "幸福湯(和歌山)",
     "prefecture": "和歌山県",
     "address": "〒640-8103 和歌山県和歌山市 北休賀町31 幸福マンション 1F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4547/"
+    "sourceUrl": "https://saunatime.jp/saunas/4547/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-580",
@@ -16303,7 +18243,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/580/"
+    "sourceUrl": "https://saunatime.jp/saunas/580/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2853",
@@ -16318,7 +18259,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2853/",
-    "city": "橋本市"
+    "city": "橋本市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2925",
@@ -16334,7 +18276,8 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2925/"
+    "sourceUrl": "https://saunatime.jp/saunas/2925/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2864",
@@ -16351,7 +18294,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2864/",
-    "city": "和歌山市"
+    "city": "和歌山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-579",
@@ -16367,7 +18311,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/579/"
+    "sourceUrl": "https://saunatime.jp/saunas/579/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2872",
@@ -16381,7 +18326,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2872/"
+    "sourceUrl": "https://saunatime.jp/saunas/2872/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2876",
@@ -16395,7 +18341,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2876/"
+    "sourceUrl": "https://saunatime.jp/saunas/2876/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2861",
@@ -16410,7 +18357,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2861/",
-    "city": "西牟婁郡白浜町"
+    "city": "西牟婁郡白浜町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2874",
@@ -16419,7 +18367,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2874/",
-    "city": "伊都郡高野町"
+    "city": "伊都郡高野町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-582",
@@ -16428,7 +18377,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/582/",
-    "city": "御坊市"
+    "city": "御坊市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-583",
@@ -16443,7 +18393,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/583/",
-    "city": "有田市"
+    "city": "有田市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-wakayama-2855",
@@ -16457,31 +18408,40 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2855/"
+    "sourceUrl": "https://saunatime.jp/saunas/2855/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-4713",
     "name": "GOOD BLESS GARDEN サウナ＆ステイ",
     "prefecture": "鳥取県",
-    "address": "〒683-0812 鳥取県米子市角盤町１丁目２７−２ ＧＯＯＤ ＢＬＥＳＳ ＧＡＲＤＥＮ ５階",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0812 鳥取県米子市角盤町1丁目27−2 GOOD BLESS GARDEN 5階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.432564,
     "lng": 133.333483,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4713/"
+    "sourceUrl": "https://saunatime.jp/saunas/4713/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://gbg-sauna.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4713/"
   },
   {
     "id": "st-tottori-4722",
     "name": "ICHINOYU TENT SAUNA",
     "prefecture": "鳥取県",
     "address": "〒680-1442 鳥取県鳥取市吉岡温泉町666番地",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.483816,
     "lng": 134.128023,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4722/"
+    "sourceUrl": "https://saunatime.jp/saunas/4722/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ichinoyu-tentsauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4722/"
   },
   {
     "id": "ikitai-tottori-iwado-base",
@@ -16506,13 +18466,17 @@ export const SEED_FACILITIES = [
     "id": "st-tottori-4693",
     "name": "Nature Sauna",
     "prefecture": "鳥取県",
-    "address": "〒689-2336 鳥取県東伯郡琴浦町野井倉６８８",
-    "addressSource": "SaunaTime",
+    "address": "〒689-2336 鳥取県東伯郡琴浦町野井倉688",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.38203,
     "lng": 133.611289,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4693/"
+    "sourceUrl": "https://saunatime.jp/saunas/4693/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://tottori-camppark.jp/sauna.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4693/"
   },
   {
     "id": "ikitai-tottori-nomado-hotel-daisen",
@@ -16541,13 +18505,17 @@ export const SEED_FACILITIES = [
     "id": "st-tottori-3590",
     "name": "おーゆ・ランド",
     "prefecture": "鳥取県",
-    "address": "〒683-0001 鳥取県米子市皆生温泉１丁目１８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0001 鳥取県米子市皆生温泉1丁目18−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.455208,
     "lng": 133.360633,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3590/"
+    "sourceUrl": "https://saunatime.jp/saunas/3590/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.ou-kaike.co.jp/?page_id=19",
+    "officialUrlSource": "https://saunatime.jp/saunas/3590/"
   },
   {
     "id": "st-tottori-717",
@@ -16555,50 +18523,59 @@ export const SEED_FACILITIES = [
     "prefecture": "鳥取県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/717/"
+    "sourceUrl": "https://saunatime.jp/saunas/717/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-720",
     "name": "さかいポートサウナ",
     "prefecture": "鳥取県",
-    "address": "〒684-0004 鳥取県境港市大正町２１５ みなとさかい交流館 4F",
-    "addressSource": "SaunaTime",
+    "address": "〒684-0004 鳥取県境港市大正町215 みなとさかい交流館 4F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.545366,
     "lng": 133.2228,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/720/"
+    "sourceUrl": "https://saunatime.jp/saunas/720/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3594",
     "name": "パルプラスオン",
     "prefecture": "鳥取県",
-    "address": "〒689-4121 鳥取県西伯郡伯耆町大殿１０１０",
-    "addressSource": "SaunaTime",
+    "address": "〒689-4121 鳥取県西伯郡伯耆町大殿1010",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.387437,
     "lng": 133.396364,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3594/"
+    "sourceUrl": "https://saunatime.jp/saunas/3594/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://pal-plus-on.com/facility/youipal/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3594/"
   },
   {
     "id": "st-tottori-3604",
     "name": "ベイサイドスクエア皆生ホテル",
     "prefecture": "鳥取県",
-    "address": "〒683-0001 鳥取県米子市皆生温泉４丁目２１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0001 鳥取県米子市皆生温泉4丁目21−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.458409,
     "lng": 133.359573,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3604/"
+    "sourceUrl": "https://saunatime.jp/saunas/3604/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3599",
     "name": "ホテルウェルネスほうき路",
     "prefecture": "鳥取県",
-    "address": "〒683-0002 鳥取県米子市皆生新田３丁目２２ 皆生新田３丁目２２−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0002 鳥取県米子市皆生新田3丁目22 皆生新田3丁目22−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.455121,
     "lng": 133.370642,
     "trait": "award",
@@ -16609,14 +18586,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3599/"
+    "sourceUrl": "https://saunatime.jp/saunas/3599/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-wellness.jp/houkiji/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3599/"
   },
   {
     "id": "st-tottori-3600",
     "name": "ホテルモナーク鳥取",
     "prefecture": "鳥取県",
-    "address": "〒680-0834 鳥取県鳥取市永楽温泉町４０３",
-    "addressSource": "SaunaTime",
+    "address": "〒680-0834 鳥取県鳥取市永楽温泉町403",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.494058,
     "lng": 134.230598,
     "trait": "award",
@@ -16628,7 +18609,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3600/",
-    "city": "鳥取市"
+    "city": "鳥取市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-716",
@@ -16642,7 +18625,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/716/"
+    "sourceUrl": "https://saunatime.jp/saunas/716/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3593",
@@ -16657,33 +18641,38 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3593/",
-    "city": "境港市"
+    "city": "境港市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3598",
     "name": "ゆアシス東郷龍鳳閣",
     "prefecture": "鳥取県",
-    "address": "〒689-0715 鳥取県東伯郡湯梨浜町引地５６０−７",
-    "addressSource": "SaunaTime",
+    "address": "〒689-0715 鳥取県東伯郡湯梨浜町引地560−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.466743,
     "lng": 133.893565,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3598/",
-    "city": "東伯郡湯梨浜町"
+    "city": "東伯郡湯梨浜町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-718",
     "name": "ラピスパ",
     "prefecture": "鳥取県",
-    "address": "〒689-3402 鳥取県米子市淀江町淀江２−３８",
-    "addressSource": "SaunaTime",
+    "address": "〒689-3402 鳥取県米子市淀江町淀江2−38",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.456373,
     "lng": 133.434346,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/718/",
-    "city": "米子市"
+    "city": "米子市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3597",
@@ -16692,14 +18681,15 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3597/",
-    "city": "鳥取市"
+    "city": "鳥取市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3591",
     "name": "温泉館ホットピア鹿野",
     "prefecture": "鳥取県",
-    "address": "〒689-0425 鳥取県鳥取市鹿野町今市４１８−２",
-    "addressSource": "SaunaTime",
+    "address": "〒689-0425 鳥取県鳥取市鹿野町今市418−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.464605,
     "lng": 134.05702,
     "trait": "onsen",
@@ -16711,27 +18701,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3591/",
-    "city": "鳥取市"
+    "city": "鳥取市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.shikano-net.com/day-spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3591/"
   },
   {
     "id": "st-tottori-3076",
     "name": "華水亭",
     "prefecture": "鳥取県",
     "address": "〒683-0001 鳥取県米子市皆生温泉",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.458517,
     "lng": 133.35777,
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3076/",
-    "city": "米子市"
+    "city": "米子市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kaike-grandhotel.co.jp/kasuitei/bihadanoyu.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3076/"
   },
   {
     "id": "st-tottori-3592",
     "name": "関金温泉 せきがね湯命館",
     "prefecture": "鳥取県",
-    "address": "〒682-0411 鳥取県倉吉市関金町関金宿１１３９",
-    "addressSource": "SaunaTime",
+    "address": "〒682-0411 鳥取県倉吉市関金町関金宿1139",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.364334,
     "lng": 133.76004,
     "trait": "onsen",
@@ -16743,33 +18741,39 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3592/",
-    "city": "倉吉市"
+    "city": "倉吉市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3603",
     "name": "渓泉閣",
     "prefecture": "鳥取県",
-    "address": "〒682-0122 鳥取県東伯郡三朝町山田１８０",
-    "addressSource": "SaunaTime",
+    "address": "〒682-0122 鳥取県東伯郡三朝町山田180",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.41283,
     "lng": 133.88876,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3603/",
-    "city": "東伯郡三朝町"
+    "city": "東伯郡三朝町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3569",
     "name": "鳥取ぽかぽか温泉",
     "prefecture": "鳥取県",
-    "address": "〒680-0921 鳥取県鳥取市古海570番地 スーパーモール鳥取（カインズモール）内",
-    "addressSource": "SaunaTime",
+    "address": "〒680-0921 鳥取県鳥取市古海570番地 スーパーモール鳥取(カインズモール)内",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.495398,
     "lng": 134.206055,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3569/",
-    "city": "鳥取市"
+    "city": "鳥取市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-2929",
@@ -16783,14 +18787,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2929/"
+    "sourceUrl": "https://saunatime.jp/saunas/2929/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3602",
     "name": "湯快リゾート 皆生温泉 かいけ彩朝楽",
     "prefecture": "鳥取県",
-    "address": "〒683-0001 鳥取県米子市皆生温泉４丁目２９−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0001 鳥取県米子市皆生温泉4丁目29−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.458608,
     "lng": 133.360295,
     "trait": "onsen",
@@ -16801,7 +18806,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3602/"
+    "sourceUrl": "https://saunatime.jp/saunas/3602/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yukai-r.jp/kaike-saichoraku/#bath",
+    "officialUrlSource": "https://saunatime.jp/saunas/3602/"
   },
   {
     "id": "st-tottori-3596",
@@ -16816,7 +18825,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3596/",
-    "city": "米子市 宿泊者限定"
+    "city": "米子市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "ikitai-tottori-yutani-so",
@@ -16839,8 +18849,8 @@ export const SEED_FACILITIES = [
     "id": "st-tottori-719",
     "name": "日帰り温泉オーシャン",
     "prefecture": "鳥取県",
-    "address": "〒683-0801 鳥取県米子市新開３丁目２−４６",
-    "addressSource": "SaunaTime",
+    "address": "〒683-0801 鳥取県米子市新開3丁目2−46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.45938,
     "lng": 133.352598,
     "trait": "onsen",
@@ -16852,14 +18862,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/719/",
-    "city": "米子市"
+    "city": "米子市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.ocean-g.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/719/"
   },
   {
     "id": "st-tottori-3562",
     "name": "白鳳の里 淀江ゆめ温泉",
     "prefecture": "鳥取県",
-    "address": "〒689-3411 鳥取県米子市淀江町福岡１５４７",
-    "addressSource": "SaunaTime",
+    "address": "〒689-3411 鳥取県米子市淀江町福岡1547",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.453381,
     "lng": 133.441512,
     "trait": "onsen",
@@ -16871,7 +18885,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3562/",
-    "city": "米子市"
+    "city": "米子市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3601",
@@ -16880,19 +18896,24 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3601/",
-    "city": "米子市"
+    "city": "米子市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tottori-3595",
     "name": "養生館",
     "prefecture": "鳥取県",
-    "address": "〒689-0715 鳥取県東伯郡湯梨浜町引地１４４",
-    "addressSource": "SaunaTime",
+    "address": "〒689-0715 鳥取県東伯郡湯梨浜町引地144",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.468388,
     "lng": 133.893998,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3595/"
+    "sourceUrl": "https://saunatime.jp/saunas/3595/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.yozyokan.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3595/"
   },
   {
     "id": "official-shimane-izumo-hotel-the-cliff",
@@ -16922,14 +18943,16 @@ export const SEED_FACILITIES = [
     "id": "st-shimane-758",
     "name": "おろち湯ったり館",
     "prefecture": "島根県",
-    "address": "〒699-1332 島根県雲南市木次町木次９５２−４",
-    "addressSource": "SaunaTime",
+    "address": "〒699-1332 島根県雲南市木次町木次952−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.285279,
     "lng": 132.907838,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/758/",
-    "city": "雲南市"
+    "city": "雲南市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-2892",
@@ -16938,43 +18961,52 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2892/",
-    "city": "出雲市 宿泊者限定"
+    "city": "出雲市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-755",
     "name": "きまち湯治村大森の湯",
     "prefecture": "島根県",
-    "address": "〒699-0405 島根県松江市宍道町上来待２１０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒699-0405 島根県松江市宍道町上来待210−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.40325,
     "lng": 132.960248,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/755/"
+    "sourceUrl": "https://saunatime.jp/saunas/755/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-757",
     "name": "サウナ・オアシス",
     "prefecture": "島根県",
-    "address": "〒693-0005 島根県出雲市天神町８６０−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒693-0005 島根県出雲市天神町860−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.351385,
     "lng": 132.744315,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/757/"
+    "sourceUrl": "https://saunatime.jp/saunas/757/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.richgarden.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/757/"
   },
   {
     "id": "st-shimane-752",
     "name": "サウナ２５",
     "prefecture": "島根県",
     "address": "〒690-0003 島根県松江市 島根県松江市朝日町470−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.463205,
     "lng": 133.063124,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/752/"
+    "sourceUrl": "https://saunatime.jp/saunas/752/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-750",
@@ -16988,7 +19020,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/750/"
+    "sourceUrl": "https://saunatime.jp/saunas/750/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-2931",
@@ -16996,7 +19029,8 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2931/"
+    "sourceUrl": "https://saunatime.jp/saunas/2931/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-764",
@@ -17004,7 +19038,8 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/764/"
+    "sourceUrl": "https://saunatime.jp/saunas/764/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-751",
@@ -17019,7 +19054,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/751/",
-    "city": "松江市"
+    "city": "松江市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3616",
@@ -17034,7 +19070,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3616/",
-    "city": "松江市"
+    "city": "松江市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3612",
@@ -17048,7 +19085,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3612/"
+    "sourceUrl": "https://saunatime.jp/saunas/3612/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3613",
@@ -17063,7 +19101,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3613/",
-    "city": "江津市"
+    "city": "江津市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3607",
@@ -17071,7 +19110,8 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3607/"
+    "sourceUrl": "https://saunatime.jp/saunas/3607/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3608",
@@ -17086,7 +19126,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3608/",
-    "city": "飯石郡飯南町"
+    "city": "飯石郡飯南町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-756",
@@ -17100,7 +19141,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/756/"
+    "sourceUrl": "https://saunatime.jp/saunas/756/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3606",
@@ -17117,7 +19159,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3606/",
-    "city": "仁多郡奥出雲町"
+    "city": "仁多郡奥出雲町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3617",
@@ -17127,7 +19170,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3617/",
     "city": "松江市 宿泊者限定",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3610",
@@ -17143,7 +19187,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3610/",
     "city": "松江市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-754",
@@ -17158,7 +19203,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/754/",
-    "city": "松江市"
+    "city": "松江市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3618",
@@ -17166,7 +19212,8 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3618/"
+    "sourceUrl": "https://saunatime.jp/saunas/3618/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3605",
@@ -17174,7 +19221,8 @@ export const SEED_FACILITIES = [
     "prefecture": "島根県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3605/"
+    "sourceUrl": "https://saunatime.jp/saunas/3605/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-753",
@@ -17189,7 +19237,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/753/",
-    "city": "松江市"
+    "city": "松江市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3614",
@@ -17199,7 +19248,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3614/",
     "city": "出雲市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-2932",
@@ -17214,7 +19264,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2932/",
-    "city": "出雲市"
+    "city": "出雲市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3609",
@@ -17230,7 +19281,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3609/",
     "city": "出雲市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-766",
@@ -17245,19 +19297,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/766/",
-    "city": "鹿足郡津和野町"
+    "city": "鹿足郡津和野町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-4662",
     "name": "天然温泉の湯 四季荘",
     "prefecture": "島根県",
-    "address": "〒699-0501 島根県出雲市斐川町学頭１３６９",
-    "addressSource": "SaunaTime",
+    "address": "〒699-0501 島根県出雲市斐川町学頭1369",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.38264,
     "lng": 132.874309,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4662/"
+    "sourceUrl": "https://saunatime.jp/saunas/4662/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://shikisou.com/sauna/#1",
+    "officialUrlSource": "https://saunatime.jp/saunas/4662/"
   },
   {
     "id": "st-shimane-3615",
@@ -17267,7 +19324,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3615/",
     "city": "松江市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-shimane-3611",
@@ -17281,14 +19339,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3611/"
+    "sourceUrl": "https://saunatime.jp/saunas/3611/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-4818",
     "name": "HOTTERS24 岡山今店",
     "prefecture": "岡山県",
     "address": "〒700-0975 岡山県岡山市北区今2丁目1-25 1F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.651073,
     "lng": 133.897086,
     "trait": "wood",
@@ -17297,7 +19356,11 @@ export const SEED_FACILITIES = [
     "city": "岡山市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://hotters24.com/okayamaima/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4818/"
   },
   {
     "id": "sc2025-kolme-kyla",
@@ -17316,8 +19379,8 @@ export const SEED_FACILITIES = [
     "id": "st-okayama-721",
     "name": "カプセルイン岡山",
     "prefecture": "岡山県",
-    "address": "〒700-0904 岡山県岡山市北区柳町１丁目１３−２１",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0904 岡山県岡山市北区柳町1丁目13−21",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.658565,
     "lng": 133.920743,
     "trait": "wood",
@@ -17328,19 +19391,27 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/721/"
+    "sourceUrl": "https://saunatime.jp/saunas/721/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://wonderfulresort.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/721/"
   },
   {
     "id": "st-okayama-724",
     "name": "サウナ＆カプセル ハリウッド 駅前店",
     "prefecture": "岡山県",
-    "address": "〒700-0023 岡山県岡山市北区北区駅前町１丁目２−１６",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0023 岡山県岡山市北区北区駅前町1丁目2−16",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.66632,
     "lng": 133.919848,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/724/"
+    "sourceUrl": "https://saunatime.jp/saunas/724/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sauna-hw.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/724/"
   },
   {
     "id": "st-okayama-722",
@@ -17348,7 +19419,8 @@ export const SEED_FACILITIES = [
     "prefecture": "岡山県",
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/722/"
+    "sourceUrl": "https://saunatime.jp/saunas/722/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-729",
@@ -17363,7 +19435,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/729/",
-    "city": "総社市"
+    "city": "総社市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3636",
@@ -17378,38 +19451,47 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3636/",
-    "city": "玉野市"
+    "city": "玉野市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3648",
     "name": "ぽかぽか温泉",
     "prefecture": "岡山県",
-    "address": "〒700-0941 岡山県岡山市北区青江２丁目４−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0941 岡山県岡山市北区青江2丁目4−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.633246,
     "lng": 133.923035,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3648/"
+    "sourceUrl": "https://saunatime.jp/saunas/3648/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://pokaon.net/guide/#guide_hotspring",
+    "officialUrlSource": "https://saunatime.jp/saunas/3648/"
   },
   {
     "id": "st-okayama-4644",
     "name": "ホテルアベストグランデ岡山",
     "prefecture": "岡山県",
-    "address": "〒700-0023 岡山県岡山市北区駅前町１丁目８−５",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0023 岡山県岡山市北区駅前町1丁目8−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.666603,
     "lng": 133.921402,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4644/"
+    "sourceUrl": "https://saunatime.jp/saunas/4644/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotelabest-okayama.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4644/"
   },
   {
     "id": "st-okayama-723",
     "name": "ホテルリバーサイド",
     "prefecture": "岡山県",
-    "address": "〒700-0902 岡山県岡山市北区錦町４−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0902 岡山県岡山市北区錦町4−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.663436,
     "lng": 133.922485,
     "trait": "award",
@@ -17420,19 +19502,25 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/723/"
+    "sourceUrl": "https://saunatime.jp/saunas/723/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-4892",
     "name": "ルネサンス玉島24",
     "prefecture": "岡山県",
-    "address": "〒713-8102 岡山県倉敷市玉島７４",
-    "addressSource": "SaunaTime",
+    "address": "〒713-8102 岡山県倉敷市玉島74",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.548189,
     "lng": 133.684225,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4892/"
+    "sourceUrl": "https://saunatime.jp/saunas/4892/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/tamashima/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4892/"
   },
   {
     "id": "st-okayama-3627",
@@ -17446,20 +19534,25 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3627/"
+    "sourceUrl": "https://saunatime.jp/saunas/3627/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-4591",
     "name": "後楽温泉 ほのかの湯",
     "prefecture": "岡山県",
-    "address": "〒700-0934 岡山県岡山市北区奥田南町６−２７",
-    "addressSource": "SaunaTime",
+    "address": "〒700-0934 岡山県岡山市北区奥田南町6−27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.64172,
     "lng": 133.924025,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4591/",
-    "city": "岡山市"
+    "city": "岡山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.honokanoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4591/"
   },
   {
     "id": "st-okayama-3645",
@@ -17473,7 +19566,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3645/"
+    "sourceUrl": "https://saunatime.jp/saunas/3645/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3628",
@@ -17488,7 +19582,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3628/",
-    "city": "新見市"
+    "city": "新見市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3643",
@@ -17502,14 +19597,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3643/"
+    "sourceUrl": "https://saunatime.jp/saunas/3643/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3642",
     "name": "瀬戸大橋温泉 やま幸",
     "prefecture": "岡山県",
-    "address": "〒701-0112 岡山県倉敷市下庄１４０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒701-0112 岡山県倉敷市下庄140−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.642046,
     "lng": 133.832751,
     "trait": "onsen",
@@ -17521,20 +19617,28 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3642/",
-    "city": "倉敷市"
+    "city": "倉敷市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-yamakou.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3642/"
   },
   {
     "id": "st-okayama-3644",
     "name": "瀬戸内温泉 たまの湯",
     "prefecture": "岡山県",
-    "address": "〒706-0002 岡山県玉野市築港１丁目１−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒706-0002 岡山県玉野市築港1丁目1−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.492871,
     "lng": 133.956232,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3644/",
-    "city": "玉野市"
+    "city": "玉野市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.seto-tamanoyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3644/"
   },
   {
     "id": "st-okayama-3640",
@@ -17548,14 +19652,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3640/"
+    "sourceUrl": "https://saunatime.jp/saunas/3640/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-2926",
     "name": "天然温泉阿智の湯ドーミーイン倉敷",
     "prefecture": "岡山県",
-    "address": "〒710-0055 岡山県倉敷市阿知３丁目２１−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒710-0055 岡山県倉敷市阿知3丁目21−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.596829,
     "lng": 133.768946,
     "trait": "onsen",
@@ -17566,7 +19671,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2926/"
+    "sourceUrl": "https://saunatime.jp/saunas/2926/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/kurashiki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2926/"
   },
   {
     "id": "st-okayama-728",
@@ -17581,7 +19690,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/728/",
-    "city": "倉敷市"
+    "city": "倉敷市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3623",
@@ -17596,7 +19706,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3623/",
-    "city": "岡山市"
+    "city": "岡山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3626",
@@ -17611,7 +19722,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3626/",
-    "city": "英田郡西粟倉村"
+    "city": "英田郡西粟倉村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3620",
@@ -17626,7 +19738,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3620/",
-    "city": "美作市"
+    "city": "美作市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3631",
@@ -17641,7 +19754,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3631/",
-    "city": "真庭市"
+    "city": "真庭市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3650",
@@ -17659,14 +19773,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3650/"
+    "sourceUrl": "https://saunatime.jp/saunas/3650/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-4553",
     "name": "湯原温泉 八景",
     "prefecture": "岡山県",
-    "address": "〒717-0406 岡山県真庭市豊栄１５７２",
-    "addressSource": "SaunaTime",
+    "address": "〒717-0406 岡山県真庭市豊栄1572",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 35.20631,
     "lng": 133.732138,
     "trait": "onsen",
@@ -17678,7 +19793,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4553/",
-    "city": "真庭市 宿泊者限定"
+    "city": "真庭市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://hakkei-yubara.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4553/"
   },
   {
     "id": "st-okayama-3625",
@@ -17695,7 +19814,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3625/",
-    "city": "真庭市"
+    "city": "真庭市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3622",
@@ -17710,7 +19830,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3622/",
-    "city": "和気郡和気町"
+    "city": "和気郡和気町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okayama-3632",
@@ -17728,26 +19849,31 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3632/"
+    "sourceUrl": "https://saunatime.jp/saunas/3632/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-4655",
     "name": "CANDEO HOTELS 広島八丁堀",
     "prefecture": "広島県",
-    "address": "〒730-0013 広島県広島市中区八丁堀１４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0013 広島県広島市中区八丁堀14−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.395732,
     "lng": 132.463834,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4655/"
+    "sourceUrl": "https://saunatime.jp/saunas/4655/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.candeohotels.com/ja/hiroshima-hatchobori/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4655/"
   },
   {
     "id": "st-hiroshima-3544",
     "name": "いなり湯(広島)",
     "prefecture": "広島県",
-    "address": "〒734-0011 広島県広島市南区宇品海岸２丁目５−２",
-    "addressSource": "SaunaTime",
+    "address": "〒734-0011 広島県広島市南区宇品海岸2丁目5−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.356239,
     "lng": 132.46082,
     "trait": "onsen",
@@ -17758,14 +19884,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3544/"
+    "sourceUrl": "https://saunatime.jp/saunas/3544/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.inariyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3544/"
   },
   {
     "id": "st-hiroshima-730",
     "name": "お湯処 美福",
     "prefecture": "広島県",
-    "address": "〒721-0952 広島県福山市曙町５丁目２−２７",
-    "addressSource": "SaunaTime",
+    "address": "〒721-0952 広島県福山市曙町5丁目2−27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.469787,
     "lng": 133.390959,
     "trait": "onsen",
@@ -17777,14 +19907,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/730/",
-    "city": "福山市"
+    "city": "福山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.mifuku-yu.co.jp/mobile/",
+    "officialUrlSource": "https://saunatime.jp/saunas/730/"
   },
   {
     "id": "st-hiroshima-731",
     "name": "カプセル＆サウナ日本",
     "prefecture": "広島県",
-    "address": "〒720-0062 広島県福山市伏見町４−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0062 広島県福山市伏見町4−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.488294,
     "lng": 133.363979,
     "trait": "award",
@@ -17793,14 +19927,16 @@ export const SEED_FACILITIES = [
     "city": "福山市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-762",
     "name": "グランドサウナ広島",
     "prefecture": "広島県",
-    "address": "〒730-0027 広島県広島市中区薬研堀６−１７",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0027 広島県広島市中区薬研堀6−17",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.390619,
     "lng": 132.464675,
     "trait": "award",
@@ -17809,14 +19945,18 @@ export const SEED_FACILITIES = [
     "city": "広島市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.grand-sauna.com/hiroshima/",
+    "officialUrlSource": "https://saunatime.jp/saunas/762/"
   },
   {
     "id": "st-hiroshima-4249",
     "name": "サウナ＆カプセルコスモシティ福山",
     "prefecture": "広島県",
-    "address": "〒720-0801 広島県福山市入船町２丁目１１−１１−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0801 広島県福山市入船町2丁目11−11−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.485552,
     "lng": 133.375512,
     "trait": "wood",
@@ -17827,14 +19967,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4249/"
+    "sourceUrl": "https://saunatime.jp/saunas/4249/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-4664",
     "name": "サウナ亀の家【広島パシフィックホテル】",
     "prefecture": "広島県",
-    "address": "〒730-0012 広島県広島市中区上八丁堀８−１６",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0012 広島県広島市中区上八丁堀8−16",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.398734,
     "lng": 132.464444,
     "trait": "award",
@@ -17845,14 +19987,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4664/"
+    "sourceUrl": "https://saunatime.jp/saunas/4664/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://h-pacific.com/spakamenoya/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4664/"
   },
   {
     "id": "st-hiroshima-3533",
     "name": "スーパー健康ランド華のゆ(広島)",
     "prefecture": "広島県",
-    "address": "〒720-0825 広島県福山市沖野上町５丁目5−27−11",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0825 広島県福山市沖野上町5丁目5−27−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.4687,
     "lng": 133.36848,
     "trait": "onsen",
@@ -17863,14 +20009,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3533/"
+    "sourceUrl": "https://saunatime.jp/saunas/3533/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-3510",
     "name": "スーパー銭湯 ゆらら",
     "prefecture": "広島県",
-    "address": "〒720-0077 広島県福山市南本庄１丁目１２−２２",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0077 広島県福山市南本庄1丁目12−22",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.486385,
     "lng": 133.351044,
     "trait": "onsen",
@@ -17882,14 +20030,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3510/",
-    "city": "福山市"
+    "city": "福山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yurara.ichifujinetwork.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3510/"
   },
   {
     "id": "st-hiroshima-4483",
     "name": "ちどり湯",
     "prefecture": "広島県",
-    "address": "〒733-0035 広島県広島市西区南観音３丁目６−６",
-    "addressSource": "SaunaTime",
+    "address": "〒733-0035 広島県広島市西区南観音3丁目6−6",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -17901,99 +20053,129 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4483/",
-    "city": "広島市"
+    "city": "広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tidoriyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4483/"
   },
   {
     "id": "st-hiroshima-761",
     "name": "ニュージャパンＥＸ",
     "prefecture": "広島県",
-    "address": "〒730-0027 広島県広島市中区薬研堀８−８",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0027 広島県広島市中区薬研堀8−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.389975,
     "lng": 132.465425,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/761/"
+    "sourceUrl": "https://saunatime.jp/saunas/761/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-3520",
     "name": "ホットカモ",
     "prefecture": "広島県",
-    "address": "〒739-0024 広島県東広島市西条町御薗宇６１７９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒739-0024 広島県東広島市西条町御薗宇6179−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.413771,
     "lng": 132.752776,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3520/",
-    "city": "東広島市"
+    "city": "東広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotkamo.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3520/"
   },
   {
     "id": "st-hiroshima-4896",
     "name": "ルネサンス広島ボールパークタウン24",
     "prefecture": "広島県",
-    "address": "〒732-0803 広島県広島市南区南蟹屋２丁目３−３",
-    "addressSource": "SaunaTime",
+    "address": "〒732-0803 広島県広島市南区南蟹屋2丁目3−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.391263,
     "lng": 132.485341,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4896/"
+    "sourceUrl": "https://saunatime.jp/saunas/4896/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hiroshima-ballparktown/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4896/"
   },
   {
     "id": "st-hiroshima-4897",
     "name": "ルネサンス広島東千田24",
     "prefecture": "広島県",
-    "address": "〒730-0053 広島県広島市中区東千田町１丁目１−２６",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0053 広島県広島市中区東千田町1丁目1−26",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.381856,
     "lng": 132.459517,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4897/"
+    "sourceUrl": "https://saunatime.jp/saunas/4897/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hiroshima-higashisenda/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4897/"
   },
   {
     "id": "st-hiroshima-4893",
     "name": "ルネサンス広島緑井",
     "prefecture": "広島県",
-    "address": "〒731-0103 広島県広島市安佐南区緑井１丁目５−２",
-    "addressSource": "SaunaTime",
+    "address": "〒731-0103 広島県広島市安佐南区緑井1丁目5−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.46702,
     "lng": 132.476622,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4893/"
+    "sourceUrl": "https://saunatime.jp/saunas/4893/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/hiroshima-midorii/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4893/"
   },
   {
     "id": "st-hiroshima-4894",
     "name": "ルネサンス福山春日24",
     "prefecture": "広島県",
-    "address": "〒721-0907 広島県福山市春日町５丁目１７−１３",
-    "addressSource": "SaunaTime",
+    "address": "〒721-0907 広島県福山市春日町5丁目17−13",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.503502,
     "lng": 133.406176,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4894/"
+    "sourceUrl": "https://saunatime.jp/saunas/4894/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukuyama-kasuga/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4894/"
   },
   {
     "id": "st-hiroshima-4895",
     "name": "ルネサンス福山多治米24",
     "prefecture": "広島県",
-    "address": "〒720-0824 広島県福山市多治米町１丁目１４−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0824 広島県福山市多治米町1丁目14−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.47301,
     "lng": 133.38345,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4895/"
+    "sourceUrl": "https://saunatime.jp/saunas/4895/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukuyama-tajime/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4895/"
   },
   {
     "id": "st-hiroshima-3511",
     "name": "宇品天然温泉 ほの湯",
     "prefecture": "広島県",
-    "address": "〒734-0003 広島県広島市南区宇品東３丁目４−３４",
-    "addressSource": "SaunaTime",
+    "address": "〒734-0003 広島県広島市南区宇品東3丁目4−34",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.365308,
     "lng": 132.47423,
     "trait": "onsen",
@@ -18005,14 +20187,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3511/",
-    "city": "広島市"
+    "city": "広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.honoyu.jp/ujina/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3511/"
   },
   {
     "id": "st-hiroshima-3538",
     "name": "塩屋天然温泉ほの湯楽々園",
     "prefecture": "広島県",
-    "address": "〒731-5136 広島県広島市佐伯区楽々園５丁目７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒731-5136 広島県広島市佐伯区楽々園5丁目7−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.361202,
     "lng": 132.353928,
     "trait": "onsen",
@@ -18026,14 +20212,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3538/",
-    "city": "広島市"
+    "city": "広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-3515",
     "name": "音戸温泉",
     "prefecture": "広島県",
-    "address": "〒730-0026 広島県広島市中区田中町６−３",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0026 広島県広島市中区田中町6−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.388333,
     "lng": 132.46432,
     "trait": "onsen",
@@ -18045,14 +20233,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3515/",
-    "city": "広島市"
+    "city": "広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ondo-onsen.boo.jp/wordpress/?page_id=2",
+    "officialUrlSource": "https://saunatime.jp/saunas/3515/"
   },
   {
     "id": "st-hiroshima-733",
     "name": "栗原温泉",
     "prefecture": "広島県",
-    "address": "〒722-0031 広島県尾道市三軒家町４−１９",
-    "addressSource": "SaunaTime",
+    "address": "〒722-0031 広島県尾道市三軒家町4−19",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.405513,
     "lng": 133.191222,
     "trait": "onsen",
@@ -18064,27 +20256,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/733/",
-    "city": "尾道市"
+    "city": "尾道市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ononavi.jp/staying/spa/detail.html?detail_id=721",
+    "officialUrlSource": "https://saunatime.jp/saunas/733/"
   },
   {
     "id": "st-hiroshima-3547",
     "name": "江戸風呂",
     "prefecture": "広島県",
-    "address": "〒720-0202 広島県福山市鞆町後地３３７１",
-    "addressSource": "SaunaTime",
+    "address": "〒720-0202 広島県福山市鞆町後地3371",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.383857,
     "lng": 133.389827,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3547/",
-    "city": "福山市"
+    "city": "福山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.sensuijima.jp/kokokara/top.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3547/"
   },
   {
     "id": "st-hiroshima-3530",
     "name": "神辺天然温泉 ぐらんの湯",
     "prefecture": "広島県",
-    "address": "〒720-2107 広島県福山市神辺町大字新道上二丁目１０−２６ フジグラン神辺内",
-    "addressSource": "SaunaTime",
+    "address": "〒720-2107 広島県福山市神辺町大字新道上二丁目10−26 フジグラン神辺内",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.543627,
     "lng": 133.359013,
     "trait": "onsen",
@@ -18096,14 +20296,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3530/",
-    "city": "福山市"
+    "city": "福山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://grannoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3530/"
   },
   {
     "id": "st-hiroshima-760",
     "name": "大和温泉物語",
     "prefecture": "広島県",
     "address": "〒737-0029 広島県呉市宝町2−50 レクレ5F・6F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.244417,
     "lng": 132.557166,
     "trait": "onsen",
@@ -18114,14 +20318,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/760/"
+    "sourceUrl": "https://saunatime.jp/saunas/760/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yamato-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/760/"
   },
   {
     "id": "st-hiroshima-4610",
     "name": "土橋温泉",
     "prefecture": "広島県",
-    "address": "〒730-0854 広島県広島市中区土橋町３−４",
-    "addressSource": "SaunaTime",
+    "address": "〒730-0854 広島県広島市中区土橋町3−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.394756,
     "lng": 132.44676,
     "trait": "onsen",
@@ -18133,14 +20341,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4610/",
-    "city": "広島市"
+    "city": "広島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-hiroshima-3539",
     "name": "湯楽里 天然温泉",
     "prefecture": "広島県",
-    "address": "〒737-0112 広島県呉市広古新開３丁目２−２８",
-    "addressSource": "SaunaTime",
+    "address": "〒737-0112 広島県呉市広古新開3丁目2−28",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.236563,
     "lng": 132.613518,
     "trait": "onsen",
@@ -18151,14 +20361,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3539/"
+    "sourceUrl": "https://saunatime.jp/saunas/3539/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yurari.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3539/"
   },
   {
     "id": "st-hiroshima-3513",
     "name": "半べえ温泉",
     "prefecture": "広島県",
     "address": "〒734-0025 広島県広島市南区東本浦町6−30",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.375437,
     "lng": 132.48871,
     "trait": "onsen",
@@ -18169,14 +20383,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3513/"
+    "sourceUrl": "https://saunatime.jp/saunas/3513/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hanbe.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3513/"
   },
   {
     "id": "st-hiroshima-3535",
     "name": "尾道平原温泉 ぽっぽの湯",
     "prefecture": "広島県",
-    "address": "〒722-0018 広島県尾道市平原２丁目１−３３",
-    "addressSource": "SaunaTime",
+    "address": "〒722-0018 広島県尾道市平原2丁目1−33",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.410056,
     "lng": 133.179032,
     "trait": "onsen",
@@ -18188,14 +20406,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3535/",
-    "city": "尾道市"
+    "city": "尾道市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://poppo.info/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3535/"
   },
   {
     "id": "st-hiroshima-3509",
     "name": "福山コロナの湯天然温泉",
     "prefecture": "広島県",
-    "address": "〒721-0953 広島県福山市一文字町２４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒721-0953 広島県福山市一文字町24−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.465806,
     "lng": 133.407369,
     "trait": "wood",
@@ -18208,14 +20430,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3509/"
+    "sourceUrl": "https://saunatime.jp/saunas/3509/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.korona.co.jp/Onsen/fuy/Original/index.asp?Seq=1251&SubSeq=1",
+    "officialUrlSource": "https://saunatime.jp/saunas/3509/"
   },
   {
     "id": "st-hiroshima-3525",
     "name": "満天の湯 温泉家",
     "prefecture": "広島県",
-    "address": "〒731-3164 広島県広島市安佐南区伴東１丁目１−１３",
-    "addressSource": "SaunaTime",
+    "address": "〒731-3164 広島県広島市安佐南区伴東1丁目1−13",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.470612,
     "lng": 132.425561,
     "trait": "onsen",
@@ -18226,26 +20452,34 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3525/"
+    "sourceUrl": "https://saunatime.jp/saunas/3525/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.manten-no-yu.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3525/"
   },
   {
     "id": "st-yamaguchi-4634",
     "name": "アクアヒルやない",
     "prefecture": "山口県",
-    "address": "〒742-0033 山口県柳井市新庄１３２６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒742-0033 山口県柳井市新庄1326−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.98351,
     "lng": 132.082273,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4634/"
+    "sourceUrl": "https://saunatime.jp/saunas/4634/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://shisetsu.mizuno.jp/m-7108",
+    "officialUrlSource": "https://saunatime.jp/saunas/4634/"
   },
   {
     "id": "st-yamaguchi-4624",
     "name": "エクストールイン山陽小野田厚狭駅前",
     "prefecture": "山口県",
-    "address": "〒757-0001 山口県山陽小野田市厚狭１丁目３６−４",
-    "addressSource": "SaunaTime",
+    "address": "〒757-0001 山口県山陽小野田市厚狭1丁目36−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.05524,
     "lng": 131.161505,
     "trait": "wood",
@@ -18257,50 +20491,66 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4624/",
-    "city": "山陽小野田市 宿泊者限定"
+    "city": "山陽小野田市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://extol-sanyo-onoda.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4624/"
   },
   {
     "id": "st-yamaguchi-3677",
     "name": "かんぽの宿 光",
     "prefecture": "山口県",
-    "address": "〒743-0005 山口県光市室積東ノ庄３１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒743-0005 山口県光市室積東ノ庄31−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.931093,
     "lng": 131.983043,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3677/"
+    "sourceUrl": "https://saunatime.jp/saunas/3677/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kanponoyado.japanpost.jp/hikari/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3677/"
   },
   {
     "id": "st-yamaguchi-3674",
     "name": "グリーンステイながうら",
     "prefecture": "山口県",
-    "address": "〒742-2302 山口県大島郡周防大島町椋野１１４４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒742-2302 山口県大島郡周防大島町椋野1144−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.96503,
     "lng": 132.233545,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3674/"
+    "sourceUrl": "https://saunatime.jp/saunas/3674/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://greenstay-nagaura.com/hoyoukan/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3674/"
   },
   {
     "id": "st-yamaguchi-3671",
     "name": "サンシャインサザンセト",
     "prefecture": "山口県",
     "address": "〒742-2511 山口県大島郡周防大島町平野片添ヶ浜",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.901422,
     "lng": 132.363475,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3671/"
+    "sourceUrl": "https://saunatime.jp/saunas/3671/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sunshine-jp.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3671/"
   },
   {
     "id": "st-yamaguchi-3669",
     "name": "シーサイドホテル上関",
     "prefecture": "山口県",
-    "address": "〒742-1113 山口県熊毛郡平生町尾国２０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒742-1113 山口県熊毛郡平生町尾国20−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.860509,
     "lng": 132.113356,
     "trait": "award",
@@ -18311,51 +20561,67 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3669/"
+    "sourceUrl": "https://saunatime.jp/saunas/3669/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kaminoseki.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3669/"
   },
   {
     "id": "st-yamaguchi-769",
     "name": "バーデンハウス三丘",
     "prefecture": "山口県",
-    "address": "〒745-0641 山口県周南市小松原１２３４",
-    "addressSource": "SaunaTime",
+    "address": "〒745-0641 山口県周南市小松原1234",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.034629,
     "lng": 131.993444,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/769/"
+    "sourceUrl": "https://saunatime.jp/saunas/769/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.barden-mitsuo.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/769/"
   },
   {
     "id": "st-yamaguchi-4631",
     "name": "ヘルシーランド下関",
     "prefecture": "山口県",
     "address": "〒751-0881 山口県下関市 大字井田小野",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.060713,
     "lng": 130.968544,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4631/",
-    "city": "下関市"
+    "city": "下関市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://s-kanrikousha.com/healthytop.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4631/"
   },
   {
     "id": "st-yamaguchi-4650",
     "name": "ホテルニュータナカ",
     "prefecture": "山口県",
-    "address": "〒753-0056 山口県山口市湯田温泉２丁目６−２４",
-    "addressSource": "SaunaTime",
+    "address": "〒753-0056 山口県山口市湯田温泉2丁目6−24",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.164509,
     "lng": 131.456113,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4650/"
+    "sourceUrl": "https://saunatime.jp/saunas/4650/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.newtanaka.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4650/"
   },
   {
     "id": "st-yamaguchi-4641",
     "name": "ホテルルートイン山口 湯田温泉",
     "prefecture": "山口県",
-    "address": "〒753-0076 山口県山口市泉都町９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒753-0076 山口県山口市泉都町9−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.168063,
     "lng": 131.462424,
     "trait": "onsen",
@@ -18364,26 +20630,34 @@ export const SEED_FACILITIES = [
     "city": "山口市 宿泊者限定",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.route-inn.co.jp/hotel_list/yamaguchi/index_hotel_id_672/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4641/"
   },
   {
     "id": "st-yamaguchi-4262",
     "name": "ゆーぱーく光",
     "prefecture": "山口県",
-    "address": "〒743-0052 山口県光市三井６丁目６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒743-0052 山口県光市三井6丁目6−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.989082,
     "lng": 131.956921,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4262/"
+    "sourceUrl": "https://saunatime.jp/saunas/4262/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ppp.seika-spc.co.jp/upark-hikari/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4262/"
   },
   {
     "id": "st-yamaguchi-4623",
     "name": "リゾートホテル美萩",
     "prefecture": "山口県",
-    "address": "〒758-0057 山口県萩市堀内菊ケ浜４８５",
-    "addressSource": "SaunaTime",
+    "address": "〒758-0057 山口県萩市堀内菊ケ浜485",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.417232,
     "lng": 131.390639,
     "trait": "award",
@@ -18395,26 +20669,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4623/",
-    "city": "萩市"
+    "city": "萩市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://resorthotel-mihagi.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4623/"
   },
   {
     "id": "st-yamaguchi-4920",
     "name": "ルネサンス徳山24",
     "prefecture": "山口県",
-    "address": "〒745-0842 山口県周南市青山町３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒745-0842 山口県周南市青山町3−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.043702,
     "lng": 131.816333,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4920/"
+    "sourceUrl": "https://saunatime.jp/saunas/4920/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/tokuyama/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4920/"
   },
   {
     "id": "st-yamaguchi-4632",
     "name": "下関ステーションホテル",
     "prefecture": "山口県",
-    "address": "〒750-0025 山口県下関市竹崎町２丁目８−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒750-0025 山口県下関市竹崎町2丁目8−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.952861,
     "lng": 130.924214,
     "trait": "award",
@@ -18426,14 +20708,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4632/",
-    "city": "下関市 宿泊者限定"
+    "city": "下関市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.shimonoseki-station-hotel.jp/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/4632/"
   },
   {
     "id": "st-yamaguchi-4387",
     "name": "海峡ビューしものせき",
     "prefecture": "山口県",
     "address": "〒751-0813 山口県下関市みもすそ川町3-58",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.968668,
     "lng": 130.960665,
     "trait": "water",
@@ -18444,14 +20730,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4387/"
+    "sourceUrl": "https://saunatime.jp/saunas/4387/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamaguchi-3653",
     "name": "海眺の宿 あいお荘",
     "prefecture": "山口県",
     "address": "〒754-1101 山口県山口市秋穂東768−13",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.993377,
     "lng": 131.435813,
     "trait": "water",
@@ -18462,14 +20750,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3653/"
+    "sourceUrl": "https://saunatime.jp/saunas/3653/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.aioso.com/spa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3653/"
   },
   {
     "id": "st-yamaguchi-4299",
     "name": "桑の山温泉",
     "prefecture": "山口県",
-    "address": "〒747-0805 山口県防府市鞠生町６−７",
-    "addressSource": "SaunaTime",
+    "address": "〒747-0805 山口県防府市鞠生町6−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.040706,
     "lng": 131.566254,
     "trait": "wood",
@@ -18482,27 +20774,35 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4299/"
+    "sourceUrl": "https://saunatime.jp/saunas/4299/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.rwn.jp/~tetsusei/op40/n30.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4299/"
   },
   {
     "id": "st-yamaguchi-3665",
     "name": "国民宿舎 大城",
     "prefecture": "山口県",
-    "address": "〒744-0001 山口県下松市笠戸島１４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒744-0001 山口県下松市笠戸島14−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.967895,
     "lng": 131.844749,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3665/",
-    "city": "下松市"
+    "city": "下松市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.oojou.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3665/"
   },
   {
     "id": "st-yamaguchi-3672",
     "name": "山口 湯田温泉 ホテル かめ福",
     "prefecture": "山口県",
-    "address": "〒753-0056 山口県山口市湯田温泉４丁目５−２",
-    "addressSource": "SaunaTime",
+    "address": "〒753-0056 山口県山口市湯田温泉4丁目5−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.164263,
     "lng": 131.455502,
     "trait": "wood",
@@ -18517,14 +20817,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3672/"
+    "sourceUrl": "https://saunatime.jp/saunas/3672/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kamefuku.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3672/"
   },
   {
     "id": "st-yamaguchi-3662",
     "name": "山村別館",
     "prefecture": "山口県",
-    "address": "〒759-4103 山口県長門市深川湯本５３３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒759-4103 山口県長門市深川湯本533−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.330919,
     "lng": 131.172953,
     "trait": "wood",
@@ -18535,26 +20839,32 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3662/"
+    "sourceUrl": "https://saunatime.jp/saunas/3662/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://y-bekkan.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3662/"
   },
   {
     "id": "st-yamaguchi-4621",
     "name": "周防阿弥陀寺",
     "prefecture": "山口県",
     "address": "〒747-0004 山口県防府市牟礼1869",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.077568,
     "lng": 131.614133,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4621/"
+    "sourceUrl": "https://saunatime.jp/saunas/4621/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-yamaguchi-4298",
     "name": "上関海峡温泉 鳩子の湯",
     "prefecture": "山口県",
     "address": "〒742-1403 山口県熊毛郡上関町室津924",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.832659,
     "lng": 132.117165,
     "trait": "onsen",
@@ -18568,14 +20878,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4298/",
-    "city": "熊毛郡上関町"
+    "city": "熊毛郡上関町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hatokonoyu.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4298/"
   },
   {
     "id": "st-yamaguchi-767",
     "name": "石船温泉憩の家",
     "prefecture": "山口県",
-    "address": "〒745-0302 山口県周南市鹿野上１６６７−４",
-    "addressSource": "SaunaTime",
+    "address": "〒745-0302 山口県周南市鹿野上1667−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.249526,
     "lng": 131.82906,
     "trait": "onsen",
@@ -18587,14 +20901,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/767/",
-    "city": "周南市"
+    "city": "周南市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.oidemase.or.jp/tourism-information/spots/13115",
+    "officialUrlSource": "https://saunatime.jp/saunas/767/"
   },
   {
     "id": "st-yamaguchi-765",
     "name": "道の駅 願成就温泉",
     "prefecture": "山口県",
-    "address": "〒759-1511 山口県山口市阿東徳佐上２−９５",
-    "addressSource": "SaunaTime",
+    "address": "〒759-1511 山口県山口市阿東徳佐上2−95",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.43444,
     "lng": 131.77048,
     "trait": "onsen",
@@ -18606,14 +20924,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/765/",
-    "city": "山口市"
+    "city": "山口市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.ganjojuonsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/765/"
   },
   {
     "id": "st-yamaguchi-3652",
     "name": "道の駅 蛍街道西ノ市 蛍の湯",
     "prefecture": "山口県",
     "address": "〒750-0441 山口県下関市豊田町大字中村876−4",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.19818,
     "lng": 131.076576,
     "trait": "onsen",
@@ -18624,14 +20946,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3652/"
+    "sourceUrl": "https://saunatime.jp/saunas/3652/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.toyota-hotaru.com/floormap/onsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3652/"
   },
   {
     "id": "st-yamaguchi-3673",
     "name": "日本海温泉・鹿島の湯",
     "prefecture": "山口県",
     "address": "〒759-3622 山口県阿武郡阿武町大字奈古2249",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.498265,
     "lng": 131.467727,
     "trait": "onsen",
@@ -18644,14 +20970,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3673/"
+    "sourceUrl": "https://saunatime.jp/saunas/3673/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.abucreation.com/facilities/onsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3673/"
   },
   {
     "id": "st-yamaguchi-3655",
     "name": "萩阿武川温泉 ふれあい会館",
     "prefecture": "山口県",
-    "address": "〒758-0141 山口県萩市川上４８９２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒758-0141 山口県萩市川上4892−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.359433,
     "lng": 131.480781,
     "trait": "onsen",
@@ -18663,14 +20993,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3655/",
-    "city": "萩市"
+    "city": "萩市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hagishi.com/search/detail.php?d=500016",
+    "officialUrlSource": "https://saunatime.jp/saunas/3655/"
   },
   {
     "id": "st-yamaguchi-4622",
     "name": "萩本陣 湯の丸",
     "prefecture": "山口県",
-    "address": "〒758-0011 山口県萩市大字椿東３８５−８",
-    "addressSource": "SaunaTime",
+    "address": "〒758-0011 山口県萩市大字椿東385−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.41606,
     "lng": 131.418797,
     "trait": "onsen",
@@ -18682,14 +21016,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4622/",
-    "city": "萩市"
+    "city": "萩市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hagihonjin.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4622/"
   },
   {
     "id": "st-yamaguchi-775",
     "name": "福久旅館",
     "prefecture": "山口県",
-    "address": "〒755-0026 山口県宇部市松山町５丁目４−１８",
-    "addressSource": "SaunaTime",
+    "address": "〒755-0026 山口県宇部市松山町5丁目4−18",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.934369,
     "lng": 131.261624,
     "trait": "urban",
@@ -18700,26 +21038,34 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/775/"
+    "sourceUrl": "https://saunatime.jp/saunas/775/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://fukuq.web.fc2.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/775/"
   },
   {
     "id": "st-yamaguchi-3656",
     "name": "竜崎温泉潮風の湯",
     "prefecture": "山口県",
     "address": "〒742-2805 山口県大島郡周防大島町東安下庄711",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.893224,
     "lng": 132.290125,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3656/"
+    "sourceUrl": "https://saunatime.jp/saunas/3656/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.town.suo-oshima.lg.jp/syoukoukankou/ryugasakionsen.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3656/"
   },
   {
     "id": "st-tokushima-4383",
     "name": "NEXEL ネクセル リラクゼーション&スパ",
     "prefecture": "徳島県",
     "address": "〒770-0923 徳島県徳島市大道1-8",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.066884,
     "lng": 134.547581,
     "trait": "onsen",
@@ -18730,7 +21076,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4383/"
+    "sourceUrl": "https://saunatime.jp/saunas/4383/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3685",
@@ -18745,19 +21093,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3685/",
-    "city": "板野郡板野町"
+    "city": "板野郡板野町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3696",
     "name": "あらたえの湯",
     "prefecture": "徳島県",
-    "address": "〒770-0004 徳島県徳島市南田宮１丁目２−２−８",
-    "addressSource": "SaunaTime",
+    "address": "〒770-0004 徳島県徳島市南田宮1丁目2−2−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.085476,
     "lng": 134.54694,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3696/"
+    "sourceUrl": "https://saunatime.jp/saunas/3696/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://aratae.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3696/"
   },
   {
     "id": "st-tokushima-3703",
@@ -18773,7 +21126,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3703/",
     "city": "三好市",
-    "image": "/assets/img/noimage.png"
+    "image": "/assets/img/noimage.png",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3700",
@@ -18781,19 +21135,22 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3700/"
+    "sourceUrl": "https://saunatime.jp/saunas/3700/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-712",
     "name": "サウナファミリー",
     "prefecture": "徳島県",
-    "address": "〒770-0913 徳島県徳島市南新町２丁目３４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒770-0913 徳島県徳島市南新町2丁目34−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.069337,
     "lng": 134.547558,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/712/"
+    "sourceUrl": "https://saunatime.jp/saunas/712/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3686",
@@ -18802,7 +21159,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3686/",
-    "city": "三好市"
+    "city": "三好市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3701",
@@ -18817,7 +21175,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3701/",
-    "city": "美馬市"
+    "city": "美馬市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3691",
@@ -18832,7 +21191,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3691/",
-    "city": "吉野川市"
+    "city": "吉野川市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3702",
@@ -18846,7 +21206,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3702/"
+    "sourceUrl": "https://saunatime.jp/saunas/3702/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3693",
@@ -18854,7 +21215,8 @@ export const SEED_FACILITIES = [
     "prefecture": "徳島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3693/"
+    "sourceUrl": "https://saunatime.jp/saunas/3693/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3679",
@@ -18868,7 +21230,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3679/"
+    "sourceUrl": "https://saunatime.jp/saunas/3679/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3689",
@@ -18883,7 +21246,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3689/",
-    "city": "吉野川市"
+    "city": "吉野川市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3690",
@@ -18898,7 +21262,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3690/",
-    "city": "板野郡上板町"
+    "city": "板野郡上板町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3694",
@@ -18912,7 +21277,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3694/"
+    "sourceUrl": "https://saunatime.jp/saunas/3694/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3695",
@@ -18929,7 +21295,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3695/",
-    "city": "美馬郡つるぎ町"
+    "city": "美馬郡つるぎ町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3697",
@@ -18944,19 +21311,22 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3697/",
-    "city": "三好市"
+    "city": "三好市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-4549",
     "name": "昭和湯(徳島)",
     "prefecture": "徳島県",
-    "address": "〒770-8003 徳島県徳島市津田本町３丁目３−２３",
-    "addressSource": "SaunaTime",
+    "address": "〒770-8003 徳島県徳島市津田本町3丁目3−23",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.049586,
     "lng": 134.578798,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4549/"
+    "sourceUrl": "https://saunatime.jp/saunas/4549/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-711",
@@ -18971,7 +21341,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/711/",
-    "city": "徳島市"
+    "city": "徳島市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3681",
@@ -18985,19 +21356,22 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3681/"
+    "sourceUrl": "https://saunatime.jp/saunas/3681/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-4550",
     "name": "大和湯(徳島)",
     "prefecture": "徳島県",
-    "address": "〒770-8002 徳島県徳島市津田町２丁目３",
-    "addressSource": "SaunaTime",
+    "address": "〒770-8002 徳島県徳島市津田町2丁目3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.050115,
     "lng": 134.579929,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4550/"
+    "sourceUrl": "https://saunatime.jp/saunas/4550/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3682",
@@ -19011,20 +21385,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3682/"
+    "sourceUrl": "https://saunatime.jp/saunas/3682/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3680",
     "name": "天然温泉えびすの湯",
     "prefecture": "徳島県",
-    "address": "〒770-8011 徳島県徳島市論田町新開新開６６−９６",
-    "addressSource": "SaunaTime",
+    "address": "〒770-8011 徳島県徳島市論田町新開新開66−96",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.036232,
     "lng": 134.577844,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3680/",
-    "city": "徳島市"
+    "city": "徳島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.ebisunoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3680/"
   },
   {
     "id": "st-tokushima-3688",
@@ -19039,7 +21418,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3688/",
-    "city": "阿波市"
+    "city": "阿波市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3698",
@@ -19054,7 +21434,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3698/",
-    "city": "阿波市"
+    "city": "阿波市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3687",
@@ -19068,7 +21449,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3687/"
+    "sourceUrl": "https://saunatime.jp/saunas/3687/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3684",
@@ -19083,7 +21465,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3684/",
-    "city": "徳島市"
+    "city": "徳島市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-3683",
@@ -19098,27 +21481,32 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3683/",
-    "city": "三好郡東みよし町"
+    "city": "三好郡東みよし町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-tokushima-4564",
     "name": "鳴門天然温泉 あらたえの湯",
     "prefecture": "徳島県",
-    "address": "〒772-0011 徳島県鳴門市撫養町大桑島北ノ浜８−２",
-    "addressSource": "SaunaTime",
+    "address": "〒772-0011 徳島県鳴門市撫養町大桑島北ノ浜8−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.191807,
     "lng": 134.608012,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4564/",
-    "city": "鳴門市"
+    "city": "鳴門市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://aratae.jp/naruto/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4564/"
   },
   {
     "id": "st-tokushima-3699",
     "name": "薬王寺温泉 湯元 醫王の湯",
     "prefecture": "徳島県",
-    "address": "〒779-2305 徳島県海部郡美波町奥河内寺前２４８",
-    "addressSource": "SaunaTime",
+    "address": "〒779-2305 徳島県海部郡美波町奥河内寺前248",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.731465,
     "lng": 134.528478,
     "trait": "onsen",
@@ -19130,7 +21518,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3699/",
-    "city": "海部郡美波町"
+    "city": "海部郡美波町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-811",
@@ -19145,7 +21535,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/811/",
-    "city": "高松市"
+    "city": "高松市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3725",
@@ -19159,7 +21550,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3725/"
+    "sourceUrl": "https://saunatime.jp/saunas/3725/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3710",
@@ -19173,19 +21565,24 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3710/"
+    "sourceUrl": "https://saunatime.jp/saunas/3710/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3715",
     "name": "カメリア温泉",
     "prefecture": "香川県",
-    "address": "〒769-2321 香川県さぬき市寒川町石田東甲２９８８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒769-2321 香川県さぬき市寒川町石田東甲2988−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.234257,
     "lng": 134.218557,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3715/"
+    "sourceUrl": "https://saunatime.jp/saunas/3715/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://spa-kameria.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3715/"
   },
   {
     "id": "st-kagawa-714",
@@ -19193,14 +21590,15 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/714/"
+    "sourceUrl": "https://saunatime.jp/saunas/714/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-736",
     "name": "ゴールデンタイム高松",
     "prefecture": "香川県",
-    "address": "〒760-0052 香川県高松市瓦町２丁目１−１番地７",
-    "addressSource": "SaunaTime",
+    "address": "〒760-0052 香川県高松市瓦町2丁目1−1番地7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.34081,
     "lng": 134.050227,
     "trait": "award",
@@ -19209,14 +21607,18 @@ export const SEED_FACILITIES = [
     "city": "高松市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://goldentime-takamatsu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/736/"
   },
   {
     "id": "st-kagawa-737",
     "name": "サウナ＆カプセル・ファーストイン高松",
     "prefecture": "香川県",
-    "address": "〒760-0035 香川県高松市鶴屋町２−３",
-    "addressSource": "SaunaTime",
+    "address": "〒760-0035 香川県高松市鶴屋町2−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.347784,
     "lng": 134.055572,
     "trait": "urban",
@@ -19225,7 +21627,11 @@ export const SEED_FACILITIES = [
     "city": "高松市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://first-inn.flips.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/737/"
   },
   {
     "id": "st-kagawa-3712",
@@ -19239,7 +21645,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3712/"
+    "sourceUrl": "https://saunatime.jp/saunas/3712/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3576",
@@ -19254,7 +21661,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3576/",
-    "city": "三豊市"
+    "city": "三豊市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3707",
@@ -19269,20 +21677,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3707/",
-    "city": "三豊市"
+    "city": "三豊市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3727",
     "name": "トレスタ白山",
     "prefecture": "香川県",
-    "address": "〒761-0704 香川県木田郡三木町下高岡９７２−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒761-0704 香川県木田郡三木町下高岡972−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.26813,
     "lng": 134.148593,
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3727/",
-    "city": "木田郡三木町"
+    "city": "木田郡三木町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.tresta.jp/guide/spa.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3727/"
   },
   {
     "id": "st-kagawa-3729",
@@ -19297,7 +21710,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3729/",
-    "city": "高松市"
+    "city": "高松市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3573",
@@ -19311,19 +21725,24 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3573/"
+    "sourceUrl": "https://saunatime.jp/saunas/3573/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-127",
     "name": "やしま第一健康ランド",
     "prefecture": "香川県",
     "address": "香川県高松市屋島西町2274番地5",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.362,
     "lng": 134.090889,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/127/"
+    "sourceUrl": "https://saunatime.jp/saunas/127/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.8411126.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/127/"
   },
   {
     "id": "st-kagawa-3720",
@@ -19337,7 +21756,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3720/"
+    "sourceUrl": "https://saunatime.jp/saunas/3720/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-735",
@@ -19351,7 +21771,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/735/"
+    "sourceUrl": "https://saunatime.jp/saunas/735/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3566",
@@ -19366,7 +21787,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3566/",
-    "city": "丸亀市"
+    "city": "丸亀市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-740",
@@ -19375,7 +21797,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/740/",
-    "city": "観音寺市"
+    "city": "観音寺市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3722",
@@ -19390,7 +21813,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3722/",
-    "city": "高松市"
+    "city": "高松市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3714",
@@ -19404,32 +21828,41 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3714/"
+    "sourceUrl": "https://saunatime.jp/saunas/3714/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-739",
     "name": "瀬戸大橋四国健康村",
     "prefecture": "香川県",
-    "address": "〒769-0201 香川県綾歌郡宇多津町浜一番丁６−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒769-0201 香川県綾歌郡宇多津町浜一番丁6−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.313753,
     "lng": 133.811309,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/739/",
-    "city": "綾歌郡宇多津町"
+    "city": "綾歌郡宇多津町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kenkou-mura.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/739/"
   },
   {
     "id": "st-kagawa-44",
     "name": "塚原から風呂",
     "prefecture": "香川県",
-    "address": "香川県さぬき市昭和1050番地４",
-    "addressSource": "SaunaTime",
+    "address": "香川県さぬき市昭和1050番地4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.247843,
     "lng": 134.166205,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/44/"
+    "sourceUrl": "https://saunatime.jp/saunas/44/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://karafuro.web.fc2.com/top.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/44/"
   },
   {
     "id": "st-kagawa-3713",
@@ -19443,7 +21876,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3713/"
+    "sourceUrl": "https://saunatime.jp/saunas/3713/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3721",
@@ -19457,7 +21891,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3721/"
+    "sourceUrl": "https://saunatime.jp/saunas/3721/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3708",
@@ -19472,7 +21907,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3708/",
-    "city": "高松市"
+    "city": "高松市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3716",
@@ -19487,7 +21923,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3716/",
-    "city": "仲多度郡琴平町"
+    "city": "仲多度郡琴平町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3726",
@@ -19501,7 +21938,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3726/"
+    "sourceUrl": "https://saunatime.jp/saunas/3726/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-713",
@@ -19515,7 +21953,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/713/"
+    "sourceUrl": "https://saunatime.jp/saunas/713/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3728",
@@ -19523,7 +21962,8 @@ export const SEED_FACILITIES = [
     "prefecture": "香川県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3728/"
+    "sourceUrl": "https://saunatime.jp/saunas/3728/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagawa-3574",
@@ -19540,32 +21980,37 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3574/",
-    "city": "東かがわ市"
+    "city": "東かがわ市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-4404",
     "name": "おれんじ7(オレンジフェリー)",
     "prefecture": "愛媛県",
-    "address": "愛媛県西条市今在家1500-2",
-    "addressSource": "SaunaTime",
+    "address": "〒1500-2 愛媛県西条市今在家1500-2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.931572,
     "lng": 133.119164,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4404/"
+    "sourceUrl": "https://saunatime.jp/saunas/4404/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3769",
     "name": "かみとくの湯",
     "prefecture": "愛媛県",
     "address": "〒799-1511 愛媛県今治市上徳甲711−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.039755,
     "lng": 133.012069,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3769/",
-    "city": "今治市"
+    "city": "今治市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3785",
@@ -19573,27 +22018,30 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3785/"
+    "sourceUrl": "https://saunatime.jp/saunas/3785/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3731",
     "name": "しまなみ温泉 喜助の湯",
     "prefecture": "愛媛県",
-    "address": "〒794-0055 愛媛県今治市中日吉町１丁目２−３０",
-    "addressSource": "SaunaTime",
+    "address": "〒794-0055 愛媛県今治市中日吉町1丁目2−30",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.062923,
     "lng": 132.992309,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3731/",
-    "city": "今治市"
+    "city": "今治市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3744",
     "name": "たかのこの湯",
     "prefecture": "愛媛県",
     "address": "〒790-0925 愛媛県松山市鷹子町736番地4",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.814128,
     "lng": 132.808591,
     "trait": "onsen",
@@ -19605,7 +22053,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3744/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://takanokono.jp/hotspring/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3744/"
   },
   {
     "id": "st-ehime-3765",
@@ -19620,40 +22072,45 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3765/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-4253",
     "name": "マーレ・グラッシア大三島",
     "prefecture": "愛媛県",
-    "address": "〒794-1304 愛媛県今治市大三島町宮浦５９０２",
-    "addressSource": "SaunaTime",
+    "address": "〒794-1304 愛媛県今治市大三島町宮浦5902",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 34.241572,
     "lng": 132.993868,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4253/",
-    "city": "今治市"
+    "city": "今治市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3732",
     "name": "伊予の湯治場 喜助の湯",
     "prefecture": "愛媛県",
-    "address": "〒790-0066 愛媛県松山市宮田町４",
-    "addressSource": "SaunaTime",
+    "address": "〒790-0066 愛媛県松山市宮田町4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.841124,
     "lng": 132.753043,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3732/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-4261",
     "name": "宇和島第一ホテル",
     "prefecture": "愛媛県",
-    "address": "〒798-0040 愛媛県宇和島市中央町１丁目３−９",
-    "addressSource": "SaunaTime",
+    "address": "〒798-0040 愛媛県宇和島市中央町1丁目3−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.220755,
     "lng": 132.568712,
     "trait": "award",
@@ -19664,7 +22121,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4261/"
+    "sourceUrl": "https://saunatime.jp/saunas/4261/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3749",
@@ -19678,7 +22137,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3749/"
+    "sourceUrl": "https://saunatime.jp/saunas/3749/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3750",
@@ -19693,7 +22153,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3750/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3774",
@@ -19701,20 +22162,25 @@ export const SEED_FACILITIES = [
     "prefecture": "愛媛県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3774/"
+    "sourceUrl": "https://saunatime.jp/saunas/3774/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3751",
     "name": "権現温泉",
     "prefecture": "愛媛県",
-    "address": "〒799-2653 愛媛県松山市権現町６７０",
-    "addressSource": "SaunaTime",
+    "address": "〒799-2653 愛媛県松山市権現町670",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.896801,
     "lng": 132.768283,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3751/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.gonspa.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3751/"
   },
   {
     "id": "st-ehime-3755",
@@ -19729,7 +22195,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3755/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3810",
@@ -19744,7 +22211,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3810/",
-    "city": "新居浜市"
+    "city": "新居浜市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-4252",
@@ -19759,7 +22227,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4252/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3753",
@@ -19774,7 +22243,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3753/",
-    "city": "大洲市"
+    "city": "大洲市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3746",
@@ -19789,14 +22259,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3746/",
-    "city": "新居浜市"
+    "city": "新居浜市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-4294",
     "name": "森の国ぽっぽ温泉",
     "prefecture": "愛媛県",
-    "address": "〒798-2101 愛媛県北宇和郡松野町松丸１６６１",
-    "addressSource": "SaunaTime",
+    "address": "〒798-2101 愛媛県北宇和郡松野町松丸1661",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.228361,
     "lng": 132.70856,
     "trait": "wood",
@@ -19810,7 +22281,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4294/",
-    "city": "北宇和郡松野町"
+    "city": "北宇和郡松野町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://poppoonsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4294/"
   },
   {
     "id": "st-ehime-3808",
@@ -19825,7 +22300,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3808/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3737",
@@ -19839,14 +22315,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3737/"
+    "sourceUrl": "https://saunatime.jp/saunas/3737/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3740",
     "name": "潮の香りの天然温泉 シーパMAKOTO",
     "prefecture": "愛媛県",
-    "address": "〒799-2431 愛媛県松山市北条１１８０",
-    "addressSource": "SaunaTime",
+    "address": "〒799-2431 愛媛県松山市北条1180",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.827449,
     "lng": 132.800927,
     "trait": "onsen",
@@ -19857,14 +22334,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3740/"
+    "sourceUrl": "https://saunatime.jp/saunas/3740/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.seapa.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3740/"
   },
   {
     "id": "st-ehime-3788",
     "name": "天山トロン温泉",
     "prefecture": "愛媛県",
-    "address": "〒790-0921 愛媛県松山市福音寺町７５０",
-    "addressSource": "SaunaTime",
+    "address": "〒790-0921 愛媛県松山市福音寺町750",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.823832,
     "lng": 132.781616,
     "trait": "wood",
@@ -19878,20 +22359,28 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3788/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.fuji-ko.jp/toron/index.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/3788/"
   },
   {
     "id": "st-ehime-3745",
     "name": "東道後の そらともり",
     "prefecture": "愛媛県",
-    "address": "〒790-0924 愛媛県松山市南久米町３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒790-0924 愛媛県松山市南久米町3−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.81858,
     "lng": 132.804924,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3745/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.soratomori.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3745/"
   },
   {
     "id": "st-ehime-3784",
@@ -19905,7 +22394,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3784/"
+    "sourceUrl": "https://saunatime.jp/saunas/3784/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3771",
@@ -19920,27 +22410,32 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3771/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-ehime-3736",
     "name": "鈍川せせらぎ交流館",
     "prefecture": "愛媛県",
     "address": "〒794-0121 愛媛県今治市玉川町鈍川甲218−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.984689,
     "lng": 132.940422,
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3736/",
-    "city": "今治市"
+    "city": "今治市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://seseragi-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3736/"
   },
   {
     "id": "st-ehime-3730",
     "name": "南道後温泉ていれぎの湯",
     "prefecture": "愛媛県",
-    "address": "〒791-1121 愛媛県松山市中野町甲 ８５３ 番地",
-    "addressSource": "SaunaTime",
+    "address": "〒791-1121 愛媛県松山市中野町甲 853 番地",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.780294,
     "lng": 132.818581,
     "trait": "onsen",
@@ -19952,14 +22447,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3730/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://teiregi.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3730/"
   },
   {
     "id": "st-ehime-3739",
     "name": "媛彦温泉",
     "prefecture": "愛媛県",
-    "address": "〒790-0913 愛媛県松山市畑寺３丁目４−５",
-    "addressSource": "SaunaTime",
+    "address": "〒790-0913 愛媛県松山市畑寺3丁目4−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.827449,
     "lng": 132.800927,
     "trait": "onsen",
@@ -19971,7 +22470,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3739/",
-    "city": "松山市"
+    "city": "松山市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://himehiko.jp/main/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3739/"
   },
   {
     "id": "st-ehime-3734",
@@ -19986,7 +22489,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3734/",
-    "city": "西条市"
+    "city": "西条市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3791",
@@ -20001,7 +22505,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3791/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4256",
@@ -20016,7 +22521,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4256/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-741",
@@ -20024,14 +22530,15 @@ export const SEED_FACILITIES = [
     "prefecture": "高知県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/741/"
+    "sourceUrl": "https://saunatime.jp/saunas/741/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-29",
     "name": "スパリゾート ルーマプラザ",
     "prefecture": "高知県",
-    "address": "高知県高知市帯屋町１丁目１３−１",
-    "addressSource": "SaunaTime",
+    "address": "高知県高知市帯屋町1丁目13−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.56034,
     "lng": 133.5392,
     "trait": "onsen",
@@ -20042,7 +22549,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/29/"
+    "sourceUrl": "https://saunatime.jp/saunas/29/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.spa-rumor.co.jp/pricelist.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/29/"
   },
   {
     "id": "st-kochi-3806",
@@ -20057,7 +22568,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3806/",
-    "city": "安芸郡田野町"
+    "city": "安芸郡田野町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3803",
@@ -20071,7 +22583,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3803/"
+    "sourceUrl": "https://saunatime.jp/saunas/3803/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3792",
@@ -20088,7 +22601,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3792/",
-    "city": "高岡郡四万十町"
+    "city": "高岡郡四万十町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-742",
@@ -20102,7 +22616,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/742/"
+    "sourceUrl": "https://saunatime.jp/saunas/742/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3789",
@@ -20117,7 +22632,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3789/",
-    "city": "高岡郡中土佐町"
+    "city": "高岡郡中土佐町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3804",
@@ -20132,14 +22648,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3804/",
-    "city": "吾川郡いの町"
+    "city": "吾川郡いの町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-745",
     "name": "高砂湯(高知県)",
     "prefecture": "高知県",
-    "address": "〒780-0062 高知県高知市新本町２丁目７−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒780-0062 高知県高知市新本町2丁目7−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.56935,
     "lng": 133.548349,
     "trait": "onsen",
@@ -20150,7 +22667,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/745/"
+    "sourceUrl": "https://saunatime.jp/saunas/745/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4255",
@@ -20165,20 +22684,23 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4255/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3567",
     "name": "高知ぽかぽか温泉",
     "prefecture": "高知県",
-    "address": "〒780-0081 高知県高知市北川添８−２０",
-    "addressSource": "SaunaTime",
+    "address": "〒780-0081 高知県高知市北川添8−20",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.574772,
     "lng": 133.558817,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3567/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3799",
@@ -20193,7 +22715,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3799/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3798",
@@ -20207,32 +22730,39 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3798/"
+    "sourceUrl": "https://saunatime.jp/saunas/3798/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3802",
     "name": "四万十温泉平和な湯",
     "prefecture": "高知県",
-    "address": "〒787-0010 高知県四万十市古津賀１丁目５３",
-    "addressSource": "SaunaTime",
+    "address": "〒787-0010 高知県四万十市古津賀1丁目53",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.984332,
     "lng": 132.953631,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3802/"
+    "sourceUrl": "https://saunatime.jp/saunas/3802/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4552",
     "name": "宿毛リゾート 椰子の湯",
     "prefecture": "高知県",
-    "address": "〒788-0014 高知県宿毛市大島１７−２７",
-    "addressSource": "SaunaTime",
+    "address": "〒788-0014 高知県宿毛市大島17−27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.917238,
     "lng": 132.689918,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4552/",
-    "city": "宿毛市"
+    "city": "宿毛市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yashinoyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4552/"
   },
   {
     "id": "st-kochi-744",
@@ -20246,20 +22776,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/744/"
+    "sourceUrl": "https://saunatime.jp/saunas/744/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3801",
     "name": "城西館",
     "prefecture": "高知県",
-    "address": "〒780-0901 高知県高知市上町２丁目５−３４",
-    "addressSource": "SaunaTime",
+    "address": "〒780-0901 高知県高知市上町2丁目5−34",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.557053,
     "lng": 133.524351,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3801/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.jyoseikan.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3801/"
   },
   {
     "id": "st-kochi-4258",
@@ -20274,7 +22809,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4258/",
-    "city": "四万十市 宿泊者限定"
+    "city": "四万十市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4257",
@@ -20289,7 +22825,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4257/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3794",
@@ -20304,7 +22841,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3794/",
-    "city": "南国市"
+    "city": "南国市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3793",
@@ -20319,19 +22857,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3793/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4659",
     "name": "天然温泉 紺碧の湯 ドーミーイン高知",
     "prefecture": "高知県",
-    "address": "〒780-0841 高知県高知市帯屋町１丁目９−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒780-0841 高知県高知市帯屋町1丁目9−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.561928,
     "lng": 133.539384,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4659/"
+    "sourceUrl": "https://saunatime.jp/saunas/4659/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/kochi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4659/"
   },
   {
     "id": "st-kochi-3568",
@@ -20346,7 +22889,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3568/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3459",
@@ -20360,20 +22904,23 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3459/"
+    "sourceUrl": "https://saunatime.jp/saunas/3459/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-4371",
     "name": "土佐御苑",
     "prefecture": "高知県",
     "address": "〒780-0052 高知県高知市大川筋1−4−8",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.564667,
     "lng": 133.54068,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4371/",
-    "city": "高知市"
+    "city": "高知市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-747",
@@ -20388,19 +22935,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/747/",
-    "city": "幡多郡黒潮町"
+    "city": "幡多郡黒潮町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kochi-3795",
     "name": "道の駅 木の香温泉",
     "prefecture": "高知県",
     "address": "〒781-2615 高知県吾川郡いの町桑瀬225−16",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.779844,
     "lng": 133.307328,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3795/"
+    "sourceUrl": "https://saunatime.jp/saunas/3795/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kochi-konoka.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3795/"
   },
   {
     "id": "st-kochi-3797",
@@ -20415,7 +22967,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3797/",
-    "city": "香美市 宿泊者限定"
+    "city": "香美市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "sc2025-sakurado",
@@ -20435,70 +22988,86 @@ export const SEED_FACILITIES = [
     "id": "st-fukuoka-4778",
     "name": "SHIAGARU SAUNA",
     "prefecture": "福岡県",
-    "address": "〒810-0001 福岡県福岡市中央区天神３丁目２−２２ 河村天神荘ビル 1F",
-    "addressSource": "SaunaTime",
+    "address": "〒810-0001 福岡県福岡市中央区天神3丁目2−22 河村天神荘ビル 1F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.593639,
     "lng": 130.397152,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4778/"
+    "sourceUrl": "https://saunatime.jp/saunas/4778/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://shiagaru-sauna.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4778/"
   },
   {
     "id": "st-fukuoka-4773",
     "name": "The Riverside Sauna",
     "prefecture": "福岡県",
-    "address": "〒811-1132 福岡県福岡市早良区石釜１４３８−２",
-    "addressSource": "SaunaTime",
+    "address": "〒811-1132 福岡県福岡市早良区石釜1438−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.490131,
     "lng": 130.305836,
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4773/",
-    "city": "福岡市 事前予約制"
+    "city": "福岡市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-793",
     "name": "アビネル福岡",
     "prefecture": "福岡県",
-    "address": "〒810-0801 福岡県福岡市博多区中洲３丁目７−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒810-0801 福岡県福岡市博多区中洲3丁目7−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.593196,
     "lng": 130.406118,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/793/"
+    "sourceUrl": "https://saunatime.jp/saunas/793/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-791",
     "name": "ウェルビー福岡",
     "prefecture": "福岡県",
     "address": "〒812-0038 福岡県福岡市博多区祇園町8−12 ロータリー大和ビル 2F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.591421,
     "lng": 130.410954,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/791/",
-    "city": "福岡市"
+    "city": "福岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.wellbe.co.jp/fukuoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/791/"
   },
   {
     "id": "st-fukuoka-4487",
     "name": "かんぽの宿 柳川",
     "prefecture": "福岡県",
-    "address": "〒832-0057 福岡県柳川市弥四郎町１０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒832-0057 福岡県柳川市弥四郎町10−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4487/"
+    "sourceUrl": "https://saunatime.jp/saunas/4487/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.kanponoyado.japanpost.jp/yanagawa/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4487/"
   },
   {
     "id": "st-fukuoka-792",
     "name": "グリーンランド中洲店",
     "prefecture": "福岡県",
-    "address": "〒810-0801 福岡県福岡市博多区中洲３丁目３−６−１７",
-    "addressSource": "SaunaTime",
+    "address": "〒810-0801 福岡県福岡市博多区中洲3丁目3−6−17",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.59346,
     "lng": 130.407043,
     "trait": "urban",
@@ -20507,27 +23076,33 @@ export const SEED_FACILITIES = [
     "city": "福岡市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-4787",
     "name": "サウナヨーガン福岡天神",
     "prefecture": "福岡県",
     "address": "福岡県福岡市中央区舞鶴1-5-6 平和台ホテル天神9F",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.594047,
     "lng": 130.392685,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4787/",
-    "city": "福岡市"
+    "city": "福岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yogan-sauna-fukuoka-tenjin.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4787/"
   },
   {
     "id": "st-fukuoka-785",
     "name": "サウナ三ケ森",
     "prefecture": "福岡県",
-    "address": "〒807-0846 福岡県北九州市八幡西区里中１丁目７−１９",
-    "addressSource": "SaunaTime",
+    "address": "〒807-0846 福岡県北九州市八幡西区里中1丁目7−19",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.837719,
     "lng": 130.735251,
     "trait": "wood",
@@ -20538,14 +23113,16 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/785/"
+    "sourceUrl": "https://saunatime.jp/saunas/785/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-4390",
     "name": "ホテルキャビナス福岡",
     "prefecture": "福岡県",
-    "address": "〒812-0011福岡県福岡市博多区博多駅前２丁目１８−１",
-    "addressSource": "SaunaTime",
+    "address": "〒812-0011福岡県福岡市博多区博多駅前2丁目18−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.591197,
     "lng": 130.417706,
     "trait": "award",
@@ -20557,14 +23134,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4390/",
-    "city": "福岡市"
+    "city": "福岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://cabinas.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4390/"
   },
   {
     "id": "st-fukuoka-4399",
     "name": "ホテルニューガイアイン中洲東",
     "prefecture": "福岡県",
     "address": "〒812-0038福岡県福岡市博多区祇園町6-26",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.591105,
     "lng": 130.412342,
     "trait": "award",
@@ -20575,14 +23156,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4399/"
+    "sourceUrl": "https://saunatime.jp/saunas/4399/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hotelnewgaea.com/nakasuhigashi/bath/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4399/"
   },
   {
     "id": "st-fukuoka-797",
     "name": "まむしの湯",
     "prefecture": "福岡県",
-    "address": "〒819-1641 福岡県糸島市二丈吉井２３８０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒819-1641 福岡県糸島市二丈吉井2380−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.489478,
     "lng": 130.074794,
     "trait": "onsen",
@@ -20594,14 +23179,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/797/",
-    "city": "糸島市"
+    "city": "糸島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.mamushi-spa.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/797/"
   },
   {
     "id": "st-fukuoka-4402",
     "name": "みなと温泉 波葉の湯",
     "prefecture": "福岡県",
     "address": "〒812-0021福岡県福岡市博多区築港本町13-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.603711,
     "lng": 130.397982,
     "trait": "onsen",
@@ -20613,14 +23202,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4402/",
-    "city": "福岡市"
+    "city": "福岡市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-3841",
     "name": "もじ楽の湯",
     "prefecture": "福岡県",
-    "address": "〒800-0063 福岡県北九州市門司区大里本町３丁目13番26号",
-    "addressSource": "SaunaTime",
+    "address": "〒800-0063 福岡県北九州市門司区大里本町3丁目13番26号",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.902621,
     "lng": 130.926602,
     "trait": "onsen",
@@ -20631,86 +23222,114 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3841/"
+    "sourceUrl": "https://saunatime.jp/saunas/3841/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.rakunoyu.com/moji/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3841/"
   },
   {
     "id": "st-fukuoka-4925",
     "name": "ルネサンスイオンモール福岡24",
     "prefecture": "福岡県",
     "address": "〒811-2303 福岡県糟屋郡粕屋町酒殿 老ノ木 192-1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.596804,
     "lng": 130.480888,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4925/"
+    "sourceUrl": "https://saunatime.jp/saunas/4925/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/aeonmall-fukuoka/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4925/"
   },
   {
     "id": "st-fukuoka-4924",
     "name": "ルネサンス春日24",
     "prefecture": "福岡県",
-    "address": "〒816-0814 福岡県春日市春日７丁目６０",
-    "addressSource": "SaunaTime",
+    "address": "〒816-0814 福岡県春日市春日7丁目60",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.521316,
     "lng": 130.467799,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4924/"
+    "sourceUrl": "https://saunatime.jp/saunas/4924/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kasuga/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4924/"
   },
   {
     "id": "st-fukuoka-4922",
     "name": "ルネサンス小倉",
     "prefecture": "福岡県",
-    "address": "〒802-0001 福岡県北九州市小倉北区浅野１丁目１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒802-0001 福岡県北九州市小倉北区浅野1丁目1−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.887474,
     "lng": 130.883215,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4922/"
+    "sourceUrl": "https://saunatime.jp/saunas/4922/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kokura/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4922/"
   },
   {
     "id": "st-fukuoka-4921",
     "name": "ルネサンス福岡香椎24",
     "prefecture": "福岡県",
-    "address": "〒813-0005 福岡県福岡市東区御島崎２丁目６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒813-0005 福岡県福岡市東区御島崎2丁目6−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.661808,
     "lng": 130.438508,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4921/"
+    "sourceUrl": "https://saunatime.jp/saunas/4921/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukuoka-kashii/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4921/"
   },
   {
     "id": "st-fukuoka-4923",
     "name": "ルネサンス福岡西新24",
     "prefecture": "福岡県",
-    "address": "〒814-0005 福岡県福岡市早良区祖原１丁目１−１ 西新テングッドシテイ 2・3F 西新",
-    "addressSource": "SaunaTime",
+    "address": "〒814-0005 福岡県福岡市早良区祖原1丁目1−1 西新テングッドシテイ 2・3F 西新",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.581833,
     "lng": 130.358347,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4923/"
+    "sourceUrl": "https://saunatime.jp/saunas/4923/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukuoka-nishijin/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4923/"
   },
   {
     "id": "st-fukuoka-4926",
     "name": "ルネサンス福岡大橋24",
     "prefecture": "福岡県",
-    "address": "〒815-0033 福岡県福岡市南区大橋１丁目６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒815-0033 福岡県福岡市南区大橋1丁目6−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.55976,
     "lng": 130.425392,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4926/"
+    "sourceUrl": "https://saunatime.jp/saunas/4926/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/fukuoka-ohashi/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4926/"
   },
   {
     "id": "st-fukuoka-4493",
     "name": "英彦山温泉 しゃくなげ荘",
     "prefecture": "福岡県",
-    "address": "〒824-0721 福岡県田川郡添田町英彦山１８８１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒824-0721 福岡県田川郡添田町英彦山1881−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "wood",
@@ -20723,14 +23342,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4493/"
+    "sourceUrl": "https://saunatime.jp/saunas/4493/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hikosan-onsen.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4493/"
   },
   {
     "id": "st-fukuoka-783",
     "name": "華の湯 片野店",
     "prefecture": "福岡県",
-    "address": "〒802-0064 福岡県北九州市小倉北区片野４丁目１−８",
-    "addressSource": "SaunaTime",
+    "address": "〒802-0064 福岡県北九州市小倉北区片野4丁目1−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.8645,
     "lng": 130.881002,
     "trait": "onsen",
@@ -20741,14 +23364,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/783/"
+    "sourceUrl": "https://saunatime.jp/saunas/783/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hananoyu-katano.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/783/"
   },
   {
     "id": "st-fukuoka-3818",
     "name": "華の湯ＨＩＢＵＲＡＮ",
     "prefecture": "福岡県",
-    "address": "〒802-0077 福岡県北九州市小倉北区馬借１丁目９−８",
-    "addressSource": "SaunaTime",
+    "address": "〒802-0077 福岡県北九州市小倉北区馬借1丁目9−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.880546,
     "lng": 130.877408,
     "trait": "onsen",
@@ -20759,14 +23386,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3818/"
+    "sourceUrl": "https://saunatime.jp/saunas/3818/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hananoyu-hiburan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3818/"
   },
   {
     "id": "st-fukuoka-3838",
     "name": "水の郷柳川温泉はえんかぜ",
     "prefecture": "福岡県",
-    "address": "〒832-0058 福岡県柳川市上宮永町６−３",
-    "addressSource": "SaunaTime",
+    "address": "〒832-0058 福岡県柳川市上宮永町6−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.154237,
     "lng": 130.400604,
     "trait": "onsen",
@@ -20777,14 +23408,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3838/"
+    "sourceUrl": "https://saunatime.jp/saunas/3838/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.yanagawa.fukuoka.jp/kanko/onsen/onsen/haenkaze.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3838/"
   },
   {
     "id": "st-fukuoka-4490",
     "name": "赤村ふるさとセンター 源じいの森温泉",
     "prefecture": "福岡県",
-    "address": "〒824-0431 福岡県田川郡赤村赤５２５１−３",
-    "addressSource": "SaunaTime",
+    "address": "〒824-0431 福岡県田川郡赤村赤5251−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "wood",
@@ -20798,39 +23433,49 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4490/",
-    "city": "田川郡赤村"
+    "city": "田川郡赤村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.genjii.com/spa/spa_1.htm",
+    "officialUrlSource": "https://saunatime.jp/saunas/4490/"
   },
   {
     "id": "st-fukuoka-4468",
     "name": "鍛冶町サウナ",
     "prefecture": "福岡県",
-    "address": "〒802-0004 福岡県北九州市小倉北区鍛冶町１丁目６ 鍛冶町１丁目６−１７",
-    "addressSource": "SaunaTime",
+    "address": "〒802-0004 福岡県北九州市小倉北区鍛冶町1丁目6 鍛冶町1丁目6−17",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.882712,
     "lng": 130.882849,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4468/"
+    "sourceUrl": "https://saunatime.jp/saunas/4468/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-3840",
     "name": "筑紫野 天拝の郷",
     "prefecture": "福岡県",
-    "address": "〒818-0053 福岡県筑紫野市天拝坂２丁目４−３",
-    "addressSource": "SaunaTime",
+    "address": "〒818-0053 福岡県筑紫野市天拝坂2丁目4−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.488666,
     "lng": 130.496992,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3840/",
-    "city": "筑紫野市"
+    "city": "筑紫野市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://tenpainosato.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3840/"
   },
   {
     "id": "st-fukuoka-3819",
     "name": "天然温泉おとぎの杜",
     "prefecture": "福岡県",
-    "address": "〒807-0806 福岡県北九州市八幡西区御開１丁目１９−１",
-    "addressSource": "SaunaTime",
+    "address": "〒807-0806 福岡県北九州市八幡西区御開1丁目19−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.886059,
     "lng": 130.732106,
     "trait": "onsen",
@@ -20842,14 +23487,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3819/",
-    "city": "北九州市"
+    "city": "北九州市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-fukuoka-3816",
     "name": "都久志の湯",
     "prefecture": "福岡県",
-    "address": "〒818-0115 福岡県太宰府市内山１１２８",
-    "addressSource": "SaunaTime",
+    "address": "〒818-0115 福岡県太宰府市内山1128",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.524246,
     "lng": 130.552978,
     "trait": "onsen",
@@ -20860,14 +23507,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3816/"
+    "sourceUrl": "https://saunatime.jp/saunas/3816/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tsukushinoyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3816/"
   },
   {
     "id": "st-fukuoka-3824",
     "name": "游心の湯",
     "prefecture": "福岡県",
-    "address": "〒830-0056 福岡県久留米市本山１丁目７−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒830-0056 福岡県久留米市本山1丁目7−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.285415,
     "lng": 130.516795,
     "trait": "onsen",
@@ -20878,7 +23529,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3824/"
+    "sourceUrl": "https://saunatime.jp/saunas/3824/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://yushin-yu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3824/"
   },
   {
     "id": "st-saga-3940",
@@ -20892,7 +23547,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3940/"
+    "sourceUrl": "https://saunatime.jp/saunas/3940/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3579",
@@ -20907,14 +23563,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3579/",
-    "city": "唐津市"
+    "city": "唐津市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3941",
     "name": "ヌルヌル有田温泉",
     "prefecture": "佐賀県",
     "address": "〒844-0027 佐賀県西松浦郡有田町南原",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.189987,
     "lng": 129.860296,
     "trait": "onsen",
@@ -20926,14 +23583,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3941/",
-    "city": "西松浦郡有田町"
+    "city": "西松浦郡有田町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3583",
     "name": "ひがしせふり温泉 山茶花の湯",
     "prefecture": "佐賀県",
-    "address": "〒842-0102 佐賀県神埼郡吉野ヶ里町石動76−４",
-    "addressSource": "SaunaTime",
+    "address": "〒842-0102 佐賀県神埼郡吉野ヶ里町石動76−4",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.37015,
     "lng": 130.405822,
     "trait": "wood",
@@ -20947,7 +23606,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3583/",
-    "city": "神埼郡吉野ヶ里町"
+    "city": "神埼郡吉野ヶ里町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3946",
@@ -20955,7 +23616,8 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3946/"
+    "sourceUrl": "https://saunatime.jp/saunas/3946/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3944",
@@ -20969,7 +23631,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3944/"
+    "sourceUrl": "https://saunatime.jp/saunas/3944/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-796",
@@ -20983,7 +23646,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/796/"
+    "sourceUrl": "https://saunatime.jp/saunas/796/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3930",
@@ -20998,20 +23662,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3930/",
-    "city": "伊万里市"
+    "city": "伊万里市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-4478",
     "name": "嬉野温泉 旅館 大正屋",
     "prefecture": "佐賀県",
-    "address": "〒843-0301 佐賀県嬉野市嬉野町大字下宿乙２２７６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒843-0301 佐賀県嬉野市嬉野町大字下宿乙2276−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4478/",
-    "city": "嬉野市 宿泊者限定"
+    "city": "嬉野市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.taishoya.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4478/"
   },
   {
     "id": "st-saga-3929",
@@ -21027,7 +23696,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3929/"
+    "sourceUrl": "https://saunatime.jp/saunas/3929/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3945",
@@ -21035,7 +23705,8 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3945/"
+    "sourceUrl": "https://saunatime.jp/saunas/3945/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3931",
@@ -21050,20 +23721,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3931/",
-    "city": "三養基郡上峰町"
+    "city": "三養基郡上峰町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-4473",
     "name": "鏡山温泉茶屋 美人の湯",
     "prefecture": "佐賀県",
-    "address": "〒847-0022 佐賀県唐津市 鏡４７３３",
-    "addressSource": "SaunaTime",
+    "address": "〒847-0022 佐賀県唐津市 鏡4733",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4473/",
-    "city": "唐津市"
+    "city": "唐津市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.karatsu-kankou.jp/gourmet/detail/11/Gourmet",
+    "officialUrlSource": "https://saunatime.jp/saunas/4473/"
   },
   {
     "id": "st-saga-3934",
@@ -21078,7 +23754,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3934/",
-    "city": "佐賀市"
+    "city": "佐賀市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3942",
@@ -21095,7 +23772,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3942/",
-    "city": "東松浦郡玄海町"
+    "city": "東松浦郡玄海町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3939",
@@ -21109,7 +23787,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3939/"
+    "sourceUrl": "https://saunatime.jp/saunas/3939/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "official-saga-mifuneyama-rakan",
@@ -21147,34 +23826,42 @@ export const SEED_FACILITIES = [
     "id": "st-saga-3571",
     "name": "佐賀ぽかぽか温泉",
     "prefecture": "佐賀県",
-    "address": "〒849-0914 佐賀県佐賀市兵庫北５丁目１３−４８",
-    "addressSource": "SaunaTime",
+    "address": "〒849-0914 佐賀県佐賀市兵庫北5丁目13−48",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.27307,
     "lng": 130.310846,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3571/",
-    "city": "佐賀市"
+    "city": "佐賀市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.pokaon-s.com/index.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/3571/"
   },
   {
     "id": "st-saga-3948",
     "name": "佐賀大和温泉ホテルアマンディ",
     "prefecture": "佐賀県",
-    "address": "〒840-0202 佐賀県佐賀市大和町大字久池井３６６７",
-    "addressSource": "SaunaTime",
+    "address": "〒840-0202 佐賀県佐賀市大和町大字久池井3667",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.321338,
     "lng": 130.270939,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3948/",
-    "city": "佐賀市"
+    "city": "佐賀市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.amandi.jp/saga/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3948/"
   },
   {
     "id": "st-saga-3933",
     "name": "大町温泉ひじり乃湯",
     "prefecture": "佐賀県",
-    "address": "〒849-2102 佐賀県杵島郡大町町福母３０６７−２",
-    "addressSource": "SaunaTime",
+    "address": "〒849-2102 佐賀県杵島郡大町町福母3067−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.220227,
     "lng": 130.099658,
     "trait": "onsen",
@@ -21186,7 +23873,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3933/",
-    "city": "杵島郡大町町"
+    "city": "杵島郡大町町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yutokuonsen.com/omachi.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3933/"
   },
   {
     "id": "st-saga-3462",
@@ -21200,7 +23891,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3462/"
+    "sourceUrl": "https://saunatime.jp/saunas/3462/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3932",
@@ -21215,7 +23907,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3932/",
-    "city": "佐賀市"
+    "city": "佐賀市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3943",
@@ -21233,38 +23926,45 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3943/"
+    "sourceUrl": "https://saunatime.jp/saunas/3943/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-4477",
     "name": "武雄温泉 鷲乃湯",
     "prefecture": "佐賀県",
-    "address": "〒843-0022 佐賀県武雄市武雄町大字武雄７４２５",
-    "addressSource": "SaunaTime",
+    "address": "〒843-0022 佐賀県武雄市武雄町大字武雄7425",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4477/"
+    "sourceUrl": "https://saunatime.jp/saunas/4477/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.takeo-kk.net/spa/001333.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/4477/"
   },
   {
     "id": "st-saga-4389",
     "name": "武雄温泉ハイツ",
     "prefecture": "佐賀県",
     "address": "〒843-0021 佐賀県武雄市武雄町大字永島18091",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.176426,
     "lng": 130.036127,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4389/"
+    "sourceUrl": "https://saunatime.jp/saunas/4389/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3587",
     "name": "北方温泉四季の里 七彩の湯",
     "prefecture": "佐賀県",
-    "address": "〒849-2204 佐賀県武雄市北方町大字大崎４３００−１",
-    "addressSource": "SaunaTime",
+    "address": "〒849-2204 佐賀県武雄市北方町大字大崎4300−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.227226,
     "lng": 130.044187,
     "trait": "onsen",
@@ -21276,7 +23976,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3587/",
-    "city": "武雄市"
+    "city": "武雄市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.nanaironoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3587/"
   },
   {
     "id": "st-saga-3937",
@@ -21291,7 +23995,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3937/",
-    "city": "唐津市"
+    "city": "唐津市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3947",
@@ -21306,7 +24011,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3947/",
-    "city": "唐津市"
+    "city": "唐津市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3935",
@@ -21320,7 +24026,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3935/"
+    "sourceUrl": "https://saunatime.jp/saunas/3935/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-saga-3938",
@@ -21328,7 +24035,8 @@ export const SEED_FACILITIES = [
     "prefecture": "佐賀県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3938/"
+    "sourceUrl": "https://saunatime.jp/saunas/3938/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3960",
@@ -21336,31 +24044,38 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3960/"
+    "sourceUrl": "https://saunatime.jp/saunas/3960/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-4616",
     "name": "i+Land Nagasaki　MINATO SPA 岩盤 TERRACE",
     "prefecture": "長崎県",
     "address": "〒851-1201 長崎県長崎市伊王島町1丁目3277-7",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.706413,
     "lng": 129.778219,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4616/"
+    "sourceUrl": "https://saunatime.jp/saunas/4616/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.islandnagasaki.jp/spa/minato-spa.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/4616/"
   },
   {
     "id": "st-nagasaki-801",
     "name": "サウナサン",
     "prefecture": "長崎県",
-    "address": "〒857-0876 長崎県佐世保市塩浜町６−１５",
-    "addressSource": "SaunaTime",
+    "address": "〒857-0876 長崎県佐世保市塩浜町6−15",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.166844,
     "lng": 129.721084,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/801/"
+    "sourceUrl": "https://saunatime.jp/saunas/801/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3950",
@@ -21374,7 +24089,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3950/"
+    "sourceUrl": "https://saunatime.jp/saunas/3950/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-805",
@@ -21382,26 +24098,29 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "trait": "water",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/805/"
+    "sourceUrl": "https://saunatime.jp/saunas/805/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3980",
     "name": "ハウステンボス やすらぎの館",
     "prefecture": "長崎県",
     "address": "〒859-3243 長崎県佐世保市ハウステンボス町",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.087649,
     "lng": 129.782181,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3980/"
+    "sourceUrl": "https://saunatime.jp/saunas/3980/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-4443",
     "name": "はさみ温泉 湯治楼",
     "prefecture": "長崎県",
-    "address": "〒859-3725 長崎県東彼杵郡波佐見町長野郷５５８−３",
-    "addressSource": "SaunaTime",
+    "address": "〒859-3725 長崎県東彼杵郡波佐見町長野郷558−3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.115045,
     "lng": 129.868793,
     "trait": "onsen",
@@ -21413,14 +24132,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4443/",
-    "city": "彼杵郡波佐見町"
+    "city": "彼杵郡波佐見町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://seisyunnosato.jp/onsen/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4443/"
   },
   {
     "id": "st-nagasaki-840",
     "name": "ベストパワーランド御湯神指",
     "prefecture": "長崎県",
-    "address": "〒854-1124 長崎県諫早市飯盛町川下２３４",
-    "addressSource": "SaunaTime",
+    "address": "〒854-1124 長崎県諫早市飯盛町川下234",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.76429,
     "lng": 130.011132,
     "trait": "onsen",
@@ -21431,7 +24154,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/840/"
+    "sourceUrl": "https://saunatime.jp/saunas/840/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3961",
@@ -21445,7 +24170,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3961/"
+    "sourceUrl": "https://saunatime.jp/saunas/3961/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3955",
@@ -21460,7 +24186,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3955/",
-    "city": "雲仙市"
+    "city": "雲仙市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3966",
@@ -21468,38 +24195,47 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3966/"
+    "sourceUrl": "https://saunatime.jp/saunas/3966/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-4927",
     "name": "ルネサンス佐世保",
     "prefecture": "長崎県",
-    "address": "〒857-0023 長崎県佐世保市名切町２−３８",
-    "addressSource": "SaunaTime",
+    "address": "〒857-0023 長崎県佐世保市名切町2−38",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.18005,
     "lng": 129.724149,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4927/"
+    "sourceUrl": "https://saunatime.jp/saunas/4927/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/sasebo/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4927/"
   },
   {
     "id": "st-nagasaki-4928",
     "name": "ルネサンス長崎ココウォーク",
     "prefecture": "長崎県",
-    "address": "〒852-8104 長崎県長崎市茂里町１−５５ ココ ウォーク内 4F",
-    "addressSource": "SaunaTime",
+    "address": "〒852-8104 長崎県長崎市茂里町1−55 ココ ウォーク内 4F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.763311,
     "lng": 129.864453,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4928/"
+    "sourceUrl": "https://saunatime.jp/saunas/4928/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/nagasaki-cocowalk/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4928/"
   },
   {
     "id": "st-nagasaki-843",
     "name": "稲佐山温泉ふくの湯",
     "prefecture": "長崎県",
     "address": "〒852-8017 長崎県長崎市岩見町451−23",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.766939,
     "lng": 129.851463,
     "trait": "wood",
@@ -21513,14 +24249,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/843/",
-    "city": "長崎市"
+    "city": "長崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3959",
     "name": "稲佐山温泉ホテルアマンディ",
     "prefecture": "長崎県",
-    "address": "〒852-8008 長崎県長崎市曙町３９−３８",
-    "addressSource": "SaunaTime",
+    "address": "〒852-8008 長崎県長崎市曙町39−38",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.752374,
     "lng": 129.85726,
     "trait": "wood",
@@ -21536,7 +24274,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3959/",
-    "city": "長崎市"
+    "city": "長崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3978",
@@ -21550,19 +24290,24 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3978/"
+    "sourceUrl": "https://saunatime.jp/saunas/3978/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3954",
     "name": "雲仙宮崎旅館",
     "prefecture": "長崎県",
     "address": "〒854-0692 長崎県雲仙市小浜町雲仙 小浜町雲仙320",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.738621,
     "lng": 130.263578,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3954/"
+    "sourceUrl": "https://saunatime.jp/saunas/3954/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.miyazaki-ryokan.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3954/"
   },
   {
     "id": "st-nagasaki-800",
@@ -21576,7 +24321,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/800/"
+    "sourceUrl": "https://saunatime.jp/saunas/800/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3972",
@@ -21590,32 +24336,39 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3972/"
+    "sourceUrl": "https://saunatime.jp/saunas/3972/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-842",
     "name": "港洋館みなとサウナ",
     "prefecture": "長崎県",
-    "address": "〒850-0034 長崎県長崎市樺島町７−９",
-    "addressSource": "SaunaTime",
+    "address": "〒850-0034 長崎県長崎市樺島町7−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.74594,
     "lng": 129.872732,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/842/"
+    "sourceUrl": "https://saunatime.jp/saunas/842/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www5.cncm.ne.jp/~koyokan/",
+    "officialUrlSource": "https://saunatime.jp/saunas/842/"
   },
   {
     "id": "st-nagasaki-841",
     "name": "高崎湯",
     "prefecture": "長崎県",
-    "address": "〒851-0241 長崎県長崎市茂木町２１６７",
-    "addressSource": "SaunaTime",
+    "address": "〒851-0241 長崎県長崎市茂木町2167",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.701809,
     "lng": 129.911225,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/841/",
-    "city": "長崎市"
+    "city": "長崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3956",
@@ -21623,19 +24376,24 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3956/"
+    "sourceUrl": "https://saunatime.jp/saunas/3956/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-2935",
     "name": "出島の湯ドーミーイン長崎",
     "prefecture": "長崎県",
-    "address": "〒850-0841 長崎県長崎市銅座町７−２４",
-    "addressSource": "SaunaTime",
+    "address": "〒850-0841 長崎県長崎市銅座町7−24",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.7423,
     "lng": 129.876273,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2935/"
+    "sourceUrl": "https://saunatime.jp/saunas/2935/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/nagasaki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2935/"
   },
   {
     "id": "st-nagasaki-3952",
@@ -21651,14 +24409,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3952/"
+    "sourceUrl": "https://saunatime.jp/saunas/3952/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-4385",
     "name": "西彼保健福祉センター 遊湯館",
     "prefecture": "長崎県",
     "address": "〒851-3406 長崎県西海市西彼町鳥加郷2218",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.990623,
     "lng": 129.748636,
     "trait": "onsen",
@@ -21670,7 +24429,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4385/",
-    "city": "西海市"
+    "city": "西海市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3071",
@@ -21684,7 +24445,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3071/"
+    "sourceUrl": "https://saunatime.jp/saunas/3071/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3949",
@@ -21698,7 +24460,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3949/"
+    "sourceUrl": "https://saunatime.jp/saunas/3949/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3963",
@@ -21712,7 +24475,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3963/"
+    "sourceUrl": "https://saunatime.jp/saunas/3963/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-3582",
@@ -21720,14 +24484,15 @@ export const SEED_FACILITIES = [
     "prefecture": "長崎県",
     "trait": "water",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3582/"
+    "sourceUrl": "https://saunatime.jp/saunas/3582/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-nagasaki-806",
     "name": "諫早グリーンホテル",
     "prefecture": "長崎県",
-    "address": "〒854-0006 長崎県諫早市天満町９−３８",
-    "addressSource": "SaunaTime",
+    "address": "〒854-0006 長崎県諫早市天満町9−38",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.848104,
     "lng": 130.044753,
     "trait": "award",
@@ -21738,7 +24503,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/806/"
+    "sourceUrl": "https://saunatime.jp/saunas/806/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.isahaya-greenhotel.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/806/"
   },
   {
     "id": "st-kumamoto-82",
@@ -21756,8 +24525,8 @@ export const SEED_FACILITIES = [
     "id": "st-kumamoto-4528",
     "name": "たかの湯",
     "prefecture": "熊本県",
-    "address": "〒862-0904 熊本県熊本市東区栄町１−４６",
-    "addressSource": "SaunaTime",
+    "address": "〒862-0904 熊本県熊本市東区栄町1−46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -21769,14 +24538,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4528/",
-    "city": "熊本市"
+    "city": "熊本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kuma1010.com/custom/400",
+    "officialUrlSource": "https://saunatime.jp/saunas/4528/"
   },
   {
     "id": "st-kumamoto-4590",
     "name": "つる乃湯 熊本インター店",
     "prefecture": "熊本県",
-    "address": "〒861-8046 熊本県熊本市東区石原２丁目４−１１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-8046 熊本県熊本市東区石原2丁目4−11",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.843199,
     "lng": 130.781179,
     "trait": "onsen",
@@ -21788,52 +24561,68 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4590/",
-    "city": "熊本市"
+    "city": "熊本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tsurunoyu-onsen.com/kumamoto.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4590/"
   },
   {
     "id": "st-kumamoto-832",
     "name": "どんぐり村温泉センター",
     "prefecture": "熊本県",
-    "address": "〒861-0522 熊本県山鹿市久原３９０５",
-    "addressSource": "SaunaTime",
+    "address": "〒861-0522 熊本県山鹿市久原3905",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.020714,
     "lng": 130.712196,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/832/"
+    "sourceUrl": "https://saunatime.jp/saunas/832/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.dongurimura.info/onsen.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/832/"
   },
   {
     "id": "st-kumamoto-4527",
     "name": "ピースフル優祐悠",
     "prefecture": "熊本県",
-    "address": "〒861-8019 熊本県熊本市東区下南部３−１１−１３６",
-    "addressSource": "SaunaTime",
+    "address": "〒861-8019 熊本県熊本市東区下南部3−11−136",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.823607,
     "lng": 130.759561,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4527/",
-    "city": "熊本市"
+    "city": "熊本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.peaceful.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4527/"
   },
   {
     "id": "st-kumamoto-838",
     "name": "ふれあいの丘交流センター",
     "prefecture": "熊本県",
-    "address": "〒869-0303 熊本県玉名郡玉東町木葉３７２",
-    "addressSource": "SaunaTime",
+    "address": "〒869-0303 熊本県玉名郡玉東町木葉372",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.913571,
     "lng": 130.621234,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/838/",
-    "city": "玉名郡玉東町"
+    "city": "玉名郡玉東町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.town.gyokuto.kumamoto.jp/fureainooka/fureainooka.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/838/"
   },
   {
     "id": "st-kumamoto-4017",
     "name": "ペルラの湯舟",
     "prefecture": "熊本県",
-    "address": "〒863-0001 熊本県天草市本渡町広瀬９９６",
-    "addressSource": "SaunaTime",
+    "address": "〒863-0001 熊本県天草市本渡町広瀬996",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.472168,
     "lng": 130.206612,
     "trait": "onsen",
@@ -21845,14 +24634,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4017/",
-    "city": "天草市"
+    "city": "天草市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hotel-alegria.jp/perla/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4017/"
   },
   {
     "id": "st-kumamoto-847",
     "name": "ホテル カーナ A",
     "prefecture": "熊本県",
-    "address": "〒860-0802 熊本県熊本市中央区中央街４−２０ カーナＡ７ビル",
-    "addressSource": "SaunaTime",
+    "address": "〒860-0802 熊本県熊本市中央区中央街4−20 カーナA7ビル",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.800293,
     "lng": 130.710288,
     "trait": "award",
@@ -21864,14 +24657,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/847/",
-    "city": "熊本市 宿泊者限定"
+    "city": "熊本市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://the-ginza.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/847/"
   },
   {
     "id": "st-kumamoto-4615",
     "name": "ホテル スカイヒルズ",
     "prefecture": "熊本県",
-    "address": "〒860-0047 熊本県熊本市西区春日４丁目１６−９",
-    "addressSource": "SaunaTime",
+    "address": "〒860-0047 熊本県熊本市西区春日4丁目16−9",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.79565,
     "lng": 130.686861,
     "trait": "award",
@@ -21882,27 +24679,35 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4615/"
+    "sourceUrl": "https://saunatime.jp/saunas/4615/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://skyclub.co.jp/hotel/skyhills/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4615/"
   },
   {
     "id": "st-kumamoto-836",
     "name": "ユーパレス弁天",
     "prefecture": "熊本県",
-    "address": "〒861-1103 熊本県合志市野々島２４４１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-1103 熊本県合志市野々島2441−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.892768,
     "lng": 130.732077,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/836/",
-    "city": "合志市"
+    "city": "合志市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://u-benten.net/",
+    "officialUrlSource": "https://saunatime.jp/saunas/836/"
   },
   {
     "id": "st-kumamoto-859",
     "name": "ゆのまえ温泉湯楽里",
     "prefecture": "熊本県",
-    "address": "〒868-0623 熊本県球磨郡湯前町（その他）1588 番地7",
-    "addressSource": "SaunaTime",
+    "address": "〒868-0623 熊本県球磨郡湯前町(その他)1588 番地7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.271063,
     "lng": 131.000245,
     "trait": "onsen",
@@ -21913,50 +24718,66 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/859/"
+    "sourceUrl": "https://saunatime.jp/saunas/859/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.y-yurari.co.jp/page0101.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/859/"
   },
   {
     "id": "st-kumamoto-4930",
     "name": "ルネサンス熊本学園大通24",
     "prefecture": "熊本県",
-    "address": "〒862-0971 熊本県熊本市中央区大江２丁目１−７１",
-    "addressSource": "SaunaTime",
+    "address": "〒862-0971 熊本県熊本市中央区大江2丁目1−71",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.805318,
     "lng": 130.726227,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4930/"
+    "sourceUrl": "https://saunatime.jp/saunas/4930/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kumamoto-gakuendaidori/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4930/"
   },
   {
     "id": "st-kumamoto-4929",
     "name": "ルネサンス熊本南24",
     "prefecture": "熊本県",
-    "address": "〒860-0812 熊本県熊本市中央区南熊本１丁目９−２５ MRRくまもと3～5F",
-    "addressSource": "SaunaTime",
+    "address": "〒860-0812 熊本県熊本市中央区南熊本1丁目9−25 MRRくまもと3~5F",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.790269,
     "lng": 130.710954,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4929/"
+    "sourceUrl": "https://saunatime.jp/saunas/4929/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kumamotominami/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4929/"
   },
   {
     "id": "st-kumamoto-4931",
     "name": "ルネサンス光の森24",
     "prefecture": "熊本県",
-    "address": "〒869-1108 熊本県菊池郡菊陽町光の森２丁目5−１",
-    "addressSource": "SaunaTime",
+    "address": "〒869-1108 熊本県菊池郡菊陽町光の森2丁目5−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.856939,
     "lng": 130.779576,
     "trait": "wood",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4931/"
+    "sourceUrl": "https://saunatime.jp/saunas/4931/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/kumamoto-hikarinomori/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4931/"
   },
   {
     "id": "st-kumamoto-4521",
     "name": "阿蘇白水温泉 瑠璃",
     "prefecture": "熊本県",
-    "address": "〒869-1504 熊本県阿蘇郡南阿蘇村一関１２６０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒869-1504 熊本県阿蘇郡南阿蘇村一関1260−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -21968,14 +24789,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4521/",
-    "city": "阿蘇郡南阿蘇村"
+    "city": "阿蘇郡南阿蘇村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://ruri.aso-hakusui.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4521/"
   },
   {
     "id": "st-kumamoto-863",
     "name": "一勝地温泉 かわせみ",
     "prefecture": "熊本県",
     "address": "〒869-6403 熊本県球磨村 熊本県球磨郡球磨村大字一勝地乙39−2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.242037,
     "lng": 130.645802,
     "trait": "onsen",
@@ -21987,14 +24812,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/863/",
-    "city": "球磨郡球磨村"
+    "city": "球磨郡球磨村",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kawasemi-onsen.kbz.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/863/"
   },
   {
     "id": "st-kumamoto-4630",
     "name": "温泉くま村湯の駅",
     "prefecture": "熊本県",
-    "address": "〒869-6401 熊本県球磨郡球磨村大字渡２２０６",
-    "addressSource": "SaunaTime",
+    "address": "〒869-6401 熊本県球磨郡球磨村大字渡2206",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.245803,
     "lng": 130.685261,
     "trait": "onsen",
@@ -22005,14 +24834,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4630/"
+    "sourceUrl": "https://saunatime.jp/saunas/4630/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://yunoeki.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4630/"
   },
   {
     "id": "st-kumamoto-4009",
     "name": "菊池わくわく温泉",
     "prefecture": "熊本県",
-    "address": "〒861-1308 熊本県菊池市亘３７−５",
-    "addressSource": "SaunaTime",
+    "address": "〒861-1308 熊本県菊池市亘37−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.978514,
     "lng": 130.815424,
     "trait": "onsen",
@@ -22024,14 +24857,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4009/",
-    "city": "菊池市"
+    "city": "菊池市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kumamoto-4546",
     "name": "菊池温泉 薬師湯",
     "prefecture": "熊本県",
-    "address": "〒861-1685 熊本県菊池市西迫間１６８",
-    "addressSource": "SaunaTime",
+    "address": "〒861-1685 熊本県菊池市西迫間168",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -22042,14 +24877,16 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4546/"
+    "sourceUrl": "https://saunatime.jp/saunas/4546/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kumamoto-4006",
     "name": "熊本城温泉 城の湯",
     "prefecture": "熊本県",
-    "address": "〒860-0079 熊本県熊本市西区上熊本２丁目８−４３",
-    "addressSource": "SaunaTime",
+    "address": "〒860-0079 熊本県熊本市西区上熊本2丁目8−43",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.81083,
     "lng": 130.7015,
     "trait": "onsen",
@@ -22060,14 +24897,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4006/"
+    "sourceUrl": "https://saunatime.jp/saunas/4006/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.shironoyu.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4006/"
   },
   {
     "id": "st-kumamoto-4040",
     "name": "四季の森",
     "prefecture": "熊本県",
-    "address": "〒869-1412 熊本県阿蘇郡阿蘇郡南阿蘇村久石 久石３１６０",
-    "addressSource": "SaunaTime",
+    "address": "〒869-1412 熊本県阿蘇郡阿蘇郡南阿蘇村久石 久石3160",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.81551,
     "lng": 131.050863,
     "trait": "wood",
@@ -22078,14 +24919,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4040/"
+    "sourceUrl": "https://saunatime.jp/saunas/4040/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.aso-shikinomori.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4040/"
   },
   {
     "id": "st-kumamoto-4018",
     "name": "城南天然温泉旅館",
     "prefecture": "熊本県",
-    "address": "〒861-4223 熊本県熊本市南区城南町藤山１７１５",
-    "addressSource": "SaunaTime",
+    "address": "〒861-4223 熊本県熊本市南区城南町藤山1715",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.667055,
     "lng": 130.733472,
     "trait": "onsen",
@@ -22098,14 +24943,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4018/"
+    "sourceUrl": "https://saunatime.jp/saunas/4018/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.jonan-resort.jp/jonanspa/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4018/"
   },
   {
     "id": "st-kumamoto-4519",
     "name": "蘇傳寺温泉",
     "prefecture": "熊本県",
-    "address": "〒861-1204 熊本県菊池市泗水町永２９４０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-1204 熊本県菊池市泗水町永2940−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -22117,14 +24966,16 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4519/",
-    "city": "菊池市"
+    "city": "菊池市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kumamoto-839",
     "name": "草枕温泉てんすい",
     "prefecture": "熊本県",
-    "address": "〒861-5401 熊本県玉名市天水町小天５１１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-5401 熊本県玉名市天水町小天511−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.851708,
     "lng": 130.592417,
     "trait": "onsen",
@@ -22136,14 +24987,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/839/",
-    "city": "玉名市"
+    "city": "玉名市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kusamakura.jp/kusa_on/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/839/"
   },
   {
     "id": "st-kumamoto-860",
     "name": "多良木町えびすの湯",
     "prefecture": "熊本県",
-    "address": "〒868-0501 熊本県球磨郡多良木町多良木１５６１",
-    "addressSource": "SaunaTime",
+    "address": "〒868-0501 熊本県球磨郡多良木町多良木1561",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.26337,
     "lng": 130.933328,
     "trait": "onsen",
@@ -22154,14 +25009,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/860/"
+    "sourceUrl": "https://saunatime.jp/saunas/860/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.town.taragi.lg.jp/gyousei/soshiki/chouminfukushi/ebisunoyu/148.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/860/"
   },
   {
     "id": "st-kumamoto-4024",
     "name": "大谷の湯",
     "prefecture": "熊本県",
-    "address": "〒869-1102 熊本県菊池郡菊陽町原水３８８０−１４",
-    "addressSource": "SaunaTime",
+    "address": "〒869-1102 熊本県菊池郡菊陽町原水3880−14",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.893086,
     "lng": 130.841926,
     "trait": "onsen",
@@ -22173,26 +25032,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4024/",
-    "city": "菊池郡菊陽町"
+    "city": "菊池郡菊陽町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://seisei-kai.com/general",
+    "officialUrlSource": "https://saunatime.jp/saunas/4024/"
   },
   {
     "id": "st-kumamoto-4524",
     "name": "長命舘",
     "prefecture": "熊本県",
-    "address": "〒861-0111 熊本県熊本市植木町宮原２９",
-    "addressSource": "SaunaTime",
+    "address": "〒861-0111 熊本県熊本市植木町宮原29",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4524/"
+    "sourceUrl": "https://saunatime.jp/saunas/4524/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.chomeikan.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4524/"
   },
   {
     "id": "st-kumamoto-4557",
     "name": "通潤山荘",
     "prefecture": "熊本県",
-    "address": "〒861-3661 熊本県上益城郡山都町長原１９２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-3661 熊本県上益城郡山都町長原192−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.681066,
     "lng": 130.992077,
     "trait": "wood",
@@ -22203,14 +25070,18 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4557/"
+    "sourceUrl": "https://saunatime.jp/saunas/4557/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tsujun-sanso.jp/spa.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4557/"
   },
   {
     "id": "st-kumamoto-854",
     "name": "八代センター サウナ",
     "prefecture": "熊本県",
-    "address": "〒866-0861 熊本県八代市本町１丁目１１−３８",
-    "addressSource": "SaunaTime",
+    "address": "〒866-0861 熊本県八代市本町1丁目11−38",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.503243,
     "lng": 130.602491,
     "trait": "award",
@@ -22219,20 +25090,26 @@ export const SEED_FACILITIES = [
     "city": "八代市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kumamoto-849",
     "name": "富合サウナランド",
     "prefecture": "熊本県",
-    "address": "〒861-4156 熊本県熊本市南区富合町田尻４５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒861-4156 熊本県熊本市南区富合町田尻45−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.70245,
     "lng": 130.673442,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/849/",
-    "city": "熊本市"
+    "city": "熊本市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yasuyadocheck.com/kenko/ken/kumamoto/tomiai.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/849/"
   },
   {
     "id": "st-oita-78",
@@ -22260,7 +25137,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3863/",
-    "city": "大分市"
+    "city": "大分市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-787",
@@ -22275,14 +25153,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/787/",
-    "city": "中津市"
+    "city": "中津市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-821",
     "name": "スーパー温泉やまなみの湯",
     "prefecture": "大分県",
     "address": "〒874-0845 大分県別府市 大分県別府市北中7−2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.311557,
     "lng": 131.482155,
     "trait": "onsen",
@@ -22293,7 +25172,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/821/"
+    "sourceUrl": "https://saunatime.jp/saunas/821/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://beppuyamanami.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/821/"
   },
   {
     "id": "st-oita-3867",
@@ -22309,14 +25192,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3867/"
+    "sourceUrl": "https://saunatime.jp/saunas/3867/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-3855",
     "name": "ひょうたん温泉",
     "prefecture": "大分県",
     "address": "〒874-0042 大分県別府市鉄輪159−2",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.314431,
     "lng": 131.47932,
     "trait": "onsen",
@@ -22328,26 +25212,34 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3855/",
-    "city": "別府市"
+    "city": "別府市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.hyotan-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3855/"
   },
   {
     "id": "st-oita-3865",
     "name": "ほていの湯(大分)",
     "prefecture": "大分県",
-    "address": "〒878-0204 大分県竹田市久住町大字栢木５５８１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒878-0204 大分県竹田市久住町大字栢木5581−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.052025,
     "lng": 131.329251,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3865/"
+    "sourceUrl": "https://saunatime.jp/saunas/3865/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.taketan.jp/spots/detail/211",
+    "officialUrlSource": "https://saunatime.jp/saunas/3865/"
   },
   {
     "id": "st-oita-4453",
     "name": "ホテル日生や",
     "prefecture": "大分県",
     "address": "〒874-0044 大分県別府市 風呂本165-3",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.314714,
     "lng": 131.477301,
     "trait": "award",
@@ -22358,7 +25250,11 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4453/"
+    "sourceUrl": "https://saunatime.jp/saunas/4453/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hotel-nisseiya.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4453/"
   },
   {
     "id": "st-oita-4266",
@@ -22373,20 +25269,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4266/",
-    "city": "佐伯市"
+    "city": "佐伯市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-3854",
     "name": "ラムネ温泉館",
     "prefecture": "大分県",
-    "address": "〒878-0402 大分県竹田市直入町大字長湯７６７６−２",
-    "addressSource": "SaunaTime",
+    "address": "〒878-0402 大分県竹田市直入町大字長湯7676−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.068427,
     "lng": 131.380206,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3854/",
-    "city": "竹田市"
+    "city": "竹田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.lamune-onsen.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3854/"
   },
   {
     "id": "st-oita-3927",
@@ -22402,31 +25303,40 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3927/"
+    "sourceUrl": "https://saunatime.jp/saunas/3927/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-4932",
     "name": "ルネサンスおおいた24",
     "prefecture": "大分県",
-    "address": "〒870-0831 大分県大分市要町３−２３",
-    "addressSource": "SaunaTime",
+    "address": "〒870-0831 大分県大分市要町3−23",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.230974,
     "lng": 131.611443,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4932/"
+    "sourceUrl": "https://saunatime.jp/saunas/4932/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/oita/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4932/"
   },
   {
     "id": "st-oita-4472",
     "name": "レゾネイトクラブくじゅう",
     "prefecture": "大分県",
-    "address": "〒878-0202 大分県竹田市久住町有氏１７７３",
-    "addressSource": "SaunaTime",
+    "address": "〒878-0202 大分県竹田市久住町有氏1773",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.066652,
     "lng": 131.27799,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4472/"
+    "sourceUrl": "https://saunatime.jp/saunas/4472/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.resonate.co.jp/relax/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4472/"
   },
   {
     "id": "st-oita-789",
@@ -22441,14 +25351,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/789/",
-    "city": "豊後高田市"
+    "city": "豊後高田市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-3589",
     "name": "温泉療養文化館 御前湯",
     "prefecture": "大分県",
-    "address": "〒878-0402 大分県竹田市直入町大字長湯７９６２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒878-0402 大分県竹田市直入町大字長湯7962−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.070821,
     "lng": 131.384537,
     "trait": "onsen",
@@ -22460,7 +25371,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3589/",
-    "city": "竹田市"
+    "city": "竹田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.gozenyu.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3589/"
   },
   {
     "id": "st-oita-808",
@@ -22476,14 +25391,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/808/"
+    "sourceUrl": "https://saunatime.jp/saunas/808/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-827",
     "name": "竹田温泉花水月",
     "prefecture": "大分県",
     "address": "〒878-0011 大分県竹田市会々2250−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.97155,
     "lng": 131.391686,
     "trait": "onsen",
@@ -22495,27 +25411,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/827/",
-    "city": "竹田市"
+    "city": "竹田市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.taketan.jp/spots/detail/40",
+    "officialUrlSource": "https://saunatime.jp/saunas/827/"
   },
   {
     "id": "st-oita-4716",
     "name": "長崎鼻ビーチリゾート",
     "prefecture": "大分県",
-    "address": "〒872-1207 大分県豊後高田市見目４０８０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒872-1207 大分県豊後高田市見目4080−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.682127,
     "lng": 131.527136,
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4716/",
-    "city": "豊後高田市 事前予約制"
+    "city": "豊後高田市 事前予約制",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://nagasakibana-beach.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4716/"
   },
   {
     "id": "st-oita-3852",
     "name": "長湯温泉 かじか庵 • ゆの花",
     "prefecture": "大分県",
-    "address": "〒878-0402 大分県竹田市直入町大字長湯２９６１−２",
-    "addressSource": "SaunaTime",
+    "address": "〒878-0402 大分県竹田市直入町大字長湯2961−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.067764,
     "lng": 131.378951,
     "trait": "onsen",
@@ -22526,14 +25450,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3852/"
+    "sourceUrl": "https://saunatime.jp/saunas/3852/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kajikaan.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3852/"
   },
   {
     "id": "st-oita-4512",
     "name": "鶴崎ホテル",
     "prefecture": "大分県",
     "address": "〒870-0131 大分県大分市皆春下の土井1638",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "award",
@@ -22544,14 +25472,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4512/"
+    "sourceUrl": "https://saunatime.jp/saunas/4512/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://breezbay-group.com/tsurusaki-h/bath/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4512/"
   },
   {
     "id": "st-oita-3856",
     "name": "鉄輪むし湯",
     "prefecture": "大分県",
-    "address": "〒874-0046 大分県別府市鉄輪上 鉄輪上１",
-    "addressSource": "SaunaTime",
+    "address": "〒874-0046 大分県別府市鉄輪上 鉄輪上1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.316361,
     "lng": 131.478049,
     "trait": "onsen",
@@ -22563,7 +25495,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3856/",
-    "city": "別府市"
+    "city": "別府市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3856/"
   },
   {
     "id": "st-oita-3868",
@@ -22579,14 +25515,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3868/"
+    "sourceUrl": "https://saunatime.jp/saunas/3868/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-oita-4465",
     "name": "天然温泉 白糸の湯 ドーミーイン大分",
     "prefecture": "大分県",
-    "address": "〒870-0027 大分県大分市末広町１丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒870-0027 大分県大分市末広町1丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.234494,
     "lng": 131.605331,
     "trait": "onsen",
@@ -22598,27 +25535,35 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4465/",
-    "city": "大分市 宿泊者限定"
+    "city": "大分市 宿泊者限定",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/hotels/oita/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4465/"
   },
   {
     "id": "st-oita-3914",
     "name": "百歳の湯（ニューグロリア大分ホテル）",
     "prefecture": "大分県",
     "address": "〒870-0036 大分県大分市 大分県大分市寿町11−31",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.241685,
     "lng": 131.602503,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3914/",
-    "city": "大分市"
+    "city": "大分市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://gloria-oita.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3914/"
   },
   {
     "id": "st-oita-3860",
     "name": "別府温泉 ゆわいの宿竹乃井",
     "prefecture": "大分県",
-    "address": "〒874-0920 大分県別府市北浜３丁目１０ 北浜３丁目１０−２６ 別府タワー横",
-    "addressSource": "SaunaTime",
+    "address": "〒874-0920 大分県別府市北浜3丁目10 北浜3丁目10−26 別府タワー横",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.281687,
     "lng": 131.506139,
     "trait": "onsen",
@@ -22629,14 +25574,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3860/"
+    "sourceUrl": "https://saunatime.jp/saunas/3860/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.takenoi.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3860/"
   },
   {
     "id": "st-oita-3857",
     "name": "別府温泉 杉乃井ホテル　大展望露天風呂 棚湯",
     "prefecture": "大分県",
-    "address": "〒874-0822 大分県別府市観海寺２２７２",
-    "addressSource": "SaunaTime",
+    "address": "〒874-0822 大分県別府市観海寺2272",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.284547,
     "lng": 131.472802,
     "trait": "onsen",
@@ -22651,14 +25600,18 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3857/"
+    "sourceUrl": "https://saunatime.jp/saunas/3857/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.suginoi-hotel.com/facilities/tanayu.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3857/"
   },
   {
     "id": "st-oita-4454",
     "name": "別府温泉保養ランド",
     "prefecture": "大分県",
-    "address": "〒874-0843 大分県別府市明礬５",
-    "addressSource": "SaunaTime",
+    "address": "〒874-0843 大分県別府市明礬5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -22670,14 +25623,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4454/",
-    "city": "別府市"
+    "city": "別府市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://hoyoland.webcrow.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4454/"
   },
   {
     "id": "st-oita-816",
     "name": "豊の国健康ランド",
     "prefecture": "大分県",
-    "address": "〒870-0815 大分県大分市南春日町１２−５",
-    "addressSource": "SaunaTime",
+    "address": "〒870-0815 大分県大分市南春日町12−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.236957,
     "lng": 131.596251,
     "trait": "onsen",
@@ -22688,14 +25645,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/816/"
+    "sourceUrl": "https://saunatime.jp/saunas/816/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.toyonokuni-k.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/816/"
   },
   {
     "id": "st-oita-819",
     "name": "北浜温泉・テルマス",
     "prefecture": "大分県",
-    "address": "〒874-0926 大分県別府市京町１１−１",
-    "addressSource": "SaunaTime",
+    "address": "〒874-0926 大分県別府市京町11−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 33.28602,
     "lng": 131.505115,
     "trait": "onsen",
@@ -22706,7 +25667,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/819/"
+    "sourceUrl": "https://saunatime.jp/saunas/819/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail8.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/819/"
   },
   {
     "id": "st-oita-3858",
@@ -22715,26 +25680,31 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3858/",
-    "city": "別府市"
+    "city": "別府市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4705",
     "name": "Hostel ALA",
     "prefecture": "宮崎県",
-    "address": "〒889-1201 宮崎県児湯郡都農町川北３５３９−７",
-    "addressSource": "SaunaTime",
+    "address": "〒889-1201 宮崎県児湯郡都農町川北3539−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.249706,
     "lng": 131.565275,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4705/"
+    "sourceUrl": "https://saunatime.jp/saunas/4705/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://ala-tsuno.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4705/"
   },
   {
     "id": "st-miyazaki-867",
     "name": "カプセルルーム＆サウナ・マリノーヴァ",
     "prefecture": "宮崎県",
-    "address": "〒880-0006 宮崎県宮崎市千草町１５−８",
-    "addressSource": "SaunaTime",
+    "address": "〒880-0006 宮崎県宮崎市千草町15−8",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.917214,
     "lng": 131.418158,
     "trait": "award",
@@ -22743,14 +25713,18 @@ export const SEED_FACILITIES = [
     "city": "宮崎市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-marix.co.jp/marix/marinova/",
+    "officialUrlSource": "https://saunatime.jp/saunas/867/"
   },
   {
     "id": "st-miyazaki-4093",
     "name": "すきむらんど温泉かじかの湯",
     "prefecture": "宮崎県",
     "address": "〒886-0112 宮崎県小林市 宮崎県小林市須木下田356−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.065989,
     "lng": 131.086955,
     "trait": "onsen",
@@ -22762,7 +25736,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4093/",
-    "city": "小林市"
+    "city": "小林市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sukimuland.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4093/"
   },
   {
     "id": "st-miyazaki-4099",
@@ -22776,20 +25754,25 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4099/"
+    "sourceUrl": "https://saunatime.jp/saunas/4099/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-868",
     "name": "スパぱうぱう",
     "prefecture": "宮崎県",
-    "address": "〒880-0021 宮崎県宮崎市清水３丁目２−１０５",
-    "addressSource": "SaunaTime",
+    "address": "〒880-0021 宮崎県宮崎市清水3丁目2−105",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.918075,
     "lng": 131.417616,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/868/",
-    "city": "宮崎市"
+    "city": "宮崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotel-marix.co.jp/lagoon/spapawpaw/",
+    "officialUrlSource": "https://saunatime.jp/saunas/868/"
   },
   {
     "id": "st-miyazaki-2936",
@@ -22797,7 +25780,8 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2936/"
+    "sourceUrl": "https://saunatime.jp/saunas/2936/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4267",
@@ -22806,7 +25790,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4267/",
-    "city": "延岡市"
+    "city": "延岡市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4095",
@@ -22821,38 +25806,47 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4095/",
-    "city": "都城市"
+    "city": "都城市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4933",
     "name": "ルネサンス宮崎24",
     "prefecture": "宮崎県",
-    "address": "〒880-0879 宮崎県宮崎市宮崎駅東２丁目６−１",
-    "addressSource": "SaunaTime",
+    "address": "〒880-0879 宮崎県宮崎市宮崎駅東2丁目6−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.917276,
     "lng": 131.432275,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4933/"
+    "sourceUrl": "https://saunatime.jp/saunas/4933/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.s-re.jp/miyazaki/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4933/"
   },
   {
     "id": "st-miyazaki-4078",
     "name": "観音さくらの里",
     "prefecture": "宮崎県",
-    "address": "〒885-1205 宮崎県都城市高城町石山４１９５番地",
-    "addressSource": "SaunaTime",
+    "address": "〒885-1205 宮崎県都城市高城町石山4195番地",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.825115,
     "lng": 131.137151,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4078/"
+    "sourceUrl": "https://saunatime.jp/saunas/4078/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kannon-sakura.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4078/"
   },
   {
     "id": "st-miyazaki-4461",
     "name": "宮崎カーフェリー",
     "prefecture": "宮崎県",
-    "address": "〒880-0858 宮崎県宮崎市港３丁目１４",
-    "addressSource": "SaunaTime",
+    "address": "〒880-0858 宮崎県宮崎市港3丁目14",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.910971,
     "lng": 131.457782,
     "trait": "urban",
@@ -22863,7 +25857,11 @@ export const SEED_FACILITIES = [
       "サ飯あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4461/"
+    "sourceUrl": "https://saunatime.jp/saunas/4461/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.miyazakicarferry.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4461/"
   },
   {
     "id": "st-miyazaki-4088",
@@ -22877,14 +25875,15 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4088/"
+    "sourceUrl": "https://saunatime.jp/saunas/4088/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-25",
     "name": "宮崎第一ホテル",
     "prefecture": "宮崎県",
     "address": "宮崎県宮崎市橘通東5丁目4番14号",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.92345,
     "lng": 131.425326,
     "trait": "award",
@@ -22895,20 +25894,28 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/25/"
+    "sourceUrl": "https://saunatime.jp/saunas/25/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.23-1111.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/25/"
   },
   {
     "id": "st-miyazaki-2886",
     "name": "極楽湯 宮崎店",
     "prefecture": "宮崎県",
-    "address": "〒880-0812 宮崎県宮崎市高千穂通１丁目３ 高千穂通１丁目3番22号 エースランド内 2階",
-    "addressSource": "SaunaTime",
+    "address": "〒880-0812 宮崎県宮崎市高千穂通1丁目3 高千穂通1丁目3番22号 エースランド内 2階",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.919425,
     "lng": 131.426182,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2886/",
-    "city": "宮崎市"
+    "city": "宮崎市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.aceland.jp/gokurakuyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/2886/"
   },
   {
     "id": "st-miyazaki-4098",
@@ -22922,7 +25929,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4098/"
+    "sourceUrl": "https://saunatime.jp/saunas/4098/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4076",
@@ -22936,7 +25944,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4076/"
+    "sourceUrl": "https://saunatime.jp/saunas/4076/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-830",
@@ -22950,14 +25959,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/830/"
+    "sourceUrl": "https://saunatime.jp/saunas/830/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-3581",
     "name": "合歓木温泉 広原店",
     "prefecture": "宮崎県",
     "address": "〒885-0036 宮崎県都城市広原町9−11",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.728376,
     "lng": 131.092408,
     "trait": "onsen",
@@ -22969,7 +25979,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3581/",
-    "city": "都城市"
+    "city": "都城市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://nemunoki-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/3581/"
   },
   {
     "id": "st-miyazaki-4094",
@@ -22985,19 +25999,22 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4094/"
+    "sourceUrl": "https://saunatime.jp/saunas/4094/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4074",
     "name": "松泉宮",
     "prefecture": "宮崎県",
     "address": "〒880-8545 宮崎県宮崎市山崎町浜山",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.957913,
     "lng": 131.469779,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4074/"
+    "sourceUrl": "https://saunatime.jp/saunas/4074/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-858",
@@ -23011,7 +26028,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/858/"
+    "sourceUrl": "https://saunatime.jp/saunas/858/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4073",
@@ -23019,7 +26037,8 @@ export const SEED_FACILITIES = [
     "prefecture": "宮崎県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4073/"
+    "sourceUrl": "https://saunatime.jp/saunas/4073/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4077",
@@ -23028,7 +26047,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4077/",
-    "city": "宮崎市"
+    "city": "宮崎市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-829",
@@ -23042,14 +26062,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/829/"
+    "sourceUrl": "https://saunatime.jp/saunas/829/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4069",
     "name": "都城温泉",
     "prefecture": "宮崎県",
     "address": "〒885-0093 宮崎県都城市志比田町5468−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.741833,
     "lng": 131.059311,
     "trait": "onsen",
@@ -23061,20 +26082,26 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4069/",
-    "city": "都城市"
+    "city": "都城市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-132",
     "name": "湯之元温泉",
     "prefecture": "宮崎県",
-    "address": "宮崎県西諸県郡高原町蒲牟田７５３５",
-    "addressSource": "SaunaTime",
+    "address": "宮崎県西諸県郡高原町蒲牟田7535",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.899202,
     "lng": 130.994003,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/132/",
-    "city": "西諸郡高原町"
+    "city": "西諸郡高原町",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.yunomoto.org/",
+    "officialUrlSource": "https://saunatime.jp/saunas/132/"
   },
   {
     "id": "st-miyazaki-870",
@@ -23083,7 +26110,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/870/",
-    "city": "小林市"
+    "city": "小林市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4084",
@@ -23097,19 +26125,22 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4084/"
+    "sourceUrl": "https://saunatime.jp/saunas/4084/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-4097",
     "name": "美人の湯",
     "prefecture": "宮崎県",
-    "address": "〒886-0003 宮崎県小林市堤４３７８",
-    "addressSource": "SaunaTime",
+    "address": "〒886-0003 宮崎県小林市堤4378",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.962435,
     "lng": 131.01036,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4097/"
+    "sourceUrl": "https://saunatime.jp/saunas/4097/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-miyazaki-879",
@@ -23124,14 +26155,15 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/879/",
-    "city": "都城市"
+    "city": "都城市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-906",
     "name": "エクセルサウナタイセイ",
     "prefecture": "鹿児島県",
-    "address": "〒890-0053 鹿児島県鹿児島市中央町４−３２",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0053 鹿児島県鹿児島市中央町4−32",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.586107,
     "lng": 130.544736,
     "trait": "award",
@@ -23140,14 +26172,16 @@ export const SEED_FACILITIES = [
     "city": "鹿児島市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4159",
     "name": "かいせい乃湯",
     "prefecture": "鹿児島県",
-    "address": "〒890-0034 鹿児島県鹿児島市田上８丁目３ 田上8丁目3-3",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0034 鹿児島県鹿児島市田上8丁目3 田上8丁目3-3",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.586573,
     "lng": 130.513677,
     "trait": "onsen",
@@ -23159,14 +26193,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4159/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kaiseinoyu.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4159/"
   },
   {
     "id": "st-kagoshima-4127",
     "name": "スパランドら・ら・ら",
     "prefecture": "鹿児島県",
-    "address": "〒891-1102 鹿児島県鹿児島市 鹿児島県鹿児島市東俣町１４０１",
-    "addressSource": "SaunaTime",
+    "address": "〒891-1102 鹿児島県鹿児島市 鹿児島県鹿児島市東俣町1401",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.678438,
     "lng": 130.492264,
     "trait": "onsen",
@@ -23177,14 +26215,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4127/"
+    "sourceUrl": "https://saunatime.jp/saunas/4127/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.spa-rarara.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4127/"
   },
   {
     "id": "st-kagoshima-897",
     "name": "たぬき湯",
     "prefecture": "鹿児島県",
     "address": "〒890-0003 鹿児島県鹿児島市伊敷町 伊敷町4467",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.64491,
     "lng": 130.527813,
     "trait": "onsen",
@@ -23196,7 +26238,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/897/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://tanukiyu.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/897/"
   },
   {
     "id": "st-kagoshima-4305",
@@ -23204,39 +26250,48 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4305/"
+    "sourceUrl": "https://saunatime.jp/saunas/4305/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4160",
     "name": "フォンタナの丘かもう",
     "prefecture": "鹿児島県",
-    "address": "〒899-5307 鹿児島県姶良市蒲生町久末４３４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒899-5307 鹿児島県姶良市蒲生町久末434−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.754167,
     "lng": 130.563751,
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4160/",
-    "city": "姶良市"
+    "city": "姶良市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://f-kamou.com/spa",
+    "officialUrlSource": "https://saunatime.jp/saunas/4160/"
   },
   {
     "id": "st-kagoshima-916",
     "name": "ふれあいセンターわくわく川辺",
     "prefecture": "鹿児島県",
-    "address": "〒897-0215 鹿児島県南九州市川辺町平山２８９０−１",
-    "addressSource": "SaunaTime",
+    "address": "〒897-0215 鹿児島県南九州市川辺町平山2890−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.393772,
     "lng": 130.392102,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/916/"
+    "sourceUrl": "https://saunatime.jp/saunas/916/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ppp.seika-spc.co.jp/kawanabe/",
+    "officialUrlSource": "https://saunatime.jp/saunas/916/"
   },
   {
     "id": "st-kagoshima-902",
     "name": "ホテルニューニシノ",
     "prefecture": "鹿児島県",
-    "address": "〒892-0843 鹿児島県鹿児島市千日町１３−２４",
-    "addressSource": "SaunaTime",
+    "address": "〒892-0843 鹿児島県鹿児島市千日町13−24",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.589018,
     "lng": 130.556446,
     "trait": "award",
@@ -23247,7 +26302,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/902/"
+    "sourceUrl": "https://saunatime.jp/saunas/902/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4304",
@@ -23261,26 +26318,31 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4304/"
+    "sourceUrl": "https://saunatime.jp/saunas/4304/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-924",
     "name": "ホテルビッグマリン奄美",
     "prefecture": "鹿児島県",
-    "address": "〒894-0036 鹿児島県奄美市名瀬長浜町２７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒894-0036 鹿児島県奄美市名瀬長浜町27−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 28.396562,
     "lng": 129.495327,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/924/"
+    "sourceUrl": "https://saunatime.jp/saunas/924/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.bigmarine.co.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/924/"
   },
   {
     "id": "st-kagoshima-889",
     "name": "姶良市温泉センターくすの湯",
     "prefecture": "鹿児島県",
     "address": "〒899-5305 鹿児島県姶良市蒲生町白男1504",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.771976,
     "lng": 130.541048,
     "trait": "onsen",
@@ -23292,14 +26354,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/889/",
-    "city": "姶良市"
+    "city": "姶良市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/889/"
   },
   {
     "id": "st-kagoshima-4119",
     "name": "芦刈温泉",
     "prefecture": "鹿児島県",
-    "address": "〒890-0006 鹿児島県鹿児島市若葉町４５−１",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0006 鹿児島県鹿児島市若葉町45−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.624826,
     "lng": 130.543343,
     "trait": "onsen",
@@ -23311,14 +26377,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4119/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.asikari-spa.com/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4119/"
   },
   {
     "id": "st-kagoshima-907",
     "name": "一本桜温泉センター",
     "prefecture": "鹿児島県",
-    "address": "〒890-0082 鹿児島県鹿児島市紫原６丁目１−１８",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0082 鹿児島県鹿児島市紫原6丁目1−18",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.562707,
     "lng": 130.535079,
     "trait": "onsen",
@@ -23330,38 +26400,48 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/907/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://kks-grp.jp/ipponsakura/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/907/"
   },
   {
     "id": "st-kagoshima-4639",
     "name": "奄美ポートタワーホテル",
     "prefecture": "鹿児島県",
-    "address": "〒894-0035 鹿児島県奄美市名瀬塩浜町４−１２",
-    "addressSource": "SaunaTime",
+    "address": "〒894-0035 鹿児島県奄美市名瀬塩浜町4−12",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 28.387167,
     "lng": 129.493742,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4639/"
+    "sourceUrl": "https://saunatime.jp/saunas/4639/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://porttower.net/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4639/"
   },
   {
     "id": "st-kagoshima-925",
     "name": "奄美体験交流館",
     "prefecture": "鹿児島県",
-    "address": "〒894-1113 鹿児島県奄美市住用町大字見里１０８４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒894-1113 鹿児島県奄美市住用町大字見里1084−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 28.290421,
     "lng": 129.44415,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/925/"
+    "sourceUrl": "https://saunatime.jp/saunas/925/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-899",
     "name": "温泉お乃湯",
     "prefecture": "鹿児島県",
-    "address": "〒890-0021 鹿児島県鹿児島市小野３丁目３−５−２７",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0021 鹿児島県鹿児島市小野3丁目3−5−27",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.613046,
     "lng": 130.524526,
     "trait": "onsen",
@@ -23373,14 +26453,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/899/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.tsumagari.jp/onoyu/",
+    "officialUrlSource": "https://saunatime.jp/saunas/899/"
   },
   {
     "id": "st-kagoshima-910",
     "name": "亀乃湯(鹿児島) ",
     "prefecture": "鹿児島県",
-    "address": "〒890-0071 鹿児島県鹿児島市三和町６４−１６",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0071 鹿児島県鹿児島市三和町64−16",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.549925,
     "lng": 130.555176,
     "trait": "onsen",
@@ -23391,14 +26475,18 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/910/"
+    "sourceUrl": "https://saunatime.jp/saunas/910/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/post-48.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/910/"
   },
   {
     "id": "st-kagoshima-908",
     "name": "郡元温泉",
     "prefecture": "鹿児島県",
-    "address": "〒890-0069 鹿児島県鹿児島市南郡元町３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0069 鹿児島県鹿児島市南郡元町3−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.558605,
     "lng": 130.54679,
     "trait": "onsen",
@@ -23409,7 +26497,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/908/"
+    "sourceUrl": "https://saunatime.jp/saunas/908/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/908/"
   },
   {
     "id": "st-kagoshima-915",
@@ -23417,14 +26509,15 @@ export const SEED_FACILITIES = [
     "prefecture": "鹿児島県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/915/"
+    "sourceUrl": "https://saunatime.jp/saunas/915/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4556",
     "name": "古民家村家族湯 天空",
     "prefecture": "鹿児島県",
-    "address": "〒899-4301 鹿児島県霧島市国分重久３３９",
-    "addressSource": "SaunaTime",
+    "address": "〒899-4301 鹿児島県霧島市国分重久339",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.766403,
     "lng": 130.778498,
     "trait": "onsen",
@@ -23436,51 +26529,65 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4556/",
-    "city": "霧島市"
+    "city": "霧島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://kazokuyu-tenku.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4556/"
   },
   {
     "id": "st-kagoshima-4157",
     "name": "高尾野温泉センターもみじ",
     "prefecture": "鹿児島県",
-    "address": "〒899-0401 鹿児島県出水市高尾野町大久保６３４",
-    "addressSource": "SaunaTime",
+    "address": "〒899-0401 鹿児島県出水市高尾野町大久保634",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 32.062991,
     "lng": 130.312614,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4157/"
+    "sourceUrl": "https://saunatime.jp/saunas/4157/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4154",
     "name": "財部温泉健康センター",
     "prefecture": "鹿児島県",
-    "address": "〒899-4103 鹿児島県曽於市財部町下財部３５７−１",
-    "addressSource": "SaunaTime",
+    "address": "〒899-4103 鹿児島県曽於市財部町下財部357−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.741517,
     "lng": 131.011479,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4154/"
+    "sourceUrl": "https://saunatime.jp/saunas/4154/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://mecena-sueyoshi.com/onsen-takarabe/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4154/"
   },
   {
     "id": "st-kagoshima-4682",
     "name": "薩摩黒温泉 山華",
     "prefecture": "鹿児島県",
-    "address": "〒892-0851 鹿児島県鹿児島市上竜尾町２２−５",
-    "addressSource": "SaunaTime",
+    "address": "〒892-0851 鹿児島県鹿児島市上竜尾町22−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.613189,
     "lng": 130.554846,
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4682/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.sanga-kagoshima.jp",
+    "officialUrlSource": "https://saunatime.jp/saunas/4682/"
   },
   {
     "id": "st-kagoshima-919",
     "name": "指宿こころの湯",
     "prefecture": "鹿児島県",
-    "address": "〒891-0404 鹿児島県指宿市東方９２３６−７",
-    "addressSource": "SaunaTime",
+    "address": "〒891-0404 鹿児島県指宿市東方9236−7",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.254521,
     "lng": 130.650769,
     "trait": "onsen",
@@ -23492,14 +26599,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/919/",
-    "city": "指宿市"
+    "city": "指宿市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://ibusukikokoro.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/919/"
   },
   {
     "id": "st-kagoshima-4536",
     "name": "慈眼寺温泉",
     "prefecture": "鹿児島県",
-    "address": "〒891-0141 鹿児島県鹿児島市谷山中央６丁目３５",
-    "addressSource": "SaunaTime",
+    "address": "〒891-0141 鹿児島県鹿児島市谷山中央6丁目35",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -23511,14 +26622,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4536/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/post-53.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/4536/"
   },
   {
     "id": "st-kagoshima-876",
     "name": "前田温泉 カジロが湯",
     "prefecture": "鹿児島県",
-    "address": "〒899-6603 鹿児島県霧島市牧園町高千穂３９１４",
-    "addressSource": "SaunaTime",
+    "address": "〒899-6603 鹿児島県霧島市牧園町高千穂3914",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.893155,
     "lng": 130.827889,
     "trait": "onsen",
@@ -23529,7 +26644,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/876/"
+    "sourceUrl": "https://saunatime.jp/saunas/876/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://maedasangyo.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/876/"
   },
   {
     "id": "st-kagoshima-922",
@@ -23545,14 +26664,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/922/"
+    "sourceUrl": "https://saunatime.jp/saunas/922/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-kagoshima-4518",
     "name": "竹迫温泉",
     "prefecture": "鹿児島県",
-    "address": "〒890-0056 鹿児島県鹿児島市下荒田３丁目２２−１０",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0056 鹿児島県鹿児島市下荒田3丁目22−10",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 0,
     "lng": 0,
     "trait": "onsen",
@@ -23564,14 +26684,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4518/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://takezako-onsen.com/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4518/"
   },
   {
     "id": "st-kagoshima-4130",
     "name": "中山温泉",
     "prefecture": "鹿児島県",
-    "address": "〒891-0105 鹿児島県鹿児島市中山町１３９０",
-    "addressSource": "SaunaTime",
+    "address": "〒891-0105 鹿児島県鹿児島市中山町1390",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.545254,
     "lng": 130.501497,
     "trait": "wood",
@@ -23585,14 +26709,18 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4130/",
-    "city": "鹿児島市"
+    "city": "鹿児島市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www13.plala.or.jp/chuzanonsen/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/4130/"
   },
   {
     "id": "st-kagoshima-4116",
     "name": "天然温泉･太陽ヘルスセンター",
     "prefecture": "鹿児島県",
-    "address": "〒890-0045 鹿児島県鹿児島市武３丁目６−５",
-    "addressSource": "SaunaTime",
+    "address": "〒890-0045 鹿児島県鹿児島市武3丁目6−5",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 31.578788,
     "lng": 130.537098,
     "trait": "onsen",
@@ -23603,26 +26731,32 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4116/"
+    "sourceUrl": "https://saunatime.jp/saunas/4116/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4316",
     "name": "ANAインターコンチネンタル石垣リゾート",
     "prefecture": "沖縄県",
-    "address": "〒907-0002 沖縄県石垣市真栄里３５４−１",
-    "addressSource": "SaunaTime",
+    "address": "〒907-0002 沖縄県石垣市真栄里354−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 24.335868,
     "lng": 124.189368,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4316/"
+    "sourceUrl": "https://saunatime.jp/saunas/4316/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.anaintercontinental-ishigaki.jp/facilities/#lnk_bath",
+    "officialUrlSource": "https://saunatime.jp/saunas/4316/"
   },
   {
     "id": "st-okinawa-2942",
     "name": "ANAクラウンプラザホテル沖縄ハーバービュー",
     "prefecture": "沖縄県",
-    "address": "〒900-0021 沖縄県那覇市泉崎２丁目４６",
-    "addressSource": "SaunaTime",
+    "address": "〒900-0021 沖縄県那覇市泉崎2丁目46",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.209027,
     "lng": 127.680405,
     "trait": "award",
@@ -23633,43 +26767,59 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2942/"
+    "sourceUrl": "https://saunatime.jp/saunas/2942/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "http://www.anacpokinawa.com/facilities/spa_sauna/index.html#mensnauna",
+    "officialUrlSource": "https://saunatime.jp/saunas/2942/"
   },
   {
     "id": "st-okinawa-935",
     "name": "EMウェルネス 暮らしの発酵ライフスタイルリゾート",
     "prefecture": "沖縄県",
-    "address": "〒901-2311 沖縄県中頭郡北中城村喜舎場１４７８",
-    "addressSource": "SaunaTime",
+    "address": "〒901-2311 沖縄県中頭郡北中城村喜舎場1478",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.306437,
     "lng": 127.795485,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/935/"
+    "sourceUrl": "https://saunatime.jp/saunas/935/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.costavista.jp/",
+    "officialUrlSource": "https://saunatime.jp/saunas/935/"
   },
   {
     "id": "st-okinawa-4735",
     "name": "PROSTYLE TERRACE NAHA",
     "prefecture": "沖縄県",
-    "address": "〒900-0033 沖縄県那覇市久米２丁目３−２",
-    "addressSource": "SaunaTime",
+    "address": "〒900-0033 沖縄県那覇市久米2丁目3−2",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.216304,
     "lng": 127.677204,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4735/"
+    "sourceUrl": "https://saunatime.jp/saunas/4735/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.prostyleryokan.com/okinawa/terracenaha/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4735/"
   },
   {
     "id": "st-okinawa-116",
     "name": "アートホテル石垣島 にぃふぁい湯",
     "prefecture": "沖縄県",
     "address": "沖縄県石垣市大川559",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 24.347877,
     "lng": 124.16045,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/116/"
+    "sourceUrl": "https://saunatime.jp/saunas/116/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.art-ishigakijima.com/facilities/bath.php",
+    "officialUrlSource": "https://saunatime.jp/saunas/116/"
   },
   {
     "id": "st-okinawa-938",
@@ -23677,7 +26827,8 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/938/"
+    "sourceUrl": "https://saunatime.jp/saunas/938/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4312",
@@ -23685,7 +26836,8 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4312/"
+    "sourceUrl": "https://saunatime.jp/saunas/4312/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-939",
@@ -23693,7 +26845,8 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/939/"
+    "sourceUrl": "https://saunatime.jp/saunas/939/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4356",
@@ -23701,26 +26854,31 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4356/"
+    "sourceUrl": "https://saunatime.jp/saunas/4356/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4317",
     "name": "グランヴィリオリゾート石垣島グランヴィリオガーデン",
     "prefecture": "沖縄県",
     "address": "〒907-0024 沖縄県石垣市新川舟蔵2481−1",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 24.357066,
     "lng": 124.124179,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4317/"
+    "sourceUrl": "https://saunatime.jp/saunas/4317/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.grandvrio-hotelresort.com/ishigaki/grandvriogarden/relaxation/#link02",
+    "officialUrlSource": "https://saunatime.jp/saunas/4317/"
   },
   {
     "id": "st-okinawa-933",
     "name": "グリーンサウナ",
     "prefecture": "沖縄県",
-    "address": "〒904-0033 沖縄県沖縄市山里２丁目９−６ 植村ビル",
-    "addressSource": "SaunaTime",
+    "address": "〒904-0033 沖縄県沖縄市山里2丁目9−6 植村ビル",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.322594,
     "lng": 127.791618,
     "trait": "award",
@@ -23729,7 +26887,9 @@ export const SEED_FACILITIES = [
     "city": "沖縄市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-2893",
@@ -23737,7 +26897,8 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/2893/"
+    "sourceUrl": "https://saunatime.jp/saunas/2893/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3984",
@@ -23752,19 +26913,24 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3984/",
-    "city": "宮古島市"
+    "city": "宮古島市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-934",
     "name": "テルメヴィラちゅらーゆ",
     "prefecture": "沖縄県",
-    "address": "〒904-0115 沖縄県中頭郡北谷町美浜（字）２ テルメヴィラちゅらーゆ",
-    "addressSource": "SaunaTime",
+    "address": "〒904-0115 沖縄県中頭郡北谷町美浜(字)2 テルメヴィラちゅらーゆ",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.313273,
     "lng": 127.75578,
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/934/"
+    "sourceUrl": "https://saunatime.jp/saunas/934/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotespa.net/spa/chula-u/",
+    "officialUrlSource": "https://saunatime.jp/saunas/934/"
   },
   {
     "id": "st-okinawa-4314",
@@ -23772,7 +26938,8 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4314/"
+    "sourceUrl": "https://saunatime.jp/saunas/4314/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4315",
@@ -23780,19 +26947,24 @@ export const SEED_FACILITIES = [
     "prefecture": "沖縄県",
     "trait": "urban",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4315/"
+    "sourceUrl": "https://saunatime.jp/saunas/4315/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4734",
     "name": "プロスタイル旅館那覇県庁前",
     "prefecture": "沖縄県",
-    "address": "〒900-0033 沖縄県那覇市久米２丁目２−１",
-    "addressSource": "SaunaTime",
+    "address": "〒900-0033 沖縄県那覇市久米2丁目2−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.215582,
     "lng": 127.676587,
     "trait": "award",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4734/"
+    "sourceUrl": "https://saunatime.jp/saunas/4734/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.prostyleryokan.com/okinawa/kenchomae/",
+    "officialUrlSource": "https://saunatime.jp/saunas/4734/"
   },
   {
     "id": "st-okinawa-3989",
@@ -23809,7 +26981,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3989/",
-    "city": "国頭郡本部町"
+    "city": "国頭郡本部町",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-4311",
@@ -23823,7 +26996,8 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/4311/"
+    "sourceUrl": "https://saunatime.jp/saunas/4311/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3988",
@@ -23839,26 +27013,31 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3988/"
+    "sourceUrl": "https://saunatime.jp/saunas/3988/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-940",
     "name": "りっかりっか湯",
     "prefecture": "沖縄県",
-    "address": "〒900-0013 沖縄県那覇市牧志２丁目２−１６−３６",
-    "addressSource": "SaunaTime",
+    "address": "〒900-0013 沖縄県那覇市牧志2丁目2−16−36",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.217926,
     "lng": 127.68852,
     "trait": "onsen",
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/940/"
+    "sourceUrl": "https://saunatime.jp/saunas/940/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.nahacen.com/rikka/index.html#kihon",
+    "officialUrlSource": "https://saunatime.jp/saunas/940/"
   },
   {
     "id": "st-okinawa-937",
     "name": "浦添の湯",
     "prefecture": "沖縄県",
-    "address": "〒901-2112 沖縄県浦添市沢岻２丁目２３−１",
-    "addressSource": "SaunaTime",
+    "address": "〒901-2112 沖縄県浦添市沢岻2丁目23−1",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.234569,
     "lng": 127.707531,
     "trait": "onsen",
@@ -23869,7 +27048,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/937/"
+    "sourceUrl": "https://saunatime.jp/saunas/937/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.xystus.okinawa/fitness_shopinfo.php#i02",
+    "officialUrlSource": "https://saunatime.jp/saunas/937/"
   },
   {
     "id": "st-okinawa-4310",
@@ -23884,7 +27067,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4310/",
-    "city": "国頭郡恩納村"
+    "city": "国頭郡恩納村",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-932",
@@ -23893,7 +27077,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/932/",
-    "city": "沖縄市"
+    "city": "沖縄市",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3465",
@@ -23907,14 +27092,15 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3465/"
+    "sourceUrl": "https://saunatime.jp/saunas/3465/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3985",
     "name": "宮古島温泉",
     "prefecture": "沖縄県",
-    "address": "〒906-0011 沖縄県宮古島市平良東仲宗根添１８９８−１９",
-    "addressSource": "SaunaTime",
+    "address": "〒906-0011 沖縄県宮古島市平良東仲宗根添1898−19",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 24.77059,
     "lng": 125.341585,
     "trait": "onsen",
@@ -23925,7 +27111,11 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3985/"
+    "sourceUrl": "https://saunatime.jp/saunas/3985/",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://miyakojima-onsen.co.jp/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/3985/"
   },
   {
     "id": "st-okinawa-930",
@@ -23937,7 +27127,8 @@ export const SEED_FACILITIES = [
     "city": "うるま市",
     "tags": [
       "男性専用"
-    ]
+    ],
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3050",
@@ -23951,7 +27142,8 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3050/"
+    "sourceUrl": "https://saunatime.jp/saunas/3050/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-3986",
@@ -23965,14 +27157,15 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "SaunaTime",
-    "sourceUrl": "https://saunatime.jp/saunas/3986/"
+    "sourceUrl": "https://saunatime.jp/saunas/3986/",
+    "sourceCheckedAt": "2026-10-18"
   },
   {
     "id": "st-okinawa-118",
     "name": "琉球温泉 龍神の湯",
     "prefecture": "沖縄県",
     "address": "沖縄県豊見城市字瀬長174-5",
-    "addressSource": "SaunaTime",
+    "addressSource": "SaunaTime参照ページ",
     "lat": 26.176251,
     "lng": 127.641388,
     "trait": "onsen",
@@ -23984,7 +27177,11 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/118/",
-    "city": "豊見城市"
+    "city": "豊見城市",
+    "sourceCheckedAt": "2026-10-18",
+    "addressCheckedAt": "2026-10-18",
+    "officialUrl": "https://www.hotelwbf.com/senaga/jp/hotbath/index.html",
+    "officialUrlSource": "https://saunatime.jp/saunas/118/"
   },
   {
     "id": "si-hokkaido-98",
@@ -49442,7 +52639,11 @@ export const SEED_FACILITIES = [
     "name": "山王温泉 喜多の湯",
     "prefecture": "愛知県",
     "address": "〒454-0011 愛知県名古屋市中川区山王1-601",
-    "addressSource": "公式/国土地理院住所検索",
+    "addressSource": "施設公式店舗案内",
+    "addressCheckedAt": "2026-10-18",
+    "addressVerificationUrl": "https://super-sentou.com/shop-information/sanno-onsen/",
+    "note": "公式案内では名鉄山王駅から徒歩5分。館内に食事処を併設しています。",
+    "access": "名鉄名古屋本線の山王駅から徒歩5分。",
     "lat": 35.153732,
     "lng": 136.890625,
     "city": "名古屋市中川区山王",
