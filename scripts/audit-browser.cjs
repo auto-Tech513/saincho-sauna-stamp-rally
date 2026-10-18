@@ -16,6 +16,7 @@ async (page) => {
   });
   await page.setViewportSize({width:390,height:844});
   await page.goto(base);
+  await page.locator("#facilityList .facility-card").first().waitFor();
   await page.evaluate(()=>localStorage.removeItem("saincho-profile-v1"));
   await page.reload();
   await page.locator("#facilityList .facility-card").first().waitFor();
@@ -39,6 +40,15 @@ async (page) => {
   await page.waitForTimeout(400);
   const delays=await page.evaluate(()=>window.auditInputDelays.sort((a,b)=>a-b));
   results.push({check:"typing-next-frame",samples:delays.length,p95Ms:delays[Math.floor(delays.length*.95)]||0});
+  await page.getByRole("button",{name:"サ印",exact:true}).click();
+  assert(await page.locator(".stamp-tile").count()===36,"Passport renders too many tiles");
+  await page.locator("[data-show-more-passport]").click();
+  assert(await page.locator(".stamp-tile").count()===72,"Passport load more failed");
+  await page.locator('[data-passport-prefecture="北海道"]').click();
+  assert(await page.locator(".stamp-tile").count()===36,"Passport filter does not reset pagination");
+  await page.locator(".stamp-tile").first().click();
+  await page.locator(".facility-detail").waitFor();
+  results.push({check:"passport-pagination-and-detail",passed:true});
   await page.getByRole("button",{name:"記録",exact:true}).click();
   await page.locator("#profileNickname").fill("監査用サウナー");
   await page.locator("#profileEmail").fill(`audit-${Date.now()}@example.test`);
@@ -47,6 +57,10 @@ async (page) => {
   await page.waitForFunction(()=>document.querySelector("#profileFeedback").textContent.includes("送信できません"));
   assert(await page.locator("#profileNickname").inputValue()==="監査用サウナー","Profile draft lost on failed save");
   await page.unroute("**/api/ranking");
+  const retryRead = page.waitForResponse(response=>response.url().endsWith("/api/ranking") && response.request().method()==="GET");
+  await page.locator("#leaderboardSyncButton").click();
+  assert((await retryRead).status()===200,"Ranking reload failed after write error");
+  assert((await page.locator("#profileFeedback").textContent()).includes("送信できません"),"Read success hides failed registration");
   const registration = page.waitForResponse(response=>response.url().endsWith("/api/ranking") && response.request().method()==="POST");
   await page.locator("#profileForm button[type=submit]").click();
   assert((await registration).status()===200,"Ranking registration was not accepted");

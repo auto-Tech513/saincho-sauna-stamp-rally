@@ -21,7 +21,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261018-audit-v1";
+const APP_BUILD_ID = "20261018-audit-v2";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -804,6 +804,7 @@ const reviewRequests = new Set();
 let rankingLoading = false;
 let rankingSaving = false;
 let rankingLastError = "";
+let rankingWriteError = "";
 let rankingUpdatedAt = "";
 let searchWarmScheduled = false;
 let facilityFeatureCache = new Map();
@@ -1291,6 +1292,11 @@ function bindEvents() {
       renderExplore();
       return;
     }
+    if (target.closest("[data-show-more-passport]")) {
+      visibleLimit += 36;
+      renderPassport();
+      return;
+    }
 
     const button = target.closest("[data-action]");
     if (!button) return;
@@ -1676,6 +1682,7 @@ function isBottomNavTouch(clientY) {
 
 function setView(view) {
   if (!VIEW_META[view]) view = "Explore";
+  if (view === "Passport") visibleLimit = 36;
   if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
   if (view !== "Facility") activeFacilityId = "";
   activeView = view;
@@ -2533,7 +2540,7 @@ function renderPassport() {
     return;
   }
 
-  el.stampGrid.innerHTML = sorted.map((facility) => {
+  el.stampGrid.innerHTML = sorted.slice(0, visibleLimit).map((facility) => {
     const visited = state.visited[facility.id];
     const memo = getFacilityMemo(facility.id);
     const date = visited ? formatDate(visited.at) : "未押印";
@@ -2548,7 +2555,9 @@ function renderPassport() {
         ${visited ? `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
       </article>
     `;
-  }).join("");
+  }).join("") + (sorted.length > visibleLimit
+    ? `<button class="load-more-button" type="button" data-show-more-passport>さらに${Math.min(36, sorted.length - visibleLimit)}件表示</button>`
+    : "");
 }
 
 function renderPassportPrefStrip() {
@@ -5205,10 +5214,10 @@ async function loadRanking() {
     rankingConfigured = payload.configured !== false;
     leaderboardEntries = normalizeRankingEntries(payload.entries || []);
     rankingUpdatedAt = new Date().toISOString();
-    rankingLastError = payload.configured === false ? "現在ランキングを公開できません。時間を置いて再試行してください。" : "";
+    rankingLastError = rankingWriteError || (payload.configured === false ? "現在ランキングを公開できません。時間を置いて再試行してください。" : "");
   } catch {
     rankingConfigured = false;
-    rankingLastError = "最新ランキングを取得できませんでした。前回の表示を保持しています。「更新」で再試行できます。";
+    rankingLastError = rankingWriteError || "最新ランキングを取得できませんでした。前回の表示を保持しています。「更新」で再試行できます。";
   } finally {
     rankingLoading = false;
     renderLeaderboard();
@@ -5228,6 +5237,7 @@ async function syncRanking({ announce } = { announce: false }) {
     return;
   }
   rankingSaving = true;
+  rankingWriteError = "";
   rankingLastError = "";
   renderLeaderboard();
   const stamps = Object.keys(state.visited).length;
@@ -5245,7 +5255,7 @@ async function syncRanking({ announce } = { announce: false }) {
       }),
       signal: AbortSignal.timeout(12000),
     });
-    if (!response.ok) throw new Error(response.status === 429 ? "送信が多いため少し時間を置いて再試行してください。" : response.status === 403 ? "この参加情報は別の端末で登録済みです。保存した元の端末で更新してください。" : "ランキングへ送信できませんでした。入力は保存されています。再度「ランキングに参加」を押してください。");
+    if (!response.ok) throw new Error(response.status === 429 ? "送信が多いため少し時間を置いて再試行してください。" : response.status === 403 ? "参加情報を照合できませんでした。登録時のメールアドレスと元の端末を確認してください。" : "ランキングへ送信できませんでした。入力は保存されています。再度「ランキングに参加」を押してください。");
     const payload = await response.json();
     rankingConfigured = true;
     leaderboardEntries = normalizeRankingEntries(payload.entries || []);
@@ -5255,6 +5265,7 @@ async function syncRanking({ announce } = { announce: false }) {
   } catch (error) {
     rankingConfigured = false;
     rankingLastError = error.name === "TimeoutError" ? "通信が時間切れになりました。登録内容は保存されています。再送信してください。" : error.message;
+    rankingWriteError = rankingLastError;
     if (announce) showToast("ランキングへの送信に失敗しました。登録欄で再試行できます");
   } finally {
     rankingSaving = false;

@@ -1786,7 +1786,7 @@ body.view-facility .summary-band {
   grid-column: 1 / -1;
   min-height: 48px;
   color: white;
-  background: none;
+  background: #00766d;
   border-radius: 8px;
   font-weight: 700;
   box-shadow: 0 10px 22px rgb(10 143 138 / 0.18);

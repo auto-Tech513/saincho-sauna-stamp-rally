@@ -26,3 +26,9 @@ test("a broad search does not get trapped in the first prefecture",()=>{
   vm.runInContext('PREFECTURES=[{name:"北海道"},{name:"愛知県"}]; selectedPrefecture="愛知県"; facilitySearchCache=[{facility:{prefecture:"北海道"},haystack:buildSearchBlob(["サウナ北海道"])},{facility:{prefecture:"愛知県"},haystack:buildSearchBlob(["サウナ愛知"])}]; moveToSearchPrefecture("サウナ");',context);
   assert.equal(vm.runInContext('selectedPrefecture',context),"全国");
 });
+test("a successful ranking read does not hide a failed registration",async()=>{
+  context.fetch=async()=>({ok:true,json:async()=>({configured:true,entries:[]})});
+  context.AbortSignal=AbortSignal;
+  await vm.runInContext('renderLeaderboard=()=>{}; rankingWriteError="登録送信に失敗"; loadRanking()',context);
+  assert.equal(vm.runInContext('rankingLastError',context),"登録送信に失敗");
+});
