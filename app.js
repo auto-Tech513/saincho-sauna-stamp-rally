@@ -5,7 +5,7 @@ import {
   haversineDistanceKm,
   isUsableNearbyPosition,
 } from "./nearby.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures } from "./facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields } from "./facility-evidence.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -22,7 +22,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261019-facility-notebook-v1";
+const APP_BUILD_ID = "20261019-official-catalog-v2";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -31,7 +31,7 @@ const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
 const MENU_SWIPE_DISTANCE = 72;
 const MENU_SWIPE_MAX_VERTICAL = 64;
-const SEARCH_RENDER_DELAY_MS = 120;
+const SEARCH_RENDER_DELAY_MS = 80;
 const APP_URL = "https://saincho-sauna-stamp-rally.pages.dev/";
 const JAPAN_MAP_URL = "./assets/japan-map-mobile.svg";
 const CHECKIN_REQUIRED_MS = 60 * 60 * 1000;
@@ -1763,6 +1763,7 @@ function isBottomNavTouch(clientY) {
 
 function setView(view) {
   if (!VIEW_META[view]) view = "Explore";
+  if (view !== "Explore") clearSearchRenderTimer();
   if (view === "Passport") visibleLimit = 36;
   if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
   if (view !== "Facility") activeFacilityId = "";
@@ -1774,6 +1775,7 @@ function setView(view) {
 }
 
 function openFacilityDetail(facility) {
+  clearSearchRenderTimer();
   facilityDetailTab = "info";
   activeFacilityId = facility.id;
   activeView = "Facility";
@@ -2007,8 +2009,11 @@ function renderFilterButtons() {
 
 function scheduleSearchRender(value, options = {}) {
   clearSearchRenderTimer();
+  delete el.searchResultsStatus.dataset.searchElapsedMs;
+  delete el.searchResultsStatus.dataset.searchRenderMs;
+  const startedAt = performance.now();
   const delay = options.immediate ? 0 : SEARCH_RENDER_DELAY_MS;
-  searchRenderTimer = window.setTimeout(() => applySearchValue(value), delay);
+  searchRenderTimer = window.setTimeout(() => applySearchValue(value, startedAt), delay);
 }
 
 function clearSearchRenderTimer() {
@@ -2018,7 +2023,7 @@ function clearSearchRenderTimer() {
   searchRenderTimer = 0;
 }
 
-async function applySearchValue(value) {
+async function applySearchValue(value, startedAt = performance.now()) {
   const generation = ++searchGeneration;
   searchRenderTimer = 0;
   if (value.trim()) {
@@ -2039,16 +2044,20 @@ async function applySearchValue(value) {
       return false;
     }
   }
-  if (generation !== searchGeneration || isSearchComposing || el.searchInput.value !== value) return false;
+  if (generation !== searchGeneration || activeView !== "Explore" || isSearchComposing || el.searchInput.value !== value) return false;
+  const renderStartedAt = performance.now();
   setSearchTerm(value);
   visibleLimit = 36;
-  const moved = moveToSearchPrefecture(value);
-  if (moved) {
-    renderAll();
-  } else {
-    renderExplore();
+  moveToSearchPrefecture(value);
+  if (!value.trim()) {
+    renderSummary();
+    renderQuestPanel();
   }
+  renderExplore();
   if (document.activeElement === el.searchInput) el.main.scrollTo({ top: 0, behavior: "instant" });
+  // Local diagnostics only: no query text or timing is transmitted to a server.
+  el.searchResultsStatus.dataset.searchElapsedMs = (performance.now() - startedAt).toFixed(1);
+  el.searchResultsStatus.dataset.searchRenderMs = (performance.now() - renderStartedAt).toFixed(1);
   return true;
 }
 
@@ -2283,9 +2292,9 @@ function renderFacilityDetail() {
           ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></dd></div>`).join("")}
           <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
-          ${!evidence ? `<div><dt>料金・時間・設備</dt><dd>公式情報の再照合が未完了です。未掲載は「設備なし」を意味しません。</dd></div>` : ""}
         </dl>
-        <p class="facility-provenance">${evidence ? "上記の公式出典を2026年10月19日に照合。臨時休業・料金変更は訪問前にも確認してください。" : `全項目の最新性は未確認です。${facility.sourceCheckedAt ? `参照ページの確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}`}</p>
+        ${getMissingEvidenceFields(facility).length ? `<p class="facility-provenance">未照合の項目: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。設備の有無は断定していません。</p>` : ""}
+        <p class="facility-provenance">${evidence ? "掲載した公式情報は2026年10月19日照合。温度は設定・掲載値であり実測値ではありません。臨時変更は公式で確認してください。" : `全項目の最新性は未確認です。${facility.sourceCheckedAt ? `参照ページの確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}`}</p>
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
         <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
@@ -2324,7 +2333,7 @@ function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
 
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
-  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "設備・温度", "水風呂", "利用条件"].includes(row.label)).slice(0, 3) || [];
+  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "設備・温度", "水風呂", "利用条件"].includes(row.label)).slice(0, 4) || [];
   return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? "公式照合 2026-10-19 · 条件・出典は詳細へ" : "料金・営業時間・設備は未再照合 · 参照元で確認"}</p>`;
 }
 function renderCheckinPanel(facility) {
@@ -4699,7 +4708,7 @@ function getFacilities() {
     trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
     tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
   }));
-  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom].map(applyFacilityEvidence));
+  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom].map(applyFacilityEvidence)).map(applyFacilityEvidence);
   return facilitiesCache;
 }
 
@@ -4755,6 +4764,7 @@ function createFacilitySearchRecord(facility) {
       facility.access,
       facility.facilityType,
       memo?.text,
+      ...(getFacilityEvidence(facility)?.facts || []).map(row => `${row.label} ${row.value}`),
       ...features,
       ...features.flatMap((feature) => FEATURE_ALIASES[feature] || []),
       ...(facility.tags || []).filter(tag => !normalizeFeature(tag)),
@@ -4835,7 +4845,7 @@ function getFacilityAreaLabel(facility) {
 function getFacilityCoordinate(facility) {
   const lat = Number(facility.lat);
   const lng = Number(facility.lng);
-  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return "";
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat < 20 || lat > 46 || lng < 122 || lng > 154) return "";
   return `${lat},${lng}`;
 }
 

@@ -1,6 +1,7 @@
 import { load } from "cheerio";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
+import { addressIssues } from "./audit-facility-evidence.mjs";
 
 const apply = process.argv.includes("--apply");
 const limit = Number(process.argv.find(arg => arg.startsWith("--limit="))?.split("=")[1]) || Infinity;
@@ -17,7 +18,7 @@ await Promise.all(Array.from({length: 4}, async () => {
     results.push(result);
     if (apply && result.valid) {
       facility.sourceCheckedAt = checkedAt;
-      if (result.address) {
+      if (result.address && !/^https?:\/\//.test(facility.addressSource || "")) {
         facility.address = result.address;
         facility.addressSource = "SaunaTime参照ページ";
         facility.addressCheckedAt = checkedAt;
@@ -60,6 +61,8 @@ async function inspect(facility) {
     if (!normalize(title).includes(normalize(facility.name))) return {...base,error:"facility-name-mismatch",title};
     const address = $(".sauna-access .address").text().normalize("NFKC").replace(/^\s*住所[：:]\s*/,"").replace(/\s+/g," ").trim();
     if (address && (!address.includes(facility.prefecture) || address.length>180 || !/\d/.test(address))) return {...base,error:"address-invalid",observedAddress:address};
+    const issues = addressIssues({ ...facility, address });
+    if (issues.length) return {...base,error:"address-review-required",observedAddress:address,issues};
     const officialCandidate = $(".sauna-official-page a[href]").first().attr("href") || "";
     const officialUrl = /^https?:\/\//.test(officialCandidate) && !/saunatime\.jp|sauna-ikitai\.com/.test(new URL(officialCandidate).host) ? officialCandidate : "";
     const latitude = Number($(".sauna-access .latitude").text());

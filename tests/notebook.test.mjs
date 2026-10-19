@@ -105,7 +105,7 @@ test("HTTP success without the posted review is not reported as publication succ
 });
 
 test("official evidence is field-dated, alias-safe and never promotes legacy equipment", () => {
-  assert.equal(evidence.FACILITY_EVIDENCE.length, 6);
+  assert.equal(evidence.FACILITY_EVIDENCE.length, 18);
   for (const profile of evidence.FACILITY_EVIDENCE) {
     for (const row of profile.facts) {
       assert.equal(row.checkedAt, "2026-10-19");

@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
+import { addressIssues } from "./audit-facility-evidence.mjs";
 
 const args = new Map(process.argv.slice(2).map((arg) => {
   const [key, value = "true"] = arg.replace(/^--/, "").split("=");
@@ -103,8 +104,8 @@ async function fetchAddress(facility) {
       }
       const match = html.match(/<th[^>]*>\s*住所\s*<\/th>\s*<td[^>]*>([\s\S]*?)<\/td>/i);
       const address = normalizeAddress(match?.[1] || "", facility.prefecture);
-      if (address && !address.includes(facility.prefecture)) {
-        return { address: "", error: "prefecture-mismatch" };
+      if (address && (!address.includes(facility.prefecture) || addressIssues({ ...facility, address }).length)) {
+        return { address: "", error: "address-review-required" };
       }
       return { address, status: response.status, checkedAt: new Date().toISOString() };
     } catch (error) {

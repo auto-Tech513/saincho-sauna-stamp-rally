@@ -23,7 +23,7 @@ Cloudflare Pages では、ビルドコマンドを `npm run build`、出力デ�
 - `robots.txt`、分割 `sitemap.xml`、canonical、FAQ/HowTo/WebApplication/LocalBusinessの構造化データ、折りたたみの検索意図Q&Aを追加し、検索エンジンとAI回答が「サウナ スタンプラリー」「サウナ 御朱印」「サウナ 検索」「サウナ 記録」の文脈を読み取りやすい形にしています。
 - Google Search Console の URL プレフィックス確認用に `google4f1c271dfaceddbb.html` をルートへ配置しています。
 - Google Analytics 4 は専用プロパティ「サ印帳アプリ」とWebストリーム「サ印帳 Web」を作成し、測定ID `G-FHGXDGF0M7` を `index.html` に設定しています。SPA遷移、押印、行きたい、お気に入り、共有、アフィリエイトクリック、ランキング参加もイベント送信します。
-- `sw.js` は `saincho-v39-seo-cache` として、HTML/manifest/主要アイコンなど最小限のアプリシェルだけを事前キャッシュします。`public` のハッシュ付き `app/data/content/styles` は immutable キャッシュで配信し、大きな背景画像は初回プリキャッシュから外しています。
+- `sw.js` はバージョン別キャッシュとして、HTML/manifest/主要アイコンなど最小限のアプリシェルだけを事前キャッシュします。`public` のハッシュ付き `app/data/content/styles` は immutable キャッシュで配信し、大きな背景画像は初回プリキャッシュから外しています。
 - `/gear/`、`/stay/`、`/contact/`、`/sameshi/`、`/guide/`、`/ranking/`、`/passport/`、`/pref/<slug>/`、`/facility/<id>/` は `public/` に静的HTMLを生成します。未知URLはSPAの200フォールバックにせず、404として返す前提です。
 - `llms.txt` を追加し、AI検索・回答エンジン向けにサ印帳の概要と主要URLを明示しています。
 - 記録画面と設定メニューに共有導線を追加し、Web Share API、LINE共有、URLコピーで紹介しやすい状態にしています。
@@ -35,6 +35,7 @@ Cloudflare Pages では、ビルドコマンドを `npm run build`、出力デ�
 - 検索意図別ページ、WebSite・WebApplication・パンくず・確認条件を満たす施設のLocalBusiness構造化データ、`llms.txt` を整備しています。検索順位やAI回答への掲載を保証するものではありません。
 - 別名や参照元違いの施設を統合します。施設詳細は「施設情報・サ活ノート・口コミ」の切り替え式です。メモ・セット記録・口コミは本文1欄に統合し、口コミは明示選択時だけ公開します。大型の4種メモテンプレートは廃止しました。
 - `facility-evidence.js` に公式出典と項目別の確認日を管理します。全施設の最新性は未確認であり、旧設備タグは確定表示・設備検索から分離しています。照合範囲と未達項目は [施設詳細監査](docs/facility-notebook-audit-2026-10-19.md) を参照してください。
+- 2026年10月19日の公式照合・住所訂正・検索実測は [公式情報訂正の検証記録](docs/official-catalog-corrections-2026-10-19.md) を参照してください。`npm run audit:evidence` は出典構造と住所の機械検査、`npm run audit:evidence -- --strict` は公式項目の掲載率95%以上の検査です。構造検査の成功を全国データ品質の合格とは扱いません。
 - ヘッダーのロゴ/「サ印帳」はトップ画面へ戻る操作点です。検索語、県、特徴フィルタをリセットして、スマホでも迷わず最初の検索画面に戻れるよう、Gearボタンとハンバーガーメニューとは別の常時導線にしています。
 
 ## 参照サイト分析

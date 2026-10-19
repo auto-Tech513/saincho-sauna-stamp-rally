@@ -6,7 +6,7 @@ import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, SAUNA_ARTICLES } from "../content.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures } from "../facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields } from "../facility-evidence.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const execFileAsync = promisify(execFile);
@@ -447,15 +447,15 @@ function renderFacilitySsr(facility) {
     <p>${escapeHtml(area)}</p>
     <dl>
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
-      <div><dt>設備</dt><dd>${escapeHtml(tags.length ? tags.join(" / ") : "公式再照合が未完了。未掲載は設備なしを意味しません。")}</dd></div>
+      ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
       ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}照合）</dd></div>`).join("")}
+      ${getMissingEvidenceFields(facility).length ? `<div><dt>未照合の項目</dt><dd>${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。設備の有無は断定していません。</dd></div>` : ""}
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
       ${note && !evidence ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
       ${facility.addressCheckedAt || facility.sourceCheckedAt ? `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(facility.addressCheckedAt || facility.sourceCheckedAt)}">${escapeHtml(facility.addressCheckedAt || facility.sourceCheckedAt)}</time></dd></div>` : ""}
     </dl>
-    <p>${escapeHtml(getFacilityDescription(facility))}</p>
     <p>${escapeHtml(quality.description)}</p>
     <p><a href="/contact/">情報修正を知らせる</a></p>
     ${prefSlug ? `<p><a href="/pref/${prefSlug}/">${escapeHtml(facility.prefecture)}のサウナ一覧へ戻る</a></p>` : ""}

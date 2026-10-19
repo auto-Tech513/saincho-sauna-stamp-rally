@@ -8,6 +8,7 @@
     "refresh:catalog": "node scripts/refresh-catalog.mjs",
     "build": "node scripts/build-seo.mjs",
     "audit": "node scripts/audit-data.mjs",
+    "audit:evidence": "node scripts/audit-facility-evidence.mjs",
     "enrich:addresses": "node scripts/enrich-addresses.mjs",
     "audit:links": "node scripts/check-source-links.mjs --sample=60",
     "audit:hatena": "node scripts/audit-hatena-queue.mjs",
