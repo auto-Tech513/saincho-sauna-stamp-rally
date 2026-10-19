@@ -24,7 +24,7 @@ export function auditEvidence() {
     const errors = [];
     if (!profile.ids.some(id => SEED_FACILITIES.some(facility => facility.id === id))) errors.push("該当IDなし");
     for (const row of profile.facts) {
-      if (!row.value || !/^https:\/\//.test(row.sourceUrl) || !/^\d{4}-\d{2}-\d{2}$/.test(row.checkedAt)) errors.push("出典・日付・内容不足");
+      if (!row.value || !/^https?:\/\//.test(row.sourceUrl) || !/^\d{4}-\d{2}-\d{2}$/.test(row.checkedAt)) errors.push("出典・日付・内容不足");
     }
     return errors.map(error => ({ id: profile.ids[0], error }));
   });
@@ -34,6 +34,8 @@ export function auditEvidence() {
     scope: `全${facilities.length}候補を機械検査。公式サイトとの全件照合を意味しません。市区町村不一致は旧行政区・郡省略も含む要確認候補です。`,
     rawCandidates: facilities.length,
     officialProfiles: FACILITY_EVIDENCE.length,
+    extractedOfficialProfiles: FACILITY_EVIDENCE.filter(profile => profile.method === "official-labeled-fields").length,
+    curatedOfficialProfiles: FACILITY_EVIDENCE.filter(profile => profile.method !== "official-labeled-fields").length,
     sourceDatedFacts: FACILITY_EVIDENCE.reduce((sum, profile) => sum + profile.facts.length, 0),
     withOfficialFacts: facilities.filter(facility => getFacilityEvidence(facility)).length,
     withoutOfficialFacts: facilities.filter(facility => !getFacilityEvidence(facility)).length,

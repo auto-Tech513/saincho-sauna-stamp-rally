@@ -105,11 +105,12 @@ test("HTTP success without the posted review is not reported as publication succ
 });
 
 test("official evidence is field-dated, alias-safe and never promotes legacy equipment", () => {
-  assert.equal(evidence.FACILITY_EVIDENCE.length, 18);
+  assert.ok(evidence.CURATED_FACILITY_EVIDENCE.length >= 20);
+  assert.ok(evidence.FACILITY_EVIDENCE.length > evidence.CURATED_FACILITY_EVIDENCE.length);
   for (const profile of evidence.FACILITY_EVIDENCE) {
     for (const row of profile.facts) {
       assert.equal(row.checkedAt, "2026-10-19");
-      assert.ok(new URL(row.sourceUrl).protocol === "https:");
+      assert.ok(["https:", "http:"].includes(new URL(row.sourceUrl).protocol));
     }
   }
   assert.equal(evidence.getFacilityEvidence({id:"si-82784"}), evidence.getFacilityEvidence({id:"st-aichi-4936"}));

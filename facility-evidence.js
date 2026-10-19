@@ -1,4 +1,5 @@
 // Field-level official checks, not a claim that the entire catalog was refreshed.
+import { OFFICIAL_PAGE_EVIDENCE } from "./official-page-evidence.js";
 const checkedAt = "2026-10-19";
 const fact = (label, value, sourceUrl) => ({ label, value, sourceUrl, checkedAt });
 const monkey = "https://www.sauna-monkey.com/";
@@ -23,7 +24,26 @@ const hamakita = "https://spa-solani.com/store/112/";
 const kajimachi = "https://www.zaza-chuokan.com/shop/かじまちの湯-spa-solani/";
 const kameyama = "https://kameyama-sauna.com/";
 
-export const FACILITY_EVIDENCE = [
+export const CURATED_FACILITY_EVIDENCE = [
+  {
+    ids: ["st-kyoto-4811", "si-80496"], officialUrl: "https://first-kyoto.com/sauna/", status: "suspended",
+    features: [],
+    facts: [fact("営業状況", "2026年9月25日の公式続報で、漏水被害による臨時休業中・営業再開の目途未定と案内。通常の料金・設備ページは営業再開を意味しません", "https://first-kyoto.com/news/316/")],
+  },
+  {
+    ids: ["st-okinawa-940", "si-okinawa-4327"], officialUrl: "https://www.nahacen.com/rikka/index.html",
+    address: "沖縄県那覇市牧志2-16-36 スパ アネックス1F", city: "那覇市",
+    features: ["ドライサウナ", "塩サウナ", "スチーム(ミスト)サウナ", "温泉付き", "水風呂あり", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      fact("料金", "大人・タオル持参: 平日1,250円 / 土日祝1,500円。タオル付き: 平日1,650円 / 土日祝1,800円（税込・入湯税込）。ほかのコースあり", "https://www.nahacen.com/rikka/index.html"),
+      fact("営業時間", "温泉6:00〜23:00（受付22:30まで）。ドライ・塩サウナは平日9:00から、土日祝6:00から。ミストは全日6:00から。年中無休", "https://www.nahacen.com/rikka/index.html"),
+      fact("設備・温度", "ドライ・塩・スチームの3種。スチームは室温50度と公式掲載。男女浴場は日替わり", "https://www.nahacen.com/rikka/index.html"),
+      fact("水風呂", "冷水浴槽あり（温度の掲載値は未確認）", "https://www.nahacen.com/rikka/index.html"),
+      fact("利用条件", "刺青・タトゥーのある方は入場不可。小学生未満は保護者同伴。浴場内の撮影・携帯電話使用禁止", "https://www.nahacen.com/rikka/index.html"),
+      fact("持ち物", "Aコースはタオル持参、Bコースはフェイス・バスタオル付き。返却式ロッカー用に100円玉を用意", "https://www.nahacen.com/rikka/index.html"),
+      fact("サ飯", "館内ゆんたく10:00〜21:00（L.O.20:00）。食事のみの利用可。駐車場は温泉利用で3時間無料", "https://www.nahacen.com/rikka/index.html"),
+    ],
+  },
   {
     ids: ["manual-shizuoka-sola-spa-hamakita"], officialUrl: hamakita,
     address: "静岡県浜松市浜名区平口2861 サンストリート浜北1F", city: "浜松市浜名区",
@@ -50,7 +70,7 @@ export const FACILITY_EVIDENCE = [
   {
     ids: ["manual-mie-kameyama-zekcho-sauna"], officialUrl: kameyama, status: "open",
     address: "三重県鈴鹿市小岐須町祓塚", city: "鈴鹿市",
-    features: ["セルフロウリュ", "外気あり", "個室"],
+    features: ["セルフロウリュ", "外気あり", "個室", "貸切可", "テントサウナ"],
     facts: [
       fact("料金", "1組3時間24,000円 / 2時間20,000円（税込）", kameyama),
       fact("営業時間", "月によって営業枠が変動。公式LINEで日程・時間を確認して予約", kameyama),
@@ -152,7 +172,7 @@ export const FACILITY_EVIDENCE = [
   {
     ids: ["manual-aichi-okazaki-rakunoyu"], officialUrl: "https://rakunoyu.com/okazaki/",
     address: "愛知県岡崎市庄司田1丁目14-14",
-    features: ["オートロウリュ", "スチーム(ミスト)サウナ", "水風呂あり", "サ飯あり", "タオルレンタルあり"],
+    features: ["オートロウリュ", "遠赤外線サウナ", "塩サウナ", "スチーム(ミスト)サウナ", "水風呂あり", "サ飯あり", "タオルレンタルあり"],
     facts: [
       fact("料金", "一般大人: 平日950円 / 土日祝1,000円。岩盤房は別途550円（中学生以上）", okazaki),
       fact("営業時間", "浴室・サウナ9:00〜23:00（最終受付22:30）。メンテナンス・年末年始の変更あり", okazaki),
@@ -165,7 +185,7 @@ export const FACILITY_EVIDENCE = [
   {
     ids: ["manual-mie-aou-no-mori"], officialUrl: mori,
     address: "三重県三重郡菰野町大字杉谷字倉谷2302-1",
-    features: ["薪サウナ", "個室"],
+    features: ["薪サウナ", "テントサウナ", "個室", "貸切可"],
     facts: [
       fact("設備・温度", "MORIは2〜4名貸切テントサウナ・薪ストーブ80〜100℃。NIWAとはプラン・設備が異なります", "https://leopards.co.jp/service/mori"),
       fact("利用条件", "MORIはグループ貸切・WEB予約制。宿泊不可（NIWAとは条件が異なります）", "https://leopards.co.jp/service/mori"),
@@ -245,6 +265,8 @@ export const FACILITY_EVIDENCE = [
   },
 ];
 
+const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
+export const FACILITY_EVIDENCE = [...CURATED_FACILITY_EVIDENCE, ...OFFICIAL_PAGE_EVIDENCE.filter(profile => !profile.ids.some(id => curatedIds.has(id)))];
 const byId = new Map(FACILITY_EVIDENCE.flatMap(profile => profile.ids.map(id => [id, profile])));
 export function getFacilityEvidence(facility) {
   return byId.get(facility.id) || (facility.legacyIds || []).map(id => byId.get(id)).find(Boolean) || null;
@@ -267,11 +289,11 @@ export function getMissingEvidenceFields(facility) {
   const facts = getFacilityEvidence(facility)?.facts || [];
   const labels = new Set(facts.map(row => row.label));
   if (facts.some(row => row.label === "設備・温度" && /水風呂/.test(row.value))) labels.add("水風呂");
-  if (facts.some(row => /設備・温度/.test(row.label) && /[0-9０-９]+℃/.test(row.value))) labels.add("サウナ温度");
+  if (facts.some(row => /設備・温度/.test(row.label) && /[0-9０-９]+(?:℃|度)/.test(row.value))) labels.add("サウナ温度");
   return [
     ["料金", ["料金"]], ["営業時間", ["営業時間"]],
-    ["サウナ設備", ["設備", "設備・温度"]], ["水風呂", ["水風呂"]],
-    ["サウナ温度", ["サウナ温度"]],
+    ["サウナ設備", ["設備", "設備・温度", "サウナ設備", "サウナストーブ", "サウナルーム", "サウナ収容人数"]], ["水風呂", ["水風呂", "水風呂収容人数", "水風呂温度", "水風呂の温度"]],
+    ["サウナ温度", ["サウナ温度", "サウナ室温", "サウナの温度", "サウナ室の温度"]],
     ["利用条件", ["利用条件"]], ["持ち物", ["持ち物"]],
   ].filter(([, alternatives]) => !alternatives.some(label => labels.has(label))).map(([label]) => label);
 }

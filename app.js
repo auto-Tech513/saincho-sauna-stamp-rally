@@ -22,7 +22,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261019-official-catalog-v2";
+const APP_BUILD_ID = "20261019-feature-evidence-v3";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -676,7 +676,7 @@ const FEATURE_GROUPS = [
   },
   {
     label: "温度体験",
-    options: ["セルフロウリュ", "アロマロウリュ", "熱波師あり", "水風呂あり", "外気あり", "外気なし"],
+    options: ["セルフロウリュ", "オートロウリュ", "アロマロウリュ", "熱波師あり", "水風呂あり", "外気あり", "外気なし"],
   },
   {
     label: "利用条件",
@@ -752,6 +752,7 @@ const QUEST_COPY = [
 ];
 
 const FACILITY_STATUS = {
+  suspended: { badge: "臨時休業", action: "休業中" },
   planned: { badge: "開業予定", action: "開業待ち" },
   verify: { badge: "要確認", action: "要確認" },
 };
@@ -1203,6 +1204,7 @@ function bindEvents() {
   el.featureFilterToggle.addEventListener("click", () => {
     el.featureFilterPanel.hidden = !el.featureFilterPanel.hidden;
     el.featureFilterToggle.setAttribute("aria-expanded", String(!el.featureFilterPanel.hidden));
+    renderFeatureFilterGrid();
   });
   el.featureFilterApply.addEventListener("click", () => {
     el.featureFilterPanel.hidden = true;
@@ -1246,8 +1248,14 @@ function bindEvents() {
   });
 
   el.featureFilterGrid.addEventListener("click", (event) => {
+    if (event.target.closest("[data-feature-reset]")) {
+      selectedFeatureFilters.clear();
+      visibleLimit = 36;
+      renderExplore();
+      return;
+    }
     const button = event.target.closest("[data-feature-filter]");
-    if (!button) return;
+    if (!button || button.disabled) return;
     const feature = normalizeFeature(button.dataset.featureFilter);
     if (!feature) return;
     if (selectedFeatureFilters.has(feature)) {
@@ -1258,7 +1266,6 @@ function bindEvents() {
       selectedFeatureFilters.add(feature);
     }
     visibleLimit = 36;
-    renderFeatureFilterGrid();
     renderExplore();
   });
 
@@ -1953,6 +1960,7 @@ function renderExplore() {
   renderFilterButtons();
   renderPrefStrip();
   renderSourceRow();
+  renderFeatureFilterGrid();
   if ((searchNeedles.length || selectedFeatureFilters.size) && !facilitySearchCache) {
     el.facilityList.setAttribute("aria-busy", "true");
     el.facilityList.inert = true;
@@ -2293,8 +2301,8 @@ function renderFacilityDetail() {
           <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
-        ${getMissingEvidenceFields(facility).length ? `<p class="facility-provenance">未照合の項目: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。設備の有無は断定していません。</p>` : ""}
-        <p class="facility-provenance">${evidence ? "掲載した公式情報は2026年10月19日照合。温度は設定・掲載値であり実測値ではありません。臨時変更は公式で確認してください。" : `全項目の最新性は未確認です。${facility.sourceCheckedAt ? `参照ページの確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}`}</p>
+        <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページの項目を取得" : "掲載した公式情報を照合"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}温度は掲載値であり実測ではありません。臨時変更は公式へ。` : "料金・設備の公式情報をまだ掲載できていません。下の参照元でご確認ください。"}</p>
+        ${getMissingEvidenceFields(facility).length ? `<details class="facility-disclosure"><summary>掲載範囲・未確認項目</summary><p>未確認: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。未掲載は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
         <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
@@ -2310,9 +2318,10 @@ function renderFacilityDetail() {
           <button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい登録済み" : "行きたいに保存"}</button>
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
-          <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer">周辺サ飯</a>
+          <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
           <button type="button" data-open-view="Gear">持ち物・Gear</button>
         </div>
+        <p class="facility-provenance">周辺サ飯は${address ? "掲載住所" : "施設名・エリア（住所未確認）"}を基準にGoogle Mapsで飲食店を検索します。距離・営業時間は検索先で確認してください。</p>
         <div class="lodging-search-card"><strong>周辺の宿</strong><div>${renderLodgingLinks(facility)}</div></div>
         ${!visited ? renderCheckinPanel(facility) : `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${id}">押印を取り消す</button>`}
       </details>
@@ -2331,15 +2340,20 @@ function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
   if (focus) el.facilityDetail.querySelector(`[data-tab="${tab}"]`)?.focus({ preventScroll: true });
 }
 
+function getEvidenceDate(evidence) {
+  return [...new Set((evidence?.facts || []).map(row => row.checkedAt).filter(Boolean))].sort().at(-1) || "取得日不明";
+}
+
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
-  const rows = evidence?.facts.filter(row => ["料金", "営業時間", "設備", "設備・温度", "水風呂", "利用条件"].includes(row.label)).slice(0, 4) || [];
-  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? "公式照合 2026-10-19 · 条件・出典は詳細へ" : "料金・営業時間・設備は未再照合 · 参照元で確認"}</p>`;
+  const rows = evidence?.facts.filter(row => ["営業状況", "料金", "営業時間", "施設営業時間", "設備", "設備・温度", "サウナ設備", "サウナルーム", "サウナストーブ", "サウナ収容人数", "水風呂", "水風呂収容人数", "利用条件", "休館日"].includes(row.label)).slice(0, 4) || [];
+  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? `公式${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ` : "料金・営業時間・設備は公式で要確認"}</p>`;
 }
 function renderCheckinPanel(facility) {
   const coordinate = getFacilityCoordinate(facility);
   const active = state.activeCheckin?.facilityId === facility.id ? state.activeCheckin : null;
   const visited = Boolean(state.visited[facility.id]);
+  if (getFacilityStatus(facility)) return `<p class="facility-provenance">${escapeHtml(getFacilityStatus(facility).badge)}のため滞在チェックインは利用できません。</p>`;
   if (visited) {
     return `
       <section class="detail-panel checkin-panel checkin-complete" aria-label="滞在チェックイン">
@@ -2386,7 +2400,7 @@ function renderCheckinPanel(facility) {
 }
 
 async function startFacilityCheckin(facility) {
-  if (state.visited[facility.id] || !getFacilityCoordinate(facility)) return;
+  if (state.visited[facility.id] || getFacilityStatus(facility) || !getFacilityCoordinate(facility)) return;
   if (state.activeCheckin && state.activeCheckin.facilityId !== facility.id) {
     showToast("別の施設でチェックイン中です。先に中止してください");
     return;
@@ -2468,7 +2482,13 @@ async function completeFacilityCheckin() {
   if (!checkin || checkin.completing) return;
   checkin.completing = true;
   const facility = getFacilityById(checkin.facilityId);
-  if (!facility) return;
+  if (!facility || getFacilityStatus(facility)) {
+    state.activeCheckin = null;
+    saveState();
+    stopCheckinTimer();
+    renderAll();
+    return;
+  }
   try {
     const position = await getCurrentPosition({ highAccuracy: true, maximumAge: 0 });
     const distanceMeters = getDistanceFromFacilityMeters(position, facility);
@@ -4061,7 +4081,7 @@ function renderNearbyResults(candidates) {
 }
 
 function getNearestFacilities(latitude, longitude, limit = 5) {
-  return findNearestFacilities(getFacilities(), latitude, longitude, {
+  return findNearestFacilities(getFacilities().filter(facility => !getFacilityStatus(facility)), latitude, longitude, {
     limit,
     radiusKm: NEARBY_RESULT_RADIUS_KM,
     requireAddress: true,
@@ -4141,10 +4161,36 @@ function renderFeatureControls() {
 function renderFeatureFilterGrid() {
   const selectedCount = selectedFeatureFilters.size;
   el.featureFilterCount.textContent = selectedCount ? `${selectedCount}件選択中` : "指定なし";
-  el.featureFilterGrid.innerHTML = FEATURE_OPTIONS.map((feature) => {
+  if (el.featureFilterPanel.hidden) return;
+  if (!facilitySearchCache) {
+    el.featureFilterGrid.innerHTML = '<p role="status">確認済みの特徴を集計しています…</p>';
+    ensureFacilitySearchRecords().then(() => renderFeatureFilterGrid()).catch(() => {
+      el.featureFilterGrid.innerHTML = '<p role="status">集計できませんでした。検索画面を開き直してください。</p>';
+    });
+    return;
+  }
+  const counts = getFeatureAvailabilityCounts();
+  const buttons = FEATURE_OPTIONS.map((feature) => {
     const active = selectedFeatureFilters.has(feature);
-    return `<button class="feature-chip ${active ? "is-active" : ""}" type="button" data-feature-filter="${escapeAttr(feature)}" aria-pressed="${active}">${escapeHtml(feature)}</button>`;
-  }).join("");
+    const count = counts.get(feature) || 0;
+    return { available: count > 0 || active, html: `<button class="feature-chip ${active ? "is-active" : ""}" type="button" data-feature-filter="${escapeAttr(feature)}" aria-pressed="${active}" ${!count && !active ? 'disabled title="現在の条件に一致する確認情報はありません"' : ""}><span class="feature-chip-label">${escapeHtml(feature)}</span> <span class="feature-chip-count">${count}件</span></button>` };
+  });
+  el.featureFilterGrid.innerHTML = buttons.filter(item => item.available).map(item => item.html).join("")
+    + `<details class="feature-unavailable"><summary>一致する確認情報がない特徴</summary>${buttons.filter(item => !item.available).map(item => item.html).join("")}</details>`
+    + (selectedCount ? '<button class="feature-reset" type="button" data-feature-reset>特徴の選択を解除</button>' : "");
+}
+
+function getFeatureAvailabilityCounts() {
+  const counts = new Map(FEATURE_OPTIONS.map(feature => [feature, 0]));
+  const base = getFilteredFacilities({ ignoreFeatures: true });
+  for (const facility of base) {
+    const features = getFacilityFeatures(facility);
+    for (const feature of features) {
+      const others = [...selectedFeatureFilters].filter(selected => selected !== feature && selected !== FEATURE_CONFLICTS.get(feature));
+      if (others.every(selected => features.includes(selected))) counts.set(feature, (counts.get(feature) || 0) + 1);
+    }
+  }
+  return counts;
 }
 
 function renderSearchClearButton() {
@@ -4485,7 +4531,7 @@ function shareFacilityMemo(facility) {
 function shareFacility(facility) {
   const detail = [facility.prefecture, facility.city].filter(Boolean).join(" / ");
   const address = getFacilityAddress(facility);
-  const tags = normalizeFeatures(facility.tags || []).slice(0, 4);
+  const tags = getFacilityFeatures(facility).slice(0, 4);
   const text = [
     `サ印帳でおすすめ: ${facility.name}`,
     detail,
@@ -4673,7 +4719,7 @@ async function reloadAppFresh() {
   }
 }
 
-function getFilteredFacilities() {
+function getFilteredFacilities({ ignoreFeatures = false } = {}) {
   const needsSearchIndex = searchNeedles.length > 0 || selectedFeatureFilters.size > 0;
   if (!needsSearchIndex) {
     return getFacilities().filter((facility) => {
@@ -4690,7 +4736,7 @@ function getFilteredFacilities() {
   return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
     const matchesSearch = !searchNeedles.length || matchesSearchBlob(haystack, searchNeedles);
-    const matchesFeatures = [...selectedFeatureFilters].every((feature) => features.includes(feature));
+    const matchesFeatures = ignoreFeatures || [...selectedFeatureFilters].every((feature) => features.includes(feature));
     const matchesFilter =
       activeFilter === "all" ||
       (activeFilter === "unvisited" && !state.visited[facility.id]) ||
@@ -4870,12 +4916,9 @@ function getFacilityDirectionsUrl(facility) {
 }
 
 function getNearbySameshiUrl(facility) {
-  const query = [
-    "飲食店",
-    facility.name,
-    getFacilityAreaLabel(facility),
-    "周辺",
-  ].filter(Boolean).join(" ");
+  const anchor = getFacilityAddress(facility)
+    || [facility.name, getFacilityAreaLabel(facility)].filter(Boolean).join(" ");
+  const query = `飲食店 ${anchor} 周辺`;
   const url = new URL("https://www.google.com/maps/search/");
   url.searchParams.set("api", "1");
   url.searchParams.set("query", query || `${facility.name} 飲食店`);
@@ -6108,7 +6151,8 @@ function facilityDuplicateKeys(facility) {
     normalizeFacilityName(name),
     ...nameParts.map(normalizeFacilityName),
   ]).filter((value) => value.length >= 4);
-  return normalizedNames.map((value) => `${pref}:${value}`);
+  const identity = getFacilityEvidence(facility);
+  return [...normalizedNames.map((value) => `${pref}:${value}`), ...(identity?.ids.length > 1 ? [`official-identity:${identity.ids[0]}`] : [])];
 }
 
 function mergeDuplicateFacility(current, incoming) {

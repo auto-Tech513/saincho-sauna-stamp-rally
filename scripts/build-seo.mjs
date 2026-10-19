@@ -92,7 +92,7 @@ await rotatePreviousOutput();
 await fs.mkdir(OUT, { recursive: true });
 const LASTMOD = {
   site: await getGitLastModified(["index.html", "app.js", "styles.css", "scripts/build-seo.mjs"]),
-  data: await getGitLastModified(["data.js", "facility-evidence.js"]),
+  data: await getGitLastModified(["data.js", "facility-evidence.js", "official-page-evidence.js"]),
   content: await getGitLastModified(["content.js"]),
 };
 
@@ -101,7 +101,9 @@ const sourceStyles = await read("styles.css");
 const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
 const sourceNearby = await read("nearby.js");
-const sourceEvidence = await read("facility-evidence.js");
+const sourceOfficialEvidence = await read("official-page-evidence.js");
+const officialEvidenceFile = `official-page-evidence.${hash(sourceOfficialEvidence)}.js`;
+const sourceEvidence = (await read("facility-evidence.js")).replace('from "./official-page-evidence.js";', `from "./${officialEvidenceFile}";`);
 const sourceSw = await read("sw.js");
 const dataFile = `data.${hash(sourceData)}.js`;
 const contentFile = `content.${hash(sourceContent)}.js`;
@@ -119,6 +121,7 @@ await write(dataFile, sourceData);
 await write(contentFile, sourceContent);
 await write(stylesFile, sourceStyles);
 await write(nearbyFile, sourceNearby);
+await write(officialEvidenceFile, sourceOfficialEvidence);
 await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
 await write("sw.js", sourceSw);
@@ -448,7 +451,8 @@ function renderFacilitySsr(facility) {
     <dl>
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
       ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
-      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}照合）</dd></div>`).join("")}
+      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"}）</dd></div>`).join("")}
+      ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
       ${getMissingEvidenceFields(facility).length ? `<div><dt>未照合の項目</dt><dd>${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。設備の有無は断定していません。</dd></div>` : ""}
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
@@ -776,7 +780,8 @@ function facilityDuplicateKeys(facility) {
     normalizeFacilityName(name),
     ...name.split(/[\/／|｜]/).map(normalizeFacilityName),
   ]).filter((value) => value.length >= 4);
-  return names.map((value) => `${facility.prefecture || ""}:${value}`);
+  const identity = getFacilityEvidence(facility);
+  return [...names.map((value) => `${facility.prefecture || ""}:${value}`), ...(identity?.ids.length > 1 ? [`official-identity:${identity.ids[0]}`] : [])];
 }
 
 function normalizeFacilityName(value) {
