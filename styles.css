@@ -8830,6 +8830,15 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .card-facts dd { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 .card-facts:empty { display: none; }
 .card-verification { margin: 0; color: #52665c; font-size: 11px; line-height: 1.6; }
+.app-update-notice:not([hidden]) { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 10px 12px; margin-bottom: 12px; border: 1px solid #607d70; border-radius: 6px; color: #244537; background: #fff; font-size: 13px; line-height: 1.6; }
+.app-update-notice button { flex: 0 0 auto; min-height: 44px; }
+.settings-dialog.app-update-dialog,
+.settings-dialog.app-update-dialog[open] { inset: 0; margin: auto; width: min(440px, calc(100vw - 32px)); height: fit-content; max-height: calc(100dvh - 32px); border-radius: 8px; animation: none; }
+.app-update-dialog::backdrop { display: block; background: rgb(16 20 23 / .58); }
+.app-update-dialog h2 { margin: 0 0 12px; font-size: 20px; }
+.app-update-dialog p { margin: 0 0 16px; color: #52665c; font-size: 14px; line-height: 1.7; }
+.app-update-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; }
+.app-update-actions button { min-height: 44px; }
 #featureFilterPanel .feature-chip { display: inline-flex; align-items: center; justify-content: space-between; gap: 6px; }
 #featureFilterPanel .feature-chip-label { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
 #featureFilterPanel .feature-chip-count { flex: 0 0 auto; white-space: nowrap; font-size: 11px; font-weight: 400; }

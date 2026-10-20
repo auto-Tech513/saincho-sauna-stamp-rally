@@ -109,7 +109,8 @@ test("official evidence is field-dated, alias-safe and never promotes legacy equ
   assert.ok(evidence.FACILITY_EVIDENCE.length > evidence.CURATED_FACILITY_EVIDENCE.length);
   for (const profile of evidence.FACILITY_EVIDENCE) {
     for (const row of profile.facts) {
-      assert.equal(row.checkedAt, "2026-10-19");
+      assert.match(row.checkedAt, /^\d{4}-\d{2}-\d{2}$/);
+      assert.equal(new Date(row.checkedAt).toISOString().slice(0, 10), row.checkedAt);
       assert.ok(["https:", "http:"].includes(new URL(row.sourceUrl).protocol));
     }
   }

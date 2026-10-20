@@ -1,6 +1,6 @@
 import { pathToFileURL } from "node:url";
 import { SEED_FACILITIES } from "../data.js";
-import { FACILITY_EVIDENCE, applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields } from "../facility-evidence.js";
+import { FACILITY_EVIDENCE, applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, isFitnessFacility } from "../facility-evidence.js";
 
 export function addressIssues(facility) {
   const address = String(facility.address || "").normalize("NFKC").replace(/\s/g, "");
@@ -16,6 +16,8 @@ export function addressIssues(facility) {
 
 export function auditEvidence() {
   const facilities = SEED_FACILITIES.map(applyFacilityEvidence);
+  const discovery = facilities.filter(facility => !isFitnessFacility(facility));
+  const discoveryWithFacts = discovery.filter(facility => getFacilityEvidence(facility)).length;
   const addressCandidates = facilities.flatMap(facility => {
     const issues = addressIssues(facility);
     return issues.length ? [{ id: facility.id, name: facility.name, address: facility.address, issues }] : [];
@@ -33,6 +35,10 @@ export function auditEvidence() {
     ok: profileErrors.length === 0 && placeholderErrors.length === 0,
     scope: `全${facilities.length}候補を機械検査。公式サイトとの全件照合を意味しません。市区町村不一致は旧行政区・郡省略も含む要確認候補です。`,
     rawCandidates: facilities.length,
+    excludedFitnessCandidates: facilities.length - discovery.length,
+    discoveryRawCandidates: discovery.length,
+    discoveryWithOfficialFacts: discoveryWithFacts,
+    discoveryOfficialFieldCoveragePercent: Number((discoveryWithFacts / discovery.length * 100).toFixed(2)),
     officialProfiles: FACILITY_EVIDENCE.length,
     extractedOfficialProfiles: FACILITY_EVIDENCE.filter(profile => profile.method === "official-labeled-fields").length,
     curatedOfficialProfiles: FACILITY_EVIDENCE.filter(profile => profile.method !== "official-labeled-fields").length,

@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v53-feature-evidence-20261019";
+const CACHE_NAME = "saincho-v56-catalog-scope-20261020";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -38,7 +38,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin) return;
 
-  if (url.pathname.startsWith("/api/")) {
+  if (url.pathname.startsWith("/api/") || url.pathname === "/version.json") {
     event.respondWith(fetch(event.request));
     return;
   }

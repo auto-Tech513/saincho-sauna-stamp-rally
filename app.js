@@ -5,7 +5,7 @@ import {
   haversineDistanceKm,
   isUsableNearbyPosition,
 } from "./nearby.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields } from "./facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility } from "./facility-evidence.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -22,7 +22,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261019-feature-evidence-v3";
+const APP_BUILD_ID = "20261020-catalog-scope-v3";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -794,6 +794,12 @@ let pendingPrefectureSlug = "";
 let lastTrackedPagePath = "";
 let memoDrafts = {};
 let facilitiesCache = null;
+let discoveryFacilitiesCache = null;
+let discoveryFacilitiesSource = null;
+let lastUpdateCheckAt = 0;
+let updateCheckPending = null;
+let appModulesReady = false;
+let pendingSearchIntent = null;
 let facilitySearchCache = null;
 let facilitySearchMemoSignature = "";
 let facilitySearchBuild = null;
@@ -958,7 +964,8 @@ async function init() {
   renderHomePrefectureControls();
   renderCommunityPrefectureSelect();
   renderFeatureControls();
-  hydrateSearchFromUrl();
+  if (el.searchInput.value) setSearchTerm(el.searchInput.value);
+  else hydrateSearchFromUrl();
   renderSearchClearButton();
   renderProfilePanel();
   saveProfile();
@@ -1017,6 +1024,8 @@ async function loadAppModules() {
   if (!PREFECTURES.length || !SEED_FACILITIES.length) {
     throw new Error("候補データが空です");
   }
+  invalidateFacilityCaches();
+  appModulesReady = true;
 }
 
 function getVersionedModuleSpecifier(path, version) {
@@ -1075,6 +1084,10 @@ function prepareSearchIndexOnIntent() {
 
 function registerServiceWorkerWhenIdle() {
   runWhenIdle(registerServiceWorker, 2600);
+  runWhenIdle(() => checkAppUpdate(), 3200);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") checkAppUpdate();
+  });
 }
 
 function loadAnalyticsWhenIdle() {
@@ -1157,6 +1170,13 @@ function bindEvents() {
     if (appActionButton.dataset.appAction === "copy-app-url") copyAppUrl();
     if (appActionButton.dataset.appAction === "share-line") shareToLine();
     if (appActionButton.dataset.appAction === "copy-promo") copyPromotionText(appActionButton.dataset.copyIndex);
+    if (appActionButton.dataset.appAction === "reload-app") document.querySelector("#appUpdateDialog")?.showModal();
+    if (appActionButton.dataset.appAction === "cancel-reload-app") document.querySelector("#appUpdateDialog")?.close();
+    if (appActionButton.dataset.appAction === "confirm-reload-app") {
+      appActionButton.disabled = true;
+      appActionButton.textContent = "読み込み中…";
+      reloadAppFresh();
+    }
   });
 
   document.addEventListener("click", (event) => {
@@ -1413,7 +1433,7 @@ function bindEvents() {
       return;
     }
 
-    const facility = getFacilities().find((item) => item.id === button.dataset.id);
+    const facility = getFacilityById(button.dataset.id);
     if (!facility) return;
 
     if (button.dataset.action === "detail-tab") showFacilityDetailTab(facility, button.dataset.tab, { focus: true });
@@ -1458,7 +1478,7 @@ function bindEvents() {
     const target = event.target instanceof Element ? event.target : null;
     const card = target?.closest("[data-detail-card]");
     if (!card || isInteractiveCardTarget(target)) return;
-    const facility = getFacilities().find((item) => item.id === card.dataset.detailCard);
+    const facility = getFacilityById(card.dataset.detailCard);
     if (facility) openFacilityDetail(facility);
   });
 
@@ -1468,7 +1488,7 @@ function bindEvents() {
     const card = target?.closest("[data-detail-card]");
     if (!card || target !== card) return;
     event.preventDefault();
-    const facility = getFacilities().find((item) => item.id === card.dataset.detailCard);
+    const facility = getFacilityById(card.dataset.detailCard);
     if (facility) openFacilityDetail(facility);
   });
 
@@ -1966,7 +1986,8 @@ function renderExplore() {
     el.facilityList.inert = true;
     if (el.searchResultsStatus) el.searchResultsStatus.textContent = "検索を準備しています…";
     ensureFacilitySearchRecords().then(() => {
-      if (activeView === "Explore" && !isSearchComposing) applySearchValue(el.searchInput.value);
+      if (activeView === "Explore" && !isSearchComposing) applySearchValue(el.searchInput.value,
+        pendingSearchIntent?.value === el.searchInput.value ? pendingSearchIntent.startedAt : performance.now());
     }).catch((error) => {
       console.error("Search preparation failed", error);
       el.facilityList.setAttribute("aria-busy", "false");
@@ -1992,6 +2013,7 @@ function renderExplore() {
     el.facilityList.innerHTML = `
       <div class="empty-state">
         <p>${hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
+        <p>ジム・フィットネス併設施設は通常の検索対象外です。</p>
         ${resetButton}
         ${addButton}
       </div>
@@ -2020,6 +2042,7 @@ function scheduleSearchRender(value, options = {}) {
   delete el.searchResultsStatus.dataset.searchElapsedMs;
   delete el.searchResultsStatus.dataset.searchRenderMs;
   const startedAt = performance.now();
+  pendingSearchIntent = { value, startedAt };
   const delay = options.immediate ? 0 : SEARCH_RENDER_DELAY_MS;
   searchRenderTimer = window.setTimeout(() => applySearchValue(value, startedAt), delay);
 }
@@ -2034,6 +2057,12 @@ function clearSearchRenderTimer() {
 async function applySearchValue(value, startedAt = performance.now()) {
   const generation = ++searchGeneration;
   searchRenderTimer = 0;
+  if (!appModulesReady) {
+    pendingSearchIntent = { value, startedAt };
+    setSearchTerm(value);
+    el.searchResultsStatus.textContent = "候補データを読み込んでいます…";
+    return false;
+  }
   if (value.trim()) {
     if (!facilitySearchCache) {
       el.facilityList.setAttribute("aria-busy", "true");
@@ -2066,6 +2095,7 @@ async function applySearchValue(value, startedAt = performance.now()) {
   // Local diagnostics only: no query text or timing is transmitted to a server.
   el.searchResultsStatus.dataset.searchElapsedMs = (performance.now() - startedAt).toFixed(1);
   el.searchResultsStatus.dataset.searchRenderMs = (performance.now() - renderStartedAt).toFixed(1);
+  if (pendingSearchIntent?.value === value) pendingSearchIntent = null;
   return true;
 }
 
@@ -2296,12 +2326,13 @@ function renderFacilityDetail() {
       </nav>
       <section id="facility-pane-info" class="facility-pane" aria-label="施設情報" ${facilityDetailTab !== "info" ? "hidden" : ""}>
         ${status ? `<p class="facility-notice">${escapeHtml(status.badge)} — 訪問前に公式で営業状況を確認してください。</p>` : ""}
+        ${isFitnessFacility(facility) ? '<p class="facility-notice">ジム・フィットネス併設施設。通常のサウナ検索・近隣候補には表示していません。利用条件は運営元へご確認ください。</p>' : ""}
         <dl class="facility-facts">
           ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></dd></div>`).join("")}
           <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
-        <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページの項目を取得" : "掲載した公式情報を照合"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}温度は掲載値であり実測ではありません。臨時変更は公式へ。` : "料金・設備の公式情報をまだ掲載できていません。下の参照元でご確認ください。"}</p>
+        <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページの項目を取得" : "掲載した公式情報を照合"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
         ${getMissingEvidenceFields(facility).length ? `<details class="facility-disclosure"><summary>掲載範囲・未確認項目</summary><p>未確認: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。未掲載は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
@@ -2522,7 +2553,7 @@ function getDistanceFromFacilityMeters(position, facility) {
 }
 
 function getFacilityById(id) {
-  return getFacilities().find((facility) => facility.id === id || (facility.legacyIds || []).includes(id));
+  return getFacilities({ includeFitness: true }).find((facility) => facility.id === id || (facility.legacyIds || []).includes(id));
 }
 
 function getFacilityDetailPath(facility) {
@@ -2625,7 +2656,8 @@ function getFacilityDetailLines(facility) {
 function renderPassport() {
   renderPassportPrefStrip();
   renderTitleProgress();
-  const facilities = getFacilities().filter((facility) => selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture);
+  const facilities = getFacilities({ includeFitness: true }).filter(facility => !isFitnessFacility(facility) || hasFacilityUserSignal(facility))
+    .filter((facility) => selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture);
   const sorted = [...facilities].sort((a, b) => {
     const aTime = state.visited[a.id]?.at || "";
     const bTime = state.visited[b.id]?.at || "";
@@ -4746,20 +4778,26 @@ function getFilteredFacilities({ ignoreFeatures = false } = {}) {
   }).map(({ facility }) => facility);
 }
 
-function getFacilities() {
-  if (facilitiesCache) return facilitiesCache;
-  const custom = state.customFacilities.map((facility) => ({
-    ...facility,
-    features: normalizeFeatures(facility.features || facility.tags || []),
-    trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
-    tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
-  }));
-  facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom].map(applyFacilityEvidence)).map(applyFacilityEvidence);
-  return facilitiesCache;
+function getFacilities({ includeFitness = false } = {}) {
+  if (!facilitiesCache) {
+    const custom = state.customFacilities.map((facility) => ({
+      ...facility,
+      features: normalizeFeatures(facility.features || facility.tags || []),
+      trait: facility.trait || inferTraitFromFeatures(facility.features || facility.tags || []),
+      tags: facility.tags?.length ? facility.tags : ["マイサウナ"],
+    }));
+    facilitiesCache = dedupeFacilities([...SEED_FACILITIES, ...sharedFacilities, ...custom].map(applyFacilityEvidence)).map(applyFacilityEvidence);
+  }
+  if (includeFitness) return facilitiesCache;
+  if (discoveryFacilitiesSource !== facilitiesCache) {
+    discoveryFacilitiesSource = facilitiesCache;
+    discoveryFacilitiesCache = facilitiesCache.filter(facility => !isFitnessFacility(facility));
+  }
+  return discoveryFacilitiesCache;
 }
 
 function getFavoriteFacilities() {
-  return getFacilities()
+  return getFacilities({ includeFitness: true })
     .filter((facility) => state.favorites[facility.id])
     .sort((a, b) => {
       const aTime = state.favorites[a.id]?.at || "";
@@ -4780,20 +4818,42 @@ function ensureFacilitySearchRecords() {
   const facilities = getFacilities();
   facilitySearchBuild = (async () => {
     const records = [];
+    const buildStart = performance.now();
     let sliceStart = performance.now();
+    let yieldWaitMs = 0;
     for (const facility of facilities) {
       records.push(createFacilitySearchRecord(facility));
       if (performance.now() - sliceStart >= 6) {
-        await new Promise(resolve => window.setTimeout(resolve, 0));
+        const waitStart = performance.now();
+        await yieldSearchWork();
+        yieldWaitMs += performance.now() - waitStart;
         if (version !== facilityCacheVersion) return null;
         sliceStart = performance.now();
       }
+    }
+    if (el.searchResultsStatus) {
+      el.searchResultsStatus.dataset.searchIndexWorkMs = (performance.now() - buildStart - yieldWaitMs).toFixed(1);
+      el.searchResultsStatus.dataset.searchIndexYieldMs = yieldWaitMs.toFixed(1);
     }
     facilitySearchMemoSignature = memoSignature;
     facilitySearchCache = records;
     return records;
   })().finally(() => { facilitySearchBuild = null; });
   return facilitySearchBuild.then(records => records || ensureFacilitySearchRecords());
+}
+
+function yieldSearchWork() {
+  if (typeof window.scheduler?.yield === "function") return window.scheduler.yield();
+  if (typeof MessageChannel === "function") return new Promise(resolve => {
+    const channel = new MessageChannel();
+    channel.port1.onmessage = () => {
+      channel.port1.close();
+      channel.port2.close();
+      resolve();
+    };
+    channel.port2.postMessage(null);
+  });
+  return new Promise(resolve => window.setTimeout(resolve, 0));
 }
 
 function createFacilitySearchRecord(facility) {
@@ -4833,6 +4893,8 @@ function getFacilityMemoSearchSignature() {
 function invalidateFacilityCaches() {
   facilityCacheVersion += 1;
   facilitiesCache = null;
+  discoveryFacilitiesCache = null;
+  discoveryFacilitiesSource = null;
   facilitySearchCache = null;
   facilitySearchMemoSignature = "";
   facilityFeatureCache = new Map();
@@ -5723,7 +5785,7 @@ function updateDocumentMetaForView(view, facility = null) {
   updateMeta("name", "twitter:description", meta.description);
   const canonical = document.querySelector('link[rel="canonical"]');
   if (canonical) canonical.href = url;
-  const indexable = !facility || Boolean(getFacilityAddress(facility) || facility.officialUrl || (facility.source === "Airbnb" && facility.city && facility.note));
+  const indexable = !facility || (!isFitnessFacility(facility) && Boolean(getFacilityAddress(facility) || facility.officialUrl || (facility.source === "Airbnb" && facility.city && facility.note)));
   updateMeta("name", "robots", indexable ? "index, follow, max-image-preview:large" : "noindex, follow");
   updateMeta("name", "googlebot", indexable ? "index, follow, max-image-preview:large" : "noindex, follow");
 }
@@ -5974,11 +6036,9 @@ function addSearchBlobTokens(tokens, value) {
     ...expandSearchTextVariants(normalized).slice(0, 12),
   ]);
   variants.forEach((variant) => {
+    // Search tokens already fold kana, width and separators; avoid identical conversions.
     [
       variant,
-      toHiragana(variant),
-      toKatakana(variant),
-      normalizeCompact(variant),
       normalizeKanaLoose(variant),
       normalizeKanaLongVowels(variant),
       romanizeSearchText(variant),
@@ -6202,6 +6262,7 @@ function hasFacilityUserSignal(facility) {
     state.wishlist[id] ||
     state.favorites[id] ||
     state.facilityMemos[id] ||
+    (state.visitLogs[id] || []).length ||
     (state.facilityReviews[id] || []).length
   ));
 }
@@ -6226,9 +6287,33 @@ function escapeAttr(value) {
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator) || location.protocol === "file:") return;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
-    showToast("最新版の準備ができました。次の画面移動から反映します");
+    checkAppUpdate({ force: true });
   });
   navigator.serviceWorker.register(`./sw.js?v=${encodeURIComponent(APP_BUILD_ID)}`)
     .then((registration) => registration.update())
     .catch(() => {});
+}
+
+async function checkAppUpdate({ force = false } = {}) {
+  const notice = document.querySelector("#appUpdateNotice");
+  const script = document.querySelector('script[type="module"][src*="app."]');
+  if (!notice || !script?.src || location.protocol === "file:") return;
+  if (updateCheckPending) return updateCheckPending;
+  if (!force && Date.now() - lastUpdateCheckAt < 300000) return;
+  lastUpdateCheckAt = Date.now();
+  updateCheckPending = (async () => {
+    try {
+      const response = await fetch(`/version.json?check=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+      if (!response.ok) return;
+      const version = await response.json();
+      if (!/^app\.[a-f0-9]+\.js$/.test(version.app || "")) return;
+      if (version.styles && !/^styles\.[a-f0-9]+\.css$/.test(version.styles)) return;
+      const styles = document.querySelector('link[rel="stylesheet"][href*="styles."]');
+      const sameStyles = !version.styles || (styles?.href && new URL(styles.href).pathname.split("/").pop() === version.styles);
+      notice.hidden = new URL(script.src).pathname.split("/").pop() === version.app && Boolean(sameStyles);
+    } catch {
+      // Offline or unavailable version metadata must not interrupt a draft.
+    }
+  })().finally(() => { updateCheckPending = null; });
+  return updateCheckPending;
 }

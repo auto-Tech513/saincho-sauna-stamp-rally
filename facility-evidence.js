@@ -23,8 +23,43 @@ const mori = "https://leopards.co.jp/service/aounomori";
 const hamakita = "https://spa-solani.com/store/112/";
 const kajimachi = "https://www.zaza-chuokan.com/shop/かじまちの湯-spa-solani/";
 const kameyama = "https://kameyama-sauna.com/";
+const kiwamiHonten = "https://kiwamisauna.com/store/honten";
+const kiwamiOsu = "https://kiwamisauna.com/store/osu";
+const kiwamiPrice = "https://kiwamisauna.com/system/price";
+const factToday = (label, value, sourceUrl) => ({ label, value, sourceUrl, checkedAt: "2026-10-20" });
 
 export const CURATED_FACILITY_EVIDENCE = [
+  {
+    ids: ["manual-aichi-kiwami-honten", "si-60076"], name: "KIWAMI SAUNA 本店", trait: "urban", officialUrl: kiwamiHonten,
+    address: "愛知県名古屋市西区浅間2丁目14-24", city: "名古屋市西区浅間",
+    features: ["水風呂あり", "外気あり", "貸切可", "サ飯あり"],
+    facts: [
+      factToday("料金", "通常1時間未満: 平日1,600円 / 休日1,800円。以降15分400円 / 450円。2時間以上は3,600円 / 3,900円（税込）。月曜朝の別プランあり", kiwamiPrice),
+      factToday("営業時間", "月7:00〜23:30、火〜木11:30〜23:30、金11:30〜翌1:00、土日祝7:00〜翌1:00。入店締切は閉店45分前", kiwamiHonten),
+      factToday("設備", "総檜のサウナ室、ロウリュ対応ストーブ、中庭の外気浴。完全貸切プランは別途案内", kiwamiHonten),
+      factToday("水風呂", "最深部2m・水温16.5℃の超軟水と公式掲載（当日の実測値ではありません）", kiwamiHonten),
+      factToday("利用条件", "完全キャッシュレス・現金不可。高校生以下はサウナ・サウナドリンク料金半額", kiwamiPrice),
+      factToday("レンタル", "ポンチョ・サウナハット500円、使い切りサウナパンツ50円", kiwamiPrice),
+      factToday("サ飯", "2階「食堂きわみ」は食事のみも利用可。11:30〜23:00（L.O.22:30）", kiwamiHonten),
+      factToday("アクセス", "浅間町駅徒歩1分。店舗駐車場は計4台（うち軽専用1台）", kiwamiHonten),
+    ],
+  },
+  {
+    ids: ["sc2025-kiwami-osu"], officialUrl: kiwamiOsu,
+    address: "愛知県名古屋市中区橘1丁目4-12", city: "名古屋市中区橘",
+    features: ["セルフロウリュ", "水風呂あり", "サ飯あり"],
+    facts: [
+      factToday("料金", "通常1時間未満: 平日1,800円 / 休日2,000円。以降15分450円 / 500円。2時間以上は3,900円 / 4,200円（税込）。朝・夜間・ラウンジは別プラン", kiwamiPrice),
+      factToday("営業時間", "施設は24時間、サウナエリアは6:00〜翌4:00", kiwamiOsu),
+      factToday("設備", "天井高4.2m・4段式タワーサウナ。利用者がロウリュする方式。蔵を改装した内気浴スペース・湯風呂あり", kiwamiOsu),
+      factToday("水風呂", "深さ約2m。温度の数値は店舗公式本文で未確認", kiwamiOsu),
+      factToday("利用条件", "男性専用（月1回レディースデーあり。日程は公式で確認）", kiwamiOsu),
+      factToday("決済・割引", "完全キャッシュレス・現金不可。高校生以下はサウナ・サウナドリンク料金半額", kiwamiPrice),
+      factToday("レンタル", "ポンチョ・サウナハット500円、使い切りサウナパンツ100円、歯ブラシ・髭剃り100円", kiwamiPrice),
+      factToday("サ飯", "併設中華「Mă by KIWAMI」15:00〜23:00（L.O.22:00）", kiwamiOsu),
+      factToday("アクセス", "大須観音駅徒歩7分、上前津駅徒歩10分。店舗駐車場なし", kiwamiOsu),
+    ],
+  },
   {
     ids: ["st-kyoto-4811", "si-80496"], officialUrl: "https://first-kyoto.com/sauna/", status: "suspended",
     features: [],
@@ -275,13 +310,15 @@ export function getVerifiedFeatures(facility) { return getFacilityEvidence(facil
 export function applyFacilityEvidence(facility) {
   const evidence = getFacilityEvidence(facility);
   if (!evidence) return facility;
-  const { city, status } = evidence;
+  const { name, city, status, trait } = evidence;
   return {
     ...facility,
+    ...(name ? { name } : {}),
+    ...(trait ? { trait } : {}),
     officialUrl: evidence.officialUrl,
     ...(city ? { city } : {}),
     ...(status ? { status, tags: (facility.tags || []).filter(tag => !/開業予定|2026年秋/.test(tag)) } : {}),
-    ...(evidence.address ? { address: evidence.address, addressSource: evidence.officialUrl, addressCheckedAt: checkedAt } : {}),
+    ...(evidence.address ? { address: evidence.address, addressSource: evidence.officialUrl, addressCheckedAt: evidence.facts[0]?.checkedAt || checkedAt } : {}),
   };
 }
 
@@ -296,4 +333,23 @@ export function getMissingEvidenceFields(facility) {
     ["サウナ温度", ["サウナ温度", "サウナ室温", "サウナの温度", "サウナ室の温度"]],
     ["利用条件", ["利用条件"]], ["持ち物", ["持ち物"]],
   ].filter(([, alternatives]) => !alternatives.some(label => labels.has(label))).map(([label]) => label);
+}
+
+// Names explicitly describing a gym/fitness club, or that provider's club URL.
+// Do not classify generic "sports", "central hotel" or "oasis" as fitness.
+const FITNESS_FACILITY_IDS = new Set([
+  "si-98204", // https://shops.fiteasy.jp/shop184 (not the standalone Gifu Masaki sauna)
+  "si-11562", // https://zero-sp.com/facilities/
+]);
+export function isFitnessFacility(facility) {
+  if (FITNESS_FACILITY_IDS.has(facility.id) || (facility.legacyIds || []).some(id => FITNESS_FACILITY_IDS.has(id))) return true;
+  if (facility.facilityType === "fitness") return true;
+  if (/ルネサンス|ジェクサー|スポーツクラブ|フィットネス|セントラルウェルネスクラブ|ワールドプラスジム/u.test(facility.name || "")) return true;
+  try {
+    const url = new URL(facility.officialUrl || "");
+    const host = url.hostname.replace(/^www\./, "");
+    return ["s-re.jp", "sportsoasis.co.jp"].includes(host)
+      || (host === "jexer.jp" && /\/fitness\//.test(url.pathname))
+      || (host === "central.co.jp" && /\/club\//.test(url.pathname));
+  } catch { return false; }
 }

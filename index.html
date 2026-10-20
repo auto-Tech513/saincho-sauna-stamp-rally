@@ -213,6 +213,10 @@
       </header>
 
       <main class="main">
+        <div class="app-update-notice" id="appUpdateNotice" role="status" hidden>
+          <span>最新版があります。保存後に更新してください。</span>
+          <button class="secondary-button" type="button" data-app-action="reload-app">更新する</button>
+        </div>
         <!-- SSR:SLOT -->
         <section class="view view-active" id="viewExplore" aria-label="探す">
           <h2 class="explore-title">サウナを探す</h2>
@@ -814,7 +818,17 @@
         <input id="vibrationToggle" type="checkbox" checked />
       </label>
       <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
+      <button class="ghost-button full-button" type="button" data-app-action="reload-app">最新版を読み込む</button>
       <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
+    </dialog>
+
+    <dialog class="settings-dialog app-update-dialog" id="appUpdateDialog" aria-labelledby="appUpdateTitle" aria-describedby="appUpdateDescription">
+      <h2 id="appUpdateTitle">最新版を読み込みますか？</h2>
+      <p id="appUpdateDescription">保存済みの記録は残ります。入力中の未保存内容は失われるため、保存してから更新してください。</p>
+      <div class="app-update-actions">
+        <button class="secondary-button" type="button" data-app-action="cancel-reload-app" autofocus>戻る</button>
+        <button class="primary-button" type="button" data-app-action="confirm-reload-app">更新して再読み込み</button>
+      </div>
     </dialog>
 
     <dialog class="settings-dialog install-help-dialog" id="installHelpDialog">

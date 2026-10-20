@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { SEED_FACILITIES } from "../data.js";
+import { isFitnessFacility } from "../facility-evidence.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const out = path.join(root, "public");
@@ -15,12 +17,19 @@ const redirects = await read("_redirects");
 const sourceRedirects = await fs.readFile(path.join(root, "_redirects"), "utf8");
 const headers = await fs.readFile(path.join(root, "_headers"), "utf8");
 const retiredFunctions = ["functions/llms.txt.js", "functions/sitemap-facilities-2.xml.js"];
+const version = JSON.parse(await read("version.json"));
+assert(/^app\.[a-f0-9]+\.js$/.test(version.app), "更新確認用のアセット名が不正です");
+assert(rootHtml.includes(`src="./${version.app}"`), "更新メタデータとHTMLのappアセットが一致しません");
+await fs.access(path.join(out, version.app));
+assert(/^styles\.[a-f0-9]+\.css$/.test(version.styles), "更新確認用のCSS名が不正です");
+assert(rootHtml.includes(`href="./${version.styles}"`), "更新メタデータとHTMLのCSSが一致しません");
 
 assert(!rootHtml.includes('name="keywords"'), "廃止済みのmeta keywordsが残っています");
 assert(!rootHtml.includes('"@type": "SearchAction"'), "廃止済みのサイト内検索表示を意図したSearchActionが残っています");
 assert(!rootHtml.includes("/llms.txt"), "Googleが使用しないllms.txtをSEO発見リンクとして宣言しています");
 assert(rootHtml.includes('type="application/rss+xml"'), "RSSフィードの発見リンクがありません");
 assert(headers.includes("Permissions-Policy: geolocation=(self)"), "位置情報がPermissions-Policyで許可されていません");
+assert(headers.includes("/version.json\n  Cache-Control: no-store, max-age=0"), "更新確認メタデータのキャッシュが禁止されていません");
 for (const route of ["/sitemap.xml", "/sitemap-*.xml", "/robots.txt", "/feed.xml"]) {
   assert(headers.includes(`${route}\n  Cache-Control: no-cache, must-revalidate`), `${route}の再検証キャッシュ指定がありません`);
 }
@@ -117,6 +126,18 @@ for (const url of facilityUrls) {
 }
 
 const facilityUrlSet = new Set(facilityUrls);
+for (const facility of SEED_FACILITIES.filter(isFitnessFacility)) {
+  const route = `/facility/${encodeURIComponent(facility.id)}/`;
+  assert(!facilityUrlSet.has(`https://saincho-sauna-stamp-rally.pages.dev${route}`), `ジム併設施設がサイトマップに残っています: ${facility.name}`);
+  if (!redirects.includes(`${route} /facility/`)) {
+    const html = await readUrl(`https://saincho-sauna-stamp-rally.pages.dev${route}`);
+    assert(html.includes('content="noindex, follow"'), `記録用ジムページがnoindexではありません: ${facility.name}`);
+  }
+}
+assert(redirects.includes("/facility/si-60076/ /facility/manual-aichi-kiwami-honten/ 301"), "KIWAMI本店の別名301がありません");
+for (const id of ["manual-aichi-kiwami-honten", "sc2025-kiwami-osu"]) {
+  assert(facilityUrlSet.has(`https://saincho-sauna-stamp-rally.pages.dev/facility/${id}/`), `KIWAMIの店舗がサイトマップにありません: ${id}`);
+}
 const prefDirectory = path.join(out, "pref");
 for (const entry of await fs.readdir(prefDirectory, { withFileTypes: true })) {
   if (!entry.isDirectory()) continue;

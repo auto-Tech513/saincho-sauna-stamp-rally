@@ -6,7 +6,7 @@ import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, SAUNA_ARTICLES } from "../content.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields } from "../facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const execFileAsync = promisify(execFile);
@@ -124,6 +124,7 @@ await write(nearbyFile, sourceNearby);
 await write(officialEvidenceFile, sourceOfficialEvidence);
 await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
+await write("version.json", JSON.stringify({ app: appFile, styles: stylesFile }));
 await write("sw.js", sourceSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
@@ -161,7 +162,7 @@ await emitStaticRoute("/contact/", "掲載・お問い合わせ | サ印帳", "�
 await emitStaticRoute("/about/", "運営・データ方針 | サ印帳", "サ印帳の施設データ確認基準、更新方法、広告・アフィリエイト方針、プライバシー、内容修正窓口を公開しています。", renderAboutSsr(), LASTMOD.site);
 
 for (const pref of PREFECTURES) {
-  const facilities = CANONICAL_FACILITIES.filter((facility) => facility.prefecture === pref.name);
+  const facilities = CANONICAL_FACILITIES.filter((facility) => facility.prefecture === pref.name && !isFitnessFacility(facility));
   const verifiedFacilities = facilities.filter(isIndexableFacility).length;
   await emitStaticRoute(`/pref/${pref.slug}/`, `${pref.name}のサウナ検索 | サ印帳`, `${pref.name}のサウナ候補${facilities.length}件をアプリ内で検索。番地住所・公式URL・固有の宿情報を確認できた${verifiedFacilities}件は検索エンジン向け一覧から個別ページへ移動できます。`, renderPrefSsr(pref, facilities), LASTMOD.data);
 }
@@ -260,7 +261,7 @@ function renderHtml(route, meta, ssrHtml) {
 }
 
 function renderHomeSsr() {
-  const total = CANONICAL_FACILITIES.length;
+  const total = CANONICAL_FACILITIES.filter(facility => !isFitnessFacility(facility)).length;
   const prefLinks = PREFECTURES
     .map((pref) => `<a href="/pref/${pref.slug}/">${escapeHtml(pref.name)}</a>`)
     .join("");
@@ -453,7 +454,7 @@ function renderFacilitySsr(facility) {
       ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
       ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"}）</dd></div>`).join("")}
       ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
-      ${getMissingEvidenceFields(facility).length ? `<div><dt>未照合の項目</dt><dd>${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。設備の有無は断定していません。</dd></div>` : ""}
+      ${isFitnessFacility(facility) ? '<div><dt>施設区分</dt><dd>ジム・フィットネス併設。通常のサウナ検索の対象外です。記録・参照用のページは保持しています。</dd></div>' : ""}
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
       ${note && !evidence ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
@@ -602,6 +603,7 @@ function getFacilityQuality(facility) {
 }
 
 function isIndexableFacility(facility) {
+  if (isFitnessFacility(facility)) return false;
   const hasVerifiedAddress = Boolean(getAddress(facility));
   const hasOfficialPage = /^https?:\/\//.test(String(facility.officialUrl || "").trim());
   const hasSpecificStayDetails = facility.source === "Airbnb"

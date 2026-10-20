@@ -12,6 +12,7 @@ const source=(await readFile(new URL("../app.js",import.meta.url),"utf8"))
   .replace(/\ninit\(\);/,"\n");
 const context=vm.createContext({...nearby,...evidence,URL,URLSearchParams,crypto:webcrypto,performance,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null},location:{hostname:"localhost",pathname:"/",protocol:"http:",port:"4173"},window:{matchMedia:()=>({matches:false})},document:{querySelector:()=>({}),querySelectorAll:()=>[]}});
 vm.runInContext(source,context);
+vm.runInContext('appModulesReady=true;',context);
 const search=(name,query)=>vm.runInContext(`matchesSearchBlob(buildSearchBlob([${JSON.stringify(name)}]),createSearchNeedles(${JSON.stringify(query)}))`,context);
 
 test("facility spelling variants and separators return the intended name",()=>{

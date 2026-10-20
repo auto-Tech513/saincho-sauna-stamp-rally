@@ -16,6 +16,7 @@ const context = vm.createContext({ ...evidence, ...nearby, URL, URLSearchParams,
   localStorage: { getItem: () => null }, location: { hostname: "localhost", pathname: "/", protocol: "http:", port: "8788" },
   window: { matchMedia: () => ({ matches: false }) }, document: { querySelector: () => ({}), querySelectorAll: () => [] } });
 vm.runInContext(source, context);
+vm.runInContext('appModulesReady=true;',context);
 const run = code => vm.runInContext(code, context);
 
 test("opened facilities retain their IDs, correct addresses and enabled stamping", () => {
