@@ -391,8 +391,17 @@
               <p class="eyebrow">LOG</p>
               <h2>記録</h2>
             </div>
-            <button class="ghost-button" id="exportButton" type="button">書き出し</button>
           </div>
+          <section class="record-backup" aria-labelledby="backupTitle">
+            <h3 id="backupTitle">記録のバックアップ・復元</h3>
+            <p id="backupHelp">JSONを書き出して保管し、復元時は同じファイルを選びます。読み込み前に置き換えを確認します。</p>
+            <details><summary>対象データ・注意点</summary><p>押印・行きたい・お気に入り・メモ・サ活ログ・端末内の口コミ控え・自分で追加した施設が対象です。ランキングのログイン情報と公開済みデータの管理権限は移せません。個人の記録を含むためファイルの共有にご注意ください。</p></details>
+            <div class="backup-actions">
+              <button class="secondary-button" id="exportButton" type="button">バックアップを書き出す</button>
+              <label class="import-box"><input id="importInput" type="file" accept="application/json,.json" aria-describedby="backupHelp" /><span>バックアップを読み込む</span></label>
+            </div>
+            <p id="backupStatus" role="status" aria-live="polite"></p>
+          </section>
           <div class="stats-grid" id="statsGrid"></div>
           <section class="visit-log-summary" id="visitLogSummary" aria-label="自分用サ活ログ"></section>
           <section class="profile-panel" aria-label="ランキングプロフィール">
@@ -480,10 +489,6 @@
             <a class="map-attribution" href="https://geolonia.github.io/japanese-prefectures/" target="_blank" rel="noreferrer">地図: Geolonia japanese-prefectures</a>
           </section>
           <div class="pref-board" id="prefBoard"></div>
-          <label class="import-box">
-            <input id="importInput" type="file" accept="application/json" />
-            <span>記録を読み込む</span>
-          </label>
         </section>
 
         <section class="view" id="viewGear" aria-label="Gear">
@@ -784,6 +789,7 @@
           <input id="nearbyNotificationToggle" type="checkbox" />
         </label>
         <button class="menu-location-button" id="settingsNearbyButton" type="button">現在地から近くを探す</button>
+        <p class="form-help">位置情報は端末内で2km以内の候補を探すために使い、サーバーには送信しません。近隣通知は有効にした場合だけ起動時に確認します。</p>
       </section>
       <section class="menu-group" aria-labelledby="menuMainTitle">
         <h3 id="menuMainTitle">探す・記録</h3>
@@ -794,6 +800,7 @@
           <button type="button" data-menu-view="Community">サウナ仲間</button>
         </div>
         <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="profileForm">ランキングに参加する</button>
+        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="backupTitle">記録のバックアップ・復元</button>
       </section>
       <section class="menu-group" aria-labelledby="menuPlanTitle">
         <h3 id="menuPlanTitle">次のサ活を計画</h3>
@@ -820,6 +827,17 @@
       <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
       <button class="ghost-button full-button" type="button" data-app-action="reload-app">最新版を読み込む</button>
       <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
+    </dialog>
+
+    <dialog class="settings-dialog record-confirm-dialog" id="recordConfirmDialog" aria-labelledby="recordConfirmTitle" aria-describedby="recordConfirmDescription">
+      <form method="dialog">
+        <h2 id="recordConfirmTitle"></h2>
+        <p id="recordConfirmDescription"></p>
+        <div class="backup-actions">
+          <button class="secondary-button" value="cancel" autofocus>キャンセル</button>
+          <button class="primary-button" id="recordConfirmAccept" value="confirm">続ける</button>
+        </div>
+      </form>
     </dialog>
 
     <dialog class="settings-dialog app-update-dialog" id="appUpdateDialog" aria-labelledby="appUpdateTitle" aria-describedby="appUpdateDescription">

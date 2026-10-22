@@ -22,7 +22,7 @@ const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
 const RAKUTEN_AFFILIATE_UT = "eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9";
-const APP_BUILD_ID = "20261020-catalog-scope-v3";
+const APP_BUILD_ID = "20261022-quality-round1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
@@ -1324,6 +1324,11 @@ function bindEvents() {
 
   el.main.addEventListener("click", (event) => {
     const target = event.target instanceof Element ? event.target : null;
+    const titleLink = target?.closest(".facility-title-link");
+    if (titleLink && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey && event.button === 0) {
+      const facility = getFacilityById(titleLink.closest("[data-detail-card]")?.dataset.detailCard);
+      if (facility) { event.preventDefault(); openFacilityDetail(facility); return; }
+    }
     if (!target) return;
     const openViewButton = target.closest("[data-open-view]");
     if (openViewButton) {
@@ -1614,6 +1619,11 @@ function bindEvents() {
   el.settingsButton.addEventListener("click", openSettingsDialog);
   el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
   el.settingsScrim?.addEventListener("click", closeSettingsDialog);
+  el.settingsDialog.addEventListener("click", event => {
+    if (event.target !== el.settingsDialog) return;
+    const bounds = el.settingsDialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeSettingsDialog();
+  });
   el.settingsDialog.addEventListener("cancel", (event) => {
     event.preventDefault();
     closeSettingsDialog();
@@ -1647,15 +1657,7 @@ function bindEvents() {
     findNearbySaunas({ announce: true });
   });
 
-  el.resetButton.addEventListener("click", () => {
-    if (!confirm("すべての押印・行きたい・お気に入り・メモ・口コミ・追加データを削除します。")) return;
-    state = createState();
-    invalidateFacilityCaches();
-    saveState();
-    closeSettingsDialog();
-    renderAll();
-    showToast("記録をリセットしました");
-  });
+  el.resetButton.addEventListener("click", resetLocalRecords);
 
   el.exportButton.addEventListener("click", exportState);
   el.importInput.addEventListener("change", importState);
@@ -1708,9 +1710,9 @@ function bindEvents() {
 
 function openSettingsDialog() {
   if (el.settingsDialog.open) return;
-  if (typeof el.settingsDialog.show === "function") el.settingsDialog.show();
+  if (typeof el.settingsDialog.showModal === "function") el.settingsDialog.showModal();
   else el.settingsDialog.setAttribute("open", "");
-  el.settingsScrim.hidden = false;
+  el.settingsScrim.hidden = typeof el.settingsDialog.showModal === "function";
   document.body.classList.add("settings-open");
   window.requestAnimationFrame(() => el.closeSettingsButton.focus({ preventScroll: true }));
 }
@@ -1722,6 +1724,7 @@ function closeSettingsDialog() {
   }
   el.settingsScrim.hidden = true;
   document.body.classList.remove("settings-open");
+  el.settingsButton.focus({ preventScroll: true });
 }
 
 function bindSwipeMenu() {
@@ -2152,11 +2155,11 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
   const wished = Boolean(state.wishlist[facility.id]);
   const favorite = Boolean(state.favorites[facility.id]);
   el.spotlight.innerHTML = `
-    <article class="spotlight-card" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
+    <article class="spotlight-card" data-detail-card="${escapeAttr(facility.id)}">
       <div class="spotlight-copy">
         <span class="spotlight-label">次の一湯</span>
         <div class="spotlight-title-row">
-          <h3>${escapeHtml(facility.name)}</h3>
+          <h3><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
           ${renderFavoriteButton(facility, favorite, true)}
         </div>
         <p>${escapeHtml(getFacilityMeta(facility))}</p>
@@ -2215,11 +2218,11 @@ function renderFacilityCard(facility) {
     `;
 
   return `
-    <article class="facility-card" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
+    <article class="facility-card" data-detail-card="${escapeAttr(facility.id)}">
       ${renderStamp(facility, Boolean(visited))}
       <div class="card-body">
         <div class="card-head">
-          <h3 class="facility-name">${escapeHtml(facility.name)}</h3>
+          <h3 class="facility-name"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
           <div class="card-head-actions">
             ${renderFavoriteButton(facility, favorite, true)}
           </div>
@@ -2674,9 +2677,9 @@ function renderPassport() {
     const memo = getFacilityMemo(facility.id);
     const date = visited ? formatDate(visited.at) : "未押印";
     return `
-      <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の施設詳細を見る">
+      <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}">
         ${renderStamp(facility, Boolean(visited))}
-        <p class="stamp-title">${escapeHtml(facility.name)}</p>
+        <p class="stamp-title"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
         <span class="stamp-date">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
         <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
@@ -3560,9 +3563,9 @@ function renderFavoritesPanel() {
     return;
   }
   el.favoritesList.innerHTML = favorites.slice(0, 12).map((facility) => `
-    <article class="favorite-row" data-detail-card="${escapeAttr(facility.id)}" role="link" tabindex="0" aria-label="${escapeAttr(facility.name)}の詳細を見る">
+    <article class="favorite-row" data-detail-card="${escapeAttr(facility.id)}">
       <div>
-        <strong>${escapeHtml(facility.name)}</strong>
+        <strong><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></strong>
         <span>${escapeHtml(getFacilityMeta(facility))}</span>
       </div>
       <button class="favorite-button is-active" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-label="お気に入りから外す" aria-pressed="true"><span aria-hidden="true">★</span></button>
@@ -3854,6 +3857,7 @@ function renderGearCard(item, mode) {
         <span>${escapeHtml(item.category)}</span>
       </div>
       <div class="gear-card-copy">
+        <p class="affiliate-disclosure">PR・広告リンク。購入により運営に報酬が入る場合があります。</p>
         <h4>${escapeHtml(item.title)}</h4>
         <p>${escapeHtml(item.reason)}</p>
         <em>${escapeHtml(item.proof)}</em>
@@ -3916,6 +3920,7 @@ function renderGuideGearCard(item) {
   const links = getGearLinks(item);
   return `
     <article>
+      <p class="affiliate-disclosure">PR・広告リンク</p>
       <span>${escapeHtml(item.category)}</span>
       <strong>${escapeHtml(item.title)}</strong>
       <div>
@@ -3930,6 +3935,7 @@ function renderArticleGearItem(item) {
   const links = getGearLinks(item);
   return `
     <div class="article-gear-item">
+      <p class="affiliate-disclosure">PR・広告リンク</p>
       <span>${escapeHtml(item.title)}</span>
       <div>
         <a href="${escapeAttr(links.amazon)}" target="_blank" rel="nofollow sponsored noreferrer" data-affiliate-vendor="amazon" data-affiliate-item="${escapeAttr(item.title)}" data-affiliate-surface="article">Amazon</a>
@@ -3943,6 +3949,7 @@ function renderCompactGearLink(item) {
   const links = getGearLinks(item);
   return `
     <article>
+      <p class="affiliate-disclosure">PR・広告リンク</p>
       <span>${escapeHtml(item.category)}</span>
       <strong>${escapeHtml(item.title)}</strong>
       <div>
@@ -4088,6 +4095,11 @@ async function findNearbySaunas(options = {}) {
     track("nearby_search", { result_count: candidates.length });
     return candidates;
   } catch (error) {
+    if (error?.code === "consent-cancelled") {
+      if (el.nearbyResult) el.nearbyResult.innerHTML = `<strong>位置情報は使用していません</strong><span>施設名・都道府県から検索できます。</span>`;
+      if (options.announce) showToast(getGeolocationErrorMessage(error));
+      return [];
+    }
     const accuracyError = String(error?.message || "").startsWith("position-accuracy:");
     if (el.nearbyResult) el.nearbyResult.innerHTML = accuracyError
       ? `<strong>現在地の精度が不足しています</strong><span>屋外や窓の近くで、位置情報を再取得してください。</span>`
@@ -4121,7 +4133,19 @@ function getNearestFacilities(latitude, longitude, limit = 5) {
   });
 }
 
-function getCurrentPosition(options = {}) {
+async function requestLocationConsent() {
+  if (state.locationConsentVersion === 1) return true;
+  if (el.settingsDialog.open) closeSettingsDialog();
+  const allowed = await confirmRecordAction("現在地を使ってサウナを探す", "2km以内の候補検索と滞在チェックインの距離判定に位置情報を使います。位置情報は端末内で処理し、サ印帳のサーバーには送信しません。近隣通知を有効にすると起動時にも確認します。次にブラウザの許可画面が表示される場合があります。許可しなくても県・施設名で検索できます。", "説明を確認して続ける");
+  if (!allowed) return false;
+  state.locationConsentVersion = 1;
+  try { saveState(); } catch { /* Consent still applies for this open session. */ }
+  return true;
+}
+
+async function getCurrentPosition(options = {}) {
+  if (!navigator.geolocation) throw new Error("この端末では位置情報を利用できません");
+  if (!await requestLocationConsent()) throw Object.assign(new Error("位置情報の利用をキャンセルしました"), { code: "consent-cancelled" });
   return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject, {
     enableHighAccuracy: options.highAccuracy === true,
     timeout: 12000,
@@ -4130,6 +4154,7 @@ function getCurrentPosition(options = {}) {
 }
 
 function getGeolocationErrorMessage(error) {
+  if (error?.code === "consent-cancelled") return "位置情報を使わずに施設名・県で検索できます";
   if (String(error?.message || "").startsWith("position-accuracy:")) {
     return `位置精度が${MAX_NEARBY_GEO_ACCURACY_METERS}mを超えています。場所を変えて再取得してください`;
   }
@@ -4144,6 +4169,7 @@ async function enableNearbyNotifications() {
     showToast("このブラウザは近隣通知に対応していません");
     return false;
   }
+  if (!await requestLocationConsent()) return false;
   const permission = Notification.permission === "granted" ? "granted" : await Notification.requestPermission();
   if (permission !== "granted") {
     showToast("通知が許可されていません");
@@ -4155,7 +4181,7 @@ async function enableNearbyNotifications() {
 }
 
 async function checkNearbyOnLaunch() {
-  if (!state.nearbyNotifications || !("Notification" in window) || Notification.permission !== "granted") return;
+  if (!state.nearbyNotifications || state.locationConsentVersion !== 1 || !("Notification" in window) || Notification.permission !== "granted") return;
   runWhenIdle(() => findNearbySaunas({ notify: true }), 4000);
 }
 
@@ -5388,7 +5414,75 @@ function exportState() {
   anchor.href = url;
   anchor.download = `saincho-${getLocalDateInputValue()}.json`;
   anchor.click();
-  URL.revokeObjectURL(url);
+  window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+  setBackupStatus("ダウンロードを開始しました。端末のダウンロード先でJSONファイルを確認してください。");
+}
+
+function setBackupStatus(message) {
+  const status = document.querySelector("#backupStatus");
+  if (status) status.textContent = message;
+}
+
+function confirmRecordAction(title, description, confirmText, dangerous = false) {
+  const dialog = document.querySelector("#recordConfirmDialog");
+  if (!dialog || dialog.open || typeof dialog.showModal !== "function") return Promise.resolve(false);
+  document.querySelector("#recordConfirmTitle").textContent = title;
+  document.querySelector("#recordConfirmDescription").textContent = description;
+  const accept = document.querySelector("#recordConfirmAccept");
+  accept.textContent = confirmText;
+  accept.className = dangerous ? "danger-button" : "primary-button";
+  dialog.returnValue = "cancel";
+  return new Promise(resolve => {
+    dialog.addEventListener("close", () => resolve(dialog.returnValue === "confirm"), { once: true });
+    dialog.showModal();
+  });
+}
+
+function commitRecordReplacement(nextState) {
+  // Persist first: quota/security failures must not replace the live records.
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(nextState));
+  state = nextState;
+  activityDrafts.clear();
+  invalidateFacilityCaches();
+}
+
+async function resetLocalRecords() {
+  closeSettingsDialog();
+  const confirmed = await confirmRecordAction("この端末の記録をリセットしますか？", "押印・行きたい・お気に入り・メモ・サ活ログ・口コミの端末内控え・自分で追加した施設を削除します。この操作は取り消せません。必要な記録は先にバックアップしてください。公開済みの口コミ・募集・ランキングと、ランキングの登録情報は削除されません。", "端末内の記録を削除", true);
+  if (!confirmed) return;
+  try {
+    commitRecordReplacement(createState());
+  } catch {
+    showToast("保存領域を更新できないため、リセットしませんでした");
+    return;
+  }
+  renderAll();
+  showToast("この端末の記録をリセットしました。公開済みデータは残っています");
+}
+
+function parseRecordBackup(text) {
+  const payload = JSON.parse(text, (key, value) => {
+    if (["__proto__", "constructor", "prototype"].includes(key)) throw new Error("バックアップに使用できない項目があります");
+    return value;
+  });
+  if (!isPlainObject(payload)) throw new Error("サ印帳のJSONバックアップを選んでください");
+  const wrapped = Object.hasOwn(payload, "state");
+  if (wrapped && (payload.app !== "saincho" || payload.version !== 1)) throw new Error("このアプリで対応しているサ印帳バックアップではありません");
+  const value = wrapped ? payload.state : payload;
+  if (!isPlainObject(value) || !["visited", "wishlist", "favorites"].every(key => isPlainObject(value[key])) || !Array.isArray(value.customFacilities)) throw new Error("記録の形式が不正です。現在の記録は変更していません");
+  for (const key of ["facilityMemos", "facilityReviews", "visitLogs", "nearbyNotificationLog", "joinedCommunityEvents"]) {
+    if (key in value && !isPlainObject(value[key])) throw new Error(`${key}の形式が不正です`);
+  }
+  for (const key of ["visited", "wishlist", "favorites"]) {
+    if (Object.values(value[key]).some(entry => !isPlainObject(entry) || typeof entry.at !== "string" || !Number.isFinite(Date.parse(entry.at)))) throw new Error(`${key}の記録日時が不正です`);
+  }
+  if (value.customFacilities.some(entry => !isValidCustomFacility(entry))) throw new Error("追加施設の形式が不正です");
+  const normalized = normalizeState(value);
+  // A backup is not permission to start geolocation on another device.
+  normalized.nearbyNotifications = false;
+  normalized.locationConsentVersion = 0;
+  normalized.activeCheckin = null;
+  return normalized;
 }
 
 async function handleInstallClick() {
@@ -5461,16 +5555,20 @@ function isSafeHttpUrl(value) {
 async function importState(event) {
   const [file] = event.target.files;
   if (!file) return;
+  let committed = false;
   try {
-    const payload = JSON.parse(await file.text());
-    const imported = payload.state || payload;
-    state = normalizeState(imported);
-    invalidateFacilityCaches();
-    saveState();
+    if (file.size > 10 * 1024 * 1024) throw new Error("10MB以下のバックアップを選んでください");
+    const nextState = parseRecordBackup(await file.text());
+    const confirmed = await confirmRecordAction("バックアップで記録を置き換えますか？", `${file.name}の押印${Object.keys(nextState.visited).length}件・自作施設${nextState.customFacilities.length}件などを読み込みます。現在の端末内記録は置き換わり、元に戻せません。必要な記録を先に書き出してください。公開済みデータ・ランキング登録情報は変更しません。近隣通知と滞在チェックインは引き継ぎません。`, "記録を置き換える", true);
+    if (!confirmed) { setBackupStatus("読み込みをキャンセルしました。現在の記録は変更していません。"); return; }
+    commitRecordReplacement(nextState);
+    committed = true;
     renderAll();
+    setBackupStatus("バックアップを読み込みました。近隣通知は必要な場合に設定から有効にしてください。");
     showToast("記録を読み込みました");
-  } catch {
-    showToast("読み込みに失敗しました");
+  } catch (error) {
+    setBackupStatus(committed ? "記録の保存は完了しましたが、画面を更新できませんでした。ページを開き直してください。" : `読み込みませんでした。現在の記録は保持しています。${error instanceof SyntaxError ? "JSONの形式を確認してください。" : error.message}`);
+    showToast(committed ? "保存済みです。画面を開き直してください" : "読み込みに失敗しました。現在の記録は保持しています");
   } finally {
     event.target.value = "";
   }
@@ -5498,6 +5596,7 @@ function normalizeState(value) {
     customFacilities: Array.isArray(value.customFacilities) ? value.customFacilities.filter(isValidCustomFacility) : [],
     homePrefecture: typeof value.homePrefecture === "string" ? value.homePrefecture.slice(0, 12) : "",
     nearbyNotifications: value.nearbyNotifications === true,
+    locationConsentVersion: value.locationConsentVersion === 1 ? 1 : 0,
     nearbyNotificationLog: isPlainObject(value.nearbyNotificationLog) ? value.nearbyNotificationLog : {},
     activeCheckin: normalizeActiveCheckin(value.activeCheckin),
     localCommunityEvents: Array.isArray(value.localCommunityEvents) ? value.localCommunityEvents.map(normalizeCommunityEvent).filter(Boolean).slice(0, 30) : [],
@@ -5516,6 +5615,7 @@ function createState() {
     customFacilities: [],
     homePrefecture: "",
     nearbyNotifications: false,
+    locationConsentVersion: 0,
     nearbyNotificationLog: {},
     activeCheckin: null,
     localCommunityEvents: [],

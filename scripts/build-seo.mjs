@@ -125,7 +125,12 @@ await write(officialEvidenceFile, sourceOfficialEvidence);
 await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
 await write("version.json", JSON.stringify({ app: appFile, styles: stylesFile }));
-await write("sw.js", sourceSw);
+const shellModules = [appFile, stylesFile, dataFile, contentFile, nearbyFile, evidenceFile, officialEvidenceFile];
+const builtSw = sourceSw
+  .replace(/const CACHE_NAME = "[^"]+";/, `const CACHE_NAME = "saincho-${hash(sourceSw + shellModules.join(":"))}";`)
+  .replace(/"\.\/(?:app|styles|data|content|nearby|facility-evidence|official-page-evidence)\.(?:js|css)",\n/g, "")
+  .replace("const APP_SHELL_ASSETS = [", `const APP_SHELL_ASSETS = [\n${shellModules.map(file => `  "./${file}",`).join("\n")}`);
+await write("sw.js", builtSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 await copyFile("manifest.webmanifest");
