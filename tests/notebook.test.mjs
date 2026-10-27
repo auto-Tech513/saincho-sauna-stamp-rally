@@ -104,6 +104,56 @@ test("HTTP success without the posted review is not reported as publication succ
   assert.equal(h.read('activityDrafts.get("test").publish'), true);
 });
 
+test("official facility aliases show reviews from both IDs and delete using their original ID", async () => {
+  const h = harness();
+  h.context.document.baseURI = "https://example.test/";
+  h.context.document.getElementById = () => null;
+  h.read('getFacilityById=()=>null; renderAll=()=>{}; showToast=()=>{};');
+  const calls = [];
+  h.context.fetch = async (url, options) => {
+    const id = new URL(url).searchParams.get("facilityId");
+    calls.push({ id, method: options.method || "GET" });
+    if (options.method === "DELETE") return { ok: true, json: async () => ({ reviews: [] }) };
+    return { ok: true, json: async () => ({ configured: true, reviews: [{ id: `review-${id}`, facilityId: id, text: `感想-${id}`, owned: true }] }) };
+  };
+  await h.read('loadFacilityReviews("manual-aichi-apz")');
+  assert.equal(h.read('getFacilityReviews("manual-aichi-apz").length'), 2);
+  assert.deepEqual(calls.map(call => call.id).sort(), ["manual-aichi-apz", "si-2505"]);
+  await h.read('deleteFacilityReview({id:"manual-aichi-apz"},"review-si-2505")');
+  assert.equal(calls.at(-1).id, "si-2505");
+  assert.equal(calls.at(-1).method, "DELETE");
+  assert.equal(h.read('getFacilityReviews("manual-aichi-apz").length'), 1);
+});
+
+test("partial alias review fetch retains available reviews and permits retry", async () => {
+  const h = harness();
+  h.context.document.baseURI = "https://example.test/";
+  h.context.document.getElementById = () => null;
+  h.read('getFacilityById=()=>null;');
+  let broken = true;
+  h.context.fetch = async url => {
+    const id = new URL(url).searchParams.get("facilityId");
+    if (id === "si-2505" && broken) throw new Error("network");
+    return { ok: true, json: async () => ({ configured: true, reviews: [{ id: `r-${id}`, facilityId: id, text: id }] }) };
+  };
+  await h.read('loadFacilityReviews("manual-aichi-apz")');
+  assert.equal(h.read('getFacilityReviews("manual-aichi-apz").length'), 1);
+  assert.equal(h.read('reviewsConfigured'), false);
+  assert.equal(h.read('facilityReviewLoadedIds.has("manual-aichi-apz")'), false);
+  broken = false;
+  await h.read('loadFacilityReviews("manual-aichi-apz")');
+  assert.equal(h.read('getFacilityReviews("manual-aichi-apz").length'), 2);
+});
+
+test("a review list says loading until an empty result is confirmed", () => {
+  const h = harness();
+  h.read('getFacilityById=()=>null;');
+  assert.match(h.read('renderReviewList({id:"manual-aichi-apz"})'), /読み込んでいます/);
+  assert.doesNotMatch(h.read('renderReviewList({id:"manual-aichi-apz"})'), /まだ口コミはありません/);
+  h.read('facilityReviewLoadedIds.add("manual-aichi-apz");');
+  assert.match(h.read('renderReviewList({id:"manual-aichi-apz"})'), /まだ口コミはありません/);
+});
+
 test("official evidence is field-dated, alias-safe and never promotes legacy equipment", () => {
   assert.ok(evidence.CURATED_FACILITY_EVIDENCE.length >= 20);
   assert.ok(evidence.FACILITY_EVIDENCE.length > evidence.CURATED_FACILITY_EVIDENCE.length);

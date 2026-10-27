@@ -2861,7 +2861,6 @@ async function saveActivityNote(facility, button) {
     const submittedText = text.normalize("NFKC").replace(/[<>]/g, "").replace(/\s+/g, " ").trim().slice(0, 280);
     if (payload.configured === false || !Array.isArray(payload.reviews) || !payload.reviews.some(review => review.id && review.owned === true && review.facilityId === facility.id && review.text === submittedText)) throw new Error("口コミの公開を確認できませんでした。");
     facilityReviews[facility.id] = normalizeReviews(payload.reviews);
-    facilityReviewLoadedIds.add(facility.id);
     reviewsConfigured = true;
     const latestDraft = activityDrafts.get(facility.id);
     if (latestDraft === draft) draft.publish = false;
@@ -3196,8 +3195,10 @@ function formatVisitLogDate(value) {
 
 function renderReviewList(facility) {
   const reviews = getFacilityReviews(facility.id);
+  const waiting = !IS_STATIC_LOCAL_PREVIEW && !facilityReviewLoadedIds.has(facility.id) && reviewsConfigured !== false;
   return `${reviews.map(review => renderReviewCard(facility, review)).join("")}${reviewsConfigured === false
     ? `<p class="review-empty" role="status">口コミを取得できませんでした。入力内容は保持しています。</p><button class="secondary-button" type="button" data-action="retry-reviews" data-id="${escapeAttr(facility.id)}">口コミを再取得</button>`
+    : waiting ? `<p class="review-empty" role="status">口コミを読み込んでいます。</p>`
     : reviews.length ? "" : `<p class="review-empty">まだ口コミはありません。最初の感想を残しませんか。</p>`}`;
 }
 
@@ -4436,14 +4437,22 @@ async function loadFacilityReviews(facilityId, { force = false } = {}) {
   if (!facilityId || IS_STATIC_LOCAL_PREVIEW || reviewRequests.has(facilityId) || (!force && facilityReviewLoadedIds.has(facilityId))) return;
   reviewRequests.add(facilityId);
   try {
-    const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
-    url.searchParams.set("facilityId", facilityId);
-    const response = await fetch(url.href, { headers: { accept: "application/json", authorization: `Bearer ${profile.authToken}` }, signal: AbortSignal.timeout(12000) });
-    if (!response.ok) throw new Error("reviews-load-failed");
-    const payload = await response.json();
-    reviewsConfigured = payload.configured !== false;
-    facilityReviews[facilityId] = normalizeReviews(payload.reviews || []);
-    facilityReviewLoadedIds.add(facilityId);
+    const ids = getReviewFacilityIds(facilityId);
+    const responses = await Promise.allSettled(ids.map(async (id) => {
+      const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
+      url.searchParams.set("facilityId", id);
+      const response = await fetch(url.href, { headers: { accept: "application/json", authorization: `Bearer ${profile.authToken}` }, signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("reviews-load-failed");
+      const payload = await response.json();
+      if (payload.configured === false || !Array.isArray(payload.reviews)) throw new Error("reviews-storage-not-configured");
+      return normalizeReviews(payload.reviews);
+    }));
+    responses.forEach((response, index) => {
+      if (response.status === "fulfilled") facilityReviews[ids[index]] = response.value;
+    });
+    reviewsConfigured = responses.every(response => response.status === "fulfilled");
+    if (reviewsConfigured) facilityReviewLoadedIds.add(facilityId);
+    else facilityReviewLoadedIds.delete(facilityId);
   } catch {
     reviewsConfigured = false;
   } finally {
@@ -4461,16 +4470,23 @@ async function loadFacilityReviews(facilityId, { force = false } = {}) {
 
 async function deleteFacilityReview(facility, reviewId) {
   if (!reviewId) return;
+  const ids = getReviewFacilityIds(facility.id);
+  const storedId = ids.find(id => [...(facilityReviews[id] || []), ...(state.facilityReviews[id] || [])].some(review => review.id === reviewId));
+  if (!storedId) { showToast("口コミを確認できません。再取得してください"); return; }
   if (!IS_STATIC_LOCAL_PREVIEW && !String(reviewId).startsWith("local-")) {
     try {
       const url = new URL(REVIEWS_ENDPOINT, document.baseURI || location.href);
-      url.searchParams.set("facilityId", facility.id);
+      url.searchParams.set("facilityId", storedId);
       url.searchParams.set("reviewId", reviewId);
       url.searchParams.set("clientId", profile.id || "");
       const response = await fetch(url.href, { method: "DELETE", headers: { accept: "application/json", authorization: `Bearer ${profile.authToken}` }, signal: AbortSignal.timeout(12000) });
       if (response.ok) {
         const payload = await response.json();
-        facilityReviews[facility.id] = normalizeReviews(payload.reviews || []);
+        if (payload.configured === false || !Array.isArray(payload.reviews) || payload.reviews.some(review => review.id === reviewId)) {
+          showToast("口コミの削除を確認できませんでした。再取得してください");
+          return;
+        }
+        facilityReviews[storedId] = normalizeReviews(payload.reviews || []);
         renderAll();
         showToast("口コミを削除しました");
         return;
@@ -4483,15 +4499,20 @@ async function deleteFacilityReview(facility, reviewId) {
       return;
     }
   }
-  const next = (state.facilityReviews[facility.id] || []).filter((review) => review.id !== reviewId);
-  state.facilityReviews[facility.id] = next;
+  const next = (state.facilityReviews[storedId] || []).filter((review) => review.id !== reviewId);
+  state.facilityReviews[storedId] = next;
   saveState();
   renderAll();
   showToast("口コミを削除しました");
 }
 
 function getFacilityReviews(facilityId) {
-  return normalizeReviews([...(facilityReviews[facilityId] || []), ...(state.facilityReviews[facilityId] || [])]);
+  return normalizeReviews(getReviewFacilityIds(facilityId).flatMap(id => [...(facilityReviews[id] || []), ...(state.facilityReviews[id] || [])]));
+}
+
+function getReviewFacilityIds(facilityId) {
+  const evidence = getFacilityEvidence(getFacilityById(facilityId) || { id: facilityId });
+  return uniqueStrings([facilityId, ...(evidence?.ids || [])]);
 }
 
 async function submitContactForm(event) {
