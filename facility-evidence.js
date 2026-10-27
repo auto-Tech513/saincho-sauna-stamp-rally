@@ -181,7 +181,9 @@ export const CURATED_FACILITY_EVIDENCE = [
     ],
   },
   {
-    ids: ["manual-aichi-apz"], officialUrl: "https://apz-spa.com/",
+    ids: ["manual-aichi-apz", "si-2505"], name: "アペゼ", officialUrl: "https://apz-spa.com/",
+    address: "愛知県名古屋市千種区今池5-11-14", city: "名古屋市千種区今池",
+    searchAliases: ["リラクゼーションスパ アペゼ", "リラクゼーション・スパ・アペゼ"],
     features: ["オートロウリュ", "熱波師あり", "スチーム(ミスト)サウナ", "水風呂あり", "宿泊可"],
     facts: [
       fact("料金", "普通入館・平日: 男性2,300円 / 女性2,200円、土日祝は各200円増。60分は男性1,300円 / 女性1,200円", apz),

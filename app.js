@@ -4887,6 +4887,7 @@ function createFacilitySearchRecord(facility) {
     const features = getFacilityFeatures(facility);
     const haystack = buildSearchBlob([
       facility.name,
+      ...(getFacilityEvidence(facility)?.searchAliases || []),
       facility.prefecture,
       facility.city,
       getFacilityAddress(facility),
@@ -6294,6 +6295,14 @@ function dedupeFacilities(facilities) {
     if (existingIndex === undefined) {
       const index = result.push({ ...facility }) - 1;
       keys.forEach((key) => keyToIndex.set(key, index));
+      return;
+    }
+    // Keep separately saved records accessible until conflicts can be reconciled.
+    const existingIds = new Set([result[existingIndex].id, ...(result[existingIndex].legacyIds || [])]);
+    const sameRecord = [facility.id, ...(facility.legacyIds || [])].some((id) => existingIds.has(id));
+    if (!sameRecord && hasFacilityUserSignal(result[existingIndex]) && hasFacilityUserSignal(facility)) {
+      const index = result.push({ ...facility }) - 1;
+      keys.forEach((key) => { if (!keyToIndex.has(key)) keyToIndex.set(key, index); });
       return;
     }
     result[existingIndex] = mergeDuplicateFacility(result[existingIndex], facility);

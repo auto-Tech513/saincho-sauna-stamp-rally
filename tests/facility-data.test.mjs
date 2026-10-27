@@ -52,6 +52,22 @@ test("deduped legacy IDs keep authoritative official fields over old shared cont
   assert.deepEqual(facility.tags, []);
 });
 
+test("Apz aliases share verified identity and keep existing saved IDs", () => {
+  context.apzRecords = SEED_FACILITIES.filter(item => ["manual-aichi-apz", "si-2505"].includes(item.id)).map(evidence.applyFacilityEvidence);
+  assert.equal(context.apzRecords.length, 2);
+  assert.ok(context.apzRecords.every(item => item.address === "愛知県名古屋市千種区今池5-11-14"));
+  run('state=createState(); state.visited["si-2505"]={at:"2026-10-01T00:00:00Z"};');
+  assert.equal(run('dedupeFacilities(apzRecords).length'), 1);
+  assert.equal(run('dedupeFacilities(apzRecords)[0].id'), "si-2505");
+  assert.equal(run('dedupeFacilities(apzRecords)[0].legacyIds.includes("manual-aichi-apz")'), true);
+  context.facility = context.apzRecords[0];
+  assert.equal(run('matchesSearchBlob(createFacilitySearchRecord(facility).haystack,createSearchNeedles("リラクゼーションスパ アペゼ"))'), true);
+  run('state.facilityMemos["manual-aichi-apz"]={text:"別の記録",updatedAt:"2026-10-01"};');
+  assert.equal(run('dedupeFacilities(apzRecords).length'), 2);
+  assert.equal(run('state.facilityMemos["manual-aichi-apz"].text'), "別の記録");
+  run('state=createState();');
+});
+
 test("coverage does not turn unknown equipment into absent or invent temperatures", () => {
   assert.equal(evidence.getMissingEvidenceFields({id:"unknown"}).length, 7);
   assert.ok(evidence.getMissingEvidenceFields({id:"manual-mie-aou-no-mori"}).includes("水風呂"));
