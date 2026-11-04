@@ -3897,6 +3897,7 @@ function renderArticleCard(article, index) {
           <ul>
             ${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}
           </ul>
+          ${(article.detail || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
           <div class="article-action">
             <b>実践</b>
             <span>${escapeHtml(article.action)}</span>
@@ -3905,6 +3906,14 @@ function renderArticleCard(article, index) {
             <b>注意</b>
             <span>${escapeHtml(article.caution)}</span>
           </div>
+          ${(article.sources || []).length ? `
+          <div class="article-sources">
+            <b>出典・参考資料</b>
+            <ul>
+              ${article.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}
+            </ul>
+            <p>この記事の内容の根拠とした資料です。2026年11月4日に各出典を確認しています。</p>
+          </div>` : ""}
           <div class="article-gear">
             <div class="article-gear-head">
               <b>関連Gear</b>

@@ -5,8 +5,9 @@ import path from "node:path";
 import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
-import { GEAR_PRODUCTS, SAUNA_ARTICLES } from "../content.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
+import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
+import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
+import { haversineDistanceKm } from "../nearby.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const execFileAsync = promisify(execFile);
@@ -64,13 +65,117 @@ function getFacilityLastmod(facility) {
   const dates = [facility.sourceCheckedAt, facility.addressCheckedAt, ...((getFacilityEvidence(facility)?.facts || []).map((fact) => fact.checkedAt))].filter(Boolean).sort();
   return dates.at(-1) || LASTMOD.data;
 }
-function renderCheckedAt(facility) {
-  const date = facility.addressCheckedAt || facility.sourceCheckedAt;
+const TODAY_JST = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+function daysElapsedLabel(date) {
   if (!date) return "";
-  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
-  const days = Math.round((Date.parse(today) - Date.parse(date)) / 86400000);
-  const elapsed = Number.isFinite(days) && days > 0 ? `（確認から${days}日経過）` : days === 0 ? "（本日確認）" : "";
-  return `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(date)}">${escapeHtml(date)}</time>${elapsed}</dd></div>`;
+  const days = Math.round((Date.parse(TODAY_JST) - Date.parse(date)) / 86400000);
+  return Number.isFinite(days) && days > 0 ? `（確認から${days}日経過）` : days === 0 ? "（本日確認）" : "";
+}
+// 出どころ（住所の出典・各確認日・公式URLの取得元・照合方式）を混ぜずに項目別に表示する。
+// 旧実装は複数の日付を「参照元の確認日」1行に統合し、公式照合日を参照元確認日と表示する取り違えがあった。
+function renderProvenanceRows(facility, evidence) {
+  const rows = [];
+  const address = getAddress(facility);
+  if (address && facility.addressSource) {
+    rows.push(`<div><dt>住所の出典</dt><dd>${escapeHtml(facility.addressSource)}${facility.addressCheckedAt ? `（確認日 <time datetime="${escapeAttr(facility.addressCheckedAt)}">${escapeHtml(facility.addressCheckedAt)}</time>${daysElapsedLabel(facility.addressCheckedAt)}）` : ""}</dd></div>`);
+  } else if (address && facility.addressCheckedAt) {
+    rows.push(`<div><dt>住所の確認日</dt><dd><time datetime="${escapeAttr(facility.addressCheckedAt)}">${escapeHtml(facility.addressCheckedAt)}</time>${daysElapsedLabel(facility.addressCheckedAt)}</dd></div>`);
+  }
+  if (facility.sourceCheckedAt) {
+    rows.push(`<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(facility.sourceCheckedAt)}">${escapeHtml(facility.sourceCheckedAt)}</time>${daysElapsedLabel(facility.sourceCheckedAt)}</dd></div>`);
+  }
+  if (facility.officialUrl && facility.officialUrlSource) {
+    rows.push(`<div><dt>公式URLの取得元</dt><dd>${escapeHtml(facility.officialUrlSource)}</dd></div>`);
+  }
+  if (evidence) {
+    rows.push(`<div><dt>公式情報の照合方式</dt><dd>${evidence.method === "official-labeled-fields" ? "公式ページの項目別掲載値を取得して照合" : "公式ページを項目別に照合"}</dd></div>`);
+  }
+  return rows.join("");
+}
+// note が住所そのもの（または施設名だけ）の場合は紹介文として出さない（住所の二重表示の是正）。
+function displayNote(facility) {
+  const note = String(facility.note || "").trim();
+  if (!note) return "";
+  const squash = (value) => String(value).replace(/\s+/g, "");
+  const address = getAddress(facility);
+  if (address) {
+    const addressCore = address.startsWith(facility.prefecture) ? address.slice(facility.prefecture.length) : address;
+    if (squash(note) === squash(address) || squash(note) === squash(addressCore)) return "";
+  }
+  if (squash(note) === squash(facility.name || "")) return "";
+  return note;
+}
+const INDEXABLE_FACILITIES = CANONICAL_FACILITIES.filter(isIndexableFacility);
+// city には「名古屋市西区浅間」のように住所の残りが混ざる値があるため、市区町村の単位まで正規化してグループ化する。
+function cityKeyOf(facility) {
+  const head = String(facility.city || "").split(/\s/)[0];
+  if (!head) return "";
+  const ward = head.match(/^(.+?区)/);
+  if (ward) return ward[1];
+  const city = head.match(/^(.+?(?:市|町|村))/);
+  return city ? city[1] : head;
+}
+const CITY_PEERS = new Map();
+for (const peer of INDEXABLE_FACILITIES) {
+  if (peer.status || !peer.city) continue;
+  const cityKey = cityKeyOf(peer);
+  if (!cityKey) continue;
+  const key = `${peer.prefecture}|${cityKey}`;
+  if (!CITY_PEERS.has(key)) CITY_PEERS.set(key, []);
+  CITY_PEERS.get(key).push(peer);
+}
+const COORD_FACILITIES_BY_PREF = new Map();
+for (const peer of INDEXABLE_FACILITIES) {
+  if (peer.status) continue;
+  const lat = Number(peer.lat);
+  const lng = Number(peer.lng);
+  if (!(lat >= 20 && lat <= 46 && lng >= 122 && lng <= 154)) continue;
+  if (!COORD_FACILITIES_BY_PREF.has(peer.prefecture)) COORD_FACILITIES_BY_PREF.set(peer.prefecture, []);
+  COORD_FACILITIES_BY_PREF.get(peer.prefecture).push({ facility: peer, lat, lng });
+}
+const SAMESHI_BY_PREF = new Map();
+for (const spot of SAMESHI_SPOTS) {
+  if (!SAMESHI_BY_PREF.has(spot.prefecture)) SAMESHI_BY_PREF.set(spot.prefecture, []);
+  SAMESHI_BY_PREF.get(spot.prefecture).push(spot);
+}
+function renderSameshiBlock(facility) {
+  const spots = SAMESHI_BY_PREF.get(facility.prefecture) || [];
+  if (!spots.length) return "";
+  const cityHead = cityKeyOf(facility);
+  const matched = spots.filter((spot) => cityHead && (cityHead === spot.area || cityHead.startsWith(spot.area) || spot.area.startsWith(cityHead)));
+  const ordered = [...matched, ...spots.filter((spot) => !matched.includes(spot))];
+  const items = ordered.map((spot) => `<li><a href="${escapeAttr(spot.url)}" rel="noopener">${escapeHtml(spot.spot)}</a>${spot.area ? `（${escapeHtml(spot.area)}）` : ""}${spot.menu ? `：${escapeHtml(spot.menu)}` : ""}${matched.includes(spot) ? " ※この施設と同じエリアの候補" : ""}</li>`).join("");
+  return `
+    <h2>${escapeHtml(facility.prefecture)}のサ飯候補</h2>
+    <p>同じ都道府県内で運営が確認しているサ飯候補です。施設からの距離は掲載していません（スポット側に座標がないため）。</p>
+    <ul class="ssr-list">${items}</ul>
+    <p><a href="/sameshi/">サ飯スポットの一覧を見る</a></p>`;
+}
+function renderFacilityRelations(facility) {
+  const sections = [];
+  const cityKey = cityKeyOf(facility);
+  const peers = (CITY_PEERS.get(`${facility.prefecture}|${cityKey}`) || []).filter((peer) => peer.id !== facility.id).slice(0, 5);
+  if (peers.length) {
+    sections.push(`
+    <h2>${escapeHtml(cityKey)}のほかのサウナ（個別ページがある施設）</h2>
+    <ul class="ssr-list">${peers.map((peer) => `<li><a href="/facility/${encodeURIComponent(peer.id)}/">${escapeHtml(peer.name)}</a>${getAddress(peer) ? ` <span>${escapeHtml(getAddress(peer))}</span>` : ""}</li>`).join("")}</ul>`);
+  }
+  const lat = Number(facility.lat);
+  const lng = Number(facility.lng);
+  if (lat >= 20 && lat <= 46 && lng >= 122 && lng <= 154) {
+    const nearby = (COORD_FACILITIES_BY_PREF.get(facility.prefecture) || [])
+      .filter((entry) => entry.facility.id !== facility.id)
+      .map((entry) => ({ facility: entry.facility, km: haversineDistanceKm(lat, lng, entry.lat, entry.lng) }))
+      .sort((a, b) => a.km - b.km)
+      .slice(0, 5);
+    if (nearby.length) {
+      sections.push(`
+    <h2>近くのサウナ（直線距離）</h2>
+    <ul class="ssr-list">${nearby.map((entry) => `<li><a href="/facility/${encodeURIComponent(entry.facility.id)}/">${escapeHtml(entry.facility.name)}</a> <span>約${entry.km.toFixed(1)}km</span></li>`).join("")}</ul>
+    <p><small>距離は掲載座標同士の直線距離です。道路距離や所要時間ではありません。</small></p>`);
+    }
+  }
+  return sections.join("");
 }
 const ARTICLE_ROUTES = SAUNA_ARTICLES.map((article, index) => ({
   article,
@@ -281,9 +386,16 @@ function renderHtml(route, meta, ssrHtml) {
 
 function renderHomeSsr() {
   const total = SEARCHABLE_FACILITIES.length;
-  const prefLinks = PREFECTURES
-    .map((pref) => `<a href="/pref/${pref.slug}/">${escapeHtml(pref.name)}</a>`)
-    .join("");
+  const regions = [...new Set(PREFECTURES.map((pref) => pref.region))];
+  const prefLinks = regions.map((region) => `
+      <strong>${escapeHtml(region)}</strong>
+      ${PREFECTURES.filter((pref) => pref.region === region).map((pref) => `<a href="/pref/${pref.slug}/">${escapeHtml(pref.name)}</a>`).join("")}`).join("");
+  const evidenceExamples = CANONICAL_FACILITIES
+    .map((facility) => ({ facility, facts: (getFacilityEvidence(facility)?.facts || []).length }))
+    .filter((entry) => entry.facts >= 5 && !entry.facility.status)
+    .sort((a, b) => b.facts - a.facts)
+    .slice(0, 6);
+  const refreshedCount = CANONICAL_FACILITIES.filter((facility) => facility.sourceCheckedAt === TODAY_JST).length;
   return wrapSsr(`
     <p class="eyebrow">SAUNA STAMP RALLY</p>
     <h1>サ印帳</h1>
@@ -295,6 +407,16 @@ function renderHomeSsr() {
       <li>県別マスター、称号、ランキングで続ける理由が見えます。</li>
       <li>スマホのホーム画面に追加して、次のサ活を1タップで開けます。</li>
     </ul>
+    <h2>コンテンツの実数</h2>
+    <ul>
+      <li>サウナ入門ガイド：${SAUNA_ARTICLES.length}本（健康・安全の記事には出典を表示）</li>
+      <li>サ飯スポット：${SAMESHI_SPOTS.length}件（全47都道府県）</li>
+      <li>Gear（サウナ道具）：${GEAR_PRODUCTS.length}件</li>
+      <li>公式情報で料金・営業時間などを照合した施設：${CANONICAL_FACILITIES.filter((facility) => getFacilityEvidence(facility)).length}件</li>
+      ${refreshedCount ? `<li>参照元を本日再確認した施設：${refreshedCount}件</li>` : ""}
+    </ul>
+    ${evidenceExamples.length ? `<h2>公式情報で確認した施設の例</h2>
+    <ul class="ssr-list">${evidenceExamples.map(({ facility, facts }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture)}・公式照合${facts}項目</span></li>`).join("")}</ul>` : ""}
     <nav class="ssr-links" aria-label="都道府県別サウナ検索">
       <strong>都道府県からサウナを探す</strong>
       ${prefLinks}
@@ -345,15 +467,35 @@ function renderGearSsr() {
 
 function renderGuideSsr(articles) {
   const articleLinks = ARTICLE_ROUTES
-    .map(({ article, route }) => `<li><a href="${escapeAttr(route)}">${escapeHtml(article.title)}</a> <span>${escapeHtml(article.category)}</span></li>`)
+    .map(({ article, route }) => `<li><a href="${escapeAttr(route)}">${escapeHtml(article.title)}</a> <span>${escapeHtml(article.category)}</span><br>${escapeHtml(article.lead)}</li>`)
     .join("");
+  const faqItems = GUIDE_FAQS
+    .map((faq) => `<dt>${escapeHtml(faq.question)}</dt><dd>${escapeHtml(faq.answer)}</dd>`)
+    .join("");
+  const referenceItems = SAUNA_REFERENCES
+    .map((ref) => `<li><a href="${escapeAttr(ref.url)}" rel="noopener">${escapeHtml(ref.label)}</a></li>`)
+    .join("");
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: GUIDE_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+    })),
+  }, null, 2);
   return wrapSsr(`
     <p class="eyebrow">GUIDE</p>
     <h1>初めてでも迷わないサウナ入門</h1>
-    <p>安全、入り方、マナー、水分補給、道具、記録まで${articles.length}本の実用記事を用意しています。</p>
+    <p>安全、入り方、マナー、水分補給、道具、記録まで${articles.length}本の実用記事を用意しています。健康・安全に関わる記事を中心に、各記事の末尾へ内容の根拠とした出典を記事ごとに表示しています。</p>
     <ul class="ssr-list">${articleLinks}</ul>
+    <h2>よくある質問</h2>
+    <dl>${faqItems}</dl>
+    <h2>サウナ入門の参考資料（ガイド全体）</h2>
+    <p>各記事の出典は記事ページの末尾に記事単位で表示しています。ここにはガイド全体で参照している資料をまとめます。</p>
+    <ul>${referenceItems}</ul>
     <p><a href="/">サ印帳トップへ戻る</a></p>
-  `);
+  `, { jsonLd });
 }
 
 function renderArticleSsr(article, route) {
@@ -379,9 +521,27 @@ function renderArticleSsr(article, route) {
         author: { "@id": `${APP_URL}/#organization` },
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
         publisher: { "@id": `${APP_URL}/#organization` },
+        ...(Array.isArray(article.sources) && article.sources.length ? { citation: article.sources.map((source) => source.url) } : {}),
       },
     ],
   }, null, 2);
+  const detailHtml = (article.detail || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const sourcesHtml = Array.isArray(article.sources) && article.sources.length ? `
+    <h2>出典・参考資料</h2>
+    <ul>${article.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}</ul>
+    <p><small>この記事の内容の根拠とした資料です。2026年11月4日に各出典を確認しています。補助的な出典には、その旨を資料名に明記しています。</small></p>` : "";
+  const index = ARTICLE_ROUTES.findIndex((entry) => entry.route === route);
+  const siblings = ARTICLE_ROUTES.filter((entry) => entry.article.category === article.category && entry.route !== route).slice(0, 3);
+  const prev = index > 0 ? ARTICLE_ROUTES[index - 1] : null;
+  const next = index >= 0 && index < ARTICLE_ROUTES.length - 1 ? ARTICLE_ROUTES[index + 1] : null;
+  const hubByCategory = { "道具": ["/gear/", "Gear（サウナ道具）の一覧を見る"], "サ飯": ["/sameshi/", "サ飯スポットの一覧を見る"], "遠征": ["/stay/", "サウナ合宿・宿の一覧を見る"], "施設選び": ["/", "施設を探す（サ印帳トップ）"] };
+  const hub = hubByCategory[article.category];
+  const relatedItems = [
+    ...siblings.map((entry) => `<li><a href="${escapeAttr(entry.route)}">${escapeHtml(entry.article.title)}</a> <span>同じ「${escapeHtml(article.category)}」の記事</span></li>`),
+    ...(prev ? [`<li><a href="${escapeAttr(prev.route)}">前の記事：${escapeHtml(prev.article.title)}</a></li>`] : []),
+    ...(next ? [`<li><a href="${escapeAttr(next.route)}">次の記事：${escapeHtml(next.article.title)}</a></li>`] : []),
+    ...(hub ? [`<li><a href="${hub[0]}">${hub[1]}</a></li>`] : []),
+  ].join("");
   return wrapSsr(`
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/guide/">サウナ入門</a> › ${escapeHtml(article.title)}</nav>
     <p class="eyebrow">${escapeHtml(article.category)}</p>
@@ -389,17 +549,39 @@ function renderArticleSsr(article, route) {
     ${modifiedAt ? `<p><small>最終更新 <time datetime="${modifiedAt}">${modifiedAt}</time></small></p>` : ""}
     <p>${escapeHtml(article.lead)}</p>
     <ul>${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+    ${detailHtml}
     <p><strong>実践:</strong> ${escapeHtml(article.action)}</p>
     <p><strong>注意:</strong> ${escapeHtml(article.caution)}</p>
+    ${sourcesHtml}
+    ${relatedItems ? `<h2>関連する記事・ページ</h2><ul class="ssr-list">${relatedItems}</ul>` : ""}
     <p><a href="/guide/">サウナ入門の記事一覧へ戻る</a></p>
   `, { jsonLd });
 }
 
 function renderPrefSsr(pref, facilities) {
   const indexableFacilities = facilities.filter(isIndexableFacility);
-  const facilityLinks = indexableFacilities
-    .map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>${facility.city ? ` <span>${escapeHtml(facility.city)}</span>` : ""}</li>`)
+  const withAddress = facilities.filter((facility) => getAddress(facility)).length;
+  const withOfficial = facilities.filter((facility) => facility.officialUrl).length;
+  const withEvidence = facilities.filter((facility) => getFacilityEvidence(facility)).length;
+  const cityGroups = new Map();
+  for (const facility of indexableFacilities) {
+    const key = cityKeyOf(facility) || "その他";
+    if (!cityGroups.has(key)) cityGroups.set(key, []);
+    cityGroups.get(key).push(facility);
+  }
+  const facilityLinks = [...cityGroups.entries()]
+    .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], "ja"))
+    .map(([city, group]) => `
+    <h2>${escapeHtml(city)}（${group.length}件）</h2>
+    <ul class="ssr-list">${group.map((facility) => {
+      const hint = getAddress(facility) ? getAddress(facility) : getFacilityEvidence(facility) ? "公式情報を照合済み" : facility.officialUrl ? "公式リンクあり" : "";
+      return `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>${hint ? ` <span>${escapeHtml(hint)}</span>` : ""}</li>`;
+    }).join("")}</ul>`)
     .join("");
+  const regionPeers = PREFECTURES.filter((other) => other.region === pref.region && other.name !== pref.name);
+  const regionLinks = regionPeers.length ? `
+    <h2>${escapeHtml(pref.region)}地方のほかの県</h2>
+    <ul class="ssr-list">${regionPeers.map((other) => `<li><a href="/pref/${other.slug}/">${escapeHtml(other.name)}のサウナ</a></li>`).join("")}</ul>` : "";
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -426,8 +608,11 @@ function renderPrefSsr(pref, facilities) {
     <p class="eyebrow">PREFECTURE</p>
     <h1>${escapeHtml(pref.name)}のサウナ検索</h1>
     <p>${escapeHtml(pref.name)}の候補${facilities.length}件をアプリ内で検索できます。この一覧では、番地住所・公式URL・固有の宿情報を確認できた${indexableFacilities.length}件を掲載しています。</p>
-    <ul class="ssr-list">${facilityLinks}</ul>
+    <p>${escapeHtml(pref.name)}の掲載状況：候補${facilities.length}件のうち、番地住所まで確認できたもの${withAddress}件、公式URLがあるもの${withOfficial}件、料金・営業時間などを公式情報で照合したもの${withEvidence}件です。確認が進んだ候補から個別ページに掲載しています。</p>
+    ${facilityLinks}
     <p>未確認候補は検索画面で確認できます。番地、営業状況、料金は参照元または施設公式情報を訪問前に再確認してください。</p>
+    ${renderSameshiBlock({ prefecture: pref.name, city: "" })}
+    ${regionLinks}
     <p><a href="/">サ印帳トップへ戻る</a></p>
   `, { jsonLd });
 }
@@ -441,8 +626,12 @@ function renderFacilitySsr(facility) {
   const facilityUrl = `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`;
   const source = facility.sourceUrl ? `<a href="${escapeAttr(facility.sourceUrl)}" rel="nofollow noreferrer">${escapeHtml(facility.source || "参照")}</a>` : escapeHtml(facility.source || "参照元確認中");
   const official = facility.officialUrl ? `<a href="${escapeAttr(facility.officialUrl)}" rel="nofollow noreferrer">施設公式ページ</a>` : "";
-  const note = String(facility.note || "").trim();
+  const note = displayNote(facility);
   const quality = getFacilityQuality(facility);
+  const factCount = (evidence?.facts || []).length;
+  const missingFields = evidence ? getMissingEvidenceFields(facility) : [];
+  const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
+  const mapUrl = (address || facility.city) ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}` : "";
   const breadcrumb = prefSlug
     ? `<nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/pref/${prefSlug}/">${escapeHtml(facility.prefecture)}のサウナ</a> › ${escapeHtml(facility.name)}</nav>`
     : `<nav aria-label="パンくず"><a href="/">サ印帳</a> › ${escapeHtml(facility.name)}</nav>`;
@@ -474,14 +663,20 @@ function renderFacilitySsr(facility) {
       ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"}）</dd></div>`).join("")}
       ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
       ${isFitnessFacility(facility) ? '<div><dt>施設区分</dt><dd>ジム・フィットネス併設。通常のサウナ検索の対象外です。記録・参照用のページは保持しています。</dd></div>' : ""}
+      ${facility.source === "Airbnb" ? '<div><dt>施設の種類</dt><dd>宿泊施設（サウナ付き宿）</dd></div>' : ""}
+      ${facility.access ? `<div><dt>アクセス（参照元掲載）</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
-      ${note && !evidence ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
-      <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
-      ${renderCheckedAt(facility)}
+      ${mapUrl ? `<div><dt>地図</dt><dd><a href="${escapeAttr(mapUrl)}" rel="noopener">地図で場所を確認（Google Maps）</a></dd></div>` : ""}
+      ${note ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
+      <div><dt>掲載の確認状況</dt><dd>住所：${address ? "掲載あり" : facility.city ? "市区町村まで掲載" : "未確認"} ／ 公式ページ：${facility.officialUrl ? "あり" : "なし"} ／ 料金・営業時間など：${factCount ? `公式照合済み（${factCount}項目）` : "未確認"}</dd></div>
+      ${missingFields.length ? `<div><dt>公式照合で未確認の項目</dt><dd>${escapeHtml(missingFields.join("・"))}（未確認は「設備なし」を意味しません）</dd></div>` : ""}
+      ${renderProvenanceRows(facility, evidence)}
     </dl>
     <p>${escapeHtml(quality.description)}</p>
     <p><a href="/contact/">情報修正を知らせる</a></p>
+    ${renderFacilityRelations(facility)}
+    ${renderSameshiBlock(facility)}
     ${prefSlug ? `<p><a href="/pref/${prefSlug}/">${escapeHtml(facility.prefecture)}のサウナ一覧へ戻る</a></p>` : ""}
   `, { jsonLd });
 }
