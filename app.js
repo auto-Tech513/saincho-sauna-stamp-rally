@@ -39,7 +39,7 @@ const CHECKIN_RADIUS_METERS = 300;
 const NEARBY_RESULT_RADIUS_KM = NEARBY_RADIUS_KM;
 const NEARBY_NOTIFICATION_RADIUS_KM = NEARBY_RADIUS_KM;
 const NEARBY_NOTIFICATION_COOLDOWN_MS = 12 * 60 * 60 * 1000;
-const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国約5000候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
+const APP_SHARE_TEXT = "行ったサウナが、ただの記録じゃなく集めた証になる。サ印帳で全国のサウナ候補から押印、県マスター、称号、サ飯、口コミまで楽しめます。";
 const ALLOWED_IMAGE_HOSTS = new Set([location.hostname, new URL(APP_URL).hostname]);
 const AIRBNB_SAUNA_STAY_URL = "https://www.airbnb.jp/japan/stays/sauna";
 const SAUNA_STAY_LINKS = [
@@ -429,7 +429,7 @@ const PROMOTION_COPY_OPTIONS = [
   },
   {
     label: "検索意図",
-    text: "サウナ検索、サ活記録、サウナ版御朱印をひとつに。全国約5000候補から探して、行った施設をサ印として残せます。",
+    text: "サウナ検索、サ活記録、サウナ版御朱印をひとつに。全国のサウナ候補から探して、行った施設をサ印として残せます。",
   },
   {
     label: "仲間共有",
@@ -530,7 +530,7 @@ const VIEW_META = {
   Explore: {
     path: "/",
     title: "サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ",
-    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国約5000候補、施設詳細、サ飯、称号、ランキングに対応。",
+    description: "サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、全国のサウナ候補、施設詳細、サ飯、称号、ランキングに対応。",
   },
   Facility: {
     path: "/facility/",
@@ -752,6 +752,7 @@ const QUEST_COPY = [
 ];
 
 const FACILITY_STATUS = {
+  closed: { badge: "閉店", action: "閉店" },
   suspended: { badge: "臨時休業", action: "休業中" },
   planned: { badge: "開業予定", action: "開業待ち" },
   verify: { badge: "要確認", action: "要確認" },
@@ -1114,7 +1115,7 @@ function renderBootLoading() {
     el.facilityList.innerHTML = `
       <div class="empty-state app-loading-state" role="status" aria-live="polite">
         <span class="loading-spinner" aria-hidden="true"></span>
-        <p>全国約5000件のサウナ候補を読み込んでいます。</p>
+        <p>全国のサウナ候補を読み込んでいます。</p>
       </div>
     `;
   }

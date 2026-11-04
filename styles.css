@@ -663,7 +663,7 @@ a {
   border-bottom: 1px solid rgb(255 255 255 / 0.1);
 }
 
-.topbar h1,
+.topbar .brand-name,
 .section-title h2,
 .dialog-head h2 {
   margin: 0;
@@ -723,7 +723,14 @@ a {
   min-width: 0;
 }
 
-.topbar h1 {
+.topbar .brand-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.topbar .brand-name {
   font-size: 28px;
   text-shadow: 0 2px 16px rgb(0 0 0 / 0.4);
 }
@@ -5179,7 +5186,7 @@ body {
     min-height: 104px;
   }
 
-  .topbar h1 {
+  .topbar .brand-name {
     font-size: 32px;
   }
 
@@ -5347,7 +5354,7 @@ body {
     height: 44px;
   }
 
-  .topbar h1 {
+  .topbar .brand-name {
     font-size: 26px;
   }
 
@@ -5900,7 +5907,7 @@ a:focus-visible {
   box-shadow: none;
 }
 
-.topbar h1 {
+.topbar .brand-name {
   color: var(--ink);
   font-family: var(--font-display);
   font-size: clamp(26px, 4.8vw, 36px);
@@ -6410,7 +6417,7 @@ a:focus-visible {
     height: 46px;
   }
 
-  .topbar h1 {
+  .topbar .brand-name {
     font-size: clamp(26px, 7.4vw, 34px);
     line-height: 1.08;
   }
@@ -6694,7 +6701,7 @@ body {
   box-shadow: 0 18px 32px rgb(0 0 0 / 0.32);
 }
 
-.topbar h1 {
+.topbar .brand-name {
   color: #fffaf2;
   font-size: clamp(30px, 4vw, 44px);
   font-weight: 800;
@@ -7236,7 +7243,7 @@ body {
     height: 50px;
   }
 
-  .topbar h1 {
+  .topbar .brand-name {
     font-size: clamp(30px, 8vw, 38px);
   }
 
@@ -8630,7 +8637,7 @@ body { color: var(--ink); background: #e6ece7; }
 @media (max-width: 760px) {
   .review-form { grid-template-columns: minmax(0, 1fr); }
   .topbar { min-height: 90px; padding-block: 12px; }
-  .topbar h1 { font-size: 27px; line-height: 1.2; }
+  .topbar .brand-name { font-size: 27px; line-height: 1.2; }
   .topbar-promise { display: none; }
   .brand-mark { width: 44px; height: 44px; }
   .topbar .eyebrow { font-size: 10px; }

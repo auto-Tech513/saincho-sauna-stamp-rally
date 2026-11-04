@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-title" content="サ印帳" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <!-- SEO:BEGIN -->
-    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、サ活帳、全国約5000候補、施設詳細、サ飯、称号、ランキングに対応。" />
+    <meta name="description" content="サ印帳は、サウナを検索して行った施設をサ印として記録できる無料のサウナスタンプラリー・サ活記録アプリです。サウナ版御朱印、サ活帳、全国のサウナ候補、施設詳細、サ飯、称号、ランキングに対応。" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="application-name" content="サ印帳" />
@@ -24,19 +24,19 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="サ印帳" />
     <meta property="og:title" content="サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ" />
-    <meta property="og:description" content="行ったサウナを押印。全国約5000候補、個別施設ページ、サ印スロット、県別マスター、称号、ランキング、サ飯、Gearまでスマホで楽しめます。" />
+    <meta property="og:description" content="行ったサウナを押印。全国のサウナ候補、個別施設ページ、サ印スロット、県別マスター、称号、ランキング、サ飯、Gearまでスマホで楽しめます。" />
     <meta property="og:url" content="https://saincho-sauna-stamp-rally.pages.dev/" />
     <meta property="og:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta property="og:image:secure_url" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="サ印帳の共有カード。全国約5000候補から行ったサウナを押印して集める。" />
+    <meta property="og:image:alt" content="サ印帳の共有カード。全国のサウナ候補から行ったサウナを押印して集める。" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="サ印帳 | 全国サウナスタンプラリー" />
     <meta name="twitter:description" content="行ったサウナを押印。サ印スロット、県別マスター、称号、ランキング、サ飯、Gearでサ活が続く無料PWA。" />
     <meta name="twitter:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
-    <meta name="twitter:image:alt" content="サ印帳の共有カード。全国約5000候補から行ったサウナを押印して集める。" />
+    <meta name="twitter:image:alt" content="サ印帳の共有カード。全国のサウナ候補から行ったサウナを押印して集める。" />
     <!-- SEO:END -->
     <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <link rel="alternate" type="application/rss+xml" href="https://saincho-sauna-stamp-rally.pages.dev/feed.xml" title="サ印帳 サウナ入門・更新情報" />
@@ -163,7 +163,7 @@
             "browserRequirements": "Requires JavaScript and local storage.",
             "isAccessibleForFree": true,
             "inLanguage": "ja-JP",
-            "description": "全国約5000候補からサウナを検索し、サウナ版御朱印のようにサ印を押印、取り消し、メモ、X共有、施設詳細、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。",
+            "description": "全国のサウナ候補から検索し、サウナ版御朱印のようにサ印を押印、取り消し、メモ、X共有、施設詳細、県別マスター、称号、サ飯、ランキングをスマホで管理できるサ活記録アプリです。候補の件数と内訳は運営・データ方針ページに掲載しています。",
             "image": "https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png",
             "offers": {
               "@type": "Offer",
@@ -194,7 +194,7 @@
           <img class="brand-mark" src="./icons/icon-192.png" width="48" height="48" alt="" />
           <div class="brand-copy">
             <p class="eyebrow">SAUNA STAMP RALLY</p>
-            <h1>サ印帳</h1>
+            <p class="brand-name">サ印帳</p>
             <div class="topbar-promise" aria-label="サ印帳の特徴">
               <span>押して集める</span>
               <span>次の一湯</span>
@@ -285,7 +285,7 @@
                   <span class="summary-label">押印済み</span>
                   <strong id="visitedCount">0</strong>
                   <span id="nextMilestone">あと1湯ではじめの一湯</span>
-                  <span id="collectionScope">約5000候補 / 47都道府県</span>
+                  <span id="collectionScope">サウナ候補 / 47都道府県</span>
                 </div>
                 <div class="progress-ring" id="progressRing" aria-label="収録候補達成率">
                   <span id="progressPercent">0%</span>
@@ -514,7 +514,7 @@
               <p class="eyebrow">SAUNA STAY</p>
               <h2>サウナ合宿先</h2>
             </div>
-            <span class="count-badge" id="stayCount">3件</span>
+            <span class="count-badge" id="stayCount">34件</span>
           </div>
           <div class="stay-hero">
             <span>遠征は施設詳細と分けて探す</span>
@@ -594,7 +594,7 @@
               <p class="eyebrow">SAUNA MEAL</p>
               <h2>サ飯</h2>
             </div>
-            <span class="count-badge" id="sameshiCount">全国52件</span>
+            <span class="count-badge" id="sameshiCount">全国287件</span>
           </div>
           <div class="sameshi-hero">
             <span>サウナ後のご褒美まで設計</span>

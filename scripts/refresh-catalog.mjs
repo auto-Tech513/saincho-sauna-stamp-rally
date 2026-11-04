@@ -5,7 +5,8 @@ import { addressIssues } from "./audit-facility-evidence.mjs";
 
 const apply = process.argv.includes("--apply");
 const limit = Number(process.argv.find(arg => arg.startsWith("--limit="))?.split("=")[1]) || Infinity;
-const targets = SEED_FACILITIES.filter(item => /^https:\/\/saunatime\.jp\/saunas\/\d+\/$/.test(item.sourceUrl)).slice(0, limit);
+const offset = Number(process.argv.find(arg => arg.startsWith("--offset="))?.split("=")[1]) || 0;
+const targets = SEED_FACILITIES.filter(item => /^https:\/\/saunatime\.jp\/saunas\/\d+\/$/.test(item.sourceUrl)).slice(offset, limit === Infinity ? undefined : offset + limit);
 const checkedAt = new Intl.DateTimeFormat("en-CA", {timeZone:"Asia/Tokyo"}).format(new Date());
 const results = [];
 const blockedHosts = new Set();

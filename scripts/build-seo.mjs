@@ -59,6 +59,19 @@ const HIDDEN_TAGS = new Set([
 
 const PREF_SLUG = new Map(PREFECTURES.map((pref) => [pref.name, pref.slug]));
 const { facilities: CANONICAL_FACILITIES, aliases: FACILITY_ALIASES } = dedupeFacilitiesForSeo(SEED_FACILITIES.map(applyFacilityEvidence));
+const SEARCHABLE_FACILITIES = CANONICAL_FACILITIES.filter((facility) => !isFitnessFacility(facility));
+function getFacilityLastmod(facility) {
+  const dates = [facility.sourceCheckedAt, facility.addressCheckedAt, ...((getFacilityEvidence(facility)?.facts || []).map((fact) => fact.checkedAt))].filter(Boolean).sort();
+  return dates.at(-1) || LASTMOD.data;
+}
+function renderCheckedAt(facility) {
+  const date = facility.addressCheckedAt || facility.sourceCheckedAt;
+  if (!date) return "";
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+  const days = Math.round((Date.parse(today) - Date.parse(date)) / 86400000);
+  const elapsed = Number.isFinite(days) && days > 0 ? `（確認から${days}日経過）` : days === 0 ? "（本日確認）" : "";
+  return `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(date)}">${escapeHtml(date)}</time>${elapsed}</dd></div>`;
+}
 const ARTICLE_ROUTES = SAUNA_ARTICLES.map((article, index) => ({
   article,
   route: `/guide/${encodeURIComponent(`${index + 1}-${slugify(article.title)}`)}/`,
@@ -134,6 +147,7 @@ await write("sw.js", builtSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 await copyFile("manifest.webmanifest");
+await copyFile("llms.txt");
 await copyFile("google4f1c271dfaceddbb.html");
 await copyAssetFiles(ASSET_FILES);
 await copyAssetFiles(ICON_FILES);
@@ -152,7 +166,7 @@ const template = sourceIndex
 
 const urls = [];
 let generatedPages = 0;
-await emitPage("/", { ...pageMeta("サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ", "全国約5000件のサウナ候補から行った施設を押印。サウナ検索、サウナ御朱印、サ活記録、県別マスター、ランキング、サ飯、Gearをスマホで使える無料PWAです。"), lastmod: LASTMOD.site }, renderHomeSsr());
+await emitPage("/", { ...pageMeta("サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ", `全国${SEARCHABLE_FACILITIES.length}件のサウナ候補（重複統合後・通常検索の対象）から行った施設を押印。サウナ検索、サウナ御朱印、サ活記録、県別マスター、ランキング、サ飯、Gearをスマホで使える無料PWAです。件数の内訳は運営・データ方針ページに掲載。`), lastmod: LASTMOD.site }, renderHomeSsr());
 await emitStaticRoute("/sauna-stamp-rally/", "サウナスタンプラリーをスマホで楽しむ | サ印帳", "サウナスタンプラリーの始め方、紙との違い、押印・行きたい・県別マスター・サ活ログの使い分けを、無料Webアプリのサ印帳で具体的に確認できます。", renderSearchIntentSsr("stamp-rally"), LASTMOD.content);
 await emitStaticRoute("/sauna-goshuin/", "サウナ御朱印のように訪問記録を集める | サ印帳", "サウナ御朱印のように訪問の証をスマホへ残す方法を解説。施設公式の御朱印や物理スタンプとの違い、サ印・メモ・サ活ログの使い方を確認できます。", renderSearchIntentSsr("goshuin"), LASTMOD.content);
 await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウナマット、水分補給、サウナバッグなど、サウナ前後に役立つ30カテゴリのGearをAmazon・楽天のレビュー検索導線で比較できます。", renderGearSsr(), LASTMOD.content);
@@ -180,7 +194,7 @@ for (const facility of CANONICAL_FACILITIES) {
   const titleArea = [facility.prefecture, facility.city].filter(Boolean).join("・");
   const meta = {
     ...pageMeta(`${facility.name}${titleArea ? `（${titleArea}）` : ""} | サ印帳 施設詳細`, getFacilityDescription(facility)),
-    lastmod: LASTMOD.data,
+    lastmod: getFacilityLastmod(facility),
     noindex: !isIndexableFacility(facility),
   };
   await emitPage(`/facility/${encodeURIComponent(facility.id)}/`, meta, renderFacilitySsr(facility));
@@ -266,7 +280,7 @@ function renderHtml(route, meta, ssrHtml) {
 }
 
 function renderHomeSsr() {
-  const total = CANONICAL_FACILITIES.filter(facility => !isFitnessFacility(facility)).length;
+  const total = SEARCHABLE_FACILITIES.length;
   const prefLinks = PREFECTURES
     .map((pref) => `<a href="/pref/${pref.slug}/">${escapeHtml(pref.name)}</a>`)
     .join("");
@@ -274,7 +288,7 @@ function renderHomeSsr() {
     <p class="eyebrow">SAUNA STAMP RALLY</p>
     <h1>サ印帳</h1>
     <h2>サ印帳とは</h2>
-    <p>全国約${total}件のサウナ候補を検索し、実際に行った施設を「サ印」として記録できる無料のサウナスタンプラリー・サ活記録アプリです。施設が発行する物理スタンプではなく、自分の訪問履歴をスマホで育てます。</p>
+    <p>全国${total}件のサウナ候補（同一施設の別名・別参照元を統合し、通常のサウナ検索の対象となる件数）を検索し、実際に行った施設を「サ印」として記録できる無料のサウナスタンプラリー・サ活記録アプリです。施設が発行する物理スタンプではなく、自分の訪問履歴をスマホで育てます。件数の内訳と掲載方針は<a href="/about/">運営・データ方針</a>に掲載しています。</p>
     <h2>検索から次のサ活まで</h2>
     <ul>
       <li>施設カードから詳細、経路、周辺サ飯、Gearを確認できます。</li>
@@ -464,7 +478,7 @@ function renderFacilitySsr(facility) {
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
       ${note && !evidence ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>確認状態</dt><dd>${escapeHtml(quality.label)}</dd></div>
-      ${facility.addressCheckedAt || facility.sourceCheckedAt ? `<div><dt>参照元の確認日</dt><dd><time datetime="${escapeAttr(facility.addressCheckedAt || facility.sourceCheckedAt)}">${escapeHtml(facility.addressCheckedAt || facility.sourceCheckedAt)}</time></dd></div>` : ""}
+      ${renderCheckedAt(facility)}
     </dl>
     <p>${escapeHtml(quality.description)}</p>
     <p><a href="/contact/">情報修正を知らせる</a></p>

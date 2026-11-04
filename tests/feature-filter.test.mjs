@@ -59,7 +59,8 @@ test("official salt and auto-loyly features reach the search index", () => {
   const { run } = harness();
   assert.equal(run('getFacilityFeatures({id:"manual-aichi-okazaki-rakunoyu"}).includes("塩サウナ")'), true);
   assert.equal(run('getFacilityFeatures({id:"manual-aichi-super-sauna-ichinomiya"}).includes("オートロウリュ")'), true);
-  assert.equal(run('getFacilityStatus(applyFacilityEvidence({id:"si-80496"})).badge'), "臨時休業");
+  assert.equal(run('getFacilityStatus(applyFacilityEvidence({id:"si-80496"})).badge'), "閉店");
+  assert.equal(run('getFacilityStatus({status:"suspended"}).badge'), "臨時休業");
 });
 
 test("explicit official aliases share evidence and one result without losing saved IDs", () => {
@@ -70,13 +71,13 @@ test("explicit official aliases share evidence and one result without losing sav
   assert.equal(run('getFacilityFeatures(getFacilities()[0]).includes("塩サウナ")'), true);
 });
 
-test("a suspended facility cannot start check-in or become a nearby recommendation", async () => {
+test("a closed facility cannot start check-in or become a nearby recommendation", async () => {
   const { context, run } = harness();
   context.closed = evidence.applyFacilityEvidence({id:"st-kyoto-4811",name:"FIRST THE SAUNA",lat:34.989132,lng:135.756307,address:"京都市下京区"});
   run('getCurrentPosition=()=>{throw new Error("must not request position");}; facilitiesCache=[closed];');
   await run('startFacilityCheckin(closed)');
   assert.doesNotMatch(run('renderCheckinPanel(closed)'), /data-action="start-checkin"/);
-  assert.match(run('renderFacilityCardFacts(closed)'), /臨時休業中/);
+  assert.match(run('renderFacilityCardFacts(closed)'), /閉店/);
   assert.equal(run('getNearestFacilities(34.989132,135.756307).length'), 0);
 });
 

@@ -61,9 +61,14 @@ export const CURATED_FACILITY_EVIDENCE = [
     ],
   },
   {
-    ids: ["st-kyoto-4811", "si-80496"], officialUrl: "https://first-kyoto.com/sauna/", status: "suspended",
+    ids: ["si-2776"], name: "軍人湯", status: "closed",
     features: [],
-    facts: [fact("営業状況", "2026年9月25日の公式続報で、漏水被害による臨時休業中・営業再開の目途未定と案内。通常の料金・設備ページは営業再開を意味しません", "https://first-kyoto.com/news/316/")],
+    facts: [{ label: "営業状況", value: "2026年3月31日に閉業。参照元の施設名表記に閉業日が含まれ、関西の2026年閉店情報一覧（京都）にも掲載", sourceUrl: "https://kansai-kaiten.com/kaitenheiten2026_kyoto/", checkedAt: "2026-11-04" }],
+  },
+  {
+    ids: ["st-kyoto-4811", "si-80496"], officialUrl: "https://first-kyoto.com/sauna/", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "2026年10月23日の公式発表で、2026年8月の漏水事故からの営業再開を断念し、FIRST THE SAUNA・GOLF・BASEの全施設の閉店を決定と案内（臨時休業から閉店へ変更）", sourceUrl: "https://first-kyoto.com/news/319/", checkedAt: "2026-11-04" }],
   },
   {
     ids: ["st-okinawa-940", "si-okinawa-4327"], officialUrl: "https://www.nahacen.com/rikka/index.html",

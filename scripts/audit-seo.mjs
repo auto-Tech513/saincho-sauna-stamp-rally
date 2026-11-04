@@ -16,7 +16,7 @@ const pageSitemap = await read("sitemap-pages.xml");
 const redirects = await read("_redirects");
 const sourceRedirects = await fs.readFile(path.join(root, "_redirects"), "utf8");
 const headers = await fs.readFile(path.join(root, "_headers"), "utf8");
-const retiredFunctions = ["functions/llms.txt.js", "functions/sitemap-facilities-2.xml.js"];
+const retiredFunctions = ["functions/sitemap-facilities-2.xml.js"];
 const version = JSON.parse(await read("version.json"));
 assert(/^app\.[a-f0-9]+\.js$/.test(version.app), "更新確認用のアセット名が不正です");
 assert(rootHtml.includes(`src="./${version.app}"`), "更新メタデータとHTMLのappアセットが一致しません");
