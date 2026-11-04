@@ -2,6 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { SEED_FACILITIES } from "../data.js";
 import { parseOfficialEvidence } from "./official-evidence-parser.mjs";
 import { CURATED_FACILITY_EVIDENCE } from "../facility-evidence.js";
+import { OFFICIAL_PAGE_EVIDENCE } from "../official-page-evidence.js";
 
 const report = JSON.parse(await readFile(new URL("../output/official-audit/report.json", import.meta.url), "utf8"));
 const profiles = [];
@@ -29,6 +30,12 @@ for (const row of report.results) {
   else rejected.push({ id: row.id, name: row.name, reason: "施設名一致・対象項目の両方を満たさない" });
 }
 profiles.sort((a,b) => a.ids[0].localeCompare(b.ids[0]));
+// Safety guard: a partial inspection report must never shrink the compiled evidence.
+// (A --limit smoke run once left a 40-target all-error report that would have wiped 114 profiles.)
+if (!process.argv.includes("--force") && profiles.length < OFFICIAL_PAGE_EVIDENCE.length) {
+  console.error(JSON.stringify({ error: "compile aborted: new profile count would shrink the evidence file", current: OFFICIAL_PAGE_EVIDENCE.length, next: profiles.length, hint: "run a full inspection first, or pass --force if the shrink is intentional" }));
+  process.exit(1);
+}
 await writeFile(new URL("../official-page-evidence.js", import.meta.url), `// Generated from identity-matched official labeled fields; not a whole-catalog verification.\nexport const OFFICIAL_PAGE_EVIDENCE = ${JSON.stringify(profiles, null, 2)};\n`);
 await writeFile(new URL("../output/official-audit/compiled.json", import.meta.url), JSON.stringify({ profiles: profiles.length, facts: profiles.reduce((n,p)=>n+p.facts.length,0), rejected }, null, 2));
 console.log(JSON.stringify({ fetched: report.results.filter(r=>!r.error).length, profiles: profiles.length, facts: profiles.reduce((n,p)=>n+p.facts.length,0), rejected: rejected.length }));
