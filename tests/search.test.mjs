@@ -75,10 +75,10 @@ test("visit date and export date use the local calendar day around midnight", ()
 });
 
 test("saunachelin award queries resolve to the tagged facilities only", () => {
-  for (const [query, year] of [["サウナシュラン", 0], ["さうなしゅらん", 0], ["saunachelin", 0], ["SAUNACHELIN", 0], ["サウナシェラン", 0], ["サウナシュラン2025", 2025], ["saunachelin 2024", 2024]]) {
+  for (const [query, year] of [["サウナシュラン", 0], ["さうなしゅらん", 0], ["saunachelin", 0], ["SAUNACHELIN", 0], ["サウナシェラン", 0], ["サウナシュラン2025", 2025], ["saunachelin 2024", 2024], ["シュラン", 0], ["しゅらん", 0], ["サウナシュラン2025年", 2025]]) {
     assert.equal(vm.runInContext(`getSaunachelinAwardYear(${JSON.stringify(query)})`, context), year, query);
   }
-  for (const query of ["サウナ", "サウナ東京", "サウナシュラン20255", "ホテル"]) {
+  for (const query of ["サウナ", "サウナ東京", "サウナシュラン20255", "ホテル", "サウナシュラン年", "ミシュラン"]) {
     assert.equal(vm.runInContext(`getSaunachelinAwardYear(${JSON.stringify(query)})`, context), null, query);
   }
   vm.runInContext(`
@@ -96,4 +96,6 @@ test("saunachelin award queries resolve to the tagged facilities only", () => {
   assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025", "award2024"]);
   vm.runInContext(`searchTerm = "saunachelin2025"; searchNeedles = createSearchNeedles("saunachelin2025");`, context);
   assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025"]);
+  vm.runInContext(`searchTerm = "シュラン"; searchNeedles = createSearchNeedles("シュラン");`, context);
+  assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025", "award2024"]);
 });

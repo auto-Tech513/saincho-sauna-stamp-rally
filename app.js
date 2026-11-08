@@ -980,6 +980,7 @@ async function init() {
   renderShopPanel();
   renderAll();
   warmSearchIndex();
+  restoreUpdateSearch();
   trackPageView();
   prepareSearchIndexOnIntent();
   registerServiceWorkerWhenIdle();
@@ -1094,8 +1095,11 @@ function registerServiceWorkerWhenIdle() {
   runWhenIdle(registerServiceWorker, 2600);
   runWhenIdle(() => checkAppUpdate(), 3200);
   document.addEventListener("visibilitychange", () => {
-    if (document.visibilityState === "visible") checkAppUpdate();
+    if (document.visibilityState === "visible") checkAppUpdate({ force: true });
   });
+  window.setInterval(() => {
+    if (document.visibilityState === "visible") checkAppUpdate();
+  }, 15 * 60 * 1000);
 }
 
 function loadAnalyticsWhenIdle() {
@@ -2071,6 +2075,7 @@ function renderExplore() {
     el.facilityList.setAttribute("aria-busy", "true");
     el.facilityList.inert = true;
     if (el.searchResultsStatus) el.searchResultsStatus.textContent = "検索を準備しています…";
+    el.facilityList.innerHTML = `<div class="empty-state"><p>検索を準備しています…</p></div>`;
     ensureFacilitySearchRecords().then(() => {
       if (activeView === "Explore" && !isSearchComposing) applySearchValue(el.searchInput.value,
         pendingSearchIntent?.value === el.searchInput.value ? pendingSearchIntent.startedAt : performance.now());
@@ -2157,6 +2162,7 @@ async function applySearchValue(value, startedAt = performance.now()) {
       el.facilityList.setAttribute("aria-busy", "true");
       el.facilityList.inert = true;
       el.searchResultsStatus.textContent = "検索を準備しています…";
+      el.facilityList.innerHTML = `<div class="empty-state"><p>検索を準備しています…</p></div>`;
     }
     try {
       await ensureFacilitySearchRecords();
@@ -4921,7 +4927,7 @@ async function reloadAppFresh() {
   }
 }
 
-const SAUNACHELIN_QUERY_PATTERN = /^(?:サウナシュラン|サウナシェラン|サウナチェリン|saunachelin|saunashuran)(20\d{2})?$/;
+const SAUNACHELIN_QUERY_PATTERN = /^(?:(?:サウナシュラン|サウナシェラン|サウナチェリン|saunachelin|saunashuran)(?:(20\d{2})年?)?|シュラン)$/;
 const SAUNACHELIN_HALL_OF_FAME_IDS = new Set(["manual-aichi-wellbe-sakae", "st-kumamoto-82", "st-kanagawa-4", "official-saga-mifuneyama-rakan", "st-nagano-4544", "sc2025-ochiairo", "si-hokkaido-4521", "si-tokyo-67270"]);
 
 // 受賞クエリなら対象年（年指定なしは 0）を、受賞クエリでなければ null を返す
@@ -6702,10 +6708,53 @@ async function checkAppUpdate({ force = false } = {}) {
       if (version.styles && !/^styles\.[a-f0-9]+\.css$/.test(version.styles)) return;
       const styles = document.querySelector('link[rel="stylesheet"][href*="styles."]');
       const sameStyles = !version.styles || (styles?.href && new URL(styles.href).pathname.split("/").pop() === version.styles);
-      notice.hidden = new URL(script.src).pathname.split("/").pop() === version.app && Boolean(sameStyles);
+      const upToDate = new URL(script.src).pathname.split("/").pop() === version.app && Boolean(sameStyles);
+      notice.hidden = upToDate;
+      if (!upToDate) maybeAutoApplyUpdate(version.app);
     } catch {
       // Offline or unavailable version metadata must not interrupt a draft.
     }
   })().finally(() => { updateCheckPending = null; });
   return updateCheckPending;
+}
+
+const UPDATE_GUARD_KEY = "saincho-update-guard-v1";
+const UPDATE_SEARCH_KEY = "saincho-update-search-v1";
+
+// Apply a detected update without waiting for the banner tap-through, but only
+// when nothing the user is editing can be lost: Explore view only, no open
+// dialog, no IME composition, and no dirty activity draft. When any guard
+// fails, the banner stays up and the manual flow remains available.
+function maybeAutoApplyUpdate(targetApp) {
+  try {
+    if (activeView !== "Explore") return;
+    if (isSearchComposing) return;
+    if (document.querySelector("dialog[open]")) return;
+    for (const draft of activityDrafts.values()) {
+      if (draft?.dirty && (draft.text?.trim() || draft.recordVisit)) return;
+    }
+    const now = Date.now();
+    let guard = null;
+    try { guard = JSON.parse(sessionStorage.getItem(UPDATE_GUARD_KEY) || "null"); } catch { guard = null; }
+    if (guard?.target === targetApp && now - Number(guard.at || 0) < 10 * 60 * 1000) return;
+    sessionStorage.setItem(UPDATE_GUARD_KEY, JSON.stringify({ target: targetApp, at: now }));
+    sessionStorage.setItem(UPDATE_SEARCH_KEY, el.searchInput?.value || "");
+    reloadAppFresh();
+  } catch {
+    // Storage or reload unavailable: the banner remains as the manual path.
+  }
+}
+
+// After an automatic update reload, put the interrupted search back so the
+// user lands on the results they were looking at, now on the new version.
+function restoreUpdateSearch() {
+  let term = "";
+  try {
+    term = sessionStorage.getItem(UPDATE_SEARCH_KEY) || "";
+    sessionStorage.removeItem(UPDATE_SEARCH_KEY);
+  } catch { term = ""; }
+  if (!term || !el.searchInput || el.searchInput.value) return;
+  el.searchInput.value = term;
+  renderSearchClearButton();
+  applySearchValue(term);
 }
