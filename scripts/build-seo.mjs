@@ -96,6 +96,20 @@ function renderProvenanceRows(facility, evidence) {
   return rows.join("");
 }
 // note が住所そのもの（または施設名だけ）の場合は紹介文として出さない（住所の二重表示の是正）。
+const SAUNACHELIN_HALL_OF_FAME_IDS = new Set(["manual-aichi-wellbe-sakae", "st-kumamoto-82", "st-kanagawa-4", "official-saga-mifuneyama-rakan", "st-nagano-4544", "sc2025-ochiairo", "si-hokkaido-4521", "si-tokyo-67270"]);
+
+function saunachelinAwardRow(facility) {
+  const years = (facility.tags || [])
+    .map((tag) => /^saunachelin\s+(20\d{2})$/i.exec(String(tag).trim()))
+    .filter(Boolean)
+    .map((match) => Number(match[1]))
+    .sort((a, b) => a - b);
+  if (!years.length) return "";
+  const ids = [facility.id, ...(facility.legacyIds || [])];
+  const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
+  return `<div><dt>サウナシュラン</dt><dd>${years.join("・")}年 受賞（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" rel="noreferrer">公式サイト</a></dd></div>`;
+}
+
 function displayNote(facility) {
   const note = String(facility.note || "").trim();
   if (!note) return "";
@@ -685,6 +699,7 @@ function renderFacilitySsr(facility) {
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
       ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
       ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"}）</dd></div>`).join("")}
+      ${saunachelinAwardRow(facility)}
       ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
       ${isFitnessFacility(facility) ? '<div><dt>施設区分</dt><dd>ジム・フィットネス併設。通常のサウナ検索の対象外です。記録・参照用のページは保持しています。</dd></div>' : ""}
       ${facility.source === "Airbnb" ? '<div><dt>施設の種類</dt><dd>宿泊施設（サウナ付き宿）</dd></div>' : ""}

@@ -426,7 +426,11 @@ export const SEED_FACILITIES = [
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
     "officialUrl": "http://www.nikoh.info/",
-    "officialUrlSource": "https://saunatime.jp/saunas/15/"
+    "officialUrlSource": "https://saunatime.jp/saunas/15/",
+    "tags": [
+      "SAUNACHELIN 2018",
+      "SAUNACHELIN 2019"
+    ]
   },
   {
     "id": "st-hokkaido-226",
@@ -659,7 +663,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "温泉付き",
       "外気あり",
-      "宿泊可"
+      "宿泊可",
+      "SAUNACHELIN 2020"
     ],
     "features": [
       "温泉付き",
@@ -698,20 +703,6 @@ export const SEED_FACILITIES = [
     "addressCheckedAt": "2026-11-04",
     "officialUrl": "http://www.onsen-kiyora.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/170/"
-  },
-  {
-    "id": "sc2025-shiriuchi-onsen",
-    "name": "知内温泉 呼吸の間",
-    "prefecture": "北海道",
-    "city": "知内",
-    "trait": "onsen",
-    "tags": [
-      "SAUNACHELIN 2025",
-      "温泉",
-      "蒸気"
-    ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
   },
   {
     "id": "st-hokkaido-407",
@@ -5752,20 +5743,6 @@ export const SEED_FACILITIES = [
     "officialUrlSource": "https://saunatime.jp/saunas/4850/"
   },
   {
-    "id": "sc2025-king-and-queen",
-    "name": "温泉バルコニー King&Queen",
-    "prefecture": "埼玉県",
-    "city": "所沢",
-    "trait": "water",
-    "tags": [
-      "SAUNACHELIN 2025",
-      "温泉",
-      "大型"
-    ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
-  },
-  {
     "id": "st-saitama-1698",
     "name": "極楽湯上尾店",
     "prefecture": "埼玉県",
@@ -6486,7 +6463,10 @@ export const SEED_FACILITIES = [
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
     "officialUrl": "http://www.my-spa.jp/index.html",
-    "officialUrlSource": "https://saunatime.jp/saunas/76/"
+    "officialUrlSource": "https://saunatime.jp/saunas/76/",
+    "tags": [
+      "SAUNACHELIN 2018"
+    ]
   },
   {
     "id": "st-chiba-1971",
@@ -6527,20 +6507,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://www.saunachelin.com/en/"
   },
   {
-    "id": "sc2025-sauna-tokyo",
-    "name": "Sauna Tokyo",
-    "prefecture": "東京都",
-    "city": "赤坂",
-    "trait": "urban",
-    "tags": [
-      "SAUNACHELIN 2025",
-      "都市型",
-      "殿堂"
-    ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
-  },
-  {
     "id": "sc2025-totopa",
     "name": "TOTOPA 都立明治公園店",
     "prefecture": "東京都",
@@ -6549,7 +6515,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "SAUNACHELIN 2025",
       "都市型",
-      "公園"
+      "公園",
+      "SAUNACHELIN 2024"
     ],
     "source": "SAUNACHELIN",
     "sourceUrl": "https://www.saunachelin.com/en/"
@@ -7176,7 +7143,10 @@ export const SEED_FACILITIES = [
     "lng": 139.624649,
     "trait": "onsen",
     "tags": [
-      "温泉付き"
+      "温泉付き",
+      "SAUNACHELIN 2018",
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2020"
     ],
     "features": [
       "温泉付き"
@@ -10303,7 +10273,12 @@ export const SEED_FACILITIES = [
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
     "officialUrl": "https://lamp-guesthouse.com/sauna/",
-    "officialUrlSource": "https://saunatime.jp/saunas/4544/"
+    "officialUrlSource": "https://saunatime.jp/saunas/4544/",
+    "tags": [
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2022",
+      "SAUNACHELIN 2023"
+    ]
   },
   {
     "id": "st-nagano-2292",
@@ -11748,7 +11723,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナリゾート",
       "富士山",
-      "予約制"
+      "予約制",
+      "SAUNACHELIN 2022"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/13581",
@@ -11797,7 +11773,9 @@ export const SEED_FACILITIES = [
     "tags": [
       "SAUNACHELIN 2025",
       "温泉",
-      "殿堂"
+      "殿堂",
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2020"
     ],
     "source": "SAUNACHELIN",
     "sourceUrl": "https://www.saunachelin.com/en/"
@@ -12796,7 +12774,10 @@ export const SEED_FACILITIES = [
     "tags": [
       "名古屋",
       "カプセル",
-      "老舗"
+      "老舗",
+      "SAUNACHELIN 2018",
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2023"
     ],
     "source": "公式",
     "sourceUrl": "https://www.wellbe.co.jp/sakae/",
@@ -12975,7 +12956,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男女共用",
       "北欧",
-      "ウェルビー"
+      "ウェルビー",
+      "SAUNACHELIN 2019"
     ],
     "source": "公式",
     "sourceUrl": "https://saunalab.jp/nagoya/",
@@ -15079,7 +15061,10 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/66082",
-    "note": "京都府京丹後市"
+    "note": "京都府京丹後市",
+    "tags": [
+      "SAUNACHELIN 2023"
+    ]
   },
   {
     "id": "kyoto-user-vym1qx",
@@ -16069,7 +16054,10 @@ export const SEED_FACILITIES = [
     "city": "大阪市中央区",
     "trait": "award",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78172"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78172",
+    "tags": [
+      "SAUNACHELIN 2024"
+    ]
   },
   {
     "id": "osaka-user-xqq5cz",
@@ -16825,7 +16813,8 @@ export const SEED_FACILITIES = [
       "水風呂あり",
       "外気あり",
       "サ飯あり",
-      "宿泊可"
+      "宿泊可",
+      "SAUNACHELIN 2022"
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/3140"
@@ -21565,7 +21554,10 @@ export const SEED_FACILITIES = [
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://karafuro.web.fc2.com/top.html",
-    "officialUrlSource": "https://saunatime.jp/saunas/44/"
+    "officialUrlSource": "https://saunatime.jp/saunas/44/",
+    "tags": [
+      "SAUNACHELIN 2024"
+    ]
   },
   {
     "id": "st-kagawa-3713",
@@ -22747,7 +22739,10 @@ export const SEED_FACILITIES = [
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.wellbe.co.jp/fukuoka/",
-    "officialUrlSource": "https://saunatime.jp/saunas/791/"
+    "officialUrlSource": "https://saunatime.jp/saunas/791/",
+    "tags": [
+      "SAUNACHELIN 2020"
+    ]
   },
   {
     "id": "st-fukuoka-4487",
@@ -23509,7 +23504,10 @@ export const SEED_FACILITIES = [
       "セルフロウリュ",
       "水風呂あり",
       "外気あり",
-      "宿泊可"
+      "宿泊可",
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2020",
+      "SAUNACHELIN 2021"
     ],
     "trait": "wood",
     "officialUrl": "https://www.mifuneyama.co.jp/rakan.html"
@@ -24201,7 +24199,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "st-kumamoto-82",
-    "name": "サウナと天然温泉 湯けむり天国 湯らっくす",
+    "name": "サウナと天然温泉 湯らっくす",
     "prefecture": "熊本県",
     "address": "熊本県熊本市中央区本荘町722",
     "addressSource": "SaunaTime",
@@ -26842,7 +26840,8 @@ export const SEED_FACILITIES = [
     "lng": 127.641388,
     "trait": "onsen",
     "tags": [
-      "温泉付き"
+      "温泉付き",
+      "SAUNACHELIN 2019"
     ],
     "features": [
       "温泉付き"
@@ -26902,7 +26901,10 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2021",
+      "SAUNACHELIN 2022",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -27015,7 +27017,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2019"
     ],
     "features": [
       "水風呂あり",
@@ -27051,7 +27054,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "水風呂あり",
@@ -27278,7 +27282,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -27972,7 +27977,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "水風呂あり",
@@ -28716,7 +28722,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -29966,7 +29973,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -30353,7 +30361,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -30597,7 +30606,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2025"
     ],
     "features": [
       "水風呂あり",
@@ -30921,7 +30931,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2022"
     ],
     "features": [
       "水風呂あり",
@@ -30958,7 +30969,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -31289,7 +31301,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2020"
     ],
     "features": [
       "水風呂あり",
@@ -31327,7 +31340,9 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2020",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -31364,7 +31379,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "水風呂あり",
@@ -31382,7 +31398,10 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2023",
+      "SAUNACHELIN 2024",
+      "SAUNACHELIN 2025"
     ],
     "features": [
       "水風呂あり",
@@ -31417,7 +31436,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -31453,7 +31473,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2019"
     ],
     "features": [
       "水風呂あり",
@@ -31472,7 +31493,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -31578,7 +31600,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -31597,7 +31620,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -31633,7 +31657,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -31651,7 +31676,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -31669,7 +31695,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -31833,7 +31860,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -31853,7 +31881,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2020"
     ],
     "features": [
       "水風呂あり",
@@ -32408,7 +32437,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2022"
     ],
     "features": [
       "水風呂あり",
@@ -33519,7 +33549,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -35869,7 +35900,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "水風呂あり",
@@ -36262,7 +36294,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2024"
     ],
     "features": [
       "水風呂あり",
@@ -37350,7 +37383,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2022"
     ],
     "features": [
       "水風呂あり",
@@ -38055,7 +38089,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -38423,7 +38458,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2018"
     ],
     "features": [
       "水風呂あり",
@@ -38737,7 +38773,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2021"
     ],
     "features": [
       "水風呂あり",
@@ -39543,7 +39580,10 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2018",
+      "SAUNACHELIN 2019",
+      "SAUNACHELIN 2020"
     ],
     "features": [
       "水風呂あり",
@@ -39937,7 +39977,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "外気あり",
@@ -40705,7 +40746,8 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "tags": [
       "サウナイキタイ掲載",
-      "県別50件補強"
+      "県別50件補強",
+      "SAUNACHELIN 2022"
     ],
     "features": [
       "水風呂あり",
@@ -41039,7 +41081,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2023"
     ],
     "features": [
       "水風呂あり",
@@ -42416,7 +42459,10 @@ export const SEED_FACILITIES = [
     "city": "北広島市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78160"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78160",
+    "tags": [
+      "SAUNACHELIN 2023"
+    ]
   },
   {
     "id": "si-184",
@@ -43951,7 +43997,10 @@ export const SEED_FACILITIES = [
     "city": "間郡越生町",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1459"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1459",
+    "tags": [
+      "SAUNACHELIN 2020"
+    ]
   },
   {
     "id": "si-78527",
@@ -44173,7 +44222,10 @@ export const SEED_FACILITIES = [
     "city": "千代田区",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11176"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11176",
+    "tags": [
+      "SAUNACHELIN 2021"
+    ]
   },
   {
     "id": "si-1765",
@@ -44203,7 +44255,10 @@ export const SEED_FACILITIES = [
     "city": "港区",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/24667"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/24667",
+    "tags": [
+      "SAUNACHELIN 2022"
+    ]
   },
   {
     "id": "si-1706",
@@ -44416,7 +44471,10 @@ export const SEED_FACILITIES = [
     "city": "藤沢市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/35986"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/35986",
+    "tags": [
+      "SAUNACHELIN 2022"
+    ]
   },
   {
     "id": "si-101404",
@@ -48310,7 +48368,10 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12323"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12323",
+    "tags": [
+      "SAUNACHELIN 2025"
+    ]
   },
   {
     "id": "si-192",
@@ -50277,7 +50338,10 @@ export const SEED_FACILITIES = [
     "city": "安房郡鋸南町",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79696"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79696",
+    "tags": [
+      "SAUNACHELIN 2023"
+    ]
   },
   {
     "id": "si-1630",
@@ -59225,7 +59289,10 @@ export const SEED_FACILITIES = [
     "city": "台東区 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/30674"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/30674",
+    "tags": [
+      "SAUNACHELIN 2022"
+    ]
   },
   {
     "id": "si-9671",
@@ -59234,7 +59301,10 @@ export const SEED_FACILITIES = [
     "city": "新宿区 事前予約制",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9671"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9671",
+    "tags": [
+      "SAUNACHELIN 2021"
+    ]
   },
   {
     "id": "si-1984",

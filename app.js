@@ -2085,7 +2085,10 @@ function renderExplore() {
   el.facilityList.setAttribute("aria-busy", "false");
   el.facilityList.inert = false;
   const facilities = getFilteredFacilities();
-  if (el.searchResultsStatus) el.searchResultsStatus.textContent = `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
+  const statusAwardYear = searchTerm ? getSaunachelinAwardYear(searchTerm) : null;
+  if (el.searchResultsStatus) el.searchResultsStatus.textContent = statusAwardYear !== null
+    ? `サウナシュラン${statusAwardYear ? `${statusAwardYear} ` : ""}(TTNE主催) 受賞施設 · ${facilities.length.toLocaleString("ja-JP")}件`
+    : `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
   if (!searchTerm.trim()) renderSpotlight(facilities);
 
   if (!facilities.length) {
@@ -2098,7 +2101,7 @@ function renderExplore() {
       : "";
     el.facilityList.innerHTML = `
       <div class="empty-state">
-        <p>${activeFilter === "wishlist" && Object.keys(state.wishlist).length === 0 ? "まだ「行きたい」はありません。施設カードの「行きたい」を押すと、ここに残ります。" : activeFilter === "favorite" && Object.keys(state.favorites).length === 0 ? "まだお気に入りはありません。施設カードの星を押すと、ここに残ります。" : hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
+        <p>${statusAwardYear !== null ? `サウナシュラン${statusAwardYear ? `${statusAwardYear} ` : ""}の受賞施設は、まだ掲載がありません。` : activeFilter === "wishlist" && Object.keys(state.wishlist).length === 0 ? "まだ「行きたい」はありません。施設カードの「行きたい」を押すと、ここに残ります。" : activeFilter === "favorite" && Object.keys(state.favorites).length === 0 ? "まだお気に入りはありません。施設カードの星を押すと、ここに残ります。" : hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
         <p>ジム・フィットネス併設施設は通常の検索対象外です。</p>
         ${resetButton}
         ${addButton}
@@ -2415,6 +2418,7 @@ function renderFacilityDetail() {
         ${isFitnessFacility(facility) ? '<p class="facility-notice">ジム・フィットネス併設施設。通常のサウナ検索・近隣候補には表示していません。利用条件は運営元へご確認ください。</p>' : ""}
         <dl class="facility-facts">
           ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></dd></div>`).join("")}
+          ${renderSaunachelinAwardRow(facility)}
           <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
@@ -4917,7 +4921,41 @@ async function reloadAppFresh() {
   }
 }
 
+const SAUNACHELIN_QUERY_PATTERN = /^(?:サウナシュラン|サウナシェラン|サウナチェリン|saunachelin|saunashuran)(20\d{2})?$/;
+const SAUNACHELIN_HALL_OF_FAME_IDS = new Set(["manual-aichi-wellbe-sakae", "st-kumamoto-82", "st-kanagawa-4", "official-saga-mifuneyama-rakan", "st-nagano-4544", "sc2025-ochiairo", "si-hokkaido-4521", "si-tokyo-67270"]);
+
+// 受賞クエリなら対象年（年指定なしは 0）を、受賞クエリでなければ null を返す
+function getSaunachelinAwardYear(value) {
+  for (const token of [normalizeSearchToken(value), normalizeKanaLoose(value)]) {
+    const match = SAUNACHELIN_QUERY_PATTERN.exec(token);
+    if (match) return match[1] ? Number(match[1]) : 0;
+  }
+  return null;
+}
+
+function getSaunachelinAwardYears(facility) {
+  return (facility.tags || [])
+    .map((tag) => /^saunachelin\s+(20\d{2})$/i.exec(String(tag).trim()))
+    .filter(Boolean)
+    .map((match) => Number(match[1]))
+    .sort((a, b) => a - b);
+}
+
+function isSaunachelinAwardFacility(facility, year) {
+  const years = getSaunachelinAwardYears(facility);
+  return year ? years.includes(year) : years.length > 0;
+}
+
+function renderSaunachelinAwardRow(facility) {
+  const years = getSaunachelinAwardYears(facility);
+  if (!years.length) return "";
+  const ids = [facility.id, ...(facility.legacyIds || [])];
+  const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
+  return `<div><dt>サウナシュラン</dt><dd>${years.join("・")}年 受賞（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" target="_blank" rel="noreferrer">公式サイト</a></dd></div>`;
+}
+
 function getFilteredFacilities({ ignoreFeatures = false } = {}) {
+  const awardYear = searchTerm ? getSaunachelinAwardYear(searchTerm) : null;
   const needsSearchIndex = searchNeedles.length > 0 || selectedFeatureFilters.size > 0;
   if (!needsSearchIndex) {
     return getFacilities().filter((facility) => {
@@ -4933,7 +4971,9 @@ function getFilteredFacilities({ ignoreFeatures = false } = {}) {
 
   return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
-    const matchesSearch = !searchNeedles.length || matchesSearchBlob(haystack, searchNeedles);
+    const matchesSearch = awardYear !== null
+      ? isSaunachelinAwardFacility(facility, awardYear)
+      : (!searchNeedles.length || matchesSearchBlob(haystack, searchNeedles));
     const matchesFeatures = ignoreFeatures || [...selectedFeatureFilters].every((feature) => features.includes(feature));
     const matchesFilter =
       activeFilter === "all" ||
@@ -5293,6 +5333,7 @@ function moveToSearchPrefecture(value) {
   const term = normalizeText(value);
   const needles = createSearchNeedles(value);
   if (!term) return false;
+  if (getSaunachelinAwardYear(value) !== null) return setSelectedPrefecture("全国");
 
   const prefMatch = PREFECTURES.find((pref) => {
     const full = buildSearchBlob([pref.name]);

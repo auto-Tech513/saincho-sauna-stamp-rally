@@ -73,3 +73,27 @@ test("visit date and export date use the local calendar day around midnight", ()
   assert.equal(vm.runInContext('getLocalDateInputValue({getTime:()=>Date.parse("2026-10-18T16:30:00Z"),getTimezoneOffset:()=>-540})', context), "2026-10-19");
   assert.equal(vm.runInContext('getLocalDateInputValue({getTime:()=>Date.parse("2026-10-19T01:30:00Z"),getTimezoneOffset:()=>420})', context), "2026-10-18");
 });
+
+test("saunachelin award queries resolve to the tagged facilities only", () => {
+  for (const [query, year] of [["サウナシュラン", 0], ["さうなしゅらん", 0], ["saunachelin", 0], ["SAUNACHELIN", 0], ["サウナシェラン", 0], ["サウナシュラン2025", 2025], ["saunachelin 2024", 2024]]) {
+    assert.equal(vm.runInContext(`getSaunachelinAwardYear(${JSON.stringify(query)})`, context), year, query);
+  }
+  for (const query of ["サウナ", "サウナ東京", "サウナシュラン20255", "ホテル"]) {
+    assert.equal(vm.runInContext(`getSaunachelinAwardYear(${JSON.stringify(query)})`, context), null, query);
+  }
+  vm.runInContext(`
+    selectedPrefecture = "全国";
+    activeFilter = "all";
+    selectedFeatureFilters = new Set();
+    facilitySearchCache = [
+      { facility: { id: "award2025", prefecture: "東京都", tags: ["SAUNACHELIN 2025"] }, features: [], haystack: buildSearchBlob(["受賞サウナ"]) },
+      { facility: { id: "award2024", prefecture: "愛知県", tags: ["SAUNACHELIN 2024"] }, features: [], haystack: buildSearchBlob(["受賞サウナ愛知"]) },
+      { facility: { id: "plain", prefecture: "東京都", tags: [] }, features: [], haystack: buildSearchBlob(["SAUNA"]) },
+    ];
+    searchTerm = "サウナシュラン";
+    searchNeedles = createSearchNeedles("サウナシュラン");
+  `, context);
+  assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025", "award2024"]);
+  vm.runInContext(`searchTerm = "saunachelin2025"; searchNeedles = createSearchNeedles("saunachelin2025");`, context);
+  assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025"]);
+});
