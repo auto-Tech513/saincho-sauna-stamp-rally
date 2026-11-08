@@ -537,7 +537,8 @@ function renderArticleSsr(article, route) {
         articleSection: article.category,
         description: article.lead,
         image: [OG_IMAGE],
-        datePublished: modifiedAt,
+        // 記事ごとの公開日データが無いため datePublished は出さない（全記事同一日の
+        // 公開という誤った信号を避ける）。更新日は content.js の実変更日。
         dateModified: modifiedAt,
         author: { "@id": `${APP_URL}/#organization` },
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
@@ -632,6 +633,7 @@ function renderPrefSsr(pref, facilities) {
     <p>${escapeHtml(pref.name)}の掲載状況：候補${facilities.length}件のうち、番地住所まで確認できたもの${withAddress}件、公式URLがあるもの${withOfficial}件、料金・営業時間などを公式情報で照合したもの${withEvidence}件です。確認が進んだ候補から個別ページに掲載しています。</p>
     ${facilityLinks}
     <p>未確認候補は検索画面で確認できます。番地、営業状況、料金は参照元または施設公式情報を訪問前に再確認してください。</p>
+    <p><a href="/sauna-stamp-rally/">行ったサウナは、サウナスタンプラリーとして押印して記録できます</a></p>
     ${renderSameshiBlock({ prefecture: pref.name, city: "" })}
     ${regionLinks}
     <p><a href="/">サ印帳トップへ戻る</a></p>
@@ -812,7 +814,6 @@ function renderSearchIntentSsr(kind) {
         description: lead,
         inLanguage: "ja-JP",
         image: [OG_IMAGE],
-        datePublished: modifiedAt,
         dateModified: modifiedAt,
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}/${route}/` },
         author: { "@id": `${APP_URL}/#organization` },
