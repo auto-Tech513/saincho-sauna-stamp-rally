@@ -351,6 +351,20 @@ export const CURATED_FACILITY_EVIDENCE = [
       factNov8("休館日", "店休日は第2水曜日", "http://aratae.jp/"),
     ],
   },
+  // 2026-11-08: facility added at the owner's request (Instagram @8seas_sauna).
+  // All values read on the official site https://8sauna.jp/ the same day.
+  {
+    ids: ["manual-shiga-8seas-hira"], name: "8Seas Sauna HIRA", officialUrl: "https://8sauna.jp/",
+    address: "〒520-0502 滋賀県大津市南小松1695-1", city: "大津市南小松",
+    features: ["水風呂あり", "外気あり", "貸切可"],
+    facts: [
+      factNov8("営業時間", "10:00～21:00（最終受付19:00）。冬季は営業時間短縮あり", "https://8sauna.jp/"),
+      factNov8("休館日", "金曜日", "https://8sauna.jp/"),
+      factNov8("料金", "1人あたり（税込）：平日 120分2,200円 / 180分2,860円、土日祝 120分2,970円 / 180分4,180円。季節によって価格が変更する場合あり。貸切は平日のみ、180分55,000円～（10名まで、追加1名ごとに5,500円～）", "https://8sauna.jp/"),
+      factNov8("設備", "大型サウナ室に国産薪ストーブ3台。比良山の地下水を使った人工河川の水風呂があり、水温は一年を通して15℃前後と公式掲載。木々に囲まれた外気浴スペース", "https://8sauna.jp/"),
+      factNov8("利用条件", "男女共用のパブリックサウナで、水着・湯汲着（ラッシュガード等）の着用が必須。ネットで事前予約（空きがあれば当日受入あり）。16歳未満は利用不可。水着・タオルは販売のみでレンタルはなし", "https://8sauna.jp/"),
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));

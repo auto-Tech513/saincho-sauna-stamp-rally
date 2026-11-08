@@ -69592,5 +69592,25 @@ export const SEED_FACILITIES = [
     ],
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/9527"
+  },
+  {
+    "id": "manual-shiga-8seas-hira",
+    "name": "8Seas Sauna HIRA",
+    "prefecture": "滋賀県",
+    "address": "〒520-0502 滋賀県大津市南小松1695-1",
+    "addressSource": "公式/参照ページ",
+    "city": "大津市南小松",
+    "trait": "wood",
+    "tags": [
+      "薪サウナ",
+      "水風呂あり",
+      "外気あり",
+      "男女共用",
+      "貸切可",
+      "予約制"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://8sauna.jp/",
+    "officialUrl": "https://8sauna.jp/"
   }
 ];
