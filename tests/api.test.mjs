@@ -23,6 +23,39 @@ test("ranking protects an existing participant and does not publish credentials"
   assert.ok(!JSON.stringify(payload).includes("emailHash"));
   assert.ok(!JSON.stringify(payload).includes("ownerHash"));
 });
+test("ranking facility disclosure is opt-in only, lazy, and erased on opt-out", async () => {
+  const kv=storage();
+  const profile={participantId:"participant-9",nickname:"開示テスト",email:"share@example.test",stamps:5};
+  // 既定（未設定）は非開示: TOP10 にフラグは無く、個別取得でも一覧は返らない
+  assert.equal((await ranking.onRequestPost(context(kv,"POST","ranking",profile))).status,200);
+  let payload=await (await ranking.onRequestGet(context(kv,"GET","ranking"))).json();
+  assert.equal(payload.entries[0].shareStamps,undefined);
+  let detail=await (await ranking.onRequestGet(context(kv,"GET","ranking?participant=participant-9"))).json();
+  assert.equal(detail.participant.shareStamps,false);
+  assert.deepEqual(detail.participant.facilityIds,[]);
+  // フラグなしで facilityIds だけ送っても開示されない
+  assert.equal((await ranking.onRequestPost(context(kv,"POST","ranking",{...profile,stamps:6,facilityIds:["fac-a"]}))).status,200);
+  detail=await (await ranking.onRequestGet(context(kv,"GET","ranking?participant=participant-9"))).json();
+  assert.equal(detail.participant.shareStamps,false);
+  // オプトイン: TOP10 にはフラグだけが立ち、一覧は含まれない（軽さの担保）
+  assert.equal((await ranking.onRequestPost(context(kv,"POST","ranking",{...profile,stamps:7,shareStamps:true,facilityIds:["fac-a","fac-b","fac-a","!!!"]}))).status,200);
+  payload=await (await ranking.onRequestGet(context(kv,"GET","ranking"))).json();
+  assert.equal(payload.entries[0].shareStamps,true);
+  assert.ok(!JSON.stringify(payload).includes("facilityIds"));
+  assert.ok(!JSON.stringify(payload).includes("fac-a"));
+  // 個別取得でのみ、重複除去・整形済みの一覧が返る
+  detail=await (await ranking.onRequestGet(context(kv,"GET","ranking?participant=participant-9"))).json();
+  assert.equal(detail.participant.shareStamps,true);
+  assert.equal(detail.participant.nickname,"開示テスト");
+  assert.deepEqual(detail.participant.facilityIds,["fac-a","fac-b"]);
+  // オプトアウトすると一覧は消え、個別取得でも返らない
+  assert.equal((await ranking.onRequestPost(context(kv,"POST","ranking",{...profile,stamps:8,shareStamps:false,facilityIds:["fac-a"]}))).status,200);
+  detail=await (await ranking.onRequestGet(context(kv,"GET","ranking?participant=participant-9"))).json();
+  assert.equal(detail.participant.shareStamps,false);
+  assert.deepEqual(detail.participant.facilityIds,[]);
+  payload=await (await ranking.onRequestGet(context(kv,"GET","ranking"))).json();
+  assert.equal(payload.entries[0].shareStamps,undefined);
+});
 test("reviews preserve ownership, hide client identifiers, and deduplicate retry",async()=>{
   const kv=storage();
   const review={facilityId:"facility-1",clientId:"client-1",nickname:"感想",text:"外気浴が心地よかった",rating:4};

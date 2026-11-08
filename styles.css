@@ -3789,6 +3789,101 @@ body {
   white-space: nowrap;
 }
 
+/* 開示している参加者だけに出る、押印施設一覧への導線 */
+.leaderboard-facilities-button {
+  justify-self: start;
+  padding: 2px 0;
+  color: var(--teal);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.ranking-facilities-meta {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.ranking-facilities-list {
+  display: grid;
+  gap: 6px;
+  max-height: 52vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.ranking-facility-row {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  padding: 10px 12px;
+  text-align: left;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ranking-facility-row span {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ranking-facility-row small {
+  color: var(--muted);
+  font-size: var(--text-xs);
+}
+
+.ranking-facilities-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* プロフィールフォーム内の開示トグル。.profile-form label / input の
+   汎用スタイル（grid・全幅）より強く指定して、設定画面のトグルと同じ
+   横並びレイアウトにする。行全体がラベルのため行ごとタップできる。 */
+.profile-form label.profile-share-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 2px 0 10px;
+  cursor: pointer;
+}
+
+.profile-form label.profile-share-row span {
+  display: grid;
+  gap: 3px;
+}
+
+.profile-form label.profile-share-row strong {
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.profile-form label.profile-share-row small {
+  color: var(--muted);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.profile-form label.profile-share-row input {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  min-height: 22px;
+  padding: 0;
+}
+
 .leaderboard-empty {
   padding: 18px 10px;
   color: var(--muted);

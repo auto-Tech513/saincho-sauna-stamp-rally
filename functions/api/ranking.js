@@ -3,6 +3,7 @@ const MAX_RANKING_ENTRIES = 5000;
 const PUBLIC_LIMIT = 10;
 const MAX_SINGLE_UPDATE_GAIN = 200;
 const MAX_STAMPS = 5000;
+const MAX_SHARED_FACILITIES = 1000;
 import { checkRateLimit, rateLimitHeaders, ownershipHash } from "./_shared.js";
 const TITLE_MILESTONES = [
   { count: 0, title: "湯けむり準備中" },
@@ -23,6 +24,26 @@ export async function onRequestGet(context) {
   const storage = getStorage(context.env);
   if (!storage) return json({ entries: [], configured: false }, 200);
   const entries = await readEntries(storage);
+  // 参加者1名分の押印施設一覧は、本人が開示している場合だけ返す。
+  // 非開示・未登録は同じ応答にして、登録の有無を判別できないようにする。
+  const participantId = cleanId(new URL(context.request.url).searchParams.get("participant") || "");
+  if (participantId) {
+    const entry = entries.find((item) => item.id === participantId);
+    if (entry && entry.shareStamps) {
+      return json({
+        configured: true,
+        participant: {
+          id: entry.id,
+          nickname: entry.nickname,
+          stamps: entry.stamps,
+          title: getTitle(entry.stamps),
+          shareStamps: true,
+          facilityIds: entry.facilityIds,
+        },
+      }, 200);
+    }
+    return json({ configured: true, participant: { shareStamps: false, facilityIds: [] } }, 200);
+  }
   return json({ entries: publicEntries(entries), configured: true }, 200);
 }
 
@@ -63,6 +84,10 @@ export async function onRequestPost(context) {
       stamps: candidate.stamps,
       title: getTitle(candidate.stamps),
       updatedAt: new Date().toISOString(),
+      // 押印施設の開示は本人の明示的なオプトインがある場合だけ。
+      // オフにした場合は一覧を保持しない（以前の一覧もここで消える）。
+      shareStamps: candidate.shareStamps,
+      ...(candidate.shareStamps ? { facilityIds: candidate.facilityIds } : {}),
     },
   ].sort(sortEntries).slice(0, MAX_RANKING_ENTRIES);
 
@@ -90,12 +115,31 @@ async function normalizeCandidate(value) {
   const stamps = Math.floor(rawStamps);
   if (!nickname || !email) return null;
   const emailHash = await sha256(email);
+  // 開示は shareStamps が真かつ facilityIds が配列のときだけ成立する。
+  // それ以外は一覧を送ってきても破棄する。
+  const shareStamps = value.shareStamps === true && Array.isArray(value.facilityIds);
   return {
     id: participantId || `rank-${emailHash.slice(0, 18)}`,
     nickname,
     emailHash,
     stamps,
+    shareStamps,
+    facilityIds: shareStamps ? cleanFacilityIds(value.facilityIds) : [],
   };
+}
+
+function cleanFacilityIds(value) {
+  if (!Array.isArray(value)) return [];
+  const seen = new Set();
+  const result = [];
+  for (const item of value) {
+    const id = cleanId(item);
+    if (!id || seen.has(id)) continue;
+    seen.add(id);
+    result.push(id);
+    if (result.length >= MAX_SHARED_FACILITIES) break;
+  }
+  return result;
 }
 
 function normalizeStoredEntry(value) {
@@ -105,6 +149,8 @@ function normalizeStoredEntry(value) {
   const emailHash = typeof value.emailHash === "string" && /^[a-f0-9]{64}$/.test(value.emailHash) ? value.emailHash : "";
   const stamps = Math.max(0, Math.min(MAX_STAMPS, Math.floor(Number(value.stamps) || 0)));
   if (!id || !nickname) return null;
+  // 読み出し側でも再検証する: 開示フラグが無いエントリは一覧を持たないものとして扱う。
+  const shareStamps = value.shareStamps === true && Array.isArray(value.facilityIds);
   return {
     id,
     nickname,
@@ -113,6 +159,8 @@ function normalizeStoredEntry(value) {
     stamps,
     title: getTitle(stamps),
     updatedAt: typeof value.updatedAt === "string" ? value.updatedAt : "",
+    shareStamps,
+    facilityIds: shareStamps ? cleanFacilityIds(value.facilityIds) : [],
   };
 }
 
@@ -123,6 +171,9 @@ function publicEntries(entries) {
     stamps: entry.stamps,
     title: getTitle(entry.stamps),
     updatedAt: entry.updatedAt,
+    // 一覧そのものは TOP10 の応答に含めない（軽さのため）。
+    // 開示している参加者だけフラグを立て、一覧は個別取得で返す。
+    ...(entry.shareStamps ? { shareStamps: true } : {}),
   }));
 }
 

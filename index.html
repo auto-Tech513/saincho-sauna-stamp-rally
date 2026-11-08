@@ -421,9 +421,13 @@
                 <span>メールアドレス</span>
                 <input id="profileEmail" name="email" type="email" maxlength="80" autocomplete="email" placeholder="name@example.com" aria-describedby="profileVisibility" required />
               </label>
+              <label class="toggle-row profile-share-row">
+                <span><strong>押印した施設を公開する</strong><small>オンにした人だけ、ランキングから押印施設の一覧を見られます。オフにするとサーバー上の一覧も消えます</small></span>
+                <input id="profileShareStamps" name="shareStamps" type="checkbox" />
+              </label>
               <button class="primary-button" type="submit">ランキングに参加</button>
             </form>
-            <p class="form-help" id="profileVisibility">公開されるのはニックネーム・サ印数・称号です。メールアドレスは公開されません。サ印数は自己申告の記録です。</p>
+            <p class="form-help" id="profileVisibility">公開されるのはニックネーム・サ印数・称号です。押印した施設の一覧は、上の公開設定をオンにした場合だけ公開されます。メールアドレスは公開されません。サ印数は自己申告の記録です。</p>
             <p class="form-help" id="profileFeedback" role="status" aria-live="polite">ニックネーム・サ印数・称号が公開されます。メールアドレスは公開されません。</p>
           </section>
           <section class="leaderboard-panel" aria-label="サ印ランキング">
@@ -903,6 +907,17 @@
         <button class="facility-native-share-button" id="shareVisitLogImageButton" type="button" disabled>画像を共有</button>
         <button class="secondary-button" id="downloadVisitLogImageButton" type="button" disabled>画像を保存</button>
       </div>
+    </dialog>
+
+    <dialog class="settings-dialog ranking-facilities-dialog" id="rankingFacilitiesDialog" aria-labelledby="rankingFacilitiesTitle">
+      <div class="dialog-head">
+        <h2 id="rankingFacilitiesTitle">押印した施設</h2>
+        <button class="icon-button" id="rankingFacilitiesClose" type="button" aria-label="施設一覧を閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="ranking-facilities-meta" id="rankingFacilitiesMeta" role="status"></p>
+      <div class="ranking-facilities-list" id="rankingFacilitiesList"></div>
     </dialog>
 
     <button class="back-to-top" id="backToTop" type="button" aria-label="このページの先頭へ戻る" hidden><span class="back-to-top-arrow" aria-hidden="true">↑</span>トップへ</button>

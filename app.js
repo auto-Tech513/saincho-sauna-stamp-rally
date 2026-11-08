@@ -862,6 +862,12 @@ const el = {
   profileForm: document.querySelector("#profileForm"),
   profileNickname: document.querySelector("#profileNickname"),
   profileEmail: document.querySelector("#profileEmail"),
+  profileShareStamps: document.querySelector("#profileShareStamps"),
+  rankingFacilitiesDialog: document.querySelector("#rankingFacilitiesDialog"),
+  rankingFacilitiesTitle: document.querySelector("#rankingFacilitiesTitle"),
+  rankingFacilitiesMeta: document.querySelector("#rankingFacilitiesMeta"),
+  rankingFacilitiesList: document.querySelector("#rankingFacilitiesList"),
+  rankingFacilitiesClose: document.querySelector("#rankingFacilitiesClose"),
   profileStatus: document.querySelector("#profileStatus"),
   profileFeedback: document.querySelector("#profileFeedback"),
   leaderboardList: document.querySelector("#leaderboardList"),
@@ -1544,12 +1550,41 @@ function bindEvents() {
       email: email.slice(0, 80),
       registeredAt: profile.registeredAt || new Date().toISOString(),
       authToken: profile.authToken || createClientId() + createClientId(),
+      shareStamps: el.profileShareStamps ? el.profileShareStamps.checked === true : profile.shareStamps === true,
     };
     saveProfile();
     syncRanking({ announce: true });
   });
 
+  // 開示トグルは単独でも即時反映する（オフにしたときにサーバー上の一覧を残さないため）。
+  el.profileShareStamps?.addEventListener("change", () => {
+    profile.shareStamps = el.profileShareStamps.checked === true;
+    saveProfile();
+    if (isProfileComplete()) {
+      queueRankingSync();
+      showToast(profile.shareStamps ? "押印した施設を公開にしました" : "押印した施設を非公開にしました");
+    }
+  });
+
   el.leaderboardSyncButton.addEventListener("click", () => loadRanking());
+
+  el.leaderboardList?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-ranking-facilities]");
+    if (button) openRankingFacilities(button.dataset.rankingFacilities);
+  });
+
+  el.rankingFacilitiesClose?.addEventListener("click", () => {
+    if (typeof el.rankingFacilitiesDialog?.close === "function") el.rankingFacilitiesDialog.close();
+  });
+
+  el.rankingFacilitiesList?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-ranking-facility-open]");
+    if (!button) return;
+    const facility = getFacilityById(button.dataset.rankingFacilityOpen);
+    if (!facility) return;
+    if (typeof el.rankingFacilitiesDialog?.close === "function") el.rankingFacilitiesDialog.close();
+    openFacilityDetail(facility);
+  });
 
   el.addForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -3313,6 +3348,7 @@ function renderPromotionCopyGrid() {
 function renderProfilePanel() {
   el.profileNickname.value = profile.nickname || "";
   el.profileEmail.value = profile.email || "";
+  if (el.profileShareStamps) el.profileShareStamps.checked = profile.shareStamps === true;
   el.profileStatus.textContent = isProfileComplete() ? "端末に保存済み" : "未登録";
 }
 
@@ -3351,6 +3387,7 @@ function renderLeaderboard() {
         <div>
           <span>${escapeHtml(entry.nickname)}</span>
           <em>${escapeHtml(entry.title)}</em>
+          ${entry.shareStamps ? `<button class="leaderboard-facilities-button" type="button" data-ranking-facilities="${escapeAttr(entry.id)}">押印した施設を見る</button>` : ""}
         </div>
         <b>${entry.stamps}湯</b>
       </article>
@@ -3360,7 +3397,7 @@ function renderLeaderboard() {
     ? `表示中は30秒ごとに確認${rankingUpdatedAt ? ` / 取得 ${formatDateTime(rankingUpdatedAt)}` : ""}`
     : "通信状態を確認して「更新」から再試行できます。";
   if (el.profileFeedback) {
-    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。公開されるのはニックネーム・サ印数・称号です。");
+    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。公開されるのはニックネーム・サ印数・称号です。施設一覧は公開設定をオンにした場合のみ公開されます。");
     el.profileFeedback.classList.toggle("is-error", Boolean(rankingLastError));
   }
   el.profileForm.querySelector('[type="submit"]').disabled = rankingSaving;
@@ -3494,7 +3531,7 @@ function renderAboutPage() {
       <section class="about-card">
         <p class="eyebrow">PRIVACY</p>
         <h3>記録と個人情報</h3>
-        <p>押印、行きたい、お気に入り、メモは原則として端末内に保存します。ランキングのメールアドレスはサーバー側でハッシュ化し、画面には表示しません。お問い合わせ内容は返信対応のため保存される場合があります。</p>
+        <p>押印、行きたい、お気に入り、メモは原則として端末内に保存します。ランキングのメールアドレスはサーバー側でハッシュ化し、画面には表示しません。押印した施設の一覧は、本人が公開設定をオンにした場合に限りサーバーへ送信され、他の参加者に表示されます。オフにするとサーバー上の一覧は消去されます。お問い合わせ内容は返信対応のため保存される場合があります。</p>
       </section>
       <section class="about-card">
         <p class="eyebrow">MONETIZATION</p>
@@ -5392,6 +5429,10 @@ async function syncRanking({ announce } = { announce: false }) {
         email: profile.email,
         stamps,
         title,
+        // 施設IDは開示をオンにした場合だけ送る。オフのときは送らず、
+        // サーバー側でも保持しない。
+        shareStamps: profile.shareStamps === true,
+        facilityIds: profile.shareStamps === true ? Object.keys(state.visited) : [],
       }),
       signal: AbortSignal.timeout(12000),
     });
@@ -5421,9 +5462,62 @@ function normalizeRankingEntries(values) {
     stamps: Number.isFinite(Number(entry.stamps)) ? Math.max(0, Math.floor(Number(entry.stamps))) : 0,
     title: typeof entry.title === "string" ? entry.title.slice(0, 20) : getCurrentTitle(0).title,
     updatedAt: typeof entry.updatedAt === "string" ? entry.updatedAt : "",
+    shareStamps: entry.shareStamps === true,
   })).filter((entry) => entry.id && entry.nickname)
     .sort((a, b) => b.stamps - a.stamps || a.nickname.localeCompare(b.nickname, "ja"))
     .slice(0, 50);
+}
+
+// ランキング参加者の押印施設一覧。開示している参加者の分だけを、
+// 開いたときに個別取得する（一覧表示の応答には含めない＝軽さの担保）。
+// 取得結果はこの画面を開いている間だけ保持する。
+const rankingFacilitiesCache = new Map();
+
+async function openRankingFacilities(participantId) {
+  const dialog = el.rankingFacilitiesDialog;
+  if (!dialog || !el.rankingFacilitiesList) return;
+  const entry = leaderboardEntries.find((item) => item.id === participantId);
+  el.rankingFacilitiesTitle.textContent = entry ? `${entry.nickname}さんの押印した施設` : "押印した施設";
+  el.rankingFacilitiesMeta.textContent = "読み込み中…";
+  el.rankingFacilitiesList.innerHTML = "";
+  if (typeof dialog.showModal === "function" && !dialog.open) dialog.showModal();
+  try {
+    let participant = rankingFacilitiesCache.get(participantId);
+    if (!participant) {
+      const url = new URL(RANKING_ENDPOINT, document.baseURI || location.href);
+      url.searchParams.set("participant", participantId);
+      const response = await fetch(url.href, { headers: { accept: "application/json" }, signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("ranking-facilities-failed");
+      const payload = await response.json();
+      participant = payload.participant || { shareStamps: false, facilityIds: [] };
+      if (participant.shareStamps) rankingFacilitiesCache.set(participantId, participant);
+    }
+    if (!participant.shareStamps) {
+      el.rankingFacilitiesMeta.textContent = "この参加者は施設を公開していません。";
+      return;
+    }
+    const seen = new Set();
+    const facilities = [];
+    for (const id of participant.facilityIds || []) {
+      const facility = getFacilityById(id);
+      if (!facility || seen.has(facility.id)) continue;
+      seen.add(facility.id);
+      facilities.push(facility);
+    }
+    // 送られてきた順（押印した順）の新しい方から表示する
+    facilities.reverse();
+    const stamps = Number.isFinite(Number(participant.stamps)) ? Number(participant.stamps) : entry?.stamps;
+    el.rankingFacilitiesMeta.textContent = `${stamps ?? facilities.length}湯 / ${facilities.length}施設`;
+    el.rankingFacilitiesList.innerHTML = facilities.length
+      ? facilities.map((facility) => `
+        <button class="ranking-facility-row" type="button" data-ranking-facility-open="${escapeAttr(facility.id)}">
+          <span>${escapeHtml(facility.name)}</span>
+          <small>${escapeHtml([facility.prefecture, facility.city].filter(Boolean).join(" "))}</small>
+        </button>`).join("")
+      : `<p class="ranking-facilities-empty">表示できる施設がありません。</p>`;
+  } catch {
+    el.rankingFacilitiesMeta.textContent = "読み込めませんでした。通信状態を確認して、開き直してください。";
+  }
 }
 
 function mergeRankingEntries(entries, localEntry) {
@@ -5757,6 +5851,8 @@ function loadProfile() {
       email: typeof value.email === "string" ? value.email.trim().slice(0, 80) : "",
       registeredAt: typeof value.registeredAt === "string" ? value.registeredAt : "",
       authToken: typeof value.authToken === "string" && value.authToken.length >= 32 ? value.authToken : createClientId() + createClientId(),
+      // 押印施設の開示は明示的なオプトイン。保存値が真のときだけ真になる。
+      shareStamps: value.shareStamps === true,
     };
   } catch {
     return createProfile();
@@ -5770,6 +5866,7 @@ function createProfile() {
     email: "",
     registeredAt: "",
     authToken: createClientId() + createClientId(),
+    shareStamps: false,
   };
 }
 
