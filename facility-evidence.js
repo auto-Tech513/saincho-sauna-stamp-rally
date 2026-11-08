@@ -365,6 +365,195 @@ export const CURATED_FACILITY_EVIDENCE = [
       factNov8("利用条件", "男女共用のパブリックサウナで、水着・湯汲着（ラッシュガード等）の着用が必須。ネットで事前予約（空きがあれば当日受入あり）。16歳未満は利用不可。水着・タオルは販売のみでレンタルはなし", "https://8sauna.jp/"),
     ],
   },
+  {
+    ids: ["manual-aichi-fukunoyu-kasugai"], name: "大泉寺温泉 福の湯", officialUrl: "https://www.fukunoyu.co.jp/",
+    address: "〒486-0812 愛知県春日井市大泉寺町220-1", city: "春日井市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "10:00～深夜0:00（最終受付23:30）", "https://www.fukunoyu.co.jp/"),
+      factNov8("定休日", "年中無休（年2～3回、設備点検のため休館あり）", "https://www.fukunoyu.co.jp/"),
+      factNov8("料金", "入館料 大人（中学生以上）平日1,000円／土日祝特1,000円、子ども（3歳～小学生）平日300円／土日祝特400円、学割 全日700円、岩盤浴 全日1,000円", "https://www.fukunoyu.co.jp/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-keio-takaosan"], name: "京王高尾山温泉 / 極楽湯", officialUrl: "https://www.takaosan-onsen.jp/",
+    address: "〒193-0844 東京都八王子市高尾町2229-7", city: "八王子市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "8:00～22:30（最終入館受付21:45）", "https://www.takaosan-onsen.jp/"),
+      factNov8("定休日", "年中無休", "https://www.takaosan-onsen.jp/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-gokurakuyu-tama"], name: "極楽湯 多摩センター店", officialUrl: "https://www.rakuspa.com/",
+    address: "〒206-0033 東京都多摩市落合1-30-1", city: "多摩市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "平日・祝 9:00～翌2:00／土日 7:00～翌2:00（最終受付 翌1:20）", "https://www.rakuspa.com/"),
+      factNov8("定休日", "年中無休", "https://www.rakuspa.com/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-rakuspa-fuchu"], name: "RAKU SPA Station 府中", officialUrl: "https://rakuspa.com/fuchu/",
+    address: "〒183-0022 東京都府中市宮西町1-5-1 府中トーセイビルI", city: "府中市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "[日～木・祝] 10:00～翌1:00（最終受付24:00）／[金・土・祝前日] 10:00～翌8:00（最終受付 翌7:00）／朝風呂[土日祝] 6:00～8:00", "https://rakuspa.com/fuchu/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-rakuspa-musashikoganei"], name: "RAKU SPA Station 武蔵小金井", officialUrl: "https://rakuspa.com/musashi/",
+    address: "〒184-0004 東京都小金井市本町2-1-11", city: "小金井市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "[日～木・祝] 9:00～翌2:00（最終受付 翌1:00）／[金・土・祝前日] 9:00～翌8:00（最終受付 翌7:00）／朝風呂[土日祝] 6:00～8:00", "https://rakuspa.com/musashi/"),
+    ],
+  },
+  {
+    ids: ["manual-aichi-gokurakuyu-toyohashi"], name: "極楽湯 豊橋店", officialUrl: "https://www.rakuspa.com/",
+    address: "〒440-0092 愛知県豊橋市瓜郷町一新替13-1", city: "豊橋市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "平日 9:00～翌2:00／土日祝 6:00～翌2:00（最終受付 翌1:20）", "https://www.rakuspa.com/"),
+      factNov8("定休日", "年中無休", "https://www.rakuspa.com/"),
+    ],
+  },
+  {
+    ids: ["manual-osaka-gokurakuyu-hirakata"], name: "極楽湯 枚方店", officialUrl: "https://www.gokurakuyu.com/hirakata/hirakata.html",
+    address: "〒573-1132 大阪府枚方市招提田近3-8-1", city: "枚方市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "平日 10:00～翌2:00／土日祝 6:00～翌2:00（受付終了 翌1:30）", "https://www.gokurakuyu.com/hirakata/hirakata.html"),
+      factNov8("定休日", "毎月第3水曜日", "https://www.gokurakuyu.com/hirakata/hirakata.html"),
+      factNov8("料金", "入浴料 大人（中学生以上）600円、小学生200円、幼児（3歳以上）100円、2歳以下無料", "https://www.gokurakuyu.com/hirakata/hirakata.html"),
+    ],
+  },
+  {
+    ids: ["manual-osaka-gokurakuyu-ibaraki"], name: "極楽湯 茨木店", officialUrl: "https://www.rakuspa.com/",
+    address: "〒567-0025 大阪府茨木市田中町18-18", city: "茨木市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "平日 8:00～深夜2:00／土日祝 6:00～深夜2:00（最終受付 深夜1:30）", "https://www.rakuspa.com/"),
+      factNov8("定休日", "年中無休（メンテナンス休館あり）", "https://www.rakuspa.com/"),
+    ],
+  },
+  {
+    ids: ["manual-osaka-gokurakuyu-sakai"], name: "極楽湯 堺泉北店", officialUrl: "https://www.rakuspa.com/",
+    address: "〒590-0106 大阪府堺市南区豊田825", city: "堺市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "平日 9:00～翌2:00／土日祝 6:00～翌2:00（最終受付 翌1:30）", "https://www.rakuspa.com/"),
+      factNov8("定休日", "無休", "https://www.rakuspa.com/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-saunametsa-oimachi"], name: "サウナメッツァ大井町トラックス", officialUrl: "https://ryusenjinoyu.com/saunametsaoimachi/",
+    address: "〒140-0005 東京都品川区広町2丁目1番3号 OIMACHI TRACKS HOTEL & RESIDENCE TOWER 4階", city: "品川区",
+    features: [],
+    facts: [
+      factNov8("営業時間", "6:00～翌2:00（最終入館1:00）", "https://ryusenjinoyu.com/saunametsaoimachi/"),
+      factNov8("定休日", "不定休", "https://ryusenjinoyu.com/saunametsaoimachi/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-manyo-machida"], name: "東京・湯河原温泉 万葉の湯", officialUrl: "https://www.manyo.co.jp/machida/",
+    address: "〒194-0004 東京都町田市鶴間7丁目3番1号", city: "町田市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "24時間営業", "https://www.manyo.co.jp/machida/"),
+      factNov8("定休日", "年中無休", "https://www.manyo.co.jp/machida/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-manyo-toyosu"], name: "東京豊洲 万葉倶楽部", officialUrl: "https://www.toyosu-senkyakubanrai.jp/",
+    address: "〒135-0061 東京都江東区豊洲6丁目5番1号", city: "江東区",
+    features: [],
+    facts: [
+      factNov8("営業時間", "24時間営業", "https://www.toyosu-senkyakubanrai.jp/"),
+      factNov8("定休日", "年中無休（休業日なし）", "https://www.toyosu-senkyakubanrai.jp/"),
+    ],
+  },
+  {
+    ids: ["manual-hokkaido-manyo-futomi"], name: "ふとみ銘泉 万葉の湯", officialUrl: "https://www.manyo.co.jp/futomi/",
+    address: "〒061-3776 北海道石狩郡当別町太美町1695", city: "石狩郡当別町",
+    features: [],
+    facts: [
+      factNov8("営業時間", "午前10:00～翌朝9:00（深夜0:00～朝6:00は大浴場清掃のため入浴不可）", "https://www.manyo.co.jp/futomi/"),
+      factNov8("定休日", "年中無休", "https://www.manyo.co.jp/futomi/"),
+      factNov8("料金", "入館料 大人（中学生以上）1,800円、子ども（小学生）700円、幼児（3才以上）300円", "https://www.manyo.co.jp/futomi/"),
+    ],
+  },
+  {
+    ids: ["manual-hokkaido-manyo-asahikawa"], name: "旭川高砂台 万葉の湯", officialUrl: "https://www.manyo.co.jp/asahikawa/",
+    address: "〒070-8061 北海道旭川市高砂台1丁目1-52", city: "旭川市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "午前10:00～翌朝9:00", "https://www.manyo.co.jp/asahikawa/"),
+      factNov8("定休日", "年中無休", "https://www.manyo.co.jp/asahikawa/"),
+    ],
+  },
+  {
+    ids: ["manual-chiba-ooedo-kimitsu"], name: "大江戸温泉物語 君津の森", officialUrl: "https://www.ooedoonsen.jp/kimitsu/day_trip/",
+    address: "〒292-1144 千葉県君津市法木384-119", city: "君津市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "日帰り入浴 11:00～20:00（最終入場19:00）", "https://www.ooedoonsen.jp/kimitsu/day_trip/"),
+      factNov8("料金", "日帰り入浴 大人 平日620円／土日祝800円／繁忙日1,000円、小学生 平日320円／土日祝470円／繁忙日590円、幼児 平日120円／土日祝140円／繁忙日170円、3歳未満無料", "https://www.ooedoonsen.jp/kimitsu/day_trip/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-yurakunosato-akishima"], name: "昭島温泉 湯楽の里", officialUrl: "https://www.yurakirari.com/akishima/",
+    address: "〒196-0001 東京都昭島市美堀町3-14-10", city: "昭島市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "9時～深夜1時（最終受付24時30分）", "https://www.yurakirari.com/akishima/"),
+      factNov8("料金", "入館料 大人（中学生以上）平日1,030円／土・休日1,130円、こども（4歳～小学生）平日450円／土・休日500円", "https://www.yurakirari.com/akishima/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-yurakunosato-kunitachi"], name: "国立温泉 湯楽の里", officialUrl: "https://www.yurakirari.com/kunitachi/",
+    address: "〒186-0012 東京都国立市泉3丁目29-11（フレスポ国立南内）", city: "国立市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "9時～深夜1時（最終受付24時）", "https://www.yurakirari.com/kunitachi/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-ofuronosama-tama"], name: "おふろの王様 多摩百草店", officialUrl: "https://www.ousama2603.com/tamamogusa/",
+    address: "〒206-0001 東京都多摩市和田1352-1", city: "多摩市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "入館 9:00～24:00（最終受付23:00）", "https://www.ousama2603.com/tamamogusa/"),
+      factNov8("定休日", "年中無休", "https://www.ousama2603.com/tamamogusa/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-ofuronosama-hanakoganei"], name: "おふろの王様 花小金井店", officialUrl: "https://www.ousama2603.com/hanakoganei/",
+    address: "〒187-0003 東京都小平市花小金井南町3-9-10", city: "小平市",
+    features: [], status: "suspended",
+    facts: [
+      factNov8("営業時間", "入館 9:00～24:00（最終受付23:00）", "https://www.ousama2603.com/hanakoganei/"),
+      factNov8("定休日", "年中無休", "https://www.ousama2603.com/hanakoganei/"),
+      factNov8("営業状況", "2026年4月からリニューアル工事のため休館中。再開は2026年12月の予定と公式案内", "https://www.ousama2603.com/hanakoganei/"),
+    ],
+  },
+  {
+    ids: ["manual-aichi-corona-handa"], name: "天然温泉コロナの湯 半田店", officialUrl: "https://www.korona.co.jp/onsen/han/",
+    address: "愛知県半田市旭町3-11-1", city: "半田市",
+    features: [],
+    facts: [
+      factNov8("営業時間", "月～金 9:00～23:00（最終受付22:30）／土・日 7:00～23:00（最終受付22:30）", "https://www.korona.co.jp/onsen/han/"),
+      factNov8("定休日", "4ヶ月に一度メンテナンス休館日あり（年3回不定休）", "https://www.korona.co.jp/onsen/han/"),
+      factNov8("料金", "入泉料 大人（中学生以上）平日900円／土・日・祝1,000円、小人（3歳～小学生）400円、2歳以下無料", "https://www.korona.co.jp/onsen/han/"),
+    ],
+  },
+  {
+    ids: ["st-chiba-1750"], name: "大江戸温泉物語 浦安万華郷", officialUrl: "https://www.ooedoonsen.jp/",
+    features: [], status: "closed",
+    facts: [
+      factNov8("営業状況", "借地契約の満了により、2024年6月2日をもって営業を終了（閉館）。大江戸温泉物語の公式発表による", "https://www.ooedoonsen.jp/wp-content/uploads/news-closing-20240603-02.pdf"),
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));

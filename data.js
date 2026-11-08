@@ -1834,7 +1834,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "st-miyagi-194",
-    "name": "スーパー銭湯極楽湯名取店",
+    "name": "極楽湯 名取店",
     "prefecture": "宮城県",
     "address": "〒981-1221 宮城県名取市田高字原原463",
     "addressSource": "SaunaTime参照ページ",
@@ -69682,5 +69682,297 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://8sauna.jp/",
     "officialUrl": "https://8sauna.jp/"
+  },
+  {
+    "id": "manual-aichi-shinoki-mantenbo",
+    "name": "篠木温泉 満天望",
+    "prefecture": "愛知県",
+    "city": "春日井市",
+    "address": "〒486-0852 愛知県春日井市下市場町3丁目13-1",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://kasugai-mantenbo.com/",
+    "officialUrl": "https://kasugai-mantenbo.com/"
+  },
+  {
+    "id": "manual-aichi-fukunoyu-kasugai",
+    "name": "大泉寺温泉 福の湯",
+    "prefecture": "愛知県",
+    "city": "春日井市",
+    "address": "〒486-0812 愛知県春日井市大泉寺町220-1",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.fukunoyu.co.jp/",
+    "officialUrl": "https://www.fukunoyu.co.jp/"
+  },
+  {
+    "id": "manual-tokyo-keio-takaosan",
+    "name": "京王高尾山温泉 / 極楽湯",
+    "prefecture": "東京都",
+    "city": "八王子市",
+    "address": "〒193-0844 東京都八王子市高尾町2229-7",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.takaosan-onsen.jp/",
+    "officialUrl": "https://www.takaosan-onsen.jp/"
+  },
+  {
+    "id": "manual-tokyo-gokurakuyu-tama",
+    "name": "極楽湯 多摩センター店",
+    "prefecture": "東京都",
+    "city": "多摩市",
+    "address": "〒206-0033 東京都多摩市落合1-30-1",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.rakuspa.com/",
+    "officialUrl": "https://www.rakuspa.com/"
+  },
+  {
+    "id": "manual-tokyo-rakuspa-fuchu",
+    "name": "RAKU SPA Station 府中",
+    "prefecture": "東京都",
+    "city": "府中市",
+    "address": "〒183-0022 東京都府中市宮西町1-5-1 府中トーセイビルI",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://rakuspa.com/fuchu/",
+    "officialUrl": "https://rakuspa.com/fuchu/"
+  },
+  {
+    "id": "manual-tokyo-rakuspa-musashikoganei",
+    "name": "RAKU SPA Station 武蔵小金井",
+    "prefecture": "東京都",
+    "city": "小金井市",
+    "address": "〒184-0004 東京都小金井市本町2-1-11",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://rakuspa.com/musashi/",
+    "officialUrl": "https://rakuspa.com/musashi/"
+  },
+  {
+    "id": "manual-aichi-gokurakuyu-toyohashi",
+    "name": "極楽湯 豊橋店",
+    "prefecture": "愛知県",
+    "city": "豊橋市",
+    "address": "〒440-0092 愛知県豊橋市瓜郷町一新替13-1",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.rakuspa.com/",
+    "officialUrl": "https://www.rakuspa.com/"
+  },
+  {
+    "id": "manual-osaka-gokurakuyu-hirakata",
+    "name": "極楽湯 枚方店",
+    "prefecture": "大阪府",
+    "city": "枚方市",
+    "address": "〒573-1132 大阪府枚方市招提田近3-8-1",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.gokurakuyu.com/hirakata/hirakata.html",
+    "officialUrl": "https://www.gokurakuyu.com/hirakata/hirakata.html"
+  },
+  {
+    "id": "manual-osaka-gokurakuyu-ibaraki",
+    "name": "極楽湯 茨木店",
+    "prefecture": "大阪府",
+    "city": "茨木市",
+    "address": "〒567-0025 大阪府茨木市田中町18-18",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.rakuspa.com/",
+    "officialUrl": "https://www.rakuspa.com/"
+  },
+  {
+    "id": "manual-osaka-gokurakuyu-sakai",
+    "name": "極楽湯 堺泉北店",
+    "prefecture": "大阪府",
+    "city": "堺市",
+    "address": "〒590-0106 大阪府堺市南区豊田825",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.rakuspa.com/",
+    "officialUrl": "https://www.rakuspa.com/"
+  },
+  {
+    "id": "manual-tokyo-saunametsa-oimachi",
+    "name": "サウナメッツァ大井町トラックス",
+    "prefecture": "東京都",
+    "city": "品川区",
+    "address": "〒140-0005 東京都品川区広町2丁目1番3号 OIMACHI TRACKS HOTEL & RESIDENCE TOWER 4階",
+    "trait": "urban",
+    "tags": [],
+    "source": "公式",
+    "sourceUrl": "https://ryusenjinoyu.com/saunametsaoimachi/",
+    "officialUrl": "https://ryusenjinoyu.com/saunametsaoimachi/"
+  },
+  {
+    "id": "manual-tokyo-manyo-machida",
+    "name": "東京・湯河原温泉 万葉の湯",
+    "prefecture": "東京都",
+    "city": "町田市",
+    "address": "〒194-0004 東京都町田市鶴間7丁目3番1号",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.manyo.co.jp/machida/",
+    "officialUrl": "https://www.manyo.co.jp/machida/"
+  },
+  {
+    "id": "manual-tokyo-manyo-toyosu",
+    "name": "東京豊洲 万葉倶楽部",
+    "prefecture": "東京都",
+    "city": "江東区",
+    "address": "〒135-0061 東京都江東区豊洲6丁目5番1号",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.toyosu-senkyakubanrai.jp/",
+    "officialUrl": "https://www.toyosu-senkyakubanrai.jp/"
+  },
+  {
+    "id": "manual-hokkaido-manyo-futomi",
+    "name": "ふとみ銘泉 万葉の湯",
+    "prefecture": "北海道",
+    "city": "石狩郡当別町",
+    "address": "〒061-3776 北海道石狩郡当別町太美町1695",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.manyo.co.jp/futomi/",
+    "officialUrl": "https://www.manyo.co.jp/futomi/"
+  },
+  {
+    "id": "manual-hokkaido-manyo-asahikawa",
+    "name": "旭川高砂台 万葉の湯",
+    "prefecture": "北海道",
+    "city": "旭川市",
+    "address": "〒070-8061 北海道旭川市高砂台1丁目1-52",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.manyo.co.jp/asahikawa/",
+    "officialUrl": "https://www.manyo.co.jp/asahikawa/"
+  },
+  {
+    "id": "manual-chiba-ooedo-kimitsu",
+    "name": "大江戸温泉物語 君津の森",
+    "prefecture": "千葉県",
+    "city": "君津市",
+    "address": "〒292-1144 千葉県君津市法木384-119",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.ooedoonsen.jp/kimitsu/day_trip/",
+    "officialUrl": "https://www.ooedoonsen.jp/kimitsu/day_trip/"
+  },
+  {
+    "id": "manual-tokyo-yurakunosato-akishima",
+    "name": "昭島温泉 湯楽の里",
+    "prefecture": "東京都",
+    "city": "昭島市",
+    "address": "〒196-0001 東京都昭島市美堀町3-14-10",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.yurakirari.com/akishima/",
+    "officialUrl": "https://www.yurakirari.com/akishima/"
+  },
+  {
+    "id": "manual-tokyo-yurakunosato-kunitachi",
+    "name": "国立温泉 湯楽の里",
+    "prefecture": "東京都",
+    "city": "国立市",
+    "address": "〒186-0012 東京都国立市泉3丁目29-11（フレスポ国立南内）",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.yurakirari.com/kunitachi/",
+    "officialUrl": "https://www.yurakirari.com/kunitachi/"
+  },
+  {
+    "id": "manual-tokyo-ofuronosama-tama",
+    "name": "おふろの王様 多摩百草店",
+    "prefecture": "東京都",
+    "city": "多摩市",
+    "address": "〒206-0001 東京都多摩市和田1352-1",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.ousama2603.com/tamamogusa/",
+    "officialUrl": "https://www.ousama2603.com/tamamogusa/"
+  },
+  {
+    "id": "manual-tokyo-ofuronosama-hanakoganei",
+    "name": "おふろの王様 花小金井店",
+    "prefecture": "東京都",
+    "city": "小平市",
+    "address": "〒187-0003 東京都小平市花小金井南町3-9-10",
+    "trait": "water",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.ousama2603.com/hanakoganei/",
+    "officialUrl": "https://www.ousama2603.com/hanakoganei/"
+  },
+  {
+    "id": "manual-aichi-corona-handa",
+    "name": "天然温泉コロナの湯 半田店",
+    "prefecture": "愛知県",
+    "city": "半田市",
+    "address": "愛知県半田市旭町3-11-1",
+    "trait": "onsen",
+    "tags": [
+      "スーパー銭湯"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.korona.co.jp/onsen/han/",
+    "officialUrl": "https://www.korona.co.jp/onsen/han/"
   }
 ];
