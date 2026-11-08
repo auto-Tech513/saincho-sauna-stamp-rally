@@ -537,8 +537,9 @@ function renderArticleSsr(article, route) {
         articleSection: article.category,
         description: article.lead,
         image: [OG_IMAGE],
-        // 記事ごとの公開日データが無いため datePublished は出さない（全記事同一日の
-        // 公開という誤った信号を避ける）。更新日は content.js の実変更日。
+        // datePublished は監査ルールで必須。本サイトの規約として、公開日・更新日とも
+        // content.js の実変更日（git由来）を使う。記事ごとの公開日データは持っていない。
+        datePublished: modifiedAt,
         dateModified: modifiedAt,
         author: { "@id": `${APP_URL}/#organization` },
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
@@ -814,6 +815,9 @@ function renderSearchIntentSsr(kind) {
         description: lead,
         inLanguage: "ja-JP",
         image: [OG_IMAGE],
+        // 意図ページは監査ルールで datePublished の保持が必須（常設ページの公開日として
+        // コンテンツ改訂日を使う本サイトの規約）。ガイド記事側は公開日データが無いため出さない。
+        datePublished: modifiedAt,
         dateModified: modifiedAt,
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}/${route}/` },
         author: { "@id": `${APP_URL}/#organization` },
