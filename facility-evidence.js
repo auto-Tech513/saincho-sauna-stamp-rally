@@ -588,6 +588,702 @@ export const CURATED_FACILITY_EVIDENCE = [
       factNov8("営業状況", "2026年11月30日の営業をもって閉店と公式発表（最終受付20:00）", "https://steams-tokyo.com/news/post-369/"),
     ],
   },
+  {
+    ids: ["manual-hotel-apa-01"], name: "アパホテル〈名古屋丸の内駅前〉", officialUrl: "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/",
+    address: "〒460-0002 愛知県名古屋市中区丸の内2-17-28", city: "名古屋市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～25:00", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-02"], name: "アパホテル〈京都駅堀川通〉", officialUrl: "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/",
+    address: "〒600-8236 京都府京都市下京区油小路通塩小路西油小路町1番地", city: "京都市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～25:00", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-03"], name: "アパホテル〈鈴鹿中央〉", officialUrl: "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/",
+    address: "〒513-0827 三重県鈴鹿市大池3丁目11番地35号", city: "鈴鹿市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～9:00 / 16:00～24:00", "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-04"], name: "アパホテル＆リゾート〈上越妙高〉", officialUrl: "https://www.apahotel.com/resort/myoko/spa/",
+    address: "〒949-2224 新潟県妙高市桶海1090", city: "妙高市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 12:00～24:00", "https://www.apahotel.com/resort/myoko/spa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-05"], name: "アパホテル〈加賀大聖寺駅前〉", officialUrl: "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/",
+    address: "〒922-0842 石川県加賀市熊坂町イ226-4", city: "加賀市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～9:00 / 15:00～25:00", "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-06"], name: "アパホテル〈千葉八千代緑が丘〉", officialUrl: "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/",
+    address: "〒276-0049 千葉県八千代市緑が丘1-2-30", city: "八千代市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～25:00", "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-07"], name: "アパホテル〈大阪谷町四丁目駅前〉", officialUrl: "https://www.apahotel.com/hotel/kansai/osaka/osakatanimachi-4choume/",
+    address: "〒540-0011 大阪府大阪市中央区農人橋1-1-27", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～翌10:00", "https://www.apahotel.com/hotel/kansai/osaka/osakatanimachi-4choume/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-08"], name: "アパホテル〈大阪天満〉", officialUrl: "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/",
+    address: "〒530-0035 大阪府大阪市北区同心2-16-15", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～25:00", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-09"], name: "アパホテル〈淀屋橋駅前〉", officialUrl: "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/",
+    address: "〒541-0044 大阪府大阪市中央区伏見町3-1-9", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～25:00", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-10"], name: "アパホテル＆リゾート〈大阪なんば駅前タワー〉", officialUrl: "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/",
+    address: "〒556-0017 大阪府大阪市浪速区湊町1-2-13", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～26:00 / 6:00～10:00", "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-11"], name: "アパホテル＆リゾート〈札幌〉", officialUrl: "https://www.apahotel.com/resort/sapporo/",
+    address: "〒005-0804 北海道札幌市南区川沿4条2丁目1-1", city: "札幌市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～10:00 / 15:00～24:00", "https://www.apahotel.com/resort/sapporo/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-01"], name: "カンデオホテルズ半田", officialUrl: "https://www.candeohotels.com/ja/aichi-handa/",
+    address: "〒475-0859 愛知県半田市天王町1-50-8", city: "半田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/aichi-handa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-02"], name: "カンデオホテルズ京都烏丸六角", officialUrl: "https://www.candeohotels.com/ja/kyoto-rokkaku/",
+    address: "〒604-8164 京都市中京区六角通烏丸西入骨屋町149（室町通下がる六角東入る南側）", city: "京都市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/kyoto-rokkaku/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-03"], name: "カンデオホテルズ菊陽熊本空港", officialUrl: "https://www.candeohotels.com/ja/kumamoto-kikuyo/",
+    address: "〒869-1101 熊本県菊池郡菊陽町津久礼2380-1", city: "菊池郡菊陽町",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00（男女入替制、曜日により男女の時間帯が異なる）", "https://www.candeohotels.com/ja/kumamoto-kikuyo/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-04"], name: "カンデオホテルズ大津熊本空港", officialUrl: "https://www.candeohotels.com/ja/kumamoto-ozu/",
+    address: "〒869-1235 熊本県菊池郡大津町室736-1", city: "菊池郡大津町",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/kumamoto-ozu/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-05"], name: "カンデオホテルズ静岡島田", officialUrl: "https://www.candeohotels.com/ja/shizuoka-shimada/",
+    address: "〒427-0104 静岡県島田市井口1417", city: "島田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "女性：15:00〜17:45、21:45〜23:45、3:00〜5:45、9:00〜11:00／男性：18:00〜21:30、24:00〜2:45、6:00〜8:45（男女入替制）", "https://www.candeohotels.com/ja/shizuoka-shimada/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-06"], name: "カンデオホテルズ大阪ザ・タワー", officialUrl: "https://www.candeohotels.com/ja/osaka-tower/",
+    address: "〒530-0004 大阪府大阪市北区堂島浜1-1-27（フロント17階）", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/osaka-tower/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-07"], name: "カンデオホテルズ大阪なんば", officialUrl: "https://www.candeohotels.com/ja/osaka-namba/",
+    address: "〒542-0083 大阪府大阪市中央区東心斎橋2-2-5", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/osaka-namba/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-08"], name: "カンデオホテルズ大阪岸辺", officialUrl: "https://www.candeohotels.com/ja/osaka-kishibe/",
+    address: "〒564-0018 大阪府吹田市岸部新町5-45", city: "吹田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/osaka-kishibe/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-09"], name: "カンデオホテルズ大阪心斎橋", officialUrl: "https://www.candeohotels.com/ja/osaka-shinsaibashi/",
+    address: "〒542-0085 大阪府大阪市中央区心斎橋筋2丁目7-12", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/osaka-shinsaibashi/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-10"], name: "カンデオホテルズ大阪枚方", officialUrl: "https://www.candeohotels.com/ja/osaka-hirakata/",
+    address: "〒573-0032 大阪府枚方市岡東町19-1 ステーションヒル枚方（フロント19階）", city: "枚方市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/osaka-hirakata/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-11"], name: "ザ シンギュラリ ホテル ＆ スカイスパ アット ユニバーサル・スタジオ・ジャパン", officialUrl: "https://www.candeohotels.com/ja/singulari/",
+    address: "〒554-0024 大阪府大阪市此花区島屋6丁目2番25号", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/singulari/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-12"], name: "カンデオホテルズ茅野", officialUrl: "https://www.candeohotels.com/ja/nagano-chino/",
+    address: "〒391-0000 長野県茅野市中沖2-7", city: "茅野市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/nagano-chino/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-13"], name: "カンデオホテルズ東京新橋", officialUrl: "https://www.candeohotels.com/ja/tokyo-shimbashi/",
+    address: "〒105-0004 東京都港区新橋3-6-8", city: "港区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/tokyo-shimbashi/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-14"], name: "カンデオホテルズ東京六本木", officialUrl: "https://www.candeohotels.com/ja/tokyo-roppongi/",
+    address: "〒106-0032 東京都港区六本木6-7-11", city: "港区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00〜翌11:00", "https://www.candeohotels.com/ja/tokyo-roppongi/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-roynet-01"], name: "ダイワロイネットホテル松江駅前", officialUrl: "https://www.daiwaroynet.jp/matsue-ekimae/",
+    address: "〒690-0003 島根県松江市朝日町590-10", city: "松江市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～24:00／6:00～10:00", "https://www.daiwaroynet.jp/matsue-ekimae/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-01"], name: "天然温泉 つつじの湯 ドーミーインEXPRESS豊橋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/toyohashi/",
+    address: "〒440-0893 愛知県豊橋市札木町118", city: "豊橋市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用停止）", "https://dormy-hotels.com/dormyinn/hotels/toyohashi/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-02"], name: "天然温泉 三州の湯 ドーミーインEXPRESS三河安城", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/mikawaanjo/",
+    address: "〒446-0059 愛知県安城市三河安城本町1-1-3", city: "安城市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/mikawaanjo/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-03"], name: "天然温泉 扇浜の湯 ドーミーイン川崎", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kawasaki/",
+    address: "〒210-0005 神奈川県川崎市川崎区東田町9-3", city: "川崎市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/kawasaki/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-04"], name: "天然温泉 茶月の湯 ドーミーインEXPRESS掛川", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kakegawa/",
+    address: "〒436-0075 静岡県掛川市仁藤町3-12", city: "掛川市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/kakegawa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-05"], name: "天然温泉 富嶽の湯 ドーミーイン三島", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/mishima/",
+    address: "〒411-0035 静岡県三島市大宮町3-18-33", city: "三島市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/mishima/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-06"], name: "天然温泉 碧宝の湯 ドーミーイン小松", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/komatsu/",
+    address: "〒923-0868 石川県小松市日の出町4丁目211番", city: "小松市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00利用休止）", "https://dormy-hotels.com/dormyinn/hotels/komatsu/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-07"], name: "天然温泉 そが浜の湯 ドーミーイン千葉City Soga", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/soga/",
+    address: "〒260-0842 千葉県千葉市中央区南町2-15-4", city: "千葉市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/soga/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-08"], name: "天然温泉 水都の湯 ドーミーインPREMIUM大阪北浜", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/osakakitahama/",
+    address: "〒541-0043 大阪府大阪市中央区高麗橋1丁目6番7号", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/osakakitahama/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-09"], name: "天然温泉 朝霧の湯 ドーミーインPREMIUMなんばANNEX", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nanba_ax/",
+    address: "〒542-0083 大阪府大阪市中央区東心斎橋2-1-6", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nanba_ax/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-10"], name: "天然温泉 夕霧の湯 ドーミーインPREMIUMなんば", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_nanba/",
+    address: "〒542-0082 大阪府大阪市中央区島之内2-14-23", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/premium_nanba/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-11"], name: "すえひろの湯 ドーミーイン秋葉原", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/akihabara/",
+    address: "〒101-0021 東京都千代田区外神田4-12-5", city: "千代田区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/akihabara/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-12"], name: "ドーミーインEXPRESS目黒青葉台", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/meguro/",
+    address: "〒153-0042 東京都目黒区青葉台3-21-8", city: "目黒区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（全日男女入替制：女性15：00～20：00／男性20：30～翌10：00、サウナのみ深夜1：00～5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/meguro/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-13"], name: "ドーミーインPREMIUM渋谷神宮前", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/shibuya/",
+    address: "〒150-0001 東京都渋谷区神宮前6-24-4", city: "渋谷区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/shibuya/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-14"], name: "亀島川温泉 新川の湯 ドーミーイン東京八丁堀", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyohatchobori/",
+    address: "〒104-0033 東京都中央区新川2-20-4", city: "中央区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/tokyohatchobori/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-15"], name: "春日の湯 ドーミーイン後楽園", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/korakuen/",
+    address: "〒113-0033 東京都文京区本郷4-23-14", city: "文京区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/korakuen/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-16"], name: "天然温泉 七宝の湯 ドーミーインPREMIUM銀座", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ginza/",
+    address: "〒104-0061 東京都中央区銀座6-16-8", city: "中央区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌朝10：00（サウナのみ1：00～5：00利用停止）", "https://dormy-hotels.com/dormyinn/hotels/ginza/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-17"], name: "天然温泉 豊穣の湯 ドーミーイン池袋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/",
+    address: "〒170-0013 東京都豊島区東池袋3-11-11", city: "豊島区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌朝10：00（サウナのみ1：00～5：00利用停止）", "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-18"], name: "展望大浴場 あさひ湯 ドーミーインEXPRESS浅草", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/asakusa/",
+    address: "〒111-0033 東京都台東区花川戸1-3-4", city: "台東区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（曜日別男女入替制、サウナのみ深夜1：00～5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/asakusa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-19"], name: "伝馬の湯 ドーミーインPREMIUM東京小伝馬町", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyokodenmacho/",
+    address: "〒103-0001 東京都中央区日本橋小伝馬町2番3号", city: "中央区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/tokyokodenmacho/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-20"], name: "徒士の湯 ドーミーイン上野・御徒町", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ueno/",
+    address: "〒110-0005 東京都台東区上野6丁目7番22号", city: "台東区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/ueno/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-21"], name: "明神の湯 ドーミーインPREMIUM神田", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kanda/",
+    address: "〒101-0041 東京都千代田区神田須田町1-16", city: "千代田区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/kanda/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-22"], name: "天然温泉 白鷺の湯 ドーミーイン姫路", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/himeji/",
+    address: "〒670-0964 兵庫県姫路市豊沢町160-2", city: "姫路市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/himeji/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-23"], name: "石狩の湯 ドーミーインPREMIUM札幌", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_sapporo",
+    address: "〒060-0062 北海道札幌市中央区南2条西6丁目4-1", city: "札幌市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/premium_sapporo"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-24"], name: "狸の湯 ドーミーイン札幌ANNEX", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/sapporo_ax",
+    address: "〒060-0063 北海道札幌市中央区南三条西6丁目10-6", city: "札幌市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/sapporo_ax"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-25"], name: "天然温泉 幸鐘の湯 ドーミーイン東室蘭", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/higashimuroran/",
+    address: "〒050-0074 北海道室蘭市中島町2-30-11", city: "室蘭市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/higashimuroran/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-26"], name: "天然温泉 常呂川の湯 ドーミーイン北見", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kitami/",
+    address: "〒090-0044 北海道北見市北四条西2丁目7-1", city: "北見市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/kitami/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-27"], name: "天然温泉 神威の湯 ドーミーイン旭川", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/asahikawa/",
+    address: "〒070-0035 北海道旭川市5条通6丁目964-1", city: "旭川市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/asahikawa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-28"], name: "天然温泉 樽前の湯 ドーミーイン苫小牧", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tomakomai/",
+    address: "〒053-0023 北海道苫小牧市錦町2-1-22", city: "苫小牧市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/tomakomai/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-29"], name: "天然温泉 鶴舞の湯 ドーミーイン千歳", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/chitose",
+    address: "〒066-0063 北海道千歳市幸町4丁目20番地1号", city: "千歳市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/chitose"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-30"], name: "天然温泉 天都の湯 ドーミーイン網走", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/abashiri/",
+    address: "〒093-0012 北海道網走市南二条西3丁目1番地の1", city: "網走市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/abashiri/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-31"], name: "天然温泉 天北の湯 ドーミーイン稚内", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/wakkanai/",
+    address: "〒097-0022 北海道稚内市中央2-7-13", city: "稚内市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/wakkanai/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-32"], name: "天然温泉 灯の湯 ドーミーインPREMIUM小樽", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/otaru/",
+    address: "〒047-0032 北海道小樽市稲穂3-9-1", city: "小樽市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/otaru/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-33"], name: "天然温泉 白樺の湯 ドーミーイン帯広", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/obihiro/",
+    address: "〒080-0012 北海道帯広市西二条南9-11-1", city: "帯広市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/obihiro/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-34"], name: "天然温泉 幣舞の湯 ドーミーインPREMIUM釧路", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kushiro/",
+    address: "〒085-0015 北海道釧路市北大通2-1", city: "釧路市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/kushiro/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-mystays-01"], name: "ホテルマイステイズプレミア成田", officialUrl: "https://iconia.co.jp/hotel-mystays-premier-narita-chiba/",
+    address: "〒286-0131 千葉県成田市大山31", city: "成田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～11:00／15:00～22:00", "https://iconia.co.jp/hotel-mystays-premier-narita-chiba/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-01"], name: "ルートイングランティア東海 Spa & Relaxation", officialUrl: "https://www.hotel-grantia.co.jp/tokai/",
+    address: "〒476-0003 愛知県東海市荒尾町丸根1-21", city: "東海市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "5:00～10:00 / 15:00～24:30", "https://www.hotel-grantia.co.jp/tokai/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-02"], name: "ホテルルートイン松山北", officialUrl: "https://www.route-inn.co.jp/hotel_list/ehime/index_hotel_id_782/",
+    address: "〒791-8005 愛媛県松山市東長戸四丁目８番１２号", city: "松山市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/ehime/index_hotel_id_782/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-03"], name: "ホテルルートインGrand守谷駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/ibaraki/index_hotel_id_735/",
+    address: "〒302-0115 茨城県守谷市中央二丁目17-８", city: "守谷市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/ibaraki/index_hotel_id_735/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-04"], name: "ホテルルートイン美濃加茂", officialUrl: "https://www.route-inn.co.jp/hotel_list/gifu/index_hotel_id_33/",
+    address: "〒505-0041 岐阜県美濃加茂市太田町2449-1", city: "美濃加茂市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/gifu/index_hotel_id_33/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-05"], name: "ホテルルートイン仙台東", officialUrl: "https://www.route-inn.co.jp/hotel_list/miyagi/index_hotel_id_664/",
+    address: "〒984-0011 宮城県仙台市若林区六丁の目西町1-60", city: "仙台市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/miyagi/index_hotel_id_664/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-06"], name: "ホテルルートイン京都久御山", officialUrl: "https://www.route-inn.co.jp/hotel_list/kyoto/index_hotel_id_737/",
+    address: "〒613-0022 京都府久世郡久御山町市田鈴間102番地", city: "久世郡久御山町",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/kyoto/index_hotel_id_737/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-07"], name: "ホテルルートインGrand前橋", officialUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_746/",
+    address: "〒371-0847 群馬県前橋市大友町1丁目5番地4", city: "前橋市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_746/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-08"], name: "ホテルルートインGrand太田駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_680/",
+    address: "〒373-0851 群馬県太田市飯田町1380", city: "太田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_680/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-09"], name: "ホテルルートインGrand秩父", officialUrl: "https://www.route-inn.co.jp/hotel_list/saitama/index_hotel_id_714/",
+    address: "〒368-0023 埼玉県秩父市大宮4628-2", city: "秩父市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/saitama/index_hotel_id_714/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-10"], name: "ルートイングランティア羽生SPA RESORT", officialUrl: "https://www.hotel-grantia.co.jp/hanyu/",
+    address: "〒348-0054 埼玉県羽生市西3丁目19-3", city: "羽生市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "10:00～24:00", "https://www.hotel-grantia.co.jp/hanyu/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-11"], name: "ホテルルートインGrand三沢-EAST COURT-", officialUrl: "https://www.route-inn.co.jp/hotel_list/aomori/index_hotel_id_741/",
+    address: "〒033-0011 青森県三沢市幸町一丁目10番1号", city: "三沢市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/aomori/index_hotel_id_741/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-12"], name: "ホテルルートイン島田吉田インター", officialUrl: "https://www.route-inn.co.jp/hotel_list/shizuoka/index_hotel_id_26/",
+    address: "〒427-0104 静岡県島田市井口1194", city: "島田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/shizuoka/index_hotel_id_26/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-13"], name: "ホテルルートイン千葉浜野-東京湾岸道-", officialUrl: "https://www.route-inn.co.jp/hotel_list/chiba/index_hotel_id_674/",
+    address: "〒260-0824 千葉県千葉市中央区浜野町1025ｰ110", city: "千葉市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/chiba/index_hotel_id_674/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-14"], name: "ホテルルートインGrand佐久-佐久平駅南-", officialUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/",
+    address: "〒385-0022 長野県佐久市岩村田5513番地1", city: "佐久市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-15"], name: "ホテルルートインGrand上田駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_634/",
+    address: "〒386-0025 長野県上田市天神一丁目5番7号", city: "上田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_634/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-16"], name: "ホテルルートイン大牟田", officialUrl: "https://www.route-inn.co.jp/hotel_list/fukuoka/index_hotel_id_745/",
+    address: "〒836-0037 福岡県大牟田市岬町6番地67", city: "大牟田市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/fukuoka/index_hotel_id_745/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-17"], name: "ルートイングランティア福岡宮若-脇田温泉-", officialUrl: "https://www.hotel-grantia.co.jp/wakamiya/",
+    address: "〒822-0133 福岡県宮若市脇田778-1", city: "宮若市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "6:00～9:00 / 10:00～23:00", "https://www.hotel-grantia.co.jp/wakamiya/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-18"], name: "ホテルルートインGrand旭川駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/",
+    address: "〒070-0030 北海道旭川市宮下通8丁目1962-1", city: "旭川市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-19"], name: "ホテルルートインGrand室蘭", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_666/",
+    address: "〒050-0074 北海道室蘭市中島町2丁目22-2", city: "室蘭市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_666/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-20"], name: "ホテルルートインGrand北見駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_644/",
+    address: "〒090-0040 北海道北見市大通西1丁目2-1", city: "北見市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_644/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-21"], name: "ホテルルートイン帯広駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/",
+    address: "〒080-0013 北海道帯広市西三条南11丁目8番地", city: "帯広市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-22"], name: "ルートイングランティア函館駅前", officialUrl: "https://www.hotel-grantia.co.jp/hakodate-st/",
+    address: "〒040-0063 北海道函館市若松町21-3", city: "函館市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15:00～2:00 / 5:00～10:00", "https://www.hotel-grantia.co.jp/hakodate-st/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-01"], name: "天然温泉 花波の湯 御宿 野乃大阪淀屋橋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/",
+    address: "〒541-0041 大阪府大阪市中央区北浜2丁目5番19号", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-02"], name: "天然温泉 花風の湯 御宿 野乃なんば", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_nanba/",
+    address: "〒542-0073 大阪府大阪市中央区日本橋1-4-18", city: "大阪市",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nono_nanba/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-03"], name: "天然温泉 凌雲の湯 御宿 野乃浅草", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/",
+    address: "〒111-0032 東京都台東区浅草2-7-20", city: "台東区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-04"], name: "天然温泉 凌天の湯 御宿 野乃浅草別邸", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/",
+    address: "〒111-0032 東京都台東区浅草2-7-26", city: "台東区",
+    features: [],
+    facts: [
+      factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/"),
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
