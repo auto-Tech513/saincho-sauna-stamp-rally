@@ -1300,6 +1300,11 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "令和2年（2020年）3月末をもって休館し閉館。Google Mapsでも「Permanently closed」と表示", sourceUrl: "https://www.google.co.jp/maps/place/%E8%8B%B1%E5%BD%A6%E5%B1%B1%E6%B8%A9%E6%B3%89/@33.4758086,130.8959353,15z/data=!4m5!3m4!1s0x0:0xcb2b2399f8eb1a66!8m2!3d33.4758086!4d130.8959353", checkedAt: "2026-11-08" }],
   },
   {
+    ids: ["st-niigata-4172"], name: "妙高市ほっとランド", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "Google Mapsで「閉業」と表示（住所・電話番号が登録情報と一致）。妙高市の公式紹介ページは既に削除され404", sourceUrl: "https://www.google.co.jp/maps/place/%E5%A6%99%E9%AB%98%E5%B8%82%E3%81%BB%E3%81%A3%E3%81%A8%E3%83%A9%E3%83%B3%E3%83%89/@37.0408717,138.2660262,17z/data=!3m1!4b1!4m6!3m5!1s0x5ff672e91850712d:0x5346c9c7657e59d0!8m2!3d37.0408717!4d138.2660262!16s%2Fg%2F1tdyl1dq", checkedAt: "2026-11-09" }],
+  },
+  {
     ids: ["st-toyama-125"], name: "おまき温泉スパガーデン和園", status: "suspended",
     features: [],
     facts: [{ label: "営業状況", value: "2022年2月より休業中（Wikipedia「庄川温泉郷」）。旧公式ページ（sakura.ne.jp）は消滅し、公式の近況はFacebookページで発信", sourceUrl: "https://ja.wikipedia.org/wiki/%E5%BA%84%E5%B7%9D%E6%B8%A9%E6%B3%89%E9%83%B7", checkedAt: "2026-11-08" }],
