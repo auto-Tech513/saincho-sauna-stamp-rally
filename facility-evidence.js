@@ -1284,6 +1284,26 @@ export const CURATED_FACILITY_EVIDENCE = [
       factNov8("大浴場・サウナ", "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/"),
     ],
   },
+  {
+    ids: ["st-hokkaido-4636"], name: "北見温泉 金の湯", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "運営のノーザンアークリゾートが2024年3月末をもって全事業を終了（北海道新聞2024年2月8日付報道）。ホテルは2021年11月から無期限休館していた", sourceUrl: "http://ja.wikipedia.org/wiki/ノーザンアークリゾート", checkedAt: "2026-11-08" }],
+  },
+  {
+    ids: ["st-chiba-4709"], name: "アジアンSOLA SPA牧の原モア温泉", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "2023年6月に閉館。ニフティ温泉の施設ページも「SOLA SPA 牧の原モア温泉（閉館しました）」と表示", sourceUrl: "https://onsen.nifty.com/kashiwa-onsen/onsen016768/kuchikomi/", checkedAt: "2026-11-08" }],
+  },
+  {
+    ids: ["st-fukuoka-4493"], name: "英彦山温泉 しゃくなげ荘", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "令和2年（2020年）3月末をもって休館し閉館。Google Mapsでも「Permanently closed」と表示", sourceUrl: "https://www.google.co.jp/maps/place/%E8%8B%B1%E5%BD%A6%E5%B1%B1%E6%B8%A9%E6%B3%89/@33.4758086,130.8959353,15z/data=!4m5!3m4!1s0x0:0xcb2b2399f8eb1a66!8m2!3d33.4758086!4d130.8959353", checkedAt: "2026-11-08" }],
+  },
+  {
+    ids: ["st-toyama-125"], name: "おまき温泉スパガーデン和園", status: "suspended",
+    features: [],
+    facts: [{ label: "営業状況", value: "2022年2月より休業中（Wikipedia「庄川温泉郷」）。旧公式ページ（sakura.ne.jp）は消滅し、公式の近況はFacebookページで発信", sourceUrl: "https://ja.wikipedia.org/wiki/%E5%BA%84%E5%B7%9D%E6%B8%A9%E6%B3%89%E9%83%B7", checkedAt: "2026-11-08" }],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));

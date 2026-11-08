@@ -309,7 +309,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4701/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://renosauna.studio.site/",
     "officialUrlSource": "https://saunatime.jp/saunas/4701/"
   },
   {
@@ -409,7 +408,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4551/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.hotel-emisia.com/relaxation/spa/index.html",
+    "officialUrl": "https://www.hotel-emisia.com/sapporo/spa/",
     "officialUrlSource": "https://saunatime.jp/saunas/4551/"
   },
   {
@@ -557,7 +556,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1138/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.horosin-onsen.com/spa.html",
+    "officialUrl": "https://horosin-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1138/"
   },
   {
@@ -852,7 +851,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4636/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://kitamikanko.jp/kanko/heal/heal06.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4636/"
   },
   {
@@ -1333,7 +1331,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/187/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.sauna-capsule.fhd.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/187/"
   },
   {
@@ -1619,7 +1616,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3362/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.airinkan.com/index.html",
+    "officialUrl": "https://www.airinkan.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3362/"
   },
   {
@@ -1746,7 +1743,7 @@ export const SEED_FACILITIES = [
     "city": "奥州市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.city.oshu.iwate.jp/site/kanko/5894.html",
+    "officialUrl": "https://maidurunoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1312/"
   },
   {
@@ -1854,7 +1851,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/194/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.gokurakuyu.jp/natori/",
+    "officialUrl": "https://natori.gokurakuyu.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/194/"
   },
   {
@@ -2160,7 +2157,7 @@ export const SEED_FACILITIES = [
     "city": "仙台市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.hotespa.net/hotels/sendai_sea/spa/",
+    "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/sendai_ex/spa/",
     "officialUrlSource": "https://saunatime.jp/saunas/2939/"
   },
   {
@@ -2176,7 +2173,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1424/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.hotespa.net/hotels/sendai_ax/spa/",
+    "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/sendai_ax/spa/",
     "officialUrlSource": "https://saunatime.jp/saunas/1424/"
   },
   {
@@ -2317,7 +2314,7 @@ export const SEED_FACILITIES = [
     "city": "由利本荘市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.yurihonjo-kanko.jp/modules/gnavi/index.php?lid=155",
+    "officialUrl": "https://yurihonjo-kanko.jp/yrdb/kashiwaonsen/",
     "officialUrlSource": "https://saunatime.jp/saunas/3379/"
   },
   {
@@ -2395,7 +2392,7 @@ export const SEED_FACILITIES = [
     "city": "由利本荘市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.nisime-yukkoland.co.jp/index.html",
+    "officialUrl": "https://nishimeyukkolandyou.wixsite.com/nishime-yukkoland",
     "officialUrlSource": "https://saunatime.jp/saunas/1283/"
   },
   {
@@ -2412,7 +2409,7 @@ export const SEED_FACILITIES = [
     "city": "由利本荘市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.popolocco.com/index.html",
+    "officialUrl": "https://popolocco.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1279/"
   },
   {
@@ -2435,7 +2432,7 @@ export const SEED_FACILITIES = [
     "city": "由利本荘市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.yurihonjo-kanko.jp/modules/gnavi/index.php?lid=154&cid=33",
+    "officialUrl": "https://painspashinzan.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1278/"
   },
   {
@@ -2482,7 +2479,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3360/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.yokote.co.jp/geihin/index.html",
+    "officialUrl": "https://yokote.co.jp/yuyu/",
     "officialUrlSource": "https://saunatime.jp/saunas/3360/"
   },
   {
@@ -2641,7 +2638,7 @@ export const SEED_FACILITIES = [
     "city": "大仙市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.yumeria.site/index.html",
+    "officialUrl": "https://yumeria.site/",
     "officialUrlSource": "https://saunatime.jp/saunas/1272/"
   },
   {
@@ -2841,7 +2838,7 @@ export const SEED_FACILITIES = [
     "city": "北村山郡大石田町",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://attamariland-fukabori.co.jp/index.html",
+    "officialUrl": "https://attamariland-fukabori.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/1365/"
   },
   {
@@ -3204,7 +3201,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1391/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.iide-shirasagi.com/index.html",
+    "officialUrl": "https://www.iide-shirasagi.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1391/"
   },
   {
@@ -4026,7 +4023,7 @@ export const SEED_FACILITIES = [
     ],
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.sopia.or.jp/topsante/",
+    "officialUrl": "https://topsante-hokota.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/38/"
   },
   {
@@ -4500,7 +4497,7 @@ export const SEED_FACILITIES = [
     "city": "宇都宮市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.nandaimon.co.jp/spa/",
+    "officialUrl": "https://spa-nandaimon.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/114/"
   },
   {
@@ -5492,7 +5489,7 @@ export const SEED_FACILITIES = [
     "city": "和光市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.ousama2603.com/shop/wako/",
+    "officialUrl": "https://www.ousama2603.com/wako/",
     "officialUrlSource": "https://saunatime.jp/saunas/4691/"
   },
   {
@@ -5975,7 +5972,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4709/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://spa-solani.com/store/80/",
     "officialUrlSource": "https://saunatime.jp/saunas/4709/"
   },
   {
@@ -7613,7 +7609,7 @@ export const SEED_FACILITIES = [
     "city": "長岡市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.hotel-sunrolla.jp/echigokawaguchionsen/#onsen",
+    "officialUrl": "https://hotel-sunrolla.jp/kawaguchi-onsen/",
     "officialUrlSource": "https://saunatime.jp/saunas/2126/"
   },
   {
@@ -7636,7 +7632,7 @@ export const SEED_FACILITIES = [
     "city": "新潟市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.docci.com/movement/dayspa/",
+    "officialUrl": "https://www.docci.com/vinespa/",
     "officialUrlSource": "https://saunatime.jp/saunas/2097/"
   },
   {
@@ -8079,7 +8075,7 @@ export const SEED_FACILITIES = [
     "city": "新発田市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.shiroyama-onsen.com/index.html",
+    "officialUrl": "https://www.shiroyama-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/2093/"
   },
   {
@@ -8115,7 +8111,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4172/",
     "sourceCheckedAt": "2026-10-18",
     "addressCheckedAt": "2026-10-18",
-    "officialUrl": "http://www.city.myoko.niigata.jp/introtourism/81.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4172/"
   },
   {
@@ -8180,7 +8175,7 @@ export const SEED_FACILITIES = [
     "city": "砺波市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.kamishita.sakura.ne.jp/omakionsen/",
+    "officialUrl": "https://ja-jp.facebook.com/omakinonzen.waen/",
     "officialUrlSource": "https://saunatime.jp/saunas/125/"
   },
   {
@@ -8229,7 +8224,7 @@ export const SEED_FACILITIES = [
     "city": "富山市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.sauna-alps.com/index.html",
+    "officialUrl": "http://www.sauna-alps.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/287/"
   },
   {
@@ -8455,7 +8450,7 @@ export const SEED_FACILITIES = [
     "city": "富山市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://takaharakousen.com/index.html",
+    "officialUrl": "http://takaharakousen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/288/"
   },
   {
@@ -8511,7 +8506,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/37/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.kawaidaonsen.com/",
+    "officialUrl": "https://kawaidaonsen.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/37/"
   },
   {
@@ -9753,7 +9748,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/2432/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.s-seiun.co.jp/shisetsu/daibosatsu/onsen.html",
+    "officialUrl": "https://daibosatsunoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/2432/"
   },
   {
@@ -23057,7 +23052,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4493/",
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
-    "officialUrl": "http://www.hikosan-onsen.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4493/"
   },
   {
