@@ -2320,6 +2320,7 @@ function renderFacilityCard(facility) {
           </div>
         </div>
         <p class="facility-meta">${escapeHtml(meta)}</p>
+        ${renderSaunachelinAwardBadge(facility)}
         ${renderFacilityAddress(facility)}
         ${renderFacilityCardFacts(facility)}
         <div class="facility-utility-actions">
@@ -4958,6 +4959,14 @@ function renderSaunachelinAwardRow(facility) {
   const ids = [facility.id, ...(facility.legacyIds || [])];
   const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
   return `<div><dt>サウナシュラン</dt><dd>${years.join("・")}年 受賞（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" target="_blank" rel="noreferrer">公式サイト</a></dd></div>`;
+}
+
+function renderSaunachelinAwardBadge(facility) {
+  const years = getSaunachelinAwardYears(facility);
+  if (!years.length) return "";
+  const ids = [facility.id, ...(facility.legacyIds || [])];
+  const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
+  return `<span class="award-badge">SAUNACHELIN ${years.join("・")} 受賞${hallOfFame ? "／殿堂入り" : ""}</span>`;
 }
 
 function getFilteredFacilities({ ignoreFeatures = false } = {}) {

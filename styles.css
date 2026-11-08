@@ -9167,3 +9167,17 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   box-shadow: none;
   color: #fff;
 }
+
+/* SAUNACHELIN award badge on facility cards (2026-11-08) */
+.award-badge {
+  display: inline-block;
+  margin: 6px 0 2px;
+  padding: 3px 10px;
+  border: 1px solid #8a6a24;
+  border-radius: 999px;
+  background: #fbf3d9;
+  color: #6e5410;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}

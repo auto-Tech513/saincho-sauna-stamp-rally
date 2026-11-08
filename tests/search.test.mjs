@@ -98,4 +98,8 @@ test("saunachelin award queries resolve to the tagged facilities only", () => {
   assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025"]);
   vm.runInContext(`searchTerm = "シュラン"; searchNeedles = createSearchNeedles("シュラン");`, context);
   assert.deepEqual([...vm.runInContext(`getFilteredFacilities().map((f) => f.id)`, context)], ["award2025", "award2024"]);
+  // Card badge: winners show their years, hall-of-fame is marked, others show nothing
+  assert.match(vm.runInContext(`renderSaunachelinAwardBadge({ id: "x1", tags: ["SAUNACHELIN 2018", "SAUNACHELIN 2019"] })`, context), /SAUNACHELIN 2018・2019 受賞/);
+  assert.match(vm.runInContext(`renderSaunachelinAwardBadge({ id: "si-tokyo-67270", tags: ["SAUNACHELIN 2023"] })`, context), /殿堂入り/);
+  assert.equal(vm.runInContext(`renderSaunachelinAwardBadge({ id: "x2", tags: [] })`, context), "");
 });
