@@ -875,6 +875,7 @@ const el = {
   leaderboardUpdatedAt: document.querySelector("#leaderboardUpdatedAt"),
   leaderboardSyncButton: document.querySelector("#leaderboardSyncButton"),
   favoritesList: document.querySelector("#favoritesList"),
+  wishlistList: document.querySelector("#wishlistList"),
   shopGrid: document.querySelector("#shopGrid"),
   questPanel: document.querySelector("#questPanel"),
   gearCategoryStrip: document.querySelector("#gearCategoryStrip"),
@@ -1162,8 +1163,12 @@ function bindEvents() {
       setView(button.dataset.menuView);
       if (button.dataset.menuTarget) {
         requestAnimationFrame(() => {
-          document.getElementById(button.dataset.menuTarget)?.scrollIntoView({ block: "start", behavior: "instant" });
-          el.profileNickname.focus({ preventScroll: true });
+          const target = document.getElementById(button.dataset.menuTarget);
+          if (target) {
+            target.closest("details")?.setAttribute("open", "");
+            target.scrollIntoView({ block: "start", behavior: "instant" });
+            if (button.dataset.menuTarget === "profileForm") el.profileNickname.focus({ preventScroll: true });
+          }
         });
       }
     });
@@ -1410,6 +1415,26 @@ function bindEvents() {
       renderAll();
       el.main.scrollTo({ top: 0, behavior: "instant" });
       el.searchResultsStatus.focus({ preventScroll: true });
+      return;
+    }
+    if (button.dataset.action === "stat-passport") {
+      setView("Passport");
+      return;
+    }
+    if (button.dataset.action === "scroll-panel") {
+      const target = button.dataset.target ? document.getElementById(button.dataset.target) : null;
+      if (target) {
+        target.closest("details")?.setAttribute("open", "");
+        target.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+      return;
+    }
+    if (button.dataset.action === "open-filter-wishlist") {
+      openExploreWithFilter("wishlist");
+      return;
+    }
+    if (button.dataset.action === "open-filter-favorite") {
+      openExploreWithFilter("favorite");
       return;
     }
     if (button.dataset.action === "draw-quest") {
@@ -1805,6 +1830,28 @@ function isMenuOpenSwipeStart(touch, target) {
   return !target.closest("input, textarea, select, button, a, .bottom-nav, .category-strip, .pref-strip, .passport-scope-strip, .source-row, .gear-category-strip");
 }
 
+function openExploreWithFilter(filter) {
+  clearSearchRenderTimer();
+  searchTerm = "";
+  searchNeedles = [];
+  selectedPrefecture = "全国";
+  selectedFeatureFilters.clear();
+  activeFilter = filter;
+  visibleLimit = 36;
+  if (el.searchInput) el.searchInput.value = "";
+  if (el.searchPrefectureSelect) el.searchPrefectureSelect.value = "全国";
+  renderSearchClearButton();
+  renderFeatureFilterGrid();
+  document.querySelectorAll("[data-filter]").forEach((button) => {
+    const active = button.dataset.filter === filter;
+    button.classList.toggle("segment-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  setView("Explore");
+  renderExplore();
+  el.main.scrollTo({ top: 0, behavior: "instant" });
+}
+
 function resetExploreState() {
   clearSearchRenderTimer();
   searchTerm = "";
@@ -2006,7 +2053,7 @@ function renderQuestPanel() {
       <div class="quest-actions">
         <button class="secondary-button" type="button" data-action="draw-quest">候補を引く</button>
         <button class="primary-button" type="button" data-action="quest-focus" data-id="${escapeAttr(facility.id)}">見る</button>
-        <button class="ghost-button ${wished ? "is-active" : ""}" type="button" data-action="quest-wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        <button class="ghost-button ${wished ? "is-active" : ""}" type="button" data-action="quest-wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>
         <button class="sameshi-link-button" type="button" data-action="quest-sameshi" data-id="${escapeAttr(facility.id)}">サ飯</button>
       </div>
     </article>
@@ -2051,7 +2098,7 @@ function renderExplore() {
       : "";
     el.facilityList.innerHTML = `
       <div class="empty-state">
-        <p>${hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
+        <p>${activeFilter === "wishlist" && Object.keys(state.wishlist).length === 0 ? "まだ「行きたい」はありません。施設カードの「行きたい」を押すと、ここに残ります。" : activeFilter === "favorite" && Object.keys(state.favorites).length === 0 ? "まだお気に入りはありません。施設カードの星を押すと、ここに残ります。" : hasFilters ? "条件に一致する候補は0件です。絞り込みを解除するか、検索文字を変えてください。" : searchTerm ? "該当する候補が見つかりません。別の表記でも検索できます。候補にないサウナは自分で登録できます。" : "表示できる候補がありません。時間をおいて再読み込みしてください。"}</p>
         <p>ジム・フィットネス併設施設は通常の検索対象外です。</p>
         ${resetButton}
         ${addButton}
@@ -2204,7 +2251,7 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
-        <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "候補入り" : "行きたい"}</button>
+        <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>
         ${renderMapRouteLink(facility)}
         ${renderFacilityShareButtons(facility)}
       </div>
@@ -2250,7 +2297,7 @@ function renderFacilityCard(facility) {
     `
     : `
       <button class="stamp-outline-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${status ? "disabled" : ""}>${status ? escapeHtml(status.action) : "押印する"}</button>
-      <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "候補入り" : "行きたい"}</button>
+      <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>
     `;
 
   return `
@@ -2385,7 +2432,7 @@ function renderFacilityDetail() {
       </section>
       <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
         <div class="facility-secondary-actions">
-          <button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい登録済み" : "行きたいに保存"}</button>
+          <button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
@@ -3265,15 +3312,15 @@ function renderStats() {
   const currentTitle = getCurrentTitle(visitedTotal).title;
 
   el.statsGrid.innerHTML = [
-    ["押印", `${visitedTotal}`],
-    ["訪問県", `${prefectureTotal}`],
-    ["行きたい", `${wishlistTotal}`],
-    ["称号", currentTitle],
-  ].map(([label, value]) => `
-    <div class="stat-box ${label === "称号" ? "stat-box-title" : ""}">
+    ["押印", `${visitedTotal}`, "stat-passport", ""],
+    ["訪問県", `${prefectureTotal}`, "scroll-panel", "japanProgressPanel"],
+    ["行きたい", `${wishlistTotal}`, "scroll-panel", "wishlistPanel"],
+    ["称号", currentTitle, "stat-passport", ""],
+  ].map(([label, value, action, target]) => `
+    <button class="stat-box ${label === "称号" ? "stat-box-title" : ""}" type="button" data-action="${action}"${target ? ` data-target="${target}"` : ""} aria-label="${label}の詳細へ">
       <span>${label}</span>
       <strong>${value}</strong>
-    </div>
+    </button>
   `).join("");
 
   const countsByPref = countVisitedByPrefecture();
@@ -3298,6 +3345,7 @@ function renderStats() {
   renderJapanMap();
   renderLeaderboard();
   renderFavoritesPanel();
+  renderWishlistPanel();
   renderPromotionCopyGrid();
 }
 
@@ -3608,6 +3656,30 @@ function renderFavoritesPanel() {
         <span>${escapeHtml(getFacilityMeta(facility))}</span>
       </div>
       <button class="favorite-button is-active" type="button" data-action="favorite" data-id="${escapeAttr(facility.id)}" aria-label="お気に入りから外す" aria-pressed="true"><span aria-hidden="true">★</span></button>
+    </article>
+  `).join("");
+}
+
+function renderWishlistPanel() {
+  if (!el.wishlistList) return;
+  const wishlist = getWishlistFacilities();
+  if (!wishlist.length) {
+    el.wishlistList.innerHTML = `
+      <div class="favorites-empty">
+        <strong>まだ「行きたい」はありません</strong>
+        <span>施設カードの「行きたい」を押すと、ここに残ります。</span>
+      </div>
+    `;
+    return;
+  }
+  el.wishlistList.innerHTML = wishlist.slice(0, 12).map((facility) => `
+    <article class="favorite-row wishlist-row" data-detail-card="${escapeAttr(facility.id)}">
+      <div>
+        <strong><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></strong>
+        <span>${escapeHtml(getFacilityMeta(facility))}</span>
+      </div>
+      <button class="secondary-button wishlist-panel-stamp" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印する</button>
+      <button class="ghost-button wishlist-panel-remove is-active" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="true">行きたい済み</button>
     </article>
   `).join("");
 }
@@ -4375,11 +4447,11 @@ function unstampFacility(facility) {
 function toggleWishlist(facility) {
   if (state.wishlist[facility.id]) {
     delete state.wishlist[facility.id];
-    showToast(`${facility.name} を候補から外しました`);
+    showToast(`${facility.name} を行きたいから外しました`);
     track("wishlist_remove", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   } else {
     state.wishlist[facility.id] = { at: new Date().toISOString() };
-    showToast(`${facility.name} を行きたい候補に入れました`);
+    showToast(`${facility.name} を行きたいに追加しました（記録タブで見られます）`);
     track("wishlist_add", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   }
   saveState();
@@ -4393,7 +4465,7 @@ function toggleFavorite(facility) {
     track("favorite_remove", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   } else {
     state.favorites[facility.id] = { at: new Date().toISOString() };
-    showToast(`${facility.name} をお気に入りに追加しました`);
+    showToast(`${facility.name} をお気に入りに追加しました（記録タブで見られます）`);
     track("favorite_add", { facility_id: facility.id, prefecture: facility.prefecture || "" });
   }
   saveState();
@@ -4896,6 +4968,16 @@ function getFavoriteFacilities() {
     .sort((a, b) => {
       const aTime = state.favorites[a.id]?.at || "";
       const bTime = state.favorites[b.id]?.at || "";
+      return bTime.localeCompare(aTime) || a.name.localeCompare(b.name, "ja");
+    });
+}
+
+function getWishlistFacilities() {
+  return getFacilities({ includeFitness: true })
+    .filter((facility) => state.wishlist[facility.id])
+    .sort((a, b) => {
+      const aTime = state.wishlist[a.id]?.at || "";
+      const bTime = state.wishlist[b.id]?.at || "";
       return bTime.localeCompare(aTime) || a.name.localeCompare(b.name, "ja");
     });
 }

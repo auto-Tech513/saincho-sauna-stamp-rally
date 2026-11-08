@@ -9027,3 +9027,143 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   .facility-masthead h2 { font-size: 19px; }
   .facility-facts > div { grid-template-columns: 72px minmax(0,1fr); gap: 8px; }
 }
+
+/* ==== UX改善ラウンド（2026-11-08）: 所在の明確化と様式の統一 ====
+   色の配役: 朱(--accent)=押印・現在地 / ティール(--primary)=導線 /
+   墨(--ink)=選択状態 / 渋金(--gold)=保存（行きたい・お気に入り）。
+   旧世代の色・グラデーション・ぼかしをここで上書きして統一する。 */
+
+/* 下部ナビ: 実色帯にし、選択中は「文字=白、アイコン=朱」だけではっきり示す */
+.bottom-nav {
+  background: var(--ink);
+  backdrop-filter: none;
+  border-top: 1px solid var(--ink);
+}
+.bottom-nav button { color: #b9b2a2; }
+.bottom-nav .nav-active { color: #fff; background: transparent; }
+.bottom-nav .nav-active .nav-icon { color: var(--accent); }
+
+/* ホームのアイコン（家型。既存アイコンと同じくCSSだけで描く） */
+.nav-icon.nav-home {
+  width: 22px;
+  height: 22px;
+  background: currentColor;
+  clip-path: polygon(50% 0%, 100% 46%, 86% 46%, 86% 100%, 63% 100%, 63% 70%, 37% 70%, 37% 100%, 14% 100%, 14% 46%, 0% 46%);
+}
+
+/* セグメントの選択状態は墨の塗り＋白文字に統一（白抜き＋影は廃止） */
+.segment .segment-active {
+  color: #fff;
+  background: var(--ink);
+  box-shadow: none;
+}
+
+/* 統計タイル: 4枚同格の「帳面の升」に統一。色分けは上帯だけで行う */
+.stat-box {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--hairline);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius-m);
+}
+.stat-box:nth-child(2),
+.stat-box:nth-child(3),
+.stat-box:nth-child(4) { background: var(--paper); }
+.stat-box span { color: var(--ink-soft); }
+.stat-box-title { border-top-color: var(--accent); }
+
+/* 記録ビューのチップナビ */
+.stats-chip-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 14px;
+}
+.stats-chip-nav button {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--hairline);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+/* 保存系（行きたい/お気に入り）の色は渋金に統一 */
+[data-action="wishlist"].is-active,
+[data-action="quest-wishlist"].is-active,
+.secondary-button.is-active,
+.card-actions .secondary-button.is-active {
+  color: #fff;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.favorite-row { border-left: 3px solid var(--gold); }
+.wishlist-row { flex-wrap: wrap; row-gap: 8px; }
+.wishlist-panel-stamp,
+.wishlist-panel-remove {
+  padding: 8px 12px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Gearボタン: 金グラデーションと浮遊影をやめ、実色にする */
+.top-gear-button {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  box-shadow: none;
+  color: #fff;
+}
+
+/* 折りたたみ（バックアップ/告知文テンプレ）の見出し様式 */
+.record-backup > summary,
+.promotion-copy-details > summary {
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+.record-backup > summary { font-size: 17px; }
+.promotion-copy-details > summary { font-size: 14px; margin: 10px 0 4px; }
+.record-backup > summary::-webkit-details-marker,
+.promotion-copy-details > summary::-webkit-details-marker { display: none; }
+.record-backup > summary::before,
+.promotion-copy-details > summary::before {
+  content: "▸ ";
+  color: var(--ink-soft);
+}
+.record-backup[open] > summary::before,
+.promotion-copy-details[open] > summary::before { content: "▾ "; }
+
+/* 行きたい一覧の行: 施設名と2ボタンを1行に収める（ボタンが横に伸びないように） */
+.wishlist-row { align-items: center; flex-wrap: nowrap; }
+.wishlist-row > div { flex: 1 1 auto; min-width: 0; }
+.wishlist-panel-stamp,
+.wishlist-panel-remove { flex: 0 0 auto; }
+
+/* 色の確定（最終世代の --gold は鮮やかな黄のため、保存系と Gear は渋金の実色で固定する） */
+.tool-band .segment .segment-active,
+.segment .segment-active {
+  color: #fff;
+  background: var(--ink);
+  box-shadow: none;
+}
+[data-action="wishlist"].is-active,
+[data-action="quest-wishlist"].is-active,
+.secondary-button.is-active,
+.card-actions .secondary-button.is-active {
+  color: #fff;
+  background: #8a6a24;
+  border-color: #8a6a24;
+}
+.favorite-row { border-left: 3px solid #8a6a24; }
+.top-gear-button {
+  background: #8a6a24;
+  border: 1px solid #8a6a24;
+  box-shadow: none;
+  color: #fff;
+}

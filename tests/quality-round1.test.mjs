@@ -77,7 +77,10 @@ test("geolocation cannot run before explanatory consent", async () => {
 });
 
 test("backup controls are adjacent, confirmations are labelled and restore is not destructive by default", () => {
-  const section = html.slice(html.indexOf('<section class="record-backup"'), html.indexOf('<div class="stats-grid"'));
+  // バックアップは記録ビュー最下部の <details class="record-backup"> に移設済み。
+  // 位置ではなく、同じブロック内に書き出し/読み込みが揃っていることを確認する。
+  const backupStart = html.indexOf('<details class="record-backup"');
+  const section = html.slice(backupStart, html.indexOf('id="backupStatus"', backupStart));
   assert.match(section, /id="exportButton"/);
   assert.match(section, /id="importInput"/);
   assert.match(html, /id="recordConfirmDialog" aria-labelledby="recordConfirmTitle" aria-describedby="recordConfirmDescription"/);

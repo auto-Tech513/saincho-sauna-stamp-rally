@@ -190,7 +190,7 @@
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <button class="brand-lockup" type="button" data-open-view="Explore" data-reset-explore="true" aria-label="サ印帳トップへ戻る">
+        <button class="brand-lockup" type="button" data-open-view="Explore" data-reset-explore="true" aria-label="サ印帳ホームへ戻る">
           <img class="brand-mark" src="./icons/icon-192.png" width="48" height="48" alt="" />
           <div class="brand-copy">
             <p class="eyebrow">SAUNA STAMP RALLY</p>
@@ -206,7 +206,7 @@
           <button class="top-gear-button" type="button" data-open-view="Gear" aria-label="Gearページを開く">
             Gear
           </button>
-          <button class="icon-button" id="settingsButton" type="button" aria-label="設定を開く">
+          <button class="icon-button" id="settingsButton" type="button" aria-label="メニューを開く">
             <span class="icon-lines" aria-hidden="true"></span>
           </button>
         </div>
@@ -218,7 +218,7 @@
           <button class="secondary-button" type="button" data-app-action="reload-app">更新する</button>
         </div>
         <!-- SSR:SLOT -->
-        <section class="view view-active" id="viewExplore" aria-label="探す">
+        <section class="view view-active" id="viewExplore" aria-label="ホーム">
           <h2 class="explore-title">サウナを探す</h2>
           <div class="tool-band">
             <form class="search-form" id="searchForm" role="search">
@@ -392,18 +392,50 @@
               <h2>記録</h2>
             </div>
           </div>
-          <section class="record-backup" aria-labelledby="backupTitle">
-            <h3 id="backupTitle">記録のバックアップ・復元</h3>
-            <p id="backupHelp">JSONを書き出して保管し、復元時は同じファイルを選びます。読み込み前に置き換えを確認します。</p>
-            <details><summary>対象データ・注意点</summary><p>押印・行きたい・お気に入り・メモ・サ活ログ・端末内の口コミ控え・自分で追加した施設が対象です。ランキングのログイン情報と公開済みデータの管理権限は移せません。個人の記録を含むためファイルの共有にご注意ください。</p></details>
-            <div class="backup-actions">
-              <button class="secondary-button" id="exportButton" type="button">バックアップを書き出す</button>
-              <label class="import-box"><input id="importInput" type="file" accept="application/json,.json" aria-describedby="backupHelp" /><span>バックアップを読み込む</span></label>
-            </div>
-            <p id="backupStatus" role="status" aria-live="polite"></p>
-          </section>
+
+          <nav class="stats-chip-nav" aria-label="記録の項目">
+            <button type="button" data-action="scroll-panel" data-target="wishlistPanel">行きたい</button>
+            <button type="button" data-action="scroll-panel" data-target="favoritesPanel">お気に入り</button>
+            <button type="button" data-action="scroll-panel" data-target="visitLogSummary">サ活ログ</button>
+            <button type="button" data-action="scroll-panel" data-target="leaderboardPanel">ランキング</button>
+            <button type="button" data-action="scroll-panel" data-target="backupTitle">バックアップ</button>
+          </nav>
           <div class="stats-grid" id="statsGrid"></div>
+
+          <section class="favorites-panel wishlist-panel" id="wishlistPanel" aria-label="行きたい施設">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">WISHLIST</p>
+                <h3>行きたい</h3>
+              </div>
+              <button class="mini-button" type="button" data-action="open-filter-wishlist">すべて見る</button>
+            </div>
+            <div class="favorites-list" id="wishlistList"></div>
+          </section>
+          <section class="favorites-panel" id="favoritesPanel" aria-label="お気に入り施設">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">FAVORITES</p>
+                <h3>お気に入り</h3>
+              </div>
+              <button class="mini-button" type="button" data-action="open-filter-favorite">すべて見る</button>
+            </div>
+            <div class="favorites-list" id="favoritesList"></div>
+          </section>
+
           <section class="visit-log-summary" id="visitLogSummary" aria-label="自分用サ活ログ"></section>
+          <section class="leaderboard-panel" id="leaderboardPanel" aria-label="サ印ランキング">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">LIVE BOARD</p>
+                <h3>サ印ランキング TOP10</h3>
+              </div>
+              <button class="mini-button" id="leaderboardSyncButton" type="button">更新</button>
+            </div>
+            <div class="leaderboard-summary" id="leaderboardSummary">ランキングを読み込み中</div>
+            <div class="leaderboard-list" id="leaderboardList"></div>
+            <p class="leaderboard-updated" id="leaderboardUpdatedAt"></p>
+          </section>
           <section class="profile-panel" aria-label="ランキングプロフィール">
             <div class="panel-head">
               <div>
@@ -430,52 +462,8 @@
             <p class="form-help" id="profileVisibility">公開されるのはニックネーム・サ印数・称号です。押印した施設の一覧は、上の公開設定をオンにした場合だけ公開されます。メールアドレスは公開されません。サ印数は自己申告の記録です。</p>
             <p class="form-help" id="profileFeedback" role="status" aria-live="polite">ニックネーム・サ印数・称号が公開されます。メールアドレスは公開されません。</p>
           </section>
-          <section class="leaderboard-panel" aria-label="サ印ランキング">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">LIVE BOARD</p>
-                <h3>サ印ランキング TOP10</h3>
-              </div>
-              <button class="mini-button" id="leaderboardSyncButton" type="button">更新</button>
-            </div>
-            <div class="leaderboard-summary" id="leaderboardSummary">ランキングを読み込み中</div>
-            <div class="leaderboard-list" id="leaderboardList"></div>
-            <p class="leaderboard-updated" id="leaderboardUpdatedAt"></p>
-          </section>
-          <section class="growth-panel" aria-label="サ印帳を共有">
-            <div>
-              <p class="eyebrow">SHARE</p>
-              <h3>サウナ仲間に広める</h3>
-              <p>サ印帳は共有されるほど候補とランキングが育ちます。行きたい施設を話すきっかけにも使えます。</p>
-            </div>
-            <div class="growth-actions">
-              <button type="button" data-app-action="share-app">共有</button>
-              <button type="button" data-app-action="share-line">LINE</button>
-              <button type="button" data-app-action="copy-app-url">URLコピー</button>
-            </div>
-            <div class="promotion-copy-grid" id="promotionCopyGrid" aria-label="告知文テンプレ"></div>
-          </section>
-          <section class="favorites-panel" aria-label="お気に入り施設">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">FAVORITES</p>
-                <h3>後で行きたいお気に入り</h3>
-              </div>
-              <button class="mini-button" type="button" data-open-view="Explore">探す</button>
-            </div>
-            <div class="favorites-list" id="favoritesList"></div>
-          </section>
-          <section class="shop-panel" aria-label="サウナグッズ">
-            <div class="panel-head">
-              <div>
-                <p class="eyebrow">GEAR</p>
-                <h3>サウナ補給</h3>
-              </div>
-              <button class="mini-button" type="button" data-open-view="Gear">30件を見る</button>
-            </div>
-            <div class="shop-grid" id="shopGrid"></div>
-          </section>
-          <section class="japan-progress-panel" aria-label="都道府県別サ印地図">
+
+          <section class="japan-progress-panel" id="japanProgressPanel" aria-label="都道府県別サ印地図">
             <div class="panel-head">
               <div>
                 <p class="eyebrow">JAPAN MAP</p>
@@ -492,8 +480,44 @@
             </div>
             <a class="map-attribution" href="https://geolonia.github.io/japanese-prefectures/" target="_blank" rel="noreferrer">地図: Geolonia japanese-prefectures</a>
           </section>
+          <section class="shop-panel" aria-label="サウナグッズ">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">GEAR</p>
+                <h3>サウナ補給</h3>
+              </div>
+              <button class="mini-button" type="button" data-open-view="Gear">30件を見る</button>
+            </div>
+            <div class="shop-grid" id="shopGrid"></div>
+          </section>
+          <section class="growth-panel" aria-label="サ印帳を共有">
+            <div>
+              <p class="eyebrow">SHARE</p>
+              <h3>サウナ仲間に広める</h3>
+              <p>サ印帳は共有されるほど候補とランキングが育ちます。行きたい施設を話すきっかけにも使えます。</p>
+            </div>
+            <div class="growth-actions">
+              <button type="button" data-app-action="share-app">共有</button>
+              <button type="button" data-app-action="share-line">LINE</button>
+              <button type="button" data-app-action="copy-app-url">URLコピー</button>
+            </div>
+            <details class="promotion-copy-details"><summary>告知文テンプレ</summary><div class="promotion-copy-grid" id="promotionCopyGrid" aria-label="告知文テンプレ"></div></details>
+          </section>
+
+
+
           <div class="pref-board" id="prefBoard"></div>
-        </section>
+                  <details class="record-backup" id="backupPanel">
+            <summary id="backupTitle">記録のバックアップ・復元</summary>
+            <p id="backupHelp">JSONを書き出して保管し、復元時は同じファイルを選びます。読み込み前に置き換えを確認します。</p>
+            <details><summary>対象データ・注意点</summary><p>押印・行きたい・お気に入り・メモ・サ活ログ・端末内の口コミ控え・自分で追加した施設が対象です。ランキングのログイン情報と公開済みデータの管理権限は移せません。個人の記録を含むためファイルの共有にご注意ください。</p></details>
+            <div class="backup-actions">
+              <button class="secondary-button" id="exportButton" type="button">バックアップを書き出す</button>
+              <label class="import-box"><input id="importInput" type="file" accept="application/json,.json" aria-describedby="backupHelp" /><span>バックアップを読み込む</span></label>
+            </div>
+            <p id="backupStatus" role="status" aria-live="polite"></p>
+          </details>
+          </section>
 
         <section class="view" id="viewGear" aria-label="Gear">
           <div class="section-title">
@@ -686,7 +710,7 @@
           </div>
         </section>
 
-        <section class="view" id="viewAdd" aria-label="追加">
+        <section class="view" id="viewAdd" aria-label="施設を追加">
           <div class="section-title">
             <div>
               <p class="eyebrow">MY SAUNA</p>
@@ -756,8 +780,8 @@
 
       <nav class="bottom-nav" aria-label="主要ナビゲーション">
         <button class="nav-active" type="button" data-view="Explore" aria-current="page">
-          <span class="nav-icon nav-search" aria-hidden="true"></span>
-          <span>探す</span>
+          <span class="nav-icon nav-home" aria-hidden="true"></span>
+          <span>ホーム</span>
         </button>
         <button type="button" data-view="Passport">
           <span class="nav-icon nav-stamp" aria-hidden="true"></span>
@@ -769,7 +793,7 @@
         </button>
         <button type="button" data-view="Add">
           <span class="nav-icon nav-plus" aria-hidden="true"></span>
-          <span>追加</span>
+          <span>施設を追加</span>
         </button>
       </nav>
     </div>
@@ -777,8 +801,8 @@
     <button class="settings-scrim" id="settingsScrim" type="button" aria-label="設定を閉じる" hidden></button>
     <dialog class="settings-dialog" id="settingsDialog" aria-labelledby="settingsTitle">
       <div class="dialog-head">
-        <h2 id="settingsTitle">設定</h2>
-        <button class="icon-button" id="closeSettingsButton" type="button" aria-label="設定を閉じる">
+        <h2 id="settingsTitle">メニュー</h2>
+        <button class="icon-button" id="closeSettingsButton" type="button" aria-label="メニューを閉じる">
           <span class="icon-close" aria-hidden="true"></span>
         </button>
       </div>
@@ -796,14 +820,18 @@
         <p class="form-help">位置情報は端末内で2km以内の候補を探すために使い、サーバーには送信しません。近隣通知は有効にした場合だけ起動時に確認します。</p>
       </section>
       <section class="menu-group" aria-labelledby="menuMainTitle">
-        <h3 id="menuMainTitle">探す・記録</h3>
-        <div class="menu-actions menu-actions-grid" aria-label="探す・記録メニュー">
-          <button type="button" data-menu-view="Explore">サウナを探す</button>
+        <h3 id="menuMainTitle">ホーム・記録</h3>
+        <div class="menu-actions menu-actions-grid" aria-label="ホーム・記録メニュー">
+          <button type="button" data-menu-view="Explore">ホーム</button>
           <button type="button" data-menu-view="Passport">サ印を見る</button>
-          <button type="button" data-menu-view="Stats">記録・ランキング</button>
+          <button type="button" data-menu-view="Stats">記録</button>
+          <button type="button" data-menu-view="Stats" data-menu-target="wishlistPanel">行きたい</button>
+          <button type="button" data-menu-view="Stats" data-menu-target="favoritesPanel">お気に入り</button>
           <button type="button" data-menu-view="Community">サウナ仲間</button>
         </div>
         <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="profileForm">ランキングに参加する</button>
+        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="leaderboardPanel">ランキング TOP10</button>
+        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="visitLogSummary">サ活ログ</button>
         <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="backupTitle">記録のバックアップ・復元</button>
       </section>
       <section class="menu-group" aria-labelledby="menuPlanTitle">
