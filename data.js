@@ -798,14 +798,17 @@ export const SEED_FACILITIES = [
     "id": "sc2025-yuyado-daiichi",
     "name": "湯宿だいいち",
     "prefecture": "北海道",
-    "city": "養老牛温泉",
+    "city": "中標津町",
     "trait": "onsen",
     "tags": [
       "SAUNACHELIN 2025",
       "温泉"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "http://www.yoroushi.jp/",
+    "address": "〒088-2684 北海道標津郡中標津町養老牛518",
+    "addressSource": "公式",
+    "officialUrl": "http://www.yoroushi.jp/"
   },
   {
     "id": "st-hokkaido-169",
@@ -5924,15 +5927,18 @@ export const SEED_FACILITIES = [
     "id": "sc2025-satoyama-terrace",
     "name": "SATOYAMA TERRACE",
     "prefecture": "千葉県",
-    "city": "富津",
+    "city": "富津市",
     "trait": "wood",
     "tags": [
       "SAUNACHELIN 2025",
       "里山",
       "外気浴"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "https://satoyama-terrace.com/",
+    "address": "〒299-1755 千葉県富津市田原898-1",
+    "addressSource": "運営会社公式発表",
+    "officialUrl": "https://satoyama-terrace.com/"
   },
   {
     "id": "st-chiba-4749",
@@ -6494,23 +6500,26 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "sc2025-janu-tokyo",
-    "name": "Janu Tokyo / Spa House Experience",
+    "name": "Janu Tokyo",
     "prefecture": "東京都",
-    "city": "麻布台",
+    "city": "港区",
     "trait": "award",
     "tags": [
       "SAUNACHELIN 2025",
       "ホテル",
       "静寂"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "https://www.janu.com/janu-tokyo/ja/",
+    "address": "〒106-0041 東京都港区麻布台1-2-2",
+    "addressSource": "運営会社公式発表",
+    "officialUrl": "https://www.janu.com/janu-tokyo/ja/"
   },
   {
     "id": "sc2025-totopa",
     "name": "TOTOPA 都立明治公園店",
     "prefecture": "東京都",
-    "city": "新宿",
+    "city": "新宿区",
     "trait": "urban",
     "tags": [
       "SAUNACHELIN 2025",
@@ -6518,8 +6527,11 @@ export const SEED_FACILITIES = [
       "公園",
       "SAUNACHELIN 2024"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "https://totopa.jp/",
+    "address": "〒160-0013 東京都新宿区霞ヶ丘町5-7 都立明治公園内 A棟2・3階",
+    "addressSource": "運営会社公式発表",
+    "officialUrl": "https://totopa.jp/"
   },
   {
     "id": "st-tokyo-4937",
@@ -11768,7 +11780,7 @@ export const SEED_FACILITIES = [
     "id": "sc2025-ochiairo",
     "name": "おちあいろう",
     "prefecture": "静岡県",
-    "city": "伊豆",
+    "city": "伊豆市",
     "trait": "onsen",
     "tags": [
       "SAUNACHELIN 2025",
@@ -11777,8 +11789,11 @@ export const SEED_FACILITIES = [
       "SAUNACHELIN 2019",
       "SAUNACHELIN 2020"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "https://www.ochiairo.co.jp/",
+    "address": "静岡県伊豆市湯ヶ島1887-1",
+    "addressSource": "運営会社公式発表",
+    "officialUrl": "https://www.ochiairo.co.jp/"
   },
   {
     "id": "manual-shizuoka-bijinyu",
@@ -22669,15 +22684,18 @@ export const SEED_FACILITIES = [
     "id": "sc2025-sakurado",
     "name": "SAUNA SAKURADO",
     "prefecture": "福岡県",
-    "city": "博多",
+    "city": "博多区",
     "trait": "award",
     "tags": [
       "SAUNACHELIN 2025",
       "プライベート",
       "食"
     ],
-    "source": "SAUNACHELIN",
-    "sourceUrl": "https://www.saunachelin.com/en/"
+    "source": "公式",
+    "sourceUrl": "https://sauna-sakurado.spa/",
+    "address": "〒812-0024 福岡県福岡市博多区綱場町9-5",
+    "addressSource": "運営会社公式発表",
+    "officialUrl": "https://sauna-sakurado.spa/"
   },
   {
     "id": "st-fukuoka-4778",
@@ -69974,5 +69992,33 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.korona.co.jp/onsen/han/",
     "officialUrl": "https://www.korona.co.jp/onsen/han/"
+  },
+  {
+    "id": "manual-nara-ume-sauna",
+    "name": "ume,sauna",
+    "prefecture": "奈良県",
+    "city": "山辺郡山添村",
+    "address": "〒630-2356 奈良県山辺郡山添村片平452",
+    "trait": "wood",
+    "tags": [
+      "SAUNACHELIN 2020"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.ume-yamazoe.com/sauna",
+    "officialUrl": "https://www.ume-yamazoe.com/sauna"
+  },
+  {
+    "id": "manual-tokyo-steams",
+    "name": "SteaMs.",
+    "prefecture": "東京都",
+    "city": "港区",
+    "address": "〒107-0052 東京都港区赤坂9-5-12 パークサイドシックス B1-D",
+    "trait": "urban",
+    "tags": [
+      "SAUNACHELIN 2024"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://steams-tokyo.com/",
+    "officialUrl": "https://steams-tokyo.com/"
   }
 ];
