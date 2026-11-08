@@ -278,8 +278,8 @@ await emitPage("/", { ...pageMeta("サ印帳 | 全国サウナスタンプラリ
 await emitStaticRoute("/sauna-stamp-rally/", "サウナスタンプラリーをスマホで楽しむ | サ印帳", "サウナスタンプラリーの始め方、紙との違い、押印・行きたい・県別マスター・サ活ログの使い分けを、無料Webアプリのサ印帳で具体的に確認できます。", renderSearchIntentSsr("stamp-rally"), LASTMOD.content);
 await emitStaticRoute("/sauna-goshuin/", "サウナ御朱印のように訪問記録を集める | サ印帳", "サウナ御朱印のように訪問の証をスマホへ残す方法を解説。施設公式の御朱印や物理スタンプとの違い、サ印・メモ・サ活ログの使い方を確認できます。", renderSearchIntentSsr("goshuin"), LASTMOD.content);
 await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウナマット、水分補給、サウナバッグなど、サウナ前後に役立つ30カテゴリのGearをAmazon・楽天のレビュー検索導線で比較できます。", renderGearSsr(), LASTMOD.content);
-await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", "初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を30記事で確認できます。", renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
-await emitStaticRoute("/ranking/", "サ印ランキング | サ印帳", "サ印数と称号で上位10名を表示するランキング。押印の上達実感と次の一湯の動機づくりに使えます。", renderGenericSsr("サ印ランキング", "ニックネーム、サ印数、称号で全国のサウナーと進捗を比べられます。"));
+await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", `初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を${SAUNA_ARTICLES.length}記事で確認できます。`, renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
+await emitStaticRoute("/ranking/", "サウナの訪問数ランキングと称号 | サ印帳", "行ったサウナの数（サ印数）で称号が上がる、サ印帳の参加型ランキング。1湯「はじめの一湯」から2000湯「神人サウナー」までの称号一覧と参加方法を掲載。公開されるのはニックネーム・サ印数・称号のみです。", renderRankingSsr());
 await emitStaticRoute("/passport/", "サ印 | サ印帳", "全国と都道府県別のサ印収集状況を確認。県マスター、称号、押印済み施設を一目で振り返れます。", renderGenericSsr("サ印", "全国・県別のサ印進捗と称号を確認できます。"));
 await emitStaticRoute("/add/", "サウナを追加 | サ印帳", "候補にないサウナを都道府県、住所、特徴付きで登録できます。KV接続時は他ユーザーにも公開候補として表示されます。", renderGenericSsr("候補にないサウナを追加", "施設名、都道府県、住所、特徴を追加して、自分と他のユーザーのサウナ探索を育てられます。"));
 await emitStaticRoute("/sameshi/", "サ飯 | サ印帳", "サウナーに人気のサ飯候補を県別に確認。施設周辺の飲食店検索にもつながるサ活後の導線です。", renderGenericSsr("サ飯", "都道府県別のサ飯候補と、施設周辺の飲食店検索でサウナ後の一食を探せます。"), LASTMOD.content);
@@ -402,6 +402,18 @@ function renderHomeSsr() {
   // and the re-verification date drift apart whenever no deploy happens that day.
   const latestRefreshDate = CANONICAL_FACILITIES.map((facility) => facility.sourceCheckedAt).filter(Boolean).sort().at(-1) || "";
   const refreshedCount = latestRefreshDate ? CANONICAL_FACILITIES.filter((facility) => facility.sourceCheckedAt === latestRefreshDate).length : 0;
+  const indexableCount = CANONICAL_FACILITIES.filter(isIndexableFacility).length;
+  // サービス自体のFAQ。可視テキストと JSON-LD は同じ配列から生成し、事実関係を一致させる。
+  const homeFaqs = [
+    ["サ印（サウナ御朱印）とは何ですか？", "サ印は、サウナ施設を訪問した証として、サ印帳のアプリ内で自分で押すデジタルな印です。施設が発行する御朱印や記念印とは別物で、施設で受け取るものではありません。"],
+    ["サ印帳は無料で使えますか？", "無料で使えます。施設の検索、サ印の押印、メモ、お気に入りは登録なしで、スマホのブラウザから利用できます。"],
+    ["アプリのインストールは必要ですか？", "必要ありません。サ印帳はブラウザで動くWebアプリです。ホーム画面に追加すると、アプリのように起動できます。"],
+    ["どんなサウナが掲載されていますか？", `全国47都道府県のサウナ候補${CANONICAL_FACILITIES.length}件（重複統合後）を検索できます。このうち、住所や公式URLを確認できた${indexableCount}件には個別ページがあります。最新の内訳は運営・データ方針ページに掲載しています。`],
+    ["サ印は間違えて押したら取り消せますか？", "取り消せます。押印した施設のサ印はいつでも取り消しでき、コレクションや称号も実際の押印数に合わせて再計算されます。"],
+    ["記録はどこに保存されますか？", "押印、メモ、お気に入りは原則としてお使いの端末内に保存されます。ランキングに参加した場合は、ニックネーム、サ印数、称号が公開されます（メールアドレスは公開されません）。押印した施設の一覧は、公開設定を自分でオンにした場合のみ公開されます。"],
+  ];
+  // トップには FAQPage の構造化データを置かない（監査ルール: 検索表示対象外の
+  // 型をトップで主張しない）。可視の FAQ はそのまま掲載し、AI・利用者は本文から読める。
   return wrapSsr(`
     <p class="eyebrow">SAUNA STAMP RALLY</p>
     <h1>サ印帳</h1>
@@ -423,12 +435,14 @@ function renderHomeSsr() {
     </ul>
     ${evidenceExamples.length ? `<h2>公式情報で確認した施設の例</h2>
     <ul class="ssr-list">${evidenceExamples.map(({ facility, facts }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture)}・公式照合${facts}項目</span></li>`).join("")}</ul>` : ""}
+    <h2>よくある質問</h2>
+    <dl>${homeFaqs.map(([question, answer]) => `<dt>${escapeHtml(question)}</dt><dd>${escapeHtml(answer)}</dd>`).join("")}</dl>
     <nav class="ssr-links" aria-label="都道府県別サウナ検索">
       <strong>都道府県からサウナを探す</strong>
       ${prefLinks}
     </nav>
     <nav class="ssr-links" aria-label="主要ページ">
-      <a href="/guide/">サウナ入門</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/community/">サ活コミュニティ</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
+      <a href="/guide/">サウナ入門</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/community/">サ活コミュニティ</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a><a href="/sauna-goshuin/">サウナ御朱印とサ印の違い</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
     </nav>
   `);
 }
@@ -442,6 +456,7 @@ function renderAboutSsr() {
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › 運営・データ方針</nav>
     <p class="eyebrow">TRUST &amp; METHODOLOGY</p>
     <h1>運営・データ方針</h1>
+    <p>サ印帳は、行ったサウナに「サ印」を押して集める無料のWebアプリです。サ印は施設が発行する御朱印ではなく、利用者自身がアプリ内で残すデジタルな訪問記録です。</p>
     <p>サ印帳は、確認できた事実と未確認項目を分けて掲載します。施設名、都道府県、参照URLを基礎情報とし、住所、公式URL、設備タグは公開確認できた場合のみ表示します。</p>
     <dl>
       <div><dt>重複統合後の候補</dt><dd>${CANONICAL_FACILITIES.length}件</dd></div>
@@ -687,6 +702,53 @@ function renderFacilitySsr(facility) {
   `, { jsonLd });
 }
 
+// ランキングの静的説明。称号マイルストーンは functions/api/ranking.js の
+// TITLE_MILESTONES と一致させること（固定データなので静的掲載してよい）。
+// 現在の順位・参加者数などの動的データはここに書かない。
+function renderRankingSsr() {
+  const milestones = [
+    [0, "湯けむり準備中"], [1, "はじめの一湯"], [5, "新米サウナー"], [20, "初級サウナー"],
+    [50, "中級サウナー"], [100, "上級サウナー"], [250, "玄人サウナー"], [400, "プロサウナー"],
+    [600, "名人サウナー"], [800, "達人サウナー"], [1000, "永世サウナー"], [2000, "神人サウナー"],
+  ];
+  const faqs = [
+    ["ランキングに参加するには登録が必要ですか？", "ニックネームとメールアドレスの登録が必要です。公開されるのはニックネーム、サ印数、称号のみで、メールアドレスは公開されません（サーバー側でハッシュ化して照合にだけ使います）。"],
+    ["サ印数はどうやって増えますか？", "実際に行った施設をサ印帳で押印すると、その数（自己申告の記録）がランキングに反映されます。押印を取り消すと数も減ります。"],
+    ["押印した施設の一覧も公開されますか？", "初期設定では公開されません。ランキング登録画面で「押印した施設を公開する」を自分でオンにした場合だけ、その参加者の施設一覧がランキングから見られるようになります。オフに戻すとサーバー上の一覧も消えます。"],
+  ];
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([["サ印帳", APP_URL], ["サウナの訪問数ランキングと称号", `${APP_URL}/ranking/`]]),
+      {
+        "@type": "FAQPage",
+        "@id": `${APP_URL}/ranking/#faq`,
+        inLanguage: "ja-JP",
+        mainEntity: faqs.map(([question, answer]) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: { "@type": "Answer", text: answer },
+        })),
+      },
+    ],
+  }, null, 2);
+  return wrapSsr(`
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › サウナの訪問数ランキングと称号</nav>
+    <p class="eyebrow">RANKING</p>
+    <h1>サウナの訪問数ランキングと称号</h1>
+    <p>サ印帳のランキングは、行ったサウナの数（サ印数）を参加者同士で比べる参加型の仕組みです。現在の順位（上位10名）はアプリの記録画面に表示されます。このページでは、称号の仕組みと参加方法を説明します。</p>
+    <h2>称号一覧（サ印数で上がります）</h2>
+    <dl>${milestones.map(([count, title]) => `<div><dt>${count}湯</dt><dd>${escapeHtml(title)}</dd></div>`).join("")}</dl>
+    <h2>参加方法</h2>
+    <ol><li>サ印帳で施設を探し、実際に行った施設を押印する</li><li>記録画面のランキング登録でニックネームとメールアドレスを登録する</li><li>押印するたびにサ印数が同期され、称号と順位に反映される</li></ol>
+    <h2>公開される情報</h2>
+    <p>公開されるのはニックネーム、サ印数、称号のみです。メールアドレスは表示されません。押印した施設の一覧は、登録画面で自分で公開設定をオンにした場合だけ表示されます（初期設定は非公開）。</p>
+    <h2>よくある質問</h2>
+    <dl>${faqs.map(([question, answer]) => `<dt>${escapeHtml(question)}</dt><dd>${escapeHtml(answer)}</dd>`).join("")}</dl>
+    <p><a href="/">全国のサウナを探して始める</a> / <a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a></p>
+  `, { jsonLd });
+}
+
 function renderGenericSsr(title, text) {
   return wrapSsr(`
     <p class="eyebrow">SAINCHO</p>
@@ -699,7 +761,7 @@ function renderSearchIntentSsr(kind) {
   const isStampRally = kind === "stamp-rally";
   const title = isStampRally ? "サウナスタンプラリーをスマホで楽しむ" : "サウナ御朱印のように訪問記録を集める";
   const lead = isStampRally
-    ? "サ印帳は、行ったサウナを押印し、次の一湯を探し、訪問後のサ活ログまで一つにつなぐ無料Webアプリです。"
+    ? "サ印帳は、行ったサウナを押印し、次の一湯を探し、訪問後のサ活ログまで一つにつなぐ無料Webアプリです。期間限定のイベントではなく、全国の施設を対象にいつでも始められる常設型のスタンプラリーです。"
     : "サ印帳のサ印は、施設が発行する物理的な御朱印ではなく、自分の訪問記録を育てるデジタルな印です。";
   const sections = isStampRally
     ? [
@@ -712,7 +774,33 @@ function renderSearchIntentSsr(kind) {
         ["訪問の証を育てる", "施設ごとのサ印、訪問日、メモ、県別コレクションを一緒に残せます。誤って押した場合は取り消せます。"],
         ["公開と非公開を分ける", "自分用メモとサ活ログは端末内に保存されます。口コミは投稿操作をした内容だけが公開対象になります。"],
       ];
+  // 実物の企画・イベント型との違いは、検索意図に正直に答えるための節。
+  // イベントの開催状態は掲載時点で確認できた範囲だけを書き、詳細は公式情報へ誘導する。
+  const extraSections = isStampRally
+    ? [
+        ["イベント型スタンプラリーとの違い", "イベント型は、主催者が期間と対象施設を決めて実施するもので、景品や特典が用意される場合もあります。サ印帳は常設型で、期間も景品もなく、全国の候補を対象に自分の訪問記録として集めます。イベントに参加したい場合は、各主催者の公式案内を確認してください。"],
+        ["称号と県別マスター", "押印数に応じて称号が上がります（1湯「はじめの一湯」から2000湯「神人サウナー」まで12段階）。都道府県ごとに施設を巡る県別マスターもあります。どちらも実際の押印数だけで進み、購入で早めることはできません。"],
+      ]
+    : [
+        ["実物の御朱印・湯朱印という企画もある", "施設や地域が発行する実物の例として、名古屋観光コンベンションビューローの「サウNA GO!! 湯朱印めぐり」（2026年1月26日〜3月23日、市内15施設、終了）、熊本国際観光コンベンション協会の「御サ印帳」（2026年10月開始、熊本のサウナを巡って御サ印を集める冊子、開催中）、SAUNiiiKと愛媛サウナ協議会の「愛媛サウナ巡礼 御朱印帳プロジェクト」（2026年3月発表）、Visit Finlandの「サウナ御朱印帳」（フィンランドの対象サウナでスタンプを集める配布企画、2018〜2020年に実施）があります。いずれも主催者や施設が発行するもので、サ印帳のサ印とは別物です。開催状況や入手方法は各公式情報を確認してください。なお熊本の企画名は「御サ印帳」で、本サイト「サ印帳」とは関係ありません。"],
+        ["紙の御朱印帳とデジタルの違い", "実物の御朱印・湯朱印は、企画や施設ごとに期間と場所が決まっていて、その場で受け取る記念になります。サ印は期間のないデジタルの訪問記録で、全国の候補施設を対象に自分のペースで集められます。記念として残すか、日々の通いの記録として積むかの違いで、どちらが良いというものではありません。"],
+      ];
+  const faqs = isStampRally
+    ? [
+        ["サ印帳のスタンプラリーに期間や参加費はありますか？", "期間の制限はなく、参加費も無料です。いつでも始めて、自分のペースで押印できます。景品や抽選はありません。達成の目安は、押印数で上がる称号（12段階）と県別マスターです。"],
+        ["イベントのサウナスタンプラリーと何が違いますか？", "イベント型は主催者が期間と対象施設を決めて実施するもので、景品がある場合もあります。サ印帳は常設型で、全国の候補施設を対象に、期間を問わず自分の訪問記録として集める形です。イベントの参加方法は各主催者の案内を確認してください。"],
+        ["押印はどうやって記録しますか？", "押印は、行った施設を自分で記録する自己申告が基本です。座標が確認できた施設では、60分の滞在チェックインによる自動押印も選べます。誤って押した場合は取り消しできます。"],
+      ]
+    : [
+        ["サウナ御朱印とは何ですか？", "温浴施設や地域の企画で、訪問の証として施設側が発行する印の総称として使われています。名古屋の「湯朱印めぐり」や熊本の「御サ印帳」のように、自治体・観光団体・施設の企画として実施される例があります。実施の有無や入手方法は各企画の公式情報を確認してください。"],
+        ["サ印帳のサ印と、施設の御朱印は同じものですか？", "同じものではありません。サ印はサ印帳の中で自分で押すデジタルな訪問記録で、施設が発行するものではありません。施設独自の御朱印や記念印があるかどうかは、施設ごとの公式情報で確認してください。"],
+        ["サウナ御朱印はどこでもらえますか？", "施設が発行する御朱印・湯朱印は、実施している企画や施設でのみ受け取れます。常時もらえるものではないため、訪問前に企画・施設の公式情報を確認してください。サ印帳のサ印は、アプリ内で施設を選んで自分で押印する仕組みです。"],
+      ];
   const route = isStampRally ? "sauna-stamp-rally" : "sauna-goshuin";
+  const otherRoute = isStampRally ? "/sauna-goshuin/" : "/sauna-stamp-rally/";
+  const otherLabel = isStampRally ? "サウナ御朱印とサ印の違い" : "サウナスタンプラリーの始め方";
+  const guideRoute = ARTICLE_ROUTES[isStampRally ? 31 : 30]?.route || "/guide/";
+  const guideLabel = isStampRally ? "サ活の記録、どうつける？（ガイド）" : "サウナの御朱印・湯朱印とは（ガイド）";
   const modifiedAt = LASTMOD.content || undefined;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
@@ -730,6 +818,16 @@ function renderSearchIntentSsr(kind) {
         author: { "@id": `${APP_URL}/#organization` },
         publisher: { "@id": `${APP_URL}/#organization` },
       },
+      {
+        "@type": "FAQPage",
+        "@id": `${APP_URL}/${route}/#faq`,
+        inLanguage: "ja-JP",
+        mainEntity: faqs.map(([question, answer]) => ({
+          "@type": "Question",
+          name: question,
+          acceptedAnswer: { "@type": "Answer", text: answer },
+        })),
+      },
     ],
   }, null, 2);
   return wrapSsr(`
@@ -739,9 +837,12 @@ function renderSearchIntentSsr(kind) {
     ${modifiedAt ? `<p><small>最終更新 <time datetime="${modifiedAt}">${modifiedAt}</time></small></p>` : ""}
     <p>${escapeHtml(lead)}</p>
     <div class="ssr-grid">${sections.map(([heading, body]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p></article>`).join("")}</div>
+    ${extraSections.map(([heading, body]) => `<h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p>`).join("")}
     <h2>3ステップで始める</h2>
     <ol><li>施設名、県、住所、特徴から候補を探す</li><li>訪問した施設だけを押印する</li><li>サ活ログを残し、次の一湯を選ぶ</li></ol>
-    <p><a href="/">全国のサウナを探して始める</a> / <a href="/guide/">安全な入り方を確認する</a></p>
+    <h2>よくある質問</h2>
+    <dl>${faqs.map(([question, answer]) => `<dt>${escapeHtml(question)}</dt><dd>${escapeHtml(answer)}</dd>`).join("")}</dl>
+    <p><a href="/">全国のサウナを探して始める</a> / <a href="/guide/">安全な入り方を確認する</a> / <a href="${otherRoute}">${otherLabel}</a> / <a href="${guideRoute}">${guideLabel}</a></p>
   `, { jsonLd });
 }
 
