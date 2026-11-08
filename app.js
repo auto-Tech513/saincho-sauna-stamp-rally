@@ -2298,7 +2298,7 @@ function renderFacilityCard(facility) {
     ? `<span class="visited-badge">押印済</span>`
     : status
       ? `<span class="status-badge">${escapeHtml(status.badge)}</span>`
-      : sourceBadge;
+      : "";
   const actions = visited
     ? `
       <button class="primary-button complete-button" type="button" disabled>押印済み</button>
@@ -2329,7 +2329,7 @@ function renderFacilityCard(facility) {
           <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
         </div>
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
-        <div class="card-evidence">${headBadge}${tags}</div>
+        <div class="card-evidence">${headBadge}${sourceBadge}${tags}</div>
         <details class="card-more-actions">
           <summary>共有</summary>
           <div class="card-more-body">
@@ -5268,7 +5268,7 @@ function renderFacilitySourceBadge(facility) {
   const sourceUrl = String(facility.sourceUrl || "").trim();
   const links = [];
   if (officialUrl) {
-    links.push(`<a class="source-badge source-badge-official" href="${escapeAttr(officialUrl)}" target="_blank" rel="noreferrer">公式</a>`);
+    links.push(`<a class="source-badge source-badge-official" href="${escapeAttr(officialUrl)}" target="_blank" rel="noreferrer">公式サイト↗</a>`);
   }
   if (sourceUrl && sourceUrl !== officialUrl && !(officialUrl && sourceLabel === "公式")) {
     links.push(`<a class="source-badge" href="${escapeAttr(sourceUrl)}" target="_blank" rel="noreferrer">${escapeHtml(sourceLabel)}</a>`);

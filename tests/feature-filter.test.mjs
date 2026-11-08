@@ -27,6 +27,13 @@ function harness() {
   return { context, run };
 }
 
+test("curated evidence without an officialUrl keeps the seed officialUrl", () => {
+  const kept = evidence.applyFacilityEvidence({ id: "st-hokkaido-15", name: "ニコーリフレ", officialUrl: "http://www.nikoh.info/", tags: [] });
+  assert.equal(kept.officialUrl, "http://www.nikoh.info/");
+  const overridden = evidence.applyFacilityEvidence({ id: "manual-hotel-apa-10", name: "アパホテル＆リゾート〈大阪なんば駅前タワー〉", officialUrl: "https://example.org/", tags: [] });
+  assert.equal(overridden.officialUrl, "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/");
+});
+
 test("feature counts respect prefecture, saved filter, query and AND selections", () => {
   const { run } = harness();
   assert.equal(run('getFeatureAvailabilityCounts().get("塩サウナ")'), 2);

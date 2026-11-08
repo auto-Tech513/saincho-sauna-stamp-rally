@@ -102,4 +102,11 @@ test("saunachelin award queries resolve to the tagged facilities only", () => {
   assert.match(vm.runInContext(`renderSaunachelinAwardBadge({ id: "x1", tags: ["SAUNACHELIN 2018", "SAUNACHELIN 2019"] })`, context), /SAUNACHELIN 2018・2019 受賞/);
   assert.match(vm.runInContext(`renderSaunachelinAwardBadge({ id: "si-tokyo-67270", tags: ["SAUNACHELIN 2023"] })`, context), /殿堂入り/);
   assert.equal(vm.runInContext(`renderSaunachelinAwardBadge({ id: "x2", tags: [] })`, context), "");
+  // Official-site link: labelled as a destination, not a category stamp
+  const officialBadge = vm.runInContext(`renderFacilitySourceBadge({ source: "公式", officialUrl: "https://example.com/", sourceUrl: "https://example.com/" })`, context);
+  assert.match(officialBadge, />公式サイト↗</);
+  assert.match(officialBadge, /href="https:\/\/example\.com\/"/);
+  const sourceOnlyBadge = vm.runInContext(`renderFacilitySourceBadge({ source: "SaunaTime", officialUrl: "", sourceUrl: "https://saunatime.jp/saunas/15/" })`, context);
+  assert.doesNotMatch(sourceOnlyBadge, /公式サイト/);
+  assert.match(sourceOnlyBadge, />SaunaTime</);
 });

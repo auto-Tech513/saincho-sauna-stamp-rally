@@ -1301,7 +1301,7 @@ export function applyFacilityEvidence(facility) {
     ...facility,
     ...(name ? { name } : {}),
     ...(trait ? { trait } : {}),
-    officialUrl: evidence.officialUrl,
+    ...(evidence.officialUrl ? { officialUrl: evidence.officialUrl } : {}),
     ...(city ? { city } : {}),
     ...(status ? { status, tags: (facility.tags || []).filter(tag => !/開業予定|2026年秋/.test(tag)) } : {}),
     ...(evidence.address ? { address: evidence.address, addressSource: evidence.officialUrl, addressCheckedAt: evidence.facts[0]?.checkedAt || checkedAt } : {}),
