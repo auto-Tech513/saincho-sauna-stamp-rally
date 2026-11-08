@@ -65,11 +65,14 @@ function getFacilityLastmod(facility) {
   const dates = [facility.sourceCheckedAt, facility.addressCheckedAt, ...((getFacilityEvidence(facility)?.facts || []).map((fact) => fact.checkedAt))].filter(Boolean).sort();
   return dates.at(-1) || LASTMOD.data;
 }
-const TODAY_JST = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+// Relative labels ("確認からN日経過" / "本日確認") must NOT be baked in at build time:
+// they go stale the next day and start claiming a freshness the page does not have
+// (critical audit J, 2026-11-07). Emit an empty placeholder span instead; a small
+// inline script in wrapSsr fills it at view time. Without JS only the absolute
+// date is shown, which is never false.
 function daysElapsedLabel(date) {
   if (!date) return "";
-  const days = Math.round((Date.parse(TODAY_JST) - Date.parse(date)) / 86400000);
-  return Number.isFinite(days) && days > 0 ? `（確認から${days}日経過）` : days === 0 ? "（本日確認）" : "";
+  return `<span data-elapsed-since="${escapeAttr(date)}"></span>`;
 }
 // 出どころ（住所の出典・各確認日・公式URLの取得元・照合方式）を混ぜずに項目別に表示する。
 // 旧実装は複数の日付を「参照元の確認日」1行に統合し、公式照合日を参照元確認日と表示する取り違えがあった。
@@ -395,7 +398,10 @@ function renderHomeSsr() {
     .filter((entry) => entry.facts >= 5 && !entry.facility.status)
     .sort((a, b) => b.facts - a.facts)
     .slice(0, 6);
-  const refreshedCount = CANONICAL_FACILITIES.filter((facility) => facility.sourceCheckedAt === TODAY_JST).length;
+  // Name the actual latest re-verification date instead of "本日": the build date
+  // and the re-verification date drift apart whenever no deploy happens that day.
+  const latestRefreshDate = CANONICAL_FACILITIES.map((facility) => facility.sourceCheckedAt).filter(Boolean).sort().at(-1) || "";
+  const refreshedCount = latestRefreshDate ? CANONICAL_FACILITIES.filter((facility) => facility.sourceCheckedAt === latestRefreshDate).length : 0;
   return wrapSsr(`
     <p class="eyebrow">SAUNA STAMP RALLY</p>
     <h1>サ印帳</h1>
@@ -413,7 +419,7 @@ function renderHomeSsr() {
       <li>サ飯スポット：${SAMESHI_SPOTS.length}件（全47都道府県）</li>
       <li>Gear（サウナ道具）：${GEAR_PRODUCTS.length}件</li>
       <li>公式情報で料金・営業時間などを照合した施設：${CANONICAL_FACILITIES.filter((facility) => getFacilityEvidence(facility)).length}件</li>
-      ${refreshedCount ? `<li>参照元を本日再確認した施設：${refreshedCount}件</li>` : ""}
+      ${refreshedCount ? `<li>参照元を${escapeHtml(latestRefreshDate)}に再確認した施設：${refreshedCount}件</li>` : ""}
     </ul>
     ${evidenceExamples.length ? `<h2>公式情報で確認した施設の例</h2>
     <ul class="ssr-list">${evidenceExamples.map(({ facility, facts }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture)}・公式照合${facts}項目</span></li>`).join("")}</ul>` : ""}
@@ -748,6 +754,7 @@ function wrapSsr(content, options = {}) {
           ${content}
         </section>
         ${jsonLd}
+        <script>document.querySelectorAll("[data-elapsed-since]").forEach(function(el){var days=Math.round((Date.parse(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo"}).format(new Date()))-Date.parse(el.getAttribute("data-elapsed-since")))/86400000);if(Number.isFinite(days)&&days>0)el.textContent="（確認から"+days+"日経過）";else if(days===0)el.textContent="（本日確認）";});</script>
   `;
 }
 

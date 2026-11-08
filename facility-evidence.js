@@ -27,6 +27,7 @@ const kiwamiHonten = "https://kiwamisauna.com/store/honten";
 const kiwamiOsu = "https://kiwamisauna.com/store/osu";
 const kiwamiPrice = "https://kiwamisauna.com/system/price";
 const factToday = (label, value, sourceUrl) => ({ label, value, sourceUrl, checkedAt: "2026-10-20" });
+const factNov8 = (label, value, sourceUrl) => ({ label, value, sourceUrl, checkedAt: "2026-11-08" });
 
 export const CURATED_FACILITY_EVIDENCE = [
   {
@@ -303,6 +304,51 @@ export const CURATED_FACILITY_EVIDENCE = [
       fact("利用条件", "男性専用・18歳以上（高校生不可、受験利用の例外は施設へ確認）", karumaru),
       fact("持ち物", "フェイス・バスタオル、館内着のレンタル込み", karumaru),
       fact("宿泊", "カプセル・ホテル客室あり。宿泊は別プラン", karumaru),
+    ],
+  },
+  // 2026-11-08 curation batch (expert I shortlist, each value read on the official page that day).
+  {
+    ids: ["st-ibaraki-4554"], name: "つくば温泉 喜楽里 別邸",
+    facts: [
+      factNov8("営業時間", "9時～24時（最終受付23時）", "https://www.yurakirari.com/kirari/tsukuba/"),
+      factNov8("料金", "入館料（税込）大人：平日1,300円 / 土・休日1,500円。小学生：平日750円 / 土・休日850円。岩盤浴・温熱房：平日450円 / 土・休日600円。カード入館回数券（10回分）12,000円", "https://www.yurakirari.com/kirari/tsukuba/price.html"),
+      factNov8("利用条件", "未就学児は入館不可", "https://www.yurakirari.com/kirari/tsukuba/price.html"),
+    ],
+  },
+  {
+    ids: ["st-hokkaido-15"], name: "ニコーリフレ",
+    facts: [
+      factNov8("料金", "24時間コース（外出不可）：リフレ会員 平日2,900円 / 土日祝・特別日3,100円、ビジター 平日4,000円 / 土日祝・特別日4,200円。会員5時間コース：リフレタイム（16時まで受付）平日1,900円 / 土日祝2,100円、ナイトタイム（20時まで受付）平日2,100円 / 土日祝2,300円。深夜料金は別途1,200円", "https://www.nikoh.info/spa-sauna/price/"),
+    ],
+  },
+  {
+    ids: ["st-ishikawa-2185"], name: "天然温泉 サウナ片町",
+    facts: [
+      factNov8("営業時間", "大浴殿（天然温泉アパスパ金沢中央）6:00～24:00、年中無休。宿泊者は入浴無料", "https://www.apahotel.com/hotel/hokuriku/07_kanazawa-chuou/"),
+      factNov8("料金", "外来入浴は1日1,200円（税込、フェイスタオル・バスタオル付き）。入泉回数券（6枚綴り）5,500円（税込）", "https://www.apahotel.com/hotel/hokuriku/07_kanazawa-chuou/"),
+      factNov8("設備", "岩盤浴（ヒーリングルーム）は14:00～22:30、別途500円（宿泊者も有料）", "https://www.apahotel.com/hotel/hokuriku/07_kanazawa-chuou/"),
+    ],
+  },
+  {
+    ids: ["st-kanagawa-1993"], name: "おふろの王様 港南台店",
+    facts: [
+      factNov8("営業時間", "9:00～24:00（最終受付23:00）", "https://www.ousama2603.com/shop/kounandai/"),
+      factNov8("料金", "入館料金：平日 大人（中学生以上）会員850円 / 一般1,000円、小人（小学生）350円。土・日・祝日 大人 会員980円 / 一般1,100円、小人350円。入浴回数券（10枚綴り）7,700円。小学生未満は無料", "https://www.ousama2603.com/shop/kounandai/"),
+    ],
+  },
+  {
+    ids: ["st-toyama-283"], name: "満天の湯 富山店",
+    facts: [
+      // Hours are NOT curated: the official access page itself shows both 8:00 and 7:00 openings.
+      factNov8("料金", "入浴料：大人（中学生以上）朝風呂（10時まで）700円、10時以降は一般850円 / 会員780円、回数券は1回あたり730円。中人（小学生）：朝風呂300円、10時以降は一般380円 / 会員350円、回数券300円。小人（5才以下）：朝風呂・一般100円、10時以降の会員は無料", "http://www.manten-yu.co.jp/toyama/access/"),
+      factNov8("休館日", "年中無休", "http://www.manten-yu.co.jp/toyama/access/"),
+    ],
+  },
+  {
+    ids: ["st-tokushima-3696"], name: "あらたえの湯",
+    facts: [
+      factNov8("営業時間", "朝8:00～深夜1:00（最終受付 深夜0:00）。金曜日・土曜日・祝日の前日は朝8:00～深夜2:00（最終受付 深夜1:00）", "http://aratae.jp/"),
+      factNov8("休館日", "店休日は第2水曜日", "http://aratae.jp/"),
     ],
   },
 ];

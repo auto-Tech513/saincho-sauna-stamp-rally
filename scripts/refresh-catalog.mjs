@@ -39,14 +39,17 @@ await Promise.all(Array.from({length: 4}, async () => {
 }));
 
 await mkdir(new URL("../output/catalog/",import.meta.url),{recursive:true});
-await writeFile(new URL(`../output/catalog/refresh-${checkedAt}.json`,import.meta.url),JSON.stringify({checkedAt,apply,results},null,2));
+await writeFile(new URL(`../output/catalog/refresh-${checkedAt}${offset ? `-offset${offset}` : ""}.json`,import.meta.url),JSON.stringify({checkedAt,apply,results},null,2));
 if (apply) {
   DATASET_META.lastSourceAuditAt = checkedAt;
-  DATASET_META.lastSourceAuditScope = `SaunaTime施設別参照ページ${results.filter(r=>r.valid).length}件。全施設の営業状況確認を意味しません。`;
+  // Scope must describe the whole day's verification, not only this chunk:
+  // count every facility whose sourceCheckedAt is the run date after applying.
+  const verifiedOnDate = SEED_FACILITIES.filter(f => f.sourceCheckedAt === checkedAt).length;
+  DATASET_META.lastSourceAuditScope = `SaunaTime施設別参照ページ${verifiedOnDate}件（${checkedAt}照合分）。全施設の営業状況確認を意味しません。`;
   const output = `// Generated data for サ印帳. Edit source lists carefully; keep sourceUrl as the verification page.\nexport const DATASET_META = ${JSON.stringify(DATASET_META,null,2)};\n\nexport const PREFECTURES = ${JSON.stringify(PREFECTURES,null,2)};\n\nexport const SEED_FACILITIES = ${JSON.stringify(SEED_FACILITIES,null,2)};\n`;
   await writeFile(new URL("../data.js", import.meta.url),output);
 }
-console.log(JSON.stringify({targets:targets.length,matched:results.filter(r=>r.valid).length,addresses:results.filter(r=>r.address).length,changedAddresses:results.filter(r=>r.address && r.address!==r.previousAddress).length,officialLinks:results.filter(r=>r.officialUrl).length,errors:results.filter(r=>r.error).length,report:`output/catalog/refresh-${checkedAt}.json`},null,2));
+console.log(JSON.stringify({targets:targets.length,matched:results.filter(r=>r.valid).length,addresses:results.filter(r=>r.address).length,changedAddresses:results.filter(r=>r.address && r.address!==r.previousAddress).length,officialLinks:results.filter(r=>r.officialUrl).length,errors:results.filter(r=>r.error).length,report:`output/catalog/refresh-${checkedAt}${offset ? `-offset${offset}` : ""}.json`},null,2));
 
 async function inspect(facility) {
   const base = {id:facility.id,name:facility.name,url:facility.sourceUrl,previousAddress:facility.address||""};

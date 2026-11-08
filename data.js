@@ -6,8 +6,8 @@ export const DATASET_META = {
   "notes": "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
   "addressEnrichedAt": "2026-07-11T12:29:06.524Z",
   "addressMethod": "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。",
-  "lastSourceAuditAt": "2026-11-04",
-  "lastSourceAuditScope": "SaunaTime施設別参照ページ648件（対象660件中、3回に分けて照合）。全施設の営業状況確認を意味しません。"
+  "lastSourceAuditAt": "2026-11-08",
+  "lastSourceAuditScope": "SaunaTime施設別参照ページ1,153件（2026-11-04に648件、2026-11-08に505件を照合）。全施設の営業状況確認を意味しません。"
 };
 
 export const PREFECTURES = [
@@ -5111,7 +5111,8 @@ export const SEED_FACILITIES = [
       "タオルレンタルあり"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-zero.jp/"
+    "sourceUrl": "https://sauna-zero.jp/",
+    "officialUrl": "https://sauna-zero.jp/"
   },
   {
     "id": "st-gumma-1638",
@@ -9534,7 +9535,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://kaihotsunoyu.jp/",
-    "status": "open"
+    "status": "open",
+    "officialUrl": "https://kaihotsunoyu.jp/"
   },
   {
     "id": "st-fukui-494",
@@ -10883,7 +10885,8 @@ export const SEED_FACILITIES = [
       "個室"
     ],
     "source": "公式",
-    "sourceUrl": "https://asp-sauna.com/"
+    "sourceUrl": "https://asp-sauna.com/",
+    "officialUrl": "https://asp-sauna.com/"
   },
   {
     "id": "manual-gifu-croce-glamping",
@@ -10899,7 +10902,8 @@ export const SEED_FACILITIES = [
       "東濃ヒノキ"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.croce-glamping.com/service/sauna/"
+    "sourceUrl": "https://www.croce-glamping.com/service/sauna/",
+    "officialUrl": "https://www.croce-glamping.com/service/sauna/"
   },
   {
     "id": "manual-gifu-itadori-sauna",
@@ -10915,7 +10919,8 @@ export const SEED_FACILITIES = [
       "板取川"
     ],
     "source": "公式",
-    "sourceUrl": "https://itadori-sauna.com/"
+    "sourceUrl": "https://itadori-sauna.com/",
+    "officialUrl": "https://itadori-sauna.com/"
   },
   {
     "id": "manual-gifu-sauna-hotel-gifu",
@@ -10931,7 +10936,8 @@ export const SEED_FACILITIES = [
       "ホテル"
     ],
     "source": "公式",
-    "sourceUrl": "https://saunahotelgifu.com/"
+    "sourceUrl": "https://saunahotelgifu.com/",
+    "officialUrl": "https://saunahotelgifu.com/"
   },
   {
     "id": "manual-gifu-yohaku",
@@ -10983,7 +10989,8 @@ export const SEED_FACILITIES = [
       "道の駅"
     ],
     "source": "公式",
-    "sourceUrl": "https://m-fujihashi.com/spa/"
+    "sourceUrl": "https://m-fujihashi.com/spa/",
+    "officialUrl": "https://m-fujihashi.com/spa/"
   },
   {
     "id": "manual-gifu-iroha",
@@ -10999,7 +11006,8 @@ export const SEED_FACILITIES = [
       "駅近"
     ],
     "source": "公式",
-    "sourceUrl": "https://iroha-gifu.net/"
+    "sourceUrl": "https://iroha-gifu.net/",
+    "officialUrl": "https://iroha-gifu.net/"
   },
   {
     "id": "manual-gifu-onsai-hiroba",
@@ -11028,7 +11036,8 @@ export const SEED_FACILITIES = [
       "会員制"
     ],
     "source": "公式",
-    "sourceUrl": "https://totonou.dolphin-group.co.jp/"
+    "sourceUrl": "https://totonou.dolphin-group.co.jp/",
+    "officialUrl": "https://totonou.dolphin-group.co.jp/"
   },
   {
     "id": "manual-gifu-kur-resort-yubunesawa",
@@ -11044,7 +11053,8 @@ export const SEED_FACILITIES = [
       "中津川"
     ],
     "source": "公式",
-    "sourceUrl": "https://nakatsugawaonsen.com/"
+    "sourceUrl": "https://nakatsugawaonsen.com/",
+    "officialUrl": "https://nakatsugawaonsen.com/"
   },
   {
     "id": "manual-gifu-sasayurinoyu",
@@ -11059,7 +11069,8 @@ export const SEED_FACILITIES = [
       "日帰り温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://sasayurinoyu.jp/"
+    "sourceUrl": "https://sasayurinoyu.jp/",
+    "officialUrl": "https://sasayurinoyu.jp/"
   },
   {
     "id": "st-gifu-4823",
@@ -11092,7 +11103,8 @@ export const SEED_FACILITIES = [
       "本巣"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.nukuinoyu.jp/"
+    "sourceUrl": "https://www.nukuinoyu.jp/",
+    "officialUrl": "https://www.nukuinoyu.jp/"
   },
   {
     "id": "manual-gifu-badenpark-sogi",
@@ -11108,7 +11120,8 @@ export const SEED_FACILITIES = [
       "プール"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.badenpark.net/"
+    "sourceUrl": "https://www.badenpark.net/",
+    "officialUrl": "https://www.badenpark.net/"
   },
   {
     "id": "manual-gifu-hyoroku-sauna",
@@ -11124,7 +11137,8 @@ export const SEED_FACILITIES = [
       "鮎料理"
     ],
     "source": "公式",
-    "sourceUrl": "https://hyorokusauna.com/"
+    "sourceUrl": "https://hyorokusauna.com/",
+    "officialUrl": "https://hyorokusauna.com/"
   },
   {
     "id": "manual-gifu-fiteasy-gifumasaki-sauna",
@@ -11140,7 +11154,8 @@ export const SEED_FACILITIES = [
       "予約制"
     ],
     "source": "公式",
-    "sourceUrl": "https://fiteasy.co.jp/news/fit-easy-%E5%B2%90%E9%98%9C%E6%AD%A3%E6%9C%A8%E5%BA%97-sauna%E3%81%8C%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/"
+    "sourceUrl": "https://fiteasy.co.jp/news/fit-easy-%E5%B2%90%E9%98%9C%E6%AD%A3%E6%9C%A8%E5%BA%97-sauna%E3%81%8C%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/",
+    "officialUrl": "https://fiteasy.co.jp/news/fit-easy-%E5%B2%90%E9%98%9C%E6%AD%A3%E6%9C%A8%E5%BA%97-sauna%E3%81%8C%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/"
   },
   {
     "id": "manual-gifu-yoro-tamayura",
@@ -11154,7 +11169,8 @@ export const SEED_FACILITIES = [
       "養老"
     ],
     "source": "公式",
-    "sourceUrl": "https://yorotamayura.hp.peraichi.com/accommodation_site_p1_1/"
+    "sourceUrl": "https://yorotamayura.hp.peraichi.com/accommodation_site_p1_1/",
+    "officialUrl": "https://yorotamayura.hp.peraichi.com/accommodation_site_p1_1/"
   },
   {
     "id": "manual-gifu-fine-garden-gifu",
@@ -11171,7 +11187,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://www.hotel-fine.co.jp/hotel/g-gifu/",
-    "status": "verify"
+    "status": "verify",
+    "officialUrl": "https://www.hotel-fine.co.jp/hotel/g-gifu/"
   },
   {
     "id": "st-gifu-4833",
@@ -11227,7 +11244,8 @@ export const SEED_FACILITIES = [
       "海津"
     ],
     "source": "公式",
-    "sourceUrl": "https://kaizuonsen.com/"
+    "sourceUrl": "https://kaizuonsen.com/",
+    "officialUrl": "https://kaizuonsen.com/"
   },
   {
     "id": "manual-gifu-meguminoyu",
@@ -11243,7 +11261,8 @@ export const SEED_FACILITIES = [
       "ロウリュ"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.meguminoyu.jp/"
+    "sourceUrl": "https://www.meguminoyu.jp/",
+    "officialUrl": "https://www.meguminoyu.jp/"
   },
   {
     "id": "manual-gifu-new-gifu-sauna",
@@ -11259,7 +11278,8 @@ export const SEED_FACILITIES = [
       "男性専用"
     ],
     "source": "公式",
-    "sourceUrl": "https://new-gifu-sauna.com/"
+    "sourceUrl": "https://new-gifu-sauna.com/",
+    "officialUrl": "https://new-gifu-sauna.com/"
   },
   {
     "id": "manual-gifu-kanzaki-sanga-sauna",
@@ -11273,7 +11293,8 @@ export const SEED_FACILITIES = [
       "水着共用"
     ],
     "source": "公式",
-    "sourceUrl": "https://sangasauna.com/"
+    "sourceUrl": "https://sangasauna.com/",
+    "officialUrl": "https://sangasauna.com/"
   },
   {
     "id": "manual-gifu-mago-no-yu",
@@ -11287,7 +11308,8 @@ export const SEED_FACILITIES = [
       "満天の湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.magonoyu.com/"
+    "sourceUrl": "https://www.magonoyu.com/",
+    "officialUrl": "https://www.magonoyu.com/"
   },
   {
     "id": "manual-gifu-ogaki-sauna",
@@ -11321,7 +11343,8 @@ export const SEED_FACILITIES = [
       "大垣"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.p-castle.co.jp/yunoshiroogaki/"
+    "sourceUrl": "https://www.p-castle.co.jp/yunoshiroogaki/",
+    "officialUrl": "https://www.p-castle.co.jp/yunoshiroogaki/"
   },
   {
     "id": "manual-gifu-ikeda-onsen-shinkan",
@@ -11337,7 +11360,8 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.ikedaonsen.jp/"
+    "sourceUrl": "https://www.ikedaonsen.jp/",
+    "officialUrl": "https://www.ikedaonsen.jp/"
   },
   {
     "id": "manual-gifu-ikeda-onsen-honkan",
@@ -11353,7 +11377,8 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.ikedaonsen.jp/"
+    "sourceUrl": "https://www.ikedaonsen.jp/",
+    "officialUrl": "https://www.ikedaonsen.jp/"
   },
   {
     "id": "manual-gifu-tenko-no-yu",
@@ -11369,7 +11394,8 @@ export const SEED_FACILITIES = [
       "炭酸泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://tenko-spa.jp/"
+    "sourceUrl": "https://tenko-spa.jp/",
+    "officialUrl": "https://tenko-spa.jp/"
   },
   {
     "id": "manual-gifu-mitsumine",
@@ -11385,7 +11411,8 @@ export const SEED_FACILITIES = [
       "可児"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.mitsumine-onsen.com/"
+    "sourceUrl": "https://www.mitsumine-onsen.com/",
+    "officialUrl": "https://www.mitsumine-onsen.com/"
   },
   {
     "id": "manual-gifu-ogaki-korona",
@@ -11401,7 +11428,8 @@ export const SEED_FACILITIES = [
       "岩盤浴"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.korona.co.jp/onsen/ogk/"
+    "sourceUrl": "https://www.korona.co.jp/onsen/ogk/",
+    "officialUrl": "https://www.korona.co.jp/onsen/ogk/"
   },
   {
     "id": "st-gifu-4680",
@@ -11432,7 +11460,8 @@ export const SEED_FACILITIES = [
       "炭酸泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.yorimichi-onsen.jp/"
+    "sourceUrl": "https://www.yorimichi-onsen.jp/",
+    "officialUrl": "https://www.yorimichi-onsen.jp/"
   },
   {
     "id": "manual-gifu-toyo-kenko-land",
@@ -11464,7 +11493,8 @@ export const SEED_FACILITIES = [
       "ロウリュ"
     ],
     "source": "公式",
-    "sourceUrl": "https://yudocoro-minori.com/"
+    "sourceUrl": "https://yudocoro-minori.com/",
+    "officialUrl": "https://yudocoro-minori.com/"
   },
   {
     "id": "manual-gifu-yunohana-island",
@@ -11478,7 +11508,8 @@ export const SEED_FACILITIES = [
       "可児"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.spa-yunohana.com/"
+    "sourceUrl": "https://www.spa-yunohana.com/",
+    "officialUrl": "https://www.spa-yunohana.com/"
   },
   {
     "id": "manual-gifu-minori-seki",
@@ -11507,7 +11538,8 @@ export const SEED_FACILITIES = [
       "関市"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.mugegawa.jp/"
+    "sourceUrl": "https://www.mugegawa.jp/",
+    "officialUrl": "https://www.mugegawa.jp/"
   },
   {
     "id": "st-gifu-4679",
@@ -11522,7 +11554,8 @@ export const SEED_FACILITIES = [
       "漢方サウナ"
     ],
     "source": "公式",
-    "sourceUrl": "https://yohshin-yakutoh.conohawing.com/"
+    "sourceUrl": "https://yohshin-yakutoh.conohawing.com/",
+    "officialUrl": "https://yohshin-yakutoh.conohawing.com/"
   },
   {
     "id": "manual-gifu-yusennosato",
@@ -11538,7 +11571,8 @@ export const SEED_FACILITIES = [
       "養老"
     ],
     "source": "公式",
-    "sourceUrl": "https://yusennosato.com/"
+    "sourceUrl": "https://yusennosato.com/",
+    "officialUrl": "https://yusennosato.com/"
   },
   {
     "id": "manual-gifu-rokujo-kitanoyu",
@@ -11554,7 +11588,8 @@ export const SEED_FACILITIES = [
       "喜多の湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://super-sentou.com/shop-information/rokujyo-onsen/"
+    "sourceUrl": "https://super-sentou.com/shop-information/rokujyo-onsen/",
+    "officialUrl": "https://super-sentou.com/shop-information/rokujyo-onsen/"
   },
   {
     "id": "st-shizuoka-4835",
@@ -11586,7 +11621,8 @@ export const SEED_FACILITIES = [
       "葵区"
     ],
     "source": "公式",
-    "sourceUrl": "https://hitoyadosauna.com/"
+    "sourceUrl": "https://hitoyadosauna.com/",
+    "officialUrl": "https://hitoyadosauna.com/"
   },
   {
     "id": "manual-shizuoka-fujinos",
@@ -11649,7 +11685,8 @@ export const SEED_FACILITIES = [
       "浜松"
     ],
     "source": "公式",
-    "sourceUrl": "https://rakuspa.com/hamamatsu/"
+    "sourceUrl": "https://rakuspa.com/hamamatsu/",
+    "officialUrl": "https://rakuspa.com/hamamatsu/"
   },
   {
     "id": "manual-shizuoka-sauna-mysa",
@@ -11664,7 +11701,8 @@ export const SEED_FACILITIES = [
       "テントサウナ"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-mysa.jp/"
+    "sourceUrl": "https://sauna-mysa.jp/",
+    "officialUrl": "https://sauna-mysa.jp/"
   },
   {
     "id": "st-shizuoka-4836",
@@ -11679,7 +11717,8 @@ export const SEED_FACILITIES = [
       "草薙"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-kou.com/"
+    "sourceUrl": "https://sauna-kou.com/",
+    "officialUrl": "https://sauna-kou.com/"
   },
   {
     "id": "manual-shizuoka-sola-spa-hamakita",
@@ -11730,7 +11769,8 @@ export const SEED_FACILITIES = [
       "温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://aratamanoyu.jp/"
+    "sourceUrl": "https://aratamanoyu.jp/",
+    "officialUrl": "https://aratamanoyu.jp/"
   },
   {
     "id": "manual-shizuoka-fuua",
@@ -11776,7 +11816,8 @@ export const SEED_FACILITIES = [
       "美肌湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://ofurocafe-bijinyu.com/"
+    "sourceUrl": "https://ofurocafe-bijinyu.com/",
+    "officialUrl": "https://ofurocafe-bijinyu.com/"
   },
   {
     "id": "manual-shizuoka-kajimachi-solani",
@@ -11793,7 +11834,8 @@ export const SEED_FACILITIES = [
       "駅近"
     ],
     "source": "公式",
-    "sourceUrl": "https://spa-solani.com/store/74/"
+    "sourceUrl": "https://spa-solani.com/store/74/",
+    "officialUrl": "https://spa-solani.com/store/74/"
   },
   {
     "id": "manual-shizuoka-sauna-shikiji",
@@ -11809,7 +11851,8 @@ export const SEED_FACILITIES = [
       "24時間"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.saunashikiji.jp/"
+    "sourceUrl": "https://www.saunashikiji.jp/",
+    "officialUrl": "https://www.saunashikiji.jp/"
   },
   {
     "id": "manual-shizuoka-sauna-tenryu",
@@ -11841,7 +11884,8 @@ export const SEED_FACILITIES = [
       "浜松"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.superhotel.co.jp/s_hotels/hamamatsu/"
+    "sourceUrl": "https://www.superhotel.co.jp/s_hotels/hamamatsu/",
+    "officialUrl": "https://www.superhotel.co.jp/s_hotels/hamamatsu/"
   },
   {
     "id": "manual-shizuoka-seishin-aoinomori",
@@ -11889,7 +11933,8 @@ export const SEED_FACILITIES = [
       "水風呂あり"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.fukisarashi-yu.jp/"
+    "sourceUrl": "https://www.fukisarashi-yu.jp/",
+    "officialUrl": "https://www.fukisarashi-yu.jp/"
   },
   {
     "id": "manual-shizuoka-fujikaguyanoyu",
@@ -11921,7 +11966,8 @@ export const SEED_FACILITIES = [
       "静岡駅"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.ole-inn.com/"
+    "sourceUrl": "https://www.ole-inn.com/",
+    "officialUrl": "https://www.ole-inn.com/"
   },
   {
     "id": "manual-shizuoka-hotel-prive",
@@ -11937,7 +11983,8 @@ export const SEED_FACILITIES = [
       "スパ"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.hotel-prive.com/"
+    "sourceUrl": "https://www.hotel-prive.com/",
+    "officialUrl": "https://www.hotel-prive.com/"
   },
   {
     "id": "manual-shizuoka-yudai-onsen",
@@ -11953,7 +12000,8 @@ export const SEED_FACILITIES = [
       "天然温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://yugo.co.jp/"
+    "sourceUrl": "https://yugo.co.jp/",
+    "officialUrl": "https://yugo.co.jp/"
   },
   {
     "id": "manual-shizuoka-rapec",
@@ -11984,7 +12032,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://kunozan.jp/"
+    "sourceUrl": "https://kunozan.jp/",
+    "officialUrl": "https://kunozan.jp/"
   },
   {
     "id": "st-shizuoka-4888",
@@ -12052,7 +12101,8 @@ export const SEED_FACILITIES = [
       "日帰り"
     ],
     "source": "公式",
-    "sourceUrl": "https://hanasakinoyu.jp/"
+    "sourceUrl": "https://hanasakinoyu.jp/",
+    "officialUrl": "https://hanasakinoyu.jp/"
   },
   {
     "id": "manual-shizuoka-kirakubo",
@@ -12068,7 +12118,8 @@ export const SEED_FACILITIES = [
       "御殿場"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.tokinosumika.com/spa/kirakubo/"
+    "sourceUrl": "https://www.tokinosumika.com/spa/kirakubo/",
+    "officialUrl": "https://www.tokinosumika.com/spa/kirakubo/"
   },
   {
     "id": "manual-shizuoka-oasis-gotemba",
@@ -12131,7 +12182,8 @@ export const SEED_FACILITIES = [
       "駿河湾"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.kur-hotel.co.jp/suruga/"
+    "sourceUrl": "https://www.kur-hotel.co.jp/suruga/",
+    "officialUrl": "https://www.kur-hotel.co.jp/suruga/"
   },
   {
     "id": "manual-shizuoka-manyo-numazu",
@@ -12147,7 +12199,8 @@ export const SEED_FACILITIES = [
       "温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.manyo.co.jp/numazu/"
+    "sourceUrl": "https://www.manyo.co.jp/numazu/",
+    "officialUrl": "https://www.manyo.co.jp/numazu/"
   },
   {
     "id": "manual-shizuoka-seishin-toki",
@@ -12163,7 +12216,8 @@ export const SEED_FACILITIES = [
       "24時間"
     ],
     "source": "公式",
-    "sourceUrl": "https://seisintotokinoheya.com/"
+    "sourceUrl": "https://seisintotokinoheya.com/",
+    "officialUrl": "https://seisintotokinoheya.com/"
   },
   {
     "id": "manual-shizuoka-castle-sanoharu",
@@ -12178,7 +12232,8 @@ export const SEED_FACILITIES = [
       "葵区"
     ],
     "source": "公式",
-    "sourceUrl": "https://castleshizuoka.hotel-support.co.jp/"
+    "sourceUrl": "https://castleshizuoka.hotel-support.co.jp/",
+    "officialUrl": "https://castleshizuoka.hotel-support.co.jp/"
   },
   {
     "id": "manual-shizuoka-hotel-tokinosumika",
@@ -12273,7 +12328,8 @@ export const SEED_FACILITIES = [
       "野天風呂"
     ],
     "source": "公式",
-    "sourceUrl": "https://yufukeishiori.com/"
+    "sourceUrl": "https://yufukeishiori.com/",
+    "officialUrl": "https://yufukeishiori.com/"
   },
   {
     "id": "st-shizuoka-4772",
@@ -12335,7 +12391,8 @@ export const SEED_FACILITIES = [
       "富士"
     ],
     "source": "公式",
-    "sourceUrl": "https://yuya-p.jp/"
+    "sourceUrl": "https://yuya-p.jp/",
+    "officialUrl": "https://yuya-p.jp/"
   },
   {
     "id": "manual-shizuoka-hananoyu",
@@ -12351,7 +12408,8 @@ export const SEED_FACILITIES = [
       "時之栖"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.tokinosumika.com/hananoyu/"
+    "sourceUrl": "https://www.tokinosumika.com/hananoyu/",
+    "officialUrl": "https://www.tokinosumika.com/hananoyu/"
   },
   {
     "id": "manual-shizuoka-konohana-no-yu",
@@ -12367,7 +12425,8 @@ export const SEED_FACILITIES = [
       "温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.gotemba-konohananoyu.jp/"
+    "sourceUrl": "https://www.gotemba-konohananoyu.jp/",
+    "officialUrl": "https://www.gotemba-konohananoyu.jp/"
   },
   {
     "id": "manual-shizuoka-minato-onsen",
@@ -12383,7 +12442,8 @@ export const SEED_FACILITIES = [
       "クラフトビール"
     ],
     "source": "公式",
-    "sourceUrl": "https://minato-onsen.jp/"
+    "sourceUrl": "https://minato-onsen.jp/",
+    "officialUrl": "https://minato-onsen.jp/"
   },
   {
     "id": "manual-shizuoka-wagou-no-yu",
@@ -12410,7 +12470,8 @@ export const SEED_FACILITIES = [
       "栄"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.credspasauna.com/"
+    "sourceUrl": "https://www.credspasauna.com/",
+    "officialUrl": "https://www.credspasauna.com/"
   },
   {
     "id": "manual-aichi-ie-sauna-aichi",
@@ -12426,7 +12487,8 @@ export const SEED_FACILITIES = [
       "プライベート"
     ],
     "source": "公式",
-    "sourceUrl": "https://resauna.jp/aichi/"
+    "sourceUrl": "https://resauna.jp/aichi/",
+    "officialUrl": "https://resauna.jp/aichi/"
   },
   {
     "id": "sc2025-kiwami-osu",
@@ -12439,7 +12501,8 @@ export const SEED_FACILITIES = [
       "2025年開業"
     ],
     "source": "公式",
-    "sourceUrl": "https://kiwamisauna.com/store/osu"
+    "sourceUrl": "https://kiwamisauna.com/store/osu",
+    "officialUrl": "https://kiwamisauna.com/store/osu"
   },
   {
     "id": "manual-aichi-kiwami-honten",
@@ -12453,7 +12516,8 @@ export const SEED_FACILITIES = [
       "浅間町"
     ],
     "source": "公式",
-    "sourceUrl": "https://kiwamisauna.com/store/honten"
+    "sourceUrl": "https://kiwamisauna.com/store/honten",
+    "officialUrl": "https://kiwamisauna.com/store/honten"
   },
   {
     "id": "manual-aichi-loca-nagoya",
@@ -12469,7 +12533,8 @@ export const SEED_FACILITIES = [
       "錦"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.loca-nagoya.com/"
+    "sourceUrl": "https://www.loca-nagoya.com/",
+    "officialUrl": "https://www.loca-nagoya.com/"
   },
   {
     "id": "manual-aichi-nagono-workbar-sauna",
@@ -12485,7 +12550,8 @@ export const SEED_FACILITIES = [
       "那古野"
     ],
     "source": "公式",
-    "sourceUrl": "https://leopards.co.jp/service/workbarsauna/"
+    "sourceUrl": "https://leopards.co.jp/service/workbarsauna/",
+    "officialUrl": "https://leopards.co.jp/service/workbarsauna/"
   },
   {
     "id": "manual-aichi-tarumu",
@@ -12516,7 +12582,8 @@ export const SEED_FACILITIES = [
       "深夜"
     ],
     "source": "公式",
-    "sourceUrl": "https://rakuspa.com/nagoya/"
+    "sourceUrl": "https://rakuspa.com/nagoya/",
+    "officialUrl": "https://rakuspa.com/nagoya/"
   },
   {
     "id": "st-aichi-4824",
@@ -12546,7 +12613,8 @@ export const SEED_FACILITIES = [
       "男性専用"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-bug.com/"
+    "sourceUrl": "https://sauna-bug.com/",
+    "officialUrl": "https://sauna-bug.com/"
   },
   {
     "id": "manual-aichi-sauna-m",
@@ -12562,7 +12630,8 @@ export const SEED_FACILITIES = [
       "プライベート"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-m.com/"
+    "sourceUrl": "https://sauna-m.com/",
+    "officialUrl": "https://sauna-m.com/"
   },
   {
     "id": "st-aichi-4936",
@@ -12577,7 +12646,8 @@ export const SEED_FACILITIES = [
       "大型"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.sauna-monkey.com/"
+    "sourceUrl": "https://www.sauna-monkey.com/",
+    "officialUrl": "https://www.sauna-monkey.com/"
   },
   {
     "id": "manual-aichi-sauna-dot",
@@ -12592,7 +12662,8 @@ export const SEED_FACILITIES = [
       "栄"
     ],
     "source": "公式",
-    "sourceUrl": "https://saunadot.com/"
+    "sourceUrl": "https://saunadot.com/",
+    "officialUrl": "https://saunadot.com/"
   },
   {
     "id": "manual-aichi-sense-sauna",
@@ -12608,7 +12679,8 @@ export const SEED_FACILITIES = [
       "大型"
     ],
     "source": "公式",
-    "sourceUrl": "https://sense-sauna.jp/"
+    "sourceUrl": "https://sense-sauna.jp/",
+    "officialUrl": "https://sense-sauna.jp/"
   },
   {
     "id": "manual-aichi-tenet-sauna",
@@ -12624,7 +12696,8 @@ export const SEED_FACILITIES = [
       "水風呂あり"
     ],
     "source": "公式",
-    "sourceUrl": "https://tenetsauna.jp/"
+    "sourceUrl": "https://tenetsauna.jp/",
+    "officialUrl": "https://tenetsauna.jp/"
   },
   {
     "id": "manual-aichi-tobe-sauna",
@@ -12640,7 +12713,8 @@ export const SEED_FACILITIES = [
       "丸の内"
     ],
     "source": "公式",
-    "sourceUrl": "https://tobesauna.com/"
+    "sourceUrl": "https://tobesauna.com/",
+    "officialUrl": "https://tobesauna.com/"
   },
   {
     "id": "manual-aichi-zakioka-sauna",
@@ -12655,7 +12729,8 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "公式",
-    "sourceUrl": "https://zakiokasauna.com/"
+    "sourceUrl": "https://zakiokasauna.com/",
+    "officialUrl": "https://zakiokasauna.com/"
   },
   {
     "id": "manual-aichi-zicca-sauna",
@@ -12669,7 +12744,8 @@ export const SEED_FACILITIES = [
       "名古屋港"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.zicca-sauna.com/"
+    "sourceUrl": "https://www.zicca-sauna.com/",
+    "officialUrl": "https://www.zicca-sauna.com/"
   },
   {
     "id": "manual-aichi-urban-quar",
@@ -12706,7 +12782,8 @@ export const SEED_FACILITIES = [
       "スパ"
     ],
     "source": "公式",
-    "sourceUrl": "https://apz-spa.com/"
+    "sourceUrl": "https://apz-spa.com/",
+    "officialUrl": "https://apz-spa.com/"
   },
   {
     "id": "manual-aichi-wellbe-sakae",
@@ -12722,7 +12799,8 @@ export const SEED_FACILITIES = [
       "老舗"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.wellbe.co.jp/sakae/"
+    "sourceUrl": "https://www.wellbe.co.jp/sakae/",
+    "officialUrl": "https://www.wellbe.co.jp/sakae/"
   },
   {
     "id": "manual-aichi-wellbe-imaike",
@@ -12738,7 +12816,8 @@ export const SEED_FACILITIES = [
       "今池"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.wellbe.co.jp/imaike/"
+    "sourceUrl": "https://www.wellbe.co.jp/imaike/",
+    "officialUrl": "https://www.wellbe.co.jp/imaike/"
   },
   {
     "id": "manual-aichi-wood-design-park-okazaki",
@@ -12754,7 +12833,8 @@ export const SEED_FACILITIES = [
       "貸切"
     ],
     "source": "公式",
-    "sourceUrl": "https://wood-designpark.jp/okazaki/sauna/"
+    "sourceUrl": "https://wood-designpark.jp/okazaki/sauna/",
+    "officialUrl": "https://wood-designpark.jp/okazaki/sauna/"
   },
   {
     "id": "manual-aichi-okazaki-rakunoyu",
@@ -12770,7 +12850,8 @@ export const SEED_FACILITIES = [
       "楽の湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://rakunoyu.com/okazaki/"
+    "sourceUrl": "https://rakunoyu.com/okazaki/",
+    "officialUrl": "https://rakunoyu.com/okazaki/"
   },
   {
     "id": "manual-aichi-kanie-sauna",
@@ -12786,7 +12867,8 @@ export const SEED_FACILITIES = [
       "蟹江"
     ],
     "source": "公式",
-    "sourceUrl": "https://kaniesauna.com/"
+    "sourceUrl": "https://kaniesauna.com/",
+    "officialUrl": "https://kaniesauna.com/"
   },
   {
     "id": "manual-aichi-canal-resort",
@@ -12800,7 +12882,8 @@ export const SEED_FACILITIES = [
       "温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://canalresort.jp/"
+    "sourceUrl": "https://canalresort.jp/",
+    "officialUrl": "https://canalresort.jp/"
   },
   {
     "id": "manual-aichi-totonoiya",
@@ -12816,7 +12899,8 @@ export const SEED_FACILITIES = [
       "北名古屋"
     ],
     "source": "公式",
-    "sourceUrl": "https://totonoiya.net/"
+    "sourceUrl": "https://totonoiya.net/",
+    "officialUrl": "https://totonoiya.net/"
   },
   {
     "id": "manual-aichi-sauna-pia",
@@ -12830,7 +12914,8 @@ export const SEED_FACILITIES = [
       "オールナイト"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.sauna-pia.co.jp/"
+    "sourceUrl": "https://www.sauna-pia.co.jp/",
+    "officialUrl": "https://www.sauna-pia.co.jp/"
   },
   {
     "id": "manual-aichi-sauna-moya",
@@ -12844,7 +12929,8 @@ export const SEED_FACILITIES = [
       "会員制"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-moya.jp/"
+    "sourceUrl": "https://sauna-moya.jp/",
+    "officialUrl": "https://sauna-moya.jp/"
   },
   {
     "id": "manual-aichi-sauna-fuji-sakae",
@@ -12858,7 +12944,8 @@ export const SEED_FACILITIES = [
       "栄"
     ],
     "source": "公式",
-    "sourceUrl": "https://fto.co.jp/"
+    "sourceUrl": "https://fto.co.jp/",
+    "officialUrl": "https://fto.co.jp/"
   },
   {
     "id": "manual-aichi-sauna-eagle",
@@ -12874,7 +12961,8 @@ export const SEED_FACILITIES = [
       "男性専用"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-eagle.jp/"
+    "sourceUrl": "https://sauna-eagle.jp/",
+    "officialUrl": "https://sauna-eagle.jp/"
   },
   {
     "id": "manual-aichi-saunalab-nagoya",
@@ -12890,7 +12978,8 @@ export const SEED_FACILITIES = [
       "ウェルビー"
     ],
     "source": "公式",
-    "sourceUrl": "https://saunalab.jp/nagoya/"
+    "sourceUrl": "https://saunalab.jp/nagoya/",
+    "officialUrl": "https://saunalab.jp/nagoya/"
   },
   {
     "id": "manual-aichi-super-sauna-ichinomiya",
@@ -12906,7 +12995,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://supersauna.jp/price",
-    "status": "open"
+    "status": "open",
+    "officialUrl": "https://supersauna.jp/price"
   },
   {
     "id": "manual-aichi-nagoya-sauna",
@@ -12922,7 +13012,8 @@ export const SEED_FACILITIES = [
       "中村区"
     ],
     "source": "公式",
-    "sourceUrl": "https://nagoyasauna.com/"
+    "sourceUrl": "https://nagoyasauna.com/",
+    "officialUrl": "https://nagoyasauna.com/"
   },
   {
     "id": "manual-aichi-mikawaonsen-kaiyutei",
@@ -12938,7 +13029,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://mikawaonsen.co.jp/"
+    "sourceUrl": "https://mikawaonsen.co.jp/",
+    "officialUrl": "https://mikawaonsen.co.jp/"
   },
   {
     "id": "manual-aichi-mens-sauna-plaza",
@@ -12954,7 +13046,8 @@ export const SEED_FACILITIES = [
       "日帰り"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.plaza85.co.jp/%E9%A4%A8%E5%86%85%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%97%E3%83%A9%E3%82%B6/"
+    "sourceUrl": "https://www.plaza85.co.jp/%E9%A4%A8%E5%86%85%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%97%E3%83%A9%E3%82%B6/",
+    "officialUrl": "https://www.plaza85.co.jp/%E9%A4%A8%E5%86%85%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%B5%E3%82%A6%E3%83%8A%E3%83%97%E3%83%A9%E3%82%B6/"
   },
   {
     "id": "manual-aichi-yunoyu-toyohashi",
@@ -12970,7 +13063,8 @@ export const SEED_FACILITIES = [
       "ラウンジ"
     ],
     "source": "公式",
-    "sourceUrl": "https://yunoyu.jp/"
+    "sourceUrl": "https://yunoyu.jp/",
+    "officialUrl": "https://yunoyu.jp/"
   },
   {
     "id": "st-aichi-4891",
@@ -13056,7 +13150,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://kamenoi-hotels.com/chitamihama/",
-    "status": "verify"
+    "status": "verify",
+    "officialUrl": "https://kamenoi-hotels.com/chitamihama/"
   },
   {
     "id": "manual-aichi-routine",
@@ -13072,7 +13167,8 @@ export const SEED_FACILITIES = [
       "丸の内"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna-routine.com/"
+    "sourceUrl": "https://sauna-routine.com/",
+    "officialUrl": "https://sauna-routine.com/"
   },
   {
     "id": "manual-aichi-kanare-kitanoyu",
@@ -13089,7 +13185,8 @@ export const SEED_FACILITIES = [
       "喜多の湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://super-sentou.com/shop-information/kanare-onsen/"
+    "sourceUrl": "https://super-sentou.com/shop-information/kanare-onsen/",
+    "officialUrl": "https://super-sentou.com/shop-information/kanare-onsen/"
   },
   {
     "id": "manual-aichi-ozone-yunoshiro",
@@ -13105,7 +13202,8 @@ export const SEED_FACILITIES = [
       "大曽根"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.p-castle.co.jp/yunoshiro/"
+    "sourceUrl": "https://www.p-castle.co.jp/yunoshiro/",
+    "officialUrl": "https://www.p-castle.co.jp/yunoshiro/"
   },
   {
     "id": "manual-aichi-kakitsubata",
@@ -13121,7 +13219,8 @@ export const SEED_FACILITIES = [
       "ハイウェイオアシス"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.kakitsubata-spa.com/"
+    "sourceUrl": "https://www.kakitsubata-spa.com/",
+    "officialUrl": "https://www.kakitsubata-spa.com/"
   },
   {
     "id": "manual-aichi-midori-rakunoyu",
@@ -13137,7 +13236,8 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "公式",
-    "sourceUrl": "https://rakunoyu.com/midori/"
+    "sourceUrl": "https://rakunoyu.com/midori/",
+    "officialUrl": "https://rakunoyu.com/midori/"
   },
   {
     "id": "manual-aichi-korona-anjo",
@@ -13153,7 +13253,8 @@ export const SEED_FACILITIES = [
       "映画併設"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.korona.co.jp/onsen/anj/"
+    "sourceUrl": "https://www.korona.co.jp/onsen/anj/",
+    "officialUrl": "https://www.korona.co.jp/onsen/anj/"
   },
   {
     "id": "manual-aichi-yutopia-takara",
@@ -13169,7 +13270,8 @@ export const SEED_FACILITIES = [
       "サウナ8種"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.yu-t.com/"
+    "sourceUrl": "https://www.yu-t.com/",
+    "officialUrl": "https://www.yu-t.com/"
   },
   {
     "id": "manual-aichi-toukichirou",
@@ -13185,7 +13287,8 @@ export const SEED_FACILITIES = [
       "清須"
     ],
     "source": "公式",
-    "sourceUrl": "https://toukichirou.com/"
+    "sourceUrl": "https://toukichirou.com/",
+    "officialUrl": "https://toukichirou.com/"
   },
   {
     "id": "manual-aichi-hotel-hoqa",
@@ -13201,7 +13304,8 @@ export const SEED_FACILITIES = [
       "ホテル"
     ],
     "source": "公式",
-    "sourceUrl": "https://nagoyahotel-hoqa.jp/"
+    "sourceUrl": "https://nagoyahotel-hoqa.jp/",
+    "officialUrl": "https://nagoyahotel-hoqa.jp/"
   },
   {
     "id": "manual-aichi-kanayama-hotel",
@@ -13218,7 +13322,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://kanayama-hotel.jp/",
-    "status": "verify"
+    "status": "verify",
+    "officialUrl": "https://kanayama-hotel.jp/"
   },
   {
     "id": "manual-aichi-ryusenji-moriyama",
@@ -13232,7 +13337,8 @@ export const SEED_FACILITIES = [
       "炭酸泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.ryusenjinoyu.com/moriyama"
+    "sourceUrl": "https://www.ryusenjinoyu.com/moriyama",
+    "officialUrl": "https://www.ryusenjinoyu.com/moriyama"
   },
   {
     "id": "manual-aichi-tatsuki-sauna",
@@ -13248,7 +13354,8 @@ export const SEED_FACILITIES = [
       "竜城温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://tatsukisauna.com/"
+    "sourceUrl": "https://tatsukisauna.com/",
+    "officialUrl": "https://tatsukisauna.com/"
   },
   {
     "id": "st-mie-4794",
@@ -13282,7 +13389,8 @@ export const SEED_FACILITIES = [
       "菰野"
     ],
     "source": "公式",
-    "sourceUrl": "https://leopards.co.jp/service/aounomori"
+    "sourceUrl": "https://leopards.co.jp/service/aounomori",
+    "officialUrl": "https://leopards.co.jp/service/aounomori"
   },
   {
     "id": "manual-mie-cova-kakuda",
@@ -13298,7 +13406,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://cova-iseshima.jp/"
+    "sourceUrl": "https://cova-iseshima.jp/",
+    "officialUrl": "https://cova-iseshima.jp/"
   },
   {
     "id": "manual-mie-free-and-easy-sauna",
@@ -13361,7 +13470,8 @@ export const SEED_FACILITIES = [
       "アウトドア"
     ],
     "source": "公式",
-    "sourceUrl": "https://kabuku-co.jp/"
+    "sourceUrl": "https://kabuku-co.jp/",
+    "officialUrl": "https://kabuku-co.jp/"
   },
   {
     "id": "manual-mie-kumano-sauna",
@@ -13403,7 +13513,8 @@ export const SEED_FACILITIES = [
       "津"
     ],
     "source": "公式",
-    "sourceUrl": "https://sauna152.com/"
+    "sourceUrl": "https://sauna152.com/",
+    "officialUrl": "https://sauna152.com/"
   },
   {
     "id": "manual-mie-secret-sauna-kaiho",
@@ -13419,7 +13530,8 @@ export const SEED_FACILITIES = [
       "大山田温泉"
     ],
     "source": "公式",
-    "sourceUrl": "https://kaiho-sauna.com/"
+    "sourceUrl": "https://kaiho-sauna.com/",
+    "officialUrl": "https://kaiho-sauna.com/"
   },
   {
     "id": "manual-mie-sparkle",
@@ -13450,7 +13562,8 @@ export const SEED_FACILITIES = [
       "リゾート"
     ],
     "source": "公式",
-    "sourceUrl": "https://aquaignis.jp/"
+    "sourceUrl": "https://aquaignis.jp/",
+    "officialUrl": "https://aquaignis.jp/"
   },
   {
     "id": "manual-mie-asahinoyu",
@@ -13481,7 +13594,8 @@ export const SEED_FACILITIES = [
       "いなべ"
     ],
     "source": "公式",
-    "sourceUrl": "https://inabe-ageki-base.com/"
+    "sourceUrl": "https://inabe-ageki-base.com/",
+    "officialUrl": "https://inabe-ageki-base.com/"
   },
   {
     "id": "manual-mie-yumoriza",
@@ -13496,7 +13610,8 @@ export const SEED_FACILITIES = [
       "四日市"
     ],
     "source": "公式",
-    "sourceUrl": "https://ofurocafe-yumoriza.com/"
+    "sourceUrl": "https://ofurocafe-yumoriza.com/",
+    "officialUrl": "https://ofurocafe-yumoriza.com/"
   },
   {
     "id": "manual-mie-kurhaus-nagashima",
@@ -13542,7 +13657,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.sun-urashima.co.jp/"
+    "sourceUrl": "https://www.sun-urashima.co.jp/",
+    "officialUrl": "https://www.sun-urashima.co.jp/"
   },
   {
     "id": "st-mie-4604",
@@ -13590,7 +13706,8 @@ export const SEED_FACILITIES = [
       "サウナ"
     ],
     "source": "公式",
-    "sourceUrl": "https://b-l.jp/"
+    "sourceUrl": "https://b-l.jp/",
+    "officialUrl": "https://b-l.jp/"
   },
   {
     "id": "manual-mie-himorogien",
@@ -13620,7 +13737,8 @@ export const SEED_FACILITIES = [
       "伊賀"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.hh-sunpia-iga.co.jp/"
+    "sourceUrl": "https://www.hh-sunpia-iga.co.jp/",
+    "officialUrl": "https://www.hh-sunpia-iga.co.jp/"
   },
   {
     "id": "manual-mie-hoshinoyu",
@@ -13665,7 +13783,8 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "公式",
-    "sourceUrl": "https://mts-ise.com/"
+    "sourceUrl": "https://mts-ise.com/",
+    "officialUrl": "https://mts-ise.com/"
   },
   {
     "id": "st-mie-486",
@@ -13696,7 +13815,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.toyohama.co.jp/"
+    "sourceUrl": "https://www.toyohama.co.jp/",
+    "officialUrl": "https://www.toyohama.co.jp/"
   },
   {
     "id": "manual-mie-asahiyu-ise",
@@ -13748,7 +13868,8 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.nabetagawa.co.jp/"
+    "sourceUrl": "https://www.nabetagawa.co.jp/",
+    "officialUrl": "https://www.nabetagawa.co.jp/"
   },
   {
     "id": "manual-mie-kameyama-zekcho-sauna",
@@ -13764,7 +13885,8 @@ export const SEED_FACILITIES = [
     "status": "open",
     "address": "三重県鈴鹿市小岐須町祓塚",
     "addressSource": "https://kameyama-sauna.com/",
-    "addressCheckedAt": "2026-10-19"
+    "addressCheckedAt": "2026-10-19",
+    "officialUrl": "https://kameyama-sauna.com/"
   },
   {
     "id": "manual-mie-gokurakuyu-tsu",
@@ -13779,7 +13901,8 @@ export const SEED_FACILITIES = [
       "極楽湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.gokurakuyu.ne.jp/tempo/tsu/"
+    "sourceUrl": "https://www.gokurakuyu.ne.jp/tempo/tsu/",
+    "officialUrl": "https://www.gokurakuyu.ne.jp/tempo/tsu/"
   },
   {
     "id": "manual-mie-tamanoyu",
@@ -13825,7 +13948,8 @@ export const SEED_FACILITIES = [
       "宿泊"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.todaya.co.jp/"
+    "sourceUrl": "https://www.todaya.co.jp/",
+    "officialUrl": "https://www.todaya.co.jp/"
   },
   {
     "id": "manual-mie-yunose",
@@ -13887,7 +14011,8 @@ export const SEED_FACILITIES = [
       "熊野の郷"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.kumano-no-sato.com/matsusaka/"
+    "sourceUrl": "https://www.kumano-no-sato.com/matsusaka/",
+    "officialUrl": "https://www.kumano-no-sato.com/matsusaka/"
   },
   {
     "id": "manual-mie-shinmenoyu",
@@ -13903,7 +14028,8 @@ export const SEED_FACILITIES = [
       "絶景"
     ],
     "source": "公式",
-    "sourceUrl": "https://shinmenoyu.jp/"
+    "sourceUrl": "https://shinmenoyu.jp/",
+    "officialUrl": "https://shinmenoyu.jp/"
   },
   {
     "id": "manual-mie-magotaro-auto-camp",
@@ -13917,7 +14043,8 @@ export const SEED_FACILITIES = [
       "紀北"
     ],
     "source": "公式",
-    "sourceUrl": "https://magotarou.com/"
+    "sourceUrl": "https://magotarou.com/",
+    "officialUrl": "https://magotarou.com/"
   },
   {
     "id": "manual-mie-sarubino",
@@ -13932,7 +14059,8 @@ export const SEED_FACILITIES = [
       "伊賀"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.sarubino.com/"
+    "sourceUrl": "https://www.sarubino.com/",
+    "officialUrl": "https://www.sarubino.com/"
   },
   {
     "id": "manual-mie-yuami-no-shima",
@@ -13946,7 +14074,8 @@ export const SEED_FACILITIES = [
       "露天"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.nagashima-onsen.co.jp/yuami/"
+    "sourceUrl": "https://www.nagashima-onsen.co.jp/yuami/",
+    "officialUrl": "https://www.nagashima-onsen.co.jp/yuami/"
   },
   {
     "id": "manual-mie-jab",
@@ -13959,7 +14088,8 @@ export const SEED_FACILITIES = [
       "四日市"
     ],
     "source": "公式",
-    "sourceUrl": "https://jab53.com/"
+    "sourceUrl": "https://jab53.com/",
+    "officialUrl": "https://jab53.com/"
   },
   {
     "id": "manual-mie-hisetsu-camp-sauna",
@@ -13975,7 +14105,8 @@ export const SEED_FACILITIES = [
       "キャンプ"
     ],
     "source": "公式",
-    "sourceUrl": "https://hisetsu.jp/main/activity/tent-sauna/"
+    "sourceUrl": "https://hisetsu.jp/main/activity/tent-sauna/",
+    "officialUrl": "https://hisetsu.jp/main/activity/tent-sauna/"
   },
   {
     "id": "manual-mie-honzoyu",
@@ -13990,7 +14121,8 @@ export const SEED_FACILITIES = [
       "薬草湯"
     ],
     "source": "公式",
-    "sourceUrl": "https://vison.jp/shop/detail.php?id=74"
+    "sourceUrl": "https://vison.jp/shop/detail.php?id=74",
+    "officialUrl": "https://vison.jp/shop/detail.php?id=74"
   },
   {
     "id": "manual-mie-yumekodo-no-yu",
@@ -14017,7 +14149,8 @@ export const SEED_FACILITIES = [
       "岩盤浴"
     ],
     "source": "公式",
-    "sourceUrl": "https://www.nabarinoyu.com/"
+    "sourceUrl": "https://www.nabarinoyu.com/",
+    "officialUrl": "https://www.nabarinoyu.com/"
   },
   {
     "id": "manual-mie-suzunoyu",
@@ -14046,7 +14179,8 @@ export const SEED_FACILITIES = [
       "鈴鹿"
     ],
     "source": "公式",
-    "sourceUrl": "https://hanashobu.com/suzuka/"
+    "sourceUrl": "https://hanashobu.com/suzuka/",
+    "officialUrl": "https://hanashobu.com/suzuka/"
   },
   {
     "id": "shiga-user-1ag3xyd",
@@ -17592,7 +17726,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2873/",
     "city": "西牟婁郡白浜町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2857",
@@ -17608,7 +17742,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2857/",
     "city": "伊都郡かつらぎ町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-607",
@@ -17624,7 +17758,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/607/",
     "city": "海南市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2878",
@@ -17633,7 +17767,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2878/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2865",
@@ -17642,7 +17776,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2865/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2854",
@@ -17652,7 +17786,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2854/",
     "city": "西牟婁郡白浜町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-584",
@@ -17667,7 +17801,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/584/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-3326",
@@ -17685,7 +17819,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3326/",
     "city": "和歌山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2858",
@@ -17701,7 +17835,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2858/",
     "city": "西牟婁郡白浜町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2877",
@@ -17710,7 +17844,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2877/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2851",
@@ -17724,8 +17858,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2851/",
     "city": "和歌山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.fukurou-yu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/2851/"
   },
@@ -17736,7 +17870,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2860/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2875",
@@ -17745,7 +17879,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2875/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2852",
@@ -17762,7 +17896,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/2852/",
     "city": "西牟婁郡白浜町",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2850",
@@ -17772,7 +17906,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2850/",
     "city": "和歌山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2871",
@@ -17787,7 +17921,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2871/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-4547",
@@ -17798,8 +17932,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4547/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-580",
@@ -17814,7 +17948,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/580/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2853",
@@ -17830,7 +17964,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2853/",
     "city": "橋本市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2925",
@@ -17847,7 +17981,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2925/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2864",
@@ -17865,7 +17999,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2864/",
     "city": "和歌山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-579",
@@ -17882,7 +18016,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/579/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2872",
@@ -17897,7 +18031,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2872/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2876",
@@ -17912,7 +18046,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2876/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2861",
@@ -17928,7 +18062,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2861/",
     "city": "西牟婁郡白浜町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2874",
@@ -17938,7 +18072,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2874/",
     "city": "伊都郡高野町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-582",
@@ -17948,7 +18082,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/582/",
     "city": "御坊市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-583",
@@ -17964,7 +18098,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/583/",
     "city": "有田市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-wakayama-2855",
@@ -17979,7 +18113,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2855/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-4713",
@@ -17992,8 +18126,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4713/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://gbg-sauna.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4713/"
   },
@@ -18008,8 +18142,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4722/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.ichinoyu-tentsauna.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4722/"
   },
@@ -18043,8 +18177,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4693/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://tottori-camppark.jp/sauna.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4693/"
   },
@@ -18082,8 +18216,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3590/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.ou-kaike.co.jp/?page_id=19",
     "officialUrlSource": "https://saunatime.jp/saunas/3590/"
   },
@@ -18094,7 +18228,7 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/717/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-720",
@@ -18107,8 +18241,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/720/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3594",
@@ -18121,8 +18255,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3594/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://pal-plus-on.com/facility/youipal/",
     "officialUrlSource": "https://saunatime.jp/saunas/3594/"
   },
@@ -18137,8 +18271,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3604/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3599",
@@ -18157,8 +18291,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3599/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotel-wellness.jp/houkiji/",
     "officialUrlSource": "https://saunatime.jp/saunas/3599/"
   },
@@ -18180,8 +18314,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3600/",
     "city": "鳥取市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-716",
@@ -18196,7 +18330,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/716/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3593",
@@ -18212,7 +18346,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3593/",
     "city": "境港市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3598",
@@ -18226,8 +18360,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3598/",
     "city": "東伯郡湯梨浜町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-718",
@@ -18241,8 +18375,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/718/",
     "city": "米子市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3597",
@@ -18252,7 +18386,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3597/",
     "city": "鳥取市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3591",
@@ -18272,8 +18406,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3591/",
     "city": "鳥取市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.shikano-net.com/day-spa/",
     "officialUrlSource": "https://saunatime.jp/saunas/3591/"
   },
@@ -18289,8 +18423,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3076/",
     "city": "米子市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.kaike-grandhotel.co.jp/kasuitei/bihadanoyu.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3076/"
   },
@@ -18312,8 +18446,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3592/",
     "city": "倉吉市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3603",
@@ -18327,8 +18461,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3603/",
     "city": "東伯郡三朝町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3569",
@@ -18342,8 +18476,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3569/",
     "city": "鳥取市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-2929",
@@ -18358,7 +18492,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2929/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3602",
@@ -18377,8 +18511,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3602/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://yukai-r.jp/kaike-saichoraku/#bath",
     "officialUrlSource": "https://saunatime.jp/saunas/3602/"
   },
@@ -18396,7 +18530,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3596/",
     "city": "米子市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "ikitai-tottori-yutani-so",
@@ -18433,8 +18567,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/719/",
     "city": "米子市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.ocean-g.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/719/"
   },
@@ -18456,8 +18590,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3562/",
     "city": "米子市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3601",
@@ -18467,7 +18601,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3601/",
     "city": "米子市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tottori-3595",
@@ -18480,8 +18614,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3595/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.yozyokan.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3595/"
   },
@@ -18507,7 +18641,8 @@ export const SEED_FACILITIES = [
       "外気あり",
       "宿泊可"
     ],
-    "trait": "award"
+    "trait": "award",
+    "officialUrl": "https://hotel-the-cliff.jp/sauna/"
   },
   {
     "id": "st-shimane-758",
@@ -18521,8 +18656,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/758/",
     "city": "雲南市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-2892",
@@ -18532,7 +18667,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2892/",
     "city": "出雲市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-755",
@@ -18545,8 +18680,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/755/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-757",
@@ -18559,8 +18694,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/757/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.richgarden.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/757/"
   },
@@ -18591,7 +18726,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/750/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-2931",
@@ -18600,7 +18735,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2931/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-764",
@@ -18609,7 +18744,7 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/764/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-751",
@@ -18625,7 +18760,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/751/",
     "city": "松江市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3616",
@@ -18641,7 +18776,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3616/",
     "city": "松江市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3612",
@@ -18656,7 +18791,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3612/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3613",
@@ -18672,7 +18807,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3613/",
     "city": "江津市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3607",
@@ -18681,7 +18816,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3607/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3608",
@@ -18697,7 +18832,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3608/",
     "city": "飯石郡飯南町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-756",
@@ -18712,7 +18847,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/756/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3606",
@@ -18730,7 +18865,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3606/",
     "city": "仁多郡奥出雲町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3617",
@@ -18741,7 +18876,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3617/",
     "city": "松江市 宿泊者限定",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3610",
@@ -18758,7 +18893,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3610/",
     "city": "松江市",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-754",
@@ -18774,7 +18909,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/754/",
     "city": "松江市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3618",
@@ -18783,7 +18918,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3618/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3605",
@@ -18792,7 +18927,7 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3605/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-753",
@@ -18808,7 +18943,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/753/",
     "city": "松江市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3614",
@@ -18819,7 +18954,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3614/",
     "city": "出雲市",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-2932",
@@ -18835,7 +18970,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2932/",
     "city": "出雲市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3609",
@@ -18852,7 +18987,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3609/",
     "city": "出雲市",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-766",
@@ -18868,7 +19003,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/766/",
     "city": "鹿足郡津和野町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-4662",
@@ -18881,8 +19016,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4662/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://shikisou.com/sauna/#1",
     "officialUrlSource": "https://saunatime.jp/saunas/4662/"
   },
@@ -18895,7 +19030,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3615/",
     "city": "松江市",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-shimane-3611",
@@ -18910,7 +19045,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3611/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-4818",
@@ -18927,8 +19062,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://hotters24.com/okayamaima/",
     "officialUrlSource": "https://saunatime.jp/saunas/4818/"
   },
@@ -18962,8 +19097,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/721/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://wonderfulresort.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/721/"
   },
@@ -18978,8 +19113,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/724/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.sauna-hw.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/724/"
   },
@@ -18990,7 +19125,7 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/722/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-729",
@@ -19006,7 +19141,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/729/",
     "city": "総社市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3636",
@@ -19022,7 +19157,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3636/",
     "city": "玉野市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3648",
@@ -19035,8 +19170,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3648/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://pokaon.net/guide/#guide_hotspring",
     "officialUrlSource": "https://saunatime.jp/saunas/3648/"
   },
@@ -19051,8 +19186,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4644/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotelabest-okayama.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4644/"
   },
@@ -19073,8 +19208,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/723/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-4892",
@@ -19087,8 +19222,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4892/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/tamashima/",
     "officialUrlSource": "https://saunatime.jp/saunas/4892/"
   },
@@ -19105,7 +19240,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3627/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-4591",
@@ -19119,8 +19254,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4591/",
     "city": "岡山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.honokanoyu.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4591/"
   },
@@ -19137,7 +19272,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3645/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3628",
@@ -19153,7 +19288,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3628/",
     "city": "新見市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3643",
@@ -19168,7 +19303,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3643/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3642",
@@ -19188,8 +19323,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3642/",
     "city": "倉敷市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-yamakou.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3642/"
   },
@@ -19205,8 +19340,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3644/",
     "city": "玉野市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.seto-tamanoyu.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3644/"
   },
@@ -19223,7 +19358,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3640/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-2926",
@@ -19242,8 +19377,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2926/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotespa.net/hotels/kurashiki/",
     "officialUrlSource": "https://saunatime.jp/saunas/2926/"
   },
@@ -19261,7 +19396,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/728/",
     "city": "倉敷市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3623",
@@ -19277,7 +19412,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3623/",
     "city": "岡山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3626",
@@ -19293,7 +19428,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3626/",
     "city": "英田郡西粟倉村",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3620",
@@ -19309,7 +19444,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3620/",
     "city": "美作市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3631",
@@ -19325,7 +19460,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3631/",
     "city": "真庭市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3650",
@@ -19344,7 +19479,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3650/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-4553",
@@ -19364,8 +19499,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4553/",
     "city": "真庭市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://hakkei-yubara.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4553/"
   },
@@ -19385,7 +19520,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3625/",
     "city": "真庭市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3622",
@@ -19401,7 +19536,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3622/",
     "city": "和気郡和気町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okayama-3632",
@@ -19420,7 +19555,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3632/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-4655",
@@ -19433,8 +19568,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4655/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.candeohotels.com/ja/hiroshima-hatchobori/",
     "officialUrlSource": "https://saunatime.jp/saunas/4655/"
   },
@@ -19455,8 +19590,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3544/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.inariyu.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3544/"
   },
@@ -19478,8 +19613,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/730/",
     "city": "福山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.mifuku-yu.co.jp/mobile/",
     "officialUrlSource": "https://saunatime.jp/saunas/730/"
   },
@@ -19498,8 +19633,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-762",
@@ -19516,8 +19651,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.grand-sauna.com/hiroshima/",
     "officialUrlSource": "https://saunatime.jp/saunas/762/"
   },
@@ -19538,8 +19673,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4249/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-4664",
@@ -19558,8 +19693,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4664/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://h-pacific.com/spakamenoya/",
     "officialUrlSource": "https://saunatime.jp/saunas/4664/"
   },
@@ -19580,8 +19715,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3533/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-3510",
@@ -19601,8 +19736,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3510/",
     "city": "福山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://yurara.ichifujinetwork.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3510/"
   },
@@ -19622,8 +19757,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4483/",
     "city": "広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://tidoriyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4483/"
   },
@@ -19638,8 +19773,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/761/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-3520",
@@ -19653,8 +19788,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3520/",
     "city": "東広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hotkamo.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3520/"
   },
@@ -19669,8 +19804,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4896/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/hiroshima-ballparktown/",
     "officialUrlSource": "https://saunatime.jp/saunas/4896/"
   },
@@ -19685,8 +19820,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4897/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/hiroshima-higashisenda/",
     "officialUrlSource": "https://saunatime.jp/saunas/4897/"
   },
@@ -19701,8 +19836,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4893/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/hiroshima-midorii/",
     "officialUrlSource": "https://saunatime.jp/saunas/4893/"
   },
@@ -19717,8 +19852,8 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4894/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/fukuyama-kasuga/",
     "officialUrlSource": "https://saunatime.jp/saunas/4894/"
   },
@@ -19733,8 +19868,8 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4895/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/fukuyama-tajime/",
     "officialUrlSource": "https://saunatime.jp/saunas/4895/"
   },
@@ -19756,8 +19891,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3511/",
     "city": "広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.honoyu.jp/ujina/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3511/"
   },
@@ -19781,8 +19916,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3538/",
     "city": "広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-3515",
@@ -19802,8 +19937,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3515/",
     "city": "広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://ondo-onsen.boo.jp/wordpress/?page_id=2",
     "officialUrlSource": "https://saunatime.jp/saunas/3515/"
   },
@@ -19825,8 +19960,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/733/",
     "city": "尾道市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.ononavi.jp/staying/spa/detail.html?detail_id=721",
     "officialUrlSource": "https://saunatime.jp/saunas/733/"
   },
@@ -19842,8 +19977,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3547/",
     "city": "福山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.sensuijima.jp/kokokara/top.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3547/"
   },
@@ -19865,8 +20000,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3530/",
     "city": "福山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://grannoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3530/"
   },
@@ -19887,8 +20022,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/760/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.yamato-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/760/"
   },
@@ -19910,8 +20045,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4610/",
     "city": "広島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-hiroshima-3539",
@@ -19930,8 +20065,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3539/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.yurari.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3539/"
   },
@@ -19952,8 +20087,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3513/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hanbe.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3513/"
   },
@@ -19975,8 +20110,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3535/",
     "city": "尾道市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://poppo.info/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3535/"
   },
@@ -19999,8 +20134,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3509/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.korona.co.jp/Onsen/fuy/Original/index.asp?Seq=1251&SubSeq=1",
     "officialUrlSource": "https://saunatime.jp/saunas/3509/"
   },
@@ -20021,8 +20156,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3525/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.manten-no-yu.net/",
     "officialUrlSource": "https://saunatime.jp/saunas/3525/"
   },
@@ -20037,8 +20172,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4634/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://shisetsu.mizuno.jp/m-7108",
     "officialUrlSource": "https://saunatime.jp/saunas/4634/"
   },
@@ -20060,8 +20195,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4624/",
     "city": "山陽小野田市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://extol-sanyo-onoda.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4624/"
   },
@@ -20076,8 +20211,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3677/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.kanponoyado.japanpost.jp/hikari/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3677/"
   },
@@ -20092,8 +20227,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3674/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://greenstay-nagaura.com/hoyoukan/",
     "officialUrlSource": "https://saunatime.jp/saunas/3674/"
   },
@@ -20108,8 +20243,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3671/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.sunshine-jp.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3671/"
   },
@@ -20130,8 +20265,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3669/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://kaminoseki.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3669/"
   },
@@ -20146,8 +20281,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/769/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.barden-mitsuo.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/769/"
   },
@@ -20163,8 +20298,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4631/",
     "city": "下関市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://s-kanrikousha.com/healthytop.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4631/"
   },
@@ -20179,8 +20314,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4650/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.newtanaka.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4650/"
   },
@@ -20199,8 +20334,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.route-inn.co.jp/hotel_list/yamaguchi/index_hotel_id_672/",
     "officialUrlSource": "https://saunatime.jp/saunas/4641/"
   },
@@ -20215,8 +20350,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4262/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://ppp.seika-spc.co.jp/upark-hikari/",
     "officialUrlSource": "https://saunatime.jp/saunas/4262/"
   },
@@ -20238,8 +20373,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4623/",
     "city": "萩市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://resorthotel-mihagi.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4623/"
   },
@@ -20254,8 +20389,8 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4920/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/tokuyama/",
     "officialUrlSource": "https://saunatime.jp/saunas/4920/"
   },
@@ -20277,8 +20412,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4632/",
     "city": "下関市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.shimonoseki-station-hotel.jp/index.php",
     "officialUrlSource": "https://saunatime.jp/saunas/4632/"
   },
@@ -20299,8 +20434,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4387/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-yamaguchi-3653",
@@ -20319,8 +20454,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3653/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.aioso.com/spa/",
     "officialUrlSource": "https://saunatime.jp/saunas/3653/"
   },
@@ -20343,8 +20478,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4299/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.rwn.jp/~tetsusei/op40/n30.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4299/"
   },
@@ -20360,8 +20495,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3665/",
     "city": "下松市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.oojou.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3665/"
   },
@@ -20386,8 +20521,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3672/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kamefuku.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3672/"
   },
@@ -20408,8 +20543,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3662/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://y-bekkan.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3662/"
   },
@@ -20424,8 +20559,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4621/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-yamaguchi-4298",
@@ -20447,8 +20582,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4298/",
     "city": "熊毛郡上関町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hatokonoyu.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4298/"
   },
@@ -20470,8 +20605,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/767/",
     "city": "周南市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.oidemase.or.jp/tourism-information/spots/13115",
     "officialUrlSource": "https://saunatime.jp/saunas/767/"
   },
@@ -20493,8 +20628,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/765/",
     "city": "山口市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.ganjojuonsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/765/"
   },
@@ -20515,8 +20650,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3652/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.toyota-hotaru.com/floormap/onsen/",
     "officialUrlSource": "https://saunatime.jp/saunas/3652/"
   },
@@ -20539,8 +20674,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3673/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.abucreation.com/facilities/onsen/",
     "officialUrlSource": "https://saunatime.jp/saunas/3673/"
   },
@@ -20562,8 +20697,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3655/",
     "city": "萩市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hagishi.com/search/detail.php?d=500016",
     "officialUrlSource": "https://saunatime.jp/saunas/3655/"
   },
@@ -20585,8 +20720,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4622/",
     "city": "萩市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hagihonjin.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4622/"
   },
@@ -20607,8 +20742,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/775/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://fukuq.web.fc2.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/775/"
   },
@@ -20623,8 +20758,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3656/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.town.suo-oshima.lg.jp/syoukoukankou/ryugasakionsen.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3656/"
   },
@@ -20645,8 +20780,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4383/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3685",
@@ -20662,7 +20797,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3685/",
     "city": "板野郡板野町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3696",
@@ -20675,8 +20810,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3696/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://aratae.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3696/"
   },
@@ -20695,7 +20830,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3703/",
     "city": "三好市",
     "image": "/assets/img/noimage.png",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3700",
@@ -20704,7 +20839,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3700/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-712",
@@ -20717,8 +20852,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/712/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3686",
@@ -20728,7 +20863,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3686/",
     "city": "三好市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3701",
@@ -20744,7 +20879,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3701/",
     "city": "美馬市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3691",
@@ -20760,7 +20895,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3691/",
     "city": "吉野川市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3702",
@@ -20775,7 +20910,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3702/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3693",
@@ -20784,7 +20919,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3693/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3679",
@@ -20799,7 +20934,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3679/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3689",
@@ -20815,7 +20950,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3689/",
     "city": "吉野川市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3690",
@@ -20831,7 +20966,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3690/",
     "city": "板野郡上板町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3694",
@@ -20846,7 +20981,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3694/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3695",
@@ -20864,7 +20999,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3695/",
     "city": "美馬郡つるぎ町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3697",
@@ -20880,7 +21015,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3697/",
     "city": "三好市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-4549",
@@ -20893,8 +21028,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4549/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-711",
@@ -20910,7 +21045,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/711/",
     "city": "徳島市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3681",
@@ -20925,7 +21060,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3681/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-4550",
@@ -20938,8 +21073,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4550/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3682",
@@ -20954,7 +21089,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3682/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3680",
@@ -20968,8 +21103,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3680/",
     "city": "徳島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.ebisunoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3680/"
   },
@@ -20987,7 +21122,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3688/",
     "city": "阿波市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3698",
@@ -21003,7 +21138,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3698/",
     "city": "阿波市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3687",
@@ -21018,7 +21153,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3687/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3684",
@@ -21034,7 +21169,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3684/",
     "city": "徳島市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-3683",
@@ -21050,7 +21185,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3683/",
     "city": "三好郡東みよし町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-tokushima-4564",
@@ -21064,8 +21199,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4564/",
     "city": "鳴門市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://aratae.jp/naruto/",
     "officialUrlSource": "https://saunatime.jp/saunas/4564/"
   },
@@ -21087,8 +21222,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3699/",
     "city": "海部郡美波町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-811",
@@ -21104,7 +21239,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/811/",
     "city": "高松市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3725",
@@ -21119,7 +21254,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3725/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3710",
@@ -21134,7 +21269,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3710/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3715",
@@ -21147,8 +21282,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3715/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://spa-kameria.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3715/"
   },
@@ -21159,7 +21294,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/714/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-736",
@@ -21176,8 +21311,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://goldentime-takamatsu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/736/"
   },
@@ -21196,8 +21331,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://first-inn.flips.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/737/"
   },
@@ -21214,7 +21349,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3712/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3576",
@@ -21230,7 +21365,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3576/",
     "city": "三豊市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3707",
@@ -21246,7 +21381,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3707/",
     "city": "三豊市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3727",
@@ -21260,8 +21395,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3727/",
     "city": "木田郡三木町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.tresta.jp/guide/spa.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3727/"
   },
@@ -21279,7 +21414,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3729/",
     "city": "高松市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3573",
@@ -21294,7 +21429,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3573/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-127",
@@ -21307,8 +21442,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/127/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.8411126.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/127/"
   },
@@ -21325,7 +21460,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3720/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-735",
@@ -21340,7 +21475,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/735/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3566",
@@ -21356,7 +21491,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3566/",
     "city": "丸亀市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-740",
@@ -21366,7 +21501,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/740/",
     "city": "観音寺市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3722",
@@ -21382,7 +21517,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3722/",
     "city": "高松市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3714",
@@ -21397,7 +21532,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3714/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-739",
@@ -21411,8 +21546,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/739/",
     "city": "綾歌郡宇多津町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kenkou-mura.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/739/"
   },
@@ -21427,8 +21562,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/44/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://karafuro.web.fc2.com/top.html",
     "officialUrlSource": "https://saunatime.jp/saunas/44/"
   },
@@ -21445,7 +21580,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3713/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3721",
@@ -21460,7 +21595,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3721/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3708",
@@ -21476,7 +21611,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3708/",
     "city": "高松市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3716",
@@ -21492,7 +21627,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3716/",
     "city": "仲多度郡琴平町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3726",
@@ -21507,7 +21642,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3726/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-713",
@@ -21522,7 +21657,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/713/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3728",
@@ -21531,7 +21666,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3728/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagawa-3574",
@@ -21549,7 +21684,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3574/",
     "city": "東かがわ市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-4404",
@@ -21562,8 +21697,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4404/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3769",
@@ -21577,8 +21712,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3769/",
     "city": "今治市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3785",
@@ -21587,7 +21722,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3785/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3731",
@@ -21601,8 +21736,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3731/",
     "city": "今治市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3744",
@@ -21622,8 +21757,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3744/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://takanokono.jp/hotspring/",
     "officialUrlSource": "https://saunatime.jp/saunas/3744/"
   },
@@ -21641,7 +21776,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3765/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-4253",
@@ -21655,8 +21790,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4253/",
     "city": "今治市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3732",
@@ -21670,8 +21805,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3732/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-4261",
@@ -21690,8 +21825,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4261/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3749",
@@ -21706,7 +21841,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3749/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3750",
@@ -21722,7 +21857,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3750/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3774",
@@ -21731,7 +21866,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3774/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3751",
@@ -21745,8 +21880,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3751/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.gonspa.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3751/"
   },
@@ -21764,7 +21899,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3755/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3810",
@@ -21780,7 +21915,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3810/",
     "city": "新居浜市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-4252",
@@ -21796,7 +21931,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4252/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3753",
@@ -21812,7 +21947,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3753/",
     "city": "大洲市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3746",
@@ -21828,7 +21963,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3746/",
     "city": "新居浜市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-4294",
@@ -21850,8 +21985,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4294/",
     "city": "北宇和郡松野町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://poppoonsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4294/"
   },
@@ -21869,7 +22004,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3808/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3737",
@@ -21884,7 +22019,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3737/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3740",
@@ -21903,8 +22038,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3740/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.seapa.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3740/"
   },
@@ -21928,8 +22063,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3788/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.fuji-ko.jp/toron/index.htm",
     "officialUrlSource": "https://saunatime.jp/saunas/3788/"
   },
@@ -21945,8 +22080,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3745/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.soratomori.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3745/"
   },
@@ -21963,7 +22098,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3784/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3771",
@@ -21979,7 +22114,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3771/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-ehime-3736",
@@ -21993,8 +22128,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3736/",
     "city": "今治市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://seseragi-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3736/"
   },
@@ -22016,8 +22151,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3730/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://teiregi.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3730/"
   },
@@ -22039,8 +22174,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3739/",
     "city": "松山市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://himehiko.jp/main/",
     "officialUrlSource": "https://saunatime.jp/saunas/3739/"
   },
@@ -22058,7 +22193,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3734/",
     "city": "西条市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3791",
@@ -22074,7 +22209,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3791/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4256",
@@ -22090,7 +22225,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4256/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-741",
@@ -22099,7 +22234,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/741/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-29",
@@ -22118,8 +22253,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/29/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.spa-rumor.co.jp/pricelist.html",
     "officialUrlSource": "https://saunatime.jp/saunas/29/"
   },
@@ -22137,7 +22272,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3806/",
     "city": "安芸郡田野町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3803",
@@ -22152,7 +22287,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3803/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3792",
@@ -22170,7 +22305,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3792/",
     "city": "高岡郡四万十町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-742",
@@ -22185,7 +22320,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/742/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3789",
@@ -22201,7 +22336,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3789/",
     "city": "高岡郡中土佐町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3804",
@@ -22217,7 +22352,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3804/",
     "city": "吾川郡いの町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-745",
@@ -22236,8 +22371,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/745/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4255",
@@ -22253,7 +22388,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4255/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3567",
@@ -22267,8 +22402,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3567/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3799",
@@ -22284,7 +22419,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3799/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3798",
@@ -22299,7 +22434,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3798/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3802",
@@ -22312,8 +22447,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3802/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4552",
@@ -22327,8 +22462,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4552/",
     "city": "宿毛市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://yashinoyu.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4552/"
   },
@@ -22345,7 +22480,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/744/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3801",
@@ -22359,8 +22494,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3801/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.jyoseikan.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3801/"
   },
@@ -22378,7 +22513,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4258/",
     "city": "四万十市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4257",
@@ -22394,7 +22529,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4257/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3794",
@@ -22410,7 +22545,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3794/",
     "city": "南国市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3793",
@@ -22426,7 +22561,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3793/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4659",
@@ -22439,8 +22574,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4659/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotespa.net/hotels/kochi/",
     "officialUrlSource": "https://saunatime.jp/saunas/4659/"
   },
@@ -22458,7 +22593,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3568/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3459",
@@ -22473,7 +22608,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3459/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-4371",
@@ -22487,8 +22622,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4371/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-747",
@@ -22504,7 +22639,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/747/",
     "city": "幡多郡黒潮町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kochi-3795",
@@ -22517,8 +22652,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3795/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://kochi-konoka.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3795/"
   },
@@ -22536,7 +22671,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3797/",
     "city": "香美市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "sc2025-sakurado",
@@ -22563,8 +22698,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4778/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://shiagaru-sauna.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4778/"
   },
@@ -22580,8 +22715,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4773/",
     "city": "福岡市 事前予約制",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-793",
@@ -22594,8 +22729,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/793/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-791",
@@ -22609,8 +22744,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/791/",
     "city": "福岡市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.wellbe.co.jp/fukuoka/",
     "officialUrlSource": "https://saunatime.jp/saunas/791/"
   },
@@ -22623,8 +22758,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4487/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.kanponoyado.japanpost.jp/yanagawa/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4487/"
   },
@@ -22643,8 +22778,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-4787",
@@ -22658,8 +22793,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4787/",
     "city": "福岡市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://yogan-sauna-fukuoka-tenjin.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4787/"
   },
@@ -22680,8 +22815,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/785/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-4390",
@@ -22701,8 +22836,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4390/",
     "city": "福岡市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://cabinas.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4390/"
   },
@@ -22723,8 +22858,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4399/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hotelnewgaea.com/nakasuhigashi/bath/",
     "officialUrlSource": "https://saunatime.jp/saunas/4399/"
   },
@@ -22746,8 +22881,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/797/",
     "city": "糸島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.mamushi-spa.co.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/797/"
   },
@@ -22769,8 +22904,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4402/",
     "city": "福岡市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-3841",
@@ -22789,8 +22924,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3841/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.rakunoyu.com/moji/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3841/"
   },
@@ -22805,8 +22940,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4925/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/aeonmall-fukuoka/",
     "officialUrlSource": "https://saunatime.jp/saunas/4925/"
   },
@@ -22821,8 +22956,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4924/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/kasuga/",
     "officialUrlSource": "https://saunatime.jp/saunas/4924/"
   },
@@ -22837,8 +22972,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4922/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/kokura/",
     "officialUrlSource": "https://saunatime.jp/saunas/4922/"
   },
@@ -22853,8 +22988,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4921/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/fukuoka-kashii/",
     "officialUrlSource": "https://saunatime.jp/saunas/4921/"
   },
@@ -22869,8 +23004,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4923/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/fukuoka-nishijin/",
     "officialUrlSource": "https://saunatime.jp/saunas/4923/"
   },
@@ -22885,8 +23020,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4926/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/fukuoka-ohashi/",
     "officialUrlSource": "https://saunatime.jp/saunas/4926/"
   },
@@ -22907,8 +23042,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4493/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hikosan-onsen.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4493/"
   },
@@ -22929,8 +23064,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/783/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://hananoyu-katano.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/783/"
   },
@@ -22951,8 +23086,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3818/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://hananoyu-hiburan.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3818/"
   },
@@ -22973,8 +23108,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3838/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.city.yanagawa.fukuoka.jp/kanko/onsen/onsen/haenkaze.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3838/"
   },
@@ -22996,8 +23131,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4490/",
     "city": "田川郡赤村",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.genjii.com/spa/spa_1.htm",
     "officialUrlSource": "https://saunatime.jp/saunas/4490/"
   },
@@ -23012,8 +23147,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4468/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-3840",
@@ -23027,8 +23162,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3840/",
     "city": "筑紫野市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://tenpainosato.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3840/"
   },
@@ -23050,8 +23185,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3819/",
     "city": "北九州市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-fukuoka-3816",
@@ -23070,8 +23205,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3816/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://tsukushinoyu.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3816/"
   },
@@ -23092,8 +23227,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3824/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://yushin-yu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3824/"
   },
@@ -23110,7 +23245,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3940/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3579",
@@ -23126,7 +23261,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3579/",
     "city": "唐津市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3941",
@@ -23146,8 +23281,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3941/",
     "city": "西松浦郡有田町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3583",
@@ -23169,8 +23304,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3583/",
     "city": "神埼郡吉野ヶ里町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3946",
@@ -23179,7 +23314,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3946/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3944",
@@ -23194,7 +23329,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3944/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-796",
@@ -23209,7 +23344,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/796/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3930",
@@ -23225,7 +23360,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3930/",
     "city": "伊万里市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-4478",
@@ -23237,8 +23372,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4478/",
     "city": "嬉野市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.taishoya.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4478/"
   },
@@ -23257,7 +23392,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3929/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3945",
@@ -23266,7 +23401,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3945/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3931",
@@ -23282,7 +23417,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3931/",
     "city": "三養基郡上峰町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-4473",
@@ -23294,8 +23429,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4473/",
     "city": "唐津市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.karatsu-kankou.jp/gourmet/detail/11/Gourmet",
     "officialUrlSource": "https://saunatime.jp/saunas/4473/"
   },
@@ -23313,7 +23448,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3934/",
     "city": "佐賀市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3942",
@@ -23331,7 +23466,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3942/",
     "city": "東松浦郡玄海町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3939",
@@ -23346,7 +23481,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3939/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "official-saga-mifuneyama-rakan",
@@ -23376,7 +23511,8 @@ export const SEED_FACILITIES = [
       "外気あり",
       "宿泊可"
     ],
-    "trait": "wood"
+    "trait": "wood",
+    "officialUrl": "https://www.mifuneyama.co.jp/rakan.html"
   },
   {
     "id": "st-saga-3571",
@@ -23390,8 +23526,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3571/",
     "city": "佐賀市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.pokaon-s.com/index.php",
     "officialUrlSource": "https://saunatime.jp/saunas/3571/"
   },
@@ -23407,8 +23543,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3948/",
     "city": "佐賀市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.amandi.jp/saga/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3948/"
   },
@@ -23430,8 +23566,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3933/",
     "city": "杵島郡大町町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://yutokuonsen.com/omachi.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3933/"
   },
@@ -23448,7 +23584,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3462/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3932",
@@ -23464,7 +23600,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3932/",
     "city": "佐賀市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3943",
@@ -23483,7 +23619,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3943/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-4477",
@@ -23494,8 +23630,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4477/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.takeo-kk.net/spa/001333.php",
     "officialUrlSource": "https://saunatime.jp/saunas/4477/"
   },
@@ -23510,8 +23646,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4389/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3587",
@@ -23531,8 +23667,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3587/",
     "city": "武雄市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.nanaironoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3587/"
   },
@@ -23550,7 +23686,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3937/",
     "city": "唐津市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3947",
@@ -23566,7 +23702,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3947/",
     "city": "唐津市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3935",
@@ -23581,7 +23717,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3935/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-saga-3938",
@@ -23590,7 +23726,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3938/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3960",
@@ -23599,7 +23735,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3960/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-4616",
@@ -23612,8 +23748,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4616/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.islandnagasaki.jp/spa/minato-spa.php",
     "officialUrlSource": "https://saunatime.jp/saunas/4616/"
   },
@@ -23628,8 +23764,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/801/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3950",
@@ -23644,7 +23780,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3950/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-805",
@@ -23653,7 +23789,7 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/805/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3980",
@@ -23666,8 +23802,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3980/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-4443",
@@ -23687,8 +23823,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4443/",
     "city": "彼杵郡波佐見町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://seisyunnosato.jp/onsen/",
     "officialUrlSource": "https://saunatime.jp/saunas/4443/"
   },
@@ -23709,8 +23845,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/840/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3961",
@@ -23725,7 +23861,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3961/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3955",
@@ -23741,7 +23877,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3955/",
     "city": "雲仙市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3966",
@@ -23750,7 +23886,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3966/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-4927",
@@ -23763,8 +23899,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4927/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/sasebo/",
     "officialUrlSource": "https://saunatime.jp/saunas/4927/"
   },
@@ -23779,8 +23915,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4928/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/nagasaki-cocowalk/",
     "officialUrlSource": "https://saunatime.jp/saunas/4928/"
   },
@@ -23804,8 +23940,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/843/",
     "city": "長崎市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3959",
@@ -23829,8 +23965,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3959/",
     "city": "長崎市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3978",
@@ -23845,7 +23981,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3978/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3954",
@@ -23858,8 +23994,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3954/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.miyazaki-ryokan.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3954/"
   },
@@ -23876,7 +24012,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/800/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3972",
@@ -23891,7 +24027,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3972/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-842",
@@ -23904,8 +24040,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/842/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www5.cncm.ne.jp/~koyokan/",
     "officialUrlSource": "https://saunatime.jp/saunas/842/"
   },
@@ -23921,8 +24057,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/841/",
     "city": "長崎市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3956",
@@ -23931,7 +24067,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3956/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-2935",
@@ -23944,8 +24080,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2935/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotespa.net/hotels/nagasaki/",
     "officialUrlSource": "https://saunatime.jp/saunas/2935/"
   },
@@ -23964,7 +24100,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3952/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-4385",
@@ -23984,8 +24120,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4385/",
     "city": "西海市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3071",
@@ -24000,7 +24136,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3071/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3949",
@@ -24015,7 +24151,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3949/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3963",
@@ -24030,7 +24166,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3963/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-3582",
@@ -24039,7 +24175,7 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3582/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-nagasaki-806",
@@ -24058,8 +24194,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/806/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.isahaya-greenhotel.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/806/"
   },
@@ -24091,8 +24227,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4528/",
     "city": "熊本市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://kuma1010.com/custom/400",
     "officialUrlSource": "https://saunatime.jp/saunas/4528/"
   },
@@ -24114,8 +24250,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4590/",
     "city": "熊本市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://tsurunoyu-onsen.com/kumamoto.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4590/"
   },
@@ -24130,8 +24266,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/832/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.dongurimura.info/onsen.html",
     "officialUrlSource": "https://saunatime.jp/saunas/832/"
   },
@@ -24147,8 +24283,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4527/",
     "city": "熊本市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.peaceful.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4527/"
   },
@@ -24164,8 +24300,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/838/",
     "city": "玉名郡玉東町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.town.gyokuto.kumamoto.jp/fureainooka/fureainooka.html",
     "officialUrlSource": "https://saunatime.jp/saunas/838/"
   },
@@ -24187,8 +24323,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4017/",
     "city": "天草市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://hotel-alegria.jp/perla/",
     "officialUrlSource": "https://saunatime.jp/saunas/4017/"
   },
@@ -24210,8 +24346,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/847/",
     "city": "熊本市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://the-ginza.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/847/"
   },
@@ -24232,8 +24368,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4615/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://skyclub.co.jp/hotel/skyhills/",
     "officialUrlSource": "https://saunatime.jp/saunas/4615/"
   },
@@ -24249,8 +24385,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/836/",
     "city": "合志市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://u-benten.net/",
     "officialUrlSource": "https://saunatime.jp/saunas/836/"
   },
@@ -24271,8 +24407,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/859/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.y-yurari.co.jp/page0101.html",
     "officialUrlSource": "https://saunatime.jp/saunas/859/"
   },
@@ -24287,8 +24423,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4930/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/kumamoto-gakuendaidori/",
     "officialUrlSource": "https://saunatime.jp/saunas/4930/"
   },
@@ -24303,8 +24439,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4929/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/kumamotominami/",
     "officialUrlSource": "https://saunatime.jp/saunas/4929/"
   },
@@ -24319,8 +24455,8 @@ export const SEED_FACILITIES = [
     "trait": "wood",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4931/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/kumamoto-hikarinomori/",
     "officialUrlSource": "https://saunatime.jp/saunas/4931/"
   },
@@ -24340,8 +24476,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4521/",
     "city": "阿蘇郡南阿蘇村",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://ruri.aso-hakusui.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4521/"
   },
@@ -24385,8 +24521,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4630/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://yunoeki.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4630/"
   },
@@ -24408,8 +24544,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4009/",
     "city": "菊池市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kumamoto-4546",
@@ -24426,8 +24562,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4546/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kumamoto-4006",
@@ -24446,8 +24582,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4006/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.shironoyu.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4006/"
   },
@@ -24468,8 +24604,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4040/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.aso-shikinomori.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4040/"
   },
@@ -24492,8 +24628,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4018/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.jonan-resort.jp/jonanspa/",
     "officialUrlSource": "https://saunatime.jp/saunas/4018/"
   },
@@ -24513,8 +24649,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4519/",
     "city": "菊池市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kumamoto-839",
@@ -24534,8 +24670,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/839/",
     "city": "玉名市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kusamakura.jp/kusa_on/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/839/"
   },
@@ -24556,8 +24692,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/860/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.town.taragi.lg.jp/gyousei/soshiki/chouminfukushi/ebisunoyu/148.html",
     "officialUrlSource": "https://saunatime.jp/saunas/860/"
   },
@@ -24579,8 +24715,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4024/",
     "city": "菊池郡菊陽町",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://seisei-kai.com/general",
     "officialUrlSource": "https://saunatime.jp/saunas/4024/"
   },
@@ -24593,8 +24729,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4524/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.chomeikan.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4524/"
   },
@@ -24615,8 +24751,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4557/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://tsujun-sanso.jp/spa.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4557/"
   },
@@ -24635,8 +24771,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kumamoto-849",
@@ -24650,8 +24786,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/849/",
     "city": "熊本市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.yasuyadocheck.com/kenko/ken/kumamoto/tomiai.html",
     "officialUrlSource": "https://saunatime.jp/saunas/849/"
   },
@@ -24682,7 +24818,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3863/",
     "city": "大分市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-787",
@@ -24698,7 +24834,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/787/",
     "city": "中津市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-821",
@@ -24737,7 +24873,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3867/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-3855",
@@ -24757,8 +24893,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3855/",
     "city": "別府市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.hyotan-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3855/"
   },
@@ -24773,8 +24909,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3865/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.taketan.jp/spots/detail/211",
     "officialUrlSource": "https://saunatime.jp/saunas/3865/"
   },
@@ -24795,8 +24931,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4453/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://hotel-nisseiya.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4453/"
   },
@@ -24814,7 +24950,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4266/",
     "city": "佐伯市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-3854",
@@ -24828,8 +24964,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3854/",
     "city": "竹田市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.lamune-onsen.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/3854/"
   },
@@ -24848,7 +24984,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3927/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-4932",
@@ -24861,8 +24997,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4932/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/oita/",
     "officialUrlSource": "https://saunatime.jp/saunas/4932/"
   },
@@ -24877,8 +25013,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4472/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.resonate.co.jp/relax/",
     "officialUrlSource": "https://saunatime.jp/saunas/4472/"
   },
@@ -24896,7 +25032,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/789/",
     "city": "豊後高田市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-3589",
@@ -24916,8 +25052,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3589/",
     "city": "竹田市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.gozenyu.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3589/"
   },
@@ -24936,7 +25072,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/808/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-827",
@@ -24956,8 +25092,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/827/",
     "city": "竹田市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.taketan.jp/spots/detail/40",
     "officialUrlSource": "https://saunatime.jp/saunas/827/"
   },
@@ -24973,8 +25109,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4716/",
     "city": "豊後高田市 事前予約制",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://nagasakibana-beach.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4716/"
   },
@@ -24995,8 +25131,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3852/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kajikaan.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3852/"
   },
@@ -25015,8 +25151,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4512/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://breezbay-group.com/tsurusaki-h/bath/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4512/"
   },
@@ -25038,8 +25174,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3856/",
     "city": "別府市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3856/"
   },
@@ -25058,7 +25194,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3868/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-oita-4465",
@@ -25078,8 +25214,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4465/",
     "city": "大分市 宿泊者限定",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotespa.net/hotels/oita/",
     "officialUrlSource": "https://saunatime.jp/saunas/4465/"
   },
@@ -25117,8 +25253,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3860/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.takenoi.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3860/"
   },
@@ -25143,8 +25279,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3857/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.suginoi-hotel.com/facilities/tanayu.html",
     "officialUrlSource": "https://saunatime.jp/saunas/3857/"
   },
@@ -25164,8 +25300,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4454/",
     "city": "別府市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://hoyoland.webcrow.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4454/"
   },
@@ -25186,8 +25322,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/816/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.toyonokuni-k.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/816/"
   },
@@ -25208,8 +25344,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/819/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail8.html",
     "officialUrlSource": "https://saunatime.jp/saunas/819/"
   },
@@ -25221,7 +25357,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3858/",
     "city": "別府市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4705",
@@ -25234,8 +25370,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4705/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://ala-tsuno.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4705/"
   },
@@ -25254,8 +25390,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotel-marix.co.jp/marix/marinova/",
     "officialUrlSource": "https://saunatime.jp/saunas/867/"
   },
@@ -25295,7 +25431,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4099/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-868",
@@ -25309,8 +25445,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/868/",
     "city": "宮崎市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotel-marix.co.jp/lagoon/spapawpaw/",
     "officialUrlSource": "https://saunatime.jp/saunas/868/"
   },
@@ -25321,7 +25457,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2936/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4267",
@@ -25331,7 +25467,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4267/",
     "city": "延岡市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4095",
@@ -25347,7 +25483,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4095/",
     "city": "都城市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4933",
@@ -25360,8 +25496,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4933/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.s-re.jp/miyazaki/",
     "officialUrlSource": "https://saunatime.jp/saunas/4933/"
   },
@@ -25376,8 +25512,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4078/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://kannon-sakura.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4078/"
   },
@@ -25398,8 +25534,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4461/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.miyazakicarferry.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4461/"
   },
@@ -25416,7 +25552,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4088/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-25",
@@ -25435,8 +25571,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/25/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.23-1111.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/25/"
   },
@@ -25452,8 +25588,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2886/",
     "city": "宮崎市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.aceland.jp/gokurakuyu/",
     "officialUrlSource": "https://saunatime.jp/saunas/2886/"
   },
@@ -25470,7 +25606,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4098/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4076",
@@ -25485,7 +25621,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4076/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-830",
@@ -25500,7 +25636,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/830/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-3581",
@@ -25520,8 +25656,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3581/",
     "city": "都城市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://nemunoki-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/3581/"
   },
@@ -25540,7 +25676,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4094/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4074",
@@ -25553,8 +25689,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4074/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-858",
@@ -25569,7 +25705,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/858/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4073",
@@ -25578,7 +25714,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4073/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4077",
@@ -25588,7 +25724,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4077/",
     "city": "宮崎市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-829",
@@ -25603,7 +25739,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/829/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4069",
@@ -25623,8 +25759,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4069/",
     "city": "都城市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-132",
@@ -25638,9 +25774,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/132/",
     "city": "西諸県郡高原町",
-    "sourceCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-10-19",
-    "officialUrl": "https://yunomoto.org/",
+    "officialUrl": "http://www.yunomoto.org/",
     "officialUrlSource": "https://saunatime.jp/saunas/132/"
   },
   {
@@ -25651,7 +25787,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/870/",
     "city": "小林市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4084",
@@ -25666,7 +25802,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4084/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-4097",
@@ -25679,8 +25815,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4097/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-miyazaki-879",
@@ -25696,7 +25832,7 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/879/",
     "city": "都城市",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-906",
@@ -25713,8 +25849,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4159",
@@ -25734,8 +25870,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4159/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://kaiseinoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4159/"
   },
@@ -25779,8 +25915,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/897/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://tanukiyu.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/897/"
   },
@@ -25791,7 +25927,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4305/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4160",
@@ -25805,8 +25941,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4160/",
     "city": "姶良市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://f-kamou.com/spa",
     "officialUrlSource": "https://saunatime.jp/saunas/4160/"
   },
@@ -25821,8 +25957,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/916/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://ppp.seika-spc.co.jp/kawanabe/",
     "officialUrlSource": "https://saunatime.jp/saunas/916/"
   },
@@ -25843,8 +25979,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/902/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4304",
@@ -25859,7 +25995,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4304/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-924",
@@ -25872,8 +26008,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/924/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.bigmarine.co.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/924/"
   },
@@ -25895,8 +26031,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/889/",
     "city": "姶良市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html",
     "officialUrlSource": "https://saunatime.jp/saunas/889/"
   },
@@ -25918,8 +26054,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4119/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.asikari-spa.com/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4119/"
   },
@@ -25941,8 +26077,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/907/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://kks-grp.jp/ipponsakura/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/907/"
   },
@@ -25957,8 +26093,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4639/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://porttower.net/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4639/"
   },
@@ -25973,8 +26109,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/925/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-899",
@@ -25994,8 +26130,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/899/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.tsumagari.jp/onoyu/",
     "officialUrlSource": "https://saunatime.jp/saunas/899/"
   },
@@ -26016,8 +26152,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/910/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/post-48.php",
     "officialUrlSource": "https://saunatime.jp/saunas/910/"
   },
@@ -26038,8 +26174,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/908/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php",
     "officialUrlSource": "https://saunatime.jp/saunas/908/"
   },
@@ -26050,7 +26186,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/915/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4556",
@@ -26070,8 +26206,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4556/",
     "city": "霧島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://kazokuyu-tenku.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4556/"
   },
@@ -26086,8 +26222,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4157/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4154",
@@ -26100,8 +26236,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4154/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://mecena-sueyoshi.com/onsen-takarabe/",
     "officialUrlSource": "https://saunatime.jp/saunas/4154/"
   },
@@ -26117,8 +26253,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4682/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.sanga-kagoshima.jp",
     "officialUrlSource": "https://saunatime.jp/saunas/4682/"
   },
@@ -26140,8 +26276,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/919/",
     "city": "指宿市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://ibusukikokoro.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/919/"
   },
@@ -26161,8 +26297,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4536/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.kagoshima-onsen1010.net/sento-map/post-53.php",
     "officialUrlSource": "https://saunatime.jp/saunas/4536/"
   },
@@ -26183,8 +26319,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/876/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://maedasangyo.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/876/"
   },
@@ -26203,7 +26339,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/922/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-kagoshima-4518",
@@ -26221,8 +26357,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4518/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://takezako-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4518/"
   },
@@ -26246,8 +26382,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4130/",
     "city": "鹿児島市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www13.plala.or.jp/chuzanonsen/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4130/"
   },
@@ -26268,8 +26404,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4116/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-4316",
@@ -26282,8 +26418,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4316/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.anaintercontinental-ishigaki.jp/facilities/#lnk_bath",
     "officialUrlSource": "https://saunatime.jp/saunas/4316/"
   },
@@ -26304,8 +26440,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2942/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "http://www.anacpokinawa.com/facilities/spa_sauna/index.html#mensnauna",
     "officialUrlSource": "https://saunatime.jp/saunas/2942/"
   },
@@ -26320,8 +26456,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/935/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.costavista.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/935/"
   },
@@ -26336,8 +26472,8 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4735/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.prostyleryokan.com/okinawa/terracenaha/",
     "officialUrlSource": "https://saunatime.jp/saunas/4735/"
   },
@@ -26352,8 +26488,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/116/",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.art-ishigakijima.com/facilities/bath.php",
     "officialUrlSource": "https://saunatime.jp/saunas/116/"
   },
@@ -26364,7 +26500,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/938/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-4312",
@@ -26373,7 +26509,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4312/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-939",
@@ -26424,8 +26560,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-2893",
@@ -26434,7 +26570,7 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2893/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-3984",
@@ -26694,7 +26830,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3986/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-11-08"
   },
   {
     "id": "st-okinawa-118",
@@ -26714,8 +26850,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/118/",
     "city": "豊見城市",
-    "sourceCheckedAt": "2026-10-18",
-    "addressCheckedAt": "2026-10-18",
+    "sourceCheckedAt": "2026-11-08",
+    "addressCheckedAt": "2026-11-08",
     "officialUrl": "https://www.hotelwbf.com/senaga/jp/hotbath/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/118/"
   },
