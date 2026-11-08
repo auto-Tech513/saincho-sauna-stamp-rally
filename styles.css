@@ -5176,6 +5176,51 @@ body {
   transform: translateY(0);
 }
 
+/* 「トップへ」ボタン: .main は内側スクロールコンテナのため OS 標準の
+   先頭へ戻る操作が効かない。一定量スクロールしたときだけ表示する。
+   位置はトーストと同じ基準線（下部ナビの上）で、トースト表示中は
+   トースト（z-index 40）が前面に出る。 */
+.back-to-top {
+  position: fixed;
+  z-index: 35;
+  right: 14px;
+  bottom: calc(var(--nav-height) + 12px + env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 16px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgb(16 20 23 / 0.92);
+  border: 1px solid rgb(255 255 255 / 0.14);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  animation: back-to-top-in 160ms ease;
+}
+
+.back-to-top[hidden] {
+  display: none;
+}
+
+.back-to-top-arrow {
+  font-size: 15px;
+  line-height: 1;
+}
+
+@keyframes back-to-top-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (min-width: 720px) {
   .main {
     padding: 18px 24px 0;
@@ -5743,6 +5788,11 @@ body {
     bottom: 18px;
     left: calc(var(--rail-width) + 18px);
     width: min(420px, calc(100% - var(--rail-width) - 36px));
+  }
+
+  .back-to-top {
+    right: 18px;
+    bottom: 18px;
   }
 }
 

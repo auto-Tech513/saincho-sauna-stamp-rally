@@ -5801,6 +5801,38 @@ function saveSettings() {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
 }
 
+// 「トップへ」ボタン: .main は内側スクロールコンテナなので、ブラウザ標準の
+// 先頭へ戻る操作（ステータスバーのタップ等）が効かない。約1画面分スクロール
+// したらボタンを出し、タップで先頭へ戻す。モーション抑制設定では即時移動。
+const backToTopButton = document.querySelector("#backToTop");
+if (backToTopButton?.addEventListener && el.main?.addEventListener) {
+  let backToTopTicking = false;
+  let backToTopShown = false;
+  const updateBackToTop = () => {
+    backToTopTicking = false;
+    // 状態が変わるときだけ DOM を書き換える（スクロール中の負荷を避ける）
+    const shouldShow = el.main.scrollTop >= 600;
+    if (shouldShow !== backToTopShown) {
+      backToTopShown = shouldShow;
+      backToTopButton.hidden = !shouldShow;
+    }
+  };
+  el.main.addEventListener(
+    "scroll",
+    () => {
+      if (!backToTopTicking) {
+        backToTopTicking = true;
+        requestAnimationFrame(updateBackToTop);
+      }
+    },
+    { passive: true },
+  );
+  backToTopButton.addEventListener("click", () => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    el.main.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+}
+
 function showToast(message) {
   clearTimeout(toastTimer);
   el.toast.textContent = message;
