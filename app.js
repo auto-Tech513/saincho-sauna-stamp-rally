@@ -1205,6 +1205,16 @@ function bindEvents() {
     });
   });
 
+  document.addEventListener("click", (event) => {
+    const photoLink = event.target instanceof Element ? event.target.closest("[data-photo-link]") : null;
+    if (!photoLink) return;
+    track("photo_link_click", {
+      facility_id: photoLink.dataset.id || "",
+      prefecture: photoLink.dataset.prefecture || "",
+      surface: "app_detail",
+    });
+  });
+
   document.querySelectorAll("[data-filter]").forEach((button) => {
     button.addEventListener("click", () => {
       activeFilter = button.dataset.filter;
@@ -2431,7 +2441,7 @@ function renderFacilityDetail() {
         </dl>
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページの項目を取得" : "掲載した公式情報を照合"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
         ${getMissingEvidenceFields(facility).length ? `<details class="facility-disclosure"><summary>掲載範囲・未確認項目</summary><p>未確認: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。未掲載は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
-        <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
+        <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
         <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
       </section>
@@ -5217,6 +5227,23 @@ function getNearbySameshiUrl(facility) {
   url.searchParams.set("api", "1");
   url.searchParams.set("query", query || `${facility.name} 飲食店`);
   return url.href;
+}
+
+function getFacilityPhotoUrl(facility) {
+  const query = [facility.name, getFacilityAddress(facility) || facility.city, facility.prefecture]
+    .filter(Boolean)
+    .join(" ");
+  if (!query) return "";
+  const url = new URL("https://www.google.com/maps/search/");
+  url.searchParams.set("api", "1");
+  url.searchParams.set("query", query);
+  return url.href;
+}
+
+function renderFacilityPhotoLink(facility) {
+  const url = getFacilityPhotoUrl(facility);
+  if (!url) return "";
+  return `<a class="source-badge source-badge-photo" href="${escapeAttr(url)}" target="_blank" rel="noreferrer" data-photo-link data-id="${escapeAttr(facility.id)}" data-prefecture="${escapeAttr(facility.prefecture || "")}">写真を見る（Googleマップ）↗</a>`;
 }
 
 function renderLodgingLinks(facility) {

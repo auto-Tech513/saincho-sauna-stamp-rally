@@ -110,3 +110,12 @@ test("saunachelin award queries resolve to the tagged facilities only", () => {
   assert.doesNotMatch(sourceOnlyBadge, /公式サイト/);
   assert.match(sourceOnlyBadge, />SaunaTime</);
 });
+test("facility photo link points to a Google Maps search and photo-less facilities use the SVG fallback", () => {
+  const link = vm.runInContext(`renderFacilityPhotoLink({ id: "photo-1", name: "テストの湯", prefecture: "富山県", city: "富山市" })`, context);
+  assert.match(link, />写真を見る（Googleマップ）↗</);
+  assert.match(link, /href="https:\/\/www\.google\.com\/maps\/search\/\?api=1&amp;query=/);
+  assert.match(link, /data-photo-link/);
+  assert.match(link, /data-id="photo-1"/);
+  const photo = vm.runInContext(`getFacilityPhoto({ id: "photo-2", name: "プレースホルダの湯", prefecture: "富山県" })`, context);
+  assert.equal(photo.isFallback, true);
+});

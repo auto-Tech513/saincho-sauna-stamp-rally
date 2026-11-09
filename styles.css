@@ -9181,3 +9181,10 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   font-weight: 700;
   letter-spacing: 0.02em;
 }
+
+/* 写真リンク導線（2026-11-09）: 詳細のリンク行では隣の公式リンクと同じテキストリンク形式に揃える。実写真の表示枠ではない */
+.source-badge-photo {
+  color: var(--primary);
+  background: transparent;
+  box-shadow: none;
+}

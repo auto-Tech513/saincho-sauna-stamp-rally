@@ -3291,7 +3291,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1379/",
     "city": "鶴岡市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-04"
   },
   {
@@ -9361,7 +9360,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4351/",
     "city": "坂井市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-04"
   },
   {
@@ -17894,7 +17892,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2852/",
     "city": "西牟婁郡白浜町",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -18874,7 +18871,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3617/",
     "city": "松江市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -18891,7 +18887,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3610/",
     "city": "松江市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -18952,7 +18947,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3614/",
     "city": "出雲市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -18985,7 +18979,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3609/",
     "city": "出雲市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -19028,7 +19021,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3615/",
     "city": "松江市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -20828,7 +20820,6 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3703/",
     "city": "三好市",
-    "image": "/assets/img/noimage.png",
     "sourceCheckedAt": "2026-11-08"
   },
   {
@@ -35454,8 +35445,7 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2313",
-    "image": "/assets/img/noimage.png"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2313"
   },
   {
     "id": "si-tottori-4709",
@@ -46370,7 +46360,6 @@ export const SEED_FACILITIES = [
     "name": "南紀白浜 浜千鳥の湯 海舟",
     "prefecture": "和歌山県",
     "city": "西牟婁郡白浜町",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "features": [
       "外気あり"
@@ -51763,7 +51752,6 @@ export const SEED_FACILITIES = [
     "name": "ホトリニテ hotorinite",
     "prefecture": "山梨県",
     "city": "山梨市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/9256"
@@ -53368,7 +53356,6 @@ export const SEED_FACILITIES = [
     "name": "みよしのオートキャンプ場",
     "prefecture": "奈良県",
     "city": "吉野郡黒滝村 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/55621"
@@ -53378,7 +53365,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル べんきょう部屋",
     "prefecture": "奈良県",
     "city": "奈良市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -53400,7 +53386,6 @@ export const SEED_FACILITIES = [
     "name": "Shangri-La sauna",
     "prefecture": "奈良県",
     "city": "御所市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/82358"
@@ -53428,7 +53413,6 @@ export const SEED_FACILITIES = [
     "name": "竹林院群芳園",
     "prefecture": "奈良県",
     "city": "吉野郡吉野町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/13138"
@@ -53462,7 +53446,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル ふしぎの口(フシギノクニ)奈良",
     "prefecture": "奈良県",
     "city": "奈良市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -53626,7 +53609,6 @@ export const SEED_FACILITIES = [
     "name": "湯快リゾートプレミアム 白浜御苑",
     "prefecture": "和歌山県",
     "city": "西牟婁郡白浜町",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/7734"
@@ -53672,7 +53654,6 @@ export const SEED_FACILITIES = [
     "name": "皆生 游月",
     "prefecture": "鳥取県",
     "city": "米子市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/9216"
@@ -53744,7 +53725,6 @@ export const SEED_FACILITIES = [
     "name": "シャトーおだか",
     "prefecture": "鳥取県",
     "city": "米子市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11965"
@@ -53787,7 +53767,6 @@ export const SEED_FACILITIES = [
     "name": "ホリデイスポーツクラブ 米子",
     "prefecture": "鳥取県",
     "city": "米子市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10492"
@@ -53797,7 +53776,6 @@ export const SEED_FACILITIES = [
     "name": "ニュービジネスホテル アルファー",
     "prefecture": "鳥取県",
     "city": "倉吉市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "tags": [
       "男性専用"
@@ -53813,7 +53791,6 @@ export const SEED_FACILITIES = [
     "name": "米子ユニバーサルホテル 駅前",
     "prefecture": "鳥取県",
     "city": "米子市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -53835,7 +53812,6 @@ export const SEED_FACILITIES = [
     "name": "和荘むくげ",
     "prefecture": "鳥取県",
     "city": "境港市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/53872"
@@ -53845,7 +53821,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル ツインビー",
     "prefecture": "鳥取県",
     "city": "東伯郡琴浦町",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -53858,7 +53833,6 @@ export const SEED_FACILITIES = [
     "name": "倉吉シティホテル",
     "prefecture": "鳥取県",
     "city": "倉吉市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "tags": [
       "男性専用"
@@ -53916,7 +53890,6 @@ export const SEED_FACILITIES = [
     "name": "グリーンリッチホテル 浜田駅前",
     "prefecture": "島根県",
     "city": "浜田市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -53998,7 +53971,6 @@ export const SEED_FACILITIES = [
     "name": "湯迫温泉旅館",
     "prefecture": "島根県",
     "city": "大田市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き",
@@ -54772,7 +54744,6 @@ export const SEED_FACILITIES = [
     "name": "センチュリープラザホテル(フィットネスクラブ セレ)",
     "prefecture": "徳島県",
     "city": "徳島市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -55908,7 +55879,6 @@ export const SEED_FACILITIES = [
     "name": "琴乃湯 (ホテルオークラJRハウステンボス)",
     "prefecture": "長崎県",
     "city": "佐世保市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -60255,7 +60225,6 @@ export const SEED_FACILITIES = [
     "name": "アズイン福井",
     "prefecture": "福井県",
     "city": "福井市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10886"
@@ -60301,7 +60270,6 @@ export const SEED_FACILITIES = [
     "name": "水杜のすみか 大野屋",
     "prefecture": "福井県",
     "city": "大野市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81899"
@@ -60345,7 +60313,6 @@ export const SEED_FACILITIES = [
     "name": "BLUESQUARE",
     "prefecture": "福井県",
     "city": "福井市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/83738"
@@ -61448,7 +61415,6 @@ export const SEED_FACILITIES = [
     "name": "クインテッサホテル伊勢志摩 湯とりえ",
     "prefecture": "三重県",
     "city": "志摩市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -61527,7 +61493,6 @@ export const SEED_FACILITIES = [
     "name": "醸し風呂 九.",
     "prefecture": "滋賀県",
     "city": "近江八幡市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/46051"
@@ -61609,7 +61574,6 @@ export const SEED_FACILITIES = [
     "name": "びわ湖畔 味覚の宿 双葉荘",
     "prefecture": "滋賀県",
     "city": "彦根市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -62137,7 +62101,6 @@ export const SEED_FACILITIES = [
     "name": "奈良ホテル",
     "prefecture": "奈良県",
     "city": "奈良市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62150,7 +62113,6 @@ export const SEED_FACILITIES = [
     "name": "フィットネスクラブ コ・ス・パ 西大寺",
     "prefecture": "奈良県",
     "city": "奈良市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/9068"
@@ -62160,7 +62122,6 @@ export const SEED_FACILITIES = [
     "name": "三郷町ウォーターパーク",
     "prefecture": "奈良県",
     "city": "生駒郡三郷町 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/6618"
@@ -62191,7 +62152,6 @@ export const SEED_FACILITIES = [
     "name": "デュラクスアウトドアリゾート冒険の森やまぞえ",
     "prefecture": "奈良県",
     "city": "山辺郡山添村 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -62204,7 +62164,6 @@ export const SEED_FACILITIES = [
     "name": "ウェルネス新庄(葛城市体力づくりセンター)",
     "prefecture": "奈良県",
     "city": "葛城市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/14701"
@@ -62214,7 +62173,6 @@ export const SEED_FACILITIES = [
     "name": "十津川 湯泉地温泉 湯乃谷 千慶",
     "prefecture": "奈良県",
     "city": "吉野郡十津川村 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き",
@@ -62237,7 +62195,6 @@ export const SEED_FACILITIES = [
     "name": "GLAMPING GATE 奈良",
     "prefecture": "奈良県",
     "city": "奈良市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81636"
@@ -62259,7 +62216,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルエソール",
     "prefecture": "奈良県",
     "city": "奈良市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62272,7 +62228,6 @@ export const SEED_FACILITIES = [
     "name": "奈良市西部生涯スポーツセンター",
     "prefecture": "奈良県",
     "city": "奈良市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/12043"
@@ -62291,7 +62246,6 @@ export const SEED_FACILITIES = [
     "name": "ニッセイ・アーク西大和",
     "prefecture": "奈良県",
     "city": "北葛城郡河合町 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11387"
@@ -62301,7 +62255,6 @@ export const SEED_FACILITIES = [
     "name": "ホリデイスポーツクラブ 大和高田",
     "prefecture": "奈良県",
     "city": "大和高田市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10582"
@@ -62311,7 +62264,6 @@ export const SEED_FACILITIES = [
     "name": "ホリデイスポーツクラブ 奈良",
     "prefecture": "奈良県",
     "city": "奈良市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10319"
@@ -62330,7 +62282,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルチョコレ御所店",
     "prefecture": "奈良県",
     "city": "御所市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62424,7 +62375,6 @@ export const SEED_FACILITIES = [
     "name": "An Eland エランド～グランドーム和歌山白浜",
     "prefecture": "和歌山県",
     "city": "西牟婁郡白浜町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/37971"
@@ -62434,7 +62384,6 @@ export const SEED_FACILITIES = [
     "name": "おとなしの郷 渡瀬緑の広場キャンプ場",
     "prefecture": "和歌山県",
     "city": "田辺市",
-    "image": "/assets/img/noimage.png",
     "trait": "wood",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/49351"
@@ -62470,7 +62419,6 @@ export const SEED_FACILITIES = [
     "name": "HOTEL MYTH U(ホテル マイス ユー)",
     "prefecture": "和歌山県",
     "city": "和歌山市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62483,7 +62431,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルベルヴェデーレ",
     "prefecture": "和歌山県",
     "city": "西牟婁郡すさみ町",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62496,7 +62443,6 @@ export const SEED_FACILITIES = [
     "name": "Maruta 和歌山すさみ",
     "prefecture": "和歌山県",
     "city": "西牟婁郡すさみ町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81634"
@@ -62515,7 +62461,6 @@ export const SEED_FACILITIES = [
     "name": "In the Outdoor白浜志原海岸",
     "prefecture": "和歌山県",
     "city": "西牟婁郡白浜町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -62537,7 +62482,6 @@ export const SEED_FACILITIES = [
     "name": "コナミスポーツクラブ米子",
     "prefecture": "鳥取県",
     "city": "米子市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/2277"
@@ -62547,7 +62491,6 @@ export const SEED_FACILITIES = [
     "name": "ゼロスポーツ",
     "prefecture": "鳥取県",
     "city": "鳥取市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11562"
@@ -62557,7 +62500,6 @@ export const SEED_FACILITIES = [
     "name": "南部町 総合福祉センターしあわせ",
     "prefecture": "鳥取県",
     "city": "西伯郡南部町 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10261"
@@ -62591,7 +62533,6 @@ export const SEED_FACILITIES = [
     "name": "三朝ロイヤルホテル",
     "prefecture": "鳥取県",
     "city": "東伯郡三朝町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62604,7 +62545,6 @@ export const SEED_FACILITIES = [
     "name": "フィットネスクラブパジャ鳥取",
     "prefecture": "鳥取県",
     "city": "鳥取市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11502"
@@ -62614,7 +62554,6 @@ export const SEED_FACILITIES = [
     "name": "ホリデイスポーツクラブ 鳥取",
     "prefecture": "鳥取県",
     "city": "鳥取市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/10491"
@@ -62624,7 +62563,6 @@ export const SEED_FACILITIES = [
     "name": "湖泉閣 養生館",
     "prefecture": "鳥取県",
     "city": "東伯郡湯梨浜町",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "features": [
       "外気あり"
@@ -62680,7 +62618,6 @@ export const SEED_FACILITIES = [
     "name": "琴引ビレッジ山荘",
     "prefecture": "島根県",
     "city": "飯石郡飯南町",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/51661"
@@ -62699,7 +62636,6 @@ export const SEED_FACILITIES = [
     "name": "出雲ドーム健康温泉",
     "prefecture": "島根県",
     "city": "出雲市",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "features": [
       "温泉付き"
@@ -62742,7 +62678,6 @@ export const SEED_FACILITIES = [
     "name": "WINDY FARM ATMOSPHERE",
     "prefecture": "島根県",
     "city": "出雲市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/78894"
@@ -62752,7 +62687,6 @@ export const SEED_FACILITIES = [
     "name": "グリーンリッチホテル出雲",
     "prefecture": "島根県",
     "city": "出雲市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -62774,7 +62708,6 @@ export const SEED_FACILITIES = [
     "name": "玉造Hotel煌",
     "prefecture": "島根県",
     "city": "松江市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/62881"
@@ -62802,7 +62735,6 @@ export const SEED_FACILITIES = [
     "name": "EXTRAORDINARY PLACE MOTOSHIMA",
     "prefecture": "島根県",
     "city": "松江市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/82181"
@@ -62932,7 +62864,6 @@ export const SEED_FACILITIES = [
     "name": "COVO USHIMADO コヴォ牛窓",
     "prefecture": "岡山県",
     "city": "瀬戸内市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81596"
@@ -63319,7 +63250,6 @@ export const SEED_FACILITIES = [
     "name": "コーポ末広 201号室",
     "prefecture": "山口県",
     "city": "宇部市 事前予約制",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/91096"
@@ -63369,7 +63299,6 @@ export const SEED_FACILITIES = [
     "name": "BAYFRONT VILLA TAMATE",
     "prefecture": "徳島県",
     "city": "阿南市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/83777"
@@ -63391,7 +63320,6 @@ export const SEED_FACILITIES = [
     "name": "清光湯",
     "prefecture": "徳島県",
     "city": "阿南市",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "tags": [
       "男性専用"
@@ -63425,7 +63353,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルサンシャイン徳島",
     "prefecture": "徳島県",
     "city": "徳島市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "tags": [
       "男性専用"
@@ -63441,7 +63368,6 @@ export const SEED_FACILITIES = [
     "name": "ふれあい健康館",
     "prefecture": "徳島県",
     "city": "徳島市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/93439"
@@ -63451,7 +63377,6 @@ export const SEED_FACILITIES = [
     "name": "阿南プラザイン",
     "prefecture": "徳島県",
     "city": "阿南市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "tags": [
       "男性専用"
@@ -63464,7 +63389,6 @@ export const SEED_FACILITIES = [
     "name": "OKスポーツクラブ田宮",
     "prefecture": "徳島県",
     "city": "徳島市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/7512"
@@ -63474,7 +63398,6 @@ export const SEED_FACILITIES = [
     "name": "結プロジェクト(千年乃宿旧高木邸・ お食事処ゆいね・府能商店)",
     "prefecture": "徳島県",
     "city": "名東郡佐那河内村 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/78232"
@@ -63493,7 +63416,6 @@ export const SEED_FACILITIES = [
     "name": "HOTEL MYTH 777",
     "prefecture": "徳島県",
     "city": "板野郡松茂町",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11393"
@@ -63503,7 +63425,6 @@ export const SEED_FACILITIES = [
     "name": "祖谷渓グランピングTOMORI",
     "prefecture": "徳島県",
     "city": "三好市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/119967"
@@ -63531,7 +63452,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル 一休さん",
     "prefecture": "徳島県",
     "city": "美馬市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -63544,7 +63464,6 @@ export const SEED_FACILITIES = [
     "name": "HOTEL ANRA",
     "prefecture": "徳島県",
     "city": "徳島市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/26119"
@@ -63632,7 +63551,6 @@ export const SEED_FACILITIES = [
     "name": "千年オリーブテラス tou",
     "prefecture": "香川県",
     "city": "小豆郡土庄町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -63693,7 +63611,6 @@ export const SEED_FACILITIES = [
     "name": "穴吹邸",
     "prefecture": "香川県",
     "city": "高松市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/39121"
@@ -63715,7 +63632,6 @@ export const SEED_FACILITIES = [
     "name": "琴平グランドホテル桜の抄",
     "prefecture": "香川県",
     "city": "仲多度郡琴平町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -63866,7 +63782,6 @@ export const SEED_FACILITIES = [
     "name": "瀬戸内リトリート青凪",
     "prefecture": "愛媛県",
     "city": "松山市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/4479"
@@ -63958,7 +63873,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルクラウンヒルズ中村",
     "prefecture": "高知県",
     "city": "四万十市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -64001,7 +63915,6 @@ export const SEED_FACILITIES = [
     "name": "CLIFF VILLA",
     "prefecture": "高知県",
     "city": "香南市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81768"
@@ -64032,7 +63945,6 @@ export const SEED_FACILITIES = [
     "name": "HOTEL MYTH NANGOKU (ホテルマイス 南国)",
     "prefecture": "高知県",
     "city": "南国市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -64045,7 +63957,6 @@ export const SEED_FACILITIES = [
     "name": "リヴィラスパーク宇佐",
     "prefecture": "高知県",
     "city": "土佐市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "個室",
@@ -64060,7 +63971,6 @@ export const SEED_FACILITIES = [
     "name": "星ふるヴィレッジTENGU",
     "prefecture": "高知県",
     "city": "高岡郡津野町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/51067"
@@ -64070,7 +63980,6 @@ export const SEED_FACILITIES = [
     "name": "ヨネッツこうち",
     "prefecture": "高知県",
     "city": "高知市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/12931"
@@ -64080,7 +63989,6 @@ export const SEED_FACILITIES = [
     "name": "リゾートホテル海辺の果樹園",
     "prefecture": "高知県",
     "city": "香南市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可",
@@ -64115,7 +64023,6 @@ export const SEED_FACILITIES = [
     "name": "ザ クラウンパレス新阪急高知",
     "prefecture": "高知県",
     "city": "高知市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/12085"
@@ -64125,7 +64032,6 @@ export const SEED_FACILITIES = [
     "name": "スポーツクラブZEYO",
     "prefecture": "高知県",
     "city": "南国市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11286"
@@ -64135,7 +64041,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル高砂",
     "prefecture": "高知県",
     "city": "高知市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -64425,7 +64330,6 @@ export const SEED_FACILITIES = [
     "name": "嬉野温泉 宿屋うちろじ",
     "prefecture": "佐賀県",
     "city": "嬉野市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き"
@@ -64510,7 +64414,6 @@ export const SEED_FACILITIES = [
     "name": "YOCOZO HOTEL & RESORT",
     "prefecture": "佐賀県",
     "city": "唐津市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/85915"
@@ -64532,7 +64435,6 @@ export const SEED_FACILITIES = [
     "name": "三瀬高原キャンプ場",
     "prefecture": "佐賀県",
     "city": "佐賀市 事前予約制",
-    "image": "/assets/img/noimage.png",
     "trait": "wood",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/82350"
@@ -64734,7 +64636,6 @@ export const SEED_FACILITIES = [
     "name": "Kikka Hirado",
     "prefecture": "長崎県",
     "city": "平戸市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81992"
@@ -65242,7 +65143,6 @@ export const SEED_FACILITIES = [
     "name": "NOT A HOTEL AOSHIMA",
     "prefecture": "宮崎県",
     "city": "宮崎市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/78564"
@@ -65303,7 +65203,6 @@ export const SEED_FACILITIES = [
     "name": "みんなのサウナ ふなの湯",
     "prefecture": "宮崎県",
     "city": "延岡市",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/119191"
@@ -66224,7 +66123,6 @@ export const SEED_FACILITIES = [
     "name": "グランピングLCO-resort",
     "prefecture": "岩手県",
     "city": "滝沢市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/81629"
@@ -66273,7 +66171,6 @@ export const SEED_FACILITIES = [
     "name": "ANAクラウンプラザリゾート安比高原",
     "prefecture": "岩手県",
     "city": "八幡平市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/478"
@@ -66765,7 +66662,6 @@ export const SEED_FACILITIES = [
     "name": "上杉の御湯 御殿守",
     "prefecture": "山形県",
     "city": "南陽市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/8122"
@@ -66793,7 +66689,6 @@ export const SEED_FACILITIES = [
     "name": "庄内あつみ温泉 高見屋別邸 久遠",
     "prefecture": "山形県",
     "city": "鶴岡市",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "features": [
       "温泉付き"
@@ -66815,7 +66710,6 @@ export const SEED_FACILITIES = [
     "name": "白川サウナ",
     "prefecture": "山形県",
     "city": "西置賜郡飯豊町 事前予約制",
-    "image": "/assets/img/noimage.png",
     "trait": "wood",
     "features": [
       "外気あり"
@@ -66828,7 +66722,6 @@ export const SEED_FACILITIES = [
     "name": "湯野浜温泉 游水亭いさごや",
     "prefecture": "山形県",
     "city": "鶴岡市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き"
@@ -66841,7 +66734,6 @@ export const SEED_FACILITIES = [
     "name": "アンダの森 山形天童店",
     "prefecture": "山形県",
     "city": "天童市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -66854,7 +66746,6 @@ export const SEED_FACILITIES = [
     "name": "総合スポーツクラブ トップロード",
     "prefecture": "山形県",
     "city": "山形市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/7444"
@@ -66864,7 +66755,6 @@ export const SEED_FACILITIES = [
     "name": "ホテルイン酒田",
     "prefecture": "山形県",
     "city": "酒田市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "tags": [
       "男性専用"
@@ -67442,7 +67332,6 @@ export const SEED_FACILITIES = [
     "name": "那須 大蛇尾渓谷「龍の国」オートキャンプ場",
     "prefecture": "栃木県",
     "city": "那須塩原市",
-    "image": "/assets/img/noimage.png",
     "trait": "wood",
     "features": [
       "外気あり"
@@ -67519,7 +67408,6 @@ export const SEED_FACILITIES = [
     "name": "温泉グランピング シマブルー",
     "prefecture": "群馬県",
     "city": "吾妻郡中之条町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き"
@@ -67666,7 +67554,6 @@ export const SEED_FACILITIES = [
     "name": "源泉湯の宿 松乃井",
     "prefecture": "群馬県",
     "city": "利根郡みなかみ町",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "温泉付き"
@@ -69093,7 +68980,6 @@ export const SEED_FACILITIES = [
     "name": "ズックのサウナ",
     "prefecture": "石川県",
     "city": "鳳珠郡能登町",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11332"
@@ -69124,7 +69010,6 @@ export const SEED_FACILITIES = [
     "name": "料理旅館 平成",
     "prefecture": "福井県",
     "city": "丹生郡越前町 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -69137,7 +69022,6 @@ export const SEED_FACILITIES = [
     "name": "ぐらばあ亭",
     "prefecture": "福井県",
     "city": "あわら市",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "tags": [
       "男性専用"
@@ -69162,7 +69046,6 @@ export const SEED_FACILITIES = [
     "name": "十楽の森",
     "prefecture": "福井県",
     "city": "あわら市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "外気あり"
@@ -69175,7 +69058,6 @@ export const SEED_FACILITIES = [
     "name": "ルネッス福井南店",
     "prefecture": "福井県",
     "city": "福井市 会員のみ",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/11071"
@@ -69185,7 +69067,6 @@ export const SEED_FACILITIES = [
     "name": "ホテル ミラージュ小浜",
     "prefecture": "福井県",
     "city": "小浜市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "features": [
       "宿泊可"
@@ -69225,7 +69106,6 @@ export const SEED_FACILITIES = [
     "name": "国民宿舎 鷹巣荘",
     "prefecture": "福井県",
     "city": "福井市",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/82304"
@@ -69235,7 +69115,6 @@ export const SEED_FACILITIES = [
     "name": "ゆ楽",
     "prefecture": "福井県",
     "city": "あわら市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/44962"
@@ -69290,7 +69169,6 @@ export const SEED_FACILITIES = [
     "name": "Rakuten STAY あわら温泉",
     "prefecture": "福井県",
     "city": "あわら市",
-    "image": "/assets/img/noimage.png",
     "trait": "onsen",
     "features": [
       "温泉付き"
@@ -69303,7 +69181,6 @@ export const SEED_FACILITIES = [
     "name": "風 -Kaze- Produce by fuu Resort",
     "prefecture": "福井県",
     "city": "小浜市 宿泊者限定",
-    "image": "/assets/img/noimage.png",
     "trait": "private",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/87471"
@@ -69313,7 +69190,6 @@ export const SEED_FACILITIES = [
     "name": "fuu the DRAMA",
     "prefecture": "福井県",
     "city": "大飯郡高浜町",
-    "image": "/assets/img/noimage.png",
     "trait": "urban",
     "source": "サウナイキタイ",
     "sourceUrl": "https://sauna-ikitai.com/saunas/82361"

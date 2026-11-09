@@ -707,6 +707,7 @@ function renderFacilitySsr(facility) {
       <div><dt>参照</dt><dd>${source}</dd></div>
       ${official ? `<div><dt>公式</dt><dd>${official}</dd></div>` : ""}
       ${mapUrl ? `<div><dt>地図</dt><dd><a href="${escapeAttr(mapUrl)}" rel="noopener">地図で場所を確認（Google Maps）</a></dd></div>` : ""}
+      ${mapUrl ? `<div><dt>写真</dt><dd><a href="${escapeAttr(mapUrl)}" rel="noopener">外観・内装の写真を見る（Google Maps）</a></dd></div>` : ""}
       ${note ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>掲載の確認状況</dt><dd>住所：${address ? "掲載あり" : facility.city ? "市区町村まで掲載" : "未確認"} ／ 公式ページ：${facility.officialUrl ? "あり" : "なし"} ／ 料金・営業時間など：${factCount ? `公式照合済み（${factCount}項目）` : "未確認"}</dd></div>
       ${missingFields.length ? `<div><dt>公式照合で未確認の項目</dt><dd>${escapeHtml(missingFields.join("・"))}（未確認は「設備なし」を意味しません）</dd></div>` : ""}
