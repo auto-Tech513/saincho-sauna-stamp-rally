@@ -70958,5 +70958,25 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.gardenhotels.co.jp/fukuoka-gion/",
     "officialUrl": "https://www.gardenhotels.co.jp/fukuoka-gion/"
+  },
+  {
+    "id": "manual-tokyo-suehiroyu",
+    "name": "すえひろ湯",
+    "prefecture": "東京都",
+    "address": "〒140-0014 東京都品川区大井1-42-4",
+    "addressSource": "公式/参照ページ",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [
+      "銭湯",
+      "水風呂あり",
+      "大井町駅徒歩4分"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://suehiroyu.tokyo/",
+    "officialUrl": "https://suehiroyu.tokyo/"
   }
 ];
