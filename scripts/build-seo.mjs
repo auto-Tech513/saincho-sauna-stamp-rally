@@ -98,12 +98,16 @@ function renderProvenanceRows(facility, evidence) {
 // note が住所そのもの（または施設名だけ）の場合は紹介文として出さない（住所の二重表示の是正）。
 const SAUNACHELIN_HALL_OF_FAME_IDS = new Set(["manual-aichi-wellbe-sakae", "st-kumamoto-82", "st-kanagawa-4", "official-saga-mifuneyama-rakan", "st-nagano-4544", "sc2025-ochiairo", "si-hokkaido-4521", "si-tokyo-67270"]);
 
-function saunachelinAwardRow(facility) {
-  const years = (facility.tags || [])
+function saunachelinAwardYears(facility) {
+  return (facility.tags || [])
     .map((tag) => /^saunachelin\s+(20\d{2})$/i.exec(String(tag).trim()))
     .filter(Boolean)
     .map((match) => Number(match[1]))
     .sort((a, b) => a - b);
+}
+
+function saunachelinAwardRow(facility) {
+  const years = saunachelinAwardYears(facility);
   if (!years.length) return "";
   const ids = [facility.id, ...(facility.legacyIds || [])];
   const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
@@ -150,6 +154,52 @@ for (const peer of INDEXABLE_FACILITIES) {
   if (!COORD_FACILITIES_BY_PREF.has(peer.prefecture)) COORD_FACILITIES_BY_PREF.set(peer.prefecture, []);
   COORD_FACILITIES_BY_PREF.get(peer.prefecture).push({ facility: peer, lat, lng });
 }
+// 実在するサウナスタンプラリー・御朱印企画の掲載データ（意図ページと県ページの単一データ源）。
+// 掲載条件: 主催者公式で期間と内容を確認できた主要企画のみ。endDate が公開情報で
+// 確定できない企画は入れない（開催状態を誤らないため）。開催状態は静的HTMLに焼かず、
+// 表示時点の判定（wrapSsr の data-event-start/end スクリプト）に任せる。
+// 出典の生存と期間変更は月1回再確認する（鮮度点検に相乗り）。
+const SAUNA_EVENTS = [
+  {
+    id: "nifty-ofuro2026",
+    name: "おふろへ行こう2026 ニフティ温泉 デジタルスタンプラリー",
+    organizer: "ニフティライフスタイル",
+    officialUrl: "https://onsen.nifty.com/campaign/stamprally-ofuro2026/",
+    area: "全国139施設",
+    prefecture: "",
+    startDate: "2026-08-03",
+    endDate: "2026-11-30",
+    howTo: "対象施設にあるQRコードでスタンプを集めます。3個・5個で抽選、15個で全員プレゼントがあります。",
+    goshuin: false,
+    checkedAt: "2026-11-09",
+  },
+  {
+    id: "kumamoto-gosaincho",
+    name: "御サ印帳",
+    organizer: "熊本国際観光コンベンション協会",
+    officialUrl: "https://kumamoto-icb.or.jp/",
+    area: "熊本県（配布場所21か所）",
+    prefecture: "熊本県",
+    startDate: "2026-10-01",
+    endDate: "2027-03-12",
+    howTo: "配布場所で冊子を受け取り、熊本の対象サウナで御サ印を集めます。集めた数に応じて抽選プレゼントに応募できます（応募期間は2027年3月12日まで）。本サイト「サ印帳」とは別の企画です。",
+    goshuin: true,
+    checkedAt: "2026-11-09",
+  },
+  {
+    id: "nagoya-yugoin-2026",
+    name: "サウNA GO!! 湯朱印めぐり",
+    organizer: "名古屋観光コンベンションビューロー",
+    officialUrl: "",
+    area: "名古屋市内15施設",
+    prefecture: "愛知県",
+    startDate: "2026-01-26",
+    endDate: "2026-03-23",
+    howTo: "対象の温浴施設を利用すると、各施設オリジナルの湯朱印がもらえました。",
+    goshuin: true,
+    checkedAt: "2026-11-08",
+  },
+];
 const SAMESHI_BY_PREF = new Map();
 for (const spot of SAMESHI_SPOTS) {
   if (!SAMESHI_BY_PREF.has(spot.prefecture)) SAMESHI_BY_PREF.set(spot.prefecture, []);
@@ -171,7 +221,14 @@ function renderSameshiBlock(facility) {
 function renderFacilityRelations(facility) {
   const sections = [];
   const cityKey = cityKeyOf(facility);
-  const peers = (CITY_PEERS.get(`${facility.prefecture}|${cityKey}`) || []).filter((peer) => peer.id !== facility.id).slice(0, 5);
+  // 同市ピアは「自施設の次から5件」を循環で取る。自施設が先頭固定の窓から漏れて
+  // 被リンク0になる施設（実測155件）をなくすため。本数・書式は従来どおり最大5件。
+  const cityList = CITY_PEERS.get(`${facility.prefecture}|${cityKey}`) || [];
+  const selfIndex = cityList.findIndex((peer) => peer.id === facility.id);
+  const others = cityList.filter((peer) => peer.id !== facility.id);
+  const peers = others.length
+    ? Array.from({ length: Math.min(5, others.length) }, (_, offset) => others[((selfIndex < 0 ? 0 : selfIndex) + offset) % others.length])
+    : [];
   if (peers.length) {
     sections.push(`
     <h2>${escapeHtml(cityKey)}のほかのサウナ（個別ページがある施設）</h2>
@@ -269,7 +326,7 @@ await write("sw.js", builtSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
 
 await copyFile("manifest.webmanifest");
-await copyFile("llms.txt");
+await write("llms.txt", renderLlmsTxt(await read("llms.txt")));
 await copyFile("google4f1c271dfaceddbb.html");
 await copyAssetFiles(ASSET_FILES);
 await copyAssetFiles(ICON_FILES);
@@ -309,13 +366,16 @@ for (const pref of PREFECTURES) {
 }
 
 for (const { article, route } of ARTICLE_ROUTES) {
-  await emitStaticRoute(route, `${article.title} | サウナ入門 | サ印帳`, `${article.title}。${article.lead} サ印帳のサウナ入門記事として、初心者が安全に楽しむための要点をまとめています。`, renderArticleSsr(article, route), LASTMOD.content);
+  await emitStaticRoute(route, `${article.title} | サウナ入門 | サ印帳`, `${article.title}。${article.lead} サ印帳のサウナ入門記事として、初心者が安全に楽しむための要点をまとめています。`, renderArticleSsr(article, route), article.updated || LASTMOD.content);
 }
 
 for (const facility of CANONICAL_FACILITIES) {
   const titleArea = [facility.prefecture, facility.city].filter(Boolean).join("・");
+  const fullTitle = `${facility.name}${titleArea ? `（${titleArea}）` : ""} | サ印帳 施設詳細`;
+  // 施設名自体が長い場合だけ「 施設詳細」を落として60字に収める（該当は現行1〜2件）。
+  const title = fullTitle.length > 60 ? `${facility.name}${titleArea ? `（${titleArea}）` : ""} | サ印帳` : fullTitle;
   const meta = {
-    ...pageMeta(`${facility.name}${titleArea ? `（${titleArea}）` : ""} | サ印帳 施設詳細`, getFacilityDescription(facility)),
+    ...pageMeta(title, getFacilityDescription(facility)),
     lastmod: getFacilityLastmod(facility),
     noindex: !isIndexableFacility(facility),
   };
@@ -423,6 +483,8 @@ function renderHomeSsr() {
     ["サ印帳は無料で使えますか？", "無料で使えます。施設の検索、サ印の押印、メモ、お気に入りは登録なしで、スマホのブラウザから利用できます。"],
     ["アプリのインストールは必要ですか？", "必要ありません。サ印帳はブラウザで動くWebアプリです。ホーム画面に追加すると、アプリのように起動できます。"],
     ["どんなサウナが掲載されていますか？", `全国47都道府県のサウナ候補${CANONICAL_FACILITIES.length}件（重複統合後）を検索できます。このうち、住所や公式URLを確認できた${indexableCount}件には個別ページがあります。最新の内訳は運営・データ方針ページに掲載しています。`],
+    ["施設を自分で登録する必要がありますか？", `必要ありません。全国の候補から検索し、行った施設を選んで押印します。候補にないサウナは、「サウナを追加」のページから自分で登録することもできます。`],
+    ["無料で記録できる施設数に上限はありますか？", "上限はありません。検索、押印、メモ、お気に入り、サ活ログは登録なしで無料で使えます。ランキングへの参加も無料です。"],
     ["サ印は間違えて押したら取り消せますか？", "取り消せます。押印した施設のサ印はいつでも取り消しでき、コレクションや称号も実際の押印数に合わせて再計算されます。"],
     ["記録はどこに保存されますか？", "押印、メモ、お気に入りは原則としてお使いの端末内に保存されます。ランキングに参加した場合は、ニックネーム、サ印数、称号が公開されます（メールアドレスは公開されません）。押印した施設の一覧は、公開設定を自分でオンにした場合のみ公開されます。"],
   ];
@@ -433,6 +495,7 @@ function renderHomeSsr() {
     <h1>サ印帳</h1>
     <h2>サ印帳とは</h2>
     <p>全国${total}件のサウナ候補（同一施設の別名・別参照元を統合し、通常のサウナ検索の対象となる件数）を検索し、実際に行った施設を「サ印」として記録できる無料のサウナスタンプラリー・サ活記録アプリです。施設が発行する物理スタンプではなく、自分の訪問履歴をスマホで育てます。件数の内訳と掲載方針は<a href="/about/">運営・データ方針</a>に掲載しています。</p>
+    <p>施設は自分で登録する必要はありません。全国の候補から検索して、行った施設をそのまま押印できます。押印や記録の件数に上限はなく、登録なしで無料で使えます。</p>
     <h2>検索から次のサ活まで</h2>
     <ul>
       <li>施設カードから詳細、経路、周辺サ飯、Gearを確認できます。</li>
@@ -534,7 +597,10 @@ function renderGuideSsr(articles) {
 }
 
 function renderArticleSsr(article, route) {
-  const modifiedAt = LASTMOD.content || undefined;
+  // 記事に個別の改訂日（updated）があれば dateModified と sitemap の lastmod に使う。
+  // datePublished は従来どおり content.js の実変更日（監査ルールで必須・本サイトの規約）。
+  const publishedAt = LASTMOD.content || undefined;
+  const modifiedAt = article.updated || publishedAt;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -551,9 +617,10 @@ function renderArticleSsr(article, route) {
         articleSection: article.category,
         description: article.lead,
         image: [OG_IMAGE],
-        // datePublished は監査ルールで必須。本サイトの規約として、公開日・更新日とも
+        // datePublished は監査ルールで必須。本サイトの規約として、公開日は
         // content.js の実変更日（git由来）を使う。記事ごとの公開日データは持っていない。
-        datePublished: modifiedAt,
+        // dateModified は記事の updated（個別改訂日）があればそちらを優先する。
+        datePublished: publishedAt,
         dateModified: modifiedAt,
         author: { "@id": `${APP_URL}/#organization` },
         mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
@@ -573,7 +640,15 @@ function renderArticleSsr(article, route) {
   const next = index >= 0 && index < ARTICLE_ROUTES.length - 1 ? ARTICLE_ROUTES[index + 1] : null;
   const hubByCategory = { "道具": ["/gear/", "Gear（サウナ道具）の一覧を見る"], "サ飯": ["/sameshi/", "サ飯スポットの一覧を見る"], "遠征": ["/stay/", "サウナ合宿・宿の一覧を見る"], "施設選び": ["/", "施設を探す（サ印帳トップ）"] };
   const hub = hubByCategory[article.category];
+  // 記事が明示した関連リンク（relatedTitles はタイトルで他記事を、relatedPages は
+  // 意図ページ・県ページ等への導線を指定する）。自動の同カテゴリ/前後リンクより前に出す。
+  const explicitRelated = [
+    ...(article.relatedTitles || []).map((title) => ARTICLE_ROUTES.find((entry) => entry.article.title === title)).filter(Boolean)
+      .map((entry) => `<li><a href="${escapeAttr(entry.route)}">${escapeHtml(entry.article.title)}</a> <span>関連記事</span></li>`),
+    ...(article.relatedPages || []).map(([url, label]) => `<li><a href="${escapeAttr(url)}">${escapeHtml(label)}</a></li>`),
+  ];
   const relatedItems = [
+    ...explicitRelated,
     ...siblings.map((entry) => `<li><a href="${escapeAttr(entry.route)}">${escapeHtml(entry.article.title)}</a> <span>同じ「${escapeHtml(article.category)}」の記事</span></li>`),
     ...(prev ? [`<li><a href="${escapeAttr(prev.route)}">前の記事：${escapeHtml(prev.article.title)}</a></li>`] : []),
     ...(next ? [`<li><a href="${escapeAttr(next.route)}">次の記事：${escapeHtml(next.article.title)}</a></li>`] : []),
@@ -631,7 +706,7 @@ function renderPrefSsr(pref, facilities) {
         "@id": `${APP_URL}/pref/${pref.slug}/#list`,
         name: `${pref.name}のサウナ候補`,
         numberOfItems: indexableFacilities.length,
-        itemListElement: indexableFacilities.slice(0, 30).map((facility, index) => ({
+        itemListElement: indexableFacilities.map((facility, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: facility.name,
@@ -649,6 +724,8 @@ function renderPrefSsr(pref, facilities) {
     ${facilityLinks}
     <p>未確認候補は検索画面で確認できます。番地、営業状況、料金は参照元または施設公式情報を訪問前に再確認してください。</p>
     <p><a href="/sauna-stamp-rally/">行ったサウナは、サウナスタンプラリーとして押印して記録できます</a></p>
+    ${renderPrefEventBlock(pref)}
+    ${renderPrefAwardBlock(pref, facilities)}
     ${renderSameshiBlock({ prefecture: pref.name, city: "" })}
     ${regionLinks}
     <p><a href="/">サ印帳トップへ戻る</a></p>
@@ -776,6 +853,85 @@ function renderGenericSsr(title, text) {
   `);
 }
 
+function jstToday() {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Tokyo" }).format(new Date());
+}
+
+// llms.txt は repo ルートのテンプレートを正本とし、件数と日付だけをビルド時の
+// 実数に置き換えて生成する（手書きの静的数字が陳腐化した前回の失敗への対策）。
+function renderLlmsTxt(template) {
+  const [year, month, day] = jstToday().split("-").map(Number);
+  return template
+    .replaceAll("__CANONICAL_COUNT__", String(CANONICAL_FACILITIES.length))
+    .replaceAll("__SEARCHABLE_COUNT__", String(SEARCHABLE_FACILITIES.length))
+    .replaceAll("__INDEXABLE_COUNT__", String(INDEXABLE_FACILITIES.length))
+    .replaceAll("__GUIDE_COUNT__", String(SAUNA_ARTICLES.length))
+    .replaceAll("__AS_OF__", `${year}年${month}月${day}日`);
+}
+
+function formatEventPeriod(event) {
+  const format = (iso) => {
+    const [year, month, day] = iso.split("-").map(Number);
+    return `${year}年${month}月${day}日`;
+  };
+  return `${format(event.startDate)}〜${format(event.endDate)}`;
+}
+
+function renderEventItem(event) {
+  return `<li><strong>${escapeHtml(event.name)}</strong><span data-event-start="${event.startDate}" data-event-end="${event.endDate}"></span><br>主催: ${escapeHtml(event.organizer)} / 期間: ${formatEventPeriod(event)} / 対象: ${escapeHtml(event.area)}<br>${escapeHtml(event.howTo)}${event.officialUrl ? ` <a href="${escapeAttr(event.officialUrl)}" rel="noopener">主催者公式情報</a>` : ""} <small>（公式情報を${escapeHtml(event.checkedAt)}に確認）</small></li>`;
+}
+
+// 終了から90日を過ぎた企画は「終了した企画」側へ寄せる。状態表示そのものは
+// 表示時点判定が正なので、この振り分けが遅れても誤表示にはならない。
+function isArchivedEvent(event, todayIso) {
+  const end = Date.parse(event.endDate);
+  return Number.isFinite(end) && Date.parse(todayIso) > end + 90 * 86400000;
+}
+
+function renderEventsSection() {
+  const today = jstToday();
+  const byEnd = (a, b) => a.endDate.localeCompare(b.endDate);
+  const active = SAUNA_EVENTS.filter((event) => !isArchivedEvent(event, today)).sort(byEnd);
+  const archived = SAUNA_EVENTS.filter((event) => isArchivedEvent(event, today)).sort((a, b) => b.endDate.localeCompare(a.endDate));
+  return `
+    <h2>実在のサウナスタンプラリー・御朱印企画</h2>
+    <p>期間限定のイベント型企画を探している方へ。主催者が公式に期間と対象を公開している主要な企画だけを、公式情報で確認して掲載しています。すべてのイベントを網羅するものではありません。開催状況や参加条件は各主催者の公式情報で確認してください。対象施設へ行った記録は、サ印帳の押印としても残せます。</p>
+    <ul class="ssr-list">${active.map(renderEventItem).join("")}</ul>
+    ${archived.length ? `<h3>終了した企画</h3>
+    <ul class="ssr-list">${archived.map(renderEventItem).join("")}</ul>` : ""}`;
+}
+
+function renderGoshuinEventsBlock() {
+  const events = SAUNA_EVENTS.filter((event) => event.goshuin).sort((a, b) => a.endDate.localeCompare(b.endDate));
+  if (!events.length) return "";
+  return `
+    <h2>実物の御朱印・湯朱印企画（期間つき）</h2>
+    <ul class="ssr-list">${events.map(renderEventItem).join("")}</ul>`;
+}
+
+function renderPrefEventBlock(pref) {
+  const today = jstToday();
+  const events = SAUNA_EVENTS.filter((event) => event.prefecture === pref.name && !isArchivedEvent(event, today));
+  if (!events.length) return "";
+  return `
+    <h2>${escapeHtml(pref.name)}のスタンプラリー・御朱印企画</h2>
+    <ul class="ssr-list">${events.map(renderEventItem).join("")}</ul>
+    <p><a href="/sauna-stamp-rally/">全国の主な企画と、常設型のサ印帳との違いを見る</a></p>`;
+}
+
+function renderPrefAwardBlock(pref, facilities) {
+  const awarded = facilities
+    .filter(isIndexableFacility)
+    .map((facility) => ({ facility, years: saunachelinAwardYears(facility) }))
+    .filter((entry) => entry.years.length);
+  if (!awarded.length) return "";
+  const shown = awarded.slice(0, 8);
+  return `
+    <h2>${escapeHtml(pref.name)}のサウナシュラン受賞施設（${awarded.length}件）</h2>
+    <ul class="ssr-list">${shown.map(({ facility, years }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${years.join("・")}年 受賞（TTNE主催）</span></li>`).join("")}</ul>
+    ${awarded.length > shown.length ? `<p>ほか${awarded.length - shown.length}件あります。アプリの検索で「サウナシュラン」と入力すると、受賞施設だけを表示できます。</p>` : `<p>アプリの検索で「サウナシュラン」と入力すると、全国の受賞施設だけを表示できます。</p>`}`;
+}
+
 function renderSearchIntentSsr(kind) {
   const isStampRally = kind === "stamp-rally";
   const title = isStampRally ? "サウナスタンプラリーをスマホで楽しむ" : "サウナ御朱印のように訪問記録を集める";
@@ -801,7 +957,7 @@ function renderSearchIntentSsr(kind) {
         ["称号と県別マスター", "押印数に応じて称号が上がります（1湯「はじめの一湯」から2000湯「神人サウナー」まで12段階）。都道府県ごとに施設を巡る県別マスターもあります。どちらも実際の押印数だけで進み、購入で早めることはできません。"],
       ]
     : [
-        ["実物の御朱印・湯朱印という企画もある", "施設や地域が発行する実物の例として、名古屋観光コンベンションビューローの「サウNA GO!! 湯朱印めぐり」（2026年1月26日〜3月23日、市内15施設、終了）、熊本国際観光コンベンション協会の「御サ印帳」（2026年10月開始、熊本のサウナを巡って御サ印を集める冊子、開催中）、SAUNiiiKと愛媛サウナ協議会の「愛媛サウナ巡礼 御朱印帳プロジェクト」（2026年3月発表）、Visit Finlandの「サウナ御朱印帳」（フィンランドの対象サウナでスタンプを集める配布企画、2018〜2020年に実施）があります。いずれも主催者や施設が発行するもので、サ印帳のサ印とは別物です。開催状況や入手方法は各公式情報を確認してください。なお熊本の企画名は「御サ印帳」で、本サイト「サ印帳」とは関係ありません。"],
+        ["実物の御朱印・湯朱印という企画もある", "施設や地域が発行する実物の例として、SAUNiiiKと愛媛サウナ協議会の「愛媛サウナ巡礼 御朱印帳プロジェクト」（2026年3月発表）や、Visit Finlandの「サウナ御朱印帳」（フィンランドの対象サウナでスタンプを集める配布企画、2018〜2020年に実施）があります。名古屋の「湯朱印めぐり」と熊本の「御サ印帳」は、このページの下のほうに期間つきの一覧で掲載しています。いずれも主催者や施設が発行するもので、サ印帳のサ印とは別物です。開催状況や入手方法は各公式情報を確認してください。なお熊本の企画名は「御サ印帳」で、本サイト「サ印帳」とは関係ありません。"],
         ["紙の御朱印帳とデジタルの違い", "実物の御朱印・湯朱印は、企画や施設ごとに期間と場所が決まっていて、その場で受け取る記念になります。サ印は期間のないデジタルの訪問記録で、全国の候補施設を対象に自分のペースで集められます。記念として残すか、日々の通いの記録として積むかの違いで、どちらが良いというものではありません。"],
       ];
   const faqs = isStampRally
@@ -859,6 +1015,7 @@ function renderSearchIntentSsr(kind) {
     <p>${escapeHtml(lead)}</p>
     <div class="ssr-grid">${sections.map(([heading, body]) => `<article><h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p></article>`).join("")}</div>
     ${extraSections.map(([heading, body]) => `<h2>${escapeHtml(heading)}</h2><p>${escapeHtml(body)}</p>`).join("")}
+    ${isStampRally ? renderEventsSection() : renderGoshuinEventsBlock()}
     <h2>3ステップで始める</h2>
     <ol><li>施設名、県、住所、特徴から候補を探す</li><li>訪問した施設だけを押印する</li><li>サ活ログを残し、次の一湯を選ぶ</li></ol>
     <h2>よくある質問</h2>
@@ -876,7 +1033,7 @@ function wrapSsr(content, options = {}) {
           ${content}
         </section>
         ${jsonLd}
-        <script>document.querySelectorAll("[data-elapsed-since]").forEach(function(el){var days=Math.round((Date.parse(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo"}).format(new Date()))-Date.parse(el.getAttribute("data-elapsed-since")))/86400000);if(Number.isFinite(days)&&days>0)el.textContent="（確認から"+days+"日経過）";else if(days===0)el.textContent="（本日確認）";});</script>
+        <script>document.querySelectorAll("[data-elapsed-since]").forEach(function(el){var days=Math.round((Date.parse(new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo"}).format(new Date()))-Date.parse(el.getAttribute("data-elapsed-since")))/86400000);if(Number.isFinite(days)&&days>0)el.textContent="（確認から"+days+"日経過）";else if(days===0)el.textContent="（本日確認）";});document.querySelectorAll("[data-event-start]").forEach(function(el){var today=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Tokyo"}).format(new Date());var start=el.getAttribute("data-event-start");var end=el.getAttribute("data-event-end");el.textContent=today<start?"（開催前）":(end&&today>end)?"（終了）":"（開催中）";});</script>
   `;
 }
 
@@ -919,8 +1076,29 @@ function pageMeta(title, description) {
 function getFacilityDescription(facility) {
   const address = getAddress(facility);
   const tags = displayTags(facility).slice(0, 4).join("、");
-  const note = getFacilityEvidence(facility)?.facts.slice(0, 2).map(row => `${row.label}: ${row.value}`).join("。") || "";
-  return cleanMeta(`${facility.name}のサ印帳施設詳細。${facility.prefecture}${facility.city ? ` / ${facility.city}` : ""}の候補です。${address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Maps検索で確認できます。"}${note ? `施設情報は${note}。` : ""}${tags ? `特徴は${tags}。` : ""}押印、行きたい、メモ、口コミ、経路、周辺サ飯、Gear導線を確認できます。`);
+  const facts = getFacilityEvidence(facility)?.facts.slice(0, 2) || [];
+  const head = `${facility.name}のサ印帳施設詳細。${facility.prefecture}${facility.city ? ` / ${facility.city}` : ""}の候補です。${address ? `住所は${address}。` : "住所未確認の候補は参照元とGoogle Maps検索で確認できます。"}`;
+  const noteFor = (rows) => rows.length ? `施設情報は${rows.map((row) => `${row.label}: ${row.value}`).join("。")}。` : "";
+  const tagPart = tags ? `特徴は${tags}。` : "";
+  const suffix = "押印、行きたい、メモ、口コミ、経路、周辺サ飯、Gear導線を確認できます。";
+  // 予算制: 180字の機械切断で文が途切れるのを防ぐ。超過時は決まった順序で落とす
+  // （固定サフィックス → 特徴タグ → fact 2件目を文境界で短縮、それでも長ければ丸ごと落とす）。
+  const BUDGET = 150;
+  let text = head + noteFor(facts) + tagPart + suffix;
+  if (text.length > BUDGET) text = head + noteFor(facts) + tagPart;
+  if (text.length > BUDGET) text = head + noteFor(facts);
+  if (text.length > BUDGET && facts.length > 1) {
+    const shortened = { ...facts[1], value: String(facts[1].value).split("。")[0] };
+    text = head + noteFor([facts[0], shortened]);
+    if (text.length > BUDGET) text = head + noteFor([facts[0]]);
+  }
+  if (text.length > BUDGET && facts.length) {
+    // fact 1件目自体が長い場合は文境界で短縮し、それでも収まらなければ見出し部のみにする。
+    const shortened = { ...facts[0], value: String(facts[0].value).split("。")[0] };
+    text = head + noteFor([shortened]);
+    if (text.length > BUDGET) text = head;
+  }
+  return cleanMeta(text);
 }
 
 function displayTags(facility) {
