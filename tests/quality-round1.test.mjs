@@ -177,3 +177,31 @@ test("visited cards keep the activity action visible and fold only reviews", () 
   assert.equal(foldPart.includes('data-action="jump-reviews"'), true);
   assert.equal(foldPart.includes('data-action="open-activity"'), false);
 });
+
+test("passport tile labels distinguish excluded facilities from unvisited ones", () => {
+  const h = harness();
+  assert.equal(h.run('getStampTileDateLabel({ status: "closed" }, null)'), "閉店・押印対象外");
+  assert.equal(h.run('getStampTileDateLabel({ status: "restricted" }, null)'), "テナント専用・押印対象外");
+  assert.equal(h.run('getStampTileDateLabel({ status: "suspended" }, null)'), "臨時休業・押印対象外");
+  assert.equal(h.run('getStampTileDateLabel({}, null)'), "未押印");
+  const visitedClosed = h.run('getStampTileDateLabel({ status: "closed" }, { at: "2026-11-01T00:00:00.000Z" })');
+  assert.equal(visitedClosed.endsWith("（閉店）"), true);
+  const visitedOpen = h.run('getStampTileDateLabel({}, { at: "2026-11-01T00:00:00.000Z" })');
+  assert.equal(visitedOpen.includes("（"), false);
+});
+
+test("wishlist cannot be newly added for closed or restricted facilities", () => {
+  const h = harness();
+  assert.equal(h.run('canAddWishlist({ status: "closed" })'), false);
+  assert.equal(h.run('canAddWishlist({ status: "restricted" })'), false);
+  assert.equal(h.run('canAddWishlist({ status: "suspended" })'), true);
+  assert.equal(h.run('canAddWishlist({})'), true);
+});
+
+test("restricted facilities hide the wishlist button on cards like closed ones", () => {
+  const h = harness();
+  const card = h.run('renderFacilityCard({ id: "restricted-1", name: "専用館", prefecture: "福岡県", city: "中央区", status: "restricted", tags: [] })');
+  assert.equal(card.includes('data-action="wishlist"'), false);
+  const open = h.run('renderFacilityCard({ id: "open-2", name: "営業館", prefecture: "福岡県", city: "中央区", tags: [] })');
+  assert.equal(open.includes('data-action="wishlist"'), true);
+});

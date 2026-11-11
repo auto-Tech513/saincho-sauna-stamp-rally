@@ -1912,7 +1912,6 @@ function openFacilityDetail(facility) {
   facilityDetailTab = "info";
   activeFacilityId = facility.id;
   activeView = "Facility";
-  selectedPrefecture = facility.prefecture || selectedPrefecture;
   applyActiveView(activeView);
   pushViewUrl(activeView);
   renderAll();
@@ -2279,7 +2278,7 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
-        ${wished || facility.status !== "closed" ? `<button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
+        ${wished || canAddWishlist(facility) ? `<button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
         ${renderMapRouteLink(facility)}
         ${renderFacilityShareButtons(facility)}
       </div>
@@ -2318,7 +2317,7 @@ function renderFacilityCard(facility) {
     : status
       ? `<span class="status-badge">${escapeHtml(status.badge)}</span>`
       : "";
-  const wishlistButton = wished || facility.status !== "closed"
+  const wishlistButton = wished || canAddWishlist(facility)
     ? `<button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>`
     : "";
   const actions = visited
@@ -2465,7 +2464,7 @@ function renderFacilityDetail() {
       </section>
       <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
         <div class="facility-secondary-actions">
-          ${wished || facility.status !== "closed" ? `<button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
+          ${wished || canAddWishlist(facility) ? `<button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
@@ -2801,6 +2800,16 @@ function dismissBackupHint() {
   if (el.backupHint) el.backupHint.hidden = true;
 }
 
+function getStampTileDateLabel(facility, visited) {
+  const status = getFacilityStatus(facility);
+  if (visited) return formatDate(visited.at) + (status ? `（${status.badge}）` : "");
+  return status ? `${status.badge}・押印対象外` : "未押印";
+}
+
+function canAddWishlist(facility) {
+  return !["closed", "restricted"].includes(facility.status);
+}
+
 function renderPassport() {
   updateBackupHint();
   renderPassportPrefStrip();
@@ -2821,12 +2830,13 @@ function renderPassport() {
   el.stampGrid.innerHTML = sorted.slice(0, visibleLimit).map((facility) => {
     const visited = state.visited[facility.id];
     const memo = getFacilityMemo(facility.id);
-    const date = visited ? formatDate(visited.at) : "未押印";
+    const status = getFacilityStatus(facility);
+    const date = getStampTileDateLabel(facility, visited);
     return `
       <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}">
         ${renderStamp(facility, Boolean(visited))}
         <p class="stamp-title"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
-        <span class="stamp-date">${escapeHtml(date)}</span>
+        <span class="stamp-date${!visited && status ? " stamp-date-excluded" : ""}">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
         <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
         ${memo ? `<button class="tiny-share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
@@ -4500,14 +4510,28 @@ function stampFacility(facility) {
   }
 }
 
+let lastRemovedStamp = null;
+
 function unstampFacility(facility) {
   if (!state.visited[facility.id]) return;
+  lastRemovedStamp = { facility, entry: state.visited[facility.id] };
   delete state.visited[facility.id];
   saveState();
   track("stamp_remove", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name });
   queueRankingSync();
   renderAll();
-  showToast(`${facility.name} の押印を取り消しました`);
+  showToastWithAction(`${facility.name} の押印を取り消しました。サ活ログとメモは残ります`, "元に戻す", undoLastUnstamp);
+}
+
+function undoLastUnstamp() {
+  if (!lastRemovedStamp) return;
+  const { facility, entry } = lastRemovedStamp;
+  lastRemovedStamp = null;
+  state.visited[facility.id] = entry;
+  saveState();
+  queueRankingSync();
+  renderAll();
+  showToast(`${facility.name} の押印を戻しました`);
 }
 
 function toggleWishlist(facility) {
@@ -6158,11 +6182,27 @@ if (backToTopButton?.addEventListener && el.main?.addEventListener) {
 
 function showToast(message) {
   clearTimeout(toastTimer);
+  el.toast.classList.remove("toast-interactive");
   el.toast.textContent = message;
   el.toast.classList.add("is-visible");
   toastTimer = window.setTimeout(() => {
     el.toast.classList.remove("is-visible");
   }, 2600);
+}
+
+function showToastWithAction(message, actionLabel, onAction) {
+  clearTimeout(toastTimer);
+  el.toast.classList.add("toast-interactive");
+  el.toast.innerHTML = `<span>${escapeHtml(message)}</span><button class="toast-action" type="button">${escapeHtml(actionLabel)}</button>`;
+  el.toast.querySelector(".toast-action")?.addEventListener("click", () => {
+    clearTimeout(toastTimer);
+    el.toast.classList.remove("is-visible", "toast-interactive");
+    onAction();
+  });
+  el.toast.classList.add("is-visible");
+  toastTimer = window.setTimeout(() => {
+    el.toast.classList.remove("is-visible", "toast-interactive");
+  }, 6000);
 }
 
 function showAchievement({ eyebrow, title, body }) {

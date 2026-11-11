@@ -9227,3 +9227,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .guide-entry-label { flex: none; color: var(--primary); font-weight: 800; }
 .guide-entry-text { flex: 1; color: rgb(17 24 23 / 0.78); font-size: 0.85rem; line-height: 1.5; }
 .guide-entry-arrow { flex: none; color: var(--primary); font-weight: 700; }
+.stamp-date-excluded { color: #9b2e23; font-weight: 700; }
+.toast-action { margin-left: 12px; padding: 6px 12px; min-height: 36px; background: transparent; border: 1px solid currentColor; border-radius: 6px; color: inherit; font: inherit; font-weight: 700; cursor: pointer; }
+.toast.toast-interactive { pointer-events: auto; }

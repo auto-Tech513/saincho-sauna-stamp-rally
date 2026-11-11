@@ -1310,6 +1310,21 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "2022年2月より休業中（Wikipedia「庄川温泉郷」）。旧公式ページ（sakura.ne.jp）は消滅し、公式の近況はFacebookページで発信", sourceUrl: "https://ja.wikipedia.org/wiki/%E5%BA%84%E5%B7%9D%E6%B8%A9%E6%B3%89%E9%83%B7", checkedAt: "2026-11-08" }],
   },
   {
+    ids: ["st-toyama-2152"], name: "湯来楽 砺波店", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（運営会社の株式会社ゆららが2022年3月に破産手続き開始。施設は2022年1月に休業・閉館したと複数媒体が報じ、サウナイキタイとニフティ温泉も閉店表示。閉店日は媒体により1月20日／21日の差があり未確定）", sourceUrl: "https://www.ryoko-net.co.jp/?p=104348", checkedAt: "2026-11-11" }],
+  },
+  {
+    ids: ["st-fukushima-1510"], name: "サウナ＆カプセルキュア いわき駅前店", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（サウナイキタイの掲載データで2021年時点で閉店扱い。ニフティ温泉も「閉店しました」と表示し、公式サイトは取得不能。閉店日は明記なし）", sourceUrl: "https://onsen.nifty.com/iwaki-onsen/onsen010973/", checkedAt: "2026-11-11" }],
+  },
+  {
+    ids: ["st-fukuoka-4468"], name: "鍛冶町サウナ", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（旧施設）。同じ場所は現在「小倉サウナ TOTONOI」として営業中で、公式サイトに旧サウナプラザカメリア跡へのリニューアルオープンと記載がある。鍛冶町サウナはその前々代にあたる（閉店年は未確認）", sourceUrl: "https://www.totonoikokura.com/", checkedAt: "2026-11-11" }],
+  },
+  {
     ids: ["manual-fukuoka-reboot"], name: "REBOOT!", status: "restricted",
     features: [],
     facts: [{ label: "利用条件", value: "一般利用不可（入居テナント専用）。天神住友生命FJビジネスセンター最上階のワーカー専用共用サウナで、SAUNACHELIN 2026の特別賞。一般の訪問・押印の対象には含めない", sourceUrl: "https://tenjinsfbc.jp/reboot/top-floor.php", checkedAt: "2026-11-11" }],
