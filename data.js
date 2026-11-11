@@ -22675,13 +22675,16 @@ export const SEED_FACILITIES = [
     "tags": [
       "SAUNACHELIN 2025",
       "プライベート",
-      "食"
+      "食",
+      "SAUNACHELIN 2026"
     ],
     "source": "公式",
     "sourceUrl": "https://sauna-sakurado.spa/",
     "address": "〒812-0024 福岡県福岡市博多区綱場町9-5",
     "addressSource": "運営会社公式発表",
-    "officialUrl": "https://sauna-sakurado.spa/"
+    "officialUrl": "https://sauna-sakurado.spa/",
+    "lat": 33.597432,
+    "lng": 130.407127
   },
   {
     "id": "st-fukuoka-4778",
@@ -31139,14 +31142,21 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2026"
     ],
     "features": [
       "水風呂あり",
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/114510"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/114510",
+    "address": "〒261-0026 千葉県千葉市美浜区幕張西2丁目1-4",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 35.666541,
+    "lng": 140.03824,
+    "officialUrl": "https://everyday-sauna-tokyo.com/",
+    "officialUrlSource": "https://www.saunachelin.com/"
   },
   {
     "id": "si-chiba-41068",
@@ -34025,7 +34035,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2026"
     ],
     "features": [
       "水風呂あり",
@@ -34035,7 +34046,13 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/46909"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/46909",
+    "address": "〒384-1103 長野県南佐久郡小海町豊里5907",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 36.056359,
+    "lng": 138.414958,
+    "officialUrl": "https://koumi.gateauxkingdom.com/spa/sauna",
+    "officialUrlSource": "https://www.saunachelin.com/"
   },
   {
     "id": "si-nagano-11519",
@@ -38905,7 +38922,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "サウナイキタイ掲載",
       "県別50件補強",
-      "ロウリュあり"
+      "ロウリュあり",
+      "SAUNACHELIN 2026"
     ],
     "features": [
       "水風呂あり",
@@ -38914,7 +38932,13 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/104474"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/104474",
+    "address": "〒847-0303 佐賀県唐津市呼子町呼子3079（中尾甚六HOTEL内）",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 33.540537,
+    "lng": 129.894748,
+    "officialUrl": "https://jinroku-sauna.kujira-yobuko.com/",
+    "officialUrlSource": "https://www.saunachelin.com/"
   },
   {
     "id": "si-saga-78405",
@@ -42515,7 +42539,16 @@ export const SEED_FACILITIES = [
     "city": "札幌市",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/87829"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/87829",
+    "address": "〒061-2303 北海道札幌市南区定山渓温泉西3丁目101",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 42.968002,
+    "lng": 141.162539,
+    "officialUrl": "https://www.kyuujitsu.com/facility/qjitsuu/",
+    "officialUrlSource": "https://www.saunachelin.com/",
+    "tags": [
+      "SAUNACHELIN 2026"
+    ]
   },
   {
     "id": "si-150",
@@ -44485,7 +44518,16 @@ export const SEED_FACILITIES = [
     "city": "鎌倉市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/101404"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/101404",
+    "address": "〒248-0012 神奈川県鎌倉市御成町10-24",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 35.31881,
+    "lng": 139.548884,
+    "officialUrl": "https://onari-sauna.com/",
+    "officialUrlSource": "https://www.saunachelin.com/",
+    "tags": [
+      "SAUNACHELIN 2026"
+    ]
   },
   {
     "id": "si-80633",
@@ -68107,7 +68149,16 @@ export const SEED_FACILITIES = [
     "city": "港区",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/100877"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/100877",
+    "address": "〒108-0074 東京都港区高輪2丁目21-1 ニュウマン高輪 North 5F",
+    "addressSource": "SAUNACHELIN公式",
+    "lat": 35.636271,
+    "lng": 139.740007,
+    "officialUrl": "https://saunas-saunas.com/takanawa/",
+    "officialUrlSource": "https://www.saunachelin.com/",
+    "tags": [
+      "SAUNACHELIN 2026"
+    ]
   },
   {
     "id": "si-1739",
@@ -69718,10 +69769,14 @@ export const SEED_FACILITIES = [
     "city": "品川区",
     "address": "〒140-0005 東京都品川区広町2丁目1番3号 OIMACHI TRACKS HOTEL & RESIDENCE TOWER 4階",
     "trait": "urban",
-    "tags": [],
+    "tags": [
+      "SAUNACHELIN 2026"
+    ],
     "source": "公式",
     "sourceUrl": "https://ryusenjinoyu.com/saunametsaoimachi/",
-    "officialUrl": "https://ryusenjinoyu.com/saunametsaoimachi/"
+    "officialUrl": "https://ryusenjinoyu.com/saunametsaoimachi/",
+    "lat": 35.608133,
+    "lng": 139.734507
   },
   {
     "id": "manual-tokyo-manyo-machida",
@@ -70978,5 +71033,94 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://suehiroyu.tokyo/",
     "officialUrl": "https://suehiroyu.tokyo/"
+  },
+  {
+    "id": "manual-fukuoka-totopa-hakata",
+    "name": "TOTOPA 博多駅前店",
+    "prefecture": "福岡県",
+    "address": "〒812-0011 福岡市博多区博多駅前3丁目24-3 明治公園内店舗棟 3F・4F",
+    "addressSource": "公式/参照ページ",
+    "city": "博多区",
+    "lat": 33.588922,
+    "lng": 130.417661,
+    "trait": "urban",
+    "tags": [
+      "SAUNACHELIN 2026",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://totopa.jp/hakata/",
+    "officialUrl": "https://totopa.jp/hakata/"
+  },
+  {
+    "id": "manual-hokkaido-biaclyn-hakodate",
+    "name": "HOTEL 白林 HAKODATE",
+    "prefecture": "北海道",
+    "address": "〒040-0055 北海道函館市船見町17-3",
+    "addressSource": "公式/参照ページ",
+    "city": "函館市",
+    "lat": 41.767652,
+    "lng": 140.70201,
+    "trait": "urban",
+    "tags": [
+      "SAUNACHELIN 2026",
+      "宿泊可"
+    ],
+    "features": [
+      "水風呂あり",
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.biaclyn.com/",
+    "officialUrl": "https://www.biaclyn.com/"
+  },
+  {
+    "id": "manual-tokyo-koganeyu-shinjuku",
+    "name": "黄金湯 新宿",
+    "prefecture": "東京都",
+    "address": "〒160-0022 東京都新宿区新宿7丁目22-11 金沢マンション1F",
+    "addressSource": "公式/参照ページ",
+    "city": "新宿区",
+    "lat": 35.700045,
+    "lng": 139.71027,
+    "trait": "water",
+    "tags": [
+      "SAUNACHELIN 2026",
+      "銭湯",
+      "水風呂あり"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://koganeyu.com/shinjuku",
+    "officialUrl": "https://koganeyu.com/shinjuku"
+  },
+  {
+    "id": "manual-fukuoka-reboot",
+    "name": "REBOOT!",
+    "prefecture": "福岡県",
+    "address": "〒810-0001 福岡県福岡市中央区天神2丁目8-35",
+    "addressSource": "公式/参照ページ",
+    "city": "中央区",
+    "lat": 33.590528,
+    "lng": 130.396196,
+    "trait": "urban",
+    "tags": [
+      "SAUNACHELIN 2026",
+      "オフィスサウナ"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "note": "天神ビジネスセンターⅡ（地下2階）にも同名の共用サウナあり。いずれも一般利用不可（入居テナント専用）。",
+    "source": "公式",
+    "sourceUrl": "https://tenjinsfbc.jp/reboot/top-floor.php",
+    "officialUrl": "https://tenjinsfbc.jp/reboot/top-floor.php"
   }
 ];
