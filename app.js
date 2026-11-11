@@ -574,8 +574,8 @@ const VIEW_META = {
   },
   Guide: {
     path: "/guide/",
-    title: "サウナ入門30記事 | 入り方・水風呂・持ち物・マナー",
-    description: "初めてのサウナでも迷わない入り方、水風呂、休憩、水分補給、ロウリュ、サウナグッズ、マナーを30記事とFAQで確認できます。",
+    title: "サウナ入門 | 入り方・水風呂・持ち物・マナー",
+    description: "初めてのサウナでも迷わない入り方、水風呂、休憩、水分補給、ロウリュ、サウナグッズ、マナーを記事とFAQで確認できます。",
   },
   Community: {
     path: "/community/",
@@ -756,6 +756,7 @@ const FACILITY_STATUS = {
   suspended: { badge: "臨時休業", action: "休業中" },
   planned: { badge: "開業予定", action: "開業待ち" },
   verify: { badge: "要確認", action: "要確認" },
+  restricted: { badge: "テナント専用", action: "一般利用不可" },
 };
 
 let state = loadState();
@@ -2106,8 +2107,11 @@ function renderExplore() {
   el.facilityList.inert = false;
   const facilities = getFilteredFacilities();
   const statusAwardYear = searchTerm ? getSaunachelinAwardYear(searchTerm) : null;
+  const specialAwardCount = statusAwardYear
+    ? facilities.filter((facility) => (facility.specialAwardYears || []).includes(statusAwardYear)).length
+    : 0;
   if (el.searchResultsStatus) el.searchResultsStatus.textContent = statusAwardYear !== null
-    ? `サウナシュラン${statusAwardYear ? `${statusAwardYear} ` : ""}(TTNE主催) 受賞施設 · ${facilities.length.toLocaleString("ja-JP")}件`
+    ? `サウナシュラン${statusAwardYear ? `${statusAwardYear} ` : ""}(TTNE主催) 受賞施設 · ${facilities.length.toLocaleString("ja-JP")}件${specialAwardCount ? `（受賞${facilities.length - specialAwardCount}施設＋特別賞${specialAwardCount}施設）` : ""}`
     : `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
   if (!searchTerm.trim()) renderSpotlight(facilities);
 
@@ -2275,7 +2279,7 @@ function renderSpotlight(filteredFacilities = getFilteredFacilities()) {
       ${renderStamp(facility, false)}
       <div class="spotlight-actions">
         <button class="primary-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}">押印</button>
-        <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>
+        ${wished || facility.status !== "closed" ? `<button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
         ${renderMapRouteLink(facility)}
         ${renderFacilityShareButtons(facility)}
       </div>
@@ -2314,6 +2318,9 @@ function renderFacilityCard(facility) {
     : status
       ? `<span class="status-badge">${escapeHtml(status.badge)}</span>`
       : "";
+  const wishlistButton = wished || facility.status !== "closed"
+    ? `<button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>`
+    : "";
   const actions = visited
     ? `
       <button class="primary-button complete-button" type="button" disabled>押印済み</button>
@@ -2321,7 +2328,7 @@ function renderFacilityCard(facility) {
     `
     : `
       <button class="stamp-outline-button" type="button" data-action="stamp" data-id="${escapeAttr(facility.id)}" ${status ? "disabled" : ""}>${status ? escapeHtml(status.action) : "押印する"}</button>
-      <button class="secondary-button ${wished ? "is-active" : ""}" type="button" data-action="wishlist" data-id="${escapeAttr(facility.id)}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>
+      ${wishlistButton}
     `;
 
   return `
@@ -2457,7 +2464,7 @@ function renderFacilityDetail() {
       </section>
       <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
         <div class="facility-secondary-actions">
-          <button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>
+          ${wished || facility.status !== "closed" ? `<button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
@@ -3613,7 +3620,7 @@ function renderAboutPage() {
       <article><span>市区町村以上</span><strong>${percent(withArea)}</strong><em>${withArea.toLocaleString("ja-JP")}件</em></article>
       <article><span>直接参照URL</span><strong>${percent(directSources)}</strong><em>${directSources.toLocaleString("ja-JP")}件</em></article>
     </section>
-    <p class="about-metrics-note">サ印の押印と県マスターの対象は ${stampEligible.toLocaleString("ja-JP")} 件です。閉店・臨時休業・開業予定・要確認の施設は対象外のため、表示候補の件数とは一致しません。</p>
+    <p class="about-metrics-note">サ印の押印と県マスターの対象は ${stampEligible.toLocaleString("ja-JP")} 件です。閉店・臨時休業・開業予定・要確認・一般利用できない施設は対象外のため、表示候補の件数とは一致しません。</p>
     <div class="about-grid">
       <section class="about-card">
         <p class="eyebrow">EDITORIAL</p>
@@ -3621,10 +3628,11 @@ function renderAboutPage() {
         <ol>
           <li>同一県の名称・別名・旧称を正規化し、重複候補を統合します。</li>
           <li>住所と特徴は参照ページまたは公式情報で公開確認できた場合のみ表示します。</li>
-          <li>閉店・臨時休業・開業予定・要確認は押印と県マスターの対象外にし、訪問済み施設と混同させません。</li>
+          <li>閉店・臨時休業・開業予定・要確認・一般利用できない施設は押印と県マスターの対象外にし、訪問済み施設と混同させません。</li>
           <li>営業時間、料金、休館日は変動するため、訪問前の公式確認を案内します。</li>
         </ol>
         <p>カタログ確認日: ${escapeHtml(reviewedAt)} / 方針更新日: ${escapeHtml(methodologyAt)}</p>
+        <p>カタログ確認日は、台帳全体を棚卸しした基準日です。その後も施設ごとに確認・更新を続けており、各施設の最新の確認日は施設ページとカードに表示しています。</p>
       </section>
       <section class="about-card">
         <p class="eyebrow">CORRECTIONS</p>
@@ -4078,7 +4086,7 @@ function renderArticleCard(article, index) {
             <ul>
               ${article.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" target="_blank" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}
             </ul>
-            <p>この記事の内容の根拠とした資料です。2026年11月4日に各出典を確認しています。</p>
+            <p>この記事の内容の根拠とした資料です。${escapeHtml(formatJaDate(article.sourcesCheckedAt || "2026-11-04"))}に各出典を確認しています。</p>
           </div>` : ""}
           <div class="article-gear">
             <div class="article-gear-head">
@@ -4999,12 +5007,24 @@ function isSaunachelinAwardFacility(facility, year) {
   return year ? years.includes(year) : years.length > 0;
 }
 
+function splitSaunachelinAwardYears(facility, years) {
+  const specials = new Set(facility.specialAwardYears || []);
+  return {
+    regular: years.filter((year) => !specials.has(year)),
+    special: years.filter((year) => specials.has(year)),
+  };
+}
+
 function renderSaunachelinAwardRow(facility) {
   const years = getSaunachelinAwardYears(facility);
   if (!years.length) return "";
   const ids = [facility.id, ...(facility.legacyIds || [])];
   const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
-  return `<div><dt>サウナシュラン</dt><dd>${years.join("・")}年 受賞（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" target="_blank" rel="noreferrer">公式サイト</a></dd></div>`;
+  const { regular, special } = splitSaunachelinAwardYears(facility, years);
+  const parts = [];
+  if (regular.length) parts.push(`${regular.join("・")}年 受賞`);
+  if (special.length) parts.push(`${special.join("・")}年 特別賞`);
+  return `<div><dt>サウナシュラン</dt><dd>${parts.join("／")}（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" target="_blank" rel="noreferrer">公式サイト</a></dd></div>`;
 }
 
 function renderSaunachelinAwardBadge(facility) {
@@ -5012,7 +5032,11 @@ function renderSaunachelinAwardBadge(facility) {
   if (!years.length) return "";
   const ids = [facility.id, ...(facility.legacyIds || [])];
   const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
-  return `<span class="award-badge">SAUNACHELIN ${years.join("・")} 受賞${hallOfFame ? "／殿堂入り" : ""}</span>`;
+  const { regular, special } = splitSaunachelinAwardYears(facility, years);
+  const parts = [];
+  if (regular.length) parts.push(`${regular.join("・")} 受賞`);
+  if (special.length) parts.push(`${special.join("・")} 特別賞`);
+  return `<span class="award-badge">SAUNACHELIN ${parts.join("／")}${hallOfFame ? "／殿堂入り" : ""}</span>`;
 }
 
 function getFilteredFacilities({ ignoreFeatures = false } = {}) {
@@ -6154,6 +6178,12 @@ function showAchievement({ eyebrow, title, body }) {
 function shortPrefName(name) {
   if (name === "北海道") return name;
   return name.replace(/[都道府県]$/, "");
+}
+
+function formatJaDate(isoDate) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(isoDate || ""));
+  if (!match) return "2026年11月4日";
+  return `${Number(match[1])}年${Number(match[2])}月${Number(match[3])}日`;
 }
 
 function formatDate(value) {

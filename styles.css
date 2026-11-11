@@ -9221,3 +9221,5 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   line-height: 1.6;
   color: rgb(17 24 23 / 0.7);
 }
+.facility-facts > div { grid-template-columns: 104px minmax(0, 1fr); }
+.facility-facts dt { font-weight: 700; line-break: strict; word-break: keep-all; }

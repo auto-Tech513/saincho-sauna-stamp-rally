@@ -121,3 +121,36 @@ test("facility cards render no address line when the facility has no address", (
   const withAddress = h.run('renderFacilityAddress({ name: "x", prefecture: "北海道", city: "札幌市", address: "〒060-0001 北海道札幌市中央区北1条西1丁目1" })');
   assert.equal(withAddress.includes("北1条西1丁目1"), true);
 });
+
+test("restricted facilities get the tenant-only status and are not stamp actions", () => {
+  const h = harness();
+  assert.equal(h.run('getFacilityStatus({ status: "restricted" }).badge'), "テナント専用");
+  assert.equal(h.run('getFacilityStatus({ status: "restricted" }).action'), "一般利用不可");
+  assert.equal(h.run('getFacilityStatus({})'), null);
+});
+
+test("special award years render as 特別賞, regular years as 受賞", () => {
+  const h = harness();
+  const special = h.run('renderSaunachelinAwardBadge({ id: "manual-fukuoka-reboot", tags: ["SAUNACHELIN 2026"], specialAwardYears: [2026] })');
+  assert.equal(special.includes("SAUNACHELIN 2026 特別賞"), true);
+  const regular = h.run('renderSaunachelinAwardBadge({ id: "x", tags: ["SAUNACHELIN 2026"] })');
+  assert.equal(regular.includes("SAUNACHELIN 2026 受賞"), true);
+  const mixed = h.run('renderSaunachelinAwardRow({ id: "x", tags: ["SAUNACHELIN 2025", "SAUNACHELIN 2026"], specialAwardYears: [2026] })');
+  assert.equal(mixed.includes("2025年 受賞／2026年 特別賞"), true);
+});
+
+test("guide source check dates format per article with a safe fallback", () => {
+  const h = harness();
+  assert.equal(h.run('formatJaDate("2026-11-11")'), "2026年11月11日");
+  assert.equal(h.run('formatJaDate("2026-11-04")'), "2026年11月4日");
+  assert.equal(h.run('formatJaDate("")'), "2026年11月4日");
+});
+
+test("closed facility cards hide the wishlist button unless already wished", () => {
+  const h = harness();
+  const closed = h.run('renderFacilityCard({ id: "closed-1", name: "閉店館", prefecture: "福井県", city: "敦賀市", status: "closed", tags: [] })');
+  assert.equal(closed.includes('data-action="wishlist"'), false);
+  assert.equal(closed.includes("閉店"), true);
+  const open = h.run('renderFacilityCard({ id: "open-1", name: "営業館", prefecture: "福井県", city: "敦賀市", tags: [] })');
+  assert.equal(open.includes('data-action="wishlist"'), true);
+});

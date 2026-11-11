@@ -98,6 +98,12 @@ function renderProvenanceRows(facility, evidence) {
 // note が住所そのもの（または施設名だけ）の場合は紹介文として出さない（住所の二重表示の是正）。
 const SAUNACHELIN_HALL_OF_FAME_IDS = new Set(["manual-aichi-wellbe-sakae", "st-kumamoto-82", "st-kanagawa-4", "official-saga-mifuneyama-rakan", "st-nagano-4544", "sc2025-ochiairo", "si-hokkaido-4521", "si-tokyo-67270"]);
 
+function formatJaDate(isoDate) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(isoDate || ""));
+  if (!match) return "2026年11月4日";
+  return `${Number(match[1])}年${Number(match[2])}月${Number(match[3])}日`;
+}
+
 function saunachelinAwardYears(facility) {
   return (facility.tags || [])
     .map((tag) => /^saunachelin\s+(20\d{2})$/i.exec(String(tag).trim()))
@@ -106,12 +112,22 @@ function saunachelinAwardYears(facility) {
     .sort((a, b) => a - b);
 }
 
+function saunachelinAwardText(facility, years) {
+  const specials = new Set(facility.specialAwardYears || []);
+  const regular = years.filter((year) => !specials.has(year));
+  const special = years.filter((year) => specials.has(year));
+  const parts = [];
+  if (regular.length) parts.push(`${regular.join("・")}年 受賞`);
+  if (special.length) parts.push(`${special.join("・")}年 特別賞`);
+  return parts.join("／");
+}
+
 function saunachelinAwardRow(facility) {
   const years = saunachelinAwardYears(facility);
   if (!years.length) return "";
   const ids = [facility.id, ...(facility.legacyIds || [])];
   const hallOfFame = ids.some((id) => SAUNACHELIN_HALL_OF_FAME_IDS.has(id));
-  return `<div><dt>サウナシュラン</dt><dd>${years.join("・")}年 受賞（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" rel="noreferrer">公式サイト</a></dd></div>`;
+  return `<div><dt>サウナシュラン</dt><dd>${saunachelinAwardText(facility, years)}（TTNE主催）${hallOfFame ? "／殿堂入り" : ""} <a href="https://www.saunachelin.com/" rel="noreferrer">公式サイト</a></dd></div>`;
 }
 
 function displayNote(facility) {
@@ -528,7 +544,7 @@ function renderAboutSsr() {
   const withAddress = CANONICAL_FACILITIES.filter((facility) => getAddress(facility)).length;
   const withArea = CANONICAL_FACILITIES.filter((facility) => getAddress(facility) || facility.city).length;
   const indexable = CANONICAL_FACILITIES.filter(isIndexableFacility).length;
-  const stampEligible = SEARCHABLE_FACILITIES.filter((facility) => !["closed", "suspended", "planned", "verify"].includes(facility.status)).length;
+  const stampEligible = SEARCHABLE_FACILITIES.filter((facility) => !["closed", "suspended", "planned", "verify", "restricted"].includes(facility.status)).length;
   const percent = (value) => `${Math.round((value / CANONICAL_FACILITIES.length) * 100)}%`;
   return wrapSsr(`
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › 運営・データ方針</nav>
@@ -539,14 +555,14 @@ function renderAboutSsr() {
     <dl>
       <div><dt>重複統合後の候補</dt><dd>${CANONICAL_FACILITIES.length}件</dd></div>
       <div><dt>通常検索の対象</dt><dd>${SEARCHABLE_FACILITIES.length}件（ジム・フィットネス併設施設は通常検索から除くため、候補数とは一致しません）</dd></div>
-      <div><dt>押印・県マスターの対象</dt><dd>${stampEligible}件（閉店・臨時休業・開業予定・要確認の施設は対象外のため、検索対象数とは一致しません）</dd></div>
+      <div><dt>押印・県マスターの対象</dt><dd>${stampEligible}件（閉店・臨時休業・開業予定・要確認・一般利用できない施設は対象外のため、検索対象数とは一致しません）</dd></div>
       <div><dt>番地住所あり</dt><dd>${withAddress}件（${percent(withAddress)}）</dd></div>
       <div><dt>市区町村以上</dt><dd>${withArea}件（${percent(withArea)}）</dd></div>
       <div><dt>検索対象の個別ページ</dt><dd>${indexable}件</dd></div>
-      <div><dt>カタログ確認日</dt><dd>${escapeHtml(DATASET_META.catalogReviewedAt || "未設定")}</dd></div>
+      <div><dt>カタログ確認日</dt><dd>${escapeHtml(DATASET_META.catalogReviewedAt || "未設定")}（台帳全体を棚卸しした基準日です。その後も施設ごとに確認・更新を続けており、各施設の最新の確認日は施設ページとカードに表示しています）</dd></div>
     </dl>
     <h2>確認・更新</h2>
-    <p>同一施設の別名を正規化して統合し、閉店・臨時休業・開業予定・要確認の施設は押印と県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
+    <p>同一施設の別名を正規化して統合し、閉店・臨時休業・開業予定・要確認・一般利用できない施設は押印と県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
     <p>検索エンジン向けの個別ページは、番地住所、施設公式URL、または所在地と固有説明のあるサウナ宿を確認できた候補に限定します。未確認候補はアプリ内検索には残し、情報を補完できるまでサイトマップへ載せません。</p>
     <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
@@ -633,10 +649,11 @@ function renderArticleSsr(article, route) {
     ],
   }, null, 2);
   const detailHtml = (article.detail || []).map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("");
+  const sourcesCheckedJa = formatJaDate(article.sourcesCheckedAt || "2026-11-04");
   const sourcesHtml = Array.isArray(article.sources) && article.sources.length ? `
     <h2>出典・参考資料</h2>
     <ul>${article.sources.map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}</ul>
-    <p><small>この記事の内容の根拠とした資料です。2026年11月4日に各出典を確認しています。補助的な出典には、その旨を資料名に明記しています。</small></p>` : "";
+    <p><small>この記事の内容の根拠とした資料です。${sourcesCheckedJa}に各出典を確認しています。補助的な出典には、その旨を資料名に明記しています。</small></p>` : "";
   const index = ARTICLE_ROUTES.findIndex((entry) => entry.route === route);
   const siblings = ARTICLE_ROUTES.filter((entry) => entry.article.category === article.category && entry.route !== route).slice(0, 3);
   const prev = index > 0 ? ARTICLE_ROUTES[index - 1] : null;
@@ -931,7 +948,7 @@ function renderPrefAwardBlock(pref, facilities) {
   const shown = awarded.slice(0, 8);
   return `
     <h2>${escapeHtml(pref.name)}のサウナシュラン受賞施設（${awarded.length}件）</h2>
-    <ul class="ssr-list">${shown.map(({ facility, years }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${years.join("・")}年 受賞（TTNE主催）</span></li>`).join("")}</ul>
+    <ul class="ssr-list">${shown.map(({ facility, years }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${saunachelinAwardText(facility, years)}（TTNE主催）</span></li>`).join("")}</ul>
     ${awarded.length > shown.length ? `<p>ほか${awarded.length - shown.length}件あります。アプリの検索で「サウナシュラン」と入力すると、受賞施設だけを表示できます。</p>` : `<p>アプリの検索で「サウナシュラン」と入力すると、全国の受賞施設だけを表示できます。</p>`}`;
 }
 

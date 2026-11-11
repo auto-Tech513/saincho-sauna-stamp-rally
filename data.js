@@ -29989,7 +29989,10 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12795"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12795",
+    "specialAwardYears": [
+      2024
+    ]
   },
   {
     "id": "si-tochigi-12819",
@@ -42488,6 +42491,9 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://sauna-ikitai.com/saunas/78160",
     "tags": [
       "SAUNACHELIN 2023"
+    ],
+    "specialAwardYears": [
+      2023
     ]
   },
   {
@@ -71121,6 +71127,9 @@ export const SEED_FACILITIES = [
     "note": "天神ビジネスセンターⅡ（地下2階）にも同名の共用サウナあり。いずれも一般利用不可（入居テナント専用）。",
     "source": "公式",
     "sourceUrl": "https://tenjinsfbc.jp/reboot/top-floor.php",
-    "officialUrl": "https://tenjinsfbc.jp/reboot/top-floor.php"
+    "officialUrl": "https://tenjinsfbc.jp/reboot/top-floor.php",
+    "specialAwardYears": [
+      2026
+    ]
   }
 ];
