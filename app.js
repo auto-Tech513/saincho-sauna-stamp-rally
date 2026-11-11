@@ -2485,7 +2485,7 @@ function getEvidenceDate(evidence) {
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
   const rows = evidence?.facts.filter(row => ["営業状況", "料金", "営業時間", "施設営業時間", "設備", "設備・温度", "サウナ設備", "サウナルーム", "サウナストーブ", "サウナ収容人数", "水風呂", "水風呂収容人数", "利用条件", "休館日"].includes(row.label)).slice(0, 4) || [];
-  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? `公式${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ` : "料金・営業時間・設備は公式で要確認"}</p>`;
+  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? `公式${evidence.method === "official-labeled-fields" ? "掲載値の確認日" : "照合日"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ` : "料金・営業時間・設備は公式で要確認"}</p>`;
 }
 function renderCheckinPanel(facility) {
   const coordinate = getFacilityCoordinate(facility);

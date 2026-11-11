@@ -482,7 +482,7 @@ function renderHomeSsr() {
     ["サ印（サウナ御朱印）とは何ですか？", "サ印は、サウナ施設を訪問した証として、サ印帳のアプリ内で自分で押すデジタルな印です。施設が発行する御朱印や記念印とは別物で、施設で受け取るものではありません。"],
     ["サ印帳は無料で使えますか？", "無料で使えます。施設の検索、サ印の押印、メモ、お気に入りは登録なしで、スマホのブラウザから利用できます。"],
     ["アプリのインストールは必要ですか？", "必要ありません。サ印帳はブラウザで動くWebアプリです。ホーム画面に追加すると、アプリのように起動できます。"],
-    ["どんなサウナが掲載されていますか？", `全国47都道府県のサウナ候補${CANONICAL_FACILITIES.length}件（重複統合後）を検索できます。このうち、住所や公式URLを確認できた${indexableCount}件には個別ページがあります。最新の内訳は運営・データ方針ページに掲載しています。`],
+    ["どんなサウナが掲載されていますか？", `全国47都道府県のサウナ候補${SEARCHABLE_FACILITIES.length}件（重複統合後・通常検索の対象）を検索できます。このうち、住所や公式URLを確認できた${indexableCount}件には個別ページがあります。件数の内訳と数え方は運営・データ方針ページに掲載しています。`],
     ["施設を自分で登録する必要がありますか？", `必要ありません。全国の候補から検索し、行った施設を選んで押印します。候補にないサウナは、「サウナを追加」のページから自分で登録することもできます。`],
     ["無料で記録できる施設数に上限はありますか？", "上限はありません。検索、押印、メモ、お気に入り、サ活ログは登録なしで無料で使えます。ランキングへの参加も無料です。"],
     ["サ印は間違えて押したら取り消せますか？", "取り消せます。押印した施設のサ印はいつでも取り消しでき、コレクションや称号も実際の押印数に合わせて再計算されます。"],
@@ -528,6 +528,7 @@ function renderAboutSsr() {
   const withAddress = CANONICAL_FACILITIES.filter((facility) => getAddress(facility)).length;
   const withArea = CANONICAL_FACILITIES.filter((facility) => getAddress(facility) || facility.city).length;
   const indexable = CANONICAL_FACILITIES.filter(isIndexableFacility).length;
+  const stampEligible = SEARCHABLE_FACILITIES.filter((facility) => !["closed", "suspended", "planned", "verify"].includes(facility.status)).length;
   const percent = (value) => `${Math.round((value / CANONICAL_FACILITIES.length) * 100)}%`;
   return wrapSsr(`
     <nav aria-label="パンくず"><a href="/">サ印帳</a> › 運営・データ方針</nav>
@@ -537,13 +538,15 @@ function renderAboutSsr() {
     <p>サ印帳は、確認できた事実と未確認項目を分けて掲載します。施設名、都道府県、参照URLを基礎情報とし、住所、公式URL、設備タグは公開確認できた場合のみ表示します。</p>
     <dl>
       <div><dt>重複統合後の候補</dt><dd>${CANONICAL_FACILITIES.length}件</dd></div>
+      <div><dt>通常検索の対象</dt><dd>${SEARCHABLE_FACILITIES.length}件（ジム・フィットネス併設施設は通常検索から除くため、候補数とは一致しません）</dd></div>
+      <div><dt>押印・県マスターの対象</dt><dd>${stampEligible}件（閉店・臨時休業・開業予定・要確認の施設は対象外のため、検索対象数とは一致しません）</dd></div>
       <div><dt>番地住所あり</dt><dd>${withAddress}件（${percent(withAddress)}）</dd></div>
       <div><dt>市区町村以上</dt><dd>${withArea}件（${percent(withArea)}）</dd></div>
       <div><dt>検索対象の個別ページ</dt><dd>${indexable}件</dd></div>
       <div><dt>カタログ確認日</dt><dd>${escapeHtml(DATASET_META.catalogReviewedAt || "未設定")}</dd></div>
     </dl>
     <h2>確認・更新</h2>
-    <p>同一施設の別名を正規化して統合し、開業予定・要確認は県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
+    <p>同一施設の別名を正規化して統合し、閉店・臨時休業・開業予定・要確認の施設は押印と県マスターの対象外にします。外部施設の閉店、移転、料金変更を推測で自動上書きせず、監査で異常を検出した後に根拠を確認して更新します。</p>
     <p>検索エンジン向けの個別ページは、番地住所、施設公式URL、または所在地と固有説明のあるサウナ宿を確認できた候補に限定します。未確認候補はアプリ内検索には残し、情報を補完できるまでサイトマップへ載せません。</p>
     <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
@@ -775,7 +778,7 @@ function renderFacilitySsr(facility) {
     <dl>
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
       ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
-      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（${row.checkedAt}${evidence.method === "official-labeled-fields" ? "掲載値取得" : "照合"}）</dd></div>`).join("")}
+      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（確認日 ${row.checkedAt}／${evidence.method === "official-labeled-fields" ? "公式掲載値" : "公式照合"}）</dd></div>`).join("")}
       ${saunachelinAwardRow(facility)}
       ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
       ${isFitnessFacility(facility) ? '<div><dt>施設区分</dt><dd>ジム・フィットネス併設。通常のサウナ検索の対象外です。記録・参照用のページは保持しています。</dd></div>' : ""}
