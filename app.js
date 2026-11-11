@@ -2439,7 +2439,7 @@ function renderFacilityDetail() {
           <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
-        <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページの項目を取得" : "掲載した公式情報を照合"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
+        <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
         ${getMissingEvidenceFields(facility).length ? `<details class="facility-disclosure"><summary>掲載範囲・未確認項目</summary><p>未確認: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。未掲載は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
@@ -3551,6 +3551,7 @@ function renderContactPage() {
 function renderAboutPage() {
   if (!el.aboutContent) return;
   const facilities = getFacilities();
+  const stampEligible = countEligibleFacilities().length;
   const withAddress = facilities.filter((facility) => getFacilityAddress(facility)).length;
   const withArea = facilities.filter((facility) => facility.city || getFacilityAddress(facility)).length;
   const withOfficial = facilities.filter((facility) => facility.officialUrl).length;
@@ -3573,11 +3574,12 @@ function renderAboutPage() {
       <p>サ印帳は施設名、都道府県、参照URLを基礎にし、住所、公式URL、設備タグは公開確認できた項目だけを掲載します。未確認項目を推測で埋めません。</p>
     </section>
     <section class="about-metrics" aria-label="掲載データの品質指標">
-      <article><span>表示候補</span><strong>${facilities.length.toLocaleString("ja-JP")}</strong><em>重複統合後</em></article>
+      <article><span>表示候補</span><strong>${facilities.length.toLocaleString("ja-JP")}</strong><em>重複統合後・通常検索の対象</em></article>
       <article><span>番地住所あり</span><strong>${percent(withAddress)}</strong><em>${withAddress.toLocaleString("ja-JP")}件</em></article>
       <article><span>市区町村以上</span><strong>${percent(withArea)}</strong><em>${withArea.toLocaleString("ja-JP")}件</em></article>
       <article><span>直接参照URL</span><strong>${percent(directSources)}</strong><em>${directSources.toLocaleString("ja-JP")}件</em></article>
     </section>
+    <p class="about-metrics-note">サ印の押印と県マスターの対象は ${stampEligible.toLocaleString("ja-JP")} 件です。閉店・臨時休業・開業予定・要確認の施設は対象外のため、表示候補の件数とは一致しません。</p>
     <div class="about-grid">
       <section class="about-card">
         <p class="eyebrow">EDITORIAL</p>
@@ -3585,7 +3587,7 @@ function renderAboutPage() {
         <ol>
           <li>同一県の名称・別名・旧称を正規化し、重複候補を統合します。</li>
           <li>住所と特徴は参照ページまたは公式情報で公開確認できた場合のみ表示します。</li>
-          <li>開業予定・要確認は県マスターの対象外にし、訪問済み施設と混同させません。</li>
+          <li>閉店・臨時休業・開業予定・要確認は押印と県マスターの対象外にし、訪問済み施設と混同させません。</li>
           <li>営業時間、料金、休館日は変動するため、訪問前の公式確認を案内します。</li>
         </ol>
         <p>カタログ確認日: ${escapeHtml(reviewedAt)} / 方針更新日: ${escapeHtml(methodologyAt)}</p>

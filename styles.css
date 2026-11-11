@@ -9188,3 +9188,17 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   background: transparent;
   box-shadow: none;
 }
+
+/* 件数の数え方注記（2026-11-11）: 検索対象数と押印対象数の違いを、その数字が出る場所で説明する */
+.passport-scope-note {
+  margin: 10px 2px 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+}
+.about-metrics-note {
+  margin: 10px 2px 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+}
