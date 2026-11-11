@@ -9223,3 +9223,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 }
 .facility-facts > div { grid-template-columns: 104px minmax(0, 1fr); }
 .facility-facts dt { font-weight: 700; line-break: strict; word-break: keep-all; }
+.guide-entry { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; margin: 10px 0 2px; padding: 10px 14px; background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); border-radius: 8px; font: inherit; text-align: left; cursor: pointer; }
+.guide-entry-label { flex: none; color: var(--primary); font-weight: 800; }
+.guide-entry-text { flex: 1; color: rgb(17 24 23 / 0.78); font-size: 0.85rem; line-height: 1.5; }
+.guide-entry-arrow { flex: none; color: var(--primary); font-weight: 700; }
