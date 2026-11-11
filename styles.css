@@ -9202,3 +9202,22 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   line-height: 1.6;
   color: rgb(17 24 23 / 0.7);
 }
+.backup-hint {
+  display: grid;
+  gap: 10px;
+  margin: 0 2px 14px;
+  padding: 14px;
+  background: rgb(255 255 255 / 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.backup-hint[hidden] { display: none; }
+.backup-hint-text { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgb(17 24 23 / 0.85); }
+.backup-hint-text strong { font-weight: 700; }
+.backup-hint-actions { display: flex; gap: 8px; align-items: center; }
+.stats-list-note {
+  margin: 10px 2px 14px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+}

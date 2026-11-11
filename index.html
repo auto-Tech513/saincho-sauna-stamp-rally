@@ -382,6 +382,13 @@
           </div>
           <div class="passport-scope-strip" id="passportPrefStrip" aria-label="サ印の都道府県切替"></div>
           <p class="passport-scope-note">県チップの分母は、押印できる施設の数です。閉店・臨時休業・開業予定・要確認の施設は含まないため、検索できる施設の数とは一致しません。</p>
+          <div class="backup-hint" id="backupHint" hidden>
+            <p class="backup-hint-text"><strong>記録はこの端末の中だけに保存されています。</strong>機種変更やブラウザのデータ削除で消えてしまうため、ときどきバックアップを書き出しておくと安心です。</p>
+            <div class="backup-hint-actions">
+              <button type="button" class="mini-button" data-menu-view="Stats" data-menu-target="backupTitle">バックアップへ</button>
+              <button type="button" class="ghost-button" data-action="dismiss-backup-hint">閉じる</button>
+            </div>
+          </div>
           <div class="title-progress-panel" id="titleProgressPanel"></div>
           <div class="stamp-grid" id="stampGrid"></div>
         </section>
@@ -401,6 +408,7 @@
             <button type="button" data-action="scroll-panel" data-target="leaderboardPanel">ランキング</button>
             <button type="button" data-action="scroll-panel" data-target="backupTitle">バックアップ</button>
           </nav>
+          <p class="stats-list-note">「行きたい」はこれから行きたい施設の控え、「お気に入り」は気に入った施設につける印です。どちらも施設のカードや詳細から付け外しできます。</p>
           <div class="stats-grid" id="statsGrid"></div>
 
           <section class="favorites-panel wishlist-panel" id="wishlistPanel" aria-label="行きたい施設">
@@ -510,7 +518,7 @@
           <div class="pref-board" id="prefBoard"></div>
                   <details class="record-backup" id="backupPanel">
             <summary id="backupTitle">記録のバックアップ・復元</summary>
-            <p id="backupHelp">JSONを書き出して保管し、復元時は同じファイルを選びます。読み込み前に置き換えを確認します。</p>
+            <p id="backupHelp">記録はこの端末の中だけに保存されています。機種変更のときは、①今の端末で「バックアップを書き出す」→ ②新しい端末で「バックアップを読み込む」の順で引き継げます。ふだんもときどき書き出しておくと、ブラウザのデータ削除などから記録を守れます。読み込みの前には置き換えの確認が入ります。</p>
             <details><summary>対象データ・注意点</summary><p>押印・行きたい・お気に入り・メモ・サ活ログ・端末内の口コミ控え・自分で追加した施設が対象です。ランキングのログイン情報と公開済みデータの管理権限は移せません。個人の記録を含むためファイルの共有にご注意ください。</p></details>
             <div class="backup-actions">
               <button class="secondary-button" id="exportButton" type="button">バックアップを書き出す</button>
@@ -755,7 +763,7 @@
             <p class="intent-lead">サ印帳は、行ったサウナを押印し、次の一湯を探し、訪問後のサ活ログまで一つにつなぐ無料Webアプリです。</p>
             <div class="intent-grid">
               <section><span>01</span><h3>県・住所・特徴で探す</h3><p>施設名だけでなく、都道府県、住所、温泉付き、個室、セルフロウリュなどから候補を絞れます。</p></section>
-              <section><span>02</span><h3>訪問したら押印</h3><p>誤って押したサ印は取り消せます。行きたいとお気に入りは別々に管理できます。</p></section>
+              <section><span>02</span><h3>訪問したら押印</h3><p>誤って押したサ印は取り消せます。「行きたい」は行きたい施設の控え、「お気に入り」は気に入った施設の印として、別々に管理できます。</p></section>
               <section><span>03</span><h3>サ活を振り返る</h3><p>セット数、サウナ・水風呂・休憩時間、体感を端末内の個人ログとして残せます。</p></section>
             </div>
             <section class="intent-note"><h3>達成は正直に積み上がる</h3><p>称号と県マスターは実際の押印数だけで進みます。購入や抽選で達成を早める仕組みはありません。最初は1湯、次はよく行く県の5湯を目標にすると続けやすくなります。</p></section>

@@ -97,3 +97,27 @@ test("cards use real independent links and every product-card renderer discloses
   }
   assert.match(source, /el\.settingsDialog\.showModal\(\)/);
 });
+
+test("backup hint shows only after the first stamp and only until dismissed", () => {
+  const h = harness();
+  assert.equal(h.run("shouldShowBackupHint(0, false)"), false);
+  assert.equal(h.run("shouldShowBackupHint(1, false)"), true);
+  assert.equal(h.run("shouldShowBackupHint(3, false)"), true);
+  assert.equal(h.run("shouldShowBackupHint(1, true)"), false);
+});
+
+test("dismissing the backup hint persists the flag and hides the hint without touching records", () => {
+  const h = harness();
+  h.run('state.visited.keep={at:"2026-10-22T00:00:00Z"}');
+  h.run("dismissBackupHint()");
+  assert.equal(h.writes.some((w) => w.key === "saincho-backup-hint-dismissed-v1" && w.value === "1"), true);
+  assert.equal(h.run("el.backupHint.hidden"), true);
+  assert.equal(h.run("Boolean(state.visited.keep)"), true);
+});
+
+test("facility cards render no address line when the facility has no address", () => {
+  const h = harness();
+  assert.equal(h.run('renderFacilityAddress({ name: "x", prefecture: "北海道", city: "札幌市" })'), "");
+  const withAddress = h.run('renderFacilityAddress({ name: "x", prefecture: "北海道", city: "札幌市", address: "〒060-0001 北海道札幌市中央区北1条西1丁目1" })');
+  assert.equal(withAddress.includes("北1条西1丁目1"), true);
+});

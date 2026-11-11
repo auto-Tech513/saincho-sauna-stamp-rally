@@ -854,6 +854,7 @@ const el = {
   facilityDetail: document.querySelector("#facilityDetail"),
   passportPrefStrip: document.querySelector("#passportPrefStrip"),
   titleProgressPanel: document.querySelector("#titleProgressPanel"),
+  backupHint: document.querySelector("#backupHint"),
   stampGrid: document.querySelector("#stampGrid"),
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
@@ -1441,6 +1442,10 @@ function bindEvents() {
         target.closest("details")?.setAttribute("open", "");
         target.scrollIntoView({ block: "start", behavior: "smooth" });
       }
+      return;
+    }
+    if (button.dataset.action === "dismiss-backup-hint") {
+      dismissBackupHint();
       return;
     }
     if (button.dataset.action === "open-filter-wishlist") {
@@ -2370,12 +2375,11 @@ function renderFacilityShareButtons(facility, { includeReview = true } = {}) {
 
 function renderFacilityAddress(facility) {
   const address = getFacilityAddress(facility);
-  if (!address && !facility.city) return "";
-  const value = address || `公開エリア: ${getFacilityAreaLabel(facility)}`;
+  if (!address) return "";
   return `
-    <p class="facility-address ${address ? "" : "facility-area"}">
+    <p class="facility-address">
       <span class="map-route-icon" aria-hidden="true"></span>
-      <span>${escapeHtml(value)}</span>
+      <span>${escapeHtml(address)}</span>
     </p>
   `;
 }
@@ -2760,7 +2764,37 @@ function getFacilityDetailLines(facility) {
   ];
 }
 
+const BACKUP_HINT_KEY = "saincho-backup-hint-dismissed-v1";
+
+function shouldShowBackupHint(visitedCount, dismissed) {
+  return visitedCount >= 1 && !dismissed;
+}
+
+function isBackupHintDismissed() {
+  try {
+    return localStorage.getItem(BACKUP_HINT_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function updateBackupHint() {
+  if (!el.backupHint) return;
+  const visitedCount = Object.keys(state.visited || {}).length;
+  el.backupHint.hidden = !shouldShowBackupHint(visitedCount, isBackupHintDismissed());
+}
+
+function dismissBackupHint() {
+  try {
+    localStorage.setItem(BACKUP_HINT_KEY, "1");
+  } catch {
+    // 保存できない環境では今回の表示だけ閉じる
+  }
+  if (el.backupHint) el.backupHint.hidden = true;
+}
+
 function renderPassport() {
+  updateBackupHint();
   renderPassportPrefStrip();
   renderTitleProgress();
   const facilities = getFacilities({ includeFitness: true }).filter(facility => !isFitnessFacility(facility) || hasFacilityUserSignal(facility))
