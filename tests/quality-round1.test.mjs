@@ -154,3 +154,26 @@ test("closed facility cards hide the wishlist button unless already wished", () 
   const open = h.run('renderFacilityCard({ id: "open-1", name: "営業館", prefecture: "福井県", city: "敦賀市", tags: [] })');
   assert.equal(open.includes('data-action="wishlist"'), true);
 });
+
+test("unvisited cards fold activity and review actions into more-actions", () => {
+  const h = harness();
+  const card = h.run('renderFacilityCard({ id: "fold-1", name: "未訪問館", prefecture: "福井県", city: "敦賀市", tags: [] })');
+  const [visiblePart, foldPart] = card.split('<details class="card-more-actions">');
+  assert.equal(visiblePart.includes('data-action="open-activity"'), false);
+  assert.equal(visiblePart.includes('data-action="jump-reviews"'), false);
+  assert.equal(visiblePart.includes('data-action="stamp"'), true);
+  assert.equal(foldPart.includes('data-action="open-activity"'), true);
+  assert.equal(foldPart.includes('data-action="jump-reviews"'), true);
+  assert.equal(foldPart.includes("その他の操作"), true);
+});
+
+test("visited cards keep the activity action visible and fold only reviews", () => {
+  const h = harness();
+  h.run('state.visited["fold-2"] = { at: "2026-11-11T00:00:00.000Z" }');
+  const card = h.run('renderFacilityCard({ id: "fold-2", name: "訪問済館", prefecture: "福井県", city: "敦賀市", tags: [] })');
+  const [visiblePart, foldPart] = card.split('<details class="card-more-actions">');
+  assert.equal(visiblePart.includes('data-action="open-activity"'), true);
+  assert.equal(visiblePart.includes('data-action="jump-reviews"'), false);
+  assert.equal(foldPart.includes('data-action="jump-reviews"'), true);
+  assert.equal(foldPart.includes('data-action="open-activity"'), false);
+});

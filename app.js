@@ -2346,15 +2346,16 @@ function renderFacilityCard(facility) {
         ${renderFacilityAddress(facility)}
         ${renderFacilityCardFacts(facility)}
         <div class="facility-utility-actions">
-          <button class="facility-detail-button" type="button" data-action="open-activity" data-id="${escapeAttr(facility.id)}">サ活を書く</button>
+          ${visited ? `<button class="facility-detail-button" type="button" data-action="open-activity" data-id="${escapeAttr(facility.id)}">サ活を書く</button>` : ""}
           ${renderMapRouteLink(facility, { compact: true })}
-          <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
         </div>
         <div class="card-actions ${visited ? "card-actions-visited" : ""}">${actions}</div>
         <div class="card-evidence">${headBadge}${sourceBadge}${tags}</div>
         <details class="card-more-actions">
-          <summary>共有</summary>
+          <summary>その他の操作</summary>
           <div class="card-more-body">
+            ${visited ? "" : `<button class="facility-detail-button" type="button" data-action="open-activity" data-id="${escapeAttr(facility.id)}">サ活を書く</button>`}
+            <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
             ${renderFacilityShareButtons(facility, { includeReview: false })}
           </div>
         </details>
