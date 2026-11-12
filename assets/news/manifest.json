@@ -40,5 +40,185 @@
     "og": "/assets/news/totopa-hakata-spotlight-og.png",
     "thumb": "/assets/news/totopa-hakata-spotlight-thumb.webp",
     "generatedAt": "2026-11-12"
+  },
+  "atsugi-kenko-center-closure": {
+    "hero": "/assets/news/atsugi-kenko-center-closure-hero.webp",
+    "og": "/assets/news/atsugi-kenko-center-closure-og.png",
+    "thumb": "/assets/news/atsugi-kenko-center-closure-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "aufguss-festival-spaworld-2nd": {
+    "hero": "/assets/news/aufguss-festival-spaworld-2nd-hero.webp",
+    "og": "/assets/news/aufguss-festival-spaworld-2nd-og.png",
+    "thumb": "/assets/news/aufguss-festival-spaworld-2nd-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "candeo-atsumeguri-sauna": {
+    "hero": "/assets/news/candeo-atsumeguri-sauna-hero.webp",
+    "og": "/assets/news/candeo-atsumeguri-sauna-og.png",
+    "thumb": "/assets/news/candeo-atsumeguri-sauna-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "hotel-biaclyn-saunachelin-2026": {
+    "hero": "/assets/news/hotel-biaclyn-saunachelin-2026-hero.webp",
+    "og": "/assets/news/hotel-biaclyn-saunachelin-2026-og.png",
+    "thumb": "/assets/news/hotel-biaclyn-saunachelin-2026-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "jin6-sauna-opening": {
+    "hero": "/assets/news/jin6-sauna-opening-hero.webp",
+    "og": "/assets/news/jin6-sauna-opening-og.png",
+    "thumb": "/assets/news/jin6-sauna-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "kaga-onsen-sauna-rally": {
+    "hero": "/assets/news/kaga-onsen-sauna-rally-hero.webp",
+    "og": "/assets/news/kaga-onsen-sauna-rally-og.png",
+    "thumb": "/assets/news/kaga-onsen-sauna-rally-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "kairyouyu-womens-renewal": {
+    "hero": "/assets/news/kairyouyu-womens-renewal-hero.webp",
+    "og": "/assets/news/kairyouyu-womens-renewal-og.png",
+    "thumb": "/assets/news/kairyouyu-womens-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "karumaru-ikebukuro-spotlight": {
+    "hero": "/assets/news/karumaru-ikebukuro-spotlight-hero.webp",
+    "og": "/assets/news/karumaru-ikebukuro-spotlight-og.png",
+    "thumb": "/assets/news/karumaru-ikebukuro-spotlight-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "kobe-sauna-main-renewal": {
+    "hero": "/assets/news/kobe-sauna-main-renewal-hero.webp",
+    "og": "/assets/news/kobe-sauna-main-renewal-og.png",
+    "thumb": "/assets/news/kobe-sauna-main-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "koshinoyu-tsuruga-closure": {
+    "hero": "/assets/news/koshinoyu-tsuruga-closure-hero.webp",
+    "og": "/assets/news/koshinoyu-tsuruga-closure-og.png",
+    "thumb": "/assets/news/koshinoyu-tsuruga-closure-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "kyujitsuyu-jozankei-opening": {
+    "hero": "/assets/news/kyujitsuyu-jozankei-opening-hero.webp",
+    "og": "/assets/news/kyujitsuyu-jozankei-opening-og.png",
+    "thumb": "/assets/news/kyujitsuyu-jozankei-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "mainichi-sauna-makuhari-opening": {
+    "hero": "/assets/news/mainichi-sauna-makuhari-opening-hero.webp",
+    "og": "/assets/news/mainichi-sauna-makuhari-opening-og.png",
+    "thumb": "/assets/news/mainichi-sauna-makuhari-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "manyo-minatomirai-renewal": {
+    "hero": "/assets/news/manyo-minatomirai-renewal-hero.webp",
+    "og": "/assets/news/manyo-minatomirai-renewal-og.png",
+    "thumb": "/assets/news/manyo-minatomirai-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "midori-rakunoyu-renewal": {
+    "hero": "/assets/news/midori-rakunoyu-renewal-hero.webp",
+    "og": "/assets/news/midori-rakunoyu-renewal-og.png",
+    "thumb": "/assets/news/midori-rakunoyu-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "onari-sauna-opening": {
+    "hero": "/assets/news/onari-sauna-opening-hero.webp",
+    "og": "/assets/news/onari-sauna-opening-og.png",
+    "thumb": "/assets/news/onari-sauna-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "rakuspa-musashikoganei-opening": {
+    "hero": "/assets/news/rakuspa-musashikoganei-opening-hero.webp",
+    "og": "/assets/news/rakuspa-musashikoganei-opening-og.png",
+    "thumb": "/assets/news/rakuspa-musashikoganei-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "reboot-tenjin-spotlight": {
+    "hero": "/assets/news/reboot-tenjin-spotlight-hero.webp",
+    "og": "/assets/news/reboot-tenjin-spotlight-og.png",
+    "thumb": "/assets/news/reboot-tenjin-spotlight-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "ryusenji-chigasaki-renewal": {
+    "hero": "/assets/news/ryusenji-chigasaki-renewal-hero.webp",
+    "og": "/assets/news/ryusenji-chigasaki-renewal-og.png",
+    "thumb": "/assets/news/ryusenji-chigasaki-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "safi-spa-maiko-renewal": {
+    "hero": "/assets/news/safi-spa-maiko-renewal-hero.webp",
+    "og": "/assets/news/safi-spa-maiko-renewal-og.png",
+    "thumb": "/assets/news/safi-spa-maiko-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "sauna-sakurado-opening": {
+    "hero": "/assets/news/sauna-sakurado-opening-hero.webp",
+    "og": "/assets/news/sauna-sakurado-opening-og.png",
+    "thumb": "/assets/news/sauna-sakurado-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "sauna-ten-new-log-sauna": {
+    "hero": "/assets/news/sauna-ten-new-log-sauna-hero.webp",
+    "og": "/assets/news/sauna-ten-new-log-sauna-og.png",
+    "thumb": "/assets/news/sauna-ten-new-log-sauna-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "sauna-tokyo-spotlight": {
+    "hero": "/assets/news/sauna-tokyo-spotlight-hero.webp",
+    "og": "/assets/news/sauna-tokyo-spotlight-og.png",
+    "thumb": "/assets/news/sauna-tokyo-spotlight-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "saunametsa-oimachi-opening": {
+    "hero": "/assets/news/saunametsa-oimachi-opening-hero.webp",
+    "og": "/assets/news/saunametsa-oimachi-opening-og.png",
+    "thumb": "/assets/news/saunametsa-oimachi-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "shinshu-yunomichi-rally-2026": {
+    "hero": "/assets/news/shinshu-yunomichi-rally-2026-hero.webp",
+    "og": "/assets/news/shinshu-yunomichi-rally-2026-og.png",
+    "thumb": "/assets/news/shinshu-yunomichi-rally-2026-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "shirakawa-sauna-village-rally": {
+    "hero": "/assets/news/shirakawa-sauna-village-rally-hero.webp",
+    "og": "/assets/news/shirakawa-sauna-village-rally-og.png",
+    "thumb": "/assets/news/shirakawa-sauna-village-rally-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "skyspa-yokohama-spotlight": {
+    "hero": "/assets/news/skyspa-yokohama-spotlight-hero.webp",
+    "og": "/assets/news/skyspa-yokohama-spotlight-og.png",
+    "thumb": "/assets/news/skyspa-yokohama-spotlight-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "takanawa-saunas-opening": {
+    "hero": "/assets/news/takanawa-saunas-opening-hero.webp",
+    "og": "/assets/news/takanawa-saunas-opening-og.png",
+    "thumb": "/assets/news/takanawa-saunas-opening-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "terume-kanazawa-renewal": {
+    "hero": "/assets/news/terume-kanazawa-renewal-hero.webp",
+    "og": "/assets/news/terume-kanazawa-renewal-og.png",
+    "thumb": "/assets/news/terume-kanazawa-renewal-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "tokyo-sauna-tribe-stage3": {
+    "hero": "/assets/news/tokyo-sauna-tribe-stage3-hero.webp",
+    "og": "/assets/news/tokyo-sauna-tribe-stage3-og.png",
+    "thumb": "/assets/news/tokyo-sauna-tribe-stage3-thumb.webp",
+    "generatedAt": "2026-11-12"
+  },
+  "yurakunosato-iyofuro-campaign": {
+    "hero": "/assets/news/yurakunosato-iyofuro-campaign-hero.webp",
+    "og": "/assets/news/yurakunosato-iyofuro-campaign-og.png",
+    "thumb": "/assets/news/yurakunosato-iyofuro-campaign-thumb.webp",
+    "generatedAt": "2026-11-12"
   }
 }

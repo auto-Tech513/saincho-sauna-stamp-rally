@@ -1345,6 +1345,11 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "閉店（公式サイトに「閉店のお知らせ」と回数券の返金案内を掲載。閉店日は公式ページ本文に明記なし）", sourceUrl: "http://www.yu-iwashita.jp/tsuruga/", checkedAt: "2026-11-11" }],
   },
   {
+    ids: ["st-kanagawa-63"], name: "東名厚木健康センター", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（2025年8月31日をもって閉店。1997年開業、28年間の営業。閉店の理由は設備の老朽化と公式が案内）", sourceUrl: "https://yunoizumi.com/atsugi/blog_atsugi/3303/", checkedAt: "2026-11-12" }],
+  },
+  {
     ids: ["st-iwate-187"], name: "サウナ＆カプセル宮古", status: "closed",
     features: [],
     facts: [{ label: "営業状況", value: "閉館（閉館日不明）。日帰り入浴の閉館リストに閉館として掲載（住所が登録情報と一致）。公式サイトは消滅し404。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://yuru-to.net/closed.php?oid=47706", checkedAt: "2026-11-10" }],
