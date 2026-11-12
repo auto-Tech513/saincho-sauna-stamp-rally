@@ -9374,3 +9374,30 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   .push-panel { flex-direction: column; align-items: stretch; }
   .push-panel .primary-button, .push-panel .secondary-button { width: 100%; }
 }
+
+/* ガイドのGearレール: 記事への導線を優先し、商品カードは既定で折りたたむ */
+.guide-gear-more summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #eadfca;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.guide-gear-more summary::-webkit-details-marker { display: none; }
+.guide-gear-more summary::after {
+  content: "▾";
+  color: #9b6e05;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease;
+}
+.guide-gear-more[open ] summary::after { transform: rotate(180deg); }
+.guide-gear-more .guide-gear-grid { margin-top: 8px; }

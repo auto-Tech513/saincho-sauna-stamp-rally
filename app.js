@@ -4556,9 +4556,13 @@ function renderGuideGearRail(articles) {
       </div>
       <button class="mini-button" type="button" data-open-view="Gear">Gear 30件</button>
     </div>
-    <div class="guide-gear-grid">
-      ${products.map((item) => renderGuideGearCard(item)).join("")}
-    </div>
+    ${products.length ? `
+    <details class="guide-gear-more">
+      <summary>記事に合うGearを見る（${products.length}件）</summary>
+      <div class="guide-gear-grid">
+        ${products.map((item) => renderGuideGearCard(item)).join("")}
+      </div>
+    </details>` : ""}
   `;
 }
 
