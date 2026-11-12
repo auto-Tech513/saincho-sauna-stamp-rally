@@ -45,21 +45,26 @@
   }
   .date { font-size: 24px; font-weight: 700; }
   .tagline { font-size: 22px; color: #596763; }
-  /* サムネイル用（タイトル文字なし・カテゴリを大きく見せる） */
-  body.thumb .frame { border-width: 6px; padding: 30px 34px 26px; }
-  body.thumb .stamp { width: 40px; height: 40px; font-size: 22px; border-radius: 8px; }
+  /* サムネイル用（カテゴリ色の表紙。タイトル文字なし・カテゴリを大きく見せる） */
+  body.thumb { color: #fff; }
+  body.thumb .frame { border: 0; padding: 26px 30px 22px; }
+  body.thumb .frame::after {
+    content: ""; position: absolute; inset: 12px;
+    border: 1px solid rgb(255 255 255 / 0.55); pointer-events: none;
+  }
+  body.thumb .stamp { width: 40px; height: 40px; font-size: 22px; border-radius: 8px; background: #fff; }
   body.thumb .masthead-name { font-size: 26px; }
-  body.thumb .site-name { font-size: 17px; }
+  body.thumb .site-name { font-size: 17px; color: rgb(255 255 255 / 0.75); }
   body.thumb .chip { display: none; }
   body.thumb .title { display: none; }
   .thumb-category { display: none; }
   body.thumb .thumb-category {
-    display: block; margin-top: 40px;
-    font-size: 76px; font-weight: 900; line-height: 1.25; letter-spacing: 0.02em;
+    display: block; margin-top: 34px;
+    font-size: 74px; font-weight: 900; line-height: 1.25; letter-spacing: 0.02em;
   }
-  body.thumb .bottom-row { padding-top: 16px; }
+  body.thumb .bottom-row { border-top-color: rgb(255 255 255 / 0.4); padding-top: 14px; }
   body.thumb .date { font-size: 21px; }
-  body.thumb .tagline { font-size: 18px; }
+  body.thumb .tagline { font-size: 18px; color: rgb(255 255 255 / 0.75); }
 </style>
 </head>
 <body>
@@ -83,6 +88,8 @@
   const params = new URLSearchParams(location.search);
   if (params.get("variant") === "thumb") {
     document.body.classList.add("thumb");
+    document.body.style.background = params.get("color") || "#006d64";
+    document.querySelector(".stamp").style.color = params.get("color") || "#006d64";
     document.getElementById("thumbCategory").textContent = params.get("category") || "ニュース";
   }
   const title = params.get("title") || "";
