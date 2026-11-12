@@ -205,3 +205,11 @@ test("restricted facilities hide the wishlist button on cards like closed ones",
   const open = h.run('renderFacilityCard({ id: "open-2", name: "営業館", prefecture: "福岡県", city: "中央区", tags: [] })');
   assert.equal(open.includes('data-action="wishlist"'), true);
 });
+
+test("first steps card shows only right after the very first stamp", () => {
+  const h = harness();
+  assert.equal(h.run('shouldShowFirstSteps(0, false)'), false);
+  assert.equal(h.run('shouldShowFirstSteps(1, false)'), true);
+  assert.equal(h.run('shouldShowFirstSteps(1, true)'), false);
+  assert.equal(h.run('shouldShowFirstSteps(2, false)'), false);
+});

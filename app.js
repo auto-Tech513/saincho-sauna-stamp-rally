@@ -856,6 +856,7 @@ const el = {
   passportPrefStrip: document.querySelector("#passportPrefStrip"),
   titleProgressPanel: document.querySelector("#titleProgressPanel"),
   backupHint: document.querySelector("#backupHint"),
+  firstStepsCard: document.querySelector("#firstStepsCard"),
   stampGrid: document.querySelector("#stampGrid"),
   statsGrid: document.querySelector("#statsGrid"),
   prefBoard: document.querySelector("#prefBoard"),
@@ -1447,6 +1448,20 @@ function bindEvents() {
     }
     if (button.dataset.action === "dismiss-backup-hint") {
       dismissBackupHint();
+      return;
+    }
+    if (button.dataset.action === "first-steps-passport") {
+      dismissFirstSteps();
+      track("first_steps_click", { choice: "passport" });
+      setView("Passport");
+      return;
+    }
+    if (button.dataset.action === "first-steps-search") {
+      dismissFirstSteps();
+      track("first_steps_click", { choice: "search" });
+      updateFirstStepsCard();
+      el.main.scrollTo({ top: 0, behavior: "smooth" });
+      el.searchInput.focus({ preventScroll: true });
       return;
     }
     if (button.dataset.action === "open-filter-wishlist") {
@@ -2080,6 +2095,7 @@ function renderQuestPanel() {
 }
 
 function renderExplore() {
+  updateFirstStepsCard();
   document.body.classList.toggle("has-search-query", Boolean(searchTerm.trim()));
   if (searchTerm.trim()) el.exploreExtras.open = false;
   renderFilterButtons();
@@ -2798,6 +2814,40 @@ function dismissBackupHint() {
     // 保存できない環境では今回の表示だけ閉じる
   }
   if (el.backupHint) el.backupHint.hidden = true;
+}
+
+const FIRST_STEPS_KEY = "saincho-first-steps-dismissed-v1";
+let firstStepsViewTracked = false;
+
+function shouldShowFirstSteps(visitedCount, dismissed) {
+  return visitedCount === 1 && !dismissed;
+}
+
+function isFirstStepsDismissed() {
+  try {
+    return localStorage.getItem(FIRST_STEPS_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function dismissFirstSteps() {
+  try {
+    localStorage.setItem(FIRST_STEPS_KEY, "1");
+  } catch {
+    // 保存できない環境では今回の表示だけ閉じる
+  }
+  if (el.firstStepsCard) el.firstStepsCard.hidden = true;
+}
+
+function updateFirstStepsCard() {
+  if (!el.firstStepsCard) return;
+  const show = shouldShowFirstSteps(Object.keys(state.visited).length, isFirstStepsDismissed());
+  el.firstStepsCard.hidden = !show;
+  if (show && !firstStepsViewTracked) {
+    firstStepsViewTracked = true;
+    track("first_steps_view", {});
+  }
 }
 
 function getStampTileDateLabel(facility, visited) {

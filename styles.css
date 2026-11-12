@@ -9230,3 +9230,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .stamp-date-excluded { color: #9b2e23; font-weight: 700; }
 .toast-action { margin-left: 12px; padding: 6px 12px; min-height: 36px; background: transparent; border: 1px solid currentColor; border-radius: 6px; color: inherit; font: inherit; font-weight: 700; cursor: pointer; }
 .toast.toast-interactive { pointer-events: auto; }
+.first-steps-card { display: grid; gap: 10px; margin: 10px 2px 4px; padding: 14px; background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); border-radius: 8px; }
+.first-steps-card[hidden] { display: none; }
+.first-steps-text { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgb(17 24 23 / 0.85); }
+.first-steps-text strong { font-weight: 700; }
+.first-steps-actions { display: flex; gap: 8px; align-items: center; }
