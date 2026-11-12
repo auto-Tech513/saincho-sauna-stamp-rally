@@ -13312,7 +13312,6 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://kanayama-hotel.jp/",
-    "status": "verify",
     "officialUrl": "https://kanayama-hotel.jp/"
   },
   {
