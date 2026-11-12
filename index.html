@@ -40,6 +40,7 @@
     <!-- SEO:END -->
     <link rel="image_src" href="https://saincho-sauna-stamp-rally.pages.dev/assets/saincho-og-v2.png" />
     <link rel="alternate" type="application/rss+xml" href="https://saincho-sauna-stamp-rally.pages.dev/feed.xml" title="サ印帳 サウナ入門・更新情報" />
+    <link rel="alternate" type="application/rss+xml" href="https://saincho-sauna-stamp-rally.pages.dev/feed-news.xml" title="サウニュ〜（サウナニュース）" />
     <title>サ印帳 | 全国サウナスタンプラリー・サ活記録アプリ</title>
     <link rel="icon" href="./icons/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="icon" href="./icons/favicon-16.png" sizes="16x16" type="image/png" />
@@ -136,6 +137,15 @@
               {
                 "@type": "ListItem",
                 "position": 7,
+                "item": {
+                  "@type": "WebPage",
+                  "name": "サウニュ〜（サウナニュース）",
+                  "url": "https://saincho-sauna-stamp-rally.pages.dev/news/"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
                 "item": {
                   "@type": "ContactPage",
                   "name": "掲載・お問い合わせ",
@@ -278,6 +288,8 @@
               <button type="button" class="ghost-button" data-action="first-steps-search">ほかの施設を探す</button>
             </div>
           </div>
+
+          <section class="news-rail" id="newsRail" hidden aria-label="サウニュ〜（サウナニュース）新着"></section>
 
           <details class="explore-extras" id="exploreExtras">
             <summary>サ活の進捗・次の一湯</summary>
@@ -685,6 +697,21 @@
           </section>
         </section>
 
+        <section class="view" id="viewNews" aria-label="サウニュ〜（サウナニュース）">
+          <div class="section-title">
+            <div>
+              <p class="eyebrow">SAUNEW〜</p>
+              <h2>サウニュ〜</h2>
+            </div>
+          </div>
+          <p class="news-intro">サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えます。</p>
+          <div id="newsListRoot"></div>
+        </section>
+
+        <section class="view" id="viewNewsArticle" aria-label="サウニュ〜記事">
+          <div id="newsArticleRoot"></div>
+        </section>
+
         <section class="view" id="viewCommunity" aria-label="サウナ仲間">
           <div class="section-title">
             <div>
@@ -863,6 +890,7 @@
           <button type="button" data-menu-view="Sameshi">サ飯</button>
           <button type="button" data-menu-view="Stay">サウナ合宿</button>
           <button type="button" data-menu-view="Guide">サウナ入門</button>
+          <button type="button" data-menu-view="News">サウニュ〜</button>
           <button type="button" data-menu-view="Gear">Gear</button>
         </div>
       </section>

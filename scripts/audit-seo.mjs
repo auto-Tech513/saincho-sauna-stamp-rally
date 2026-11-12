@@ -157,6 +157,71 @@ for (const line of aliasRedirects) {
   await assert.rejects(fs.access(urlToOutputPath(`https://saincho-sauna-stamp-rally.pages.dev${from}`)), undefined, `別名HTMLが残っています: ${from}`);
 }
 
+// ===== サウニュ〜（サウナニュース）の監査 =====
+const { SAUNA_NEWS, NEWS_CATEGORIES, getPublishedNews, newsBodyTextLength, countNewsH2, hasNewsFigureBlock } = await import("../news.js");
+const newsPublished = getPublishedNews(SAUNA_NEWS);
+const newsIndexHtml = await read("news/index.html");
+const newsFeed = await read("feed-news.xml");
+const newsManifest = JSON.parse(await fs.readFile(path.join(root, "assets", "news", "manifest.json"), "utf8"));
+const newsSlugs = new Set();
+for (const article of SAUNA_NEWS) {
+  assert(/^[a-z0-9]+(-[a-z0-9]+)*$/.test(article.slug) && article.slug.length <= 60, `ニュースのslug形式が不正です: ${article.slug}`);
+  assert(!newsSlugs.has(article.slug), `ニュースのslugが重複しています: ${article.slug}`);
+  newsSlugs.add(article.slug);
+  assert(NEWS_CATEGORIES[article.category], `ニュースのカテゴリが不正です: ${article.slug}`);
+  assert(article.title && article.lead && article.heroAlt, `ニュースの必須項目が不足しています: ${article.slug}`);
+  assert(Array.isArray(article.sources) && article.sources.length >= 1, `ニュースに出典がありません: ${article.slug}`);
+  assert(article.sourcesCheckedAt, `ニュースに出典確認日がありません: ${article.slug}`);
+  for (const facilityId of article.facilityIds || []) {
+    assert(SEED_FACILITIES.some((facility) => facility.id === facilityId), `ニュースの関連施設が台帳にありません: ${article.slug} -> ${facilityId}`);
+  }
+  assert(Array.isArray(article.facilityIds) && article.facilityIds.length >= 1, `ニュースに関連施設がありません: ${article.slug}`);
+  assert(Array.isArray(article.points) && article.points.length >= 3 && article.points.length <= 5, `ニュースの要点は3〜5件です: ${article.slug}`);
+  assert(article.points.filter((point) => /[0-9０-９]/.test(point)).length >= 2, `ニュースの要点に数値・日付を含むものが2件未満です: ${article.slug}`);
+  assert(hasNewsFigureBlock(article), `ニュースに図表ブロックがありません: ${article.slug}`);
+  const isShortForm = article.category === "closure" || String(article.statusNote || "").includes("短報");
+  const minChars = isShortForm ? 1200 : 1500;
+  const minH2 = isShortForm ? 3 : 4;
+  assert(newsBodyTextLength(article) >= minChars, `ニュースの本文が${minChars}字未満です: ${article.slug} (${newsBodyTextLength(article)}字)`);
+  assert(countNewsH2(article) >= minH2, `ニュースの見出しが${minH2}件未満です: ${article.slug}`);
+  if (article.sources.length < 2) {
+    assert(article.statusNote, `単一情報源のニュースには statusNote が必要です: ${article.slug}`);
+  }
+}
+assert(newsIndexHtml.includes('"@type": "ItemList"'), "ニュース一覧にItemListがありません");
+const newsItemListCount = Number(capture(newsIndexHtml, /"numberOfItems":\s*(\d+)/, "ニュース一覧の件数"));
+assert(newsItemListCount === newsPublished.length, `ニュース一覧のItemList件数が公開記事数と一致しません: ${newsItemListCount} != ${newsPublished.length}`);
+for (const article of newsPublished) {
+  const html = await read(`news/${article.slug}/index.html`);
+  const ld = structuredData(html);
+  const node = findNode(ld, "NewsArticle");
+  assert(node, `ニュース記事にNewsArticleがありません: ${article.slug}`);
+  for (const key of ["headline", "description", "image", "datePublished", "dateModified", "author", "publisher", "mainEntityOfPage"]) {
+    assert(node[key], `NewsArticleの${key}がありません: ${article.slug}`);
+  }
+  assert(node.datePublished === article.publishedAt, `NewsArticleのdatePublishedが記事データと一致しません: ${article.slug}`);
+  assert(node.dateModified === article.updatedAt, `NewsArticleのdateModifiedが記事データと一致しません: ${article.slug}`);
+  assert(html.includes(`<time datetime="${article.updatedAt}">`), `ニュース記事の<time>とdateModifiedが一致しません: ${article.slug}`);
+  assert(html.includes(`property="og:image" content="https://saincho-sauna-stamp-rally.pages.dev/assets/news/${article.slug}-og.png"`), `ニュース記事のog:imageが専用画像ではありません: ${article.slug}`);
+  const entry = newsManifest[article.slug];
+  assert(entry, `ニュース画像のmanifestに記事がありません: ${article.slug}`);
+  const heroPath = path.join(root, entry.hero.replace(/^\//, ""));
+  await fs.access(heroPath);
+  const heroBytes = await fs.readFile(heroPath);
+  assert(heroBytes.subarray(0, 4).toString("ascii") === "RIFF" && heroBytes.subarray(8, 12).toString("ascii") === "WEBP", `ヒーロー画像がWebPではありません: ${article.slug}`);
+  const { execFile } = await import("node:child_process");
+  const { promisify } = await import("node:util");
+  const probe = await promisify(execFile)("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", heroPath]).catch(() => null);
+  assert(probe, `ヒーロー画像の寸法を取得できません: ${article.slug}`);
+  const [heroWidth, heroHeight] = probe.stdout.trim().split(",").map(Number);
+  assert(heroWidth >= 1200, `ヒーロー画像の幅が1200px未満です: ${article.slug} (${heroWidth}x${heroHeight})`);
+  await fs.access(path.join(root, entry.og.replace(/^\//, "")));
+  assert(pageSitemap.includes(`https://saincho-sauna-stamp-rally.pages.dev/news/${article.slug}/`), `ニュース記事がsitemap-pagesにありません: ${article.slug}`);
+}
+const newsFeedItems = [...newsFeed.matchAll(/<item>/g)].length;
+assert(newsFeedItems === Math.min(20, newsPublished.length), `feed-news.xmlのitem数が一致しません: ${newsFeedItems}`);
+assert(headers.includes("/feed-news.xml\n  Cache-Control: no-cache, must-revalidate"), "feed-news.xmlの再検証キャッシュ指定がありません");
+
 console.log(JSON.stringify({
   ok: true,
   rootStructuredDataTypes: [...allTypes].sort(),
@@ -167,6 +232,7 @@ console.log(JSON.stringify({
   aliasRedirects: aliasRedirects.length,
   sitemapChildren: childRecords.map((child) => child.url),
   geolocationPolicy: "self",
+  newsArticles: newsPublished.length,
 }, null, 2));
 
 async function read(relative) {

@@ -1,0 +1,37 @@
+{
+  "kanayama-hotel-sauna-renewal": {
+    "hero": "/assets/news/kanayama-hotel-sauna-renewal-hero.webp",
+    "og": "/assets/news/kanayama-hotel-sauna-renewal-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "koganeyu-shinjuku-spotlight": {
+    "hero": "/assets/news/koganeyu-shinjuku-spotlight-hero.webp",
+    "og": "/assets/news/koganeyu-shinjuku-spotlight-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "kumamoto-gosaincho-2026": {
+    "hero": "/assets/news/kumamoto-gosaincho-2026-hero.webp",
+    "og": "/assets/news/kumamoto-gosaincho-2026-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "nifty-onsen-stamp-rally-2026": {
+    "hero": "/assets/news/nifty-onsen-stamp-rally-2026-hero.webp",
+    "og": "/assets/news/nifty-onsen-stamp-rally-2026-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "saunachelin-2026": {
+    "hero": "/assets/news/saunachelin-2026-hero.webp",
+    "og": "/assets/news/saunachelin-2026-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "steams-closure-2026": {
+    "hero": "/assets/news/steams-closure-2026-hero.webp",
+    "og": "/assets/news/steams-closure-2026-og.png",
+    "generatedAt": "2026-11-12"
+  },
+  "totopa-hakata-spotlight": {
+    "hero": "/assets/news/totopa-hakata-spotlight-hero.webp",
+    "og": "/assets/news/totopa-hakata-spotlight-og.png",
+    "generatedAt": "2026-11-12"
+  }
+}

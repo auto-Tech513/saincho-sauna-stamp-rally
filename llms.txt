@@ -16,6 +16,7 @@
 - https://saincho-sauna-stamp-rally.pages.dev/sameshi/
 - https://saincho-sauna-stamp-rally.pages.dev/community/
 - https://saincho-sauna-stamp-rally.pages.dev/guide/
+- https://saincho-sauna-stamp-rally.pages.dev/news/ （サウニュ〜：サウナの新店・イベント・受賞・閉店などのニュース。各記事のURLは /news/{英字スラッグ}/ で、施設・主催者の公式発表のみを根拠に出典と確認日を表示）
 - https://saincho-sauna-stamp-rally.pages.dev/ranking/
 - https://saincho-sauna-stamp-rally.pages.dev/sauna-stamp-rally/ （常設のサウナスタンプラリーの始め方。期間限定イベントではなく、全国の施設を対象にいつでも押印できる）
 - https://saincho-sauna-stamp-rally.pages.dev/sauna-goshuin/ （サウナ御朱印とサ印帳のサ印の違い。サ印は施設発行の御朱印ではなく個人の訪問記録）
@@ -29,8 +30,15 @@
 - 検索できるサウナ候補: __SEARCHABLE_COUNT__件（通常のサウナ検索の対象となる件数）
 - 個別ページがある施設: __INDEXABLE_COUNT__件（住所・公式URLなどを確認できた施設のみをサイトマップに掲載）
 - サウナ入門ガイド: __GUIDE_COUNT__本
+- サウナニュース（サウニュ〜）: __NEWS_COUNT__本
 - 利用料金: 無料（ブラウザで利用、ランキング参加のみニックネームとメールアドレスの登録が必要）
 - 最新の数字と確認基準: https://saincho-sauna-stamp-rally.pages.dev/about/
+
+## サウナニュース（サウニュ〜）
+
+サウナの新店・開店、リニューアル、期間限定イベント、受賞の発表、休業・閉店を、施設や主催者の公式発表だけを根拠に伝えるニュースです。未確認の情報は載せず、各記事に一次情報の出典と確認日を表示します。最新記事:
+
+__NEWS_LATEST__
 
 ## 主な内容
 

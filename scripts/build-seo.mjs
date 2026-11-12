@@ -6,6 +6,7 @@ import { promisify } from "node:util";
 import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
+import { NEWS_CATEGORIES, SAUNA_NEWS, getPublishedNews, renderNewsBlocks } from "../news.js";
 import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
 import { haversineDistanceKm } from "../nearby.js";
 
@@ -181,7 +182,7 @@ const SAUNA_EVENTS = [
     name: "おふろへ行こう2026 ニフティ温泉 デジタルスタンプラリー",
     organizer: "ニフティライフスタイル",
     officialUrl: "https://onsen.nifty.com/campaign/stamprally-ofuro2026/",
-    area: "全国139施設",
+    area: "全国（対象100施設以上）",
     prefecture: "",
     startDate: "2026-08-03",
     endDate: "2026-11-30",
@@ -271,6 +272,7 @@ const ARTICLE_ROUTES = SAUNA_ARTICLES.map((article, index) => ({
   article,
   route: `/guide/${encodeURIComponent(`${index + 1}-${slugify(article.title)}`)}/`,
 }));
+const PUBLISHED_NEWS = getPublishedNews(SAUNA_NEWS, jstToday());
 // サイト全体のFAQ/Dataset/OfferCatalog構造化データはトップのみに置き、
 // 下層ページでは WebSite / Organization の最小グラフに差し替える。
 const SUBPAGE_SITE_LD = {
@@ -302,12 +304,14 @@ const LASTMOD = {
   site: await getGitLastModified(["index.html", "app.js", "styles.css", "scripts/build-seo.mjs"]),
   data: await getGitLastModified(["data.js", "facility-evidence.js", "official-page-evidence.js"]),
   content: await getGitLastModified(["content.js"]),
+  news: await getGitLastModified(["news.js"]),
 };
 
 const sourceIndex = await read("index.html");
 const sourceStyles = await read("styles.css");
 const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
+const sourceNews = await read("news.js");
 const sourceNearby = await read("nearby.js");
 const sourceOfficialEvidence = await read("official-page-evidence.js");
 const officialEvidenceFile = `official-page-evidence.${hash(sourceOfficialEvidence)}.js`;
@@ -315,6 +319,7 @@ const sourceEvidence = (await read("facility-evidence.js")).replace('from "./off
 const sourceSw = await read("sw.js");
 const dataFile = `data.${hash(sourceData)}.js`;
 const contentFile = `content.${hash(sourceContent)}.js`;
+const newsFile = `news.${hash(sourceNews)}.js`;
 const stylesFile = `styles.${hash(sourceStyles)}.css`;
 const nearbyFile = `nearby.${hash(sourceNearby)}.js`;
 const evidenceFile = `facility-evidence.${hash(sourceEvidence)}.js`;
@@ -322,11 +327,13 @@ const appSource = (await read("app.js"))
   .replace('from "./nearby.js";', `from "./${nearbyFile}";`)
   .replace('from "./facility-evidence.js";', `from "./${evidenceFile}";`)
   .replace('const DATA_MODULE_PATH = "./data.js";', `const DATA_MODULE_PATH = "./${dataFile}";`)
-  .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`);
+  .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`)
+  .replace('const NEWS_MODULE_PATH = "./news.js";', `const NEWS_MODULE_PATH = "./${newsFile}";`);
 const appFile = `app.${hash(appSource)}.js`;
 
 await write(dataFile, sourceData);
 await write(contentFile, sourceContent);
+await write(newsFile, sourceNews);
 await write(stylesFile, sourceStyles);
 await write(nearbyFile, sourceNearby);
 await write(officialEvidenceFile, sourceOfficialEvidence);
@@ -345,6 +352,9 @@ await copyFile("manifest.webmanifest");
 await write("llms.txt", renderLlmsTxt(await read("llms.txt")));
 await copyFile("google4f1c271dfaceddbb.html");
 await copyAssetFiles(ASSET_FILES);
+for (const name of await fs.readdir(path.join(ROOT, "assets", "news")).catch(() => [])) {
+  if (name !== "manifest.json") await copyFile(`assets/news/${name}`);
+}
 await copyAssetFiles(ICON_FILES);
 await copyFile("_headers");
 await write("_redirects", [
@@ -366,6 +376,16 @@ await emitStaticRoute("/sauna-stamp-rally/", "サウナスタンプラリーを�
 await emitStaticRoute("/sauna-goshuin/", "サウナ御朱印のように訪問記録を集める | サ印帳", "サウナ御朱印のように訪問の証をスマホへ残す方法を解説。施設公式の御朱印や物理スタンプとの違い、サ印・メモ・サ活ログの使い方を確認できます。", renderSearchIntentSsr("goshuin"), LASTMOD.content);
 await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウナマット、水分補給、サウナバッグなど、サウナ前後に役立つ30カテゴリのGearをAmazon・楽天のレビュー検索導線で比較できます。", renderGearSsr(), LASTMOD.content);
 await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", `初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を${SAUNA_ARTICLES.length}記事で確認できます。`, renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
+await emitStaticRoute("/news/", "サウニュ〜（サウナニュース） | サ印帳", "サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えるサ印帳のニュースページです。", renderNewsIndexSsr(), LASTMOD.news);
+for (const article of PUBLISHED_NEWS) {
+  await emitPage(`/news/${article.slug}/`, {
+    ...pageMeta(`${article.title} | サウニュ〜`, article.lead),
+    lastmod: article.updatedAt,
+    type: "article",
+    image: `${APP_URL}/assets/news/${article.slug}-og.png`,
+    imageAlt: article.heroAlt,
+  }, renderNewsArticleSsr(article));
+}
 await emitStaticRoute("/ranking/", "サウナの訪問数ランキングと称号 | サ印帳", "行ったサウナの数（サ印数）で称号が上がる、サ印帳の参加型ランキング。1湯「はじめの一湯」から2000湯「神人サウナー」までの称号一覧と参加方法を掲載。公開されるのはニックネーム・サ印数・称号のみです。", renderRankingSsr());
 await emitStaticRoute("/passport/", "サ印 | サ印帳", "全国と都道府県別のサ印収集状況を確認。県マスター、称号、押印済み施設を一目で振り返れます。", renderGenericSsr("サ印", "全国・県別のサ印進捗と称号を確認できます。"));
 await emitStaticRoute("/add/", "サウナを追加 | サ印帳", "候補にないサウナを都道府県、住所、特徴付きで登録できます。KV接続時は他ユーザーにも公開候補として表示されます。", renderGenericSsr("候補にないサウナを追加", "施設名、都道府県、住所、特徴を追加して、自分と他のユーザーのサウナ探索を育てられます。"));
@@ -400,6 +420,7 @@ for (const facility of CANONICAL_FACILITIES) {
 
 await emit404();
 await emitFeed();
+await emitNewsFeed();
 await emitSitemaps(urls);
 await write("robots.txt", `User-agent: *\nAllow: /\nSitemap: ${APP_URL}/sitemap.xml\n`);
 await pruneDuplicateOutputFiles();
@@ -436,8 +457,8 @@ function renderHtml(route, meta, ssrHtml) {
     `    <meta property="og:title" content="${escapeAttr(meta.title)}" />`,
     `    <meta property="og:description" content="${escapeAttr(meta.description)}" />`,
     `    <meta property="og:url" content="${escapeAttr(canonicalUrl)}" />`,
-    `    <meta property="og:image" content="${OG_IMAGE}" />`,
-    `    <meta property="og:image:secure_url" content="${OG_IMAGE}" />`,
+    `    <meta property="og:image" content="${escapeAttr(meta.image || OG_IMAGE)}" />`,
+    `    <meta property="og:image:secure_url" content="${escapeAttr(meta.image || OG_IMAGE)}" />`,
     `    <meta property="og:image:type" content="image/png" />`,
     `    <meta property="og:image:width" content="1200" />`,
     `    <meta property="og:image:height" content="630" />`,
@@ -445,7 +466,7 @@ function renderHtml(route, meta, ssrHtml) {
     `    <meta name="twitter:card" content="summary_large_image" />`,
     `    <meta name="twitter:title" content="${escapeAttr(meta.title.replace(" | サ印帳", ""))}" />`,
     `    <meta name="twitter:description" content="${escapeAttr(meta.description)}" />`,
-    `    <meta name="twitter:image" content="${OG_IMAGE}" />`,
+    `    <meta name="twitter:image" content="${escapeAttr(meta.image || OG_IMAGE)}" />`,
     `    <meta name="twitter:image:alt" content="${escapeAttr(meta.imageAlt || "サ印帳の共有カード。全国のサウナを押印して集める。")}" />`,
   ].join("\n");
   let html = template
@@ -530,14 +551,24 @@ function renderHomeSsr() {
     <ul class="ssr-list">${evidenceExamples.map(({ facility, facts }) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture)}・公式照合${facts}項目</span></li>`).join("")}</ul>` : ""}
     <h2>よくある質問</h2>
     <dl>${homeFaqs.map(([question, answer]) => `<dt>${escapeHtml(question)}</dt><dd>${escapeHtml(answer)}</dd>`).join("")}</dl>
+    ${renderHomeNewsSection()}
     <nav class="ssr-links" aria-label="都道府県別サウナ検索">
       <strong>都道府県からサウナを探す</strong>
       ${prefLinks}
     </nav>
     <nav class="ssr-links" aria-label="主要ページ">
-      <a href="/guide/">サウナ入門</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/community/">サ活コミュニティ</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a><a href="/sauna-goshuin/">サウナ御朱印とサ印の違い</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
+      <a href="/guide/">サウナ入門</a><a href="/news/">サウニュ〜（サウナニュース）</a><a href="/gear/">Gear</a><a href="/sameshi/">サ飯</a><a href="/community/">サ活コミュニティ</a><a href="/stay/">サウナ合宿先</a><a href="/ranking/">ランキング</a><a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a><a href="/sauna-goshuin/">サウナ御朱印とサ印の違い</a><a href="/about/">運営・データ方針</a><a href="/contact/">掲載・お問い合わせ</a>
     </nav>
   `);
+}
+
+function renderHomeNewsSection() {
+  const latest = PUBLISHED_NEWS.slice(0, 3);
+  if (!latest.length) return "";
+  return `
+    <h2>サウニュ〜（サウナニュース）最新記事</h2>
+    <ul class="ssr-list">${latest.map((article) => `<li><a href="/news/${article.slug}/">${escapeHtml(article.title)}</a> <span>${formatJaDate(article.publishedAt)}・${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}</span></li>`).join("")}</ul>
+    <p><a href="/news/">サウニュ〜の記事一覧を見る</a></p>`;
 }
 
 function renderAboutSsr() {
@@ -611,7 +642,7 @@ function renderGuideSsr(articles) {
     <h2>サウナ入門の参考資料（ガイド全体）</h2>
     <p>各記事の出典は記事ページの末尾に記事単位で表示しています。ここにはガイド全体で参照している資料をまとめます。</p>
     <ul>${referenceItems}</ul>
-    <p><a href="/">サ印帳トップへ戻る</a></p>
+    <p><a href="/">サ印帳トップへ戻る</a>　<a href="/news/">サウニュ〜（サウナニュース）を見る</a></p>
   `, { jsonLd });
 }
 
@@ -687,6 +718,128 @@ function renderArticleSsr(article, route) {
     ${sourcesHtml}
     ${relatedItems ? `<h2>関連する記事・ページ</h2><ul class="ssr-list">${relatedItems}</ul>` : ""}
     <p><a href="/guide/">サウナ入門の記事一覧へ戻る</a></p>
+  `, { jsonLd });
+}
+
+function newsFacilityById(id) {
+  return CANONICAL_FACILITIES.find((facility) => facility.id === id) || null;
+}
+
+function renderNewsIndexSsr() {
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([
+        ["サ印帳", `${APP_URL}/`],
+        ["サウニュ〜（サウナニュース）", `${APP_URL}/news/`],
+      ]),
+      {
+        "@type": "ItemList",
+        "@id": `${APP_URL}/news/#list`,
+        numberOfItems: PUBLISHED_NEWS.length,
+        itemListElement: PUBLISHED_NEWS.map((article, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${APP_URL}/news/${article.slug}/`,
+          name: article.title,
+        })),
+      },
+    ],
+  }, null, 2);
+  const items = PUBLISHED_NEWS.map((article) => `
+    <li>
+      <a href="/news/${article.slug}/">${escapeHtml(article.title)}</a>
+      <span>${formatJaDate(article.publishedAt)}・${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}</span>
+      <br>${escapeHtml(article.lead)}
+    </li>`).join("");
+  return wrapSsr(`
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › サウニュ〜（サウナニュース）</nav>
+    <p class="eyebrow">SAUNEW〜</p>
+    <h1>サウニュ〜（サウナニュース）</h1>
+    <p>サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えます。うわさや未確認の情報は載せず、各記事に出典と確認日を表示します。</p>
+    <ul class="ssr-list">${items}</ul>
+    <p><a href="/guide/">サウナ入門の記事一覧へ</a>　<a href="/">サ印帳トップへ戻る</a></p>
+  `, { jsonLd });
+}
+
+function renderNewsArticleSsr(article) {
+  const route = `/news/${article.slug}/`;
+  const heroUrl = `${APP_URL}/assets/news/${article.slug}-hero.webp`;
+  const ogUrl = `${APP_URL}/assets/news/${article.slug}-og.png`;
+  const jsonLd = JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      breadcrumbJsonLd([
+        ["サ印帳", `${APP_URL}/`],
+        ["サウニュ〜（サウナニュース）", `${APP_URL}/news/`],
+        [article.title, `${APP_URL}${route}`],
+      ]),
+      {
+        "@type": "NewsArticle",
+        "@id": `${APP_URL}${route}#article`,
+        headline: article.title,
+        inLanguage: "ja-JP",
+        articleSection: NEWS_CATEGORIES[article.category] || "ニュース",
+        description: article.lead,
+        image: [heroUrl, ogUrl],
+        datePublished: article.publishedAt,
+        dateModified: article.updatedAt,
+        author: { "@id": `${APP_URL}/#organization` },
+        publisher: { "@id": `${APP_URL}/#organization` },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `${APP_URL}${route}` },
+        citation: (article.sources || []).map((source) => source.url),
+      },
+    ],
+  }, null, 2);
+  const h2Texts = (article.body || []).filter((block) => block.type === "h2").map((block) => block.text);
+  const tocHtml = h2Texts.length >= 3 ? `
+    <details class="news-toc"><summary>この記事の目次</summary>
+    <ol>${h2Texts.map((text, index) => `<li><a href="#news-h2-${index + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : "";
+  const facilities = (article.facilityIds || []).map(newsFacilityById).filter(Boolean);
+  const facilityChips = facilities.length ? `
+    <p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>`).join("")}</p>` : "";
+  const facilityList = facilities.length ? `
+    <h2>この記事に関連する施設</h2>
+    <ul class="ssr-list">${facilities.map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture || "")}</span></li>`).join("")}</ul>` : "";
+  const sourcesHtml = `
+    <h2>出典・参考資料</h2>
+    <ul>${(article.sources || []).map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}</ul>
+    <p><small>この記事の内容の根拠とした資料です。${formatJaDate(article.sourcesCheckedAt)}に各出典を確認しています。</small></p>`;
+  const revisionsHtml = Array.isArray(article.revisions) && article.revisions.length ? `
+    <h2>更新履歴</h2>
+    <ul>${article.revisions.map((revision) => `<li>${formatJaDate(revision.date)}：${escapeHtml(revision.text)}</li>`).join("")}</ul>` : "";
+  const index = PUBLISHED_NEWS.findIndex((entry) => entry.slug === article.slug);
+  const prev = index >= 0 && index < PUBLISHED_NEWS.length - 1 ? PUBLISHED_NEWS[index + 1] : null;
+  const next = index > 0 ? PUBLISHED_NEWS[index - 1] : null;
+  const siblings = PUBLISHED_NEWS.filter((entry) => entry.category === article.category && entry.slug !== article.slug).slice(0, 3);
+  const relatedItems = [
+    ...(next ? [`<li><a href="/news/${next.slug}/">新しい記事：${escapeHtml(next.title)}</a></li>`] : []),
+    ...(prev ? [`<li><a href="/news/${prev.slug}/">前の記事：${escapeHtml(prev.title)}</a></li>`] : []),
+    ...siblings.map((entry) => `<li><a href="/news/${entry.slug}/">${escapeHtml(entry.title)}</a> <span>同じ「${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}」の記事</span></li>`),
+  ].join("");
+  const endedNote = article.eventEndDate && article.eventEndDate < jstToday()
+    ? `<p class="news-ended-note">この記事で紹介したイベント・期間は終了しました。</p>` : "";
+  return wrapSsr(`
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/news/">サウニュ〜（サウナニュース）</a> › ${escapeHtml(article.title)}</nav>
+    <p class="eyebrow">サウニュ〜 ・ ${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}</p>
+    <h1>${escapeHtml(article.title)}</h1>
+    <p><small>公開 <time datetime="${article.publishedAt}">${formatJaDate(article.publishedAt)}</time>${article.updatedAt !== article.publishedAt ? `／最終更新 <time datetime="${article.updatedAt}">${formatJaDate(article.updatedAt)}</time>` : ""}</small></p>
+    <p><img src="/assets/news/${article.slug}-hero.webp" alt="${escapeAttr(article.heroAlt)}" width="1280" height="720" /></p>
+    <p>${escapeHtml(article.lead)}</p>
+    ${endedNote}
+    <h2>要点</h2>
+    <ul>${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+    ${facilityChips}
+    ${article.statusNote ? `<p><small>${escapeHtml(article.statusNote)}</small></p>` : ""}
+    ${tocHtml}
+    ${renderNewsBlocks(article.body, { h2IdPrefix: "news-h2-" })}
+    ${facilityList}
+    <p><strong>次の一歩:</strong> ${escapeHtml(article.action)}</p>
+    ${article.caution ? `<p><strong>注意:</strong> ${escapeHtml(article.caution)}</p>` : ""}
+    ${sourcesHtml}
+    ${revisionsHtml}
+    ${relatedItems ? `<h2>関連するニュース</h2><ul class="ssr-list">${relatedItems}</ul>` : ""}
+    <p><a href="/news/">サウニュ〜の記事一覧へ戻る</a></p>
   `, { jsonLd });
 }
 
@@ -886,6 +1039,8 @@ function renderLlmsTxt(template) {
     .replaceAll("__SEARCHABLE_COUNT__", String(SEARCHABLE_FACILITIES.length))
     .replaceAll("__INDEXABLE_COUNT__", String(INDEXABLE_FACILITIES.length))
     .replaceAll("__GUIDE_COUNT__", String(SAUNA_ARTICLES.length))
+    .replaceAll("__NEWS_COUNT__", String(PUBLISHED_NEWS.length))
+    .replaceAll("__NEWS_LATEST__", PUBLISHED_NEWS.slice(0, 5).map((article) => `- ${article.publishedAt} ${article.title}（${APP_URL}/news/${article.slug}/）`).join("\n"))
     .replaceAll("__AS_OF__", `${year}年${month}月${day}日`);
 }
 
@@ -1271,6 +1426,32 @@ async function emitFeed() {
       item.updatedAt ? `      <pubDate>${new Date(`${item.updatedAt}T00:00:00Z`).toUTCString()}</pubDate>` : "",
       "    </item>",
     ].filter(Boolean).join("\n")),
+    "  </channel>",
+    "</rss>",
+    "",
+  ].join("\n"));
+}
+
+async function emitNewsFeed() {
+  const items = PUBLISHED_NEWS.slice(0, 20);
+  await write("feed-news.xml", [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    "  <channel>",
+    "    <title>サウニュ〜（サウナニュース） | サ印帳</title>",
+    `    <link>${APP_URL}/news/</link>`,
+    "    <description>サウナの新店、リニューアル、イベント、受賞、閉店のニュースを公式発表にもとづいて伝えます。</description>",
+    "    <language>ja</language>",
+    `    <atom:link href="${APP_URL}/feed-news.xml" rel="self" type="application/rss+xml" />`,
+    ...items.map((article) => [
+      "    <item>",
+      `      <title>${escapeXml(article.title)}</title>`,
+      `      <link>${APP_URL}/news/${article.slug}/</link>`,
+      `      <guid isPermaLink="true">${APP_URL}/news/${article.slug}/</guid>`,
+      `      <description>${escapeXml(article.lead)}</description>`,
+      `      <pubDate>${new Date(`${article.publishedAt}T00:00:00Z`).toUTCString()}</pubDate>`,
+      "    </item>",
+    ].join("\n")),
     "  </channel>",
     "</rss>",
     "",

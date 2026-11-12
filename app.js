@@ -26,6 +26,7 @@ const APP_BUILD_ID = "20261022-quality-round1";
 const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
+const NEWS_MODULE_PATH = "./news.js";
 const GA_MEASUREMENT_ID = "G-FHGXDGF0M7";
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -577,6 +578,16 @@ const VIEW_META = {
     title: "サウナ入門 | 入り方・水風呂・持ち物・マナー",
     description: "初めてのサウナでも迷わない入り方、水風呂、休憩、水分補給、ロウリュ、サウナグッズ、マナーを記事とFAQで確認できます。",
   },
+  News: {
+    path: "/news/",
+    title: "サウニュ〜（サウナニュース） | サ印帳",
+    description: "サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えるサ印帳のニュースページです。",
+  },
+  NewsArticle: {
+    path: "/news/",
+    title: "サウニュ〜（サウナニュース） | サ印帳",
+    description: "サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えるサ印帳のニュースページです。",
+  },
   Community: {
     path: "/community/",
     title: "サウナ仲間・サ活募集 | サ印帳",
@@ -771,6 +782,11 @@ let selectedCommunityPrefecture = "全国";
 let activeFilter = "all";
 let activeView = "Explore";
 let activeFacilityId = "";
+let activeNewsSlug = "";
+let newsModule = null;
+let newsModulePromise = null;
+let newsCategoryFilter = "all";
+let newsVisibleCount = 10;
 let searchTerm = "";
 let searchNeedles = [];
 let selectedFeatureFilters = new Set();
@@ -1003,7 +1019,7 @@ async function init() {
   resumeActiveCheckin();
   checkNearbyOnLaunch();
   window.addEventListener("popstate", () => {
-    if (/^\/guide\/[^/]+\/$/.test(location.pathname) && !document.getElementById("ssrContent")) {
+    if ((/^\/guide\/[^/]+\/$/.test(location.pathname) || /^\/news\/[^/]+\/$/.test(location.pathname)) && !document.getElementById("ssrContent")) {
       location.reload();
       return;
     }
@@ -1151,6 +1167,7 @@ function renderBootError(error) {
 }
 
 function bindEvents() {
+  document.addEventListener("click", handleNewsClick);
   document.querySelectorAll("[data-view]").forEach((button) => {
     button.addEventListener("click", () => setView(button.dataset.view));
   });
@@ -1915,6 +1932,7 @@ function setView(view) {
   if (view === "Passport") visibleLimit = 36;
   if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
   if (view !== "Facility") activeFacilityId = "";
+  if (view !== "NewsArticle") activeNewsSlug = "";
   activeView = view;
   applyActiveView(view);
   pushViewUrl(view);
@@ -1946,6 +1964,233 @@ function applyActiveView(view) {
     button.classList.toggle("nav-active", active);
     button.toggleAttribute("aria-current", active);
   });
+}
+
+async function ensureNewsModule() {
+  if (newsModule) return newsModule;
+  if (!newsModulePromise) {
+    newsModulePromise = importWithTimeout(getVersionedModuleSpecifier(NEWS_MODULE_PATH, encodeURIComponent(APP_BUILD_ID)), DATA_IMPORT_TIMEOUT_MS, "ニュース")
+      .then((module) => {
+        newsModule = module;
+        return module;
+      })
+      .catch((error) => {
+        newsModulePromise = null;
+        throw error;
+      });
+  }
+  return newsModulePromise;
+}
+
+function getPublishedNewsList() {
+  if (!newsModule) return [];
+  return newsModule.getPublishedNews(newsModule.SAUNA_NEWS || []);
+}
+
+function openNewsArticle(slug) {
+  clearSearchRenderTimer();
+  activeNewsSlug = slug;
+  activeFacilityId = "";
+  activeView = "NewsArticle";
+  applyActiveView(activeView);
+  pushViewUrl(activeView);
+  renderAll();
+  el.main.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function newsCategoryChip(article) {
+  return `<span class="news-chip news-chip-${escapeAttr(article.category)}">${escapeHtml(newsModule?.NEWS_CATEGORIES?.[article.category] || "ニュース")}</span>`;
+}
+
+function newsCardHtml(article, options = {}) {
+  const hero = `/assets/news/${article.slug}-hero.webp`;
+  if (options.featured) {
+    return `
+    <article class="news-card news-card-featured">
+      <button type="button" class="news-card-main" data-news-open="${escapeAttr(article.slug)}">
+        <img class="news-card-hero" src="${hero}" alt="${escapeAttr(article.heroAlt)}" width="1280" height="720" />
+        <span class="news-card-body">
+          <span class="news-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
+          <span class="news-card-title">${escapeHtml(article.title)}</span>
+          <span class="news-card-lead">${escapeHtml(article.lead)}</span>
+        </span>
+      </button>
+    </article>`;
+  }
+  return `
+  <article class="news-card">
+    <button type="button" class="news-card-main" data-news-open="${escapeAttr(article.slug)}">
+      <img class="news-card-thumb" src="${hero}" alt="" width="1280" height="720" loading="lazy" />
+      <span class="news-card-body">
+        <span class="news-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
+        <span class="news-card-title">${escapeHtml(article.title)}</span>
+      </span>
+    </button>
+  </article>`;
+}
+
+const newsTrackedKeys = new Set();
+function trackNewsOnce(key, name, params) {
+  if (newsTrackedKeys.has(key)) return;
+  newsTrackedKeys.add(key);
+  track(name, params);
+}
+
+async function renderNewsRail() {
+  const rail = document.getElementById("newsRail");
+  if (!rail) return;
+  const searching = Boolean(searchTerm.trim()) || selectedPrefecture !== "全国";
+  if (searching) {
+    rail.hidden = true;
+    return;
+  }
+  try {
+    await ensureNewsModule();
+  } catch {
+    rail.hidden = true;
+    return;
+  }
+  if (activeView !== "Explore") return;
+  const articles = getPublishedNewsList().slice(0, 5);
+  if (!articles.length) {
+    rail.hidden = true;
+    return;
+  }
+  rail.innerHTML = `
+    <div class="news-rail-head">
+      <h2 class="news-rail-title">サウニュ〜</h2>
+      <span class="news-rail-sub">サウナニュース</span>
+    </div>
+    <div class="news-rail-track">
+      ${articles.map((article) => `
+      <article class="news-rail-card">
+        <button type="button" class="news-rail-main" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
+          <img src="/assets/news/${article.slug}-hero.webp" alt="" width="1280" height="720" loading="lazy" />
+          <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
+          <span class="news-rail-card-title">${escapeHtml(article.title)}</span>
+        </button>
+      </article>`).join("")}
+      <article class="news-rail-card news-rail-more">
+        <button type="button" class="news-rail-main news-rail-more-main" data-open-view="News">
+          <span class="news-rail-more-text">すべて見る</span>
+          <span class="news-rail-more-arrow" aria-hidden="true">→</span>
+        </button>
+      </article>
+    </div>`;
+  rail.hidden = false;
+  trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
+}
+
+async function renderNewsList() {
+  const root = document.getElementById("newsListRoot");
+  if (!root) return;
+  try {
+    await ensureNewsModule();
+  } catch {
+    root.innerHTML = `<div class="empty-state"><h2>ニュースを読み込めませんでした</h2><p>通信状態を確認して、もう一度開いてください。</p></div>`;
+    return;
+  }
+  if (activeView !== "News") return;
+  const all = getPublishedNewsList();
+  const categories = ["all", ...Object.keys(newsModule.NEWS_CATEGORIES || {}).filter((key) => all.some((article) => article.category === key))];
+  const filtered = newsCategoryFilter === "all" ? all : all.filter((article) => article.category === newsCategoryFilter);
+  const shown = filtered.slice(0, newsVisibleCount);
+  root.innerHTML = `
+    <div class="news-category-strip" role="group" aria-label="カテゴリで絞り込む">
+      ${categories.map((key) => `<button type="button" class="news-category-button${newsCategoryFilter === key ? " is-active" : ""}" data-news-category="${escapeAttr(key)}">${key === "all" ? "すべて" : escapeHtml(newsModule.NEWS_CATEGORIES[key])}</button>`).join("")}
+    </div>
+    <p class="news-count">${filtered.length}件のニュース</p>
+    <div class="news-list">
+      ${shown.map((article, index) => newsCardHtml(article, { featured: newsCategoryFilter === "all" && index === 0 })).join("") || `<div class="empty-state"><h2>このカテゴリのニュースはまだありません</h2></div>`}
+    </div>
+    ${filtered.length > shown.length ? `<button type="button" class="ghost-button full-button" data-news-more>さらに${Math.min(10, filtered.length - shown.length)}件表示</button>` : ""}`;
+  trackNewsOnce(`list:${newsCategoryFilter}`, "news_list_view", { surface: "list", category: newsCategoryFilter });
+}
+
+async function renderNewsArticle() {
+  const root = document.getElementById("newsArticleRoot");
+  if (!root) return;
+  try {
+    await ensureNewsModule();
+  } catch {
+    root.innerHTML = `<div class="empty-state"><h2>記事を読み込めませんでした</h2><p>通信状態を確認して、もう一度開いてください。</p><button class="secondary-button" data-open-view="News">サウニュ〜一覧へ</button></div>`;
+    return;
+  }
+  if (activeView !== "NewsArticle") return;
+  const articles = getPublishedNewsList();
+  const article = articles.find((entry) => entry.slug === activeNewsSlug);
+  if (!article) {
+    root.innerHTML = `<div class="empty-state"><h2>記事が見つかりません</h2><p>公開が終わったか、URLが変わった可能性があります。</p><button class="secondary-button" data-open-view="News">サウニュ〜一覧へ</button></div>`;
+    return;
+  }
+  updateDocumentMetaForView("NewsArticle");
+  trackNewsOnce(`article:${article.slug}`, "news_article_view", { slug: article.slug, category: article.category });
+  const facilities = (article.facilityIds || []).map((id) => getFacilities().find((facility) => facility.id === id)).filter(Boolean);
+  const h2Texts = (article.body || []).filter((block) => block.type === "h2").map((block) => block.text);
+  const index = articles.findIndex((entry) => entry.slug === article.slug);
+  const prev = index >= 0 && index < articles.length - 1 ? articles[index + 1] : null;
+  const next = index > 0 ? articles[index - 1] : null;
+  const siblings = articles.filter((entry) => entry.category === article.category && entry.slug !== article.slug).slice(0, 3);
+  const ended = article.eventEndDate && article.eventEndDate < new Date().toISOString().slice(0, 10);
+  root.innerHTML = `
+    <button type="button" class="back-button" data-open-view="News">← サウニュ〜一覧</button>
+    <p class="news-article-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}公開</time>${article.updatedAt !== article.publishedAt ? `<span>最終更新 <time datetime="${article.updatedAt}">${formatDate(article.updatedAt)}</time></span>` : ""}</p>
+    <h1 class="news-article-title">${escapeHtml(article.title)}</h1>
+    <img class="news-article-hero" src="/assets/news/${article.slug}-hero.webp" alt="${escapeAttr(article.heroAlt)}" width="1280" height="720" />
+    <p class="news-article-lead">${escapeHtml(article.lead)}</p>
+    ${ended ? `<p class="news-ended-note">この記事で紹介したイベント・期間は終了しました。</p>` : ""}
+    <section class="news-points" aria-label="この記事の要点">
+      <h2>要点</h2>
+      <ul>${article.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>
+    </section>
+    ${facilities.length ? `<p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/" data-news-facility="${escapeAttr(facility.id)}">${escapeHtml(facility.name)}</a>`).join("")}</p>` : ""}
+    ${article.statusNote ? `<p class="news-status-note">${escapeHtml(article.statusNote)}</p>` : ""}
+    ${h2Texts.length >= 3 ? `<details class="news-toc"><summary>この記事の目次</summary><ol>${h2Texts.map((text, i) => `<li><a href="#news-h2-${i + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : ""}
+    <div class="news-article-body">${newsModule.renderNewsBlocks(article.body, { h2IdPrefix: "news-h2-" })}</div>
+    ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
+    <p class="news-action"><strong>次の一歩:</strong> ${escapeHtml(article.action)}</p>
+    ${article.caution ? `<p class="news-caution"><strong>注意:</strong> ${escapeHtml(article.caution)}</p>` : ""}
+    <section class="news-sources">
+      <h2>出典・参考資料</h2>
+      <ul>${(article.sources || []).map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}</ul>
+      <p><small>この記事の内容の根拠とした資料です。${formatDate(article.sourcesCheckedAt)}に各出典を確認しています。</small></p>
+    </section>
+    ${Array.isArray(article.revisions) && article.revisions.length ? `<section class="news-revisions"><h2>更新履歴</h2><ul>${article.revisions.map((revision) => `<li>${formatDate(revision.date)}：${escapeHtml(revision.text)}</li>`).join("")}</ul></section>` : ""}
+    <nav class="news-article-nav" aria-label="前後の記事">
+      ${next ? `<button type="button" class="ghost-button" data-news-open="${escapeAttr(next.slug)}">新しい記事：${escapeHtml(next.title)}</button>` : ""}
+      ${prev ? `<button type="button" class="ghost-button" data-news-open="${escapeAttr(prev.slug)}">前の記事：${escapeHtml(prev.title)}</button>` : ""}
+      ${siblings.map((entry) => `<button type="button" class="ghost-button" data-news-open="${escapeAttr(entry.slug)}">${escapeHtml(entry.title)}</button>`).join("")}
+    </nav>
+    <div class="news-article-actions">
+      <button type="button" class="mini-button" data-open-view="Passport">サ印帳を見る</button>
+      <button type="button" class="ghost-button" data-open-view="Explore">サウナを探す</button>
+    </div>`;
+  root.querySelectorAll("[data-news-facility]").forEach((link) => {
+    link.addEventListener("click", () => track("news_to_facility", { slug: article.slug, facility_id: link.dataset.newsFacility }));
+  });
+}
+
+function handleNewsClick(event) {
+  const openButton = event.target instanceof Element ? event.target.closest("[data-news-open]") : null;
+  if (openButton) {
+    track("news_article_click", { slug: openButton.dataset.newsOpen, surface: openButton.dataset.newsSurface || (activeView === "News" ? "list" : activeView === "NewsArticle" ? "article_nav" : "other") });
+    openNewsArticle(openButton.dataset.newsOpen);
+    return;
+  }
+  const categoryButton = event.target instanceof Element ? event.target.closest("[data-news-category]") : null;
+  if (categoryButton) {
+    newsCategoryFilter = categoryButton.dataset.newsCategory;
+    newsVisibleCount = 10;
+    track("news_category_select", { category: newsCategoryFilter });
+    renderNewsList();
+    return;
+  }
+  const moreButton = event.target instanceof Element ? event.target.closest("[data-news-more]") : null;
+  if (moreButton) {
+    newsVisibleCount += 10;
+    track("news_load_more", { category: newsCategoryFilter, visible: newsVisibleCount });
+    renderNewsList();
+  }
 }
 
 function renderAll() {
@@ -1994,6 +2239,14 @@ function renderAll() {
   }
   if (activeView === "Guide") {
     renderGuidePage();
+    return;
+  }
+  if (activeView === "News") {
+    renderNewsList();
+    return;
+  }
+  if (activeView === "NewsArticle") {
+    renderNewsArticle();
     return;
   }
   if (activeView === "Community") {
@@ -2096,6 +2349,7 @@ function renderQuestPanel() {
 
 function renderExplore() {
   updateFirstStepsCard();
+  renderNewsRail();
   document.body.classList.toggle("has-search-query", Boolean(searchTerm.trim()));
   if (searchTerm.trim()) el.exploreExtras.open = false;
   renderFilterButtons();
@@ -4537,7 +4791,7 @@ function stampFacility(facility) {
   };
   delete state.wishlist[facility.id];
   saveState();
-  track("stamp_add", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name });
+  track("stamp_add", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name, ...(activeView === "NewsArticle" ? { via: "news" } : {}) });
   queueRankingSync();
   if (settings.vibration && "vibrate" in navigator) navigator.vibrate([20, 30, 20]);
   renderAll();
@@ -4592,7 +4846,7 @@ function toggleWishlist(facility) {
   } else {
     state.wishlist[facility.id] = { at: new Date().toISOString() };
     showToast(`${facility.name} を行きたいに追加しました（記録タブで見られます）`);
-    track("wishlist_add", { facility_id: facility.id, prefecture: facility.prefecture || "" });
+    track("wishlist_add", { facility_id: facility.id, prefecture: facility.prefecture || "", ...(activeView === "NewsArticle" ? { via: "news" } : {}) });
   }
   saveState();
   renderAll();
@@ -6318,13 +6572,20 @@ function getViewFromLocation() {
     activeFacilityId = "";
     return "Guide";
   }
+  const newsMatch = path.match(/^\/news\/([^/]+)\/$/);
+  if (newsMatch) {
+    activeFacilityId = "";
+    activeNewsSlug = decodeURIComponent(newsMatch[1]);
+    return "NewsArticle";
+  }
   activeFacilityId = "";
+  activeNewsSlug = "";
   const found = Object.entries(VIEW_META).find(([, meta]) => meta.path === path);
   return found?.[0] || "Explore";
 }
 
 function isArticleRoute() {
-  return /^\/guide\/[^/]+\/$/.test(location.pathname) && Boolean(document.getElementById("ssrContent"));
+  return (/^\/guide\/[^/]+\/$/.test(location.pathname) || /^\/news\/[^/]+\/$/.test(location.pathname)) && Boolean(document.getElementById("ssrContent"));
 }
 
 function pushViewUrl(view) {
@@ -6334,7 +6595,9 @@ function pushViewUrl(view) {
   }
   const path = view === "Facility" && activeFacilityId
     ? `/facility/${encodeURIComponent(activeFacilityId)}/`
-    : VIEW_META[view]?.path || "/";
+    : view === "NewsArticle" && activeNewsSlug
+      ? `/news/${encodeURIComponent(activeNewsSlug)}/`
+      : VIEW_META[view]?.path || "/";
   if (location.pathname !== path) history.pushState({ view }, "", path);
   updateDocumentMetaForView(view);
   trackPageView();
@@ -6353,9 +6616,37 @@ function trackPageView() {
   });
 }
 
+function getNewsMetaTags(article) {
+  return {
+    title: `${article.title} | サウニュ〜`,
+    description: String(article.lead || "").slice(0, 180),
+  };
+}
+
 function updateDocumentMetaForView(view, facility = null) {
   if (isArticleRoute()) return;
   const baseMeta = VIEW_META[view] || VIEW_META.Explore;
+  if (view === "NewsArticle" && newsModule && activeNewsSlug) {
+    const article = (newsModule.SAUNA_NEWS || []).find((entry) => entry.slug === activeNewsSlug);
+    if (article) {
+      const meta = getNewsMetaTags(article);
+      const url = new URL(`/news/${encodeURIComponent(article.slug)}/`, APP_URL).href;
+      document.title = meta.title;
+      updateMeta("name", "description", meta.description);
+      updateMeta("property", "og:title", meta.title);
+      updateMeta("property", "og:description", meta.description);
+      updateMeta("property", "og:url", url);
+      updateMeta("property", "og:image", new URL(`/assets/news/${article.slug}-og.png`, APP_URL).href);
+      updateMeta("name", "twitter:title", meta.title.replace(" | サウニュ〜", ""));
+      updateMeta("name", "twitter:description", meta.description);
+      updateMeta("name", "twitter:image", new URL(`/assets/news/${article.slug}-og.png`, APP_URL).href);
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.href = url;
+      updateMeta("name", "robots", "index, follow, max-image-preview:large");
+      updateMeta("name", "googlebot", "index, follow, max-image-preview:large");
+      return;
+    }
+  }
   const pref = view === "Explore" && /^\/pref\//.test(location.pathname) ? PREFECTURES.find(item => item.name === selectedPrefecture) : null;
   const meta = facility ? getFacilityMetaTags(facility) : pref ? {title:`${pref.name}のサウナ検索・サ活記録 | サ印帳`, description:`${pref.name}のサウナ候補を検索。住所・参照情報を確認して、訪問した施設をサ印として記録できます。`} : baseMeta;
   const url = facility ? getFacilityDetailUrl(facility) : pref ? new URL(`/pref/${pref.slug}/`, APP_URL).href : new URL(baseMeta.path, APP_URL).href;
