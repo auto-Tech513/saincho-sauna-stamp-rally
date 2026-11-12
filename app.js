@@ -1932,6 +1932,7 @@ function setView(view) {
   if (view === "Passport") visibleLimit = 36;
   if (view === "Sameshi" && selectedPrefecture !== "全国") selectedSameshiPrefecture = selectedPrefecture;
   if (view !== "Facility") activeFacilityId = "";
+  if (view !== "Explore") stopNewsRailAutoScroll();
   if (view !== "NewsArticle") activeNewsSlug = "";
   activeView = view;
   applyActiveView(view);
@@ -2020,7 +2021,7 @@ function newsCardHtml(article, options = {}) {
   return `
   <article class="news-card">
     <button type="button" class="news-card-main" data-news-open="${escapeAttr(article.slug)}">
-      <img class="news-card-thumb" src="${hero}" alt="" width="1280" height="720" loading="lazy" />
+      <img class="news-card-thumb" src="/assets/news/${article.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
       <span class="news-card-body">
         <span class="news-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
         <span class="news-card-title">${escapeHtml(article.title)}</span>
@@ -2036,48 +2037,105 @@ function trackNewsOnce(key, name, params) {
   track(name, params);
 }
 
+function newsRailCardHtml(article) {
+  return `
+      <a class="news-rail-card" href="/news/${escapeAttr(article.slug)}/" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
+        <img src="/assets/news/${article.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
+        <span class="news-rail-card-body">
+          <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
+          <span class="news-rail-card-title">${escapeHtml(article.title)}</span>
+        </span>
+      </a>`;
+}
+
+let newsRailScrollState = null;
+function stopNewsRailAutoScroll() {
+  if (newsRailScrollState) {
+    cancelAnimationFrame(newsRailScrollState.raf);
+    if (newsRailScrollState.observer) newsRailScrollState.observer.disconnect();
+    newsRailScrollState = null;
+  }
+}
+
+function startNewsRailAutoScroll(track) {
+  stopNewsRailAutoScroll();
+  if (!track || typeof window === "undefined") return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const groups = track.querySelectorAll(".news-rail-group");
+  if (groups.length < 2) return;
+  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0 };
+  const pause = () => {
+    state.pausedUntil = performance.now() + 5000;
+    state.pos = track.scrollLeft || 0;
+  };
+  track.addEventListener("pointerdown", pause);
+  track.addEventListener("touchstart", pause, { passive: true });
+  track.addEventListener("wheel", pause, { passive: true });
+  if (typeof IntersectionObserver !== "undefined") {
+    const observer = new IntersectionObserver((entries) => {
+      state.visible = entries.some((entry) => entry.isIntersecting);
+    }, { threshold: 0.05 });
+    observer.observe(track);
+    state.observer = observer;
+  }
+  const step = () => {
+    if (newsRailScrollState !== state) return;
+    if (!track.isConnected) {
+      stopNewsRailAutoScroll();
+      return;
+    }
+    const loopWidth = groups[1].offsetLeft - groups[0].offsetLeft;
+    if (loopWidth > 0 && state.visible && !document.hidden && performance.now() >= state.pausedUntil) {
+      // scrollLeft への小数加算はブラウザが切り捨てるため、位置は自前で累積する
+      state.pos += 0.5;
+      if (state.pos >= loopWidth) state.pos -= loopWidth;
+      track.scrollLeft = state.pos;
+    }
+    state.raf = requestAnimationFrame(step);
+  };
+  newsRailScrollState = state;
+  state.raf = requestAnimationFrame(step);
+}
+
 async function renderNewsRail() {
   const rail = document.getElementById("newsRail");
   if (!rail) return;
   const searching = Boolean(searchTerm.trim()) || selectedPrefecture !== "全国";
   if (searching) {
+    stopNewsRailAutoScroll();
     rail.hidden = true;
     return;
   }
   try {
     await ensureNewsModule();
   } catch {
+    stopNewsRailAutoScroll();
     rail.hidden = true;
     return;
   }
   if (activeView !== "Explore") return;
   const articles = getPublishedNewsList().slice(0, 5);
   if (!articles.length) {
+    stopNewsRailAutoScroll();
     rail.hidden = true;
     return;
   }
+  const groupHtml = `
+    <div class="news-rail-group">
+      ${articles.map((article) => newsRailCardHtml(article)).join("")}
+      <a class="news-rail-card news-rail-more" href="/news/" data-open-view="News">
+        <span class="news-rail-more-text">すべて見る</span>
+        <span class="news-rail-more-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>`;
   rail.innerHTML = `
     <div class="news-rail-head">
       <h2 class="news-rail-title">サウニュ〜</h2>
       <span class="news-rail-sub">サウナニュース</span>
     </div>
-    <div class="news-rail-track">
-      ${articles.map((article) => `
-      <article class="news-rail-card">
-        <button type="button" class="news-rail-main" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
-          <img src="/assets/news/${article.slug}-hero.webp" alt="" width="1280" height="720" loading="lazy" />
-          <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
-          <span class="news-rail-card-title">${escapeHtml(article.title)}</span>
-        </button>
-      </article>`).join("")}
-      <article class="news-rail-card news-rail-more">
-        <button type="button" class="news-rail-main news-rail-more-main" data-open-view="News">
-          <span class="news-rail-more-text">すべて見る</span>
-          <span class="news-rail-more-arrow" aria-hidden="true">→</span>
-        </button>
-      </article>
-    </div>`;
+    <div class="news-rail-track">${groupHtml}${groupHtml.replace('class="news-rail-group"', 'class="news-rail-group" aria-hidden="true" inert')}</div>`;
   rail.hidden = false;
+  startNewsRailAutoScroll(rail.querySelector(".news-rail-track"));
   trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
 }
 
@@ -2105,6 +2163,34 @@ async function renderNewsList() {
     </div>
     ${filtered.length > shown.length ? `<button type="button" class="ghost-button full-button" data-news-more>さらに${Math.min(10, filtered.length - shown.length)}件表示</button>` : ""}`;
   trackNewsOnce(`list:${newsCategoryFilter}`, "news_list_view", { surface: "list", category: newsCategoryFilter });
+}
+
+function newsShareHtml(article) {
+  const url = `https://saincho-sauna-stamp-rally.pages.dev/news/${article.slug}/`;
+  const encUrl = encodeURIComponent(url);
+  const encTitle = encodeURIComponent(article.title);
+  return `
+    <div class="news-share">
+      <span class="news-share-label">この記事をシェア</span>
+      <div class="news-share-buttons">
+        <a class="news-share-button news-share-x" href="https://twitter.com/intent/tweet?text=${encTitle}&url=${encUrl}" target="_blank" rel="noopener" data-news-share="x" data-news-slug="${escapeAttr(article.slug)}">Xでポスト</a>
+        <a class="news-share-button news-share-line" href="https://social-plugins.line.me/lineit/share?url=${encUrl}" target="_blank" rel="noopener" data-news-share="line" data-news-slug="${escapeAttr(article.slug)}">LINEで送る</a>
+        <a class="news-share-button news-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${encUrl}" target="_blank" rel="noopener" data-news-share="facebook" data-news-slug="${escapeAttr(article.slug)}">Facebook</a>
+        <button type="button" class="news-share-button" data-news-share="copy" data-news-slug="${escapeAttr(article.slug)}" data-news-copy="${escapeAttr(url)}">リンクをコピー</button>
+      </div>
+    </div>`;
+}
+
+function newsNavCardHtml(entry, kindLabel) {
+  return `
+      <a class="news-nav-card" href="/news/${escapeAttr(entry.slug)}/" data-news-open="${escapeAttr(entry.slug)}">
+        <img class="news-nav-thumb" src="/assets/news/${entry.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
+        <span class="news-nav-body">
+          ${kindLabel ? `<span class="news-nav-kind">${kindLabel}</span>` : ""}
+          <span class="news-nav-title">${escapeHtml(entry.title)}</span>
+          <span class="news-nav-meta">${newsCategoryChip(entry)}<time datetime="${entry.publishedAt}">${formatDate(entry.publishedAt)}</time></span>
+        </span>
+      </a>`;
 }
 
 async function renderNewsArticle() {
@@ -2156,14 +2242,15 @@ async function renderNewsArticle() {
       <p><small>この記事の内容の根拠とした資料です。${formatDate(article.sourcesCheckedAt)}に各出典を確認しています。</small></p>
     </section>
     ${Array.isArray(article.revisions) && article.revisions.length ? `<section class="news-revisions"><h2>更新履歴</h2><ul>${article.revisions.map((revision) => `<li>${formatDate(revision.date)}：${escapeHtml(revision.text)}</li>`).join("")}</ul></section>` : ""}
+    ${newsShareHtml(article)}
     <nav class="news-article-nav" aria-label="前後の記事">
-      ${next ? `<button type="button" class="ghost-button" data-news-open="${escapeAttr(next.slug)}">新しい記事：${escapeHtml(next.title)}</button>` : ""}
-      ${prev ? `<button type="button" class="ghost-button" data-news-open="${escapeAttr(prev.slug)}">前の記事：${escapeHtml(prev.title)}</button>` : ""}
-      ${siblings.map((entry) => `<button type="button" class="ghost-button" data-news-open="${escapeAttr(entry.slug)}">${escapeHtml(entry.title)}</button>`).join("")}
+      ${next ? newsNavCardHtml(next, "新しい記事") : ""}
+      ${prev ? newsNavCardHtml(prev, "前の記事") : ""}
+      ${siblings.length ? `<h2 class="news-nav-heading">同じ「${escapeHtml(newsModule.NEWS_CATEGORIES[article.category] || "ニュース")}」の記事</h2>${siblings.map((entry) => newsNavCardHtml(entry, "")).join("")}` : ""}
     </nav>
     <div class="news-article-actions">
-      <button type="button" class="mini-button" data-open-view="Passport">サ印帳を見る</button>
-      <button type="button" class="ghost-button" data-open-view="Explore">サウナを探す</button>
+      <button type="button" class="news-action-button news-action-button-primary" data-open-view="Passport">サ印帳を見る</button>
+      <button type="button" class="news-action-button news-action-button-ghost" data-open-view="Explore">サウナを探す</button>
     </div>`;
   root.querySelectorAll("[data-news-facility]").forEach((link) => {
     link.addEventListener("click", () => track("news_to_facility", { slug: article.slug, facility_id: link.dataset.newsFacility }));
@@ -2171,8 +2258,26 @@ async function renderNewsArticle() {
 }
 
 function handleNewsClick(event) {
+  const shareButton = event.target instanceof Element ? event.target.closest("[data-news-share]") : null;
+  if (shareButton) {
+    const method = shareButton.dataset.newsShare;
+    track("news_share", { method, slug: shareButton.dataset.newsSlug || activeNewsSlug || "" });
+    if (method === "copy") {
+      event.preventDefault();
+      const url = shareButton.dataset.newsCopy || location.href;
+      const done = () => showToast("リンクをコピーしました");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done).catch(() => showToast(url));
+      } else {
+        showToast(url);
+      }
+    }
+    return;
+  }
   const openButton = event.target instanceof Element ? event.target.closest("[data-news-open]") : null;
   if (openButton) {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
     track("news_article_click", { slug: openButton.dataset.newsOpen, surface: openButton.dataset.newsSurface || (activeView === "News" ? "list" : activeView === "NewsArticle" ? "article_nav" : "other") });
     openNewsArticle(openButton.dataset.newsOpen);
     return;

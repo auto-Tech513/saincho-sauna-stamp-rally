@@ -216,6 +216,10 @@ for (const article of newsPublished) {
   const [heroWidth, heroHeight] = probe.stdout.trim().split(",").map(Number);
   assert(heroWidth >= 1200, `ヒーロー画像の幅が1200px未満です: ${article.slug} (${heroWidth}x${heroHeight})`);
   await fs.access(path.join(root, entry.og.replace(/^\//, "")));
+  assert(entry.thumb, `ニュース画像のmanifestにサムネイルがありません: ${article.slug}`);
+  await fs.access(path.join(root, entry.thumb.replace(/^\//, "")));
+  assert(html.includes("news-share"), `ニュース記事にシェアボタンがありません: ${article.slug}`);
+  assert(html.includes("news-nav-card"), `ニュース記事に前後・関連カードがありません: ${article.slug}`);
   assert(pageSitemap.includes(`https://saincho-sauna-stamp-rally.pages.dev/news/${article.slug}/`), `ニュース記事がsitemap-pagesにありません: ${article.slug}`);
 }
 const newsFeedItems = [...newsFeed.matchAll(/<item>/g)].length;

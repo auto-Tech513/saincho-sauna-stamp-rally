@@ -87,9 +87,22 @@ try {
     await ogPage.screenshot({ path: ogPng });
     await ogPage.close();
 
+    const thumbParams = new URLSearchParams(params);
+    thumbParams.set("variant", "thumb");
+    const thumbPng = path.join(OUT_DIR, `${article.slug}-thumb.png`);
+    const thumbWebp = path.join(OUT_DIR, `${article.slug}-thumb.webp`);
+    const thumbPage = await browser.newPage({ viewport: { width: 640, height: 400 } });
+    await thumbPage.goto(`${pathToFileURL(TEMPLATE).href}?${thumbParams.toString()}`, { waitUntil: "load" });
+    await thumbPage.screenshot({ path: thumbPng });
+    await thumbPage.close();
+    const thumbConv = spawnSync("ffmpeg", ["-y", "-loglevel", "error", "-i", thumbPng, "-c:v", "libwebp", "-quality", "82", thumbWebp], { stdio: "inherit" });
+    if (thumbConv.status !== 0) throw new Error(`ffmpeg thumb webp 変換に失敗: ${article.slug}`);
+    await fs.rm(thumbPng);
+
     manifest[article.slug] = {
       hero: `/assets/news/${article.slug}-hero.webp`,
       og: `/assets/news/${article.slug}-og.png`,
+      thumb: `/assets/news/${article.slug}-thumb.webp`,
       generatedAt: new Date().toISOString().slice(0, 10),
     };
     console.log(`generated ${article.slug}`);

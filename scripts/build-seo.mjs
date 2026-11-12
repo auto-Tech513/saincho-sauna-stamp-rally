@@ -812,11 +812,31 @@ function renderNewsArticleSsr(article) {
   const prev = index >= 0 && index < PUBLISHED_NEWS.length - 1 ? PUBLISHED_NEWS[index + 1] : null;
   const next = index > 0 ? PUBLISHED_NEWS[index - 1] : null;
   const siblings = PUBLISHED_NEWS.filter((entry) => entry.category === article.category && entry.slug !== article.slug).slice(0, 3);
-  const relatedItems = [
-    ...(next ? [`<li><a href="/news/${next.slug}/">新しい記事：${escapeHtml(next.title)}</a></li>`] : []),
-    ...(prev ? [`<li><a href="/news/${prev.slug}/">前の記事：${escapeHtml(prev.title)}</a></li>`] : []),
-    ...siblings.map((entry) => `<li><a href="/news/${entry.slug}/">${escapeHtml(entry.title)}</a> <span>同じ「${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}」の記事</span></li>`),
+  const newsNavCardSsr = (entry, kindLabel) => `
+      <a class="news-nav-card" href="/news/${entry.slug}/">
+        <img class="news-nav-thumb" src="/assets/news/${entry.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
+        <span class="news-nav-body">
+          ${kindLabel ? `<span class="news-nav-kind">${kindLabel}</span>` : ""}
+          <span class="news-nav-title">${escapeHtml(entry.title)}</span>
+          <span class="news-nav-meta"><span class="news-chip news-chip-${entry.category}">${escapeHtml(NEWS_CATEGORIES[entry.category] || "ニュース")}</span><time datetime="${entry.publishedAt}">${formatJaDate(entry.publishedAt)}</time></span>
+        </span>
+      </a>`;
+  const relatedCards = [
+    ...(next ? [newsNavCardSsr(next, "新しい記事")] : []),
+    ...(prev ? [newsNavCardSsr(prev, "前の記事")] : []),
   ].join("");
+  const siblingCards = siblings.map((entry) => newsNavCardSsr(entry, "")).join("");
+  const shareUrl = `${APP_URL}/news/${article.slug}/`;
+  const shareHtml = `
+    <div class="news-share">
+      <span class="news-share-label">この記事をシェア</span>
+      <div class="news-share-buttons">
+        <a class="news-share-button news-share-x" href="https://twitter.com/intent/tweet?text=${encodeURIComponent(article.title)}&url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener" data-news-share="x" data-news-slug="${article.slug}">Xでポスト</a>
+        <a class="news-share-button news-share-line" href="https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener" data-news-share="line" data-news-slug="${article.slug}">LINEで送る</a>
+        <a class="news-share-button news-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}" target="_blank" rel="noopener" data-news-share="facebook" data-news-slug="${article.slug}">Facebook</a>
+        <button type="button" class="news-share-button" data-news-share="copy" data-news-slug="${article.slug}" data-news-copy="${shareUrl}">リンクをコピー</button>
+      </div>
+    </div>`;
   const endedNote = article.eventEndDate && article.eventEndDate < jstToday()
     ? `<p class="news-ended-note">この記事で紹介したイベント・期間は終了しました。</p>` : "";
   return wrapSsr(`
@@ -838,7 +858,12 @@ function renderNewsArticleSsr(article) {
     ${article.caution ? `<p><strong>注意:</strong> ${escapeHtml(article.caution)}</p>` : ""}
     ${sourcesHtml}
     ${revisionsHtml}
-    ${relatedItems ? `<h2>関連するニュース</h2><ul class="ssr-list">${relatedItems}</ul>` : ""}
+    ${shareHtml}
+    ${relatedCards || siblingCards ? `
+    <nav class="news-article-nav" aria-label="前後の記事">
+      ${relatedCards}
+      ${siblingCards ? `<h2 class="news-nav-heading">同じ「${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}」の記事</h2>${siblingCards}` : ""}
+    </nav>` : ""}
     <p><a href="/news/">サウニュ〜の記事一覧へ戻る</a></p>
   `, { jsonLd });
 }
