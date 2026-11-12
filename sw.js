@@ -67,6 +67,25 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(cached.then(async response => response || await fetched).catch(() => Response.error()));
 });
 
+self.addEventListener("push", (event) => {
+  let data = {};
+  try {
+    data = event.data ? event.data.json() : {};
+  } catch {
+    data = { body: event.data ? event.data.text() : "" };
+  }
+  const title = data.title || "サ印帳";
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: data.body || "新しいお知らせがあります",
+      icon: "./icons/icon-192.png",
+      badge: "./icons/icon-192.png",
+      tag: data.tag || undefined,
+      data: { url: data.url || "/community/" },
+    })
+  );
+});
+
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
   const target = new URL(event.notification.data?.url || "/", self.location.origin).href;

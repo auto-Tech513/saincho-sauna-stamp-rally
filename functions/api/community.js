@@ -1,4 +1,5 @@
 import { checkRateLimit, rateLimitHeaders } from "./_shared.js";
+import { sendPushForNewEvent } from "./_push.js";
 
 const STORAGE_KEY = "community:v1";
 const MAX_EVENTS = 80;
@@ -52,6 +53,9 @@ export async function onRequestPost(context) {
   delete event.clientId;
   const next = [event, ...events].slice(0, MAX_EVENTS);
   await storage.put(STORAGE_KEY, JSON.stringify(next));
+  if (typeof context.waitUntil === "function") {
+    context.waitUntil(sendPushForNewEvent(storage, context.env, event).catch(() => {}));
+  }
   return json({ events: publicEvents(next), configured: true }, 201);
 }
 

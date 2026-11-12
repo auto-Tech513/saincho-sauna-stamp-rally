@@ -9353,3 +9353,24 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .news-action-button-primary { background: var(--primary); border: 1px solid var(--primary); color: #fff; }
 .news-action-button-ghost { background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); color: var(--ink); }
 #viewNewsArticle .back-button { margin-top: 10px; }
+
+/* プッシュ通知パネル（サウナ仲間） */
+.push-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  padding: 14px;
+  background: rgb(255 255 255 / 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.push-panel-copy { flex: 1; min-width: 0; }
+.push-panel-copy h3 { margin: 2px 0 6px; font-size: 1rem; font-weight: 800; }
+.push-panel-copy p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgb(17 24 23 / 0.7); }
+.push-panel-copy .eyebrow { color: var(--primary); }
+.push-panel .primary-button, .push-panel .secondary-button { flex-shrink: 0; min-height: 48px; }
+@media (max-width: 640px) {
+  .push-panel { flex-direction: column; align-items: stretch; }
+  .push-panel .primary-button, .push-panel .secondary-button { width: 100%; }
+}

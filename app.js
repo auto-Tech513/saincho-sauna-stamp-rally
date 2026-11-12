@@ -18,6 +18,8 @@ const CONTACT_ENDPOINT = "./api/contact";
 const PROFILE_KEY = "saincho-profile-v1";
 const RANKING_ENDPOINT = "./api/ranking";
 const COMMUNITY_ENDPOINT = "./api/community";
+const PUSH_ENDPOINT = "./api/push";
+const VAPID_PUBLIC_KEY = "BDrZSIx8EnTWyOrHtUZqj5Gp90y_fk_cn0mgSD8oQWm_dsNmxfmAjOiyIwl5kSvdLvyELSoogO64SIMQlrJ8naM";
 const RANKING_REFRESH_MS = 10000;
 const AMAZON_ASSOCIATE_TAG = "saunastampral-22";
 const RAKUTEN_AFFILIATE_URL = "https://hb.afl.rakuten.co.jp/hgc/4145461f.ff7bbb59.41454620.00c2fd25/";
@@ -921,6 +923,8 @@ const el = {
   communityPrefecture: document.querySelector("#communityPrefecture"),
   communityStatus: document.querySelector("#communityStatus"),
   communityRefreshButton: document.querySelector("#communityRefreshButton"),
+  pushNotifyStatus: document.querySelector("#pushNotifyStatus"),
+  pushNotifyButton: document.querySelector("#pushNotifyButton"),
   articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
   guideGearRail: document.querySelector("#guideGearRail"),
   articleList: document.querySelector("#articleList"),
@@ -1728,6 +1732,7 @@ function bindEvents() {
   el.contactForm?.addEventListener("submit", submitContactForm);
   el.communityForm?.addEventListener("submit", submitCommunityEvent);
   el.communityRefreshButton?.addEventListener("click", () => loadCommunityEvents({ announce: true }));
+  el.pushNotifyButton?.addEventListener("click", handlePushNotifyAction);
 
   el.settingsButton.addEventListener("click", openSettingsDialog);
   el.closeSettingsButton.addEventListener("click", closeSettingsDialog);
@@ -4227,8 +4232,110 @@ function renderSameshiCard(item) {
   `;
 }
 
+function pushSupported() {
+  try {
+    return typeof navigator !== "undefined" && "serviceWorker" in navigator
+      && typeof window !== "undefined" && "PushManager" in window && "Notification" in window;
+  } catch {
+    return false;
+  }
+}
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replaceAll("-", "+").replaceAll("_", "/");
+  const raw = atob(base64);
+  const output = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i += 1) output[i] = raw.charCodeAt(i);
+  return output;
+}
+
+async function renderPushNotifyPanel() {
+  const status = el.pushNotifyStatus;
+  const button = el.pushNotifyButton;
+  if (!status || !button) return;
+  if (!pushSupported()) {
+    status.textContent = "この端末・ブラウザではプッシュ通知に対応していません。iPhoneでは、ホーム画面に追加したサ印帳アプリから開くと利用できます。";
+    button.hidden = true;
+    return;
+  }
+  if (Notification.permission === "denied") {
+    status.textContent = "通知がブロックされています。ブラウザの設定でサ印帳の通知を許可すると、新しい募集を受け取れます。";
+    button.hidden = true;
+    return;
+  }
+  let subscription = null;
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    subscription = await registration.pushManager.getSubscription();
+  } catch {
+    subscription = null;
+  }
+  if (subscription) {
+    status.textContent = "通知はオンです。サウナ仲間に新しい募集が投稿されると、この端末へ通知します。";
+    button.hidden = false;
+    button.textContent = "通知を止める";
+    button.className = "secondary-button";
+    button.dataset.pushAction = "unsubscribe";
+  } else {
+    status.textContent = "サウナ仲間に新しい募集が投稿されたら、この端末へ通知します。届くのは新しい募集のお知らせだけです。";
+    button.hidden = false;
+    button.textContent = "通知を受け取る";
+    button.className = "primary-button";
+    button.dataset.pushAction = "subscribe";
+  }
+}
+
+async function handlePushNotifyAction() {
+  const button = el.pushNotifyButton;
+  if (!button || button.disabled) return;
+  const action = button.dataset.pushAction || "subscribe";
+  button.disabled = true;
+  try {
+    const registration = await navigator.serviceWorker.ready;
+    if (action === "unsubscribe") {
+      const subscription = await registration.pushManager.getSubscription();
+      if (subscription) {
+        await fetch(PUSH_ENDPOINT, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ action: "unsubscribe", endpoint: subscription.endpoint }),
+        }).catch(() => {});
+        await subscription.unsubscribe();
+      }
+      showToast("通知を止めました");
+    } else {
+      const permission = await Notification.requestPermission();
+      if (permission !== "granted") {
+        showToast("通知が許可されませんでした");
+        return;
+      }
+      const subscription = await registration.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY),
+      });
+      const response = await fetch(PUSH_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ action: "subscribe", subscription: subscription.toJSON() }),
+      });
+      if (!response.ok) {
+        await subscription.unsubscribe().catch(() => {});
+        throw new Error("push-register-failed");
+      }
+      showToast("通知をオンにしました。新しい募集が届きます");
+    }
+  } catch {
+    showToast("通知の設定に失敗しました。時間をおいてお試しください");
+  } finally {
+    button.disabled = false;
+    renderPushNotifyPanel();
+  }
+}
+
 function renderCommunityPage() {
   if (!el.communityList) return;
+  renderPushNotifyPanel();
   const localEvents = state.localCommunityEvents || [];
   const events = normalizeCommunityEvents([...communityEvents, ...localEvents]);
   const filtered = selectedCommunityPrefecture === "全国"
