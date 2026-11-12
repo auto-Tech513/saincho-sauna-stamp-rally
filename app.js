@@ -2061,9 +2061,9 @@ function startNewsRailAutoScroll(track) {
   stopNewsRailAutoScroll();
   if (!track || typeof window === "undefined") return;
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const groups = track.querySelectorAll(".news-rail-group");
-  if (groups.length < 2) return;
-  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0 };
+  const half = track.children.length / 2;
+  if (!Number.isInteger(half) || half < 1) return;
+  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0, loopWidth: 0 };
   const pause = () => {
     state.pausedUntil = performance.now() + 5000;
     state.pos = track.scrollLeft || 0;
@@ -2084,7 +2084,10 @@ function startNewsRailAutoScroll(track) {
       stopNewsRailAutoScroll();
       return;
     }
-    const loopWidth = groups[1].offsetLeft - groups[0].offsetLeft;
+    if (!state.loopWidth) {
+      state.loopWidth = track.children[half].offsetLeft - track.children[0].offsetLeft;
+    }
+    const loopWidth = state.loopWidth;
     if (loopWidth > 0 && state.visible && !document.hidden && performance.now() >= state.pausedUntil) {
       // scrollLeft への小数加算はブラウザが切り捨てるため、位置は自前で累積する
       state.pos += 0.5;
@@ -2120,22 +2123,30 @@ async function renderNewsRail() {
     rail.hidden = true;
     return;
   }
-  const groupHtml = `
-    <div class="news-rail-group">
+  const cardsHtml = `
       ${articles.map((article) => newsRailCardHtml(article)).join("")}
       <a class="news-rail-card news-rail-more" href="/news/" data-open-view="News">
         <span class="news-rail-more-text">すべて見る</span>
         <span class="news-rail-more-arrow" aria-hidden="true">→</span>
-      </a>
-    </div>`;
+      </a>`;
   rail.innerHTML = `
     <div class="news-rail-head">
       <h2 class="news-rail-title">サウニュ〜</h2>
       <span class="news-rail-sub">サウナニュース</span>
     </div>
-    <div class="news-rail-track">${groupHtml}${groupHtml.replace('class="news-rail-group"', 'class="news-rail-group" aria-hidden="true" inert')}</div>`;
+    <div class="news-rail-track">${cardsHtml}</div>`;
+  const track = rail.querySelector(".news-rail-track");
+  // ループ用に同じカード群を複製する（入れ子のグループ要素は iOS Safari で
+  // 配置が崩れるため、トラックの直下に平坦に並べる。複製は読み上げ・タブ移動の対象外）
+  [...track.children].forEach((child) => {
+    const clone = child.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.inert = true;
+    clone.tabIndex = -1;
+    track.appendChild(clone);
+  });
   rail.hidden = false;
-  startNewsRailAutoScroll(rail.querySelector(".news-rail-track"));
+  startNewsRailAutoScroll(track);
   trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
 }
 
