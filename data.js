@@ -71130,5 +71130,24 @@ export const SEED_FACILITIES = [
     "specialAwardYears": [
       2026
     ]
+  },
+  {
+    "id": "manual-gunma-cocofuro-misato",
+    "name": "COCOFURO plus みさと温泉",
+    "prefecture": "群馬県",
+    "address": "〒370-3104 群馬県高崎市箕郷町上芝853-1",
+    "addressSource": "公式プレスリリース",
+    "city": "高崎市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://misato.cocofuro.com/",
+    "officialUrl": "https://misato.cocofuro.com/"
   }
 ];

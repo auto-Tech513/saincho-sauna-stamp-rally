@@ -220,5 +220,17 @@
     "og": "/assets/news/yurakunosato-iyofuro-campaign-og.png",
     "thumb": "/assets/news/yurakunosato-iyofuro-campaign-thumb.webp",
     "generatedAt": "2026-11-12"
+  },
+  "cocofuro-plus-misato-opening": {
+    "hero": "/assets/news/cocofuro-plus-misato-opening-hero.webp",
+    "og": "/assets/news/cocofuro-plus-misato-opening-og.png",
+    "thumb": "/assets/news/cocofuro-plus-misato-opening-thumb.webp",
+    "generatedAt": "2026-11-13"
+  },
+  "joto5-sento-stamp-rally-2026": {
+    "hero": "/assets/news/joto5-sento-stamp-rally-2026-hero.webp",
+    "og": "/assets/news/joto5-sento-stamp-rally-2026-og.png",
+    "thumb": "/assets/news/joto5-sento-stamp-rally-2026-thumb.webp",
+    "generatedAt": "2026-11-13"
   }
 }

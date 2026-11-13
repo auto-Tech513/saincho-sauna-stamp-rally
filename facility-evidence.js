@@ -1350,6 +1350,11 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "閉店（2025年8月31日をもって閉店。1997年開業、28年間の営業。閉店の理由は設備の老朽化と公式が案内）", sourceUrl: "https://yunoizumi.com/atsugi/blog_atsugi/3303/", checkedAt: "2026-11-12" }],
   },
   {
+    ids: ["manual-gunma-cocofuro-misato"], name: "COCOFURO plus みさと温泉", status: "planned",
+    features: [],
+    facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }],
+  },
+  {
     ids: ["st-iwate-187"], name: "サウナ＆カプセル宮古", status: "closed",
     features: [],
     facts: [{ label: "営業状況", value: "閉館（閉館日不明）。日帰り入浴の閉館リストに閉館として掲載（住所が登録情報と一致）。公式サイトは消滅し404。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://yuru-to.net/closed.php?oid=47706", checkedAt: "2026-11-10" }],
