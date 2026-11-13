@@ -800,6 +800,7 @@ function renderNewsArticleSsr(article) {
     <p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>`).join("")}</p>` : "";
   const facilityList = facilities.length ? `
     <h2>この記事に関連する施設</h2>
+    <p class="news-facilities-note">訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。</p>
     <ul class="ssr-list">${facilities.map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture || "")}</span></li>`).join("")}</ul>` : "";
   const sourcesHtml = `
     <h2>出典・参考資料</h2>

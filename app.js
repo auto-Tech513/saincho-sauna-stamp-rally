@@ -2036,6 +2036,7 @@ function newsCardHtml(article, options = {}) {
 }
 
 const newsTrackedKeys = new Set();
+const facilityViewTrackedKeys = new Set();
 function trackNewsOnce(key, name, params) {
   if (newsTrackedKeys.has(key)) return;
   newsTrackedKeys.add(key);
@@ -2249,7 +2250,7 @@ async function renderNewsArticle() {
     ${article.statusNote ? `<p class="news-status-note">${escapeHtml(article.statusNote)}</p>` : ""}
     ${h2Texts.length >= 3 ? `<details class="news-toc"><summary>この記事の目次</summary><ol>${h2Texts.map((text, i) => `<li><a href="#news-h2-${i + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : ""}
     <div class="news-article-body">${newsModule.renderNewsBlocks(article.body, { h2IdPrefix: "news-h2-" })}</div>
-    ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
+    ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2><p class="news-facilities-note">訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。</p>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
     <p class="news-action"><strong>次の一歩:</strong> ${escapeHtml(article.action)}</p>
     ${article.caution ? `<p class="news-caution"><strong>注意:</strong> ${escapeHtml(article.caution)}</p>` : ""}
     <section class="news-sources">
@@ -2805,6 +2806,10 @@ function renderFacilityDetail() {
   }
   updateDocumentMetaForView("Facility", facility);
   syncFacilityStructuredData(facility);
+  if (!facilityViewTrackedKeys.has(facility.id)) {
+    facilityViewTrackedKeys.add(facility.id);
+    track("facility_view", { facility_id: facility.id, prefecture: facility.prefecture || "" });
+  }
   const id = escapeAttr(facility.id);
   const visited = Boolean(state.visited[facility.id]);
   const status = getFacilityStatus(facility);
@@ -2829,6 +2834,7 @@ function renderFacilityDetail() {
         ${renderMapRouteLink(facility)}
         <button class="facility-stamp-action" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
       </div>
+      ${!visited && !status ? `<p class="facility-stamp-note">訪れたことがある施設は「押印する」で、この端末に記録できます。記録は都道府県別のサ印帳で確認できます。</p>` : ""}
       <nav class="facility-tabs" aria-label="施設詳細の表示">
         ${[["info","施設情報"],["note","サ活ノート"],["reviews","口コミ"]].map(([tab,label]) => `<button type="button" data-action="detail-tab" data-tab="${tab}" data-id="${id}" aria-controls="facility-pane-${tab}" aria-current="${facilityDetailTab === tab ? "page" : "false"}">${label}</button>`).join("")}
       </nav>

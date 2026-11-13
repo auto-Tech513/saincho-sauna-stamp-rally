@@ -9401,3 +9401,17 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 }
 .guide-gear-more[open ] summary::after { transform: rotate(180deg); }
 .guide-gear-more .guide-gear-grid { margin-top: 8px; }
+
+/* ニュース関連施設・施設詳細の押印案内（2026-11-13） */
+.news-facilities-note {
+  margin: 0 2px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+}
+.facility-stamp-note {
+  margin: 8px 2px 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+}
