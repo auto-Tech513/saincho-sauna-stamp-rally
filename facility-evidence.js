@@ -9229,6 +9229,502 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("利用条件", "男性専用施設（カプセルイン大阪併設）。18歳未満の方、ボディーアート（刺青・タトゥ・ペイントシール等）のある方は利用不可。日帰り利用可", "https://www.umedasauna-newjapan.jp/sauna/price.html"),
     ],
   },
+  {
+    ids: ["osaka-user-z0wkgr"], name: "ヘルシー温泉タテバ", officialUrl: "https://tateba.com/",
+    features: ["塩サウナ", "スチーム(ミスト)サウナ", "ドライサウナ", "水風呂あり", "外気あり", "サ飯あり"],
+    facts: [
+      factNov14("営業時間", "14:00〜翌5:00", "https://tateba.com/"),
+      factNov14("定休日", "年中無休", "https://tateba.com/"),
+      factNov14("設備", "塩サウナ、スチームサウナ（追加料金なし）、遠赤外線サウナ（北側浴室・追加料金300円）、炭酸泉、竹垣風露天風呂、薬風呂、ジェットバス。北側・南側浴室は日替わり", "https://tateba.com/"),
+      factNov14("水風呂", "水風呂あり（露天エリア）", "https://tateba.com/"),
+      factNov14("利用条件", "タトゥーOK（公式明記）。無料駐車場31台（2時間無料）。ボディソープ・シャンプー備え付け、軽食コーナー・日焼けサロン併設", "https://tateba.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-18sjb5w"], name: "ユートピア白玉温泉", officialUrl: "https://utopia-shiratama.com/",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入浴料 大人600円・中学生400円・小学生200円・幼児100円。サウナ料金300円（2時間制・専用リストバンド制、返却後の入浴は可）", "https://utopia-shiratama.com/"),
+      factNov14("営業時間", "AM6:00〜AM25:00（翌1:00）", "https://utopia-shiratama.com/"),
+      factNov14("定休日", "年中無休", "https://utopia-shiratama.com/"),
+      factNov14("設備", "ボナサウナ（約10分に1回のオートロウリュ・高温）、高濃度炭酸泉（1000PPM）、主湯・エステ風呂・電気風呂・露天風呂、外気浴スペース（寝そべりチェア4台・椅子8台）", "https://utopia-shiratama.com/"),
+      factNov14("水風呂", "氷風呂（日本初、水温15℃をキープし定期的に氷を投入、実用新案特許取得）", "https://utopia-shiratama.com/"),
+      factNov14("利用条件", "一般公衆浴場のためタトゥー可。貸しタオル100円・貸しバスタオル200円・レンタルサウナハット200円、無料駐車場20台、ドライヤー無料", "https://utopia-shiratama.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-cwbbqx"], name: "リーベルホテル大阪", officialUrl: "https://www.hotel-liber.jp/",
+    features: ["温泉付き", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り（RIVERSIDE SPA）大人（中学生以上）2,000円＋入湯税150円、小人（4歳〜小学生）1,500円（タオルレンタル含む）。宿泊者は追加料金不要", "https://hotel-liber.jp/spa/spa/"),
+      factNov14("営業時間", "日帰り利用：月〜木 6:00–9:00（最終受付8:00）／11:00–24:00（最終受付22:00）、金・土・日・祝 6:00–9:00／11:00–25:00", "https://hotel-liber.jp/spa/spa/"),
+      factNov14("設備", "RIVERSIDE SPAは地下約1,000mの天然温泉。炭酸風呂・露天風呂・サウナ完備", "https://hotel-liber.jp/spa/spa/"),
+      factNov14("利用条件", "日帰り入浴可。入れ墨・タトゥーのある方、3歳以下、おむつ着用のお子様は入浴不可。7歳以上は同性浴場の利用", "https://hotel-liber.jp/spa/spa/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-2mx5ie"], name: "わがまちサウナ 大阪野田", officialUrl: "https://wagamachi-sauna.com/",
+    features: ["ロウリュあり", "水風呂あり", "貸切可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "男性専用パブリックサウナ（予約不要）75分 ¥1,450／2時間 ¥1,800。プライベート（貸切）サウナ（予約制・最大4名）月〜金 ¥6,000〜／土日 ¥8,800〜", "https://wagamachi-sauna.com/"),
+      factNov14("営業時間", "平日10時〜23時、土日祝7時15分〜（最終受付22時）", "https://wagamachi-sauna.com/"),
+      factNov14("設備", "4段型タワーのパブリックサウナ（最大18名）、ロウリュできるプライベートサウナ、内気浴スペース「ととのいば」（パブリックサウナ・水風呂・ととのいばは黙浴）", "https://wagamachi-sauna.com/"),
+      factNov14("水風呂", "水深110cmの水風呂", "https://wagamachi-sauna.com/"),
+      factNov14("利用条件", "LINE会員登録必須、完全キャッシュレス。手ぶら利用OK（バスタオル・フェイスタオル・アメニティ完備）", "https://wagamachi-sauna.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1m1sc4u"], name: "宇宙.サウナ 寺田町店", officialUrl: "https://uchusauna.jp/",
+    features: ["薪サウナ", "水風呂あり", "外気あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "平日60分 ¥1,250〜180分 ¥2,650、土日祝60分 ¥1,450〜180分 ¥2,850（税込）。延長30分ごと 平日450円／土日祝550円。タオルセットレンタル ¥350", "https://uchusauna.jp/"),
+      factNov14("営業時間", "平日 12:00–26:00、土日祝 10:00–26:00（原則毎日営業）", "https://uchusauna.jp/"),
+      factNov14("設備", "大阪初の薪サウナ専門店。特注薪ストーブのサウナ室（室温90度×高湿度、溶岩石×天然鉱石）、サ室で冷水を浴びるクナイプ、星空の下の半外気浴、温かい美泡の湯", "https://uchusauna.jp/"),
+      factNov14("水風呂", "美泡水風呂2つ", "https://uchusauna.jp/"),
+      factNov14("利用条件", "男性専用（レディースデー定期開催予定）。通常営業は予約不要、入館にはLINE会員証が必要、完全キャッシュレス。タトゥー可（タトゥーバンド ¥350を装着）、水着着用は禁止", "https://uchusauna.jp/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-11wr484"], name: "屋上の北欧サウナ店 LOMA", officialUrl: "https://loma-sauna.com/",
+    features: ["貸切可", "個室", "外気あり", "ロウリュあり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "貸切料金（1〜2名・税込）平日 ¥7,700〜、土日祝 ¥8,800〜。3名以上は1名あたり追加 ¥3,300。テントサウナ設備を含むルーフトップエリア全体のレンタル料", "https://loma-sauna.com/"),
+      factNov14("営業時間", "1枠2時間制（予約制）：10:00〜12:00／13:00〜15:00／16:00〜18:00／19:00〜21:00", "https://loma-sauna.com/"),
+      factNov14("設備", "屋上テントサウナ（フィンランドMISA製電気ストーブ、約90度、ロウリュ可）、外気浴エリア、室内プライベートルーム（バスルーム・パウダーコーナー有）。3階はカフェ、4階がサウナフロア", "https://loma-sauna.com/"),
+      factNov14("利用条件", "完全貸切・予約制（推奨1〜2名、最大4名）。サウナ浴は水着着用。タオル・水着は持参推奨で有料レンタルあり。未成年者のみでの利用不可", "https://loma-sauna.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-3fiqq5"], name: "会員制プライベートサウナHAAAVE.", officialUrl: "https://haaave.net/",
+    features: ["個室", "水風呂あり", "男女共用", "スチーム(ミスト)サウナ"],
+    facts: [
+      factNov14("料金", "初回体験 Room1・2（定員2名／2時間）¥16,000、Room3（定員4名／2時間）¥25,000（税込）。ビジター料金 Room1・2 ¥33,000、Room3 ¥50,000。会員GOLDは月会費 ¥22,000＋利用料 Room1・2 ¥10,000／Room3 ¥20,000", "https://haaave.net/price"),
+      factNov14("営業時間", "平日 10:00〜24:15、土日祝 9:45〜24:30", "https://haaave.net/"),
+      factNov14("設備", "コンセプトの異なる3つの完全個室（Room1 BOTANICAL、Room2 JAPANESE MODERN、Room3 MAGMA SPA）。Room3は富士山の天然溶岩を敷き詰めたマグマスパ式サウナ（室温65℃・湿度55〜65%）", "https://haaave.net/"),
+      factNov14("水風呂", "全室水風呂完備", "https://haaave.net/"),
+      factNov14("利用条件", "会員制プライベートサウナ。初回体験の後、会員プランまたはビジタープランで利用可。大阪初の男女で利用可能な個室サウナ（保健所認可済）", "https://haaave.net/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-vayout"], name: "空庭温泉 OSAKA BAY TOWER", officialUrl: "https://www.solaniwa.com/",
+    features: ["温泉付き", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入館料（日程により変動）大人 2,310円〜、小人 一律1,320円、70歳以上 一律1,800円（タオル・館内浴衣付き、税込）。入館料が1,651円以上の場合は別途入湯税150円", "https://kyodonewsprwire.jp/release/202611120081"),
+      factNov14("営業時間", "11:00～23:00（最終入場 22:00）", "https://kyodonewsprwire.jp/release/202611120081"),
+      factNov14("定休日", "不定休（月1回）。公式サイトに休館日を掲載（直近は2026年12月9日、2027年1月13日、2月3日）", "https://www.solaniwa.com/"),
+      factNov14("利用条件", "日帰り入浴施設（温泉型テーマパーク）。入館料にタオル・館内浴衣のレンタルが含まれる", "https://kyodonewsprwire.jp/release/202611120081"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1lg1t19"], name: "個室サウナとと 東梅田店", officialUrl: "https://toto-sauna.com/",
+    features: ["個室", "セルフロウリュ", "ロウリュあり", "水風呂あり", "男女共用", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "90分1名 平日 ¥6,980・土日 ¥7,980、120分1名 平日 ¥7,980・土日 ¥8,980、180分1名 平日 ¥10,980・土日 ¥11,980（税込、タオル等込み）。2〜3名プランあり", "https://toto-sauna.com/"),
+      factNov14("営業時間", "東梅田店：月・火・水 11:00〜23:00、木・金 11:00〜25:00、土・日 9:00〜25:00", "https://toto-sauna.com/"),
+      factNov14("定休日", "不定休", "https://toto-sauna.com/"),
+      factNov14("設備", "完全個室（東梅田店は「燈」「蒼」の2室）。セルフロウリュができるサウナストーブとアロマロウリュ、チラー完備の水風呂、個室内の休憩スペース。手ぶらで利用可", "https://toto-sauna.com/"),
+      factNov14("水風呂", "チラー完備の水風呂（外気温により変動し、夏は16℃前後、冬は15℃を下回る）", "https://toto-sauna.com/"),
+      factNov14("利用条件", "事前予約制。料金にバスタオル・フェイスタオルが含まれ、水着・サウナハットの無料レンタルあり。未就学児は利用不可、小学生は保護者同伴で半額", "https://toto-sauna.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1eyy5qr"], name: "個室サウナとと 南船場店", officialUrl: "https://toto-sauna.com/",
+    features: ["個室", "セルフロウリュ", "水風呂あり"],
+    facts: [
+      factNov14("料金", "90分1名 平日6,980円・土日7,980円／120分1名 7,980円・8,980円／180分1名 10,980円・11,980円（税込）。2〜3名プランあり。バスタオル2枚・フェイスタオル1枚等を含む", "https://toto-sauna.com/"),
+      factNov14("営業時間", "月・火・水 11:00〜23:00／木・金 11:00〜25:00／土・日 9:00〜25:00", "https://toto-sauna.com/"),
+      factNov14("定休日", "不定休", "https://toto-sauna.com/"),
+      factNov14("設備", "個室サウナ2室（黒の間22.32㎡・白の間18.42㎡）。セルフロウリュ可、チラー完備の水風呂あり", "https://toto-sauna.com/"),
+      factNov14("水風呂", "チラー完備の水風呂（夏は16℃前後、冬は15℃を下回る）", "https://toto-sauna.com/"),
+      factNov14("利用条件", "事前予約をお願いしている。未就学児は利用不可、小学生は保護者同伴で通常料金の半額。水着・サウナハットのレンタルは追加料金なし", "https://toto-sauna.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1p6138r"], name: "光の温泉メディカルサウナ", officialUrl: "https://onnetsu-challenge.com/lp/",
+    features: [],
+    facts: [
+      factNov14("設備", "育成光線（遠赤外線8〜14μm）のメディカルサウナ。服を着たまま入れる低温温熱サウナ", "https://onnetsu-challenge.com/lp/"),
+      factNov14("利用条件", "温熱チャレンジプログラムの参加者募集（費用無料、1回60分・週2回・全4回、データ提供への協力が参加条件）。妊娠中・妊娠の可能性がある方、ペースメーカー使用中、重篤な疾患で治療中の方は参加不可", "https://onnetsu-challenge.com/lp/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-bc4jgf"], name: "真大阪サウナ", officialUrl: "https://shin-osaka-sauna.com/",
+    features: ["個室", "セルフロウリュ", "ロウリュあり", "水風呂あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "STANDARD（森／宇宙）60分4,000円・90分6,000円・120分8,000円（最大2名）／PREMIUM 90分9,000円・120分11,000円（最大3名）／VIP 120分15,000円（最大3名）。税込、同伴者は同室利用に限り無料", "https://shin-osaka-sauna.com/"),
+      factNov14("設備", "部屋ごとに種類の異なる個室サウナ（キューゲルサウナ、ベッドサウナ、壁面ロウリュサウナ等）。セルフロウリュ可、タオル無料貸出、Wi-Fi・パウダールーム完備、タトゥーOK", "https://shin-osaka-sauna.com/"),
+      factNov14("水風呂", "水風呂は年中16度", "https://shin-osaka-sauna.com/"),
+      factNov14("利用条件", "完全予約制。1室2名利用は同性同士が原則、VIPルームのみ男女利用可でその際は水着着用必須。利用は15歳から65歳まで", "https://shin-osaka-sauna.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-73bcpd"], name: "鶴見緑地湯元 水春", officialUrl: "https://suisyun.jp/tsurumi/",
+    features: ["ドライサウナ", "塩サウナ", "ロウリュあり", "水風呂あり", "温泉付き", "外気あり", "サ飯あり"],
+    facts: [
+      factNov14("営業時間", "9時～深夜2時（日祝は朝6時から）", "https://suisyun.jp/tsurumi/"),
+      factNov14("設備", "遠赤外線サウナと漢方薬草塩サウナの2種類（男性浴場には瞑想サウナも）。ロウリュサービスを実施。13種のお風呂、大阪最大級の岩盤浴（5種の岩盤房）", "https://suisyun.jp/tsurumi/"),
+      factNov14("水風呂", "水風呂も完備している", "https://suisyun.jp/tsurumi/"),
+      factNov14("利用条件", "身長120cm以上または小学生以上のいずれかに該当するお子様の混浴は不可。小学生以下のお子様のみの入浴は不可", "https://suisyun.jp/tsurumi/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-fhxa4o"], name: "天然温泉 なにわの湯", officialUrl: "https://naniwanoyu.com/",
+    features: ["ドライサウナ", "オートロウリュ", "ロウリュあり", "塩サウナ", "スチーム(ミスト)サウナ", "温泉付き", "外気あり", "サ飯あり"],
+    facts: [
+      factNov14("料金", "大人（中学生以上）平日900円／土日祝日1,000円、小人（小学生）全日450円、乳幼児（0才〜未就学児）全日200円。お得な回数券（6枚綴）5,000円。タオル150円・バスタオル500円（販売）。税込", "https://naniwanoyu.com/"),
+      factNov14("営業時間", "平日10:00〜25:00、土日祝8:00〜25:00（最終受付は24:00）", "https://naniwanoyu.com/"),
+      factNov14("定休日", "年中無休（メンテナンスのため休館する日あり）", "https://naniwanoyu.com/"),
+      factNov14("設備", "遠赤タワーサウナ（オートロウリュ）、塩サウナ（女湯）、スチームサウナ（男湯・約45℃の蒸気）。地下659mから汲み上げた源泉100%の天然温泉「美人湯」、天空の大パノラマ露天風呂", "https://naniwanoyu.com/"),
+      factNov14("利用条件", "刺青・タトゥーの方の入浴は不可。小学生以下のお子様は保護者同伴が必須。再入浴は不可（1回入浴制）。飲食物の持込不可", "https://naniwanoyu.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1ggz25r"], name: "天然温泉 ひなたの湯 新大阪店", officialUrl: "https://www.hinatanoyu.com/",
+    features: ["温泉付き", "外気あり"],
+    facts: [
+      factNov14("営業時間", "日〜金曜日 6:00〜25:00（24:00受付締め切り）・土曜日 8:00〜25:00（24:00受付締め切り）", "https://www.hinatanoyu.com/"),
+      factNov14("定休日", "年中無休（施設管理・維持のための休館あり）", "https://www.hinatanoyu.com/"),
+      factNov14("設備", "天然温泉で7種類の浴槽（炭酸泉・満天の湯・天の壺湯・なごみの湯等）とサウナ室。ビル9階の屋上露天風呂", "https://www.hinatanoyu.com/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1n2rhb7"], name: "天然温泉 延羽の湯 鶴橋店", officialUrl: "https://www.nobuta123.co.jp/nobehatsuruhashi/",
+    features: ["ドライサウナ", "ロウリュあり", "セルフロウリュ", "熱波師あり", "塩サウナ", "水風呂あり", "温泉付き", "貸切可", "サ飯あり"],
+    facts: [
+      factNov14("営業時間", "朝9時～深夜2時（最終受付 深夜1時）。薬石汗蒸房の最終受付は深夜24時", "https://www.nobuta123.co.jp/nobehatsuruhashi/"),
+      factNov14("定休日", "年中無休（施設点検日は除く）", "https://www.nobuta123.co.jp/nobehatsuruhashi/"),
+      factNov14("設備", "2つのロウリュサウナと塩サウナ（女性のみ）。アウフグースやセルフロウリュが楽しめる。薬石汗蒸房（12種類の薬鉱石を使った韓国式サウナ）、4Fに貸切家族風呂11室", "https://www.nobuta123.co.jp/nobehatsuruhashi/"),
+      factNov14("水風呂", "水風呂あり（ロウリュサウナ、水風呂、ととのいスペースは2022年にリニューアル）", "https://www.nobuta123.co.jp/nobehatsuruhashi/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1llt0xt"], name: "天然温泉 延羽の湯 本店 (羽曳野店)", officialUrl: "https://www.nobuta123.co.jp/nobehahabikino/",
+    features: ["ドライサウナ", "ロウリュあり", "セルフロウリュ", "熱波師あり", "温泉付き", "外気あり", "サ飯あり"],
+    facts: [
+      factNov14("料金", "入泉料 大人（中学生以上）1,000円～、小人（小学生以下）550円～。岩盤浴 大人（中学生以上）950円～、小人（小学生以下）650円～", "https://www.nobuta123.co.jp/nobehahabikino/"),
+      factNov14("営業時間", "朝10時～深夜2時（最終受付 深夜1時）。薬石汗蒸房の最終受付は深夜24時", "https://www.nobuta123.co.jp/nobehahabikino/"),
+      factNov14("定休日", "年中無休（施設点検日は除く）", "https://www.nobuta123.co.jp/nobehahabikino/"),
+      factNov14("設備", "男女ともに高温サウナ（ロウリュ〈アウフグース〉を実施する「熱風蒸釜」）とセルフロウリュのドライサウナ「熱の室」の2室。源泉掛け流しの露天風呂（6種類・3つの温度帯）、薬石汗蒸房", "https://www.nobuta123.co.jp/nobehahabikino/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-ti6zcg"], name: "天然温泉ひなたの湯 大阪ユニバーサルベイサイド", officialUrl: "https://www.hinatanoyu.com/osaka-universal-bayside/",
+    features: ["ドライサウナ", "オートロウリュ", "ロウリュあり", "熱波師あり", "水風呂あり", "外気あり", "温泉付き", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("営業時間", "7:00～24:00（受付終了23:00）", "https://www.hinatanoyu.com/osaka-universal-bayside/guide/"),
+      factNov14("料金", "大人（中学生以上）平日1,100円・土日祝1,400円（運営会社・信和ホテルズの公式プレスリリースに通常料金として掲載）", "https://medical.jiji.com/prtimes/379172"),
+      factNov14("設備", "遠赤外線サウナ（設定90℃）、地上14階の天然温泉露天風呂、人工炭酸泉など男女各6種類の浴槽、外気浴スペース", "https://www.hinatanoyu.com/osaka-universal-bayside/bath/"),
+      factNov14("水風呂", "水風呂あり（設定温度17℃）", "https://www.hinatanoyu.com/osaka-universal-bayside/bath/"),
+      factNov14("利用条件", "日帰り入浴可。館内はキャッシュレス決済（リストバンドによる精算）", "https://www.hinatanoyu.com/osaka-universal-bayside/guide/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-11wzcxk"], name: "天然露天温泉 スパスミノエ", officialUrl: "https://spasuminoe.jp/",
+    features: ["ロウリュあり", "温泉付き", "サ飯あり"],
+    facts: [
+      factNov14("料金", "大人 平日800円・土日祝900円、小人 平日400円・土日祝450円、乳幼児 平日200円・土日祝220円、65歳以上600円（火・木曜シニアDAY）、大人回数券10枚綴り7,300円（2025年4月1日改定）", "http://spasuminoe.jp/wp-content/uploads/2025/02/20250401kaitei.pdf"),
+      factNov14("設備", "スーパーロウリュウサウナ（isness導入、ガス遠赤外線ヒーター）、超高濃度炭酸泉（1,300ppm以上）、ジェットバス、露天風呂2種、お食事処あり", "https://spasuminoe.jp/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1tzg1zl"], name: "湯源郷 太平のゆ なんば店", officialUrl: "http://taiheinoyu.jp/mysite13/indexn.html",
+    features: ["サ飯あり"],
+    facts: [
+      factNov14("営業時間", "ご入浴 8:00～25:00（受付終了24:00）、岩盤浴 8:00～24:00（受付終了23:00）", "http://taiheinoyu.jp/mysite13/202605nanbacalendar.pdf"),
+      factNov14("定休日", "年中無休（施設点検等により休館の場合あり）", "http://taiheinoyu.jp/mysite13/indexn.html"),
+      factNov14("料金", "入浴＋ランチセット1,980円、入浴＋岩盤浴＋ランチセット2,680円（公式カレンダーに掲載）", "http://taiheinoyu.jp/mysite13/202605nanbacalendar.pdf"),
+      factNov14("利用条件", "入墨・タトゥー（ペイント・シール含む）のある方は入館不可", "http://taiheinoyu.jp/mysite13/202605nanbacalendar.pdf"),
+      factNov14("設備", "岩盤浴（利用者専用）、コミックコーナー（4,000冊以上・雑誌あり）", "http://taiheinoyu.jp/mysite13/indexn.html"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1wcyont"], name: "道頓堀サウナ", officialUrl: "https://dotonbori-sauna.com/",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "個室", "貸切可", "男女共用", "タオルレンタルあり"],
+    facts: [
+      factNov14("設備", "バレルサウナ（約100℃、セルフロウリュ可、アロマ水使用可）、デッキチェア、ラウンジ、シャワーブース付きパウダールーム", "https://dotonbori-sauna.com/en/pages/facilities"),
+      factNov14("水風呂", "国内ヒノキ製の水風呂（水温は季節に応じて調整）", "https://dotonbori-sauna.com/en/pages/facilities"),
+      factNov14("利用条件", "屋上1フロアを1組で貸切る完全プライベート制で、男女一緒に利用可。サウナ後は併設旅館・大和屋本店の大浴場を無料・時間無制限で利用可", "https://dotonbori-sauna.com/en/pages/facilities"),
+    ],
+  },
+  {
+    ids: ["osaka-user-49wea8"], name: "入船温泉", officialUrl: "http://www.irihune.co.jp/",
+    features: ["オートロウリュ", "ロウリュあり", "熱波師あり", "水風呂あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("営業時間", "平日 6:00〜23:00（最終受付22:30）、土日 6:00〜24:00（最終受付23:30）", "http://www.irihune.co.jp/"),
+      factNov14("定休日", "月曜日", "http://www.irihune.co.jp/"),
+      factNov14("設備", "METOS製オートロウリュサウナヒーター「ZIEL」導入サウナ、露天風呂、マイクロバブルバス。スタッフによるアロマロウリュ・アウフグースあり", "http://www.irihune.co.jp/"),
+      factNov14("水風呂", "水風呂あり（全てのお風呂・水風呂が軟水）", "http://www.irihune.co.jp/"),
+      factNov14("利用条件", "タトゥーがあっても利用可（タトゥーフレンドリー）。サウナは別料金（リストバンド制）、12歳以下はサウナ利用不可、貸バスタオル有料", "http://www.irihune.co.jp/"),
+    ],
+  },
+  {
+    ids: ["osaka-user-4wodts"], name: "八尾グランドホテル", officialUrl: "https://yaogrand.com/",
+    features: ["温泉付き", "サ飯あり"],
+    facts: [
+      factNov14("料金", "入館料 大人 一般2,600円・ナイター（17:00〜）1,300円・朝風呂（4:00〜7:30）1,000円、小人1,000円（タオル・バスタオル・浴衣の貸出含む）", "https://yaogrand.com/whole_day"),
+      factNov14("営業時間", "10:00～翌8:00", "https://yaogrand.com/whole_day"),
+      factNov14("定休日", "年中無休（劇場休演日あり）", "https://yaogrand.com/whole_day"),
+      factNov14("利用条件", "日帰り入館可（温泉・劇場の利用プランあり）", "https://yaogrand.com/whole_day"),
+      factNov14("設備", "天然温泉（八尾温泉）、露天の足湯、アカスリ、マッサージ、仮眠室、レストラン・居酒屋", "https://yaogrand.com/facility"),
+    ],
+  },
+  {
+    ids: ["osaka-user-1jmp4os"], name: "夢の公衆浴場 五色", officialUrl: "https://goshiki.co.jp/",
+    features: ["タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入浴料 大人（高校生以上）600円・中学生400円・小学生200円・0〜5歳100円、サウナ200円（貸バスタオル付）（大阪府浴場組合公定料金）", "https://goshiki.co.jp/access/"),
+      factNov14("営業時間", "24時間営業", "https://goshiki.co.jp/"),
+      factNov14("定休日", "年中無休（月曜日6:00〜11:00は設備点検のため休業）", "https://goshiki.co.jp/qa/"),
+      factNov14("利用条件", "深夜料金はかからない。未成年のみの入館は22時以降入浴不可", "https://goshiki.co.jp/qa/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-ch6pzy"], name: "itadaki Sauna19", officialUrl: "https://sauna19.com/",
+    features: ["個室", "貸切可", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "2名まで120分枠 月〜金10,000円・土日祝12,000円〜（時間帯により最大16,000円）。3名様は+5,000円（土日祝+6,000円）、4名様は+10,000円（土日祝+12,000円）", "https://sauna19.com/"),
+      factNov14("営業時間", "9:00〜23:30（完全予約制、120分・150分の時間枠制）", "https://sauna19.com/"),
+      factNov14("利用条件", "WEB予約のみ（電話予約不可）。最大4名まで、18歳未満は利用不可。水着レンタル500円（税込）", "https://sauna19.com/"),
+      factNov14("設備", "プライベートサウナ、休憩スペース（シャワーブースあり）。バスタオル・フェイスタオル・サウナポンチョ等の常備品あり。隣接する懐石料理「明月記」のサウナ御膳・サ弁あり（要事前予約）", "https://sauna19.com/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1u5a0n5"], name: "private sauna苦楽園", officialUrl: "http://t3aiyx.b-merit.jp/xw8rgq/web/",
+    features: ["個室", "水風呂あり"],
+    facts: [
+      factNov14("料金", "個室料金：Room1（1名専用）90分6,000円。Room2・Room3（1〜4名）90分 1名8,000円・2名13,000円、120分 1名10,000円・2名15,000円・3名18,000円・4名20,000円", "http://t3aiyx.b-merit.jp/xw8rgq/web/"),
+      factNov14("設備", "個室サウナ全3室（Room1〜Room3）。Room2・Room3は水風呂完備、Room1は水風呂なし（冷水シャワー対応）", "http://t3aiyx.b-merit.jp/xw8rgq/web/"),
+      factNov14("水風呂", "Room2は水深150cmの水風呂完備、Room3は広めの水風呂完備。Room1は水風呂なし", "http://t3aiyx.b-merit.jp/xw8rgq/web/"),
+      factNov14("利用条件", "完全個室（プライベート）利用。所要時間には清掃・準備時間を含む", "http://t3aiyx.b-merit.jp/xw8rgq/web/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1rz9ggw"], name: "Prus Sauna 兵庫姫路店", officialUrl: "https://prussauna-himeji.com/",
+    features: ["個室", "貸切可", "水風呂あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "Secret Sauna Himeji：90分9,000円／120分12,000円／150分15,000円／180分18,000円（最大6名、4名まで追加料金なし、5〜6名は1名につき5,000円追加）", "https://prussauna-himeji.com/"),
+      factNov14("設備", "完全個室のフィンランド式サウナ（国産檜）", "https://prussauna-himeji.com/"),
+      factNov14("水風呂", "水風呂あり（チラーで水温調整可）", "https://prussauna-himeji.com/"),
+      factNov14("利用条件", "事前予約制・クレジットカード事前決済。水着・サウナハット・タオル・アメニティは無料。完全個室のため刺青可", "https://prussauna-himeji.com/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1gm9be0"], name: "SAUNA & SPA 花の湯 HANAKITA", officialUrl: "https://www.venus-town-himejihanakita.com/institution/hananoyu/",
+    features: ["ドライサウナ", "塩サウナ", "水風呂あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入浴料金：大人（中学生以上）900円、小人（3歳～小学生以下）500円", "https://www.venus-town-himejihanakita.com/institution/hananoyu/"),
+      factNov14("営業時間", "10:00～24:00（サウナは23:30まで、最終受付23:30）", "https://www.venus-town-himejihanakita.com/institution/hananoyu/"),
+      factNov14("設備", "高温サウナ、塩サウナ（女湯のみ・75℃）、水風呂、主浴・ぬる湯・電気風呂・ジェットバス・陶器風呂", "https://www.venus-town-himejihanakita.com/institution/hananoyu/"),
+      factNov14("水風呂", "水風呂あり（通常よりも低めの温度に設定）", "https://www.venus-town-himejihanakita.com/institution/hananoyu/"),
+      factNov14("利用条件", "貸バスタオル150円、花の湯タオル（フェイスタオル）100円", "https://www.venus-town-himejihanakita.com/institution/hananoyu/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-toefox"], name: "SAUNA STATION", officialUrl: "https://saunastation.net/",
+    features: ["熱波師あり", "水風呂あり"],
+    facts: [
+      factNov14("営業時間", "サウナ体験コース：月・火・木・金 20:00〜23:00、土・日・祝 10:00〜23:00", "https://saunastation.net/"),
+      factNov14("定休日", "水曜（サウナ体験コースのスケジュール表による）", "https://saunastation.net/"),
+      factNov14("設備", "出張テントサウナ・テントサウナレンタル・サウナ体験の3コース。熱波師の夫婦が運営（ウィスキングは＋4,000円/1名）", "https://saunastation.net/"),
+      factNov14("水風呂", "水風呂あり（テントを出た後は水風呂に入れる）", "https://saunastation.net/"),
+      factNov14("利用条件", "水着・タオルのレンタルなし（持参）", "https://saunastation.net/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-3000pe"], name: "SETRE SAUNA（セトレサウナ）", officialUrl: "https://hotelsetre.com/",
+    features: ["個室", "貸切可", "宿泊可"],
+    facts: [
+      factNov14("料金", "客室「TOTONOI」宿泊料金：7名様利用でお一人様 木・金・日￥27,000（税込）～、土曜￥34,000（税込）～（夕食・朝食・ラウンジ利用料込み）", "https://home.kingsoft.jp/news/pr/atpress/296792.html?from=recent_v2_%E5%A7%AB%E8%B7%AF"),
+      factNov14("設備", "客室TOTONOIのテラスに宮崎杉の純国産バレルサウナ（収容6～8名程度、扉の反対側は全面ガラス張り）を設置。2ベッドルーム・最大7名のプライベートサウナ付き客室", "https://home.kingsoft.jp/news/pr/atpress/296792.html?from=recent_v2_%E5%A7%AB%E8%B7%AF"),
+      factNov14("定休日", "ホテルは火曜・水曜定休日（祝日・夏期・年末年始を除く）", "https://home.kingsoft.jp/news/pr/atpress/296792.html?from=recent_v2_%E5%A7%AB%E8%B7%AF"),
+      factNov14("利用条件", "サウナは宿泊客室「TOTONOI」専用のプライベートサウナ（チェックイン15:00／チェックアウト11:00、2名～最大7名）", "https://home.kingsoft.jp/news/pr/atpress/296792.html?from=recent_v2_%E5%A7%AB%E8%B7%AF"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1r99kvc"], name: "アクアイグニス淡路島", officialUrl: "https://aquaignis-awaji.jp/",
+    features: ["スチーム(ミスト)サウナ", "男女共用", "温泉付き", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "ワンプライス（大露天風呂・内湯・外湯・サウナ利用可）：平日 大人2,500円・小学生以下1,250円、土日祝 大人3,000円・小学生以下1,500円、2歳以下無料", "https://www.mapion.co.jp/news/release/000000012.000072765-all/"),
+      factNov14("設備", "幅45mのインフィニティ大露天風呂「伊弉冉の湯湯」、内湯・外湯「伊弉諾の湯」、ミストサウナ、バレルサウナ", "https://www.mapion.co.jp/news/release/000000012.000072765-all/"),
+      factNov14("定休日", "定休日なし（国営明石海峡公園の定休日に準ずる）", "https://www.mapion.co.jp/news/release/000000012.000072765-all/"),
+      factNov14("利用条件", "大露天風呂「伊弉冉の湯湯」は湯あみ着着用の男女共用。バスタオル・フェイスタオル・湯あみ着のレンタル付き", "https://www.mapion.co.jp/news/release/000000012.000072765-all/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-xlbjlg"], name: "おでんサウナ", officialUrl: "https://coubic.com/oden_sauna",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "個室", "貸切可", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "サウナ90分・貸切料金（税込）：平日 1名10,000円〜8名17,000円、土日祝 1名11,000円〜8名18,000円、大型連休 1名12,000円〜8名26,000円", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+      factNov14("営業時間", "営業日は金曜・土曜・日曜・月曜の4日間。開始枠は平日10:00〜、土日8:00〜（8:00枠は現在調整のため休止中）、最終20:00〜", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+      factNov14("定休日", "火曜・水曜・木曜（営業日は金・土・日・月曜の週4日）", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+      factNov14("設備", "サウナ99℃（セルフロウリュ）、シャワー4基、サウナ室は最大8名", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+      factNov14("水風呂", "水風呂温度：夏場13℃〜15℃、冬場15℃〜17℃", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+      factNov14("利用条件", "完全予約制の貸切専門（最大8名）。予約はネットのみ・クレジットカード事前決済。水着着用必須（レンタル1名300円）。タオル類は無料貸出。利用客には1階「おでん屋うず」のおでん盛り合わせ付き", "https://izumi-sauna.stores.jp/reserve/oden_sauna/booking_pages"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1ou3tfn"], name: "サウナリゾートオリエンタル神戸", officialUrl: "https://www.centurion-hotel.com/v-kobe/",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "スチーム(ミスト)サウナ", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り利用 2,600円～（入浴料金込・タオルセット付）", "https://www.centurion-hotel.com/v-kobe/facilities/"),
+      factNov14("営業時間", "大浴場は24時間利用可（清掃11:00〜15:00）。毎月第1月曜日11:00〜16:00は設備メンテナンスのため利用停止", "https://www.centurion-hotel.com/v-kobe/facilities/"),
+      factNov14("設備", "男性浴場：自動ロウリュ付き高温サウナ、水風呂、内湯（バイブラ・ジェット付き）。女性浴場：スチームサウナ、低温炭酸風呂、内湯", "https://www.centurion-hotel.com/v-kobe/facilities/"),
+      factNov14("水風呂", "男性浴場に水風呂あり", "https://www.centurion-hotel.com/v-kobe/facilities/"),
+      factNov14("利用条件", "日帰り入浴可（入浴料金込・タオルセット付の日帰り利用プランあり）。2Fの大浴場「サウナリゾート オリエンタル」", "https://www.centurion-hotel.com/v-kobe/facilities/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-j7o6wd"], name: "ジェームス山天然温泉 月の湯舟", officialUrl: "http://www.tsuki-no-yufune.com/",
+    features: ["塩サウナ", "水風呂あり", "外気あり", "温泉付き", "サ飯あり"],
+    facts: [
+      factNov14("料金", "内風呂・露天風呂・サウナ利用：大人（中学生以上）平日1,000円・土日祝1,030円、小人（4歳〜小学生）450円。一般入浴（内湯のみ）は大人500円・中人200円・小人100円でサウナ・露天風呂は利用不可", "https://www.tsuki-no-yufune.com/fee"),
+      factNov14("営業時間", "午前9:00〜翌午前0:00（最終受付 午後11時）", "http://www.tsuki-no-yufune.com/"),
+      factNov14("設備", "男湯は広々とした高温のスタジアムサウナ、女湯は塩サウナとロッキーサウナ。天然温泉（乳白色）の湯と天然海水の露天風呂", "https://www.tsuki-no-yufune.com/sauna"),
+      factNov14("水風呂", "水風呂・外気浴スペースあり", "https://www.tsuki-no-yufune.com/sauna"),
+      factNov14("利用条件", "泥酔の方、刺青・タトゥー・暴力団並びにその関係者は入館不可。タオル等は持参または館内購入", "https://www.tsuki-no-yufune.com/fee"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1kn9ytm"], name: "チムジルバンスパ神戸", officialUrl: "http://www.chimuspa.com/",
+    features: ["塩サウナ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "サ飯あり"],
+    facts: [
+      factNov14("料金", "入浴（税込）大人（中学生以上）会員1,000円・一般1,100円、小人（3才〜小学生）500円、3才未満無料。土日祝（その他特定日）は会員1,100円・一般1,200円・小人600円。岩盤浴は別途会員900円・一般1,000円", "https://chimuspa.com/guide#howTo"),
+      factNov14("設備", "遠赤外線タワーサウナ（高温）、漢方薬草蒸気塩サウナ（低温）、ロウリュウ、備長炭水風呂、天然温泉の岩風呂・高濃度炭酸泉・日替り湯・寝ころび湯など。源泉は須磨白川温泉（アルカリ性単純温泉）", "https://chimuspa.com/facilities#onsen"),
+      factNov14("水風呂", "備長炭水風呂", "https://chimuspa.com/facilities#onsen"),
+      factNov14("利用条件", "チムジルバン（岩盤浴）のみの利用は不可。小人（3才〜小学生）は岩盤浴を利用できない。会員入会費300円", "https://chimuspa.com/guide#howTo"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-hegv6a"], name: "つかさ湯", officialUrl: "",
+    features: [],
+    facts: [
+      factNov14("料金", "大人500円・中人（小学生）200円・小人（未就学児）100円（神戸市の銭湯入浴料金据え置き支援の対象施設、2026年3月1日〜2027年3月31日。通常の兵庫県上限は大人570円）", "https://www.city.kobe.lg.jp/a84140/kenko/health/hygiene/sento/shien.html"),
+      factNov14("営業時間", "14:00〜23:00（最終受付22:20）", "https://www.city.kobe.lg.jp/documents/2127/20260216192037.pdf"),
+      factNov14("定休日", "木曜日", "https://www.city.kobe.lg.jp/documents/2127/20260216192037.pdf"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-17owoba"], name: "ときわ湯", officialUrl: "",
+    features: [],
+    facts: [
+      factNov14("料金", "大人500円・中人（小学生）200円・小人（未就学児）100円（神戸市の銭湯入浴料金据え置き支援の対象施設、2026年3月1日〜2027年3月31日。通常の兵庫県上限は大人570円）", "https://www.city.kobe.lg.jp/a84140/kenko/health/hygiene/sento/shien.html"),
+      factNov14("営業時間", "16:00〜23:00（問い合わせは15:00以降）", "https://www.city.kobe.lg.jp/documents/2127/20260216192037.pdf"),
+      factNov14("定休日", "土曜日", "https://www.city.kobe.lg.jp/documents/2127/20260216192037.pdf"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-46nfyf"], name: "ネスタリゾート神戸 天然温泉 十界の湯", officialUrl: "https://nesta.co.jp/",
+    features: ["温泉付き", "タオルレンタルあり", "サ飯あり", "宿泊可", "貸切可"],
+    facts: [
+      factNov14("料金", "入浴料（税込・タオルセット付）大人（中学生以上）日程区分により2,300円／2,000円／1,800円、子供（中学生未満）1,150円／1,000円／800円、3歳以下無料。岩盤浴（古式蒸窯）は別途1,000円（税込）", "https://nesta.co.jp/spa/guide/"),
+      factNov14("営業時間", "通常営業 10:00～24:00（最終受付23:00）、時短営業日は10:00～22:00（最終受付21:00）。岩盤浴・家族風呂の最終受付は通常22:00／時短20:00", "https://nesta.co.jp/spa/facilities/"),
+      factNov14("定休日", "年中無休（施設点検日は除く）", "https://nesta.co.jp/spa/facilities/"),
+      factNov14("設備", "大小様々な露天風呂（岩風呂・寝湯・秘湯「杜乃湯」など）、サウナ、岩盤浴（着衣サウナ・古式蒸窯）、家族風呂「離れ湯舍」", "https://nesta.co.jp/spa/"),
+      factNov14("利用条件", "日帰り入浴可。イレズミ・タトゥー（シール・ペイント含む）のある方は入館不可。小学生以下は保護者同伴", "https://nesta.co.jp/spa/guide/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1tlx8b4"], name: "パルシェ香りの館・香りの湯", officialUrl: "https://parchez.co.jp/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "香りの湯 11:00～22:00（受付終了 21:00）", "https://parchez.co.jp/"),
+      factNov14("定休日", "休館日は公式サイトで都度案内（確認時点で11月17日・12月1日・12月15日が休館日として掲示）", "https://parchez.co.jp/"),
+      factNov14("設備", "天然温泉の流水風呂（瀬戸内海を一望できる展望風呂）", "https://parchez.co.jp/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-n0qmv5"], name: "みのたにグリーンスポーツホテル 銀河の湯", officialUrl: "https://en.kobe-glamping.com/activities/hot-spring/",
+    features: ["ドライサウナ", "水風呂あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("料金", "大人（中学生以上）平日850円・土日祝950円（再入場券は平日1,000円・土日祝1,100円）、小人（4歳以上）平日400円・土日祝450円、3歳以下無料", "https://en.kobe-glamping.com/activities/hot-spring/"),
+      factNov14("営業時間", "平日17:00〜22:00、土日祝14:00〜22:00（最終入場21:00、施設休館日を除く）。グランピング宿泊者は朝風呂7:00〜9:00も利用可", "https://en.kobe-glamping.com/activities/hot-spring/"),
+      factNov14("設備", "大浴場・大露天風呂・ドライサウナ・水風呂・壺湯（女湯）・寝湯（男湯、冬季は利用不可）・バブルバス。単純弱放射能泉（pH8.3、源泉34℃）を地下1,200mから使用", "https://en.kobe-glamping.com/activities/hot-spring/"),
+      factNov14("水風呂", "水風呂あり", "https://en.kobe-glamping.com/activities/hot-spring/"),
+      factNov14("利用条件", "日帰り入浴可。タトゥーのある方・泥酔の方・暴力団関係者は入浴不可。グランピング宿泊者は無料", "https://en.kobe-glamping.com/activities/hot-spring/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1m40n7t"], name: "宮島温泉", officialUrl: "",
+    features: ["水風呂あり", "外気あり"],
+    facts: [
+      factNov14("営業時間", "15:00〜22:00", "https://hyogo1010.com/sento_list/kobe-miyajimaonsen/"),
+      factNov14("定休日", "土曜日", "https://hyogo1010.com/sento_list/kobe-miyajimaonsen/"),
+      factNov14("設備", "うたせ湯・サウナ（高温・無料）・ジェット・水風呂・電気風呂・露天風呂", "https://hyogo1010.com/sento_list/kobe-miyajimaonsen/"),
+      factNov14("水風呂", "水風呂あり", "https://hyogo1010.com/sento_list/kobe-miyajimaonsen/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1790s0s"], name: "月光園 鴻朧館", officialUrl: "http://www.gekkoen.co.jp/",
+    features: ["温泉付き", "外気あり", "貸切可", "宿泊可", "サ飯あり"],
+    facts: [
+      factNov14("料金", "日帰りコース（食事付き・税込）寛8,800円・和13,200円・雅18,150円。入湯税お一人様75円を別途頂戴", "https://ssl.gekkoen.co.jp/kourokan/dayplan.html"),
+      factNov14("利用条件", "日帰り利用可（食事付き日帰りコース。お部屋のご利用はなし）。貸切風呂は要予約", "https://ssl.gekkoen.co.jp/kourokan/dayplan.html"),
+      factNov14("設備", "自家泉源の金泉を源泉掛け流しで提供。貸切テーマ風呂3種（檜風呂・洞窟風呂・ワイン風呂）。姉妹館「游月山荘」の温泉も利用可", "https://ssl.gekkoen.co.jp/kourokan/dayplan.html"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-fvv4rv"], name: "三田天然温泉 寿ノ湯", officialUrl: "https://kotobuki-yu.com/",
+    features: ["塩サウナ", "ロウリュあり", "水風呂あり", "温泉付き"],
+    facts: [
+      factNov14("設備", "サウナは本場フィンランド式バレルサウナ・ロウリュ塩サウナ・高温サウナの3種。岩盤浴（岩塩・薬草・ゲルマ）と酵素風呂もあり", "https://kotobuki-yu.com/activity/ichiyu/"),
+      factNov14("水風呂", "バレルサウナは水風呂・ととのいスペースへの導線まで計算された設計", "https://kotobuki-yu.com/activity/ichiyu/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-jtgohw"], name: "新鶴湯", officialUrl: "",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      factNov14("営業時間", "15:00～22:00", "https://hyogo1010.com/sento_list/himeji-shintsuruyu/"),
+      factNov14("定休日", "日曜日", "https://hyogo1010.com/sento_list/himeji-shintsuruyu/"),
+      factNov14("設備", "サウナ（スチーム・無料）・ジェット・水風呂・電気風呂・気泡風呂", "https://hyogo1010.com/sento_list/himeji-shintsuruyu/"),
+      factNov14("水風呂", "水風呂あり", "https://hyogo1010.com/sento_list/himeji-shintsuruyu/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-iezsww"], name: "森の湯", officialUrl: "http://www.morinoyu.com/", status: "suspended",
+    features: [],
+    facts: [
+ factNov14("営業状況", "浴室内天井の修繕工事のため11月5日（木）より臨時休業中。再開時期は決まり次第HPやSNSで案内（公式サイトの重要なお知らせ）", "http://www.morinoyu.com/"),
+      factNov14("料金", "2026年3月19日より 大人570円・中人200円・小人100円、入浴・サウナ750円（公式サイトの料金改定のお知らせ）", "http://www.morinoyu.com/kakakukaitei_26.html"),
+      factNov14("利用条件", "浴室内天井の修繕工事のため11月5日（木）より臨時休業中。再開時期は決まり次第HPやSNSで案内するとしている", "http://www.morinoyu.com/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1r3y3aw"], name: "神戸クアハウス", officialUrl: "https://kobe-kua-house.com/", status: "suspended",
+    features: [],
+    facts: [
+ factNov14("営業状況", "2024年3月末をもって長期休館中（公式サイトのお知らせ「2024年3月末をもって長期休館いたします」「3月31日の営業をもち長期休業に入りました」）", "https://kobe-kua-house.com/"),
+      factNov14("利用条件", "2024年3月31日の営業をもって長期休業中（公式サイトのお知らせ「2024年3月末をもって長期休館いたします」）", "https://kobe-kua-house.com/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-yru0ya"], name: "神戸サウナ＆スパ", officialUrl: "http://www.kobe-sauna.co.jp/",
+    features: ["温泉付き", "外気あり", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("営業時間", "24時間利用可", "http://www.kobe-sauna.co.jp/"),
+      factNov14("設備", "天然温泉・露天風呂・本格サウナ・カプセルホテルを完備", "http://www.kobe-sauna.co.jp/"),
+      factNov14("利用条件", "ご入館は中学生（12歳）以上から。小学生以下の方は利用不可", "http://www.kobe-sauna.co.jp/"),
+      factNov14("利用条件", "タオル・館内着など必要なアメニティは全て用意あり。サウナコースで入館の方は外出不可", "http://www.kobe-sauna.co.jp/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-1il2ira"], name: "神戸ハーバーランド温泉 万葉倶楽部", officialUrl: "https://www.manyo.co.jp/kobe/eng/fee-schedule/",
+    features: ["温泉付き", "貸切可", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "マル得セット入館料 大人（中学生以上）2,950円・小学生1,310円・幼児（3歳〜未就学児）1,070円（税込、大人は入湯税75円別途）。朝風呂（5:00〜9:00）は大人1,500円", "https://www.manyo.co.jp/kobe/eng/fee-schedule/"),
+      factNov14("営業時間", "24時間・年中無休（大浴場は清掃のため毎日2:00〜5:00利用不可）。滞在は朝5:00〜翌3:00までで、3:00以降は深夜料金が必要", "https://www.manyo.co.jp/kobe/eng/fee-schedule/"),
+      factNov14("設備", "岩盤浴（10:00〜翌1:00、一般1,200円・有料会員960円）、貸切家族風呂（1時間2,860円・要予約）", "https://www.manyo.co.jp/kobe/eng/fee-schedule/"),
+    ],
+  },
+  {
+    ids: ["hyogo-user-10dqxag"], name: "神戸みなと温泉 蓮", officialUrl: "https://ren-onsen.jp/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入館料 平日2,715円・土日祝3,155円（消費税・入湯税込）", "https://ren-onsen.jp/"),
+      factNov14("利用条件", "日帰り利用可（日帰り温泉プランあり）。日帰り温泉は12歳以上のご利用に限る", "https://ren-onsen.jp/"),
+      factNov14("利用条件", "大きさを問わず、刺青・タトゥーがあるお客様のご利用は不可", "https://ren-onsen.jp/"),
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
