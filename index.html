@@ -390,6 +390,13 @@
               <div class="spotlight" id="spotlight"></div>
             </div>
           </details>
+          <div class="compare-bar" id="compareBar" hidden>
+            <span id="compareCount">比較中 0件</span>
+            <div class="compare-bar-actions">
+              <button class="secondary-button" type="button" id="compareClearButton">すべて外す</button>
+              <button class="primary-button" type="button" id="compareOpenButton">比較表を見る</button>
+            </div>
+          </div>
           <div class="results-controls">
             <label class="sort-label">並び替え
               <select id="facilitySortSelect" aria-label="施設の並び替え">
@@ -552,6 +559,7 @@
 
 
           <div class="pref-board" id="prefBoard"></div>
+          <p class="pref-board-note">県マスターは県内の押印対象をすべて、準マスターは半分（50%）以上を押印すると認定されます。</p>
                   <details class="record-backup" id="backupPanel">
             <summary id="backupTitle">記録のバックアップ・復元</summary>
             <p id="backupHelp">記録はこの端末の中だけに保存されています。機種変更のときは、①今の端末で「バックアップを書き出す」→ ②新しい端末で「バックアップを読み込む」の順で引き継げます。ふだんもときどき書き出しておくと、ブラウザのデータ削除などから記録を守れます。読み込みの前には置き換えの確認が入ります。</p>
@@ -940,6 +948,15 @@
           <button class="primary-button" id="recordConfirmAccept" value="confirm">続ける</button>
         </div>
       </form>
+    </dialog>
+
+    <dialog class="settings-dialog compare-dialog" id="compareDialog" aria-labelledby="compareTitle">
+      <div class="dialog-head">
+        <h2 id="compareTitle">施設を比べる</h2>
+        <form method="dialog"><button class="ghost-button" value="close" aria-label="比較表を閉じる">閉じる</button></form>
+      </div>
+      <div id="compareContent"></div>
+      <p class="compare-note">「未確認」は公式情報で照合できていない項目です。料金・営業時間などは、各施設ページの出典と確認日もあわせてご確認ください。</p>
     </dialog>
 
     <dialog class="settings-dialog app-update-dialog" id="appUpdateDialog" aria-labelledby="appUpdateTitle" aria-describedby="appUpdateDescription">

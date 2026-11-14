@@ -40,6 +40,33 @@ export async function onRequestPost(context) {
     return json({ events: publicEvents(next), configured: true }, 200);
   }
 
+  if (body?.action === "leave") {
+    const eventId = cleanId(body.eventId);
+    const clientId = cleanId(body.clientId);
+    if (!eventId || !clientId) return json({ error: "leave-params-required" }, 400);
+    let found = false;
+    const next = events.map((event) => {
+      if (event.id !== eventId) return event;
+      found = true;
+      return { ...event, attendees: event.attendees.filter((id) => id !== clientId) };
+    });
+    if (!found) return json({ error: "event-not-found" }, 404);
+    await storage.put(STORAGE_KEY, JSON.stringify(next));
+    return json({ events: publicEvents(next), configured: true }, 200);
+  }
+
+  if (body?.action === "delete") {
+    const eventId = cleanId(body.eventId);
+    const clientId = cleanId(body.clientId);
+    if (!eventId || !clientId) return json({ error: "delete-params-required" }, 400);
+    const target = events.find((event) => event.id === eventId);
+    if (!target) return json({ error: "event-not-found" }, 404);
+    if (target.hostId !== clientId) return json({ error: "not-event-host" }, 403);
+    const next = events.filter((event) => event.id !== eventId);
+    await storage.put(STORAGE_KEY, JSON.stringify(next));
+    return json({ events: publicEvents(next), configured: true }, 200);
+  }
+
   if (body?.action !== "create") return json({ error: "unsupported-action" }, 400);
   const incoming = normalizeIncomingEvent(body);
   if (!incoming) return json({ error: "invalid-event" }, 400);

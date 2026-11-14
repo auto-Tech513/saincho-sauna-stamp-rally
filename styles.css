@@ -9476,3 +9476,47 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 }
 .guide-starter-title { font-weight: 700; }
 .guide-starter-cat { margin-left: auto; flex: none; font-size: 0.78rem; color: var(--ink-soft); }
+
+/* 県マスター準マスター注記・比較バー/比較表（2026-11-14） */
+.pref-board-note {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.7);
+  margin: 8px 0 0;
+}
+.compare-bar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: rgb(255 255 255 / 0.92);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.compare-bar-actions { display: flex; gap: 8px; }
+.compare-dialog { width: min(760px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); }
+.compare-table-wrap { overflow-x: auto; }
+.compare-table { border-collapse: collapse; width: 100%; font-size: 0.85rem; line-height: 1.55; }
+.compare-table th, .compare-table td {
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  min-width: 130px;
+}
+.compare-table thead th { background: var(--primary-soft); font-weight: 800; }
+.compare-table tbody th {
+  background: rgb(255 255 255 / 0.78);
+  font-weight: 700;
+  min-width: 92px;
+  position: sticky;
+  left: 0;
+}
+.compare-note { font-size: 0.85rem; line-height: 1.6; color: rgb(17 24 23 / 0.7); margin: 10px 0 0; }

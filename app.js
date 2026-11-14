@@ -861,6 +861,12 @@ const el = {
   searchResultsStatus: document.querySelector("#searchResultsStatus"),
   facilitySortSelect: document.querySelector("#facilitySortSelect"),
   copyListButton: document.querySelector("#copyListButton"),
+  compareBar: document.querySelector("#compareBar"),
+  compareCount: document.querySelector("#compareCount"),
+  compareOpenButton: document.querySelector("#compareOpenButton"),
+  compareClearButton: document.querySelector("#compareClearButton"),
+  compareDialog: document.querySelector("#compareDialog"),
+  compareContent: document.querySelector("#compareContent"),
   searchForm: document.querySelector("#searchForm"),
   searchPrefectureSelect: document.querySelector("#searchPrefectureSelect"),
   featureFilterToggle: document.querySelector("#featureFilterToggle"),
@@ -1292,6 +1298,15 @@ function bindEvents() {
       showToast("コピーできませんでした");
     }
   });
+  el.compareOpenButton?.addEventListener("click", openCompareDialog);
+  el.compareClearButton?.addEventListener("click", () => {
+    compareSelection.clear();
+    document.querySelectorAll('[data-action="compare-toggle"]').forEach((button) => {
+      button.setAttribute("aria-pressed", "false");
+      button.textContent = "比べる（最大3件）";
+    });
+    updateCompareBar();
+  });
   el.featureFilterToggle.addEventListener("click", () => {
     el.featureFilterPanel.hidden = !el.featureFilterPanel.hidden;
     el.featureFilterToggle.setAttribute("aria-expanded", String(!el.featureFilterPanel.hidden));
@@ -1546,6 +1561,14 @@ function bindEvents() {
       joinCommunityEvent(button.dataset.eventId);
       return;
     }
+    if (button.dataset.action === "community-leave") {
+      leaveCommunityEvent(button.dataset.eventId);
+      return;
+    }
+    if (button.dataset.action === "community-delete") {
+      deleteCommunityEvent(button.dataset.eventId);
+      return;
+    }
 
     const facility = getFacilityById(button.dataset.id);
     if (!facility) return;
@@ -1572,6 +1595,7 @@ function bindEvents() {
     if (button.dataset.action === "unstamp") unstampFacility(facility);
     if (button.dataset.action === "wishlist") toggleWishlist(facility);
     if (button.dataset.action === "favorite") toggleFavorite(facility);
+    if (button.dataset.action === "compare-toggle") toggleCompareFacility(facility);
     if (button.dataset.action === "open-detail") openFacilityDetail(facility);
     if (button.dataset.action === "save-note") saveFacilityMemo(facility, button);
     if (button.dataset.action === "delete-note") deleteFacilityMemo(facility);
@@ -2500,6 +2524,93 @@ function renderQuestPanel() {
   `;
 }
 
+const COMPARE_MAX = 3;
+const compareSelection = new Set();
+
+const COMPARE_FACT_GROUPS = [
+  ["料金", ["料金"]],
+  ["営業時間", ["営業時間", "施設営業時間"]],
+  ["定休日", ["定休日", "休館日", "定休日/休館日", "休館日・定休日"]],
+  ["設備・温度", ["設備・温度", "設備", "サウナ設備", "サウナストーブ", "サウナルーム"]],
+  ["水風呂", ["水風呂", "水風呂温度", "水風呂の温度", "水風呂収容人数"]],
+  ["利用条件", ["利用条件"]],
+];
+
+function getCompareFact(facility, labels) {
+  const facts = getFacilityEvidence(facility)?.facts || [];
+  const values = facts.filter((row) => labels.includes(row.label)).map((row) => row.value);
+  return values.length ? values.join(" / ") : "未確認";
+}
+
+function getCompareAwardText(facility) {
+  const years = new Set();
+  for (const tag of facility.tags || []) {
+    const match = /^SAUNACHELIN (\d{4})$/.exec(tag);
+    if (match) years.add(match[1]);
+  }
+  const regular = [...years].sort();
+  const special = (facility.specialAwardYears || []).map(String).sort();
+  const parts = [];
+  if (regular.length) parts.push(`サウナシュラン ${regular.join("・")}`);
+  if (special.length) parts.push(`特別賞 ${special.join("・")}`);
+  return parts.length ? parts.join(" / ") : "—";
+}
+
+function toggleCompareFacility(facility) {
+  if (compareSelection.has(facility.id)) {
+    compareSelection.delete(facility.id);
+  } else if (compareSelection.size >= COMPARE_MAX) {
+    showToast(`比べられるのは${COMPARE_MAX}件までです`);
+    return;
+  } else {
+    compareSelection.add(facility.id);
+  }
+  document.querySelectorAll(`[data-action="compare-toggle"][data-id="${CSS.escape(facility.id)}"]`).forEach((button) => {
+    const active = compareSelection.has(facility.id);
+    button.setAttribute("aria-pressed", String(active));
+    button.textContent = active ? "比較から外す" : "比べる（最大3件）";
+  });
+  updateCompareBar();
+}
+
+function updateCompareBar() {
+  if (!el.compareBar) return;
+  el.compareBar.hidden = compareSelection.size === 0;
+  if (el.compareCount) el.compareCount.textContent = `比較中 ${compareSelection.size}件`;
+  if (el.compareOpenButton) el.compareOpenButton.disabled = compareSelection.size < 2;
+}
+
+function openCompareDialog() {
+  const facilities = [...compareSelection].map((id) => getFacilityById(id)).filter(Boolean);
+  if (facilities.length < 2 || !el.compareContent || !el.compareDialog) return;
+  const cell = (value) => `<td>${escapeHtml(value || "未確認")}</td>`;
+  const rows = [
+    ["地域", (f) => [f.prefecture, f.city].filter(Boolean).join(" ") || "未確認"],
+    ["状態", (f) => {
+      const status = getFacilityStatus(f);
+      if (state.visited[f.id]) return "押印済み";
+      return status ? status.badge : "未押印（押印対象）";
+    }],
+    ...COMPARE_FACT_GROUPS.map(([label, labels]) => [label, (f) => getCompareFact(f, labels)]),
+    ["確認済みの特徴", (f) => getFacilityFeatures(f).join("、") || "未確認"],
+    ["受賞", (f) => getCompareAwardText(f)],
+    ["住所", (f) => getFacilityAddress(f) || "未確認"],
+  ];
+  el.compareContent.innerHTML = `
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead><tr><th scope="col">項目</th>${facilities.map((f) => `<th scope="col">${escapeHtml(f.name)}</th>`).join("")}</tr></thead>
+        <tbody>
+          ${rows.map(([label, get]) => `<tr><th scope="row">${escapeHtml(label)}</th>${facilities.map((f) => cell(get(f))).join("")}</tr>`).join("")}
+          <tr><th scope="row">公式サイト</th>${facilities.map((f) => f.officialUrl ? `<td><a href="${escapeAttr(f.officialUrl)}" target="_blank" rel="noopener">公式サイト↗</a></td>` : "<td>未確認</td>").join("")}</tr>
+          <tr><th scope="row">施設ページ</th>${facilities.map((f) => `<td><a href="${escapeAttr(getFacilityDetailPath(f))}">詳細を見る</a></td>`).join("")}</tr>
+        </tbody>
+      </table>
+    </div>`;
+  el.compareDialog.showModal();
+  track("compare_open", { count: facilities.length });
+}
+
 function renderExplore() {
   updateFirstStepsCard();
   renderNewsRail();
@@ -2779,6 +2890,7 @@ function renderFacilityCard(facility) {
           <summary>その他の操作</summary>
           <div class="card-more-body">
             ${visited ? "" : `<button class="facility-detail-button" type="button" data-action="open-activity" data-id="${escapeAttr(facility.id)}">サ活を書く</button>`}
+            <button class="facility-detail-button" type="button" data-action="compare-toggle" data-id="${escapeAttr(facility.id)}" aria-pressed="${compareSelection.has(facility.id)}">${compareSelection.has(facility.id) ? "比較から外す" : "比べる（最大3件）"}</button>
             <button class="facility-review-button" type="button" data-action="jump-reviews" data-id="${escapeAttr(facility.id)}">口コミ</button>
             ${renderFacilityShareButtons(facility, { includeReview: false })}
           </div>
@@ -3360,7 +3472,7 @@ function renderTitleProgress() {
     : 100;
   const prefProgress = selectedPrefecture === "全国" ? null : getPrefectureMasterProgress(selectedPrefecture);
   const prefCopy = prefProgress
-    ? `${selectedPrefecture}: ${prefProgress.visited}/${prefProgress.eligible}湯（${prefProgress.eligible ? Math.round((prefProgress.visited / prefProgress.eligible) * 100) : 0}%）${prefProgress.mastered ? " / マスター認定済み" : ` / あと${prefProgress.remaining}湯`}`
+    ? `${selectedPrefecture}: ${prefProgress.visited}/${prefProgress.eligible}湯（${prefProgress.percent}%）${prefProgress.mastered ? " / マスター認定済み" : prefProgress.halfMastered ? ` / 準マスター認定済み / あと${prefProgress.remaining}湯` : ` / あと${prefProgress.remaining}湯`}`
     : `${getMasteredPrefectures().length}/${PREFECTURES.length}県をマスター`;
 
   el.titleProgressPanel.innerHTML = `
@@ -3885,7 +3997,11 @@ function renderStats() {
   el.prefBoard.innerHTML = PREFECTURES.map((pref) => {
     const count = countsByPref[pref.name] || 0;
     const candidateCount = candidatesByPref[pref.name] || 0;
-    const badge = candidateCount > 0 && count >= candidateCount ? "マスター" : `あと${Math.max(0, candidateCount - count)}`;
+    const badge = candidateCount > 0 && count >= candidateCount
+      ? "マスター"
+      : candidateCount > 0 && count * 2 >= candidateCount
+        ? `準マスター / あと${Math.max(0, candidateCount - count)}`
+        : `あと${Math.max(0, candidateCount - count)}`;
     return `
       <button class="pref-progress" type="button" data-prefecture="${escapeAttr(pref.name)}">
         <strong>${escapeHtml(shortPrefName(pref.name))}</strong>
@@ -3933,7 +4049,7 @@ async function renderJapanMap() {
     node.classList.add(`map-progress-${level}`);
     node.setAttribute("role", "button");
     node.setAttribute("tabindex", "0");
-    node.setAttribute("aria-label", `${pref.name} ${visited}/${total}湯${level === 3 ? " マスター" : ""}`);
+    node.setAttribute("aria-label", `${pref.name} ${visited}/${total}湯${level === 3 ? " マスター" : level === 2 ? " 準マスター" : ""}`);
     const title = node.querySelector("title") || document.createElementNS("http://www.w3.org/2000/svg", "title");
     title.textContent = `${pref.name} ${visited}/${total}湯`;
     if (!title.parentNode) node.prepend(title);
@@ -4419,8 +4535,14 @@ function renderCommunityPage() {
 }
 
 function renderCommunityCard(item) {
-  const joined = Boolean(state.joinedCommunityEvents[item.id]) || item.attendees.includes(profile.id);
+  const isHost = Boolean(profile.id) && item.hostId === profile.id;
+  const joined = !isHost && (Boolean(state.joinedCommunityEvents[item.id]) || item.attendees.includes(profile.id));
   const date = new Intl.DateTimeFormat("ja-JP", { month: "numeric", day: "numeric", weekday: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(item.date));
+  const actionButton = isHost
+    ? `<button class="secondary-button" type="button" data-action="community-delete" data-event-id="${escapeAttr(item.id)}">募集を削除</button>`
+    : joined
+      ? `<button class="secondary-button" type="button" data-action="community-leave" data-event-id="${escapeAttr(item.id)}">参加を取り消す</button>`
+      : `<button class="primary-button" type="button" data-action="community-join" data-event-id="${escapeAttr(item.id)}">参加する</button>`;
   return `
     <article class="community-card">
       <div class="community-date"><strong>${escapeHtml(date)}</strong><span>${escapeHtml(item.prefecture)}</span></div>
@@ -4431,7 +4553,7 @@ function renderCommunityCard(item) {
       </div>
       <div class="community-participation">
         <span>${item.attendeeCount + 1}人参加予定</span>
-        <button class="${joined ? "secondary-button is-active" : "primary-button"}" type="button" data-action="community-join" data-event-id="${escapeAttr(item.id)}" ${joined ? "disabled" : ""}>${joined ? "参加予定" : "参加する"}</button>
+        ${actionButton}
       </div>
     </article>
   `;
@@ -4531,6 +4653,66 @@ async function joinCommunityEvent(eventId) {
   renderCommunityPage();
   showToast(`${item.title}に参加予定として登録しました`);
   track("community_join", { event_id: eventId, prefecture: item.prefecture });
+}
+
+async function leaveCommunityEvent(eventId) {
+  const item = normalizeCommunityEvents([...communityEvents, ...(state.localCommunityEvents || [])]).find((event) => event.id === eventId);
+  if (!item) return;
+  if (!IS_STATIC_LOCAL_PREVIEW && communityConfigured !== false && !eventId.startsWith("local-event-")) {
+    try {
+      const response = await fetch(COMMUNITY_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify({ action: "leave", eventId, clientId: profile.id || createClientId() }),
+      });
+      if (!response.ok) throw new Error("community-leave-failed");
+      const result = await response.json();
+      communityEvents = normalizeCommunityEvents(result.events || []);
+    } catch {
+      communityConfigured = false;
+    }
+  } else if (eventId.startsWith("local-event-")) {
+    state.localCommunityEvents = (state.localCommunityEvents || []).map((event) => event.id === eventId
+      ? { ...event, attendees: (event.attendees || []).filter((id) => id !== profile.id) }
+      : event);
+  }
+  delete state.joinedCommunityEvents[eventId];
+  saveState();
+  renderCommunityPage();
+  showToast("参加を取り消しました");
+  track("community_leave", { event_id: eventId, prefecture: item.prefecture });
+}
+
+async function deleteCommunityEvent(eventId) {
+  const item = normalizeCommunityEvents([...communityEvents, ...(state.localCommunityEvents || [])]).find((event) => event.id === eventId);
+  if (!item) return;
+  if (!window.confirm(`「${item.title}」の募集を削除しますか？\n参加予定の人にも表示されなくなります。`)) return;
+  if (!IS_STATIC_LOCAL_PREVIEW && communityConfigured !== false && !eventId.startsWith("local-event-")) {
+    try {
+      const response = await fetch(COMMUNITY_ENDPOINT, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify({ action: "delete", eventId, clientId: profile.id || createClientId() }),
+      });
+      if (response.status === 403) {
+        showToast("削除できるのは主催者本人だけです");
+        return;
+      }
+      if (!response.ok) throw new Error("community-delete-failed");
+      const result = await response.json();
+      communityEvents = normalizeCommunityEvents(result.events || []);
+    } catch {
+      showToast("削除できませんでした。通信状態を確認してください");
+      return;
+    }
+  } else {
+    state.localCommunityEvents = (state.localCommunityEvents || []).filter((event) => event.id !== eventId);
+  }
+  delete state.joinedCommunityEvents[eventId];
+  saveState();
+  renderCommunityPage();
+  showToast("募集を削除しました");
+  track("community_delete", { event_id: eventId, prefecture: item.prefecture });
 }
 
 function normalizeCommunityEvents(values) {
@@ -6165,11 +6347,14 @@ function countEligibleFacilitiesByPrefecture() {
 function getPrefectureMasterProgress(prefecture) {
   const eligible = countEligibleFacilities().filter((facility) => facility.prefecture === prefecture);
   const visited = eligible.filter((facility) => state.visited[facility.id]).length;
+  const percent = eligible.length ? Math.round((visited / eligible.length) * 100) : 0;
   return {
     eligible: eligible.length,
     visited,
     remaining: Math.max(0, eligible.length - visited),
+    percent,
     mastered: eligible.length > 0 && visited >= eligible.length,
+    halfMastered: eligible.length > 0 && visited < eligible.length && percent >= 50,
   };
 }
 
