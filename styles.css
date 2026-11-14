@@ -9502,21 +9502,45 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 }
 .compare-bar-actions { display: flex; gap: 8px; }
 .compare-dialog { width: min(760px, calc(100vw - 24px)); max-height: calc(100dvh - 32px); }
-.compare-table-wrap { overflow-x: auto; }
-.compare-table { border-collapse: collapse; width: 100%; font-size: 0.85rem; line-height: 1.55; }
+.compare-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+.compare-table { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.85rem; line-height: 1.55; }
 .compare-table th, .compare-table td {
-  border: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
   padding: 8px 10px;
   text-align: left;
   vertical-align: top;
   min-width: 130px;
+  background: #fff;
 }
-.compare-table thead th { background: var(--primary-soft); font-weight: 800; }
+.compare-table thead th {
+  background: var(--primary-soft);
+  font-weight: 800;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
 .compare-table tbody th {
-  background: rgb(255 255 255 / 0.78);
+  background: #fff;
   font-weight: 700;
   min-width: 92px;
   position: sticky;
   left: 0;
+  z-index: 1;
+}
+.compare-table thead th:first-child {
+  left: 0;
+  z-index: 3;
+  min-width: 92px;
+}
+.compare-alert {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(17 24 23 / 0.85);
+  background: var(--primary-soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 0 0 10px;
 }
 .compare-note { font-size: 0.85rem; line-height: 1.6; color: rgb(17 24 23 / 0.7); margin: 10px 0 0; }

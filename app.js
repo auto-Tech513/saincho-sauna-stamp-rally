@@ -2584,6 +2584,15 @@ function openCompareDialog() {
   const facilities = [...compareSelection].map((id) => getFacilityById(id)).filter(Boolean);
   if (facilities.length < 2 || !el.compareContent || !el.compareDialog) return;
   const cell = (value) => `<td>${escapeHtml(value || "未確認")}</td>`;
+  const factRows = COMPARE_FACT_GROUPS.map(([label, labels]) => ({
+    label,
+    values: facilities.map((f) => getCompareFact(f, labels)),
+  }));
+  const featureValues = facilities.map((f) => getFacilityFeatures(f).join("、") || "未確認");
+  const awardValues = facilities.map((f) => getCompareAwardText(f));
+  const populatedFactRows = factRows.filter((row) => row.values.some((value) => value !== "未確認"));
+  const emptyFactLabels = factRows.filter((row) => row.values.every((value) => value === "未確認")).map((row) => row.label);
+  if (featureValues.every((value) => value === "未確認")) emptyFactLabels.push("確認済みの特徴");
   const rows = [
     ["地域", (f) => [f.prefecture, f.city].filter(Boolean).join(" ") || "未確認"],
     ["状態", (f) => {
@@ -2591,18 +2600,28 @@ function openCompareDialog() {
       if (state.visited[f.id]) return "押印済み";
       return status ? status.badge : "未押印（押印対象）";
     }],
-    ...COMPARE_FACT_GROUPS.map(([label, labels]) => [label, (f) => getCompareFact(f, labels)]),
-    ["確認済みの特徴", (f) => getFacilityFeatures(f).join("、") || "未確認"],
-    ["受賞", (f) => getCompareAwardText(f)],
+    ["自分の登録", (f) => {
+      const marks = [];
+      if (state.wishlist[f.id]) marks.push("行きたい");
+      if (state.favorites[f.id]) marks.push("お気に入り");
+      return marks.length ? marks.join("・") : "—";
+    }],
+    ...populatedFactRows.map((row) => [row.label, (f) => row.values[facilities.indexOf(f)]]),
+    ...(featureValues.some((value) => value !== "未確認") ? [["確認済みの特徴", (f) => featureValues[facilities.indexOf(f)]]] : []),
+    ...(awardValues.some((value) => value !== "—") ? [["受賞", (f) => awardValues[facilities.indexOf(f)]]] : []),
     ["住所", (f) => getFacilityAddress(f) || "未確認"],
   ];
+  const noVerifiedFacts = populatedFactRows.length === 0 && featureValues.every((value) => value === "未確認");
   el.compareContent.innerHTML = `
+    ${noVerifiedFacts ? `<p class="compare-alert">選んだ施設は、公式照合済みの項目がまだありません。料金・営業時間などは公式サイトでご確認ください。照合済みの施設同士では、それらの項目がそのまま並んで比べられます。</p>` : ""}
     <div class="compare-table-wrap">
       <table class="compare-table">
         <thead><tr><th scope="col">項目</th>${facilities.map((f) => `<th scope="col">${escapeHtml(f.name)}</th>`).join("")}</tr></thead>
         <tbody>
           ${rows.map(([label, get]) => `<tr><th scope="row">${escapeHtml(label)}</th>${facilities.map((f) => cell(get(f))).join("")}</tr>`).join("")}
+          ${emptyFactLabels.length ? `<tr><th scope="row">未照合の項目</th><td colspan="${facilities.length}">${escapeHtml(emptyFactLabels.join("・"))}は、いずれの施設も公式照合が未了です。</td></tr>` : ""}
           <tr><th scope="row">公式サイト</th>${facilities.map((f) => f.officialUrl ? `<td><a href="${escapeAttr(f.officialUrl)}" target="_blank" rel="noopener">公式サイト↗</a></td>` : "<td>未確認</td>").join("")}</tr>
+          <tr><th scope="row">経路</th>${facilities.map((f) => `<td><a href="${escapeAttr(getFacilityDirectionsUrl(f))}" target="_blank" rel="noreferrer">Googleマップで経路↗</a></td>`).join("")}</tr>
           <tr><th scope="row">施設ページ</th>${facilities.map((f) => `<td><a href="${escapeAttr(getFacilityDetailPath(f))}">詳細を見る</a></td>`).join("")}</tr>
         </tbody>
       </table>
