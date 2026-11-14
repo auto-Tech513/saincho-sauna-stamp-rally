@@ -6022,6 +6022,565 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("設備", "ヴィラガーデン グランドコート1Fに大浴場あり（ソルトスパ「美塩」は大浴場隣に所在）", "https://www.grandvrio-hotelresort.com/ishigaki/grandvriogarden/relaxation/"),
     ],
   },
+  {
+    ids: ["st-okinawa-4734"], name: "プロスタイル旅館那覇県庁前", officialUrl: "https://www.prostyleryokan.com/okinawa/kenchomae/",
+    features: ["個室", "貸切可", "宿泊可"],
+    facts: [
+      factNov14("設備", "完全貸切のプライベートサウナルームを設置。着替え、サウナ浴、冷水浴、休憩のすべてがひとつの個室で完結し、アメニティやタオルを完備", "https://www.mapion.co.jp/news/release/000000046.000019104-all/"),
+    ],
+  },
+  {
+    ids: ["st-okinawa-937"], name: "浦添の湯", officialUrl: "https://xystus.co.jp/equipment/urasoeno-yu/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "温泉付き"],
+    facts: [
+      factNov14("料金", "時間制限なし1,200円、1時間利用800円、子供（3歳～小学生）400円。大人料金にはタオル・ウェア含む。2027年1月4日より時間制限なし1,500円、1時間1,000円、子供500円に改定", "https://xystus.co.jp/news/%e6%b5%a6%e6%b7%bb%e3%81%ae%e6%b9%af-%e6%96%99%e9%87%91%e6%94%b9%e5%ae%9a%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/"),
+      factNov14("営業時間", "ジスタス浦添の営業時間は月～金9:00～23:00、土・日・祝9:00～22:00（浦添の湯は館内3階の施設）", "https://ros-cms-data.s3.ap-northeast-1.amazonaws.com/_file/6104/a343ff9f8d.pdf"),
+      factNov14("設備", "地下1500mから汲み上げた太古海水の天然温泉。源泉かけ流しの浴室と露天風呂があり、高温サウナ、スチームサウナを楽しめる", "https://xystus.co.jp/equipment/urasoeno-yu/"),
+      factNov14("水風呂", "浴室に水風呂あり", "https://xystus.co.jp/equipment/urasoeno-yu/"),
+    ],
+  },
+  {
+    ids: ["st-okinawa-3985"], name: "宮古島温泉", officialUrl: "https://miyakojima-onsen.co.jp/index.html",
+    features: ["外気あり", "温泉付き"],
+    facts: [
+      factNov14("設備", "宮古島の地下から湧き出る源泉をそのまま利用した大浴場と露天風呂。大浴場にはサウナも完備し、打たせ湯、寝湯、ジャグジーもある", "https://miyakojima-onsen.co.jp/index.html"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-98"], name: "吹上温泉保養センター 白銀荘", officialUrl: "http://kamifurano-hokkaido.com/",
+    features: ["ロウリュあり", "外気あり", "温泉付き", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入館料 大人700円、中・高校生500円、小学生300円。回数券12枚綴り6,000円", "http://kamifurano-hokkaido.com/?page_id=2"),
+      factNov14("営業時間", "入浴時間10:00～22:00（朝風呂6:00～8:00、8:00～10:00は清掃のため入浴不可）。サウナは10:00～22:00。館内利用時間9:00～22:00（最終入館21:00）", "http://kamifurano-hokkaido.com/?page_id=2"),
+      factNov14("設備", "ロウリュのできるサウナ室（15名）、主浴槽、気泡風呂、寝風呂、打たせ湯のある室内浴場と、水深1mの大露天風呂など水着着用の男女共同浴槽", "http://kamifurano-hokkaido.com/?page_id=2"),
+      factNov14("利用条件", "日帰り入浴可。共同浴槽は水着が必要（水着レンタル300円、バスタオルレンタル300円）。宿泊は自炊式で大人3,100円ほか", "http://kamifurano-hokkaido.com/?page_id=2"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-166"], name: "ニコーリフレ SAPPORO", officialUrl: "https://www.nikoh.info",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "熱波師あり", "ロウリュあり", "水風呂あり", "宿泊可", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "ビジターは24時間コースのみ 平日4,000円・土日祝＆特別日4,200円。リフレ会員は24時間コース平日2,900円・土日祝＆特別日3,100円、5時間コース1,900円から", "https://www.nikoh.info/spa-sauna/"),
+      factNov14("営業時間", "24時間営業（チェックインから最大24時間利用可能）", "https://www.nikoh.info/spa-sauna/"),
+      factNov14("設備", "約80℃のロッキーサウナと40℃のゲルマニウムミストサウナの2種類。大浴場は水素風呂。熱波師によるロウリュサービスを1時間に1回、1日最大14回開催", "https://www.nikoh.info/spa-sauna/"),
+      factNov14("水風呂", "備長炭凛水風呂は地下水から汲み上げた16℃以下の水温", "https://www.nikoh.info/spa-sauna/"),
+      factNov14("利用条件", "ご入館は男性のみ可能。バスタオル・フェイスタオルは何枚でも無料、アメニティ各種を無料で用意", "https://www.nikoh.info/spa-sauna/"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-4521"], name: "北こぶし知床 ホテル&リゾート", officialUrl: "https://www.shiretoko.co.jp/",
+    features: ["ドライサウナ", "オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場・サウナ 15:00～24:00／翌5:00～10:00（KAKUUNA側・UNEUNA側で男女入替）", "https://www.shiretoko.co.jp/onsen"),
+      factNov14("設備", "展望大浴場「大海原」と露天スペース「汐音」。サウナは温度90度・収容10人のドライサウナ（HARVIA製ストーブ）2室「KAKUUNA」「UNEUNA」で10分に1回のオートロウリュ。屋上外気浴スペースあり", "https://www.shiretoko.co.jp/onsen"),
+      factNov14("水風呂", "水風呂は約15.7度（季節により変動あり）、収容人数2人、水深90cm", "https://www.shiretoko.co.jp/onsen"),
+      factNov14("営業状況", "公式のお知らせにより、館内メンテナンスのため2026年12月1日から12月10日まで休館（大浴場も利用不可）", "https://www.shiretoko.co.jp/"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-8555"], name: "定山渓 鹿の湯", officialUrl: "https://shikanoyu.co.jp/shikanoyu/",
+    features: ["温泉付き", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り入浴 午前 大人1,000円／小学生500円、午後 大人1,500円／小学生750円（税込）。フェイスタオル・バスタオル無料", "https://www.mapion.co.jp/news/release/000000064.000096644-all/"),
+      factNov14("営業時間", "日帰り入浴 午前6:00～9:30（8:30受付終了）、午後13:00～21:00（20:00受付終了）。営業時間は日によって変わる場合がある", "https://www.mapion.co.jp/news/release/000000064.000096644-all/"),
+      factNov14("設備", "大浴場にあるサークル型サウナ『円式』は2025年9月19日に第一期改修工事が完了し座面が三段構えになった。円式のある浴場は午前・午後で男女が入れ替わる", "https://www.mapion.co.jp/news/release/000000064.000096644-all/"),
+      factNov14("利用条件", "日帰り入浴可。刺青（入れ墨）、タトゥーをされている方の入浴はお断り", "https://www.mapion.co.jp/news/release/000000064.000096644-all/"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-4998"], name: "月見湯", officialUrl: "https://9056899086.amebaownd.com/",
+    features: ["ドライサウナ", "ロウリュあり"],
+    facts: [
+      factNov14("営業時間", "13:45~24:00", "https://9056899086.amebaownd.com/"),
+      factNov14("定休日", "火曜日（火曜日が祝日となる場合は営業することがある）", "https://9056899086.amebaownd.com/"),
+      factNov14("設備", "札幌市豊平区月寒にある昔ながらの銭湯。男性・女性の高温サウナにHARVIAを導入し、定期的にロウリュイベントを開催", "https://9056899086.amebaownd.com/"),
+    ],
+  },
+  {
+    ids: ["si-hokkaido-6182"], name: "GARDENS CABIN (ガーデンズキャビン)", officialUrl: "https://www.gardenscabin.com/",
+    features: ["ロウリュあり", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り入浴 税込1,500円（タオル付）", "https://www.gardenscabin.com/"),
+      factNov14("営業時間", "日帰り入浴14:00～22:00。大浴場（宿泊者）の営業時間は5:30～9:30、15:00～26:00", "https://www.gardenscabin.com/"),
+      factNov14("設備", "地下一階の大浴場に薬湯、寝湯、サウナルームを完備。ロウリュができるサウナがある", "https://www.gardenscabin.com/"),
+      factNov14("利用条件", "日帰り入浴可", "https://www.gardenscabin.com/"),
+    ],
+  },
+  {
+    ids: ["si-chiba-114510"], name: "毎日サウナ東京 幕張店", officialUrl: "https://everyday-sauna-tokyo.com/",
+    features: ["薪サウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      factNov14("料金", "平日1時間1,300円から（時間制）", "https://everyday-sauna-tokyo.com/home"),
+      factNov14("営業時間", "本館サウナ 6:00〜翌4:00（4:00〜6:00は清掃時間）。別館はなれは24時間営業", "https://everyday-sauna-tokyo.com/home"),
+      factNov14("設備", "薪火サウナ、ケロ材を使用した「ケロ蒸喜乱舞」、瞑想特化型の蒸気サウナなど5種類のサウナ室を完備", "https://everyday-sauna-tokyo.com/home"),
+    ],
+  },
+  {
+    ids: ["si-nagano-46909"], name: "SAUNA TEN \"Birch and cloud forest\"", officialUrl: "https://koumi.gateauxkingdom.com/spa/sauna",
+    features: ["薪サウナ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "貸切可", "宿泊可"],
+    facts: [
+      factNov14("料金", "大人・中学生以上 120分 平日4,500円／土日祝5,000円、小学生以上2,500円。完全貸切（6名まで・150分）平日37,500円／土日祝42,000円", "https://koumi.gateauxkingdom.com/spa/sauna"),
+      factNov14("営業時間", "10:30〜18:00（最終受付16時、要予約）。営業期間は5〜11月", "https://koumi.gateauxkingdom.com/spa/sauna"),
+      factNov14("定休日", "定休日なし", "https://koumi.gateauxkingdom.com/spa/sauna"),
+      factNov14("設備", "蓄熱式ストーブのログサウナ（定員10人・貸切可能）とウィスキング専用サウナコタ（定員2人・予約制）。白樺エキスのロウリュあり。利用料に隣接する天然温泉「星空の湯」の利用を含む", "https://koumi.gateauxkingdom.com/spa/sauna"),
+      factNov14("水風呂", "北八ヶ岳の伏流水を使った「飲める湧き水風呂」（5〜10月13℃、4月・11月10℃）とワイン樽水風呂", "https://koumi.gateauxkingdom.com/spa/sauna"),
+      factNov14("利用条件", "最終受付16時までに予約が必要。完全貸切利用も可能（最大15名まで）", "https://koumi.gateauxkingdom.com/spa/sauna"),
+    ],
+  },
+  {
+    ids: ["si-saga-104474"], name: "JIN6サウナ", officialUrl: "https://jinroku-sauna.kujira-yobuko.com/",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "男女共用", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り2時間半 大人 平日2,970円／休日3,850円、中・高生 平日1,485円／休日1,925円、小学生1,100円（いずれも税込）。延長は30分550円", "https://jinroku-sauna.kujira-yobuko.com/"),
+      factNov14("営業時間", "10:00〜22:00（最終入館21:00）", "https://jinroku-sauna.kujira-yobuko.com/"),
+      factNov14("設備", "鯨サウナ、イカサウナ、唐津焼 窯サウナ（唐津茶セルフロウリュ）の3種のサウナ。タオルセットは無料レンタル、水着・ポンチョ・サウナハットは有料レンタル", "https://jinroku-sauna.kujira-yobuko.com/"),
+      factNov14("水風呂", "イカの生け簀を活用したイケス水風呂と、ガラス張りの空中水風呂", "https://jinroku-sauna.kujira-yobuko.com/"),
+      factNov14("利用条件", "水着着用で利用できる男女兼用施設。日帰り利用可・予約不要。中尾甚六HOTELに併設", "https://jinroku-sauna.kujira-yobuko.com/"),
+    ],
+  },
+  {
+    ids: ["si-87829"], name: "休日湯", officialUrl: "https://www.kyuujitsu.com/facility/qjitsuu/",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "タオルレンタルあり"],
+    facts: [
+      factNov14("営業時間", "大浴場 10:00〜翌9:00（1:30〜翌5:30は大浴場清掃）。最終入場22時、翌9時完全退館", "https://www.kyuujitsu.com/facility/qjitsuu/"),
+      factNov14("設備", "25平米・定員15人のサウナ室（サウナストーブ2台、ゲリラオートロウリュ実施）。源泉掛け流しの主浴槽、露天風呂（三身浴乃湯）、浅湯、電湯。泉質はナトリウム‐塩化物泉", "https://www.kyuujitsu.com/facility/qjitsuu/"),
+      factNov14("水風呂", "ブラックシリカ天然鉱石から滴る水と天井から降りかかるミストによる「浴びる水風呂」。浴槽の深さは女湯約114cm、男湯約130cm", "https://www.kyuujitsu.com/facility/qjitsuu/"),
+      factNov14("利用条件", "浴槽が深いため18歳以上のお客様限定。休日券・遅割15・遅割18にはレンタルタオルが付く", "https://www.kyuujitsu.com/facility/qjitsuu/"),
+    ],
+  },
+  {
+    ids: ["si-101404"], name: "御成桑拿", officialUrl: "https://onari-sauna.com/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "男女共用", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "平日 60分2,000円・90分2,400円・120分2,700円、土日祝 60分2,300円・90分2,700円・120分3,000円（税込）", "https://foods-ch.infomart.co.jp/news/280325"),
+      factNov14("営業時間", "平日 11:00〜22:00、土日祝 9:00〜22:00（最終受付21:00）", "https://foods-ch.infomart.co.jp/news/280325"),
+      factNov14("設備", "電気式スチームジェネレーター搭載のサウナ室（約25平方メートル、最大30人収容、サウナストーブ2台）。浴槽は温浴／水風呂。2Fに内気浴スペース、屋上に外気浴用ウッドデッキ", "https://www.mapion.co.jp/news/release/000000077.000074146-all/"),
+      factNov14("利用条件", "入浴形態は男女混浴（水着着用）。水着のレンタルあり（通常550円）", "https://www.mapion.co.jp/news/release/000000077.000074146-all/"),
+    ],
+  },
+  {
+    ids: ["si-100877"], name: "高輪SAUNAS", officialUrl: "https://saunas-saunas.com/takanawa/",
+    features: ["熱波師あり", "ロウリュあり", "水風呂あり", "個室", "貸切可", "サ飯あり"],
+    facts: [
+      factNov14("設備", "男性5室・女性3室のサウナ室でアウフグース等のリトリートプログラムを実施。ウィスキングや貸切に対応したプライベートサウナのほか、レストラン、ワークスペース、ナップスペース、アロマラボを併設", "https://saunas-saunas.com/takanawa/"),
+      factNov14("水風呂", "男女ともに2種類の水風呂と湯船を完備", "https://saunas-saunas.com/takanawa/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-rakuspa-fuchu"], name: "RAKU SPA Station 府中", officialUrl: "https://rakuspa.com/fuchu/", address: "〒183-0022 東京都府中市宮西町1-5-1 府中トーセイビルI", city: "府中市",
+    features: ["セルフロウリュ", "オートロウリュ", "ロウリュあり", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "温泉付き", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "フリーコース 大人 平日2,100円／土日祝2,480円、ショートコース（90分）大人 平日1,480円／土日祝1,680円（いずれも税込）。朝風呂（土日祝6:00〜8:00）大人1,200円", "https://rakuspa.com/fuchu/access/"),
+      factNov14("営業時間", "[日〜木・祝] 10:00〜翌1:00（最終受付24:00）、[金・土・祝前日] 10:00〜翌8:00（最終受付 翌7:00）。朝風呂は土日祝6:00〜8:00", "https://rakuspa.com/fuchu/access/"),
+      factNov14("定休日", "不定休（年数回メンテナンスで休館あり）", "https://www.mapion.co.jp/news/release/000000146.000108434-all/"),
+      factNov14("設備", "天然温泉の黒湯（大黒湯・半露天風呂）。男湯にオートロウリュサウナと12F天空サウナ（100℃セルフロウリュ・70℃テントサウナ）、女湯に雲海ミストサウナ", "https://rakuspa.com/fuchu/facilities/spa/"),
+      factNov14("水風呂", "冷水風呂あり。天空エリアには潜水可能な壺水風呂", "https://rakuspa.com/fuchu/facilities/spa/"),
+      factNov14("利用条件", "3歳以下は無料。フリーコース・ショートコースは館内着・タオルセット込み。翌1:00〜翌6:00はお風呂・サウナ利用不可", "https://rakuspa.com/fuchu/access/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-rakuspa-musashikoganei"], name: "RAKU SPA Station 武蔵小金井", officialUrl: "https://rakuspa.com/musashi/", address: "〒184-0004 東京都小金井市本町2-1-11", city: "小金井市",
+    features: ["ドライサウナ", "セルフロウリュ", "オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "フリータイム 大人 平日2,100円／土日祝2,400円、120分コース 大人 平日1,550円／土日祝1,850円、60分コース 大人 平日1,050円／土日祝1,350円（いずれも税込）", "https://rakuspa.com/musashi/access/"),
+      factNov14("営業時間", "[日〜木・祝] 9:00〜翌2:00（最終受付 翌1:00）、[金・土・祝前日] 9:00〜翌8:00（最終受付 翌7:00）。朝風呂は土日祝6:00〜8:00", "https://rakuspa.com/musashi/access/"),
+      factNov14("設備", "男湯に4種のサウナ（バレル型セルフロウリュ、30分毎のロウリュ熱波、高温ドライ等）と女湯にロウリュサウナ、女性専用岩盤浴2種。炭酸風呂や半露天の岩風呂、壺風呂など多彩なお風呂", "https://rakuspa.com/musashi/facilities/spa/"),
+      factNov14("水風呂", "男湯に超冷水風呂と美泡水風呂、女湯に水風呂", "https://rakuspa.com/musashi/access/"),
+      factNov14("利用条件", "3歳以下は無料。フリータイム・120分コースはタオルセット・館内着込み。翌2:00〜翌6:00はお風呂・サウナ・岩盤浴利用不可", "https://rakuspa.com/musashi/access/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-yurakunosato-kunitachi"], name: "国立温泉 湯楽の里", officialUrl: "https://www.yurakirari.com/kunitachi/", address: "〒186-0012 東京都国立市泉3丁目29-11（フレスポ国立南内）", city: "国立市",
+    features: ["温泉付き", "外気あり", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "大人（中学生以上）平日1,020円／土・休日1,220円、こども（4歳〜小学生）平日520円／土・休日620円（いずれも税込）。3歳以下無料", "https://www.yurakirari.com/kunitachi/fee/"),
+      factNov14("営業時間", "9時〜深夜1時（最終受付24時）", "https://www.yurakirari.com/kunitachi/fee/"),
+      factNov14("定休日", "年に数回、メンテナンス等のため休館する場合あり", "https://www.yurakirari.com/kunitachi/fee/"),
+      factNov14("設備", "内湯に2種類のサウナと高濃度炭酸泉、源泉掛け流しの露天風呂、ジェットバス、寝ころび湯。お食事処やリラクゼーション施設を併設", "https://www.yurakirari.com/kunitachi/"),
+      factNov14("利用条件", "レンタルタオル150円、レンタルバスタオル200円、レンタル館内着250円", "https://www.yurakirari.com/kunitachi/fee/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-01"], name: "アパホテル〈名古屋丸の内駅前〉", officialUrl: "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/", address: "〒460-0002 愛知県名古屋市中区丸の内2-17-28", city: "名古屋市",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "朝 6：00〜10：00 / 夜 15：00〜25：00", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+      factNov14("料金", "ご宿泊者様無料", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+      factNov14("設備", "最上階14階の天然温泉大浴殿「玄要の湯」・露天風呂「星彩の湯」・ドライサウナ・水風呂完備（温泉は加水・加温し、循環ろ過式で提供）", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+      factNov14("水風呂", "水風呂完備", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+      factNov14("利用条件", "料金は「ご宿泊者様無料」と案内されており、日帰り入浴の記載はない", "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/tokai/aichi/nagoyamarunouchi-ekimae/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-02"], name: "アパホテル〈京都駅堀川通〉", officialUrl: "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/", address: "〒600-8236 京都府京都市下京区油小路通塩小路西油小路町1番地", city: "京都市",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "朝 6:00〜10:00 / 夜 15:00〜25:00", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+      factNov14("料金", "宿泊者無料", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+      factNov14("設備", "最上階11階大浴殿「玄要の湯」に大浴殿・露天風呂・サウナ・水風呂（各男女別）。ドライサウナ、水風呂・外気浴スペース完備", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+      factNov14("水風呂", "水風呂完備（外気浴スペースも完備）", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+      factNov14("利用条件", "ご利用はご宿泊者様のみ。ただし「湯ったり日帰りプラン」利用者は大浴殿を無料で利用可能（大浴場の利用は15:00から）", "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/kansai/kyoto/kyotoeki-horikawa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-03"], name: "アパホテル〈鈴鹿中央〉", officialUrl: "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/", address: "〒513-0827 三重県鈴鹿市大池3丁目11番地35号", city: "鈴鹿市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("営業時間", "4:00pm〜12:00am、6:00am～9:00am（サウナは4:00pm〜12:00am）", "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/"),
+      factNov14("料金", "宿泊者専用（無料）", "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/"),
+      factNov14("設備", "1階男女別浴殿（男性浴殿・女性浴殿）、サウナ", "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/"),
+      factNov14("利用条件", "宿泊者専用（無料）と明記されており、日帰り入浴は不可", "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/"),
+      { label: "大浴場・サウナ", value: "6:00～9:00 / 16:00～24:00", sourceUrl: "https://www.apahotel.com/hotel/tokai/mie/suzuka-chuou/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-04"], name: "アパホテル＆リゾート〈上越妙高〉", officialUrl: "https://www.apahotel.com/resort/myoko/spa/", address: "〒949-2224 新潟県妙高市桶海1090", city: "妙高市",
+    features: ["水風呂あり", "外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "12:00〜24:00、6:00〜10:00 ※入場は終了60分前迄 ※ホテル宿泊営業日と同一営業", "https://www.apahotel.com/resort/myoko/spa/"),
+      factNov14("料金", "ご宿泊のお客様は無料。日帰り入浴のお客様は大人800円、小学生400円", "https://www.apahotel.com/resort/myoko/spa/"),
+      factNov14("設備", "天然温泉露天風呂「金泉の湯」（男湯・女湯）、準天然光明石温泉（人工温泉）の大浴殿、サウナ（男性・女性）。2023年シーズンに水風呂（壺式）を新設", "https://www.apahotel.com/resort/myoko/spa/"),
+      factNov14("水風呂", "水風呂（壺式）を男性1槽、女性2槽新設（2023年シーズン）", "https://www.apahotel.com/resort/myoko/spa/"),
+      factNov14("利用条件", "日帰り入浴可（大人800円、小学生400円）。入れ墨（タトゥー）をされた方のご入場は固くお断り", "https://www.apahotel.com/resort/myoko/spa/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 12:00～24:00", sourceUrl: "https://www.apahotel.com/resort/myoko/spa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-05"], name: "アパホテル〈加賀大聖寺駅前〉", officialUrl: "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/", address: "〒922-0842 石川県加賀市熊坂町イ226-4", city: "加賀市",
+    features: ["外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "6時～9時・15時～25時", "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/"),
+      factNov14("料金", "無料", "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/"),
+      factNov14("設備", "大浴殿「玄要の湯」（種類：沸かし湯）。内湯・露天風呂・サウナ", "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/"),
+      factNov14("利用条件", "ご宿泊中のお客様のみ利用可能。チェックイン前・チェックアウト後・外来でのご利用は承っていない（日帰り入浴不可）", "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/"),
+      { label: "大浴場・サウナ", value: "6:00～9:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/hokuriku/ishikawa/kagadaisyouji-ekimae/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-06"], name: "アパホテル〈千葉八千代緑が丘〉", officialUrl: "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/", address: "〒276-0049 千葉県八千代市緑が丘1-2-30", city: "八千代市",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00～25:00、翌朝 6:00～10:00", "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/"),
+      factNov14("料金", "ホテル宿泊者は無料", "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/"),
+      factNov14("設備", "天然温泉大浴殿・露天風呂、サウナ（2F）。泉質はナトリウム-炭酸水素塩・塩化物泉（加水・加温・循環ろ過）", "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/"),
+      factNov14("利用条件", "「大浴殿のみのご利用は行っておりません」と明記されており、日帰り入浴は不可（宿泊者のみ）", "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/syutoken/chiba/chibayachiyo/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-08"], name: "アパホテル〈大阪天満〉", officialUrl: "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/", address: "〒530-0035 大阪府大阪市北区同心2-16-15", city: "大阪市",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "朝 6:00〜10:00、夜 15:00〜25:00", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+      factNov14("料金", "宿泊・日帰りプランご利用者無料 ※外来は受け付けておりません", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+      factNov14("設備", "2階大浴殿「玄要の湯」に露天風呂、内風呂、サウナ、水風呂を完備。サウナ室にはオートロウリュ・オートブロー（20分間隔）、水風呂にはチラー（冷却装置）を導入", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+      factNov14("水風呂", "水風呂完備（チラーで温度管理）。露天風呂エリアに外気浴用のイスを増設", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+      factNov14("利用条件", "外来（入浴のみの利用）は不可。日帰りプラン利用者は利用可能（大浴殿の利用は15時から）。日帰りプラン料金はシングル4,000円から、セミダブル6,000円から、ツイン7,000円から", "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/kansai/osaka/osakatenma/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-09"], name: "アパホテル〈淀屋橋駅前〉", officialUrl: "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/", address: "〒541-0044 大阪府大阪市中央区伏見町3-1-9", city: "大阪市",
+    features: ["水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "朝 6:00〜10:00 / 夜 15:00〜25:00 ", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+      factNov14("料金", "宿泊者無料。日帰りプラン料金は1名利用シングル5,000円〜、2名利用セミダブル7,000円〜（1室あたり）", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+      factNov14("設備", "地下1階の準天然光明石温泉（人工温泉）大浴殿「玄要の湯」。大浴殿・露天風呂・サウナ・水風呂を完備", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+      factNov14("水風呂", "水風呂完備 ※冷却装置（チラー）を備えていないため、季節によって水温が変動", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+      factNov14("利用条件", "外来は「ご宿泊者様、ご契約者様のみ利用可能」と明記。日帰りプラン利用時は大浴殿を利用可能", "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/"),
+      { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～25:00", sourceUrl: "https://www.apahotel.com/hotel/kansai/osaka/yodoyabashi-ekimae/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-apa-10"], name: "アパホテル＆リゾート〈大阪なんば駅前タワー〉", officialUrl: "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/", address: "〒556-0017 大阪府大阪市浪速区湊町1-2-13", city: "大阪市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00～26:00、6:00～10:00 ※宿泊者専用（日帰りプラン利用者含む）／外来利用不可", "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/"),
+      factNov14("設備", "4階大浴殿「玄要の湯」。準天然光明石温泉（人工温泉）を導入し、ジェットバス・寝湯・サウナ・ぬる湯を併設", "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/"),
+      factNov14("利用条件", "宿泊者専用（日帰りプラン利用者含む）で外来利用不可。入れ墨（タトゥー）は専用のタトゥーシールで覆い隠せる方のみ利用可能", "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/"),
+      { label: "大浴場・サウナ", value: "15:00～26:00 / 6:00～10:00", sourceUrl: "https://www.apahotel.com/resort/osaka-namba-ekimae-tower/spa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-01"], name: "カンデオホテルズ半田", officialUrl: "https://www.candeohotels.com/ja/aichi-handa/", address: "〒475-0859 愛知県半田市天王町1-50-8", city: "半田市",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入浴（タオルセット付・税込）スタンダード15〜23時：平日大人1,000円・土日祝1,200円、朝湯6〜11時：平日大人800円・土日祝1,000円、特別期間：大人1,300円", "https://www.candeohotels.com/ja/aichi-handa/offers/skyspa_visitor_handa/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは15:00〜深夜2:00、6:00〜11:00）。日帰り受付は15〜23時（最終受付22時）と6〜11時（最終受付10時）", "https://www.candeohotels.com/ja/aichi-handa/skyspa/"),
+      factNov14("設備", "男性：露天風呂、内風呂、水風呂、ドライサウナ／女性：露天風呂、内風呂（女性用サウナなし）。最上階の展望露天風呂", "https://www.candeohotels.com/ja/aichi-handa/skyspa/"),
+      factNov14("水風呂", "水風呂は男性のみ（女性側にサウナ・水風呂なし）", "https://www.candeohotels.com/ja/aichi-handa/skyspa/"),
+      factNov14("利用条件", "日帰り入浴可（初回はスカイスパ会員登録と顔写真付き身分証の提示が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/aichi-handa/offers/skyspa_visitor_handa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/aichi-handa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-02"], name: "カンデオホテルズ京都烏丸六角", officialUrl: "https://www.candeohotels.com/ja/kyoto-rokkaku/", address: "〒604-8164 京都市中京区六角通烏丸西入骨屋町149（室町通下がる六角東入る南側）", city: "京都市",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00〜翌11:00（サウナは2:00〜6:00利用不可）", "https://www.candeohotels.com/ja/kyoto-rokkaku/skyspa/"),
+      factNov14("設備", "女性：外湯、内湯、ミストサウナ／男性：外湯、内湯、水風呂、ドライサウナ。大浴場棟最上階（4F）の外湯あり", "https://www.candeohotels.com/ja/kyoto-rokkaku/skyspa/"),
+      factNov14("水風呂", "水風呂は男性のみ", "https://www.candeohotels.com/ja/kyoto-rokkaku/skyspa/"),
+      factNov14("利用条件", "スカイスパは宿泊者限定（日帰り利用不可）。2023年5月24日よりボディアート・タトゥー等による受入制限を撤廃", "https://www.candeohotels.com/ja/kyoto-rokkaku/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/kyoto-rokkaku/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-03"], name: "カンデオホテルズ菊陽熊本空港", officialUrl: "https://www.candeohotels.com/ja/kumamoto-kikuyo/", address: "〒869-1101 熊本県菊池郡菊陽町津久礼2380-1", city: "菊池郡菊陽町",
+    features: ["ロウリュあり", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入浴（タオルセット付・税込）スタンダード15〜23時：平日大人1,000円・土日祝1,200円、朝湯6〜11時：平日大人800円・土日祝1,000円、特別期間：大人1,500円", "https://www.candeohotels.com/ja/kumamoto-kikuyo/offers/skyspa_visitor_kikuyo/"),
+      factNov14("営業時間", "スカイスパは男女入替制（15:00〜翌11:00の間で男女別に時間帯を設定、曜日により異なる）。日帰り受付は15〜23時（最終22時）と6〜11時（最終10時）", "https://www.candeohotels.com/ja/kumamoto-kikuyo/skyspa/"),
+      factNov14("設備", "男女共通（入替制）：展望露天風呂、内風呂、水風呂、ロウリュウサウナ、ととのい椅子", "https://www.candeohotels.com/ja/kumamoto-kikuyo/skyspa/"),
+      factNov14("水風呂", "水風呂あり（男女入替制で利用）", "https://www.candeohotels.com/ja/kumamoto-kikuyo/skyspa/"),
+      factNov14("利用条件", "日帰り入浴可（初回はスカイスパ会員登録と顔写真付き身分証の提示が必要）。タトゥーのある方は日帰り入浴不可。男女入替制のため利用時間帯はフロントで確認", "https://www.candeohotels.com/ja/kumamoto-kikuyo/offers/skyspa_visitor_kikuyo/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00（男女入替制、曜日により男女の時間帯が異なる）", sourceUrl: "https://www.candeohotels.com/ja/kumamoto-kikuyo/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-04"], name: "カンデオホテルズ大津熊本空港", officialUrl: "https://www.candeohotels.com/ja/kumamoto-ozu/", address: "〒869-1235 熊本県菊池郡大津町室736-1", city: "菊池郡大津町",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入浴（タオルセット付・税込）スタンダード15〜23時：平日大人1,000円・土日祝1,200円、朝湯6〜11時：平日大人800円・土日祝1,000円、特別期間：大人1,500円", "https://www.candeohotels.com/ja/kumamoto-ozu/offers/skyspa_visitor_ozu/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは15:00〜深夜2:00）。日帰り受付は15〜23時（最終受付22時）と6〜11時（最終受付10時）", "https://www.candeohotels.com/ja/kumamoto-ozu/skyspa/"),
+      factNov14("設備", "男性：露天風呂、内風呂、水風呂、ドライサウナ／女性：露天風呂、内風呂（女性用サウナなし）", "https://www.candeohotels.com/ja/kumamoto-ozu/skyspa/"),
+      factNov14("水風呂", "水風呂は男性のみ（女性側にサウナ・水風呂なし）", "https://www.candeohotels.com/ja/kumamoto-ozu/skyspa/"),
+      factNov14("利用条件", "日帰り入浴可（初回はスカイスパ会員登録と顔写真付き身分証の提示が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/kumamoto-ozu/offers/skyspa_visitor_ozu/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/kumamoto-ozu/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-05"], name: "カンデオホテルズ静岡島田", officialUrl: "https://www.candeohotels.com/ja/shizuoka-shimada/", address: "〒427-0104 静岡県島田市井口1417", city: "島田市",
+    features: ["水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "男女入替制。女性：15:00〜17:45、21:45〜23:45、3:00〜5:45、9:00〜11:00／男性：18:00〜21:30、24:00〜2:45、6:00〜8:45", "https://www.candeohotels.com/ja/shizuoka-shimada/skyspa/"),
+      factNov14("設備", "男女共通（入替制）：展望露天風呂、内風呂、水風呂、サウナ", "https://www.candeohotels.com/ja/shizuoka-shimada/skyspa/"),
+      factNov14("水風呂", "水風呂あり（男女入替制で利用）", "https://www.candeohotels.com/ja/shizuoka-shimada/skyspa/"),
+      factNov14("利用条件", "スカイスパは宿泊者限定（日帰り利用不可）。男女入替制", "https://www.candeohotels.com/ja/shizuoka-shimada/skyspa/"),
+      { label: "大浴場・サウナ", value: "女性：15:00〜17:45、21:45〜23:45、3:00〜5:45、9:00〜11:00／男性：18:00〜21:30、24:00〜2:45、6:00〜8:45（男女入替制）", sourceUrl: "https://www.candeohotels.com/ja/shizuoka-shimada/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-06"], name: "カンデオホテルズ大阪ザ・タワー", officialUrl: "https://www.candeohotels.com/ja/osaka-tower/", address: "〒530-0004 大阪府大阪市北区堂島浜1-1-27（フロント17階）", city: "大阪市",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00〜翌11:00（サウナは2:00〜6:00利用不可）", "https://www.candeohotels.com/ja/osaka-tower/skyspa/"),
+      factNov14("設備", "男性・女性とも：露天風呂、内風呂、水風呂、ロウリュサウナ（オートロウリュ式、フィンランドiki社製ストーブ）。最上階31階のインフィニティ露天風呂はギネス世界記録認定", "https://www.candeohotels.com/ja/osaka-tower/skyspa/"),
+      factNov14("水風呂", "水風呂あり（男女とも）", "https://www.candeohotels.com/ja/osaka-tower/skyspa/"),
+      factNov14("利用条件", "スカイスパは宿泊者限定（日帰り利用不可）。ボディアート・タトゥー等による受入制限なし", "https://www.candeohotels.com/ja/osaka-tower/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/osaka-tower/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-07"], name: "カンデオホテルズ大阪なんば", officialUrl: "https://www.candeohotels.com/ja/osaka-namba/", address: "〒542-0083 大阪府大阪市中央区東心斎橋2-2-5", city: "大阪市",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00〜翌11:00（サウナは2:00〜6:00利用不可）", "https://www.candeohotels.com/ja/osaka-namba/skyspa/"),
+      factNov14("設備", "女性：露天風呂、内風呂、ミストサウナ／男性：露天風呂、内風呂、水風呂、ドライサウナ。湯上がり処（ラウンジ）あり", "https://www.candeohotels.com/ja/osaka-namba/skyspa/"),
+      factNov14("水風呂", "水風呂は男性のみ", "https://www.candeohotels.com/ja/osaka-namba/skyspa/"),
+      factNov14("利用条件", "スカイスパは宿泊者限定（日帰り利用不可）。ボディアート・タトゥー等による受入制限なし", "https://www.candeohotels.com/ja/osaka-namba/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/osaka-namba/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-08"], name: "カンデオホテルズ大阪岸辺", officialUrl: "https://www.candeohotels.com/ja/osaka-kishibe/", address: "〒564-0018 大阪府吹田市岸部新町5-45", city: "吹田市",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入浴（タオルセット付・税込）スタンダード15〜23時：平日大人1,600円・土日祝1,800円、朝湯6〜11時：平日大人1,200円・土日祝1,400円、特別期間：大人2,000円", "https://www.candeohotels.com/ja/osaka-kishibe/offers/skyspa_visitor_kishibe/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは2:00〜6:00利用不可）。日帰り受付は15〜23時（最終受付22時）と6〜11時（最終受付10時）", "https://www.candeohotels.com/ja/osaka-kishibe/skyspa/"),
+      factNov14("設備", "女性：露天風呂、内風呂、ミストサウナ／男性：露天風呂、内風呂、水風呂、ドライサウナ", "https://www.candeohotels.com/ja/osaka-kishibe/skyspa/"),
+      factNov14("水風呂", "水風呂は男性のみ", "https://www.candeohotels.com/ja/osaka-kishibe/skyspa/"),
+      factNov14("利用条件", "日帰り入浴可（初回はスカイスパ会員登録と顔写真付き身分証の提示が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/osaka-kishibe/offers/skyspa_visitor_kishibe/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/osaka-kishibe/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-09"], name: "カンデオホテルズ大阪心斎橋", officialUrl: "https://www.candeohotels.com/ja/osaka-shinsaibashi/", address: "〒542-0085 大阪府大阪市中央区心斎橋筋2丁目7-12", city: "大阪市",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00〜翌11:00（サウナは2:00〜6:00利用不可）", "https://www.candeohotels.com/ja/osaka-shinsaibashi/skyspa/"),
+      factNov14("設備", "男性・女性とも：露天風呂、内風呂、水風呂、ロウリュサウナ（オートロウリュ式、SAWO社製タワーラウンドヒーター採用）", "https://www.candeohotels.com/ja/osaka-shinsaibashi/skyspa/"),
+      factNov14("水風呂", "水風呂あり（男女とも）", "https://www.candeohotels.com/ja/osaka-shinsaibashi/skyspa/"),
+      factNov14("利用条件", "スカイスパは宿泊者限定（日帰り利用不可）", "https://www.candeohotels.com/ja/osaka-shinsaibashi/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/osaka-shinsaibashi/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-10"], name: "カンデオホテルズ大阪枚方", officialUrl: "https://www.candeohotels.com/ja/osaka-hirakata/", address: "〒573-0032 大阪府枚方市岡東町19-1 ステーションヒル枚方（フロント19階）", city: "枚方市",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入浴（タオルセット付・税込）大人2,000円・小人1,000円（枚方市民は大人1,500円・小人750円）、特別期間：大人2,400円（市民2,000円）", "https://www.candeohotels.com/ja/osaka-hirakata/offers/skyspa_visitor_hirakata/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは2:00〜6:00利用不可、オートロウリュは15:30〜翌10:30に毎時00分・30分作動）。日帰り受付は6〜11時（最終10時）と15〜23時（最終22時）", "https://www.candeohotels.com/ja/osaka-hirakata/skyspa/"),
+      factNov14("設備", "男性・女性とも：露天風呂、内風呂、水風呂、ロウリュサウナ（オート）。地上26階・約100mの最上階スカイスパ", "https://www.candeohotels.com/ja/osaka-hirakata/skyspa/"),
+      factNov14("水風呂", "水風呂あり（男女とも）", "https://www.candeohotels.com/ja/osaka-hirakata/skyspa/"),
+      factNov14("利用条件", "日帰り入浴可（初回はスカイスパ会員登録と顔写真付き身分証の提示が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/osaka-hirakata/offers/skyspa_visitor_hirakata/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/osaka-hirakata/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-11"], name: "ザ シンギュラリ ホテル ＆ スカイスパ アット ユニバーサル・スタジオ・ジャパン", officialUrl: "https://www.candeohotels.com/ja/singulari/", address: "〒554-0024 大阪府大阪市此花区島屋6丁目2番25号", city: "大阪市",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階スカイスパ。女性：露天風呂、内風呂、ミストサウナ／男性：露天風呂、内風呂、水風呂、ドライサウナ", "https://www.candeohotels.com/ja/singulari/skyspa/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは2:00〜6:00は利用不可）", "https://www.candeohotels.com/ja/singulari/skyspa/"),
+      factNov14("利用条件", "スカイスパの利用は宿泊者限定（日帰り入浴不可）。タトゥーのある方はタトゥーカバーシールを利用", "https://www.candeohotels.com/ja/singulari/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/singulari/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-12"], name: "カンデオホテルズ茅野", officialUrl: "https://www.candeohotels.com/ja/nagano-chino/", address: "〒391-0000 長野県茅野市中沖2-7", city: "茅野市",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("設備", "最上階スカイスパ。男性：露天風呂、内風呂、水風呂、ドライサウナ／女性：露天風呂、内風呂（女性用サウナなし）", "https://www.candeohotels.com/ja/nagano-chino/skyspa/"),
+      factNov14("営業時間", "スカイスパ（宿泊者）15:00〜翌11:00", "https://www.candeohotels.com/ja/nagano-chino/skyspa/"),
+      factNov14("料金", "日帰り入浴（平日のみ、タオルセット付・税込）スタンダード15〜23時 大人1,000円・小人500円、朝湯6〜11時 大人800円・小人400円", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
+      factNov14("利用条件", "日帰り入浴は平日のみで、スカイスパ会員登録（顔写真付き身分証が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
+      factNov14("営業状況", "公式のお知らせ（2026年11月4日付）により、機器故障のため男女ともスカイスパの露天風呂が利用不可（復旧日程は未定）。内風呂・サウナ・水風呂は通常通り利用可", "https://www.candeohotels.com/ja/nagano-chino/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/nagano-chino/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-13"], name: "カンデオホテルズ東京新橋", officialUrl: "https://www.candeohotels.com/ja/tokyo-shimbashi/", address: "〒105-0004 東京都港区新橋3-6-8", city: "港区",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階スカイスパ。女性：露天風呂、内風呂、ミストサウナ／男性：露天風呂、内風呂、水風呂、ドライサウナ", "https://www.candeohotels.com/ja/tokyo-shimbashi/skyspa/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは2:00〜6:00は利用不可）", "https://www.candeohotels.com/ja/tokyo-shimbashi/skyspa/"),
+      factNov14("利用条件", "スカイスパの利用は宿泊者限定（日帰り入浴不可）。タトゥーのある方はタトゥーカバーシールを利用", "https://www.candeohotels.com/ja/tokyo-shimbashi/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/tokyo-shimbashi/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-candeo-14"], name: "カンデオホテルズ東京六本木", officialUrl: "https://www.candeohotels.com/ja/tokyo-roppongi/", address: "〒106-0032 東京都港区六本木6-7-11", city: "港区",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階スカイスパ。女性：露天風呂、内風呂、ミストサウナ／男性：露天風呂、内風呂、水風呂、ドライサウナ", "https://www.candeohotels.com/ja/tokyo-roppongi/skyspa/"),
+      factNov14("営業時間", "スカイスパ 15:00〜翌11:00（サウナは3:00〜6:00は利用不可）", "https://www.candeohotels.com/ja/tokyo-roppongi/skyspa/"),
+      factNov14("利用条件", "スカイスパの利用は宿泊者限定（日帰り入浴不可）。ボディアート・タトゥー等による受入制限なし", "https://www.candeohotels.com/ja/tokyo-roppongi/skyspa/"),
+      { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/tokyo-roppongi/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-roynet-01"], name: "ダイワロイネットホテル松江駅前", officialUrl: "https://www.daiwaroynet.jp/matsue-ekimae/", address: "〒690-0003 島根県松江市朝日町590-10", city: "松江市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "サウナ付き大浴場あり（そのほかフィットネスルーム、男女別コインランドリー、無人コンビニエンスストア）", "https://www.daiwaroynet.jp/matsue-ekimae/"),
+      factNov14("利用条件", "大浴場・サウナは宿泊者専用（日帰り入浴不可）", "https://www.daiwaroynet.jp/matsue-ekimae/"),
+      { label: "大浴場・サウナ", value: "15:00～24:00／6:00～10:00", sourceUrl: "https://www.daiwaroynet.jp/matsue-ekimae/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-01"], name: "天然温泉 つつじの湯 ドーミーインEXPRESS豊橋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/toyohashi/", address: "〒440-0893 愛知県豊橋市札木町118", city: "豊橋市",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "1Fに男女別天然温泉大浴場「つつじの湯」。内湯（池田さくら温泉からの運び湯、炭酸水素塩泉）、外湯、高温ドライサウナ、水風呂", "https://dormy-hotels.com/dormyinn/hotels/toyohashi/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用停止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/toyohashi/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-03"], name: "天然温泉 扇浜の湯 ドーミーイン川崎", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kawasaki/", address: "〒210-0005 神奈川県川崎市川崎区東田町9-3", city: "川崎市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉大浴場「扇浜（おうぎはま）の湯」", "https://dormy-hotels.com/dormyinn/hotels/kawasaki/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/kawasaki/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-04"], name: "天然温泉 茶月の湯 ドーミーインEXPRESS掛川", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kakegawa/", address: "〒436-0075 静岡県掛川市仁藤町3-12", city: "掛川市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別天然温泉大浴場「茶月（さつき）の湯」", "https://dormy-hotels.com/dormyinn/hotels/kakegawa/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/kakegawa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-05"], name: "天然温泉 富嶽の湯 ドーミーイン三島", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/mishima/", address: "〒411-0035 静岡県三島市大宮町3-18-33", city: "三島市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階12Fに富士山を望む男女別天然温泉大浴場「富嶽（ふがく）の湯」", "https://dormy-hotels.com/dormyinn/hotels/mishima/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/mishima/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-06"], name: "天然温泉 碧宝の湯 ドーミーイン小松", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/komatsu/", address: "〒923-0868 石川県小松市日の出町4丁目211番", city: "小松市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉大浴場「碧宝（へきほう）の湯」", "https://dormy-hotels.com/dormyinn/hotels/komatsu/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/komatsu/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-07"], name: "天然温泉 そが浜の湯 ドーミーイン千葉City Soga", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/soga/", address: "〒260-0842 千葉県千葉市中央区南町2-15-4", city: "千葉市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉大浴場「そが浜の湯」。浴場は小さめで、琥珀色の天然温泉", "https://dormy-hotels.com/dormyinn/hotels/soga/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/soga/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-08"], name: "天然温泉 水都の湯 ドーミーインPREMIUM大阪北浜", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/osakakitahama/", address: "〒541-0043 大阪府大阪市中央区高麗橋1丁目6番7号", city: "大阪市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別天然温泉大浴場「水都（すいと）の湯」", "https://dormy-hotels.com/dormyinn/hotels/osakakitahama/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/osakakitahama/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-09"], name: "天然温泉 朝霧の湯 ドーミーインPREMIUMなんばANNEX", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nanba_ax/", address: "〒542-0083 大阪府大阪市中央区東心斎橋2-1-6", city: "大阪市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別大浴場「朝霧（あさぎり）の湯」（天然温泉）", "https://dormy-hotels.com/dormyinn/hotels/nanba_ax/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/nanba_ax/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-10"], name: "天然温泉 夕霧の湯 ドーミーインPREMIUMなんば", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_nanba/", address: "〒542-0082 大阪府大阪市中央区島之内2-14-23", city: "大阪市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別大浴場「夕霧（ゆうぎり）の湯」", "https://dormy-hotels.com/dormyinn/hotels/premium_nanba/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_nanba/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-11"], name: "すえひろの湯 ドーミーイン秋葉原", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/akihabara/", address: "〒101-0021 東京都千代田区外神田4-12-5", city: "千代田区",
+    features: ["外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階9Fに男女別大浴場「すえひろの湯」。男性露天風呂は広く、露天風呂にはTVも設置", "https://dormy-hotels.com/dormyinn/hotels/akihabara/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/akihabara/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-12"], name: "ドーミーインEXPRESS目黒青葉台", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/meguro/", address: "〒153-0042 東京都目黒区青葉台3-21-8", city: "目黒区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場あり（全日男女入替制）", "https://dormy-hotels.com/dormyinn/hotels/meguro/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（全日男女入替制：女性15：00～20：00／男性20：30～翌10：00、サウナのみ深夜1：00～5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/meguro/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-13"], name: "ドーミーインPREMIUM渋谷神宮前", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/shibuya/", address: "〒150-0001 東京都渋谷区神宮前6-24-4", city: "渋谷区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "男女別大浴場あり", "https://dormy-hotels.com/dormyinn/hotels/shibuya/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/shibuya/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-14"], name: "亀島川温泉 新川の湯 ドーミーイン東京八丁堀", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyohatchobori/", address: "〒104-0033 東京都中央区新川2-20-4", city: "中央区",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉大浴場「新川（しんかわ）の湯」（亀島川温泉）", "https://dormy-hotels.com/dormyinn/hotels/tokyohatchobori/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyohatchobori/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-15"], name: "春日の湯 ドーミーイン後楽園", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/korakuen/", address: "〒113-0033 東京都文京区本郷4-23-14", city: "文京区",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "宿泊可"],
+    facts: [
+      factNov14("設備", "B1階に男女別サウナ付大浴場「春日の湯」。男性サウナは高温ドライ、女性サウナはミストを設置。内湯はあつ湯とぬる湯。外気浴スペースはなし", "https://dormy-hotels.com/dormyinn/hotels/korakuen/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/korakuen/", checkedAt: "2026-11-08" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
