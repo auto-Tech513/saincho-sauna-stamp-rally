@@ -309,8 +309,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4701/",
     "sourceCheckedAt": "2026-11-15",
     "addressCheckedAt": "2026-11-15",
-    "officialUrlSource": "https://saunatime.jp/saunas/4701/",
-    "officialUrl": "https://renosauna.studio.site/"
+    "officialUrlSource": "https://saunatime.jp/saunas/4701/"
   },
   {
     "id": "st-hokkaido-4690",
