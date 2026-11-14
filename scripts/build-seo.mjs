@@ -798,10 +798,21 @@ function renderNewsArticleSsr(article) {
   const facilities = (article.facilityIds || []).map(newsFacilityById).filter(Boolean);
   const facilityChips = facilities.length ? `
     <p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>`).join("")}</p>` : "";
+  const NEWS_FACILITY_STATUS_LABELS = { closed: "閉店", suspended: "臨時休業", planned: "開業予定", verify: "要確認", restricted: "テナント専用" };
+  const stampableCountSsr = facilities.filter((facility) => !facility.status).length;
+  const facilitiesNoteSsr = !facilities.length
+    ? ""
+    : stampableCountSsr === facilities.length
+      ? "訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。"
+      : stampableCountSsr === 0 && facilities.every((facility) => facility.status === "planned")
+        ? "この記事の施設は開業予定です。開業後に営業状況を確認してから訪問・記録できます。"
+        : stampableCountSsr === 0
+          ? "この記事の施設は、閉店・休業などのため今は押印できません。利用状況は各施設ページでご確認ください。"
+          : "訪問済みの押印対象の施設は、施設ページの「押印する」でこの端末に記録できます。開業予定・閉店などの施設は、詳細ページで利用状況をご確認ください。";
   const facilityList = facilities.length ? `
     <h2>この記事に関連する施設</h2>
-    <p class="news-facilities-note">訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。</p>
-    <ul class="ssr-list">${facilities.map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture || "")}</span></li>`).join("")}</ul>` : "";
+    <p class="news-facilities-note">${escapeHtml(facilitiesNoteSsr)}</p>
+    <ul class="ssr-list">${facilities.map((facility) => `<li><a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a> <span>${escapeHtml(facility.prefecture || "")}</span>${facility.status ? ` <span>（${escapeHtml(NEWS_FACILITY_STATUS_LABELS[facility.status] || "")}）</span>` : ""}</li>`).join("")}</ul>` : "";
   const sourcesHtml = `
     <h2>出典・参考資料</h2>
     <ul>${(article.sources || []).map((source) => `<li><a href="${escapeAttr(source.url)}" rel="noopener">${escapeHtml(source.label)}</a></li>`).join("")}</ul>

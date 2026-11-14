@@ -2229,6 +2229,16 @@ async function renderNewsArticle() {
   updateDocumentMetaForView("NewsArticle");
   trackNewsOnce(`article:${article.slug}`, "news_article_view", { slug: article.slug, category: article.category });
   const facilities = (article.facilityIds || []).map((id) => getFacilities().find((facility) => facility.id === id)).filter(Boolean);
+  const stampableCount = facilities.filter((facility) => !facility.status).length;
+  const facilitiesNote = !facilities.length
+    ? ""
+    : stampableCount === facilities.length
+      ? "訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。"
+      : stampableCount === 0 && facilities.every((facility) => facility.status === "planned")
+        ? "この記事の施設は開業予定です。開業後に営業状況を確認してから訪問・記録できます。"
+        : stampableCount === 0
+          ? "この記事の施設は、閉店・休業などのため今は押印できません。利用状況は各施設ページでご確認ください。"
+          : "訪問済みの押印対象の施設は、施設ページの「押印する」でこの端末に記録できます。開業予定・閉店などの施設は、詳細ページで利用状況をご確認ください。";
   const h2Texts = (article.body || []).filter((block) => block.type === "h2").map((block) => block.text);
   const index = articles.findIndex((entry) => entry.slug === article.slug);
   const prev = index >= 0 && index < articles.length - 1 ? articles[index + 1] : null;
@@ -2250,7 +2260,7 @@ async function renderNewsArticle() {
     ${article.statusNote ? `<p class="news-status-note">${escapeHtml(article.statusNote)}</p>` : ""}
     ${h2Texts.length >= 3 ? `<details class="news-toc"><summary>この記事の目次</summary><ol>${h2Texts.map((text, i) => `<li><a href="#news-h2-${i + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : ""}
     <div class="news-article-body">${newsModule.renderNewsBlocks(article.body, { h2IdPrefix: "news-h2-" })}</div>
-    ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2><p class="news-facilities-note">訪れた施設は、施設ページを開いて「押印する」を押すと、この端末に記録できます。記録した施設は、都道府県別のサ印帳で確認できます。</p>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
+    ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2><p class="news-facilities-note">${escapeHtml(facilitiesNote)}</p>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
     <p class="news-action"><strong>次の一歩:</strong> ${escapeHtml(article.action)}</p>
     ${article.caution ? `<p class="news-caution"><strong>注意:</strong> ${escapeHtml(article.caution)}</p>` : ""}
     <section class="news-sources">
@@ -2853,7 +2863,7 @@ function renderFacilityDetail() {
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
         <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
       </section>
-      <section id="facility-pane-note" class="facility-pane" aria-label="サ活ノート" ${facilityDetailTab !== "note" ? "hidden" : ""}>${renderActivityNotebook(facility)}</section>
+      <section id="facility-pane-note" class="facility-pane" aria-label="サ活ノート" ${facilityDetailTab !== "note" ? "hidden" : ""}>${facility.status === "planned" ? `<p class="facility-notice">この施設は開業予定です。先行体験などで訪問した記録を書けます。一般営業の開始前です。</p>` : ""}${renderActivityNotebook(facility)}</section>
       <section id="facility-pane-reviews" class="facility-pane review-panel" data-review-facility="${id}" aria-label="口コミ" ${facilityDetailTab !== "reviews" ? "hidden" : ""}>
         <div class="panel-head"><h3>口コミ</h3><span>${getFacilityReviews(facility.id).length}件</span></div>
         <button class="secondary-button" type="button" data-action="open-activity" data-id="${id}">サ活ノートから投稿</button>

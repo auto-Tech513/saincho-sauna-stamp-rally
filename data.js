@@ -71156,6 +71156,7 @@ export const SEED_FACILITIES = [
     "prefecture": "東京都",
     "address": "〒150-0012 東京都渋谷区広尾5-8-14 いちご広尾ビル B1F",
     "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-14",
     "city": "渋谷区",
     "trait": "urban",
     "tags": [
@@ -71175,6 +71176,7 @@ export const SEED_FACILITIES = [
     "prefecture": "神奈川県",
     "address": "〒233-0002 神奈川県横浜市港南区上大岡西3-9-1 ヨークフーズ上大岡店2階",
     "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-14",
     "city": "横浜市",
     "trait": "urban",
     "tags": [
