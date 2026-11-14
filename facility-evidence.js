@@ -1337,8 +1337,8 @@ export const CURATED_FACILITY_EVIDENCE = [
   },
   {
     ids: ["manual-fukuoka-reboot"], name: "REBOOT!", status: "restricted",
-    features: [],
-    facts: [{ label: "利用条件", value: "一般利用不可（入居テナント専用）。天神住友生命FJビジネスセンター最上階のワーカー専用共用サウナで、SAUNACHELIN 2026の特別賞。一般の訪問・押印の対象には含めない", sourceUrl: "https://tenjinsfbc.jp/reboot/top-floor.php", checkedAt: "2026-11-11" }],
+    features: ["水風呂あり", "外気あり", "貸切可"],
+    facts: [{ label: "利用条件", value: "一般利用不可（入居テナント専用）。天神住友生命FJビジネスセンター最上階のワーカー専用共用サウナで、SAUNACHELIN 2026の特別賞。一般の訪問・押印の対象には含めない", sourceUrl: "https://tenjinsfbc.jp/reboot/top-floor.php", checkedAt: "2026-11-11" }, { label: "設備", value: "最上階フロアにルーフトップサウナを配置。サウナ・水風呂・炭酸泉・外気浴スペースを完備し、眺望を楽しめるスカイテラス（貸切利用も可能）がある", sourceUrl: "https://tenjinsfbc.jp/reboot/top-floor.php", checkedAt: "2026-11-14" }, { label: "水風呂", value: "水風呂あり（サウナ・炭酸泉・外気浴スペースとともに完備）", sourceUrl: "https://tenjinsfbc.jp/reboot/top-floor.php", checkedAt: "2026-11-14" }],
   },
   {
     ids: ["st-fukui-573"], name: "越のゆ敦賀店", status: "closed",
@@ -1357,8 +1357,8 @@ export const CURATED_FACILITY_EVIDENCE = [
   },
   {
     ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "planned",
-    features: [],
-    facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
+    features: ["個室"],
+    facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
   },
   {
     ids: ["manual-kanagawa-renaissance-kamiooka"], name: "フィットネスクラブ＆サウナスパ ルネサンス上大岡", status: "open",
@@ -6579,6 +6579,441 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     facts: [
       factNov14("設備", "B1階に男女別サウナ付大浴場「春日の湯」。男性サウナは高温ドライ、女性サウナはミストを設置。内湯はあつ湯とぬる湯。外気浴スペースはなし", "https://dormy-hotels.com/dormyinn/hotels/korakuen/"),
       { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/korakuen/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-16"], name: "天然温泉 七宝の湯 ドーミーインPREMIUM銀座", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ginza/", address: "〒104-0061 東京都中央区銀座6-16-8", city: "中央区",
+    features: ["ドライサウナ", "水風呂あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "地下1階に天然温泉“黒湯”の男女別大浴場「七宝の湯」。温泉は千葉県匝瑳市からの運び湯。高温ドライサウナ、水風呂も設えている", "https://dormy-hotels.com/dormyinn/hotels/ginza/"),
+      { label: "大浴場・サウナ", value: "15：00～翌朝10：00（サウナのみ1：00～5：00利用停止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/ginza/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-17"], name: "天然温泉 豊穣の湯 ドーミーイン池袋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/", address: "〒170-0013 東京都豊島区東池袋3-11-11", city: "豊島区",
+    features: ["外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階15Fに天然温泉の男女別大浴場「豊穣の湯」。露天風呂付の大浴場で、池袋エリア唯一の黒湯・内湯", "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/"),
+      { label: "大浴場・サウナ", value: "15：00～翌朝10：00（サウナのみ1：00～5：00利用停止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/ikebukuro/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-18"], name: "展望大浴場 あさひ湯 ドーミーインEXPRESS浅草", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/asakusa/", address: "〒111-0033 東京都台東区花川戸1-3-4", city: "台東区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "展望大浴場「あさひ湯」", "https://dormy-hotels.com/dormyinn/hotels/asakusa/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（曜日別男女入替制、サウナのみ深夜1：00～5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/asakusa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-19"], name: "伝馬の湯 ドーミーインPREMIUM東京小伝馬町", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyokodenmacho/", address: "〒103-0001 東京都中央区日本橋小伝馬町2番3号", city: "中央区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "11F最上階に男女別大浴場「伝馬の湯」", "https://dormy-hotels.com/dormyinn/hotels/tokyokodenmacho/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/tokyokodenmacho/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-20"], name: "徒士の湯 ドーミーイン上野・御徒町", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/ueno/", address: "〒110-0005 東京都台東区上野6丁目7番22号", city: "台東区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "最上階12Fに男女別大浴場「徒士の湯」", "https://dormy-hotels.com/dormyinn/hotels/ueno/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/ueno/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-21"], name: "明神の湯 ドーミーインPREMIUM神田", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kanda/", address: "〒101-0041 東京都千代田区神田須田町1-16", city: "千代田区",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場「明神の湯」", "https://dormy-hotels.com/dormyinn/hotels/kanda/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/kanda/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-23"], name: "石狩の湯 ドーミーインPREMIUM札幌", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_sapporo", address: "〒060-0062 北海道札幌市中央区南2条西6丁目4-1", city: "札幌市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場「石狩の湯」", "https://dormy-hotels.com/dormyinn/hotels/premium_sapporo"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/premium_sapporo", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-24"], name: "狸の湯 ドーミーイン札幌ANNEX", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/sapporo_ax", address: "〒060-0063 北海道札幌市中央区南三条西6丁目10-6", city: "札幌市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場「狸の湯」", "https://dormy-hotels.com/dormyinn/hotels/sapporo_ax"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/sapporo_ax", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-25"], name: "天然温泉 幸鐘の湯 ドーミーイン東室蘭", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/higashimuroran/", address: "〒050-0074 北海道室蘭市中島町2-30-11", city: "室蘭市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉大浴場「幸鐘の湯」。北海道でも有数の温泉地・洞爺湖からの運び湯", "https://dormy-hotels.com/dormyinn/hotels/higashimuroran/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/higashimuroran/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-26"], name: "天然温泉 常呂川の湯 ドーミーイン北見", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kitami/", address: "〒090-0044 北海道北見市北四条西2丁目7-1", city: "北見市",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "2Fに男女別天然温泉大浴場「常呂川の湯」。アルカリ泉質の天然温泉露天風呂あり", "https://dormy-hotels.com/dormyinn/hotels/kitami/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/kitami/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-27"], name: "天然温泉 神威の湯 ドーミーイン旭川", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/asahikawa/", address: "〒070-0035 北海道旭川市5条通6丁目964-1", city: "旭川市",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "10F最上階に天然温泉大浴場「神威の湯」。露天風呂あり", "https://dormy-hotels.com/dormyinn/hotels/asahikawa/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/asahikawa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-28"], name: "天然温泉 樽前の湯 ドーミーイン苫小牧", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/tomakomai/", address: "〒053-0023 北海道苫小牧市錦町2-1-22", city: "苫小牧市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "9F最上階に自家源泉の男女別大浴場「樽前の湯」", "https://dormy-hotels.com/dormyinn/hotels/tomakomai/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/tomakomai/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-29"], name: "天然温泉 鶴舞の湯 ドーミーイン千歳", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/chitose", address: "〒066-0063 北海道千歳市幸町4丁目20番地1号", city: "千歳市",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "貸切可", "宿泊可"],
+    facts: [
+      factNov14("設備", "1階に天然温泉大浴場「鶴舞の湯」（「鶴の湯温泉」の運び湯）。男女共に天然温泉の露天風呂、高温サウナ（オートロウリュ付き）、水風呂を用意。貸切風呂も用意", "https://dormy-hotels.com/dormyinn/hotels/chitose"),
+      factNov14("水風呂", "水風呂あり（男女共に用意）", "https://dormy-hotels.com/dormyinn/hotels/chitose"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/chitose", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-30"], name: "天然温泉 天都の湯 ドーミーイン網走", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/abashiri/", address: "〒093-0012 北海道網走市南二条西3丁目1番地の1", city: "網走市",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階9Fに男女別天然温泉大浴場「天都の湯」。最上階の露天風呂からはオホーツク海と知床連山を一望できる。温泉はドーミーイン北見からの運び湯", "https://dormy-hotels.com/dormyinn/hotels/abashiri/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/abashiri/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-31"], name: "天然温泉 天北の湯 ドーミーイン稚内", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/wakkanai/", address: "〒097-0022 北海道稚内市中央2-7-13", city: "稚内市",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階10Fに男女別天然温泉大浴場「天北の湯」。露天風呂あり", "https://dormy-hotels.com/dormyinn/hotels/wakkanai/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/wakkanai/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-32"], name: "天然温泉 灯の湯 ドーミーインPREMIUM小樽", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/otaru/", address: "〒047-0032 北海道小樽市稲穂3-9-1", city: "小樽市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "2Fに男女別天然温泉大浴場「灯の湯」。内湯・岩風呂・ヒノキ風呂あり", "https://dormy-hotels.com/dormyinn/hotels/otaru/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/otaru/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-33"], name: "天然温泉 白樺の湯 ドーミーイン帯広", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/obihiro/", address: "〒080-0012 北海道帯広市西二条南9-11-1", city: "帯広市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "2Fに男女別天然温泉大浴場「白樺の湯」", "https://dormy-hotels.com/dormyinn/hotels/obihiro/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/obihiro/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-dormy-34"], name: "天然温泉 幣舞の湯 ドーミーインPREMIUM釧路", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/kushiro/", address: "〒085-0015 北海道釧路市北大通2-1", city: "釧路市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別天然温泉大浴場「幣舞の湯」", "https://dormy-hotels.com/dormyinn/hotels/kushiro/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/kushiro/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-mystays-01"], name: "ホテルマイステイズプレミア成田", officialUrl: "https://www.mspnarita.com/pool-spa/", address: "〒286-0131 千葉県成田市大山31", city: "成田市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("料金", "サウナ付き浴場・お風呂とも550円（ご滞在の方限定で有料）", "https://www.mspnarita.com/pool-spa/"),
+      factNov14("営業時間", "サウナ付き浴場・お風呂 6:00～11:00（最終入場10:30）、15:00～22:00（最終入場21:30）", "https://www.mspnarita.com/pool-spa/"),
+      factNov14("設備", "サウナ付き浴場と屋内プール（約15メートル・2コース）を併設", "https://www.mspnarita.com/pool-spa/"),
+      factNov14("利用条件", "ご滞在の方限定のため日帰り入浴は不可。小学生以下のお子様のみでの利用はできない", "https://www.mspnarita.com/pool-spa/"),
+      { label: "大浴場・サウナ", value: "6:00～11:00／15:00～22:00", sourceUrl: "https://iconia.co.jp/hotel-mystays-premier-narita-chiba/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-mystays-02"], name: "ホテルマイステイズプレミア札幌パーク", officialUrl: "https://iconia.co.jp/hotel-mystays-premier-sapporo-park-hokkaido/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉を完備", "https://iconia.co.jp/hotel-mystays-premier-sapporo-park-hokkaido/"),
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-01"], name: "ルートイングランティア東海 Spa & Relaxation", officialUrl: "https://www.hotel-grantia.co.jp/tokai/", address: "〒476-0003 愛知県東海市荒尾町丸根1-21", city: "東海市",
+    features: ["温泉付き", "外気あり", "宿泊可", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り入浴：温浴+リラクゼーションルーム 大人 平日1,000円／土日・祝日1,200円、温浴のみ 大人 平日800円／土日・祝日950円。ご宿泊者は無料", "https://hotel-grantia.co.jp/tokai/spa/"),
+      factNov14("営業時間", "外来利用 10:00～24:30／宿泊者 5:00～10:00、15:00～24:30", "https://hotel-grantia.co.jp/tokai/spa/"),
+      factNov14("設備", "天然温泉「華の湯」（源泉名：永和温泉、泉質はナトリウム－塩化物・炭酸水素塩温泉）。内風呂、露天風呂、サウナ（男風呂・女風呂）、替り湯のほか、お食事処「和み」とリラクゼーションスペースがある", "https://hotel-grantia.co.jp/tokai/spa/"),
+      factNov14("利用条件", "日帰り入浴可。タオルセットは300円。愛知県青少年条例により23:00～翌6:00は18歳未満の方は利用できない", "https://hotel-grantia.co.jp/tokai/spa/"),
+      { label: "大浴場・サウナ", value: "5:00～10:00 / 15:00～24:30", sourceUrl: "https://www.hotel-grantia.co.jp/tokai/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-02"], name: "ホテルルートイン松山北", officialUrl: "https://www.route-inn.co.jp/hotel_list/ehime/index_hotel_id_782/", address: "〒791-8005 愛媛県松山市東長戸四丁目８番１２号", city: "松山市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場を完備", "https://www.route-inn.co.jp/hotel_list/ehime/index_hotel_id_782/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/ehime/index_hotel_id_782/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-03"], name: "ホテルルートインGrand守谷駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/ibaraki/index_hotel_id_735/", address: "〒302-0115 茨城県守谷市中央二丁目17-８", city: "守谷市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "光明石人工温泉を完備。女性大浴場にはReFaシャワーヘッド・ReFaドライヤーを設置", "https://www.route-inn.co.jp/hotel_list/ibaraki/index_hotel_id_735/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/ibaraki/index_hotel_id_735/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-04"], name: "ホテルルートイン美濃加茂", officialUrl: "https://www.route-inn.co.jp/hotel_list/gifu/index_hotel_id_33/", address: "〒505-0041 岐阜県美濃加茂市太田町2449-1", city: "美濃加茂市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場とサウナがある（公式ページの施設一覧に「大浴場」「サウナ」と明記）", "https://www.route-inn.co.jp/hotel_list/gifu/index_hotel_id_33/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/gifu/index_hotel_id_33/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-06"], name: "ホテルルートイン京都久御山", officialUrl: "https://www.route-inn.co.jp/hotel_list/kyoto/index_hotel_id_737/", address: "〒613-0022 京都府久世郡久御山町市田鈴間102番地", city: "久世郡久御山町",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉を完備した広々とした浴場とサウナがある（公式ページの施設一覧にも「大浴場」「天然温泉」「サウナ」と明記）", "https://www.route-inn.co.jp/hotel_list/kyoto/index_hotel_id_737/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/kyoto/index_hotel_id_737/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-07"], name: "ホテルルートインGrand前橋", officialUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_746/", address: "〒371-0847 群馬県前橋市大友町1丁目5番地4", city: "前橋市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "サウナ付き大浴場がある（公式ページの施設一覧にも「大浴場」「サウナ」と明記）", "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_746/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_746/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-08"], name: "ホテルルートインGrand太田駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_680/", address: "〒373-0851 群馬県太田市飯田町1380", city: "太田市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "女性大浴場あり（公式お知らせ：女性大浴場にReFaシャワーヘッドとReFaドライヤーを設置）", "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_680/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/gunma/index_hotel_id_680/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-09"], name: "ホテルルートインGrand秩父", officialUrl: "https://www.route-inn.co.jp/hotel_list/saitama/index_hotel_id_714/", address: "〒368-0023 埼玉県秩父市大宮4628-2", city: "秩父市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場あり。天然温泉・サウナを完備（公式サイトの設備案内）。女性大浴場あり", "https://www.route-inn.co.jp/hotel_list/saitama/index_hotel_id_714/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/saitama/index_hotel_id_714/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-10"], name: "ルートイングランティア羽生SPA RESORT", officialUrl: "https://www.hotel-grantia.co.jp/hanyu/", address: "〒348-0054 埼玉県羽生市西3丁目19-3", city: "羽生市",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり", "外気あり", "温泉付き", "貸切可", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "「華のゆ」入館料（税込）：フリータイム 大人 平日1,000円／土日祝1,200円、子供（小学生まで）平日650円／土日祝750円。21時以降 大人 平日800円／土日祝1,000円、子供 平日550円／土日祝650円", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("料金", "岩盤浴400円（専用着・タオル付き）。貸切風呂 平日1,100円・土日祝1,300円（1時間・要予約）", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("営業時間", "岩盤浴の営業時間 10:00～23:30（最終受付22:30）", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("設備", "スーパー健康ランド「華のゆ」は羽生温泉・源泉かけながし（泉質：ナトリウム－炭酸水素塩・塩化物温泉）。内風呂（圧注浴・貸切風呂）、露天風呂（ごろりん湯・寝湯・活性石風呂・座湯・壺風呂）あり", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("設備", "高温サウナ・ミストサウナ・岩盤浴（女性専用スペースあり）を完備。タオル類の貸出あり（フェイスタオル100円・バスタオル200円・タオルセット300円、料金は税込）", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("水風呂", "水風呂あり（内風呂エリアに設置）", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      factNov14("利用条件", "日帰り入浴可（入館料制）。宿泊者はチェックイン手続き後12時から入浴可、チェックアウト日は10時以降入浴不可。チェックアウト後の利用は通常の日帰り入浴として入館料を精算", "https://hotel-grantia.co.jp/hanyu/spa/"),
+      { label: "大浴場・サウナ", value: "10:00～24:00", sourceUrl: "https://www.hotel-grantia.co.jp/hanyu/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-11"], name: "ホテルルートインGrand三沢-EAST COURT-", officialUrl: "https://www.route-inn.co.jp/hotel_list/aomori/index_hotel_id_741/", address: "〒033-0011 青森県三沢市幸町一丁目10番1号", city: "三沢市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "光明石人工温泉の大浴場を完備。サウナあり（公式サイトの設備案内）。2025年8月20日開業、全259室", "https://www.route-inn.co.jp/hotel_list/aomori/index_hotel_id_741/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/aomori/index_hotel_id_741/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-12"], name: "ホテルルートイン島田吉田インター", officialUrl: "https://www.route-inn.co.jp/hotel_list/shizuoka/index_hotel_id_26/", address: "〒427-0104 静岡県島田市井口1194", city: "島田市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場の利用時間 15:00～2:00／5:00～10:00", "https://www.route-inn.co.jp/datas/files/2026/04/10/f0290c86ee2f389528dcf59914ad1604f387f4e6.pdf"),
+      factNov14("設備", "活性石人工温泉大浴場（総客室数119室）。男性大浴場ではサウナも利用可", "https://www.route-inn.co.jp/datas/files/2026/04/10/f0290c86ee2f389528dcf59914ad1604f387f4e6.pdf"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/shizuoka/index_hotel_id_26/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-13"], name: "ホテルルートイン千葉浜野-東京湾岸道-", officialUrl: "https://www.route-inn.co.jp/hotel_list/chiba/index_hotel_id_674/", address: "〒260-0824 千葉県千葉市中央区浜野町1025ｰ110", city: "千葉市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場・サウナあり（公式サイトの設備案内。全329室）", "https://www.route-inn.co.jp/hotel_list/chiba/index_hotel_id_674/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/chiba/index_hotel_id_674/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-14"], name: "ホテルルートインGrand佐久-佐久平駅南-", officialUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/", address: "〒385-0022 長野県佐久市岩村田5513番地1", city: "佐久市",
+    features: ["水風呂あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉の大浴場を完備。浴場内にはサウナ・水風呂も完備（公式サイトの開業お知らせ）。2026年6月22日開業、全194室", "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/"),
+      factNov14("水風呂", "水風呂あり（浴場内に完備）", "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_780/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-15"], name: "ホテルルートインGrand上田駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_634/", address: "〒386-0025 長野県上田市天神一丁目5番7号", city: "上田市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場・サウナあり（公式サイトの設備案内。全199室）。女性大浴場あり", "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_634/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/nagano/index_hotel_id_634/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-16"], name: "ホテルルートイン大牟田", officialUrl: "https://www.route-inn.co.jp/hotel_list/fukuoka/index_hotel_id_745/", address: "〒836-0037 福岡県大牟田市岬町6番地67", city: "大牟田市",
+    features: ["外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場の利用時間 15:00～2:00／5:00～10:00", "https://www.route-inn.co.jp/datas/files/2025/11/05/cea26a645ed684054260e24ba90874ee2e89f5ef.pdf"),
+      factNov14("設備", "男女別大浴場（露天風呂・サウナあり）。総客室数328室、2025年12月26日オープン", "https://www.route-inn.co.jp/datas/files/2025/11/05/cea26a645ed684054260e24ba90874ee2e89f5ef.pdf"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/fukuoka/index_hotel_id_745/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-17"], name: "ルートイングランティア福岡宮若-脇田温泉-", officialUrl: "https://www.hotel-grantia.co.jp/wakamiya/", address: "〒822-0133 福岡県宮若市脇田778-1", city: "宮若市",
+    features: ["温泉付き", "外気あり", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り入館料 大人平日800円・小人500円（3歳〜小学生未満300円）、土日祝は100円アップ。岩盤浴500円、レンタルバスタオル100円。宿泊者は入浴無料", "https://www.hotel-grantia.co.jp/wakamiya/spa/"),
+      factNov14("営業時間", "日帰り入浴 10:00～23:00（宿泊者は6:00〜9:00も利用可）", "https://www.hotel-grantia.co.jp/wakamiya/spa/"),
+      factNov14("定休日", "年中無休", "https://www.hotel-grantia.co.jp/wakamiya/spa/"),
+      factNov14("設備", "脇田温泉「華の湯」は源泉掛け流しの天然温泉（アルカリ性単純温泉）。サウナ（TV付き）、露天風呂、内湯あり", "https://www.hotel-grantia.co.jp/wakamiya/spa/"),
+      factNov14("利用条件", "日帰り入浴可（宿泊者は入浴無料）", "https://www.hotel-grantia.co.jp/wakamiya/spa/"),
+      { label: "大浴場・サウナ", value: "6:00～9:00 / 10:00～23:00", sourceUrl: "https://www.hotel-grantia.co.jp/wakamiya/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-18"], name: "ホテルルートインGrand旭川駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/", address: "〒070-0030 北海道旭川市宮下通8丁目1962-1", city: "旭川市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場利用時間 15:00～2:00／5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/"),
+      factNov14("設備", "天人峡天然温泉の大浴場「旅人の湯」", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_635/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-19"], name: "ホテルルートインGrand室蘭", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_666/", address: "〒050-0074 北海道室蘭市中島町2丁目22-2", city: "室蘭市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉の大浴場とサウナあり（公式トップページの施設アイコン表示による）", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_666/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_666/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-20"], name: "ホテルルートインGrand北見駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_644/", address: "〒090-0040 北海道北見市大通西1丁目2-1", city: "北見市",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "大浴場あり（女性大浴場へのReFa設置を公式お知らせで案内）", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_644/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_644/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-21"], name: "ホテルルートイン帯広駅前", officialUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/", address: "〒080-0013 北海道帯広市西三条南11丁目8番地", city: "帯広市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "15:00～26:00／5:00～10:00", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/"),
+      factNov14("設備", "1Fに天然モール温泉浴場「旅人の湯」（サウナ付）", "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.route-inn.co.jp/hotel_list/hokkaido/index_hotel_id_68/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-routeinn-22"], name: "ルートイングランティア函館駅前", officialUrl: "https://www.hotel-grantia.co.jp/hakodate-st/", address: "〒040-0063 北海道函館市若松町21-3", city: "函館市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場利用時間 15:00～2:00／5:00～10:00", "https://www.hotel-grantia.co.jp/hakodate-st/spa/"),
+      factNov14("設備", "最上階13階に源泉掛け流しの天然温泉「旅人の湯」。サウナは男女ともあり（定員2名程、利用時間は大浴場と同じ）", "https://www.hotel-grantia.co.jp/hakodate-st/spa/"),
+      factNov14("水風呂", "水風呂はございません（公式明記。サウナ入口横にシャワーブースの案内あり）", "https://www.hotel-grantia.co.jp/hakodate-st/spa/"),
+      { label: "大浴場・サウナ", value: "15:00～2:00 / 5:00～10:00", sourceUrl: "https://www.hotel-grantia.co.jp/hakodate-st/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-01"], name: "天然温泉 花波の湯 御宿 野乃大阪淀屋橋", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/", address: "〒541-0041 大阪府大阪市中央区北浜2丁目5番19号", city: "大阪市",
+    features: ["ドライサウナ", "水風呂あり", "温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階13Fに男女別天然温泉大浴場「花波の湯」。生駒山の天然ラドン温泉をタンクローリーで運搬。男女とも内湯、外湯（壺湯）、高温ドライサウナ、水風呂を設置", "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/"),
+      factNov14("水風呂", "男女とも水風呂を設置", "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_yodoyabashi/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-02"], name: "天然温泉 花風の湯 御宿 野乃なんば", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_nanba/", address: "〒542-0073 大阪府大阪市中央区日本橋1-4-18", city: "大阪市",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "天然温泉の大浴場「花風の湯」", "https://dormy-hotels.com/dormyinn/hotels/nono_nanba/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_nanba/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-03"], name: "天然温泉 凌雲の湯 御宿 野乃浅草", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/", address: "〒111-0032 東京都台東区浅草2-7-20", city: "台東区",
+    features: ["水風呂あり", "温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "地下1階に男女別天然温泉大浴場「凌雲の湯」。内湯は自家源泉の黒湯。ほかに壺風呂、サウナ、水風呂があり、外気を感じながらの壺湯も利用できる", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/"),
+      factNov14("水風呂", "水風呂あり", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～早朝5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusa/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-nono-04"], name: "天然温泉 凌天の湯 御宿 野乃浅草別邸", officialUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/", address: "〒111-0032 東京都台東区浅草2-7-26", city: "台東区",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "地下1階に男女別天然温泉大浴場「凌天の湯」。内湯は自家源泉の黒湯で、ジェットバス、壺風呂、セルフロウリュのサウナ、水風呂がある", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/"),
+      factNov14("水風呂", "水風呂あり（天然温泉大浴場「凌天の湯」内）", "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/"),
+      { label: "大浴場・サウナ", value: "15：00～翌10：00（サウナのみ深夜1：00～翌5：00は利用休止）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/nono_asakusabettei/", checkedAt: "2026-11-08" },
+    ],
+  },
+  {
+    ids: ["manual-hotel-mitsuigarden-01"], name: "三井ガーデンホテル福岡祇園", officialUrl: "https://www.gardenhotels.co.jp/fukuoka-gion/",
+    features: ["スチーム(ミスト)サウナ", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場 15:00 - 25:00、6:00 - 9:00", "https://corp.gardenhotels.co.jp/pdf/MGH_News_20190618.pdf"),
+      factNov14("設備", "最上階13階の大浴場「Roof Top Living Bath」。人工温泉の内湯や人工炭酸泉の露天風呂に加え、寝湯やスチームサウナを設けている", "https://corp.gardenhotels.co.jp/pdf/MGH_News_20190618.pdf"),
+      factNov14("利用条件", "大浴場は宿泊者専用（日帰り入浴は不可）", "https://corp.gardenhotels.co.jp/pdf/MGH_News_20190618.pdf"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-suehiroyu"], name: "すえひろ湯", officialUrl: "https://suehiroyu.tokyo/",
+    features: ["水風呂あり"],
+    facts: [
+      factNov14("営業時間", "平日 15:00-25:00／土日祝 10:00-25:00（最終入店24:30）", "https://suehiroyu.tokyo/"),
+      factNov14("定休日", "定休日なし（2026年6月より定休日を廃止し、毎日営業）", "https://suehiroyu.tokyo/"),
+      factNov14("設備", "アツアツの格納式ストーブサウナ、キンキンに冷えた水風呂、風呂上がりに飲めるクラフトビール", "https://suehiroyu.tokyo/"),
+      factNov14("水風呂", "水風呂あり", "https://suehiroyu.tokyo/"),
+    ],
+  },
+  {
+    ids: ["manual-fukuoka-totopa-hakata"], name: "TOTOPA 博多駅前店", officialUrl: "https://totopa.jp/hakata/",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "基本料金（2時間）2,480円（税込）、以降30分ごと+500円（税込）、土日祝・特定日+500円（税込）。タオル・アメニティ、ソフトドリンク飲み放題は入館料に含まれる", "https://totopa.jp/hakata/"),
+      factNov14("営業時間", "営業時間：8:00 - 23:00（最終受付22:00）", "https://totopa.jp/hakata/"),
+      factNov14("設備", "3階は男性フロア、4階は女性フロア。各フロアにウエスタンレッドシダーを一本丸ごと使った「千年サウナ」、水風呂、湯船をひとつずつ備え、外気浴・内気浴スペースもある", "https://totopa.jp/hakata/"),
+      factNov14("水風呂", "男性フロアは頭まで浸かることを推奨する水深120cmの水風呂。女性フロアにも水風呂あり", "https://totopa.jp/hakata/"),
+      factNov14("利用条件", "完全キャッシュレス（現金不可）。利用にはLINEアプリの友だち追加からの会員登録が必要。予約不要のウォークイン制", "https://totopa.jp/hakata/"),
+    ],
+  },
+  {
+    ids: ["manual-hokkaido-biaclyn-hakodate"], name: "HOTEL 白林 HAKODATE", officialUrl: "https://www.biaclyn.com/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "ウェルネススペース OPEN 9:00-24:00", "https://www.biaclyn.com/"),
+      factNov14("設備", "ウェルネス棟の「サンクチュアリウェルネス」には、暖炉、ジャグジー、小プール、ドライサウナ、ミストサウナを設置", "https://www.biaclyn.com/wellness-space/"),
+    ],
+  },
+  {
+    ids: ["manual-tokyo-koganeyu-shinjuku"], name: "黄金湯 新宿", officialUrl: "https://koganeyu.com/shinjuku",
+    features: ["セルフロウリュ", "オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入浴料金 大人 600円（中学生以上）、小学生 200円、幼児 100円。サウナは別料金のオプション（2時間制・時間帯により料金が異なる）。貸しタオルセット +300円〜", "https://koganeyu.com/shinjuku"),
+      factNov14("営業時間", "平日・土日祝 12:30 - 24:00（8月26日〜 12:30 - 翌9:30）", "https://koganeyu.com/shinjuku"),
+      factNov14("定休日", "第一・第三火曜日", "https://koganeyu.com/shinjuku"),
+      factNov14("設備", "男性サウナ「THE ABYSS」は2基のオートロウリュサウナ、女性サウナ「THE COCOON」はセルフロウリュ。高濃度炭酸泉、薬湯、内水風呂、外気浴スペースあり", "https://koganeyu.com/shinjuku/facility"),
+      factNov14("水風呂", "内水風呂 17度（地下水掛け流し）。サウナ用に約15〜16℃の天然地下水を使用した水風呂「THE POTION」", "https://koganeyu.com/shinjuku/facility"),
     ],
   },
 ];
