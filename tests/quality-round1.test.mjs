@@ -110,7 +110,7 @@ test("dismissing the backup hint persists the flag and hides the hint without to
   const h = harness();
   h.run('state.visited.keep={at:"2026-10-22T00:00:00Z"}');
   h.run("dismissBackupHint()");
-  assert.equal(h.writes.some((w) => w.key === "saincho-backup-hint-dismissed-v1" && w.value === "1"), true);
+  assert.equal(h.writes.some((w) => w.key === "saincho-backup-hint-dismissed-v1" && /^\d{10,}$/.test(w.value)), true);
   assert.equal(h.run("el.backupHint.hidden"), true);
   assert.equal(h.run("Boolean(state.visited.keep)"), true);
 });

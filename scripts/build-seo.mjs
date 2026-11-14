@@ -636,6 +636,8 @@ function renderGuideSsr(articles) {
     <p class="eyebrow">GUIDE</p>
     <h1>初めてでも迷わないサウナ入門</h1>
     <p>安全、入り方、マナー、水分補給、道具、記録まで${articles.length}本の実用記事を用意しています。健康・安全に関わる記事を中心に、各記事の末尾へ内容の根拠とした出典を記事ごとに表示しています。</p>
+    <h2>初めての人はこの3本から</h2>
+    <ol class="ssr-list">${["洗う、温める、拭く", "出るサイン", "共通マナー"].map((key) => ARTICLE_ROUTES.find(({ article }) => article.title.includes(key))).filter(Boolean).map(({ article, route }) => `<li><a href="${escapeAttr(route)}">${escapeHtml(article.title)}</a> <span>${escapeHtml(article.category)}</span></li>`).join("")}</ol>
     <ul class="ssr-list">${articleLinks}</ul>
     <h2>よくある質問</h2>
     <dl>${faqItems}</dl>

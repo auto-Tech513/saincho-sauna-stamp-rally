@@ -390,6 +390,16 @@
               <div class="spotlight" id="spotlight"></div>
             </div>
           </details>
+          <div class="results-controls">
+            <label class="sort-label">並び替え
+              <select id="facilitySortSelect" aria-label="施設の並び替え">
+                <option value="standard">標準</option>
+                <option value="name">名前順</option>
+                <option value="verified">情報が確認できている順</option>
+              </select>
+            </label>
+            <button class="secondary-button" type="button" id="copyListButton" hidden>一覧をテキストでコピー</button>
+          </div>
           <p tabindex="-1" class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="facility-list" id="facilityList"></div>
         </section>
@@ -682,6 +692,7 @@
             <h3>初めてでも迷わない入り方と豆知識</h3>
             <p>我慢比べではなく、自分の体調に合わせて続けるための記事をまとめました。気になる項目だけ開いて読めます。</p>
           </div>
+          <div id="guideStarter"></div>
           <div class="category-strip" id="articleCategoryStrip" aria-label="記事カテゴリ"></div>
           <div class="guide-gear-rail" id="guideGearRail" aria-label="記事に合うGear"></div>
           <div class="article-list" id="articleList"></div>

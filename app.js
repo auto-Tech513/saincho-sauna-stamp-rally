@@ -689,7 +689,7 @@ const FEATURE_GROUPS = [
   },
   {
     label: "温度体験",
-    options: ["セルフロウリュ", "オートロウリュ", "アロマロウリュ", "熱波師あり", "水風呂あり", "外気あり", "外気なし"],
+    options: ["セルフロウリュ", "オートロウリュ", "アロマロウリュ", "熱波師あり", "ロウリュあり", "水風呂あり", "外気あり", "外気なし"],
   },
   {
     label: "利用条件",
@@ -709,6 +709,7 @@ const FEATURE_ALIASES = {
   "外気なし": ["外気浴なし"],
   "水風呂あり": ["水風呂", "天然水風呂", "滝つぼ水風呂", "冷水", "冷水浴"],
   "熱波師あり": ["熱波", "アウフグース"],
+  "ロウリュあり": ["ロウリュ", "ロウリュウ"],
   "アロマロウリュ": ["アロマロウリュウ"],
   "セルフロウリュ": ["セルフロウリュウ"],
   "温泉付き": ["温泉", "天然温泉", "源泉"],
@@ -807,6 +808,7 @@ let rankingPollTimer = 0;
 let searchRenderTimer = 0;
 let isSearchComposing = false;
 let visibleLimit = 36;
+let lastExploreFacilities = [];
 let questFacilityId = "";
 let deferredInstallPrompt = null;
 let menuSwipeStart = null;
@@ -857,6 +859,8 @@ const el = {
   searchInput: document.querySelector("#searchInput"),
   searchClearButton: document.querySelector("#searchClearButton"),
   searchResultsStatus: document.querySelector("#searchResultsStatus"),
+  facilitySortSelect: document.querySelector("#facilitySortSelect"),
+  copyListButton: document.querySelector("#copyListButton"),
   searchForm: document.querySelector("#searchForm"),
   searchPrefectureSelect: document.querySelector("#searchPrefectureSelect"),
   featureFilterToggle: document.querySelector("#featureFilterToggle"),
@@ -926,6 +930,7 @@ const el = {
   pushNotifyStatus: document.querySelector("#pushNotifyStatus"),
   pushNotifyButton: document.querySelector("#pushNotifyButton"),
   articleCategoryStrip: document.querySelector("#articleCategoryStrip"),
+  guideStarter: document.querySelector("#guideStarter"),
   guideGearRail: document.querySelector("#guideGearRail"),
   articleList: document.querySelector("#articleList"),
   articleCount: document.querySelector("#articleCount"),
@@ -1270,6 +1275,22 @@ function bindEvents() {
     visibleLimit = 36;
     renderAll();
     el.main.scrollTo({ top: 0, behavior: "instant" });
+  });
+  el.facilitySortSelect?.addEventListener("change", () => {
+    facilitySortMode = el.facilitySortSelect.value;
+    visibleLimit = 36;
+    renderExplore();
+  });
+  el.copyListButton?.addEventListener("click", async () => {
+    const list = lastExploreFacilities.filter((facility) => activeFilter === "favorite" ? state.favorites[facility.id] : state.wishlist[facility.id]);
+    if (!list.length) return;
+    const text = list.map((facility) => `${facility.name}（${facility.prefecture || ""}）`).join("\n");
+    try {
+      await navigator.clipboard.writeText(text);
+      showToast(`${list.length}件の施設名をコピーしました`);
+    } catch {
+      showToast("コピーできませんでした");
+    }
   });
   el.featureFilterToggle.addEventListener("click", () => {
     el.featureFilterPanel.hidden = !el.featureFilterPanel.hidden;
@@ -2507,6 +2528,8 @@ function renderExplore() {
   el.facilityList.setAttribute("aria-busy", "false");
   el.facilityList.inert = false;
   const facilities = getFilteredFacilities();
+  lastExploreFacilities = facilities;
+  if (el.copyListButton) el.copyListButton.hidden = !((activeFilter === "favorite" || activeFilter === "wishlist") && facilities.length > 0);
   const statusAwardYear = searchTerm ? getSaunachelinAwardYear(searchTerm) : null;
   const specialAwardCount = statusAwardYear
     ? facilities.filter((facility) => (facility.specialAwardYears || []).includes(statusAwardYear)).length
@@ -3179,28 +3202,48 @@ function getFacilityDetailLines(facility) {
 }
 
 const BACKUP_HINT_KEY = "saincho-backup-hint-dismissed-v1";
+const BACKUP_EXPORT_KEY = "saincho-backup-last-export-v1";
+const BACKUP_HINT_REMIND_AFTER_MS = 30 * 24 * 60 * 60 * 1000;
+const BACKUP_HINT_NEW_STAMPS = 20;
 
 function shouldShowBackupHint(visitedCount, dismissed) {
   return visitedCount >= 1 && !dismissed;
 }
 
-function isBackupHintDismissed() {
+function getBackupExportRecord() {
   try {
-    return localStorage.getItem(BACKUP_HINT_KEY) === "1";
+    const parsed = JSON.parse(localStorage.getItem(BACKUP_EXPORT_KEY) || "null");
+    return parsed && typeof parsed.stamps === "number" ? parsed : null;
   } catch {
-    return false;
+    return null;
   }
+}
+
+function getBackupHintDismissedAt() {
+  try {
+    const value = Number(localStorage.getItem(BACKUP_HINT_KEY));
+    return Number.isFinite(value) && value > 1 ? value : 0;
+  } catch {
+    return 0;
+  }
+}
+
+function isBackupHintDismissed(visitedCount = Object.keys(state.visited || {}).length) {
+  const exported = getBackupExportRecord();
+  if (exported && visitedCount - exported.stamps < BACKUP_HINT_NEW_STAMPS) return true;
+  const dismissedAt = getBackupHintDismissedAt();
+  return dismissedAt > 0 && Date.now() - dismissedAt < BACKUP_HINT_REMIND_AFTER_MS;
 }
 
 function updateBackupHint() {
   if (!el.backupHint) return;
   const visitedCount = Object.keys(state.visited || {}).length;
-  el.backupHint.hidden = !shouldShowBackupHint(visitedCount, isBackupHintDismissed());
+  el.backupHint.hidden = !shouldShowBackupHint(visitedCount, isBackupHintDismissed(visitedCount));
 }
 
 function dismissBackupHint() {
   try {
-    localStorage.setItem(BACKUP_HINT_KEY, "1");
+    localStorage.setItem(BACKUP_HINT_KEY, String(Date.now()));
   } catch {
     // 保存できない環境では今回の表示だけ閉じる
   }
@@ -3317,7 +3360,7 @@ function renderTitleProgress() {
     : 100;
   const prefProgress = selectedPrefecture === "全国" ? null : getPrefectureMasterProgress(selectedPrefecture);
   const prefCopy = prefProgress
-    ? `${selectedPrefecture}: ${prefProgress.visited}/${prefProgress.eligible}湯${prefProgress.mastered ? " / マスター認定済み" : ` / あと${prefProgress.remaining}湯`}`
+    ? `${selectedPrefecture}: ${prefProgress.visited}/${prefProgress.eligible}湯（${prefProgress.eligible ? Math.round((prefProgress.visited / prefProgress.eligible) * 100) : 0}%）${prefProgress.mastered ? " / マスター認定済み" : ` / あと${prefProgress.remaining}湯`}`
     : `${getMasteredPrefectures().length}/${PREFECTURES.length}県をマスター`;
 
   el.titleProgressPanel.innerHTML = `
@@ -4529,6 +4572,39 @@ function setCommunityStatus(message, isError) {
   el.communityStatus.classList.toggle("is-error", Boolean(isError));
 }
 
+const GUIDE_STARTER_KEYS = ["洗う、温める、拭く", "出るサイン", "共通マナー"];
+
+function renderGuideStarter() {
+  if (!el.guideStarter) return;
+  if (selectedArticleCategory !== "すべて") {
+    el.guideStarter.innerHTML = "";
+    return;
+  }
+  const starters = GUIDE_STARTER_KEYS
+    .map((key) => SAUNA_ARTICLES.findIndex((article) => article.title.includes(key)))
+    .filter((index) => index >= 0);
+  if (!starters.length) {
+    el.guideStarter.innerHTML = "";
+    return;
+  }
+  el.guideStarter.innerHTML = `
+    <section class="guide-starter" aria-label="初めての人向けの記事">
+      <h3>初めての人はこの3本から</h3>
+      <ol>
+        ${starters.map((index, order) => `<li><button type="button" class="guide-starter-item" data-guide-starter="${index}"><span class="guide-starter-num">${order + 1}</span><span class="guide-starter-title">${escapeHtml(SAUNA_ARTICLES[index].title)}</span><span class="guide-starter-cat">${escapeHtml(SAUNA_ARTICLES[index].category)}</span></button></li>`).join("")}
+      </ol>
+    </section>`;
+  el.guideStarter.querySelectorAll("[data-guide-starter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const index = Number(button.dataset.guideStarter);
+      const card = el.articleList.children[index];
+      const details = card ? card.querySelector("details") : null;
+      if (details) details.open = true;
+      if (card) card.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
 function renderGuidePage() {
   const categories = ["すべて", ...uniqueStrings(SAUNA_ARTICLES.map((item) => item.category))];
   if (!categories.includes(selectedArticleCategory)) selectedArticleCategory = "すべて";
@@ -4537,6 +4613,7 @@ function renderGuidePage() {
     : SAUNA_ARTICLES.filter((item) => item.category === selectedArticleCategory);
 
   el.articleCount.textContent = `${articles.length}/${SAUNA_ARTICLES.length}記事`;
+  renderGuideStarter();
   el.articleCategoryStrip.innerHTML = categories.map((category) => `
     <button class="pref-chip ${selectedArticleCategory === category ? "pref-chip-active" : ""}" type="button" data-article-category="${escapeAttr(category)}">
       ${escapeHtml(category)}
@@ -5611,11 +5688,23 @@ function renderSaunachelinAwardBadge(facility) {
   return `<span class="award-badge">SAUNACHELIN ${parts.join("／")}${hallOfFame ? "／殿堂入り" : ""}</span>`;
 }
 
+let facilitySortMode = "standard";
+
+function facilityInfoRank(facility) {
+  return (getFacilityEvidence(facility) ? 2 : 0) + (facility.address ? 1 : 0);
+}
+
+function applyFacilitySort(list) {
+  if (facilitySortMode === "name") return [...list].sort((a, b) => a.name.localeCompare(b.name, "ja"));
+  if (facilitySortMode === "verified") return [...list].sort((a, b) => facilityInfoRank(b) - facilityInfoRank(a));
+  return list;
+}
+
 function getFilteredFacilities({ ignoreFeatures = false } = {}) {
   const awardYear = searchTerm ? getSaunachelinAwardYear(searchTerm) : null;
   const needsSearchIndex = searchNeedles.length > 0 || selectedFeatureFilters.size > 0;
   if (!needsSearchIndex) {
-    return getFacilities().filter((facility) => {
+    return applyFacilitySort(getFacilities().filter((facility) => {
       const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
       const matchesFilter =
         activeFilter === "all" ||
@@ -5623,10 +5712,10 @@ function getFilteredFacilities({ ignoreFeatures = false } = {}) {
         (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
         (activeFilter === "favorite" && state.favorites[facility.id]);
       return selected && matchesFilter;
-    });
+    }));
   }
 
-  return getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
+  return applyFacilitySort(getFacilitySearchRecords().filter(({ facility, features, haystack }) => {
     const selected = selectedPrefecture === "全国" || facility.prefecture === selectedPrefecture;
     const matchesSearch = awardYear !== null
       ? isSaunachelinAwardFacility(facility, awardYear)
@@ -5638,7 +5727,7 @@ function getFilteredFacilities({ ignoreFeatures = false } = {}) {
       (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
       (activeFilter === "favorite" && state.favorites[facility.id]);
     return selected && matchesSearch && matchesFeatures && matchesFilter;
-  }).map(({ facility }) => facility);
+  }).map(({ facility }) => facility));
 }
 
 function getFacilities({ includeFitness = false } = {}) {
@@ -6338,6 +6427,12 @@ function exportState() {
   anchor.download = `saincho-${getLocalDateInputValue()}.json`;
   anchor.click();
   window.setTimeout(() => URL.revokeObjectURL(url), 60000);
+  try {
+    localStorage.setItem(BACKUP_EXPORT_KEY, JSON.stringify({ at: payload.exportedAt, stamps: Object.keys(state.visited || {}).length }));
+  } catch {
+    // 記録できなくても書き出し自体は継続する
+  }
+  updateBackupHint();
   setBackupStatus("ダウンロードを開始しました。端末のダウンロード先でJSONファイルを確認してください。");
 }
 

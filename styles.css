@@ -9415,3 +9415,64 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   line-height: 1.6;
   color: rgb(17 24 23 / 0.7);
 }
+
+/* 検索結果の並び替え・一覧コピー、入門の順路（2026-11-14） */
+.results-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0 10px;
+}
+.sort-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.sort-label select {
+  font-size: 1rem;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+.guide-starter {
+  background: rgb(255 255 255 / 0.78);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.guide-starter h3 { margin: 0 0 10px; font-size: 1rem; font-weight: 800; }
+.guide-starter ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.guide-starter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.guide-starter-num {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.guide-starter-title { font-weight: 700; }
+.guide-starter-cat { margin-left: auto; flex: none; font-size: 0.78rem; color: var(--ink-soft); }
