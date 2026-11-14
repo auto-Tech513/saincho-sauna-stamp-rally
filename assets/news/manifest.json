@@ -232,5 +232,17 @@
     "og": "/assets/news/joto5-sento-stamp-rally-2026-og.png",
     "thumb": "/assets/news/joto5-sento-stamp-rally-2026-thumb.webp",
     "generatedAt": "2026-11-13"
+  },
+  "kocoo-wa-hiroo-opening": {
+    "hero": "/assets/news/kocoo-wa-hiroo-opening-hero.webp",
+    "og": "/assets/news/kocoo-wa-hiroo-opening-og.png",
+    "thumb": "/assets/news/kocoo-wa-hiroo-opening-thumb.webp",
+    "generatedAt": "2026-11-14"
+  },
+  "renaissance-kamiooka-renewal": {
+    "hero": "/assets/news/renaissance-kamiooka-renewal-hero.webp",
+    "og": "/assets/news/renaissance-kamiooka-renewal-og.png",
+    "thumb": "/assets/news/renaissance-kamiooka-renewal-thumb.webp",
+    "generatedAt": "2026-11-14"
   }
 }

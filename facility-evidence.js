@@ -1355,6 +1355,16 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }],
   },
   {
+    ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "planned",
+    features: [],
+    facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
+  },
+  {
+    ids: ["manual-kanagawa-renaissance-kamiooka"], name: "フィットネスクラブ＆サウナスパ ルネサンス上大岡", status: "open",
+    features: ["温泉付き", "水風呂あり", "外気あり"],
+    facts: [{ label: "営業状況", value: "営業中（2026年11月5日にリニューアルオープン。男女とも約90℃のドライサウナとオートロウリュ、水風呂16度前後、炭酸泉と天然温泉を備え、入浴のみの利用も可能）", sourceUrl: "https://www.sportsoasis.co.jp/sh81/post/renewal-kamiooka/", checkedAt: "2026-11-14" }],
+  },
+  {
     ids: ["st-iwate-187"], name: "サウナ＆カプセル宮古", status: "closed",
     features: [],
     facts: [{ label: "営業状況", value: "閉館（閉館日不明）。日帰り入浴の閉館リストに閉館として掲載（住所が登録情報と一致）。公式サイトは消滅し404。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://yuru-to.net/closed.php?oid=47706", checkedAt: "2026-11-10" }],

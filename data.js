@@ -71149,5 +71149,45 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://misato.cocofuro.com/",
     "officialUrl": "https://misato.cocofuro.com/"
+  },
+  {
+    "id": "manual-tokyo-kocoowa-hiroo",
+    "name": "Kocoo和",
+    "prefecture": "東京都",
+    "address": "〒150-0012 東京都渋谷区広尾5-8-14 いちご広尾ビル B1F",
+    "addressSource": "公式サイト",
+    "city": "渋谷区",
+    "trait": "urban",
+    "tags": [
+      "女性専用",
+      "完全個室サウナ"
+    ],
+    "features": [
+      "女性専用"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://kocoowa.com",
+    "officialUrl": "https://kocoowa.com"
+  },
+  {
+    "id": "manual-kanagawa-renaissance-kamiooka",
+    "name": "フィットネスクラブ＆サウナスパ ルネサンス上大岡",
+    "prefecture": "神奈川県",
+    "address": "〒233-0002 神奈川県横浜市港南区上大岡西3-9-1 ヨークフーズ上大岡店2階",
+    "addressSource": "公式サイト",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [
+      "天然温泉",
+      "オートロウリュ"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.sportsoasis.co.jp/sh81/",
+    "officialUrl": "https://www.sportsoasis.co.jp/sh81/"
   }
 ];
