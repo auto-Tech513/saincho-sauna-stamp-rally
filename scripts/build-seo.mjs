@@ -188,7 +188,7 @@ const SAUNA_EVENTS = [
     endDate: "2026-11-30",
     howTo: "対象施設にあるQRコードでスタンプを集めます。3個・5個で抽選、15個で全員プレゼントがあります。",
     goshuin: false,
-    checkedAt: "2026-11-09",
+    checkedAt: "2026-11-15",
   },
   {
     id: "kumamoto-gosaincho",
@@ -201,7 +201,7 @@ const SAUNA_EVENTS = [
     endDate: "2027-03-12",
     howTo: "配布場所で冊子を受け取り、熊本の対象サウナで御サ印を集めます。集めた数に応じて抽選プレゼントに応募できます（応募期間は2027年3月12日まで）。本サイト「サ印帳」とは別の企画です。",
     goshuin: true,
-    checkedAt: "2026-11-09",
+    checkedAt: "2026-11-15",
   },
   {
     id: "nagoya-yugoin-2026",

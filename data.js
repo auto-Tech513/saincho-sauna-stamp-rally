@@ -6,8 +6,8 @@ export const DATASET_META = {
   "notes": "施設名・都道府県・参照URLを基礎情報とし、住所・特徴・公式URLは公開確認できた項目のみ掲載します。",
   "addressEnrichedAt": "2026-07-11T12:29:06.524Z",
   "addressMethod": "公開参照ページの住所欄を取得し、都道府県一致を検証。推測値は不使用。",
-  "lastSourceAuditAt": "2026-11-08",
-  "lastSourceAuditScope": "SaunaTime施設別参照ページ1,153件（2026-11-04に648件、2026-11-08に505件を照合）。全施設の営業状況確認を意味しません。"
+  "lastSourceAuditAt": "2026-11-15",
+  "lastSourceAuditScope": "SaunaTime施設別参照ページ9件（2026-11-15照合分）。全施設の営業状況確認を意味しません。"
 };
 
 export const PREFECTURES = [
@@ -307,9 +307,10 @@ export const SEED_FACILITIES = [
     "trait": "award",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4701/",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04",
-    "officialUrlSource": "https://saunatime.jp/saunas/4701/"
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15",
+    "officialUrlSource": "https://saunatime.jp/saunas/4701/",
+    "officialUrl": "https://renosauna.studio.site/"
   },
   {
     "id": "st-hokkaido-4690",
@@ -322,8 +323,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4690/",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04",
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15",
     "officialUrl": "https://savebleu.amebaownd.com/pages/5461528/page_202110251045",
     "officialUrlSource": "https://saunatime.jp/saunas/4690/"
   },
@@ -338,8 +339,8 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4719/",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15"
   },
   {
     "id": "st-hokkaido-232",
@@ -352,8 +353,8 @@ export const SEED_FACILITIES = [
     "trait": "onsen",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/232/",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04",
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15",
     "officialUrl": "https://yudokoro-honoka.jp/eniwa/",
     "officialUrlSource": "https://saunatime.jp/saunas/232/"
   },
@@ -472,8 +473,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/256/",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04",
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15",
     "officialUrl": "http://himawari-morinosato.com/home/",
     "officialUrlSource": "https://saunatime.jp/saunas/256/"
   },
@@ -1467,7 +1468,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1345/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-15"
   },
   {
     "id": "st-iwate-1337",
@@ -1487,8 +1488,8 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1337/",
     "city": "盛岡市",
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15"
   },
   {
     "id": "st-iwate-3692",
@@ -5327,7 +5328,7 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1591/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-15"
   },
   {
     "id": "st-gumma-1603",
@@ -5359,8 +5360,8 @@ export const SEED_FACILITIES = [
     "tags": [
       "男性専用"
     ],
-    "sourceCheckedAt": "2026-11-04",
-    "addressCheckedAt": "2026-11-04",
+    "sourceCheckedAt": "2026-11-15",
+    "addressCheckedAt": "2026-11-15",
     "officialUrl": "https://everyday-sauna.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/4790/"
   },
