@@ -5670,6 +5670,358 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("営業状況", "公式サイトに「豪雨被害による営業停止のお知らせ」を掲載。令和2年7月豪雨で1階部分が甚大な被害を受け営業を停止しており、再開の告知は公式サイトで確認できない", "http://yunoeki.com/"),
     ],
   },
+  {
+    ids: ["st-kumamoto-4024"], name: "大谷の湯", officialUrl: "https://ootanino-yu.com/",
+    features: ["温泉付き", "外気あり", "貸切可"],
+    facts: [
+      factNov14("料金", "大人（中学生以上）630円、小人（小学生以下）350円、3歳未満無料。家族風呂（全3室）50分2,000円・80分2,500円", "https://ootanino-yu.com/"),
+      factNov14("営業時間", "10:00～24:00（受付：大浴場23:30、家族風呂23:00）", "https://ootanino-yu.com/"),
+      factNov14("定休日", "第1水曜日", "https://ootanino-yu.com/"),
+      factNov14("設備", "地下1000mから汲み上げる源泉かけ流し100％の天然温泉。大浴場、露天風呂、サウナ、家族風呂（3室）、レストラン併設", "https://ootanino-yu.com/"),
+    ],
+  },
+  {
+    ids: ["st-kumamoto-4557"], name: "通潤山荘", officialUrl: "https://tsujun.jp/",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "立ち寄り湯600円（現金のみ）", "https://tsujun.jp/"),
+      factNov14("営業時間", "立ち寄り湯14:00～20:00（最終受付19:30）。宿泊者の温泉利用15:00～21:00", "https://tsujun.jp/"),
+      factNov14("定休日", "立ち寄り湯は年中無休（施設の点検、補修時を除く）", "https://tsujun.jp/"),
+      factNov14("設備", "天然温泉の大浴場、サウナ、露天風呂", "https://tsujun.jp/"),
+      factNov14("利用条件", "日帰り入浴（立ち寄り湯）可。立ち寄り湯の支払いは現金のみ", "https://tsujun.jp/"),
+      factNov14("営業状況", "公式サイトのお知らせ（2026年9月1日付）により、令和8年熊本地震のためサウナ・露天風呂は利用不可。露天風呂は11月1日から3月31日まで営業休止", "https://tsujun.jp/"),
+    ],
+  },
+  {
+    ids: ["st-oita-3865"], name: "ほていの湯(大分)", officialUrl: "https://www.taketan.jp/spots/detail/211",
+    features: ["温泉付き", "外気あり", "貸切可"],
+    facts: [
+      factNov14("料金", "大人600円・小人（小学生）300円、以下無料。貸切湯2,000円/60分", "https://www.taketan.jp/spots/detail/211"),
+      factNov14("営業時間", "夏季（5月～9月）10:00～21:00（最終受付20:30）、冬季（10月～4月）11:00～20:30（最終受付20:00）。サウナは12:00～", "https://www.taketan.jp/spots/detail/211"),
+      factNov14("定休日", "第2木曜（祝祭日の場合は第3木曜）", "https://www.taketan.jp/spots/detail/211"),
+      factNov14("設備", "大浴場（ジェットバス）・露天風呂・桶風呂・サウナ（男女各1）・家族風呂（合計4室）。源泉掛け流しの炭酸泉（炭酸水素塩泉）", "https://www.taketan.jp/spots/detail/211"),
+    ],
+  },
+  {
+    ids: ["st-oita-3854"], name: "ラムネ温泉館", officialUrl: "http://www.lamune-onsen.co.jp/",
+    features: ["温泉付き", "外気あり", "貸切可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "大浴場 大人800円／小学生400円／未就学児200円。家族風呂 1時間3,000円", "https://lamune-onsen.co.jp/access/"),
+      factNov14("営業時間", "午前10時～午後10時", "https://lamune-onsen.co.jp/access/"),
+      factNov14("定休日", "毎月第1水曜日（1月と5月は第2水曜日）", "https://lamune-onsen.co.jp/access/"),
+      factNov14("設備", "源泉かけ流しの内湯（42℃）と外湯・露天（32℃の炭酸泉）、サウナルーム（高温汗室）を大浴場に併設。家族風呂3室、美術館併設", "https://lamune-onsen.co.jp/access/"),
+      factNov14("利用条件", "家族風呂は電話予約不可・現地先着順。大浴場にはシャンプー・ボディーソープの備え付けなし。バスタオルの貸出（有料）あり", "https://lamune-onsen.co.jp/access/"),
+    ],
+  },
+  {
+    ids: ["st-oita-3589"], name: "温泉療養文化館 御前湯", officialUrl: "http://www.gozenyu.com/index.html",
+    features: ["温泉付き"],
+    facts: [
+      factNov14("営業時間", "朝6時から営業（公式トップページ記載。終了時刻は確認できなかった）", "http://www.gozenyu.com/index.html"),
+      factNov14("設備", "サウナ、マッサージルーム等の設備あり。日本でも指折りの炭酸泉（長湯温泉）", "http://www.gozenyu.com/index.html"),
+    ],
+  },
+  {
+    ids: ["st-oita-827"], name: "竹田温泉花水月", officialUrl: "https://www.taketan.jp/spots/detail/40",
+    features: ["温泉付き", "貸切可"],
+    facts: [
+      factNov14("料金", "大人（中学生以上）600円、子ども（6歳～小学生）300円、家族風呂 2,200円/60分", "https://www.taketan.jp/spots/detail/40"),
+      factNov14("営業時間", "11:00～21:00（入館は20:30まで）。足湯は土日祝 12:00～17:00利用可能", "https://www.taketan.jp/spots/detail/40"),
+      factNov14("定休日", "木曜（祝日は営業）。6月にメンテナンス休館あり", "https://www.taketan.jp/spots/detail/40"),
+      factNov14("設備", "大浴場・サウナ（各 男1・女1ずつ）・家族風呂（2）。塩化物泉、源泉温度40.3度", "https://www.taketan.jp/spots/detail/40"),
+    ],
+  },
+  {
+    ids: ["st-oita-3852"], name: "長湯温泉 かじか庵 • ゆの花", officialUrl: "http://www.kajikaan.com/",
+    features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "貸切可", "宿泊可", "サ飯あり"],
+    facts: [
+      factNov14("料金", "立寄り湯 大人600円・子供300円（タオル持参の場合）。タオル150円、バスタオル250円", "http://www.kajikaan.com/spa-man.html"),
+      factNov14("営業時間", "大浴場・岩盤浴・貸切風呂 10:00～23:00（入館は22:00まで）。宿泊者は翌朝6:00～8:00も大浴場利用可（サウナ等は不可）", "http://www.kajikaan.com/spa-man.html"),
+      factNov14("定休日", "毎週火曜日（火曜日が祝日の際は営業）。毎月の休館日は公式サイトのお知らせで告知", "http://www.kajikaan.com/spa-man.html"),
+      factNov14("設備", "男湯にセルフロウリュ式サウナ（アロマオイル入りの掛け水を用意）。2021年12月より女湯にもサウナ設置（定員3名）。岩盤浴・貸切風呂・露天風呂あり", "http://www.kajikaan.com/spa.html"),
+      factNov14("水風呂", "冬季は湯量が少ない日や湯温が38～40℃になるため、露天風呂をサウナの水風呂として利用", "http://www.kajikaan.com/spa.html"),
+      factNov14("利用条件", "日帰り入浴（立寄り湯）可。お食事利用者は立寄り湯の入浴料が割引になる案内あり", "http://www.kajikaan.com/spa-man.html"),
+    ],
+  },
+  {
+    ids: ["st-oita-4512"], name: "鶴崎ホテル", officialUrl: "https://breezbay-group.com/tsurusaki-h/bath/index.html",
+    features: ["ドライサウナ", "水風呂あり", "温泉付き", "貸切可", "宿泊可", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "日帰り入浴 大浴場（男性専用）500円。貸切露天風呂1時間/2,500円、貸切内湯は14:00～17:00が1時間/1,000円、17:00～深夜0:00が1時間/2,000円", "https://breezbay-group.com/tsurusaki-h/bath/index.html"),
+      factNov14("営業時間", "大浴場（男性専用）平日14:00～深夜2:00、土・日・祝日12:00～深夜2:00、深夜4:00～翌朝9:00。日帰り入浴は14:00～深夜0:00", "https://breezbay-group.com/tsurusaki-h/bath/index.html"),
+      factNov14("設備", "男性用サウナはフィンランドから直輸入した本格サウナ（温度100～110℃）。家族風呂（貸切）・露天風呂あり。女性用の大浴場はない", "https://breezbay-group.com/tsurusaki-h/bath/index.html"),
+      factNov14("水風呂", "水風呂完備（サウナ・ジャグジー・水風呂・打たせ湯）", "https://breezbay-group.com/tsurusaki-h/bath/index.html"),
+      factNov14("利用条件", "日帰り入浴可。朝時間（深夜4:00～翌朝9:00）はサウナ等は利用不可で源泉のみ。タトゥーは原則不可（8cm×10cmのカバーシール1枚で隠れる場合は可）", "https://breezbay-group.com/tsurusaki-h/bath/index.html"),
+    ],
+  },
+  {
+    ids: ["st-oita-3856"], name: "鉄輪むし湯", officialUrl: "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html",
+    features: ["スチーム(ミスト)サウナ", "温泉付き", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "むし湯700円（中学生以上入浴可能）、レンタル浴衣220円、入浴回数券（10枚綴り）6,300円。足むしは無料", "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html"),
+      factNov14("営業時間", "6時30分～20時（最終受付19時30分）。令和8年10月1日～令和9年1月31日は7時30分～19時30分（最終受付19時）に変更", "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html"),
+      factNov14("定休日", "第4木曜日（祝日の場合は翌日）", "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html"),
+      factNov14("設備", "温泉で熱せられた石室の床に薬草「石菖」を敷き詰めた蒸し湯。男女別各4名同時利用可能。足蒸しあり", "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html"),
+      factNov14("利用条件", "むし湯は中学生以上入浴可能。Tシャツ短パン持参可能", "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html"),
+      { label: "施設営業時間", value: "7時30分～19時30分（最終受付19時00分）", sourceUrl: "https://www.city.beppu.oita.jp/sisetu/shieionsen/detail11.html", checkedAt: "2026-10-19" },
+    ],
+  },
+  {
+    ids: ["st-oita-4465"], name: "天然温泉 白糸の湯 ドーミーイン大分", officialUrl: "https://www.hotespa.net/hotels/oita/",
+    features: ["外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "最上階12Fに天然温泉大浴場「白糸の湯」。内湯は別府温泉からの運び湯（単純温泉）を使用。露天風呂・壺風呂あり", "https://www.hotespa.net/hotels/oita/"),
+    ],
+  },
+  {
+    ids: ["st-oita-3914"], name: "百歳の湯（ニューグロリア大分ホテル）", officialUrl: "http://gloria-oita.com/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      factNov14("営業時間", "大浴場、サウナは男女とも24時間利用可能（宿泊者）", "http://gloria-oita.com/facility"),
+      factNov14("設備", "男女別天然温泉大浴場（内湯 男1・女1）とサウナ（男1・女1）。大分市中心部の地下より湧く天然温泉100%かけ流し", "http://gloria-oita.com/facility"),
+      factNov14("利用条件", "宿泊のお客様はチェックアウトまで24時間入り放題。日帰り入浴の案内は公式ページで確認できなかった", "http://gloria-oita.com/"),
+    ],
+  },
+  {
+    ids: ["st-oita-3857"], name: "別府温泉 杉乃井ホテル　大展望露天風呂 棚湯", officialUrl: "https://www.suginoi-hotel.com/facilities/tanayu.html",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "宿泊可"],
+    facts: [
+      factNov14("設備", "5段からなる湯船を棚田状に広げた大展望露天風呂「棚湯」。水着で入れる屋外型温泉アクアガーデン併設", "https://www.suginoi-hotel.com/facilities/tanayu.html"),
+      factNov14("設備", "2023年7月1日の棚湯リニューアルでサウナエリアを拡充。サウナ室をロウリュウサウナに改修し、アロマ水による自動ロウリュウと光の演出を実施", "https://suginoi.orixhotelsandresorts.com/uploads/2023/06/release20230606.pdf"),
+      factNov14("水風呂", "水風呂を新規設置し、外気浴スペースと一体化", "https://suginoi.orixhotelsandresorts.com/uploads/2023/06/release20230606.pdf"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-867"], name: "カプセルルーム＆サウナ・マリノーヴァ", officialUrl: "https://www.hotel-marix.co.jp/marix/marinova/",
+    features: ["水風呂あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入泉 大浴場・サウナA（3時間以内）780円、B（3時間以上）1,100円、D（2:00～5:00）1,150円、F（5:00～10:00）850円。宿泊者は入泉無料", "https://www.hotel-marix.co.jp/marix/marinova/"),
+      factNov14("営業時間", "大浴場・サウナ入泉 15:00～翌10:00（日帰りは時間区分・最終受付あり）", "https://www.hotel-marix.co.jp/marix/marinova/"),
+      factNov14("設備", "準天然光明石温泉（人工温泉）の大浴場、北欧式サウナ、水風呂、カプセルルーム、休憩室、仮眠室、ボディケア・フットケア", "https://www.hotel-marix.co.jp/marix/marinova/"),
+      factNov14("水風呂", "天然大淀裂罅水を使用した水風呂", "https://www.hotel-marix.co.jp/marix/marinova/"),
+      factNov14("利用条件", "日帰り入泉は男性専用。泥酔者、暴力団関係者、入れ墨・ボディーアート（タトゥ・ペイント・シール）のある方は入場不可", "https://www.hotel-marix.co.jp/marix/marinova/"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-868"], name: "スパぱうぱう", officialUrl: "https://www.hotel-marix.co.jp/lagoon/spapawpaw/",
+    features: ["水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "日帰り入泉 大人 平日700円・土日祝日800円、小学生以下400円（くつろぎ着とタオルセット付）。宿泊者は入泉無料", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+      factNov14("営業時間", "日帰り入泉 10:00～23:00（最終受付22:30）。宿泊者は15:00～23:00（最終受付22:30）と6:00～8:00（最終受付7:30）", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+      factNov14("定休日", "月に1回メンテナンス休館あり。2026年大浴場休館日は1/19、3/2、4/6、5/11、6/8、7/6、8/31、9/28、11/2、12/14", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+      factNov14("設備", "準天然光明石温泉（人工温泉）の大浴場。男女別浴場（男湯TOTOKA・女湯MAREKA）に寝湯、へそ湯、腰湯、露天風呂、電気風呂、水風呂、北欧式サウナ。岩盤浴あり", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+      factNov14("水風呂", "男女別浴場に水風呂あり", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+      factNov14("利用条件", "日帰り入泉可能。泥酔者、暴力団関係者、入れ墨・ボディーアート（タトゥ・ペイント・シール）のある方は入場不可", "https://www.hotel-marix.co.jp/lagoon/spapawpaw/"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-25"], name: "宮崎第一ホテル", officialUrl: "http://www.23-1111.com/",
+    features: ["水風呂あり", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("設備", "男性専用の大浴場にサウナ、水風呂、低温浴風呂、露天風呂。女性専用の岩盤浴・低温サウナあり", "http://www.23-1111.com/"),
+      factNov14("利用条件", "大浴場は男性専用", "http://www.23-1111.com/"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-2886"], name: "極楽湯 宮崎店", officialUrl: "https://www.aceland.jp/gokurakuyu/",
+    features: ["オートロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "入浴料金 おとな（中学生以上）800円、こども（3歳〜）450円（平日・土日祝日とも）。レンタルタオルセット420円、貸バスタオル250円", "https://www.aceland.jp/relax/spa/"),
+      factNov14("営業時間", "9:00-25:00（土日祝 7:00-25:00）※最終受付 24:20", "https://www.aceland.jp/relax/spa/"),
+      factNov14("設備", "遠赤外線サウナ（2025年5月より男女サウナ室にオートロウリュ導入、およそ30分に1回自動で開始）、天然温泉の内湯、露天岩風呂、露天檜風呂、水風呂", "https://www.aceland.jp/relax/spa/"),
+      factNov14("水風呂", "水風呂あり（サウナ・水風呂・外気冷却を組み合わせた反復浴を案内）", "https://www.aceland.jp/relax/spa/"),
+      factNov14("利用条件", "入館料金は現金のみ。入墨（タトゥー）及び泥酔の方は利用不可。サウナは安全面の観点から12歳以下のお子様の利用不可", "https://www.aceland.jp/relax/spa/"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-3581"], name: "合歓木温泉 広原店", officialUrl: "https://nemunoki-onsen.com/",
+    features: ["水風呂あり", "温泉付き"],
+    facts: [
+      factNov14("料金", "入浴料金 大人500円、学生（中学生以上）450円、小学生以下300円", "https://nemunoki-onsen.com/"),
+      factNov14("営業時間", "広原店 年中無休 朝5:15～夜10:00（最終受付 夜9:00）", "https://nemunoki-onsen.com/"),
+      factNov14("定休日", "年中無休", "https://nemunoki-onsen.com/"),
+      factNov14("設備", "遠赤外線サウナ、広々とした水風呂。毎日浴槽・水風呂槽を完全排水して清掃・殺菌し新湯を張る", "https://nemunoki-onsen.com/"),
+      factNov14("水風呂", "霧島裂罅水を使用した水温約18℃の水風呂（広くて深い水風呂）", "https://nemunoki-onsen.com/"),
+    ],
+  },
+  {
+    ids: ["st-miyazaki-132"], name: "湯之元温泉", officialUrl: "http://www.yunomoto.org/",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "入浴料（日帰り）大人650円、小人（3才～12才）300円", "https://yunomoto.org/spa.php"),
+      factNov14("営業時間", "入浴時間（日帰り）10:00～21:00 ※日帰り入浴の最終受付は20:30まで（宿泊は07:00～22:00）", "https://yunomoto.org/spa.php"),
+      factNov14("設備", "日本最古の高濃度炭酸泉の温泉宿。浴場には内湯［温泉］、内湯［冷泉］、露天風呂を用意。泉質は炭酸水素塩冷鉱泉、源泉温度21.6℃", "https://yunomoto.org/spa.php"),
+      factNov14("利用条件", "日帰り入浴可。入れ墨、タトゥーをされている方の入泉は不可", "https://yunomoto.org/spa.php"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4159"], name: "かいせい乃湯", officialUrl: "http://kaiseinoyu.com/",
+    features: ["温泉付き"],
+    facts: [
+      factNov14("設備", "源泉かけ流しの天然温泉。泉質はナトリウム-塩化物・硫酸塩・炭酸水素塩温泉。男湯・女湯、くつろぎスペース、無料駐車場50台以上", "http://kaiseinoyu.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4127"], name: "スパランドら・ら・ら", officialUrl: "http://www.spa-rarara.com/",
+    features: ["ロウリュあり", "温泉付き", "外気あり", "宿泊可", "サ飯あり"],
+    facts: [
+      factNov14("営業時間", "大浴場（温泉）午前10時から午後9時30分まで。スパゾーン（水着浴室）午前10時から午後9時まで ※当面の間、時間短縮での営業を継続（午前10時から午後6時まで）", "http://www.spa-rarara.com/"),
+      factNov14("設備", "石造り洋風湯（Yurara）、ヒバ香る和風湯（湯楽里）、開放露天とロウリュサウナ。アルカリ性単純泉。水着で楽しむ25種のスパゾーン、レストラン、宿泊施設あり", "http://www.spa-rarara.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4160"], name: "フォンタナの丘かもう", officialUrl: "http://f-kamou.com/spa",
+    features: ["温泉付き", "外気あり", "宿泊可"],
+    facts: [
+      factNov14("料金", "一般入浴 大人600円、子供（小学生以下）300円、乳児（3歳未満）無料。一日入浴 大人1,000円、子供500円、乳児無料", "http://f-kamou.com/spa"),
+      factNov14("営業時間", "露天風呂付き大浴場 8:00～20:00（入浴受付は19:00まで）", "http://f-kamou.com/spa"),
+      factNov14("設備", "3つの源泉をミックスした源泉かけ流しの天然温泉（炭酸水素塩泉、pH7.83の弱アルカリ性）。大浴場には高温・低温の湯、サウナがあり、大露天風呂には信楽焼の湯船の殿湯・姫湯", "http://f-kamou.com/spa"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-916"], name: "ふれあいセンターわくわく川辺", officialUrl: "https://wakuwakukawanabe.jimdosite.com/",
+    features: ["貸切可"],
+    facts: [
+      factNov14("料金", "一般大人入浴券460円（回数券11枚4,600円）、南九州市在住65歳以上270円、中人（6歳以上11歳まで）150円、小人（1歳以上6歳未満）80円。家族風呂（定員5名）60分1,570円・90分2,090円", "https://wakuwakukawanabe.jimdosite.com/"),
+      factNov14("営業時間", "午前10時～午後9時（入浴受付は午後8時30分終了、家族湯は午後7時40分までの受付）", "https://wakuwakukawanabe.jimdosite.com/"),
+      factNov14("定休日", "毎月第2、第4水曜日 ※休館日が祝日の場合、翌日を休館日とする", "https://wakuwakukawanabe.jimdosite.com/"),
+      factNov14("設備", "家族風呂（定員5名）あり。身障者風呂は3時間以上前の予約制（2時間520円）", "https://wakuwakukawanabe.jimdosite.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-889"], name: "姶良市温泉センターくすの湯", officialUrl: "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html",
+    features: ["ドライサウナ", "水風呂あり", "外気あり", "温泉付き"],
+    facts: [
+      factNov14("料金", "一般入浴料（1人1回）大人300円、小人150円（小人は中学生・15歳以下、未就学児は無料）。割引回数券 大人3,000円、小人1,500円", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("営業時間", "午前10時～午後9時", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("定休日", "月曜日（休館日が祝日のときは、翌平日営業日）", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("設備", "ドライサウナ（壁やベンチをヒノキで一新、TV完備）、主浴、電気風呂、リラックス風呂、屋根つき露天風呂。泉質はナトリウム-塩化物温泉", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("水風呂", "豊富な天然水を使用した深さ1メートルの水風呂", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("利用条件", "シャンプー、ボディーソープ、タオルなどは各自持参（売店で販売もあり）。ドライヤー（無料）完備", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+      factNov14("営業状況", "姶良市公式ページの臨時休館のお知らせにより、サウナベンチリニューアルのため11月24日から11月30日まで臨時休館（営業再開は12月1日10時からの予定）", "http://www.city.aira.lg.jp/chiiki-kamo/gyosei/shisetsu/kanko/kusunoyu.html"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4119"], name: "芦刈温泉", officialUrl: "https://www.asikari-spa.com/index.html",
+    features: ["スチーム(ミスト)サウナ", "温泉付き", "サ飯あり", "タオルレンタルあり"],
+    facts: [
+      factNov14("料金", "大人（12歳以上）460円、中人（6歳以上）150円、小人（6歳未満）80円。入浴レンタルセット（タオル・バスタオル・シャンプー等）350円", "https://asikari-spa.com/"),
+      factNov14("営業時間", "6:00〜24:00", "https://asikari-spa.com/"),
+      factNov14("設備", "源泉かけ流しのひのき風呂・露天風呂・つぼ湯、ミストサウナ、ジャグジーなどの機能風呂。併設のお食事処あり", "https://asikari-spa.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-907"], name: "一本桜温泉センター", status: "suspended", officialUrl: "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-51.php",
+    features: ["水風呂あり", "温泉付き", "貸切可"],
+    facts: [
+      factNov14("営業時間", "24時間営業（休業前の案内）", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-51.php"),
+      factNov14("定休日", "年中無休（休業前の案内）", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-51.php"),
+      factNov14("設備", "露天風呂・サウナ・水風呂・電気風呂・ジェットバス・岩風呂・家族湯。男湯・女湯それぞれに浴室が2つずつ", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-51.php"),
+      factNov14("営業状況", "鹿児島県公衆浴場組合の公式ページに「2026年3月より建替え工事の為休業中です。（2028年度オープン予定）」と明記", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-51.php"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4639"], name: "奄美ポートタワーホテル", officialUrl: "http://porttower.net/index.html",
+    features: ["水風呂あり", "宿泊可", "サ飯あり"],
+    facts: [
+      factNov14("料金", "朝食とお風呂のセット1,320円（税込）※男性のみ。宿泊者は大浴場無料", "http://porttower.net/index.html"),
+      factNov14("営業時間", "浴場 午前の部5:30〜9:30、午後の部13:00〜23:30（午後の部は男性サウナ付き）", "http://porttower.net/index.html"),
+      factNov14("設備", "3階に男性用大浴場と女性用小浴場。男性用大浴場にはサウナ室・水風呂を完備", "http://porttower.net/index.html"),
+      factNov14("水風呂", "男性用大浴場に水風呂あり", "http://porttower.net/index.html"),
+      factNov14("利用条件", "外来（日帰り）入浴は男性のみ利用可能。女性の外来入浴は2023年2月1日より停止（宿泊の女性客は利用可）", "http://porttower.net/index.html"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-899"], name: "温泉お乃湯", officialUrl: "http://www.tsumagari.jp/onoyu/",
+    features: ["温泉付き", "貸切可", "サ飯あり"],
+    facts: [
+      factNov14("料金", "貸切家族風呂は1部屋1時間2,000円または2,500円（部屋タイプによる）。大浴場の入浴料はページに明記なし", "http://www.tsumagari.jp/onoyu/"),
+      factNov14("営業時間", "6:00〜22:00", "http://www.tsumagari.jp/onoyu/"),
+      factNov14("定休日", "第1月曜日", "http://www.tsumagari.jp/onoyu/"),
+      factNov14("設備", "天然温泉の大浴場・露天風呂・サウナ、岩盤浴、貸切家族風呂5タイプ7室（休憩室付き）、広間・食事の用意あり", "http://www.tsumagari.jp/onoyu/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-910"], name: "亀乃湯(鹿児島) ", officialUrl: "http://www.kagoshima-onsen1010.net/sento-map/post-48.php",
+    features: ["水風呂あり"],
+    facts: [
+      factNov14("営業時間", "14:00〜22:30", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-48.php"),
+      factNov14("定休日", "毎週月曜日", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-48.php"),
+      factNov14("設備", "サウナ・水風呂・うたせ・電気風呂・ジェットバス・気泡浴・鍵付きロッカー・マッサージ機・コインランドリー。大浴槽は麦飯石を利用した人工温泉", "https://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-48.php"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-908"], name: "郡元温泉", officialUrl: "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php",
+    features: ["水風呂あり", "温泉付き"],
+    facts: [
+      factNov14("営業時間", "5:30〜22:30", "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php"),
+      factNov14("定休日", "第2・第4木曜日（祝日の場合翌日）", "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php"),
+      factNov14("設備", "サウナ・水風呂・うたせ・電気風呂・ジェットバス・気泡浴・ジャグジー・寝風呂・岩風呂・浮風呂。泉質は塩化物泉", "http://www.kagoshima-onsen1010.net/sento-map/kagoshima/korimoto/post-52.php"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4556"], name: "古民家村家族湯 天空", officialUrl: "https://kazokuyu-tenku.com/",
+    features: ["水風呂あり", "温泉付き", "個室", "貸切可"],
+    facts: [
+      factNov14("料金", "1室料金（霧島店・姶良店共通）1時間2,700円、75分2,900円、90分3,100円、2時間4,700円、3時間5,700円、4時間7,700円、5時間9,200円、6時間11,000円、7時間13,000円", "https://kazokuyu-tenku.com/"),
+      factNov14("営業時間", "10時〜翌0時00分（受付〜23時00分）※霧島店・姶良店共通", "https://kazokuyu-tenku.com/"),
+      factNov14("定休日", "休館日なし", "https://kazokuyu-tenku.com/"),
+      factNov14("設備", "霧島店は全11室が離れの貸切家族湯。各室に内風呂・露天風呂・サウナ・水風呂・和室を完備し源泉かけ流し。姶良店はガス遠赤外線サウナ（90〜100度）完備", "https://kazokuyu-tenku.com/"),
+      factNov14("利用条件", "電話予約不可（宿泊も不可）。1組何名でも利用可（1名から可）", "https://kazokuyu-tenku.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4682"], name: "薩摩黒温泉 山華", officialUrl: "https://www.sanga-kagoshima.jp",
+    features: ["温泉付き", "個室", "貸切可"],
+    facts: [
+      factNov14("営業時間", "10:00〜23:00（最終受付22:00）", "https://www.sanga-kagoshima.jp"),
+      factNov14("設備", "全8室の貸切風呂（内湯＋露天風呂付き7室、内湯＋露天風呂＋サウナ付き1室）。鹿児島では珍しい琥珀色の黒湯（モール泉）", "https://www.sanga-kagoshima.jp"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-919"], name: "指宿こころの湯", officialUrl: "http://ibusukikokoro.jp/index.html",
+    features: ["温泉付き", "宿泊可", "サ飯あり"],
+    facts: [
+      factNov14("設備", "バラエティに富んだ6種のお風呂と2種のサウナ（ナノ水使用）。岩盤浴施設「遊癒快房」、お食事処「一心」、漫画コーナーあり", "http://ibusukikokoro.jp/"),
+      factNov14("利用条件", "日帰り温泉「こころの湯」を併設した宿泊施設「指宿こころの宿」（客室数66室）", "http://ibusukikokoro.jp/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4536"], name: "慈眼寺温泉", officialUrl: "http://www.kagoshima-onsen1010.net/sento-map/post-53.php",
+    features: ["水風呂あり", "温泉付き", "貸切可"],
+    facts: [
+      factNov14("営業時間", "6:00〜22:00", "https://www.kagoshima-onsen1010.net/upload/files/kagoshimasentomap-2303a.pdf"),
+      factNov14("定休日", "第2月曜日（祝日の場合第3月曜日）", "https://www.kagoshima-onsen1010.net/upload/files/kagoshimasentomap-2303a.pdf"),
+      factNov14("設備", "サウナ・水風呂・うたせ・電気風呂・超音波・気泡浴・岩風呂・家族湯・休憩室。泉質は単純温泉（組合発行の銭湯地図の設備記号による）", "https://www.kagoshima-onsen1010.net/upload/files/kagoshimasentomap-2303a.pdf"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-876"], name: "前田温泉 カジロが湯", officialUrl: "http://maedasangyo.com/",
+    features: ["温泉付き"],
+    facts: [
+      factNov14("料金", "入浴料 430円", "http://maedasangyo.com/"),
+      factNov14("営業時間", "9:00～20:00", "http://maedasangyo.com/"),
+      factNov14("定休日", "木曜定休", "http://maedasangyo.com/"),
+      factNov14("利用条件", "霧島温泉郷 唯一の立ち寄り湯（日帰り入浴）", "http://maedasangyo.com/"),
+    ],
+  },
+  {
+    ids: ["st-kagoshima-4518"], name: "竹迫温泉", officialUrl: "http://takezako-onsen.com/",
+    features: [],
+    facts: [
+      factNov14("料金", "大人 460円（中学生以上）、中人 150円（小学生）、小人 80円（幼児）", "http://takezako-onsen.com/"),
+      factNov14("営業時間", "5:30～22:30", "http://takezako-onsen.com/"),
+      factNov14("定休日", "第3木曜日（祝日の場合は翌日）", "http://takezako-onsen.com/"),
+      factNov14("設備", "深風呂、ジェットバス、電気風呂、気泡浴、サウナ、鍵付きロッカー、駐車場28台", "http://takezako-onsen.com/"),
+    ],
+  },
+  {
+    ids: ["st-okinawa-4317"], name: "グランヴィリオリゾート石垣島グランヴィリオガーデン", officialUrl: "https://www.grandvrio-hotelresort.com/ishigaki/grandvriogarden/relaxation/#link02",
+    features: ["宿泊可"],
+    facts: [
+      factNov14("設備", "ヴィラガーデン グランドコート1Fに大浴場あり（ソルトスパ「美塩」は大浴場隣に所在）", "https://www.grandvrio-hotelresort.com/ishigaki/grandvriogarden/relaxation/"),
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
