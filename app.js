@@ -794,7 +794,6 @@ let searchTerm = "";
 const SEARCH_SUGGESTION_LIMIT = 8;
 let searchSuggestionIndex = -1;
 let searchSuggestionFacilities = [];
-let searchSuggestionOpenedAt = 0;
 const searchSuggestionNameKeyCache = new Map();
 let searchNeedles = [];
 let selectedFeatureFilters = new Set();
@@ -1368,14 +1367,9 @@ function bindEvents() {
   });
 
   if (el.searchSuggestions) {
-    el.searchSuggestions.addEventListener("pointerdown", (event) => {
-      const row = event.target.closest("[data-suggestion-index]");
-      if (!row) return;
-      event.preventDefault();
-      openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
-    });
+    // Open on click, never on pointerdown: a scroll gesture that starts on a
+    // row must scroll the panel/page instead of navigating away.
     el.searchSuggestions.addEventListener("click", (event) => {
-      if (Date.now() - searchSuggestionOpenedAt < 500) return;
       const row = event.target.closest("[data-suggestion-index]");
       if (!row) return;
       openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
@@ -2906,7 +2900,6 @@ function setSearchSuggestionIndex(index) {
 
 function openSearchSuggestion(facility) {
   if (!facility) return;
-  searchSuggestionOpenedAt = Date.now();
   hideSearchSuggestions();
   track("search_suggestion_click");
   openFacilityDetail(facility);
