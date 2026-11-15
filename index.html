@@ -47,7 +47,9 @@
     <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="preload" href="./assets/saincho-header-ritual.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css?v=20260712-nearby-logshare-v3" />
     <script>
       window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
@@ -199,6 +201,27 @@
   </head>
   <body>
     <div class="app-shell">
+      <aside class="rail-left" aria-label="サ印帳の目次">
+        <div class="rail-logo">
+          <span class="rail-seal" aria-hidden="true">サ</span>
+          <p class="rail-brand">サ印帳</p>
+          <div class="rail-logo-side">
+            <p class="rail-tagline">一湯、一印。</p>
+            <p class="rail-en">SAUNA STAMP RALLY</p>
+          </div>
+        </div>
+        <nav class="rail-toc" aria-label="もくじ">
+          <p class="rail-toc-title">もくじ</p>
+          <button type="button" class="rail-toc-item is-current" data-open-view="Explore" data-toc-target="search"><span class="rail-toc-num">01</span>サウナを探す</button>
+          <button type="button" class="rail-toc-item" data-open-view="Passport"><span class="rail-toc-num">02</span>サ印（押印帳）</button>
+          <button type="button" class="rail-toc-item" data-open-view="Stats"><span class="rail-toc-num">03</span>サ活の記録</button>
+          <button type="button" class="rail-toc-item" data-open-view="Explore" data-toc-target="plan"><span class="rail-toc-num">04</span>次のサ活を計画</button>
+          <button type="button" class="rail-toc-item" data-open-view="News"><span class="rail-toc-num">05</span>サウニュ〜</button>
+          <button type="button" class="rail-toc-item" data-open-view="Sameshi"><span class="rail-toc-num">06</span>サ飯・Gear・合宿先</button>
+          <button type="button" class="rail-toc-item" data-open-view="Guide"><span class="rail-toc-num">07</span>サウナ入門</button>
+          <button type="button" class="rail-toc-item" data-open-view="Community"><span class="rail-toc-num">08</span>サウナ仲間</button>
+        </nav>
+      </aside>
       <header class="topbar">
         <button class="brand-lockup" type="button" data-open-view="Explore" data-reset-explore="true" aria-label="サ印帳ホームへ戻る">
           <img class="brand-mark" src="./icons/icon-192.png" width="48" height="48" alt="" />
@@ -229,6 +252,17 @@
         </div>
         <!-- SSR:SLOT -->
         <section class="view view-active" id="viewExplore" aria-label="ホーム">
+          <div class="book-steam" aria-hidden="true"></div>
+          <div class="book-cover">
+            <p class="book-cover-eyebrow">ZENKOKU SAUNA STAMP BOOK</p>
+            <h2 class="book-cover-title">全国のサウナを、<br />一湯ずつ<span class="book-cover-accent">押していく</span>。</h2>
+            <p class="book-cover-text">行ったサウナに「サ印」を押して、47都道府県の帳面を埋めていく。記録は端末に保存、画像でシェアもできます。</p>
+          </div>
+          <div class="book-counts" aria-label="掲載状況">
+            <div><strong class="book-count-num">__CATALOG_FACILITIES__</strong><span>掲載施設</span></div>
+            <div><strong class="book-count-num">47</strong><span>都道府県</span></div>
+            <div><strong class="book-count-num">__CATALOG_VERIFIED__</strong><span>公式照合済み</span></div>
+          </div>
           <h2 class="explore-title">サウナを探す</h2>
           <div class="tool-band">
             <form class="search-form" id="searchForm" role="search">
@@ -273,6 +307,12 @@
               <strong>現在地から探す</strong>
               <em>2km以内・住所確認済み</em>
             </button>
+            <div class="feature-pills" id="featurePills" role="group" aria-label="特徴ですぐ絞り込む">
+              <button type="button" data-feature-pill="温泉付き" aria-pressed="false">温泉付き</button>
+              <button type="button" data-feature-pill="個室" aria-pressed="false">個室</button>
+              <button type="button" data-feature-pill="セルフロウリュ" aria-pressed="false">セルフロウリュ</button>
+              <button type="button" data-feature-pill="外気あり" aria-pressed="false">外気あり</button>
+            </div>
             <div class="nearby-result" id="nearbyResult" role="status" aria-live="polite"></div>
           </section>
 
@@ -291,6 +331,29 @@
           </div>
 
           <section class="news-rail" id="newsRail" hidden aria-label="サウニュ〜（サウナニュース）新着"></section>
+
+          <section class="book-stamps" id="bookStamps" aria-label="最近のサ印">
+            <div class="book-section-head">
+              <h3 class="book-section-title">サ印</h3>
+              <span class="book-section-en">MY STAMPS</span>
+              <button class="book-section-link" type="button" data-open-view="Passport">コレクション →</button>
+            </div>
+            <div class="book-stamps-grid" id="bookStampsGrid"></div>
+            <div class="book-title-band" id="bookTitleBand" hidden></div>
+          </section>
+
+          <section class="book-shelf" aria-label="サウナ補給">
+            <div class="book-section-head">
+              <h3 class="book-section-title">サウナ補給</h3>
+              <span class="book-section-en">SA-MESHI · GEAR · CAMP</span>
+            </div>
+            <div class="book-shelf-grid">
+              <button type="button" data-open-view="Sameshi"><strong class="book-shelf-num" id="shelfSameshiCount">-</strong><span>サ飯</span></button>
+              <button type="button" data-open-view="Gear"><strong class="book-shelf-num" id="shelfGearCount">-</strong><span>Gear</span></button>
+              <button type="button" data-open-view="Stay"><strong class="book-shelf-num" id="shelfStayCount">-</strong><span>合宿先</span></button>
+              <button type="button" data-open-view="Guide"><strong class="book-shelf-num" id="shelfGuideCount">-</strong><span>入門記事</span></button>
+            </div>
+          </section>
 
           <details class="explore-extras" id="exploreExtras">
             <summary>サ活の進捗・次の一湯</summary>
@@ -319,7 +382,7 @@
                 </div>
                 <div class="hero-metrics" aria-label="候補状況">
                   <div>
-                    <strong id="totalCandidateCount">4975</strong>
+                    <strong id="totalCandidateCount">__CATALOG_FACILITIES__</strong>
                     <span>候補</span>
                   </div>
                   <div>
@@ -410,6 +473,16 @@
           </div>
           <p tabindex="-1" class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="facility-list" id="facilityList"></div>
+
+          <section class="book-map-sp" aria-label="制覇マップ">
+            <h3 class="rail-card-title">制覇マップ <span class="rail-card-count" id="tileMapCountSp">0 / 47</span></h3>
+            <div class="tile-map" id="tileMapSp"></div>
+            <div class="tile-map-legend">
+              <span><i class="legend-dot legend-stamped"></i>押印済み</span>
+              <span><i class="legend-dot legend-wishlist"></i>行きたい</span>
+              <span><i class="legend-dot legend-unvisited"></i>未訪問</span>
+            </div>
+          </section>
         </section>
 
         <section class="view" id="viewFacility" aria-label="施設詳細">
@@ -856,25 +929,85 @@
         </section>
       </main>
 
+      <aside class="rail-right" aria-label="進捗">
+        <div class="rail-actions">
+          <button class="rail-action-button" type="button" data-open-view="Gear">Gear</button>
+          <button class="rail-action-button rail-action-primary" type="button" data-open-view="Add">施設を追加</button>
+          <button class="rail-action-button" type="button" id="railMenuButton">メニュー</button>
+        </div>
+        <section class="rail-card rail-map-card" aria-label="制覇マップ">
+          <h3 class="rail-card-title">制覇マップ <span class="rail-card-count" id="tileMapCount">0 / 47</span></h3>
+          <div class="tile-map" id="tileMap"></div>
+          <div class="tile-map-legend">
+            <span><i class="legend-dot legend-stamped"></i>押印済み</span>
+            <span><i class="legend-dot legend-wishlist"></i>行きたい</span>
+            <span><i class="legend-dot legend-unvisited"></i>未訪問</span>
+          </div>
+        </section>
+        <section class="rail-card rail-next-card" aria-label="次のサ活">
+          <h3 class="rail-card-title">次のサ活</h3>
+          <div class="rail-next-row">
+            <span class="rail-next-num">01</span>
+            <div>
+              <strong>行きたい：<span id="nextWishlistCount">0</span>施設</strong>
+              <span class="rail-next-note">近い順に並べて計画</span>
+            </div>
+          </div>
+          <div class="rail-next-row">
+            <span class="rail-next-num">02</span>
+            <div>
+              <strong>近隣通知</strong>
+              <span class="rail-next-note" id="nextNearbyState">行きたい施設の近くで知らせる</span>
+            </div>
+          </div>
+        </section>
+      </aside>
+
+      <footer class="stage-foot">
+        <button type="button" data-open-view="StampRally">サウナスタンプラリーの始め方</button>
+        <button type="button" data-open-view="Goshuin">サウナ御朱印とサ印の違い</button>
+        <button type="button" data-open-view="About">運営・データ方針</button>
+        <button type="button" data-open-view="Contact">掲載・お問い合わせ</button>
+        <button type="button" id="stageFootInstall">ホーム画面に追加</button>
+      </footer>
+
       <nav class="bottom-nav" aria-label="主要ナビゲーション">
         <button class="nav-active" type="button" data-view="Explore" aria-current="page">
           <span class="nav-icon nav-home" aria-hidden="true"></span>
           <span>ホーム</span>
         </button>
-        <button type="button" data-view="Passport">
-          <span class="nav-icon nav-stamp" aria-hidden="true"></span>
-          <span>サ印</span>
+        <button type="button" id="tabSearchButton">
+          <span class="nav-icon nav-search" aria-hidden="true"></span>
+          <span>探す</span>
+        </button>
+        <button type="button" class="tab-stamp" id="tabStampButton" aria-haspopup="dialog">
+          <span class="tab-stamp-seal" aria-hidden="true">押印</span>
+          <span class="tab-stamp-label">押印</span>
         </button>
         <button type="button" data-view="Stats">
           <span class="nav-icon nav-chart" aria-hidden="true"></span>
           <span>記録</span>
         </button>
-        <button type="button" data-view="Add">
-          <span class="nav-icon nav-plus" aria-hidden="true"></span>
-          <span>施設を追加</span>
+        <button type="button" id="tabMenuButton">
+          <span class="nav-icon nav-menu" aria-hidden="true"></span>
+          <span>メニュー</span>
         </button>
       </nav>
     </div>
+
+    <dialog class="stamp-sheet" id="stampSheet" aria-labelledby="stampSheetTitle">
+      <div class="dialog-head">
+        <h2 id="stampSheetTitle">近くの施設から押す</h2>
+        <button class="icon-button" id="closeStampSheetButton" type="button" aria-label="閉じる">
+          <span class="icon-close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <p class="form-help">位置情報は端末の中でだけ使い、サーバーには送信しません。</p>
+      <div class="stamp-sheet-body" id="stampSheetBody">
+        <button class="primary-button" type="button" id="stampSheetLocate">現在地から探す</button>
+        <div class="stamp-sheet-list" id="stampSheetList"></div>
+      </div>
+    </dialog>
 
     <button class="settings-scrim" id="settingsScrim" type="button" aria-label="設定を閉じる" hidden></button>
     <dialog class="settings-dialog" id="settingsDialog" aria-labelledby="settingsTitle">

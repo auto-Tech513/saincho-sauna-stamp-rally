@@ -62,6 +62,12 @@ const HIDDEN_TAGS = new Set([
 const PREF_SLUG = new Map(PREFECTURES.map((pref) => [pref.name, pref.slug]));
 const { facilities: CANONICAL_FACILITIES, aliases: FACILITY_ALIASES } = dedupeFacilitiesForSeo(SEED_FACILITIES.map(applyFacilityEvidence));
 const SEARCHABLE_FACILITIES = CANONICAL_FACILITIES.filter((facility) => !isFitnessFacility(facility));
+// 掲載件数の単一ソース: 数字の帯・ヒーロー・メタ等の表示はすべてこの2値を使う。
+// verified = 検索対象のうち公式照合プロファイルに fact が1件以上ある施設。
+const VERIFIED_FACILITIES = SEARCHABLE_FACILITIES.filter((facility) => {
+  const evidence = getFacilityEvidence(facility);
+  return evidence && Array.isArray(evidence.facts) && evidence.facts.length >= 1;
+});
 function getFacilityLastmod(facility) {
   const dates = [facility.sourceCheckedAt, facility.addressCheckedAt, ...((getFacilityEvidence(facility)?.facts || []).map((fact) => fact.checkedAt))].filter(Boolean).sort();
   return dates.at(-1) || LASTMOD.data;
@@ -367,7 +373,9 @@ await write("_redirects", [
 
 const template = sourceIndex
   .replace(/href="\.\/styles\.css\?v=[^"]+"/, `href="./${stylesFile}"`)
-  .replace(/src="\.\/app\.js\?v=[^"]+"/, `src="./${appFile}"`);
+  .replace(/src="\.\/app\.js\?v=[^"]+"/, `src="./${appFile}"`)
+  .replaceAll("__CATALOG_FACILITIES__", SEARCHABLE_FACILITIES.length.toLocaleString("en-US"))
+  .replaceAll("__CATALOG_VERIFIED__", VERIFIED_FACILITIES.length.toLocaleString("en-US"));
 
 const urls = [];
 let generatedPages = 0;

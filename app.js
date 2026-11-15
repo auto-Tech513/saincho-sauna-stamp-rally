@@ -2134,7 +2134,6 @@ function trackNewsOnce(key, name, params) {
 function newsRailCardHtml(article, index) {
   return `
       <a class="news-rail-card" href="/news/${escapeAttr(article.slug)}/" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
-        <img src="/assets/news/${article.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
         <span class="news-rail-card-body">
           <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
           <span class="news-rail-card-title" data-num="${String(index + 1).padStart(2, "0")}">${escapeHtml(article.title)}</span>
@@ -2420,6 +2419,7 @@ function handleNewsClick(event) {
 }
 
 function renderAll() {
+  renderRenewalChrome();
   document.body.classList.toggle("is-article", isArticleRoute());
   if (isArticleRoute()) return;
   removeSsrContent();
@@ -2499,8 +2499,7 @@ function renderSummary() {
   el.progressPercent.textContent = `${percent}%`;
   el.progressRing.style.setProperty("--progress", `${rawPercent}%`);
   el.nextMilestone.textContent = nextTitle ? `あと${nextTitle.count - visitedTotal}湯で${nextTitle.title}` : "最高称号に到達済み";
-  el.collectionScope.textContent = `${facilities.length}候補 / ${PREFECTURES.length}都道府県`;
-  el.totalCandidateCount.textContent = facilities.length;
+  el.collectionScope.textContent = `${getCatalogFacilitiesLabel()}候補 / ${PREFECTURES.length}都道府県`;
   el.coveredPrefCount.textContent = coveredPrefTotal;
   el.heroWishlistCount.textContent = wishlistTotal;
   renderRewardNudge(visitedTotal, wishlistTotal);
@@ -5389,6 +5388,7 @@ function renderFeatureControls() {
 }
 
 function renderFeatureFilterGrid() {
+  syncFeaturePills();
   const selectedCount = selectedFeatureFilters.size;
   el.featureFilterCount.textContent = selectedCount ? `${selectedCount}件選択中` : "指定なし";
   if (el.featureFilterPanel.hidden) return;
@@ -5465,7 +5465,7 @@ function stampFacility(facility) {
   saveState();
   track("stamp_add", { facility_id: facility.id, prefecture: facility.prefecture || "", facility_name: facility.name, ...(activeView === "NewsArticle" ? { via: "news" } : {}) });
   queueRankingSync();
-  if (settings.vibration && "vibrate" in navigator) navigator.vibrate([20, 30, 20]);
+  if (settings.vibration && "vibrate" in navigator && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) navigator.vibrate([20, 30, 20]);
   renderAll();
   const afterVisitedTotal = beforeVisitedTotal + 1;
   const afterTitle = getCurrentTitle(afterVisitedTotal);
@@ -8002,3 +8002,275 @@ function restoreUpdateSearch() {
   renderSearchClearButton();
   applySearchValue(term);
 }
+
+/* ===== リニューアル（御朱印帳デザイン）2026-11-15 =====
+   左右レール・数字の帯・印のページ・タイル地図など、シェル側の表示を担う。
+   記録データや既存フローには触れず、表示と導線だけを追加する。 */
+
+function getCatalogFacilitiesLabel() {
+  return document.querySelector(".book-count-num")?.textContent?.trim()
+    || el.totalCandidateCount?.textContent?.trim()
+    || "";
+}
+
+function renderRenewalChrome() {
+  try {
+    renderTileMap();
+  renderRailNext();
+  renderBookStamps();
+  renderBookTitleBand();
+    renderShelfCounts();
+    updateTocCurrent();
+  } catch (error) {
+    console.warn("renewal chrome render skipped", error);
+  }
+}
+
+function updateTocCurrent() {
+  const items = document.querySelectorAll(".rail-toc-item");
+  if (!items.length) return;
+  const indexByView = { Explore: 0, Passport: 1, Stats: 2, News: 4, NewsArticle: 4, Sameshi: 5, Gear: 5, Stay: 5, Guide: 6, Community: 7 };
+  const target = indexByView[activeView] ?? -1;
+  items.forEach((item, index) => item.classList.toggle("is-current", index === target));
+}
+
+function renderTileMap() {
+  const layout = [["北海道",12,0],["青森",12,1],["秋田",11,2],["岩手",12,2],["山形",11,3],["宮城",12,3],["石川",8,4],["富山",9,4],["新潟",10,4],["福島",11,4],["島根",3,5],["鳥取",4,5],["兵庫",5,5],["京都",6,5],["福井",7,5],["岐阜",8,5],["長野",9,5],["群馬",10,5],["栃木",11,5],["茨城",12,5],["山口",2,6],["広島",3,6],["岡山",4,6],["大阪",5,6],["奈良",6,6],["滋賀",7,6],["愛知",8,6],["山梨",9,6],["埼玉",10,6],["東京",11,6],["千葉",12,6],["佐賀",1,7],["福岡",2,7],["愛媛",3,7],["香川",4,7],["和歌山",5,7],["三重",6,7],["静岡",8,7],["神奈川",10,7],["長崎",0,8],["熊本",1,8],["大分",2,8],["高知",3,8],["徳島",4,8],["鹿児島",1,9],["宮崎",2,9],["沖縄",0,10]];
+  const visitedByPref = countVisitedByPrefecture();
+  const wishlistPrefs = new Set();
+  for (const id of Object.keys(state.wishlist || {})) {
+    const facility = getFacilityById(id);
+    if (facility?.prefecture) wishlistPrefs.add(facility.prefecture);
+  }
+  const grid = new Map(layout.map(([name, x, y]) => [`${x},${y}`, name]));
+  let visitedPrefCount = 0;
+  let html = "";
+  for (let y = 0; y <= 10; y++) {
+    for (let x = 0; x < 13; x++) {
+      const name = grid.get(`${x},${y}`);
+      if (!name) { html += `<span class="tile-cell tile-empty" aria-hidden="true"></span>`; continue; }
+      const visited = (visitedByPref[name] || 0) > 0;
+      if (visited) visitedPrefCount++;
+      const cls = visited ? "tile-stamped" : wishlistPrefs.has(name) ? "tile-wishlist" : "tile-unvisited";
+      html += `<button type="button" class="tile-cell ${cls}" data-tile-prefecture="${escapeAttr(name)}" aria-label="${escapeAttr(name)}の施設一覧を開く" title="${escapeAttr(name)}">${escapeHtml(name[0])}</button>`;
+    }
+  }
+  for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) root.innerHTML = html;
+  for (const count of document.querySelectorAll("#tileMapCount, #tileMapCountSp")) count.textContent = `${visitedPrefCount} / 47`;
+}
+
+function renderRailNext() {
+  const wishlistEl = document.querySelector("#nextWishlistCount");
+  if (wishlistEl) wishlistEl.textContent = Object.keys(state.wishlist || {}).length;
+  const nearbyEl = document.querySelector("#nextNearbyState");
+  if (nearbyEl) nearbyEl.textContent = state.nearbyNotifications
+    ? "有効：起動時に2km以内を確認します"
+    : "行きたい施設の近くで知らせる（メニューで有効化できます）";
+}
+
+function renderBookStamps() {
+  const grid = document.querySelector("#bookStampsGrid");
+  if (!grid) return;
+  const visitedEntries = Object.entries(state.visited || {})
+    .map(([id, record]) => ({ facility: getFacilityById(id), record }))
+    .filter((entry) => entry.facility)
+    .sort((a, b) => String(b.record?.at || "").localeCompare(String(a.record?.at || "")));
+  const now = Date.now();
+  const cells = [];
+  const shown = visitedEntries.slice(0, 5);
+  shown.forEach(({ facility, record }, index) => {
+    const memo = getFacilityMemo(facility.id);
+    const place = [facility.prefecture, facility.city].filter(Boolean).join("・");
+    const fresh = record?.at && now - new Date(record.at).getTime() < 15000;
+    cells.push(`
+      <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}">
+        <span class="book-stamp-place">${escapeHtml(place)}</span>
+        <span class="book-stamp-seal${index % 2 ? " is-square" : ""}"><span class="book-stamp-seal-name">${escapeHtml(facility.name)}</span><span class="book-stamp-seal-mark">サ印</span></span>
+        <span class="book-stamp-date">${escapeHtml(getStampTileDateLabel(facility, record))}${memo?.text ? ` / ${escapeHtml(memo.text)}` : ""}</span>
+      </button>`);
+  });
+  const emptyCount = Math.max(1, 6 - cells.length - (visitedEntries.length > 5 ? 0 : 0));
+  for (let i = 0; i < (cells.length >= 6 ? 0 : emptyCount); i++) {
+    if (cells.length >= 6) break;
+    cells.push(`
+      <button type="button" class="book-stamp-page is-empty" data-book-stamp-search>
+        <span class="book-stamp-plus" aria-hidden="true">＋</span>
+        <span class="book-stamp-empty-text">${i === 0 ? "次の一湯を<br />押しに行く" : "まだ<br />押していない"}</span>
+      </button>`);
+  }
+  grid.innerHTML = cells.join("");
+}
+
+function renderBookTitleBand() {
+  const band = document.querySelector("#bookTitleBand");
+  if (!band) return;
+  const visitedTotal = Object.keys(state.visited || {}).length;
+  let titleText = "";
+  let noteText = "";
+  if (visitedTotal > 0) {
+    let best = null;
+    for (const pref of PREFECTURES) {
+      const progress = getPrefectureMasterProgress(pref.name);
+      if (progress.eligible > 0 && progress.visited > 0 && (!best || progress.percent > best.progress.percent)) {
+        best = { name: pref.name, progress };
+      }
+    }
+    if (best?.progress.mastered) {
+      titleText = `${best.name} マスター`;
+      noteText = `${best.name}の対象施設を全て制覇済み`;
+    } else if (best?.progress.halfMastered) {
+      titleText = `${best.name} 準マスター`;
+      noteText = `あと${best.progress.remaining}湯で「${best.name} マスター」`;
+    }
+  }
+  if (!titleText) {
+    const current = getCurrentTitle(visitedTotal);
+    const next = getNextTitle(visitedTotal);
+    titleText = current.title;
+    noteText = next ? `あと${next.count - visitedTotal}湯で「${next.title}」。押印は振動で知らせます` : "最高称号に到達済み";
+  }
+  band.hidden = false;
+  band.innerHTML = `
+    <span class="book-title-medal" aria-hidden="true">称号</span>
+    <span class="book-title-copy"><strong>${escapeHtml(titleText)}</strong><span>${escapeHtml(noteText)}</span></span>`;
+}
+
+function renderShelfCounts() {
+  const set = (selector, value) => {
+    const node = document.querySelector(selector);
+    if (node && Array.isArray(value) && value.length) node.textContent = value.length;
+  };
+  set("#shelfSameshiCount", SAMESHI_SPOTS);
+  set("#shelfGearCount", GEAR_PRODUCTS);
+  set("#shelfStayCount", SAUNA_STAY_LINKS);
+  set("#shelfGuideCount", SAUNA_ARTICLES);
+}
+
+let lastSheetCandidates = [];
+
+function renderStampSheetList(candidates) {
+  const list = document.querySelector("#stampSheetList");
+  if (!list) return;
+  lastSheetCandidates = candidates;
+  if (!candidates.length) {
+    list.innerHTML = `<p class="stamp-sheet-empty">近くに押印できる施設が見つかりませんでした。施設名や県から探して押すこともできます。</p>`;
+    return;
+  }
+  list.innerHTML = candidates.map(({ facility, distanceKm }) => {
+    const stamped = Boolean(state.visited[facility.id]);
+    return `
+      <div class="stamp-sheet-row">
+        <div class="stamp-sheet-info">
+          <strong>${escapeHtml(facility.name)}</strong>
+          <span>${escapeHtml(facility.prefecture || "")}${facility.city ? `・${escapeHtml(facility.city)}` : ""} / 約${distanceKm.toFixed(1)}km</span>
+        </div>
+        <button type="button" class="stamp-sheet-button" data-sheet-stamp="${escapeAttr(facility.id)}" ${stamped ? "disabled" : ""}>${stamped ? "押印済み" : "押印する"}</button>
+      </div>`;
+  }).join("");
+}
+
+async function locateForStampSheet() {
+  const list = document.querySelector("#stampSheetList");
+  if (!list) return;
+  if (!navigator.geolocation) {
+    list.innerHTML = `<p class="stamp-sheet-empty">この端末では位置情報を利用できません。施設名や県から探してください。</p>`;
+    return;
+  }
+  list.innerHTML = `<p class="stamp-sheet-empty">現在地を確認しています…</p>`;
+  try {
+    const position = await getCurrentPosition({ highAccuracy: true, maximumAge: 30000 });
+    if (!isUsableNearbyPosition(position)) throw new Error("position-accuracy");
+    const candidates = getNearestFacilities(position.coords.latitude, position.coords.longitude, 8)
+      .filter(({ facility }) => !state.visited[facility.id]);
+    renderStampSheetList(candidates);
+  } catch (error) {
+    list.innerHTML = `<p class="stamp-sheet-empty">${error?.code === "consent-cancelled" ? "位置情報は使用していません。施設名や県から探して押すこともできます。" : "位置情報を確認できませんでした。端末の設定で位置情報を許可してください。"}</p>`;
+  }
+}
+
+function syncFeaturePills() {
+  document.querySelectorAll("[data-feature-pill]").forEach((pill) => {
+    const feature = normalizeFeature(pill.dataset.featurePill);
+    const active = feature ? selectedFeatureFilters.has(feature) : false;
+    pill.classList.toggle("is-active", active);
+    pill.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function bindRenewalEvents() {
+  document.querySelector("#tabSearchButton")?.addEventListener?.("click", () => {
+    setView("Explore");
+    requestAnimationFrame(() => {
+      el.searchInput?.focus({ preventScroll: false });
+      el.searchInput?.scrollIntoView({ block: "center", behavior: "smooth" });
+    });
+  });
+  document.querySelector("#tabMenuButton")?.addEventListener?.("click", () => {
+    document.querySelector("#settingsButton")?.click();
+  });
+  document.querySelector("#railMenuButton")?.addEventListener?.("click", () => {
+    document.querySelector("#settingsButton")?.click();
+  });
+  document.querySelector("#tabStampButton")?.addEventListener?.("click", () => {
+    const sheet = document.querySelector("#stampSheet");
+    if (sheet && !sheet.open) sheet.showModal();
+  });
+  document.querySelector("#closeStampSheetButton")?.addEventListener?.("click", () => {
+    document.querySelector("#stampSheet")?.close();
+  });
+  document.querySelector("#stampSheetLocate")?.addEventListener?.("click", locateForStampSheet);
+  document.querySelector("#stampSheetList")?.addEventListener?.("click", (event) => {
+    const button = event.target.closest("[data-sheet-stamp]");
+    if (!button || button.disabled) return;
+    const facility = getFacilityById(button.dataset.sheetStamp);
+    if (!facility) return;
+    stampFacility(facility);
+    renderStampSheetList(lastSheetCandidates);
+  });
+  document.addEventListener?.("click", (event) => {
+    const cell = event.target.closest?.("[data-tile-prefecture]");
+    if (!cell) return;
+    selectedPrefecture = cell.dataset.tilePrefecture;
+    visibleLimit = 36;
+    setView("Explore");
+    renderAll();
+  });
+  document.querySelector("#stageFootInstall")?.addEventListener?.("click", () => {
+    setView("Explore");
+    requestAnimationFrame(() => document.querySelector("#installButton")?.click());
+  });
+  document.addEventListener?.("click", (event) => {
+    const toc = event.target.closest("[data-toc-target]");
+    if (toc) {
+      const target = toc.dataset.tocTarget;
+      requestAnimationFrame(() => {
+        if (target === "search") document.querySelector("#searchForm")?.scrollIntoView({ block: "start", behavior: "smooth" });
+        if (target === "plan") {
+          const extras = document.querySelector("#exploreExtras");
+          if (extras) { extras.setAttribute("open", ""); extras.scrollIntoView({ block: "start", behavior: "smooth" }); }
+        }
+      });
+    }
+    if (event.target.closest("[data-book-stamp-search]")) {
+      document.querySelector("#searchForm")?.scrollIntoView({ block: "start", behavior: "smooth" });
+      el.searchInput?.focus({ preventScroll: true });
+    }
+  });
+  document.querySelector("#featurePills")?.addEventListener?.("click", (event) => {
+    const pill = event.target.closest("[data-feature-pill]");
+    if (!pill) return;
+    const feature = normalizeFeature(pill.dataset.featurePill);
+    if (!feature) return;
+    if (selectedFeatureFilters.has(feature)) {
+      selectedFeatureFilters.delete(feature);
+    } else {
+      const conflict = FEATURE_CONFLICTS.get(feature);
+      if (conflict) selectedFeatureFilters.delete(conflict);
+      selectedFeatureFilters.add(feature);
+    }
+    visibleLimit = 36;
+    renderExplore();
+  });
+}
+
+bindRenewalEvents();
