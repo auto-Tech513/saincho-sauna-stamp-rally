@@ -10010,7 +10010,7 @@ body {
 }
 
 /* --- 帳面の中（Explore） --- */
-#viewExplore { display: flex; flex-direction: column; padding: 0 18px 30px; }
+#viewExplore.view-active { display: flex; flex-direction: column; padding: 0 18px 30px; }
 #viewExplore .book-steam { order: 1; }
 #viewExplore .book-cover { order: 2; }
 #viewExplore .book-counts { order: 3; }
