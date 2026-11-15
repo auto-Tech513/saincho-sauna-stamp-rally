@@ -1282,12 +1282,7 @@ function bindEvents() {
     } finally { submit.disabled = false; }
   });
 
-  el.searchPrefectureSelect.addEventListener("change", () => {
-    selectedPrefecture = el.searchPrefectureSelect.value;
-    visibleLimit = 36;
-    renderAll();
-    el.main.scrollTo({ top: 0, behavior: "instant" });
-  });
+  // 都道府県セレクトは第2段階で廃止（県の選択はタイル地図・県ページのパンくずで行う）
   el.facilitySortSelect?.addEventListener("change", () => {
     facilitySortMode = el.facilitySortSelect.value;
     visibleLimit = 36;
@@ -1609,6 +1604,11 @@ function bindEvents() {
     }
     if (button.dataset.action === "community-delete") {
       deleteCommunityEvent(button.dataset.eventId);
+      return;
+    }
+    if (button.dataset.action === "crumb-prefecture") {
+      selectedPrefecture = button.dataset.prefecture || "全国";
+      setView("Explore");
       return;
     }
 
@@ -2965,11 +2965,6 @@ function renderPrefStrip() {
     }),
   ];
   el.prefStrip.innerHTML = chips.join("");
-  el.searchPrefectureSelect.innerHTML = [
-    `<option value="全国">全国</option>`,
-    ...PREFECTURES.map(pref => `<option value="${escapeAttr(pref.name)}">${escapeHtml(pref.name)}</option>`),
-  ].join("");
-  el.searchPrefectureSelect.value = selectedPrefecture;
 }
 
 function renderSourceRow() {
@@ -3164,22 +3159,27 @@ function renderFacilityDetail() {
   const favorite = Boolean(state.favorites[facility.id]);
   const evidence = getFacilityEvidence(facility);
   const facts = evidence?.facts || [];
+  const missingFields = getMissingEvidenceFields(facility);
   const address = getFacilityAddress(facility);
   const legacyFeatures = uniqueStrings([...(facility.features || []), ...(facility.tags || [])])
     .filter(value => normalizeFeature(value));
   const photo = getFacilityPhoto(facility);
   el.facilityDetail.innerHTML = `
     <article class="facility-detail facility-workspace">
-      <button class="back-button" type="button" data-open-view="Explore">検索へ戻る</button>
-      <header class="facility-masthead">
-        ${renderStamp(facility, visited)}
-        <div><h2>${escapeHtml(facility.name)}</h2><p>${escapeHtml(getFacilityAreaLabel(facility))}${visited ? " · 押印済み" : ""}</p></div>
-        ${renderFavoriteButton(facility, favorite, true)}
+      <nav class="facility-crumbs" aria-label="パンくず">
+        <button type="button" data-open-view="Explore">サ印帳</button><span aria-hidden="true">›</span>${facility.prefecture ? `<button type="button" data-action="crumb-prefecture" data-prefecture="${escapeAttr(facility.prefecture)}">${escapeHtml(facility.prefecture)}のサウナ</button><span aria-hidden="true">›</span>` : ""}<span aria-current="page">${escapeHtml(facility.name)}</span>
+      </nav>
+      <header class="facility-dh">
+        <p class="facility-dh-eyebrow">SAUNA DETAIL</p>
+        <h2>${escapeHtml(facility.name)}</h2>
+        <p class="facility-dh-loc">${escapeHtml(getFacilityAreaLabel(facility))}</p>
+        <div class="facility-dh-seal">${visited ? renderStamp(facility, true) : `<div class="facility-dh-seal-empty"><span>まだ押していない</span></div>`}</div>
       </header>
-      <div class="facility-primary-actions" ${facilityDetailTab !== "info" ? "hidden" : ""}>
-        <button class="facility-detail-button" type="button" data-action="open-activity" data-id="${id}">サ活を書く</button>
-        ${renderMapRouteLink(facility)}
-        <button class="facility-stamp-action" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+      <div class="facility-primary-actions facility-acts" ${facilityDetailTab !== "info" ? "hidden" : ""}>
+        <button class="facility-act-stamp" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+        ${wished || canAddWishlist(facility) ? `<button class="facility-act-sub" type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
+        <button class="facility-act-sub ${favorite ? "is-active" : ""}" type="button" data-action="favorite" data-id="${id}" aria-pressed="${favorite}"><span aria-hidden="true">${favorite ? "★" : "☆"}</span>お気に入り</button>
+        <div class="facility-acts-route">${renderMapRouteLink(facility)}</div>
       </div>
       ${!visited && !status ? `<p class="facility-stamp-note">訪れたことがある施設は「押印する」で、この端末に記録できます。記録は都道府県別のサ印帳で確認できます。</p>` : ""}
       <nav class="facility-tabs" aria-label="施設詳細の表示">
@@ -3189,14 +3189,18 @@ function renderFacilityDetail() {
         ${status ? `<p class="facility-notice">${escapeHtml(status.badge)} — 訪問前に公式で営業状況を確認してください。</p>` : ""}
         ${isFitnessFacility(facility) ? '<p class="facility-notice">ジム・フィットネス併設施設。通常のサウナ検索・近隣候補には表示していません。利用条件は運営元へご確認ください。</p>' : ""}
         <dl class="facility-facts">
-          ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></dd></div>`).join("")}
+          ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd><span>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></span>${row.checkedAt ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(row.checkedAt))}</span>` : ""}</dd></div>`).join("")}
           ${renderSaunachelinAwardRow(facility)}
-          <div><dt>住所</dt><dd>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}${address ? `<small class="address-checked">住所照合: ${escapeHtml(facility.addressCheckedAt || "未確認")}</small>` : ""}</dd></div>
+          <div><dt>住所</dt><dd><span>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}</span>${address ? (facility.addressCheckedAt && facility.addressCheckedAt !== "未確認" ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(facility.addressCheckedAt))}</span>` : "") : `<span class="fact-badge is-unverified">未確認</span>`}</dd></div>
+          ${missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
-        ${getMissingEvidenceFields(facility).length ? `<details class="facility-disclosure"><summary>掲載範囲・未確認項目</summary><p>未確認: ${escapeHtml(getMissingEvidenceFields(facility).join("・"))}。未掲載は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
-        <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}<button type="button" data-action="report-facility" data-id="${id}">情報の修正</button></div>
+        <p class="facility-warn">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。<button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
+        ${missingFields.length || facility.sourceCheckedAt ? `<details class="facility-disclosure"><summary>掲載範囲について</summary><p>未掲載の項目は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
+        <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}</div>
+        ${renderFacilityNearbySection(facility)}
+        ${renderFacilitySameshiSection(facility)}
         ${!evidence && (legacyFeatures.length || facility.note) ? `<details class="facility-disclosure"><summary>旧掲載の紹介・設備（未再照合）</summary>${facility.note ? `<p>${escapeHtml(facility.note)}</p>` : ""}<p>${escapeHtml(legacyFeatures.join(" / "))}</p><p>公式の裏付けを再確認できていないため、確定情報や設備検索には使用していません。</p></details>` : ""}
         <details class="facility-disclosure"><summary>サ印コレクションを見る</summary><img class="collection-preview" src="${escapeAttr(photo.url)}" alt="${escapeAttr(facility.name)}のサ印コレクション" loading="lazy" decoding="async" /></details>
       </section>
@@ -3208,7 +3212,6 @@ function renderFacilityDetail() {
       </section>
       <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
         <div class="facility-secondary-actions">
-          ${wished || canAddWishlist(facility) ? `<button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
@@ -3218,6 +3221,7 @@ function renderFacilityDetail() {
         <div class="lodging-search-card"><strong>周辺の宿</strong><div>${renderLodgingLinks(facility)}</div></div>
         ${!visited ? renderCheckinPanel(facility) : `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${id}">押印を取り消す</button>`}
       </details>
+      ${facility.prefecture ? `<button class="facility-back-pref" type="button" data-action="crumb-prefecture" data-prefecture="${escapeAttr(facility.prefecture)}">← ${escapeHtml(facility.prefecture)}のサウナ一覧へ</button>` : ""}
     </article>`;
   loadFacilityReviews(facility.id);
 }
@@ -3231,6 +3235,53 @@ function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
   el.facilityDetail.querySelectorAll('[data-action="detail-tab"]').forEach(button => button.setAttribute("aria-current", button.dataset.tab === tab ? "page" : "false"));
   el.main.scrollTo({ top: 0, behavior: "instant" });
   if (focus) el.facilityDetail.querySelector(`[data-tab="${tab}"]`)?.focus({ preventScroll: true });
+}
+
+function getFacilityCityKey(facility) {
+  const head = String(facility?.city || "").split(/\s/)[0];
+  if (!head) return "";
+  const ward = head.match(/^(.+?区)/);
+  if (ward) return ward[1];
+  const city = head.match(/^(.+?(?:市|町|村))/);
+  return city ? city[1] : head;
+}
+
+function renderFacilityNearbySection(facility) {
+  const cityKey = getFacilityCityKey(facility);
+  if (!cityKey) return "";
+  const peers = getFacilities()
+    .filter((peer) => peer.id !== facility.id && peer.prefecture === facility.prefecture && getFacilityCityKey(peer) === cityKey)
+    .slice(0, 5);
+  if (!peers.length) return "";
+  return `<section class="facility-nearby" aria-label="同じ市区町村のほかのサウナ">
+    <h3 class="facility-h3">${escapeHtml(cityKey)}のほかのサウナ</h3>
+    <div class="facility-near-list">${peers.map((peer) => {
+      const peerVisited = Boolean(state.visited[peer.id]);
+      const peerWished = Boolean(state.wishlist[peer.id]);
+      const mark = peerVisited ? "済" : peerWished ? "行" : "印";
+      const markClass = peerVisited ? "is-done" : peerWished ? "is-wish" : "";
+      const sub = peerVisited ? "押印済み" : peerWished ? "行きたい" : (peer.city || peer.prefecture || "");
+      return `<button type="button" class="facility-near-row" data-detail-card="${escapeAttr(peer.id)}"><span class="facility-near-mark ${markClass}" aria-hidden="true">${mark}</span><span class="facility-near-main"><strong>${escapeHtml(peer.name)}</strong><small>${escapeHtml(sub)}</small></span><span class="facility-near-arrow" aria-hidden="true">→</span></button>`;
+    }).join("")}</div>
+  </section>`;
+}
+
+function renderFacilitySameshiSection(facility) {
+  const cityKey = getFacilityCityKey(facility);
+  if (!cityKey || !SAMESHI_SPOTS.length) return "";
+  const matched = SAMESHI_SPOTS
+    .filter((spot) => spot.prefecture === facility.prefecture && spot.area && (cityKey === spot.area || cityKey.startsWith(spot.area) || spot.area.startsWith(cityKey)))
+    .slice(0, 6);
+  if (!matched.length) return "";
+  return `<section class="facility-sameshi" aria-label="サ飯候補">
+    <h3 class="facility-h3">サ飯候補</h3>
+    <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
+  </section>`;
+}
+
+function formatMonthDay(dateText) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(dateText || ""));
+  return match ? `${Number(match[2])}/${Number(match[3])}` : "";
 }
 
 function getEvidenceDate(evidence) {
@@ -8054,9 +8105,50 @@ function renderRenewalChrome() {
   renderBookTitleBand();
     renderShelfCounts();
     updateTocCurrent();
+    renderPrefBand();
   } catch (error) {
     console.warn("renewal chrome render skipped", error);
   }
+}
+
+function renderPrefBand() {
+  const band = document.querySelector("#prefBand");
+  const view = document.querySelector("#viewExplore");
+  if (!band || !view) return;
+  const pref = selectedPrefecture;
+  const active = Boolean(pref && pref !== "全国");
+  view.classList.toggle("is-pref-mode", active);
+  if (el.searchInput) el.searchInput.placeholder = active ? `${pref}内の施設名・特徴で探す` : "施設名・都道府県・特徴で探す";
+  if (!active) {
+    band.hidden = true;
+    band.innerHTML = "";
+    return;
+  }
+  const progress = getPrefectureMasterProgress(pref);
+  const userIds = new Set([...state.customFacilities.map((f) => f.id), ...(sharedFacilities || []).map((f) => f.id)]);
+  const catalog = getFacilities().filter((f) => f.prefecture === pref && !userIds.has(f.id));
+  const verified = catalog.filter((f) => (getFacilityEvidence(f)?.facts || []).length > 0).length;
+  const wished = catalog.filter((f) => state.wishlist[f.id]).length;
+  const slug = (PREFECTURES.find((item) => item.name === pref)?.slug || "").toUpperCase();
+  const statusLine = progress.mastered
+    ? `${pref} 県マスター認定`
+    : progress.halfMastered
+      ? `${pref} 準マスター（半分以上を制覇）`
+      : `${pref} 県マスターまで あと ${progress.remaining} 湯`;
+  band.innerHTML = `
+    <nav class="facility-crumbs" aria-label="パンくず">
+      <button type="button" data-action="crumb-prefecture" data-prefecture="全国">サ印帳</button><span aria-hidden="true">›</span><span aria-current="page">${escapeHtml(pref)}のサウナ</span>
+    </nav>
+    <div class="pref-dh">
+      <p class="facility-dh-eyebrow">PREFECTURE${slug ? ` · ${escapeHtml(slug)}` : ""}</p>
+      <h2>${escapeHtml(pref)}のサウナ</h2>
+      <p class="facility-dh-loc">掲載 ${catalog.length.toLocaleString("ja-JP")} 施設 ・ 公式照合済み ${verified.toLocaleString("ja-JP")} 施設</p>
+    </div>
+    <div class="pref-prog">
+      <div class="pref-prog-ring" style="--pct:${progress.percent}" role="img" aria-label="押印の進捗 ${progress.percent}%"><span>${progress.percent}%</span></div>
+      <div class="pref-prog-text"><strong>${escapeHtml(statusLine)}</strong><p>押印 ${progress.visited} ／ 行きたい ${wished}。押印済みの施設は朱の印で表示。</p></div>
+    </div>`;
+  band.hidden = false;
 }
 
 function updateTocCurrent() {
@@ -8098,7 +8190,7 @@ function renderRailNext() {
   const nearbyEl = document.querySelector("#nextNearbyState");
   if (nearbyEl) nearbyEl.textContent = state.nearbyNotifications
     ? "有効：起動時に2km以内を確認します"
-    : "行きたい施設の近くで知らせる（メニューで有効化できます）";
+    : "行きたい施設の近くで知らせる";
 }
 
 function renderBookStamps() {
@@ -8231,6 +8323,11 @@ function syncFeaturePills() {
 }
 
 function bindRenewalEvents() {
+  // SP/タブレットではフッターリンク帯を帳面（スクロール領域）の末尾に置く
+  try {
+    const stageFoot = document.querySelector(".stage-foot");
+    if (stageFoot && window.matchMedia("(max-width: 1023px)").matches) el.main?.appendChild(stageFoot);
+  } catch (error) { console.warn("stage foot relocation skipped", error); }
   document.querySelector("#tabSearchButton")?.addEventListener?.("click", () => {
     setView("Explore");
     // iOS ではタップのハンドラ内での同期フォーカスでないとキーボードが開かないため、

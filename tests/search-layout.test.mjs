@@ -10,7 +10,9 @@ test("search-first markup retains unique controls and collapses secondary conten
   const ids = $("[id]").map((_, element) => $(element).attr("id")).get();
   assert.equal(new Set(ids).size, ids.length, "all IDs must be unique");
   assert.equal($("#searchForm[role=search] input[enterkeyhint=search]").length, 1);
-  assert.equal($("#searchPrefectureSelect").length, 1);
+  // 都道府県セレクトはリニューアル第2段階で廃止（デザインに無い要素を外す方針。
+  // 県の選択はタイル地図と県ページのパンくずが担う）
+  assert.equal($("#searchPrefectureSelect").length, 0);
   assert.equal($("#featureFilterPanel[hidden]").length, 1);
   assert.equal($("#exploreExtras[open]").length, 0);
   for (const id of ["progressRing", "questPanel", "spotlight"]) {

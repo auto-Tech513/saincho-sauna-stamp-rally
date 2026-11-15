@@ -224,7 +224,7 @@
       </aside>
       <header class="topbar">
         <button class="brand-lockup" type="button" data-open-view="Explore" data-reset-explore="true" aria-label="サ印帳ホームへ戻る">
-          <img class="brand-mark" src="./icons/icon-192.png" width="48" height="48" alt="" />
+          <span class="brand-mark brand-kakuiin" aria-hidden="true">サ</span>
           <div class="brand-copy">
             <p class="eyebrow">SAUNA STAMP RALLY</p>
             <p class="brand-name">サ印帳</p>
@@ -253,6 +253,7 @@
         <!-- SSR:SLOT -->
         <section class="view view-active" id="viewExplore" aria-label="ホーム">
           <div class="book-steam" aria-hidden="true"></div>
+          <div id="prefBand" class="pref-band" hidden></div>
           <div class="book-cover">
             <p class="book-cover-eyebrow">ZENKOKU SAUNA STAMP BOOK</p>
             <h2 class="book-cover-title">全国のサウナを、<br />一湯ずつ<span class="book-cover-accent">押していく</span>。</h2>
@@ -268,7 +269,7 @@
             <form class="search-form" id="searchForm" role="search">
               <label class="search-box">
                 <span aria-hidden="true"></span>
-                <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="施設名・住所・特徴" enterkeyhint="search" role="combobox" aria-controls="searchSuggestions" aria-autocomplete="list" aria-expanded="false" />
+                <input id="searchInput" type="search" autocomplete="off" aria-label="施設名・都道府県・特徴で検索" placeholder="施設名・都道府県・特徴で探す" enterkeyhint="search" role="combobox" aria-controls="searchSuggestions" aria-autocomplete="list" aria-expanded="false" />
                 <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
                   <span class="icon-close" aria-hidden="true"></span>
                 </button>
@@ -283,10 +284,6 @@
               <button type="button" data-filter="favorite">お気に入り</button>
             </div>
             <div class="search-refiners">
-              <label class="search-prefecture-label">
-                <span class="visually-hidden">都道府県で絞り込む</span>
-                <select id="searchPrefectureSelect" aria-label="都道府県で絞り込む"><option value="全国">全国</option></select>
-              </label>
               <button class="feature-filter-toggle" id="featureFilterToggle" type="button" aria-expanded="false" aria-controls="featureFilterPanel">特徴 <strong id="featureFilterCount">指定なし</strong></button>
             </div>
             <section class="feature-filter-panel" id="featureFilterPanel" aria-label="特徴で絞り込み" hidden>
@@ -297,15 +294,11 @@
           </div>
 
           <section class="area-shortcut" id="areaShortcut" aria-label="マイエリア">
-            <button type="button" id="homePrefectureButton">
-              <span>MY AREA</span>
-              <strong id="homePrefectureLabel">マイ県を登録</strong>
-              <em>いつもの県をすぐ探す</em>
-            </button>
             <button type="button" id="nearbySaunaButton">
-              <span>NEARBY</span>
-              <strong>現在地から探す</strong>
-              <em>2km以内・住所確認済み</em>
+              <strong>現在地 2km</strong>
+            </button>
+            <button type="button" id="homePrefectureButton">
+              <strong id="homePrefectureLabel">マイ県を登録</strong>
             </button>
             <div class="feature-pills" id="featurePills" role="group" aria-label="特徴ですぐ絞り込む">
               <button type="button" data-feature-pill="温泉付き" aria-pressed="false">温泉付き</button>

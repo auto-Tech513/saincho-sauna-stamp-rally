@@ -952,6 +952,11 @@ function renderPrefSsr(pref, facilities) {
   `, { jsonLd });
 }
 
+function formatMonthDaySsr(dateText) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(dateText || ""));
+  return match ? `${Number(match[2])}/${Number(match[3])}` : "";
+}
+
 function renderFacilitySsr(facility) {
   const evidence = getFacilityEvidence(facility);
   const tags = displayTags(facility);
@@ -995,7 +1000,7 @@ function renderFacilitySsr(facility) {
     <dl>
       <div><dt>住所</dt><dd>${escapeHtml(address || "住所確認中")}</dd></div>
       ${tags.length ? `<div><dt>確認済み設備</dt><dd>${escapeHtml(tags.join(" / "))}</dd></div>` : ""}
-      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>（確認日 ${row.checkedAt}／${evidence.method === "official-labeled-fields" ? "公式掲載値" : "公式照合"}）</dd></div>`).join("")}
+      ${(evidence?.facts || []).map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" rel="noreferrer">公式出典</a>${row.checkedAt ? `<span class="fact-badge">照合済 ${formatMonthDaySsr(row.checkedAt)}</span>` : ""}（確認日 ${row.checkedAt}／${evidence.method === "official-labeled-fields" ? "公式掲載値" : "公式照合"}）</dd></div>`).join("")}
       ${saunachelinAwardRow(facility)}
       ${evidence?.facts.some(row => row.label === "施設営業時間") ? "<div><dt>時間の掲載範囲</dt><dd>施設営業時間と浴場・サウナの利用時間は異なる場合があります。</dd></div>" : ""}
       ${isFitnessFacility(facility) ? '<div><dt>施設区分</dt><dd>ジム・フィットネス併設。通常のサウナ検索の対象外です。記録・参照用のページは保持しています。</dd></div>' : ""}
@@ -1007,7 +1012,7 @@ function renderFacilitySsr(facility) {
       ${mapUrl ? `<div><dt>写真</dt><dd><a href="${escapeAttr(mapUrl)}" rel="noopener">外観・内装の写真を見る（Google Maps）</a></dd></div>` : ""}
       ${note ? `<div><dt>旧掲載の紹介（未再照合）</dt><dd>${escapeHtml(note)}</dd></div>` : ""}
       <div><dt>掲載の確認状況</dt><dd>住所：${address ? "掲載あり" : facility.city ? "市区町村まで掲載" : "未確認"} ／ 公式ページ：${facility.officialUrl ? "あり" : "なし"} ／ 料金・営業時間など：${factCount ? `公式照合済み（${factCount}項目）` : "未確認"}</dd></div>
-      ${missingFields.length ? `<div><dt>公式照合で未確認の項目</dt><dd>${escapeHtml(missingFields.join("・"))}（未確認は「設備なし」を意味しません）</dd></div>` : ""}
+      ${missingFields.length ? `<div><dt>公式照合で未確認の項目</dt><dd><span class="fact-badge is-unverified">未確認</span> ${escapeHtml(missingFields.join("・"))}（未確認は「設備なし」を意味しません）</dd></div>` : ""}
       ${renderProvenanceRows(facility, evidence)}
     </dl>
     <p>${escapeHtml(quality.description)}</p>
