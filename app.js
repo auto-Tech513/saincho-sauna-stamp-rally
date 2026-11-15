@@ -2220,12 +2220,22 @@ async function renderNewsRail() {
     rail.hidden = true;
     return;
   }
+  const railKey = articles.map((article) => article.slug).join(",");
+  const existingTrack = rail.querySelector(".news-rail-track");
+  if (existingTrack && rail.dataset.railKey === railKey) {
+    // 同じ記事並びなら DOM を作り直さない。裏側の再描画で作り直すと、タップ中の
+    // カードが差し替わってタップが失われ、帯のスクロール位置も先頭に戻ってしまう
+    rail.hidden = false;
+    if (!newsRailScrollState) startNewsRailAutoScroll(existingTrack);
+    return;
+  }
   const cardsHtml = `
       ${articles.map((article, index) => newsRailCardHtml(article, index)).join("")}
       <a class="news-rail-card news-rail-more" href="/news/" data-open-view="News">
         <span class="news-rail-more-text">すべて見る</span>
         <span class="news-rail-more-arrow" aria-hidden="true">→</span>
       </a>`;
+  rail.dataset.railKey = railKey;
   rail.innerHTML = `
     <div class="news-rail-head">
       <h2 class="news-rail-title">サウニュ〜</h2>
@@ -2784,6 +2794,8 @@ async function applySearchValue(value, startedAt = performance.now()) {
       el.facilityList.inert = true;
       el.searchResultsStatus.textContent = "検索を準備しています…";
       el.facilityList.innerHTML = `<div class="empty-state"><p>検索を準備しています…</p></div>`;
+      // 候補欄も同じ待ち時間の間は空白にせず、準備中であることを示す
+      if (document.activeElement === el.searchInput && !isSearchComposing) showSearchPreparingState();
     }
     try {
       await ensureFacilitySearchRecords();
@@ -2830,6 +2842,14 @@ function getSearchSuggestionNameKeys(facility) {
   return keys;
 }
 
+function showSearchPreparingState() {
+  const panel = el.searchSuggestions;
+  if (!panel) return;
+  panel.innerHTML = `<div class="search-suggestions-head">検索を準備しています…</div>`;
+  panel.hidden = false;
+  if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+}
+
 function renderSearchSuggestions() {
   const panel = el.searchSuggestions;
   if (!panel) return;
@@ -2837,8 +2857,21 @@ function renderSearchSuggestions() {
     hideSearchSuggestions();
     return;
   }
+  if (!searchNeedles.length) {
+    hideSearchSuggestions();
+    return;
+  }
+  if (!facilitySearchCache) {
+    // 索引の構築中は候補欄を消さず、準備中であることを示す。構築完了後は
+    // applySearchValue 側でも再描画されるが、入力が続く場合に備えてここでも張り直す
+    showSearchPreparingState();
+    ensureFacilitySearchRecords()
+      .then(() => { if (document.activeElement === el.searchInput) renderSearchSuggestions(); })
+      .catch(() => {});
+    return;
+  }
   const records = getFacilitySearchRecords();
-  if (!records.length || !searchNeedles.length) {
+  if (!records.length) {
     hideSearchSuggestions();
     return;
   }
@@ -6137,7 +6170,7 @@ function ensureFacilitySearchRecords() {
     let yieldWaitMs = 0;
     for (const facility of facilities) {
       records.push(createFacilitySearchRecord(facility));
-      if (performance.now() - sliceStart >= 6) {
+      if (performance.now() - sliceStart >= 16) {
         const waitStart = performance.now();
         await yieldSearchWork();
         yieldWaitMs += performance.now() - waitStart;
@@ -8200,8 +8233,10 @@ function syncFeaturePills() {
 function bindRenewalEvents() {
   document.querySelector("#tabSearchButton")?.addEventListener?.("click", () => {
     setView("Explore");
+    // iOS ではタップのハンドラ内での同期フォーカスでないとキーボードが開かないため、
+    // フォーカスは rAF に回さずここで即座に行う（スクロールだけを次フレームで行う）
+    el.searchInput?.focus({ preventScroll: true });
     requestAnimationFrame(() => {
-      el.searchInput?.focus({ preventScroll: false });
       el.searchInput?.scrollIntoView({ block: "center", behavior: "smooth" });
     });
   });

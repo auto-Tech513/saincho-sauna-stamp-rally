@@ -10617,3 +10617,22 @@ body {
   .book-stamp-seal-mark { font-size: 14px; }
   .book-shelf-grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* 実機の操作不備の是正（2026-11-16） */
+/* ダブルタップズーム判定によるタップ遅延・取りこぼしを防ぐ */
+.bottom-nav button,
+.news-rail-card,
+.search-suggestion {
+  touch-action: manipulation;
+}
+/* 探すまわりの並びを整える: 場所のボタン2つを上段に、特徴ピルは2×2の格子にそろえる */
+#viewExplore .feature-pills {
+  display: grid;
+  flex: 1 1 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+#viewExplore .feature-pills button {
+  width: 100%;
+  justify-content: center;
+}
