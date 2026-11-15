@@ -10606,7 +10606,7 @@ body {
   .rail-next-row strong { display: block; font-family: var(--font-display); font-size: 15px; }
   .rail-next-note { font-size: 12px; opacity: 0.7; }
 
-  #viewExplore { padding: 0 34px 34px; }
+  #viewExplore.view-active { padding: 0 34px 34px; }
   .book-steam { margin: 0 -34px; }
   .book-cover-title { font-size: 40px; }
   .book-count-num { font-size: 34px; }
