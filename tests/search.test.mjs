@@ -21,6 +21,13 @@ test("facility spelling variants and separators return the intended name",()=>{
   assert.ok(search("SAUNACHELIN 2025","さうなしゅらん"));
   assert.equal(search("SAUNA MONKEY","存在しない施設"),false);
 });
+test("romaji queries match mixed kanji and kana facility names",()=>{
+  assert.ok(search("天然温泉アーバンクア SPA＆LIVING","abankua"));
+  assert.ok(search("天然温泉アーバンクア SPA＆LIVING","onsen"));
+  assert.ok(search("ウェルビー栄","uerubi"));
+  assert.ok(search("ウェルビー栄","werubi"));
+  assert.equal(search("天然温泉アーバンクア SPA＆LIVING","chatgpt"),false);
+});
 test("equipment is not inferred from a city or poetic facility name",()=>{
   const result=vm.runInContext('getFacilityFeatures({id:"forest",name:"森と川のサウナ",city:"温泉町",trait:"wood",features:[]})',context);
   assert.equal(result.length,0);

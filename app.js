@@ -791,6 +791,11 @@ let newsModulePromise = null;
 let newsCategoryFilter = "all";
 let newsVisibleCount = 10;
 let searchTerm = "";
+const SEARCH_SUGGESTION_LIMIT = 8;
+let searchSuggestionIndex = -1;
+let searchSuggestionFacilities = [];
+let searchSuggestionOpenedAt = 0;
+const searchSuggestionNameKeyCache = new Map();
 let searchNeedles = [];
 let selectedFeatureFilters = new Set();
 let sharedFacilities = [];
@@ -857,6 +862,7 @@ const el = {
   progressRing: document.querySelector("#progressRing"),
   progressPercent: document.querySelector("#progressPercent"),
   searchInput: document.querySelector("#searchInput"),
+  searchSuggestions: document.querySelector("#searchSuggestions"),
   searchClearButton: document.querySelector("#searchClearButton"),
   searchResultsStatus: document.querySelector("#searchResultsStatus"),
   facilitySortSelect: document.querySelector("#facilitySortSelect"),
@@ -1263,6 +1269,7 @@ function bindEvents() {
   el.searchForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     clearSearchRenderTimer();
+    hideSearchSuggestions();
     const value = el.searchInput.value;
     const submit = el.searchForm.querySelector('[type="submit"]');
     submit.disabled = true;
@@ -1336,11 +1343,52 @@ function bindEvents() {
     scheduleSearchRender(event.target.value, { immediate: true });
   });
 
+  el.searchInput.addEventListener("keydown", (event) => {
+    if (!searchSuggestionFacilities.length) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const delta = event.key === "ArrowDown" ? 1 : -1;
+      const next = (searchSuggestionIndex + delta + searchSuggestionFacilities.length) % searchSuggestionFacilities.length;
+      setSearchSuggestionIndex(next);
+    } else if (event.key === "Enter" && searchSuggestionIndex >= 0) {
+      event.preventDefault();
+      openSearchSuggestion(searchSuggestionFacilities[searchSuggestionIndex]);
+    } else if (event.key === "Escape") {
+      hideSearchSuggestions();
+    }
+  });
+
+  el.searchInput.addEventListener("focus", () => {
+    if (!el.searchInput.value.trim()) return;
+    if (searchTerm === normalizeText(el.searchInput.value) && getFacilitySearchRecords().length) {
+      renderSearchSuggestions();
+    } else {
+      scheduleSearchRender(el.searchInput.value);
+    }
+  });
+
+  if (el.searchSuggestions) {
+    el.searchSuggestions.addEventListener("pointerdown", (event) => {
+      const row = event.target.closest("[data-suggestion-index]");
+      if (!row) return;
+      event.preventDefault();
+      openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
+    });
+    el.searchSuggestions.addEventListener("click", (event) => {
+      if (Date.now() - searchSuggestionOpenedAt < 500) return;
+      const row = event.target.closest("[data-suggestion-index]");
+      if (!row) return;
+      openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
+    });
+  }
+  document.addEventListener("pointerdown", handleSearchSuggestionOutsidePointer);
+
   el.searchClearButton.addEventListener("click", () => {
     if (!el.searchInput.value) return;
     el.searchInput.value = "";
     renderSearchClearButton();
     clearSearchRenderTimer();
+    hideSearchSuggestions();
     applySearchValue("");
     el.searchInput.focus();
   });
@@ -2003,6 +2051,7 @@ function openFacilityDetail(facility) {
 }
 
 function applyActiveView(view) {
+  hideSearchSuggestions();
   document.body.dataset.activeView = view.toLowerCase();
   Object.keys(VIEW_META).forEach((key) => {
     document.body.classList.toggle(`view-${key.toLowerCase()}`, key === view);
@@ -2764,7 +2813,110 @@ async function applySearchValue(value, startedAt = performance.now()) {
   el.searchResultsStatus.dataset.searchElapsedMs = (performance.now() - startedAt).toFixed(1);
   el.searchResultsStatus.dataset.searchRenderMs = (performance.now() - renderStartedAt).toFixed(1);
   if (pendingSearchIntent?.value === value) pendingSearchIntent = null;
+  renderSearchSuggestions();
   return true;
+}
+
+function getSearchSuggestionNameKeys(facility) {
+  let keys = searchSuggestionNameKeyCache.get(facility.id);
+  if (!keys) {
+    keys = uniqueStrings([
+      normalizeSearchToken(facility.name),
+      normalizeSearchToken(romanizeSearchText(facility.name)),
+      normalizeCompact(toHiragana(facility.name)),
+    ]).filter(Boolean);
+    if (searchSuggestionNameKeyCache.size >= 12000) searchSuggestionNameKeyCache.clear();
+    searchSuggestionNameKeyCache.set(facility.id, keys);
+  }
+  return keys;
+}
+
+function renderSearchSuggestions() {
+  const panel = el.searchSuggestions;
+  if (!panel) return;
+  if (!searchTerm || activeView !== "Explore" || document.activeElement !== el.searchInput || isSearchComposing) {
+    hideSearchSuggestions();
+    return;
+  }
+  const records = getFacilitySearchRecords();
+  if (!records.length || !searchNeedles.length) {
+    hideSearchSuggestions();
+    return;
+  }
+  const flatNeedles = uniqueStrings(searchNeedles.flat()).filter(Boolean);
+  const matches = [];
+  for (const { facility, features, haystack } of records) {
+    if (selectedPrefecture !== "全国" && facility.prefecture !== selectedPrefecture) continue;
+    if (!matchesSearchBlob(haystack, searchNeedles)) continue;
+    if (![...selectedFeatureFilters].every((feature) => features.includes(feature))) continue;
+    const matchesFilter =
+      activeFilter === "all" ||
+      (activeFilter === "unvisited" && !state.visited[facility.id]) ||
+      (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
+      (activeFilter === "favorite" && state.favorites[facility.id]);
+    if (!matchesFilter) continue;
+    const nameKeys = getSearchSuggestionNameKeys(facility);
+    let tier = 2;
+    for (const needle of flatNeedles) {
+      if (nameKeys.some((key) => key.startsWith(needle))) { tier = 0; break; }
+      if (tier > 1 && nameKeys.some((key) => key.includes(needle))) tier = 1;
+    }
+    matches.push({ facility, tier });
+  }
+  if (!matches.length) {
+    hideSearchSuggestions();
+    return;
+  }
+  matches.sort((a, b) => a.tier - b.tier);
+  searchSuggestionFacilities = matches.slice(0, SEARCH_SUGGESTION_LIMIT).map(({ facility }) => facility);
+  searchSuggestionIndex = -1;
+  const rows = searchSuggestionFacilities.map((facility, index) => {
+    const status = getFacilityStatus(facility);
+    const meta = [facility.prefecture, facility.city, status ? status.label : ""].filter(Boolean).join(" ");
+    return `<button type="button" class="search-suggestion" role="option" id="searchSuggestion${index}" data-suggestion-index="${index}" aria-selected="false"><span class="search-suggestion-name">${escapeHtml(facility.name)}</span><span class="search-suggestion-meta">${escapeHtml(meta)}</span></button>`;
+  });
+  panel.innerHTML = `<div class="search-suggestions-head">候補 ${matches.length}件</div>${rows.join("")}`;
+  panel.hidden = false;
+  if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+}
+
+function hideSearchSuggestions() {
+  const panel = el.searchSuggestions;
+  searchSuggestionIndex = -1;
+  searchSuggestionFacilities = [];
+  if (!panel) return;
+  panel.hidden = true;
+  panel.innerHTML = "";
+  if (el.searchInput && typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "false");
+}
+
+function setSearchSuggestionIndex(index) {
+  const panel = el.searchSuggestions;
+  if (!panel || !searchSuggestionFacilities.length) return;
+  searchSuggestionIndex = index;
+  panel.querySelectorAll(".search-suggestion").forEach((row) => {
+    const active = Number(row.dataset.suggestionIndex) === index;
+    row.classList.toggle("search-suggestion-active", active);
+    row.setAttribute("aria-selected", String(active));
+    if (active) row.scrollIntoView({ block: "nearest" });
+  });
+  if (index >= 0) el.searchInput.setAttribute("aria-activedescendant", `searchSuggestion${index}`);
+  else el.searchInput.removeAttribute("aria-activedescendant");
+}
+
+function openSearchSuggestion(facility) {
+  if (!facility) return;
+  searchSuggestionOpenedAt = Date.now();
+  hideSearchSuggestions();
+  track("search_suggestion_click");
+  openFacilityDetail(facility);
+}
+
+function handleSearchSuggestionOutsidePointer(event) {
+  const panel = el.searchSuggestions;
+  if (!panel || panel.hidden) return;
+  if (panel.contains(event.target) || event.target === el.searchInput) return;
+  hideSearchSuggestions();
 }
 
 function renderPrefStrip() {
@@ -7385,6 +7537,7 @@ function createSearchPrimaryVariants(term) {
     normalizeKanaLoose(value),
     normalizeKanaLongVowels(value),
     romanizeSearchText(value),
+    kanaFromRomajiSearchText(value),
   ]);
 }
 
@@ -7497,6 +7650,7 @@ function expandSearchTerm(term) {
     normalizeKanaLoose(value),
     normalizeKanaLongVowels(value),
     romanizeSearchText(value),
+    kanaFromRomajiSearchText(value),
   ]);
   const normalizedCandidates = uniqueStrings(termVariants.flatMap((value) => [
     normalizeCompact(value),
@@ -7579,6 +7733,71 @@ function romanizeSearchText(value) {
     } else if (/[a-z0-9]/i.test(char)) {
       result += char.toLowerCase();
     }
+  }
+  return result;
+}
+
+const KANA_FROM_ROMAJI = {
+  a: "ア", i: "イ", u: "ウ", e: "エ", o: "オ",
+  ka: "カ", ki: "キ", ku: "ク", ke: "ケ", ko: "コ",
+  sa: "サ", shi: "シ", si: "シ", su: "ス", se: "セ", so: "ソ",
+  ta: "タ", chi: "チ", ti: "チ", tsu: "ツ", tu: "ツ", te: "テ", to: "ト",
+  na: "ナ", ni: "ニ", nu: "ヌ", ne: "ネ", no: "ノ",
+  ha: "ハ", hi: "ヒ", fu: "フ", hu: "フ", he: "ヘ", ho: "ホ",
+  ma: "マ", mi: "ミ", mu: "ム", me: "メ", mo: "モ",
+  ya: "ヤ", yu: "ユ", yo: "ヨ",
+  ra: "ラ", ri: "リ", ru: "ル", re: "レ", ro: "ロ",
+  wa: "ワ", wi: "ウィ", we: "ウェ", wo: "ヲ",
+  ga: "ガ", gi: "ギ", gu: "グ", ge: "ゲ", go: "ゴ",
+  za: "ザ", ji: "ジ", zi: "ジ", zu: "ズ", ze: "ゼ", zo: "ゾ",
+  da: "ダ", di: "ヂ", du: "ヅ", de: "デ", do: "ド",
+  ba: "バ", bi: "ビ", bu: "ブ", be: "ベ", bo: "ボ",
+  pa: "パ", pi: "ピ", pu: "プ", pe: "ペ", po: "ポ",
+  va: "ヴァ", vi: "ヴィ", vu: "ヴ", ve: "ヴェ", vo: "ヴォ",
+  fa: "ファ", fi: "フィ", fe: "フェ", fo: "フォ",
+  kya: "キャ", kyu: "キュ", kyo: "キョ",
+  sya: "シャ", syu: "シュ", syo: "ショ", sha: "シャ", shu: "シュ", sho: "ショ",
+  cha: "チャ", chu: "チュ", cho: "チョ", cya: "チャ", cyu: "チュ", cyo: "チョ",
+  tya: "チャ", tyu: "チュ", tyo: "チョ",
+  nya: "ニャ", nyu: "ニュ", nyo: "ニョ",
+  hya: "ヒャ", hyu: "ヒュ", hyo: "ヒョ",
+  mya: "ミャ", myu: "ミュ", myo: "ミョ",
+  rya: "リャ", ryu: "リュ", ryo: "リョ",
+  gya: "ギャ", gyu: "ギュ", gyo: "ギョ",
+  ja: "ジャ", ju: "ジュ", jo: "ジョ", jya: "ジャ", jyu: "ジュ", jyo: "ジョ",
+  zya: "ジャ", zyu: "ジュ", zyo: "ジョ",
+  bya: "ビャ", byu: "ビュ", byo: "ビョ",
+  pya: "ピャ", pyu: "ピュ", pyo: "ピョ",
+};
+
+// Romaji queries cannot rely on romanized haystack tokens: names mixing kanji
+// and kana produce no romaji token, so convert the query itself to kana and
+// let the existing kana needles match. Unparseable input yields "" (no needle).
+function kanaFromRomajiSearchText(value) {
+  const text = normalizeText(value);
+  if (text.length < 2 || !/^[a-z'-]+$/.test(text)) return "";
+  let result = "";
+  let index = 0;
+  while (index < text.length) {
+    const char = text[index];
+    if (char === "-") { result += "ー"; index += 1; continue; }
+    if (char === "'") { index += 1; continue; }
+    if (/[bcdfghjklmpqrstvwxyz]/.test(char) && text[index + 1] === char && char !== "n") {
+      result += "ッ";
+      index += 1;
+      continue;
+    }
+    if (char === "n") {
+      const next = text[index + 1];
+      if (next === "n" && /[aiueoy]/.test(text[index + 2] || "")) { result += "ン"; index += 1; continue; }
+      if (!next || !/[aiueoy]/.test(next)) { result += "ン"; index += 1; continue; }
+    }
+    const three = text.slice(index, index + 3);
+    const two = text.slice(index, index + 2);
+    if (KANA_FROM_ROMAJI[three]) { result += KANA_FROM_ROMAJI[three]; index += 3; continue; }
+    if (KANA_FROM_ROMAJI[two]) { result += KANA_FROM_ROMAJI[two]; index += 2; continue; }
+    if (KANA_FROM_ROMAJI[char]) { result += KANA_FROM_ROMAJI[char]; index += 1; continue; }
+    return "";
   }
   return result;
 }

@@ -234,12 +234,13 @@
             <form class="search-form" id="searchForm" role="search">
               <label class="search-box">
                 <span aria-hidden="true"></span>
-                <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="施設名・住所・特徴" enterkeyhint="search" aria-controls="facilityList" />
+                <input id="searchInput" type="search" autocomplete="off" aria-label="サウナ名・県・住所・特徴で検索" placeholder="施設名・住所・特徴" enterkeyhint="search" aria-controls="facilityList searchSuggestions" aria-autocomplete="list" aria-expanded="false" />
                 <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
                   <span class="icon-close" aria-hidden="true"></span>
                 </button>
               </label>
               <button class="search-submit-button" type="submit">検索</button>
+              <div class="search-suggestions" id="searchSuggestions" role="listbox" aria-label="検索候補" hidden></div>
             </form>
             <div class="segment" role="group" aria-label="表示切替">
               <button class="segment-active" type="button" data-filter="all" aria-pressed="true">全部</button>
