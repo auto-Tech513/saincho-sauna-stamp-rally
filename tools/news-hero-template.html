@@ -99,10 +99,21 @@
   document.getElementById("date").textContent = params.get("date") || "";
   const titleEl = document.getElementById("title");
   titleEl.textContent = title;
-  // 長いタイトルは段階的に縮小して枠内に収める
+  // 長いタイトルは段階的に縮小して枠内に収める。
+  // 高さ上限だけでは OG（630px）でフッターの日付行が枠の下端に押し出されて切れるため、
+  // フッターが枠の内容領域を超えた場合も縮小条件に含める（サムネイルはタイトル非表示のため対象外）。
+  const frameEl = document.querySelector(".frame");
+  const bottomEl = document.querySelector(".bottom-row");
+  const isThumb = document.body.classList.contains("thumb");
+  function footerOverflows() {
+    if (isThumb) return false;
+    const frameStyle = getComputedStyle(frameEl);
+    const inset = parseFloat(frameStyle.borderBottomWidth) + parseFloat(frameStyle.paddingBottom);
+    return bottomEl.getBoundingClientRect().bottom > frameEl.getBoundingClientRect().bottom - inset + 2;
+  }
   let size = 62;
   titleEl.style.fontSize = size + "px";
-  while ((titleEl.scrollHeight > 330 || titleEl.scrollWidth > titleEl.clientWidth) && size > 34) {
+  while ((titleEl.scrollHeight > 330 || titleEl.scrollWidth > titleEl.clientWidth || footerOverflows()) && size > 30) {
     size -= 4;
     titleEl.style.fontSize = size + "px";
   }
