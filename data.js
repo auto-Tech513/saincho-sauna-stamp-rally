@@ -71191,5 +71191,24 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.sportsoasis.co.jp/sh81/",
     "officialUrl": "https://www.sportsoasis.co.jp/sh81/"
+  },
+  {
+    "id": "manual-fukushima-anytime-sauna",
+    "name": "いつでもサウナ",
+    "prefecture": "福島県",
+    "address": "福島県福島市飯坂町字若葉町6番1",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-15",
+    "city": "福島市",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://anytime-sauna.com/",
+    "officialUrl": "https://anytime-sauna.com/"
   }
 ];
