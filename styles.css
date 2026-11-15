@@ -10061,7 +10061,7 @@ body {
 }
 .book-cover-accent { color: var(--accent); white-space: nowrap; }
 @media (max-width: 380px) {
-  .book-cover-title { font-size: 26px; }
+  .book-cover-title { font-size: 29px; }
 }
 .book-cover-text { color: var(--ink-soft); line-height: 1.9; font-size: 16px; }
 
@@ -10322,7 +10322,7 @@ body {
   box-shadow: 0 0 0 3px var(--night), 0 0 0 4px var(--gold2);
 }
 .book-title-copy strong { display: block; font-family: var(--font-display); font-size: 17px; }
-.book-title-copy span { font-size: 12.5px; opacity: 0.75; }
+.book-title-copy span { font-size: 12px; opacity: 0.75; }
 
 /* サウナ補給 */
 .book-shelf-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -10640,17 +10640,17 @@ body {
 /* 第2段階(a)：施設詳細ヘッダーと操作ブロック（2026-11-16） */
 .facility-crumbs { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 6px; font-size: 12px; color: var(--ink-soft); margin: 0 0 14px; }
 .facility-crumbs button { background: none; border: 0; padding: 8px 2px; font: inherit; color: var(--primary); cursor: pointer; }
-.facility-dh { position: relative; padding-right: 120px; min-height: 104px; margin: 0 0 14px; }
+.facility-dh { position: relative; padding: 6px 120px 18px 0; min-height: 104px; margin: 0 0 14px; border-bottom: 1.5px solid var(--ink); }
 .facility-dh-eyebrow { font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .3em; color: var(--primary); margin: 0 0 6px; }
 .facility-dh h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 34px; line-height: 1.35; margin: 0 0 6px; }
-.facility-dh-loc { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+.facility-dh-loc { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
 .facility-dh-seal { position: absolute; right: 0; top: 0; width: 104px; height: 104px; }
 .facility-dh-seal .stamp-art { width: 104px; height: 104px; }
 .facility-dh-seal .stamp-kanji { font-size: 38px; }
 .facility-dh-seal-empty { width: 104px; height: 104px; border: 2.5px dashed #CDBFA5; border-radius: 50%; display: grid; place-items: center; }
 .facility-dh-seal-empty span { font-family: var(--hand-font); font-size: 13px; color: #8C8170; text-align: center; padding: 0 12px; line-height: 1.5; }
 .facility-primary-actions.facility-acts { grid-template-columns: 2fr 1fr 1fr; gap: 8px; margin: 0 0 10px; }
-.facility-primary-actions.facility-acts > button { height: 52px; min-height: 52px; padding: 0 8px; border-radius: 14px; border: 2px solid var(--ink); background: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+.facility-primary-actions.facility-acts > button { height: 52px; min-height: 52px; padding: 0 8px; border-radius: 14px; border: 2px solid var(--ink); background: #fff; font-size: 14px; font-weight: 700; cursor: pointer; }
 .facility-primary-actions.facility-acts > .facility-act-stamp { background: var(--accent); border-color: var(--accent); color: var(--cream); font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 18px; letter-spacing: .1em; }
 .facility-primary-actions.facility-acts > .facility-act-stamp:disabled { background: #E7DFCE; border-color: #CDBFA5; color: #8C8170; cursor: default; }
 .facility-primary-actions.facility-acts > .facility-act-sub[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
@@ -10667,16 +10667,18 @@ body {
 
 /* 第2段階(b)：照合札と注意書き（2026-11-16） */
 .facility-facts > div > dd { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
-.fact-badge { flex: none; font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .06em; line-height: 1.5; color: var(--primary); border: 1.5px solid var(--primary); border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.fact-badge { flex: none; font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .06em; line-height: 1.5; color: var(--primary); border: 1px solid var(--primary); border-radius: 999px; padding: 0 7px; white-space: nowrap; }
 .fact-badge.is-unverified { color: var(--accent); border-color: var(--accent); }
 .fact-missing-note { color: var(--ink-soft); }
-.facility-warn { background: var(--paper2); border-radius: 12px; padding: 12px 14px; font-size: 0.85rem; line-height: 1.7; margin: 12px 0; }
+.facility-warn { background: var(--paper2); border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.8; margin: 16px 0; }
 .facility-warn button { background: none; border: 0; padding: 0; font: inherit; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
 
 /* 第2段階(c)：同じ市区町村のサウナ・サ飯候補・県へ戻る導線（2026-11-16） */
-.facility-h3 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 20px; margin: 22px 0 10px; }
+.facility-h3 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 24px; letter-spacing: .08em; line-height: 1.4; margin: 40px 0 14px; padding-bottom: 8px; border-bottom: 1.5px solid var(--ink); display: flex; align-items: baseline; gap: 12px; }
+.facility-h3-label { font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .24em; color: var(--primary); white-space: nowrap; }
+.facility-h3-link { margin-left: auto; font-family: "Zen Kaku Gothic New", sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: 0; color: var(--primary); background: none; border: 0; padding: 4px 2px; cursor: pointer; white-space: nowrap; }
 .facility-near-list { display: grid; gap: 8px; }
-.facility-near-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; text-align: left; background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 8px 12px 8px 8px; cursor: pointer; }
+.facility-near-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 12px; width: 100%; text-align: left; background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 10px 12px; cursor: pointer; }
 .facility-near-mark { width: 48px; height: 48px; border-radius: 50%; border: 2px dashed #CDBFA5; display: grid; place-items: center; font-family: "Shippori Mincho B1", serif; font-weight: 800; color: #8C8170; }
 .facility-near-mark.is-done { border: 2.5px solid var(--accent); color: var(--accent); transform: rotate(-10deg); }
 .facility-near-mark.is-wish { border-style: solid; border-color: var(--teal2); color: var(--teal2); }
@@ -10701,9 +10703,9 @@ body {
 #viewExplore.is-pref-mode .first-steps-card,
 #viewExplore.is-pref-mode .book-map-sp { display: none; }
 .pref-dh h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 34px; line-height: 1.35; margin: 0 0 6px; }
-.pref-prog { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 14px; background: var(--night); border-radius: 14px; padding: 16px; margin: 14px 0 4px; }
+.pref-prog { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 16px; background: var(--night); border-radius: 14px; padding: 16px; margin: 14px 0; }
 .pref-prog-ring { width: 86px; height: 86px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--pct) * 1%), rgb(255 250 242 / 0.14) 0); display: grid; place-items: center; }
-.pref-prog-ring span { width: 62px; height: 62px; border-radius: 50%; background: var(--night); display: grid; place-items: center; font-family: var(--num-font); font-size: 22px; font-weight: 600; color: var(--cream); }
+.pref-prog-ring span { width: 68px; height: 68px; border-radius: 50%; background: var(--night); display: grid; place-items: center; font-family: var(--num-font); font-size: 22px; font-weight: 600; color: var(--cream); }
 .pref-prog-text strong { display: block; font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 17px; color: var(--cream); margin-bottom: 4px; }
 .pref-prog-text p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgb(255 250 242 / 0.75); }
 @media (max-width: 640px) { .pref-dh h2 { font-size: 26px; } }
@@ -10715,9 +10717,9 @@ body {
 #viewExplore .segment .segment-active { background: var(--ink); color: var(--cream); }
 #viewExplore .area-shortcut { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 #viewExplore .area-shortcut .feature-pills { display: contents; }
-#viewExplore .area-shortcut button { width: auto; height: 34px; min-height: 34px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; position: relative; box-shadow: none; cursor: pointer; }
+#viewExplore .area-shortcut button { width: auto; height: 34px; min-height: 34px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); font-size: 12.5px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; position: relative; box-shadow: none; cursor: pointer; }
 #viewExplore .area-shortcut button::after { content: ""; position: absolute; inset: -5px 0; }
-#viewExplore .area-shortcut button strong { font-size: 13px; font-weight: 700; }
+#viewExplore .area-shortcut button strong { font-size: 12.5px; font-weight: 700; }
 #viewExplore .area-shortcut .feature-pills button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
 #viewExplore .area-shortcut .nearby-result { flex: 1 1 100%; }
 #viewExplore .search-refiners { display: flex; }

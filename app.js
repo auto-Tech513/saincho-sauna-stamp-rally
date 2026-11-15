@@ -3254,7 +3254,7 @@ function renderFacilityNearbySection(facility) {
     .slice(0, 5);
   if (!peers.length) return "";
   return `<section class="facility-nearby" aria-label="同じ市区町村のほかのサウナ">
-    <h3 class="facility-h3">${escapeHtml(cityKey)}のほかのサウナ</h3>
+    <h3 class="facility-h3">${escapeHtml(cityKey)}のほかのサウナ<span class="facility-h3-label" aria-hidden="true">NEARBY</span></h3>
     <div class="facility-near-list">${peers.map((peer) => {
       const peerVisited = Boolean(state.visited[peer.id]);
       const peerWished = Boolean(state.wishlist[peer.id]);
@@ -3273,8 +3273,9 @@ function renderFacilitySameshiSection(facility) {
     .filter((spot) => spot.prefecture === facility.prefecture && spot.area && (cityKey === spot.area || cityKey.startsWith(spot.area) || spot.area.startsWith(cityKey)))
     .slice(0, 6);
   if (!matched.length) return "";
+  const prefSpotCount = SAMESHI_SPOTS.filter((spot) => spot.prefecture === facility.prefecture).length;
   return `<section class="facility-sameshi" aria-label="サ飯候補">
-    <h3 class="facility-h3">サ飯候補</h3>
+    <h3 class="facility-h3">サ飯候補<span class="facility-h3-label" aria-hidden="true">SA-MESHI · ${escapeHtml(facility.prefecture)} ${prefSpotCount}件</span><button type="button" class="facility-h3-link" data-open-view="Sameshi">一覧 →</button></h3>
     <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
   </section>`;
 }
