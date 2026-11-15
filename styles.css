@@ -10636,3 +10636,31 @@ body {
   width: 100%;
   justify-content: center;
 }
+
+/* 第2段階(a)：施設詳細ヘッダーと操作ブロック（2026-11-16） */
+.facility-crumbs { display: flex; align-items: center; flex-wrap: wrap; gap: 2px 6px; font-size: 12px; color: var(--ink-soft); margin: 0 0 14px; }
+.facility-crumbs button { background: none; border: 0; padding: 8px 2px; font: inherit; color: var(--primary); cursor: pointer; }
+.facility-dh { position: relative; padding-right: 120px; min-height: 104px; margin: 0 0 14px; }
+.facility-dh-eyebrow { font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .3em; color: var(--primary); margin: 0 0 6px; }
+.facility-dh h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 34px; line-height: 1.35; margin: 0 0 6px; }
+.facility-dh-loc { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
+.facility-dh-seal { position: absolute; right: 0; top: 0; width: 104px; height: 104px; }
+.facility-dh-seal .stamp-art { width: 104px; height: 104px; }
+.facility-dh-seal .stamp-kanji { font-size: 38px; }
+.facility-dh-seal-empty { width: 104px; height: 104px; border: 2.5px dashed #CDBFA5; border-radius: 50%; display: grid; place-items: center; }
+.facility-dh-seal-empty span { font-family: var(--hand-font); font-size: 13px; color: #8C8170; text-align: center; padding: 0 12px; line-height: 1.5; }
+.facility-primary-actions.facility-acts { grid-template-columns: 2fr 1fr 1fr; gap: 8px; margin: 0 0 10px; }
+.facility-primary-actions.facility-acts > button { height: 52px; min-height: 52px; padding: 0 8px; border-radius: 14px; border: 2px solid var(--ink); background: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+.facility-primary-actions.facility-acts > .facility-act-stamp { background: var(--accent); border-color: var(--accent); color: var(--cream); font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 18px; letter-spacing: .1em; }
+.facility-primary-actions.facility-acts > .facility-act-stamp:disabled { background: #E7DFCE; border-color: #CDBFA5; color: #8C8170; cursor: default; }
+.facility-primary-actions.facility-acts > .facility-act-sub[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+.facility-acts-route { grid-column: 1 / -1; text-align: right; }
+@media (max-width: 640px) {
+  .facility-dh { padding-right: 96px; min-height: 84px; }
+  .facility-dh h2 { font-size: 26px; }
+  .facility-dh-seal, .facility-dh-seal-empty { width: 84px; height: 84px; }
+  .facility-dh-seal .stamp-art { width: 84px; height: 84px; }
+  .facility-dh-seal .stamp-kanji { font-size: 30px; }
+  .facility-primary-actions.facility-acts { grid-template-columns: 1fr 1fr; }
+  .facility-primary-actions.facility-acts > .facility-act-stamp { grid-column: span 2; }
+}

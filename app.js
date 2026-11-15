@@ -1611,6 +1611,11 @@ function bindEvents() {
       deleteCommunityEvent(button.dataset.eventId);
       return;
     }
+    if (button.dataset.action === "crumb-prefecture") {
+      selectedPrefecture = button.dataset.prefecture || "全国";
+      setView("Explore");
+      return;
+    }
 
     const facility = getFacilityById(button.dataset.id);
     if (!facility) return;
@@ -3170,16 +3175,20 @@ function renderFacilityDetail() {
   const photo = getFacilityPhoto(facility);
   el.facilityDetail.innerHTML = `
     <article class="facility-detail facility-workspace">
-      <button class="back-button" type="button" data-open-view="Explore">検索へ戻る</button>
-      <header class="facility-masthead">
-        ${renderStamp(facility, visited)}
-        <div><h2>${escapeHtml(facility.name)}</h2><p>${escapeHtml(getFacilityAreaLabel(facility))}${visited ? " · 押印済み" : ""}</p></div>
-        ${renderFavoriteButton(facility, favorite, true)}
+      <nav class="facility-crumbs" aria-label="パンくず">
+        <button type="button" data-open-view="Explore">サ印帳</button><span aria-hidden="true">›</span>${facility.prefecture ? `<button type="button" data-action="crumb-prefecture" data-prefecture="${escapeAttr(facility.prefecture)}">${escapeHtml(facility.prefecture)}のサウナ</button><span aria-hidden="true">›</span>` : ""}<span aria-current="page">${escapeHtml(facility.name)}</span>
+      </nav>
+      <header class="facility-dh">
+        <p class="facility-dh-eyebrow">SAUNA DETAIL</p>
+        <h2>${escapeHtml(facility.name)}</h2>
+        <p class="facility-dh-loc">${escapeHtml(getFacilityAreaLabel(facility))}</p>
+        <div class="facility-dh-seal">${visited ? renderStamp(facility, true) : `<div class="facility-dh-seal-empty"><span>まだ押していない</span></div>`}</div>
       </header>
-      <div class="facility-primary-actions" ${facilityDetailTab !== "info" ? "hidden" : ""}>
-        <button class="facility-detail-button" type="button" data-action="open-activity" data-id="${id}">サ活を書く</button>
-        ${renderMapRouteLink(facility)}
-        <button class="facility-stamp-action" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+      <div class="facility-primary-actions facility-acts" ${facilityDetailTab !== "info" ? "hidden" : ""}>
+        <button class="facility-act-stamp" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
+        ${wished || canAddWishlist(facility) ? `<button class="facility-act-sub" type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
+        <button class="facility-act-sub ${favorite ? "is-active" : ""}" type="button" data-action="favorite" data-id="${id}" aria-pressed="${favorite}"><span aria-hidden="true">${favorite ? "★" : "☆"}</span>お気に入り</button>
+        <div class="facility-acts-route">${renderMapRouteLink(facility)}</div>
       </div>
       ${!visited && !status ? `<p class="facility-stamp-note">訪れたことがある施設は「押印する」で、この端末に記録できます。記録は都道府県別のサ印帳で確認できます。</p>` : ""}
       <nav class="facility-tabs" aria-label="施設詳細の表示">
@@ -3208,7 +3217,6 @@ function renderFacilityDetail() {
       </section>
       <details class="facility-disclosure facility-more"><summary>保存・共有・周辺情報</summary>
         <div class="facility-secondary-actions">
-          ${wished || canAddWishlist(facility) ? `<button type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
           <button type="button" data-action="share-facility-native" data-id="${id}">共有する</button>
           <button type="button" data-action="share-facility" data-id="${id}">Xでおすすめ</button>
           <a href="${escapeAttr(getNearbySameshiUrl(facility))}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(facility.name)}周辺の飲食店をGoogle Mapsで探す">周辺サ飯</a>
