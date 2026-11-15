@@ -9601,19 +9601,14 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-.news-rail-track {
-  counter-reset: rail-num;
-  scroll-snap-type: x proximity;
-}
+/* 注意: レールに scroll-snap を付けると自動スクロール（rAFで scrollLeft を
+   少しずつ進める方式）がスナップに引き戻されて動かなくなる。付けないこと。
+   連番はカウンタではなく data-num 属性で持つ（ループ複製でも番号が一致する）。 */
 .news-rail-card {
   position: relative;
-  scroll-snap-align: start;
-}
-.news-rail-card:not(.news-rail-more) {
-  counter-increment: rail-num;
 }
 .news-rail-card:not(.news-rail-more) .news-rail-card-title::before {
-  content: counter(rail-num, decimal-leading-zero) " ";
+  content: attr(data-num) " ";
   font-family: var(--font-latin);
   font-weight: 700;
   color: var(--primary);
@@ -9658,40 +9653,28 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
    - 施設カード：半透明の白から和紙の白へ、施設名を大判の明朝にして「名鑑」の様式に。
    - 記事：題字を大型化し、ヒーロー画像をカードの余白から解放して全面幅で見せる。 */
 
+/* === デザイン改善ラウンド第2弾 2026-11-15（構成の変更）＋方向修正 ===
+   DOM・見出し構造・構造化データ・導線は一切変えず、CSSのみで構成の見た目を作り替える。
+   - 検索帯：墨色の帯に反転させ、ファーストビューの重心を作る（中の操作要素は白地のまま）。
+   - ニュースレール：先頭カードを特集サイズにして均一なカードの反復を崩す。
+   - 施設カード：半透明の白から和紙の白へ（名鑑様式）。
+   - 記事：ヒーロー画像をカードの余白から解放して全面幅で見せる。
+   方向修正（オーナー指示 2026-11-15）：文字の拡大・増量は「芸のない変化」として撤回し、
+   元のスッキリした尺度に戻した。残すのは配置・色面・様式の変更のみ。
+   - マストヘッド：帯の高さとブランド名は元の寸法へ（渋金の罫のみ残す）。
+   - 記事題字・SPA記事題字・探索見出し：元のサイズへ。
+   - 施設名：元の17pxへ。残すのは明朝という書体の様式のみ（太さも元相当に）。 */
+
 .topbar {
   border-bottom: 3px solid #8a6a24;
 }
-@media (min-width: 1024px) {
-  .topbar {
-    min-height: 132px;
-  }
-  .topbar .brand-name {
-    font-size: 3.25rem;
-  }
-  .brand-mark {
-    width: 64px;
-    height: 64px;
-  }
-}
-@media (max-width: 640px) {
-  .topbar {
-    min-height: 100px;
-  }
-  .topbar .brand-name {
-    font-size: 2rem;
-  }
-  .brand-mark {
-    width: 52px;
-    height: 52px;
-  }
-}
 
 .explore-title {
-  font-size: 1.75rem;
+  font-size: 1.375rem;
 }
 .explore-title::after {
-  width: 72px;
-  height: 4px;
+  width: 56px;
+  height: 3px;
 }
 
 .view-explore .tool-band {
@@ -9701,24 +9684,28 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   margin-bottom: 14px;
 }
 
-.news-rail-card:first-child {
+.news-rail-card:first-child,
+.news-rail-card-featured {
   flex-basis: 440px;
   min-width: 440px;
 }
-.news-rail-card:first-child img {
+.news-rail-card:first-child img,
+.news-rail-card-featured img {
   height: 220px;
 }
 .news-rail-card:first-child .news-rail-card-title {
-  font-size: 1rem;
+  font-size: 0.92rem;
   line-height: 1.6;
   -webkit-line-clamp: 3;
 }
 @media (max-width: 640px) {
-  .news-rail-card:first-child {
+  .news-rail-card:first-child,
+  .news-rail-card-featured {
     flex-basis: 84vw;
     min-width: 84vw;
   }
-  .news-rail-card:first-child img {
+  .news-rail-card:first-child img,
+  .news-rail-card-featured img {
     height: 180px;
   }
 }
@@ -9729,20 +9716,11 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 }
 .facility-card .facility-name {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 800;
-  line-height: 1.35;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
-.ssr-content h1 {
-  font-size: 2rem;
-  line-height: 1.35;
-}
-@media (max-width: 640px) {
-  .ssr-content h1 {
-    font-size: 1.55rem;
-  }
-}
 .ssr-content img[src*="-hero.webp"] {
   display: block;
   width: calc(100% + 28px);
@@ -9750,9 +9728,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   margin-left: -14px;
   margin-right: -14px;
 }
-.news-article-title {
-  font-size: 1.75rem;
-}
+/* 第3弾（配置・余白・罫のリズム）は提案として分離済み。承認後に適用する。
+   内容: design-round-2026-11-15/phase3-proposal.css / 根拠: DESIGN-PRINCIPLES.md */
 
 /* === 検索候補（サジェスト）2026-11-15 ===
    入力に連動して施設候補をフォーム直下に重ねて表示する。既存の検索マッチング

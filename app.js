@@ -2131,13 +2131,13 @@ function trackNewsOnce(key, name, params) {
   track(name, params);
 }
 
-function newsRailCardHtml(article) {
+function newsRailCardHtml(article, index) {
   return `
       <a class="news-rail-card" href="/news/${escapeAttr(article.slug)}/" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
         <img src="/assets/news/${article.slug}-thumb.webp" alt="" width="640" height="400" loading="lazy" />
         <span class="news-rail-card-body">
           <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
-          <span class="news-rail-card-title">${escapeHtml(article.title)}</span>
+          <span class="news-rail-card-title" data-num="${String(index + 1).padStart(2, "0")}">${escapeHtml(article.title)}</span>
         </span>
       </a>`;
 }
@@ -2157,7 +2157,7 @@ function startNewsRailAutoScroll(track) {
   if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   const half = track.children.length / 2;
   if (!Number.isInteger(half) || half < 1) return;
-  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0, loopWidth: 0 };
+  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0, loopWidth: 0, lastTs: 0 };
   const pause = () => {
     state.pausedUntil = performance.now() + 5000;
     state.pos = track.scrollLeft || 0;
@@ -2172,7 +2172,7 @@ function startNewsRailAutoScroll(track) {
     observer.observe(track);
     state.observer = observer;
   }
-  const step = () => {
+  const step = (ts) => {
     if (newsRailScrollState !== state) return;
     if (!track.isConnected) {
       stopNewsRailAutoScroll();
@@ -2183,11 +2183,15 @@ function startNewsRailAutoScroll(track) {
     }
     const loopWidth = state.loopWidth;
     if (loopWidth > 0 && state.visible && !document.hidden && performance.now() >= state.pausedUntil) {
+      // 速度はフレーム間隔から決める（30px/秒）。フレーム毎の固定加算だと
+      // 120Hz 画面で2倍速になり、表示リフレッシュレートで速さが変わってしまう。
       // scrollLeft への小数加算はブラウザが切り捨てるため、位置は自前で累積する
-      state.pos += 0.5;
+      const delta = state.lastTs ? Math.min(ts - state.lastTs, 100) : 16.7;
+      state.pos += delta * 0.03;
       if (state.pos >= loopWidth) state.pos -= loopWidth;
       track.scrollLeft = state.pos;
     }
+    state.lastTs = ts;
     state.raf = requestAnimationFrame(step);
   };
   newsRailScrollState = state;
@@ -2218,7 +2222,7 @@ async function renderNewsRail() {
     return;
   }
   const cardsHtml = `
-      ${articles.map((article) => newsRailCardHtml(article)).join("")}
+      ${articles.map((article, index) => newsRailCardHtml(article, index)).join("")}
       <a class="news-rail-card news-rail-more" href="/news/" data-open-view="News">
         <span class="news-rail-more-text">すべて見る</span>
         <span class="news-rail-more-arrow" aria-hidden="true">→</span>
@@ -2232,11 +2236,13 @@ async function renderNewsRail() {
   const track = rail.querySelector(".news-rail-track");
   // ループ用に同じカード群を複製する（入れ子のグループ要素は iOS Safari で
   // 配置が崩れるため、トラックの直下に平坦に並べる。複製は読み上げ・タブ移動の対象外）
-  [...track.children].forEach((child) => {
+  [...track.children].forEach((child, index) => {
     const clone = child.cloneNode(true);
     clone.setAttribute("aria-hidden", "true");
     clone.inert = true;
     clone.tabIndex = -1;
+    // 先頭カードの特集サイズは複製側にも付け、ループの継ぎ目で幅が変わらないようにする
+    if (index === 0) clone.classList.add("news-rail-card-featured");
     track.appendChild(clone);
   });
   rail.hidden = false;
