@@ -9612,20 +9612,12 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .news-rail-card:not(.news-rail-more) {
   counter-increment: rail-num;
 }
-.news-rail-card:not(.news-rail-more)::before {
-  content: counter(rail-num, decimal-leading-zero);
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  z-index: 2;
-  padding: 2px 7px;
-  border-radius: 4px;
-  background: rgb(17 24 23 / 0.88);
-  color: var(--paper);
+.news-rail-card:not(.news-rail-more) .news-rail-card-title::before {
+  content: counter(rail-num, decimal-leading-zero) " ";
   font-family: var(--font-latin);
-  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  color: var(--primary);
+  letter-spacing: 0.08em;
 }
 
 /* 進捗ヒーロー：数字の対比を強める */
@@ -9656,4 +9648,108 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   background: #fffdf8;
   border: 1px solid var(--line);
   box-shadow: none;
+}
+
+/* === デザイン改善ラウンド第2弾 2026-11-15（劇的変更） ===
+   DOM・見出し構造・構造化データ・導線は一切変えず、CSSのみで構成の見た目を作り替える。
+   - マストヘッド：写真帯を大型化し、ブランドを大判の明朝に。渋金の罫で締める。
+   - 検索帯：墨色の帯に反転させ、ファーストビューの重心を作る（中の操作要素は白地のまま）。
+   - ニュースレール：先頭カードを特集サイズにして均一なカードの反復を崩す。
+   - 施設カード：半透明の白から和紙の白へ、施設名を大判の明朝にして「名鑑」の様式に。
+   - 記事：題字を大型化し、ヒーロー画像をカードの余白から解放して全面幅で見せる。 */
+
+.topbar {
+  border-bottom: 3px solid #8a6a24;
+}
+@media (min-width: 1024px) {
+  .topbar {
+    min-height: 132px;
+  }
+  .topbar .brand-name {
+    font-size: 3.25rem;
+  }
+  .brand-mark {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (max-width: 640px) {
+  .topbar {
+    min-height: 100px;
+  }
+  .topbar .brand-name {
+    font-size: 2rem;
+  }
+  .brand-mark {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.explore-title {
+  font-size: 1.75rem;
+}
+.explore-title::after {
+  width: 72px;
+  height: 4px;
+}
+
+.view-explore .tool-band {
+  background: var(--ink);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.news-rail-card:first-child {
+  flex-basis: 440px;
+  min-width: 440px;
+}
+.news-rail-card:first-child img {
+  height: 220px;
+}
+.news-rail-card:first-child .news-rail-card-title {
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-line-clamp: 3;
+}
+@media (max-width: 640px) {
+  .news-rail-card:first-child {
+    flex-basis: 84vw;
+    min-width: 84vw;
+  }
+  .news-rail-card:first-child img {
+    height: 180px;
+  }
+}
+
+.facility-card {
+  background: #fffdf8;
+  border-radius: 6px;
+}
+.facility-card .facility-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.ssr-content h1 {
+  font-size: 2rem;
+  line-height: 1.35;
+}
+@media (max-width: 640px) {
+  .ssr-content h1 {
+    font-size: 1.55rem;
+  }
+}
+.ssr-content img[src*="-hero.webp"] {
+  display: block;
+  width: calc(100% + 28px);
+  max-width: none;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.news-article-title {
+  font-size: 1.75rem;
 }
