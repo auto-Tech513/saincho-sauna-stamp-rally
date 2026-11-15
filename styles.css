@@ -10664,3 +10664,69 @@ body {
   .facility-primary-actions.facility-acts { grid-template-columns: 1fr 1fr; }
   .facility-primary-actions.facility-acts > .facility-act-stamp { grid-column: span 2; }
 }
+
+/* 第2段階(b)：照合札と注意書き（2026-11-16） */
+.facility-facts > div > dd { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.fact-badge { flex: none; font-family: var(--num-font); font-size: 11px; font-weight: 600; letter-spacing: .06em; line-height: 1.5; color: var(--primary); border: 1.5px solid var(--primary); border-radius: 999px; padding: 1px 8px; white-space: nowrap; }
+.fact-badge.is-unverified { color: var(--accent); border-color: var(--accent); }
+.fact-missing-note { color: var(--ink-soft); }
+.facility-warn { background: var(--paper2); border-radius: 12px; padding: 12px 14px; font-size: 0.85rem; line-height: 1.7; margin: 12px 0; }
+.facility-warn button { background: none; border: 0; padding: 0; font: inherit; color: var(--primary); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+/* 第2段階(c)：同じ市区町村のサウナ・サ飯候補・県へ戻る導線（2026-11-16） */
+.facility-h3 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 20px; margin: 22px 0 10px; }
+.facility-near-list { display: grid; gap: 8px; }
+.facility-near-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; text-align: left; background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 8px 12px 8px 8px; cursor: pointer; }
+.facility-near-mark { width: 48px; height: 48px; border-radius: 50%; border: 2px dashed #CDBFA5; display: grid; place-items: center; font-family: "Shippori Mincho B1", serif; font-weight: 800; color: #8C8170; }
+.facility-near-mark.is-done { border: 2.5px solid var(--accent); color: var(--accent); transform: rotate(-10deg); }
+.facility-near-mark.is-wish { border-style: solid; border-color: var(--teal2); color: var(--teal2); }
+.facility-near-main strong { display: block; font-size: 16px; }
+.facility-near-main small { color: var(--ink-soft); font-size: 0.78rem; }
+.facility-near-arrow { color: var(--ink-soft); }
+.facility-shelf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.facility-shelf-item { background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 10px; text-decoration: none; color: var(--ink); }
+.facility-shelf-item strong { display: block; font-family: "Shippori Mincho B1", serif; font-size: 16px; margin-bottom: 2px; }
+.facility-shelf-item small { color: var(--ink-soft); font-size: 0.72rem; }
+.facility-back-pref { margin: 18px 0 4px; width: 100%; height: 48px; border-radius: 12px; border: 1.5px solid var(--ink); background: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
+@media (max-width: 640px) { .facility-shelf { grid-template-columns: repeat(2, 1fr); } }
+
+/* 第2段階(d)：県ページのヘッダーと進捗帯（2026-11-16） */
+#viewExplore .pref-band { order: 2; }
+#viewExplore.is-pref-mode .book-cover,
+#viewExplore.is-pref-mode .book-counts,
+#viewExplore.is-pref-mode .book-stamps,
+#viewExplore.is-pref-mode .news-rail,
+#viewExplore.is-pref-mode .book-shelf,
+#viewExplore.is-pref-mode .guide-entry,
+#viewExplore.is-pref-mode .first-steps-card,
+#viewExplore.is-pref-mode .book-map-sp { display: none; }
+.pref-dh h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 34px; line-height: 1.35; margin: 0 0 6px; }
+.pref-prog { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 14px; background: var(--night); border-radius: 14px; padding: 16px; margin: 14px 0 4px; }
+.pref-prog-ring { width: 86px; height: 86px; border-radius: 50%; background: conic-gradient(var(--accent) calc(var(--pct) * 1%), rgb(255 250 242 / 0.14) 0); display: grid; place-items: center; }
+.pref-prog-ring span { width: 62px; height: 62px; border-radius: 50%; background: var(--night); display: grid; place-items: center; font-family: var(--num-font); font-size: 22px; font-weight: 600; color: var(--cream); }
+.pref-prog-text strong { display: block; font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 17px; color: var(--cream); margin-bottom: 4px; }
+.pref-prog-text p { margin: 0; font-size: 0.85rem; line-height: 1.6; color: rgb(255 250 242 / 0.75); }
+@media (max-width: 640px) { .pref-dh h2 { font-size: 26px; } }
+
+/* 第2段階(e)：絞り込みタブ（tabs3）とピル列の統合（2026-11-16） */
+#viewExplore .segment { display: flex; gap: 6px; background: none; border: 0; padding: 0; }
+#viewExplore .segment button { flex: 1; height: 38px; min-height: 38px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); font-size: 13px; font-weight: 700; position: relative; cursor: pointer; }
+#viewExplore .segment button::after { content: ""; position: absolute; inset: -3px 0; }
+#viewExplore .segment .segment-active { background: var(--ink); color: var(--cream); }
+#viewExplore .area-shortcut { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#viewExplore .area-shortcut .feature-pills { display: contents; }
+#viewExplore .area-shortcut button { width: auto; height: 34px; min-height: 34px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: #fff; color: var(--ink); font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; position: relative; box-shadow: none; cursor: pointer; }
+#viewExplore .area-shortcut button::after { content: ""; position: absolute; inset: -5px 0; }
+#viewExplore .area-shortcut button strong { font-size: 13px; font-weight: 700; }
+#viewExplore .area-shortcut .feature-pills button[aria-pressed="true"] { background: var(--ink); color: var(--cream); }
+#viewExplore .area-shortcut .nearby-result { flex: 1 1 100%; }
+#viewExplore .search-refiners { display: flex; }
+
+/* 第2段階(f)：R1〜R6・SPフッター帯（2026-11-16） */
+.brand-kakuiin { display: grid; place-items: center; width: 48px; height: 48px; flex: none; background: var(--accent); color: var(--cream); border-radius: 10px; transform: rotate(-6deg); font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 26px; box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.65); }
+.book-cover-text { text-align: center; }
+.app-shell .bottom-nav > button.nav-active .nav-icon { color: #7FD6CB; }
+@media (max-width: 1023px) {
+  .app-shell .stage-foot { display: flex; padding: 26px 10px 30px; border-top: 1px dashed #CFC3AC; margin-top: 26px; }
+  .app-shell .stage-foot button { color: var(--ink-soft); }
+}
