@@ -246,9 +246,11 @@
       </header>
 
       <main class="main">
-        <div class="app-update-notice" id="appUpdateNotice" role="status" hidden>
-          <span>最新版があります。保存後に更新してください。</span>
-          <button class="secondary-button" type="button" data-app-action="reload-app">更新する</button>
+        <div class="app-update-notice se-upd" id="appUpdateNotice" role="status" hidden>
+          <span class="ic" aria-hidden="true">更</span>
+          <div><b>新しい版があります</b><small>記録はこの端末に残ります（入力中の下書きは保存してから更新してください）</small></div>
+          <button class="se-upd-btn" type="button" data-app-action="reload-app">更新して再読み込み</button>
+          <button class="se-upd-x" type="button" data-app-action="dismiss-update" aria-label="更新通知を閉じる">×</button>
         </div>
         <!-- SSR:SLOT -->
         <section class="view view-active" id="viewExplore" aria-label="ホーム">
@@ -1128,12 +1130,13 @@
       </ol>
     </dialog>
 
-    <dialog class="achievement-dialog" id="achievementDialog">
+    <dialog class="achievement-dialog se-tdlg" id="achievementDialog">
       <div class="achievement-card">
         <button class="achievement-close" id="closeAchievementButton" type="button" aria-label="閉じる">
           <span class="icon-close" aria-hidden="true"></span>
         </button>
-        <img src="./assets/achievement-mascot.webp" width="360" height="240" loading="lazy" decoding="async" alt="" />
+        <div class="se-tdlg-md" id="achievementMedal" aria-hidden="true">称</div>
+        <div class="se-tdlg-seal" aria-hidden="true">サ</div>
         <p class="eyebrow" id="achievementEyebrow">ACHIEVEMENT</p>
         <h2 id="achievementTitle">称号獲得</h2>
         <p id="achievementBody">サ印帳が育ちました。</p>
