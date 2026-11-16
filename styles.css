@@ -10747,3 +10747,32 @@ body {
 .rail-action-button { white-space: nowrap; padding-left: 14px; padding-right: 14px; }
 /* 探す画面の「全部・未押印・行きたい・お気に入り」：等幅で「お気に入り」が枠からはみ出していた → 文字の長さに合わせる */
 #viewExplore .segment button { flex: 1 1 auto; padding: 0 12px; white-space: nowrap; }
+
+/* 2026-11-17 監査: 中央カラムが狭い PC 幅で、サ飯・宿カードが2列になり本文列が約34pxに潰れる／ランキング参加ボタンが縦長になるのを直す */
+@media (min-width: 720px) {
+  .sameshi-grid,
+  .stay-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  }
+
+  .profile-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .profile-form .profile-share-row,
+  .profile-form > .primary-button {
+    grid-column: 1 / -1;
+  }
+
+  .profile-form .profile-share-row {
+    height: auto;
+    min-height: 52px;
+    padding-block: 8px;
+  }
+
+  .profile-form > .primary-button {
+    justify-self: start;
+    min-width: 200px;
+    white-space: nowrap;
+  }
+}
