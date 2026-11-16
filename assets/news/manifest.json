@@ -256,5 +256,23 @@
     "og": "/assets/news/iifuro-matsuri-2026-og.png",
     "thumb": "/assets/news/iifuro-matsuri-2026-thumb.webp",
     "generatedAt": "2026-11-15"
+  },
+  "beb5-karuizawa-ashidake-sauna": {
+    "hero": "/assets/news/beb5-karuizawa-ashidake-sauna-hero.webp",
+    "og": "/assets/news/beb5-karuizawa-ashidake-sauna-og.png",
+    "thumb": "/assets/news/beb5-karuizawa-ashidake-sauna-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "mimata-onsen-ururu-opening": {
+    "hero": "/assets/news/mimata-onsen-ururu-opening-hero.webp",
+    "og": "/assets/news/mimata-onsen-ururu-opening-og.png",
+    "thumb": "/assets/news/mimata-onsen-ururu-opening-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "tenet-sauna-mixed-use": {
+    "hero": "/assets/news/tenet-sauna-mixed-use-hero.webp",
+    "og": "/assets/news/tenet-sauna-mixed-use-og.png",
+    "thumb": "/assets/news/tenet-sauna-mixed-use-thumb.webp",
+    "generatedAt": "2026-11-17"
   }
 }

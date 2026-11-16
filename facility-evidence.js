@@ -1356,6 +1356,21 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }],
   },
   {
+    ids: ["manual-shimane-mimata-ururu"], name: "美又温泉うるる", status: "planned",
+    features: ["温泉付き", "水風呂あり", "外気あり"],
+    facts: [{ label: "営業状況", value: "開業予定（令和8年12月開業予定。工事の進捗により遅れる可能性があると浜田市が案内。開業までは押印対象外）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1786521854127/simple/bosyuuyoukou.pdf", checkedAt: "2026-11-17" }, { label: "設備", value: "計画では男性内湯にサウナと水風呂、女性内湯に炭酸風呂。貸切風呂3室、露天風呂、外気浴スペース、無料休憩室（浜田市の実施計画）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1757406429878/simple/jisshikeikaku.pdf", checkedAt: "2026-11-17" }],
+  },
+  {
+    ids: ["st-shimane-3611"], name: "美又温泉国民保養センター", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（令和8年3月31日で営業終了。後継の外湯施設「美又温泉うるる」を浜田市が整備中）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1757406429878/simple/jisshikeikaku.pdf", checkedAt: "2026-11-17" }],
+  },
+  {
+    ids: ["manual-nagano-beb5-karuizawa"], name: "BEB5軽井沢 by 星野リゾート（BEB足だけサウナ）", officialUrl: "https://hoshinoresorts.com/ja/hotels/beb5karuizawa",
+    features: ["セルフロウリュ", "ロウリュあり", "外気あり", "宿泊可"],
+    facts: [{ label: "営業時間", value: "BEB足だけサウナは2026年12月8日〜2027年3月31日の期間限定。9:00〜21:00（最終受付20:00）、50分ごとの交代制", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "料金", value: "足だけサウナ体験 1名300円（税込、ハーブロウリュ・貸出ポンチョ込み）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "設備・温度", value: "服を着たまま足元を温める屋外の足だけサウナ。室温約80度、セルフロウリュ可、HARVIA製ヒーター。定員1組3名", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "利用条件", value: "公式サイトで前日23:59まで要予約（空きがあれば当日開催前まで受付）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }],
+  },
+  {
     ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "planned",
     features: ["個室"],
     facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],

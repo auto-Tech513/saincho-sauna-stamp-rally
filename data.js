@@ -71210,5 +71210,49 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://anytime-sauna.com/",
     "officialUrl": "https://anytime-sauna.com/"
+  },
+  {
+    "id": "manual-nagano-beb5-karuizawa",
+    "name": "BEB5軽井沢 by 星野リゾート（BEB足だけサウナ）",
+    "prefecture": "長野県",
+    "address": "〒389-0195 長野県北佐久郡軽井沢町星野",
+    "addressSource": "公式発表",
+    "addressCheckedAt": "2026-11-17",
+    "city": "北佐久郡軽井沢町",
+    "trait": "private",
+    "tags": [
+      "期間限定",
+      "足だけサウナ"
+    ],
+    "features": [
+      "セルフロウリュ",
+      "ロウリュあり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://hoshinoresorts.com/ja/hotels/beb5karuizawa",
+    "officialUrl": "https://hoshinoresorts.com/ja/hotels/beb5karuizawa"
+  },
+  {
+    "id": "manual-shimane-mimata-ururu",
+    "name": "美又温泉うるる",
+    "prefecture": "島根県",
+    "address": "島根県浜田市金城町追原31番地3",
+    "addressSource": "浜田市の公表資料",
+    "addressCheckedAt": "2026-11-17",
+    "city": "浜田市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.city.hamada.shimane.jp/www/contents/1786521854127/simple/bosyuuyoukou.pdf",
+    "officialUrl": "https://www.city.hamada.shimane.jp/"
   }
 ];
