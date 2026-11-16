@@ -1352,6 +1352,15 @@ function bindEvents() {
     }
   });
 
+  // SP: キーボードが開くと検索欄の下に出る候補が画面外・下部ナビの裏に隠れて選べないため、検索欄を表示領域の上端へ寄せる
+  el.searchInput.addEventListener("focus", () => {
+    if (!window.matchMedia("(max-width: 640px)").matches) return;
+    window.setTimeout(() => {
+      const box = el.searchInput.closest(".search-form") || el.searchInput;
+      box.scrollIntoView({ block: "start", behavior: "smooth" });
+    }, 250);
+  });
+
   el.searchInput.addEventListener("focus", () => {
     if (!el.searchInput.value.trim()) return;
     if (searchTerm === normalizeText(el.searchInput.value) && getFacilitySearchRecords().length) {
@@ -5081,7 +5090,7 @@ function renderGuideGearRail(articles) {
     <div class="guide-gear-head">
       <div>
         <span>READ TO GEAR</span>
-        <strong>読んだら、次のサウナを快適にする</strong>
+        <strong>読んだら、<wbr />次のサウナを快適にする</strong>
       </div>
       <button class="mini-button" type="button" data-open-view="Gear">Gear 30件</button>
     </div>

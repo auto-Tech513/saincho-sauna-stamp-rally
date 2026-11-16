@@ -10778,3 +10778,25 @@ body {
     white-space: nowrap;
   }
 }
+
+/* iPhone 表示の是正（2026-11-17） */
+/* 比較バー：0件のときは hidden で隠す設計だが display:flex に負けて常に表示され、
+   スクロール中も施設カードの上に「比較中 0件」が重なっていた。選択時は下の内容が透けないようにする */
+.compare-bar[hidden] { display: none; }
+.compare-bar { background: rgb(255 255 255 / 0.98); }
+/* 帳面の空き枠：「まだ／押していな／い」と1文字だけ次の行に残らないようにする。
+   枠の内側が78px（360px幅では約70px）しかなく「押していない」6文字が入らないため、空き枠だけ左右の余白を詰め12pxにする */
+.book-stamp-page.is-empty { padding-inline: 4px; }
+.book-stamp-empty-text { font-size: 12px; word-break: keep-all; overflow-wrap: anywhere; }
+/* 見出し・出典リンクは行長をそろえ、「覚え／る」「マナ／ー」「（…サウナ／）」のような改行を避ける */
+.guide-starter-title,
+.news-facility-chips a,
+figcaption { text-wrap: balance; }
+/* 「読んだら、次のサウナを快適に／する」：文中の <wbr>（「、」の後）だけで折り返す */
+.guide-gear-head strong { word-break: keep-all; overflow-wrap: anywhere; }
+/* 出典リンクは空白・括弧の位置で折り返す（「星野リゾー／ト」のような語の途中を避ける） */
+.news-facility-chips a { word-break: keep-all; overflow-wrap: anywhere; }
+/* ニュース一覧のサムネイル：横長画像を中央で切り抜くと左端の分類名（「新店・開店」など）が欠けるため左寄せで切り抜く */
+.news-card-thumb { object-position: left center; }
+/* 検索欄を上端へ寄せたときに見出し帯へ密着させない */
+#viewExplore .search-form { scroll-margin-top: 12px; }
