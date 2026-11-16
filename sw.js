@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v59-grid-20261117";
+const CACHE_NAME = "saincho-v60-tab-20261117";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 

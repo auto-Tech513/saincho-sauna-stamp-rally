@@ -9983,6 +9983,8 @@ body {
   background: repeating-linear-gradient(180deg, currentColor 0 2px, transparent 2px 8px);
   width: 20px;
   height: 18px;
+  /* 他のタブのアイコン（22px）と高さをそろえ、ラベルの縦位置のずれ（2px）をなくす */
+  margin-block: 2px;
 }
 .bottom-nav .tab-stamp { opacity: 1; position: relative; }
 .tab-stamp-seal {
