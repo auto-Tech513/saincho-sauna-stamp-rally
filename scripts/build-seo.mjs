@@ -319,6 +319,7 @@ const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
 const sourceNews = await read("news.js");
 const sourceNearby = await read("nearby.js");
+const sourcePhrase = await read("phrase.js");
 const sourceOfficialEvidence = await read("official-page-evidence.js");
 const officialEvidenceFile = `official-page-evidence.${hash(sourceOfficialEvidence)}.js`;
 const sourceEvidence = (await read("facility-evidence.js")).replace('from "./official-page-evidence.js";', `from "./${officialEvidenceFile}";`);
@@ -328,9 +329,11 @@ const contentFile = `content.${hash(sourceContent)}.js`;
 const newsFile = `news.${hash(sourceNews)}.js`;
 const stylesFile = `styles.${hash(sourceStyles)}.css`;
 const nearbyFile = `nearby.${hash(sourceNearby)}.js`;
+const phraseFile = `phrase.${hash(sourcePhrase)}.js`;
 const evidenceFile = `facility-evidence.${hash(sourceEvidence)}.js`;
 const appSource = (await read("app.js"))
   .replace('from "./nearby.js";', `from "./${nearbyFile}";`)
+  .replace('from "./phrase.js";', `from "./${phraseFile}";`)
   .replace('from "./facility-evidence.js";', `from "./${evidenceFile}";`)
   .replace('const DATA_MODULE_PATH = "./data.js";', `const DATA_MODULE_PATH = "./${dataFile}";`)
   .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`)
@@ -342,14 +345,15 @@ await write(contentFile, sourceContent);
 await write(newsFile, sourceNews);
 await write(stylesFile, sourceStyles);
 await write(nearbyFile, sourceNearby);
+await write(phraseFile, sourcePhrase);
 await write(officialEvidenceFile, sourceOfficialEvidence);
 await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
 await write("version.json", JSON.stringify({ app: appFile, styles: stylesFile }));
-const shellModules = [appFile, stylesFile, dataFile, contentFile, nearbyFile, evidenceFile, officialEvidenceFile];
+const shellModules = [appFile, stylesFile, dataFile, contentFile, nearbyFile, phraseFile, evidenceFile, officialEvidenceFile];
 const builtSw = sourceSw
   .replace(/const CACHE_NAME = "[^"]+";/, `const CACHE_NAME = "saincho-${hash(sourceSw + shellModules.join(":"))}";`)
-  .replace(/"\.\/(?:app|styles|data|content|nearby|facility-evidence|official-page-evidence)\.(?:js|css)",\n/g, "")
+  .replace(/"\.\/(?:app|styles|data|content|nearby|phrase|facility-evidence|official-page-evidence)\.(?:js|css)",\n/g, "")
   .replace("const APP_SHELL_ASSETS = [", `const APP_SHELL_ASSETS = [\n${shellModules.map(file => `  "./${file}",`).join("\n")}`);
 await write("sw.js", builtSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
