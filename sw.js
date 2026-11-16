@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v57-quality-round1-20261022";
+const CACHE_NAME = "saincho-v58-audit-20261117";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
