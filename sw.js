@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v61-iphone-20261117";
+const CACHE_NAME = "saincho-v62-phrase-20261117";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -18,6 +18,7 @@ const APP_SHELL_ASSETS = [
   "./data.js",
   "./content.js",
   "./nearby.js",
+  "./phrase.js",
   "./facility-evidence.js",
   "./official-page-evidence.js",
   "./assets/japan-map-mobile.svg",

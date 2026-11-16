@@ -6,6 +6,7 @@ import {
   isUsableNearbyPosition,
 } from "./nearby.js";
 import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility } from "./facility-evidence.js";
+import { phraseHtml } from "./phrase.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -8416,3 +8417,32 @@ function bindRenewalEvents() {
 }
 
 bindRenewalEvents();
+
+// 見出し・カード題名・ボタン文言の文節改行（2026-11-17）
+// iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
+// 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
+// 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span";
+const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
+
+function applyPhraseBreak(node) {
+  if (!(node instanceof HTMLElement) || node.childElementCount !== 0 || !node.matches(PHRASE_SELECTOR)) return;
+  const text = node.textContent || "";
+  if (text.length > 140 || !PHRASE_JAPANESE.test(text) || node.closest("[contenteditable], textarea, select, svg")) return;
+  const html = phraseHtml(text, escapeHtml);
+  if (html.startsWith("<span class=\"ph\">")) node.innerHTML = html;
+}
+
+function applyPhraseBreaks(scope) {
+  if (!(scope instanceof HTMLElement)) return;
+  applyPhraseBreak(scope);
+  scope.querySelectorAll(PHRASE_SELECTOR).forEach(applyPhraseBreak);
+}
+
+applyPhraseBreaks(document.body);
+new MutationObserver((mutations) => {
+  for (const mutation of mutations) {
+    applyPhraseBreak(mutation.target);
+    mutation.addedNodes.forEach(applyPhraseBreaks);
+  }
+}).observe(document.body, { childList: true, subtree: true });

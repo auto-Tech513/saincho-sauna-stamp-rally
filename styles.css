@@ -10800,3 +10800,14 @@ figcaption { text-wrap: balance; }
 .news-card-thumb { object-position: left center; }
 /* 検索欄を上端へ寄せたときに見出し帯へ密着させない */
 #viewExplore .search-form { scroll-margin-top: 12px; }
+
+/* 見出し・カード題名の文節改行（2026-11-17）
+   phrase.js が文節の切れ目に <wbr> を入れ、ここで <wbr> と空白以外の改行を止める（iPhone Safari は auto-phrase 未対応）。
+   keep-all と overflow-wrap: anywhere の組み合わせは Safari で数字の途中で折れるため、1文節が行幅を超えるときの保険は break-word。
+   all: unset で「.guide-entry span」等の周囲の span 向けスタイルを受けず、見た目は親のまま。 */
+.ph {
+  all: unset !important;
+  display: inline !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
