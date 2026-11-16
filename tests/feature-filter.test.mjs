@@ -59,7 +59,9 @@ test("zero-result features are disabled but an active zero selection remains rem
   const html = run('el.featureFilterGrid.innerHTML');
   assert.match(html, /data-feature-filter="ドライサウナ"[^>]*disabled/);
   assert.match(html, /data-feature-filter="塩サウナ" aria-pressed="true" ><span/);
-  assert.match(html, /data-feature-reset/);
+  // 解除ボタンは design-extra 17 のレイアウト契約でパネル下部の固定位置へ移設
+  // （グリッド内から #featureFilterReset へ）。選択中は表示されることが契約。
+  assert.equal(run('el.featureFilterReset.hidden'), false);
 });
 
 test("official salt and auto-loyly features reach the search index", () => {

@@ -10732,3 +10732,55 @@ body {
   .app-shell .stage-foot { display: flex; padding: 26px 10px 30px; border-top: 1px dashed #CFC3AC; margin-top: 26px; }
   .app-shell .stage-foot button { color: var(--ink-soft); }
 }
+
+/* ============================================================
+   design-extra PR-A（SE-17 特徴パネル / SE-18 並び替え / SE-19 検索候補）
+   Mac側Claude の sa-extra.css が正。変数は現行トークンへ読み替えた
+   （--num→--num-font、--red→--accent、--sub→--ink-soft、--paper→--paper2）。
+   ============================================================ */
+/* SE-17 特徴の全件パネル */
+.feature-filter-toggle, .feature-filter-toggle[aria-expanded="true"] { background: var(--primary); border-color: var(--primary); color: #fff; border-radius: 999px; min-height: 44px; padding: 0 16px; }
+.feature-filter-toggle strong { color: #fff; }
+#featureFilterPanel.se-fp { margin: 12px 0 0; background: #fff; border: 2px solid var(--ink); border-radius: 16px; padding: 0 16px; box-shadow: none; }
+.se-fp-hd { display: flex; align-items: center; gap: 10px; min-height: 56px; border-bottom: 1.5px solid var(--ink); }
+.se-fp-hd b { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 18px; }
+.se-fp-hd span { font-size: 14px; color: var(--primary); font-weight: 700; }
+.se-fp-x { margin-left: auto; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--ink); background: #fff; font-size: 20px; cursor: pointer; flex: none; }
+.se-fp .form-help { font-size: 12.5px; color: var(--ink-soft); line-height: 1.7; margin: 10px 0 0; }
+.se-fp-gp { padding: 12px 0; border-bottom: 1px dashed #CFC3AC; }
+.se-fp-gp h5 { font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
+.se-fp-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.se-fp#featureFilterPanel .feature-chip { display: inline-flex; align-items: center; gap: 6px; min-height: 48px; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--ink); background: var(--cream); color: var(--ink); font-size: 14px; font-weight: 700; }
+.se-fp#featureFilterPanel .feature-chip.is-active { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.se-fp#featureFilterPanel .feature-chip[disabled] { opacity: 0.45; }
+.se-fp#featureFilterPanel .feature-chip-count { font-style: normal; font-family: var(--num-font); font-size: 13px; opacity: 0.7; }
+.se-fp#featureFilterPanel .feature-unavailable { border-bottom: 1px dashed #CFC3AC; }
+.se-fp#featureFilterPanel .feature-unavailable summary { padding: 12px 0; }
+.se-fp-ft { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 0; }
+.se-fp-tl { min-height: 44px; border: 0; background: none; font: inherit; font-weight: 700; border-bottom: 1.5px solid var(--ink); font-size: 14px; cursor: pointer; }
+.se-fp-tl[hidden] { visibility: hidden; }
+.se-fp#featureFilterPanel .search-submit-button { position: static; width: auto; height: auto; margin-top: 0; background: var(--primary); border-color: var(--primary); color: #fff; border-radius: 999px; min-height: 48px; padding: 0 20px; }
+/* SE-18 並び替えセレクト */
+.results-controls.se-bar { display: flex; align-items: center; gap: 12px; margin: 6px 0 12px; }
+.se-bar-cnt { font-size: 14px; }
+.se-bar-cnt .num { font-family: var(--num-font); font-size: 26px; font-weight: 600; margin-right: 2px; }
+.se-sort { margin-left: auto; position: relative; display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 36px 0 14px; border: 1.5px solid var(--ink); border-radius: 999px; background: #fff; }
+.se-sort .k { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); }
+.se-sort select { appearance: none; -webkit-appearance: none; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 700; min-height: 44px; padding: 0; cursor: pointer; }
+.se-sort .cv { position: absolute; right: 14px; pointer-events: none; }
+/* SE-19 検索候補パネル */
+.search-suggestions { background: #fff; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 0 14px 30px rgb(0 0 0 / 0.18); padding: 0 0 6px; }
+.search-suggestions-head { padding: 12px 16px 6px; font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0; }
+.search-suggestions-subhead { padding: 8px 16px 2px; font-size: 12.5px; color: var(--ink-soft); font-weight: 700; }
+.search-suggestion { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 58px; padding: 6px 16px; border: 2px solid transparent; border-radius: 0; }
+.search-suggestion:hover, .search-suggestion-active { background: var(--paper2); }
+.search-suggestion-active { border-color: var(--ink); }
+.search-suggestion-main { min-width: 0; }
+.search-suggestion-main b { display: block; font-size: 16px; line-height: 1.45; }
+.search-suggestion-main small { display: block; font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }
+.search-suggestions mark { background: linear-gradient(transparent 58%, #BFE3DE 58%); color: inherit; font-weight: 900; }
+.st0 { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; border: 2px dashed #CDBFA5; font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 12px; color: #8C8170; }
+.st0.d { border: 2.5px solid var(--accent); color: var(--accent); transform: rotate(-10deg); }
+.st0.w { border: 2.5px solid var(--teal2); color: var(--teal2); }
+.st0.p { border: 2px solid var(--ink); color: var(--ink); border-radius: 8px; }
+.search-suggestions-all { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 52px; padding: 0 16px; border: 0; border-top: 1px dashed #CFC3AC; background: none; font: inherit; font-weight: 700; font-size: 15px; color: var(--ink); cursor: pointer; text-align: left; }
