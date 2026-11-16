@@ -3207,6 +3207,27 @@ function renderMapRouteLink(facility, { compact = false } = {}) {
   `;
 }
 
+function renderFacilityRouteBlock(facility) {
+  const hasLocation = Boolean(getFacilityAddress(facility) || getFacilityCoordinate(facility));
+  const officialUrl = String(facility.officialUrl || "").trim();
+  return `
+    <div class="facility-route-block se-route" ${facilityDetailTab !== "info" ? "hidden" : ""}>
+      <a class="r1" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer" aria-label="Google Mapsで${escapeAttr(facility.name)}への経路を開く"><span class="ic" aria-hidden="true">経</span><span><b>${hasLocation ? "経路" : "地図で探す"}</b><small>地図アプリで開く</small></span><span class="go" aria-hidden="true">›</span></a>
+      ${officialUrl ? `<a class="wide" href="${escapeAttr(officialUrl)}" target="_blank" rel="noreferrer"><span class="ic" aria-hidden="true">公</span><span><b>公式サイト</b><small>営業時間を確認</small></span><span class="go" aria-hidden="true">›</span></a>` : ""}
+    </div>`;
+}
+
+function renderFacilityMapSection(facility) {
+  const address = getFacilityAddress(facility);
+  const query = [facility.name, address || getFacilityAreaLabel(facility)].filter(Boolean).join(" ");
+  if (!query) return "";
+  return `
+    <section class="facility-map" aria-label="地図">
+      <h3 class="facility-h3">地図<span class="facility-h3-label" aria-hidden="true">MAP</span><a class="facility-h3-more" href="${escapeAttr(getFacilityDirectionsUrl(facility))}" target="_blank" rel="noreferrer">経路 ›</a></h3>
+      <div class="facility-map-box"><iframe title="${escapeAttr(facility.name)}の地図" src="https://maps.google.com/maps?q=${encodeURIComponent(query)}&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>`;
+}
+
 function renderFacilityDetail() {
   if (!el.facilityDetail) return;
   const facility = getFacilityById(activeFacilityId);
@@ -3234,6 +3255,8 @@ function renderFacilityDetail() {
   const legacyFeatures = uniqueStrings([...(facility.features || []), ...(facility.tags || [])])
     .filter(value => normalizeFeature(value));
   const photo = getFacilityPhoto(facility);
+  const noteCount = (state.visitLogs[facility.id] || []).length + (state.facilityMemos[facility.id] ? 1 : 0);
+  const reviewCount = getFacilityReviews(facility.id).length;
   el.facilityDetail.innerHTML = `
     <article class="facility-detail facility-workspace">
       <nav class="facility-crumbs" aria-label="パンくず">
@@ -3249,11 +3272,11 @@ function renderFacilityDetail() {
         <button class="facility-act-stamp" type="button" data-action="stamp" data-id="${id}" ${visited || status ? "disabled" : ""}>${visited ? "押印済み" : status ? escapeHtml(status.action) : "押印する"}</button>
         ${wished || canAddWishlist(facility) ? `<button class="facility-act-sub" type="button" data-action="wishlist" data-id="${id}" aria-pressed="${wished}">${wished ? "行きたい済み" : "行きたい"}</button>` : ""}
         <button class="facility-act-sub ${favorite ? "is-active" : ""}" type="button" data-action="favorite" data-id="${id}" aria-pressed="${favorite}"><span aria-hidden="true">${favorite ? "★" : "☆"}</span>お気に入り</button>
-        <div class="facility-acts-route">${renderMapRouteLink(facility)}</div>
       </div>
+      ${renderFacilityRouteBlock(facility)}
       ${!visited && !status ? `<p class="facility-stamp-note">訪れたことがある施設は「押印する」で、この端末に記録できます。記録は都道府県別のサ印帳で確認できます。</p>` : ""}
-      <nav class="facility-tabs" aria-label="施設詳細の表示">
-        ${[["info","施設情報"],["note","サ活ノート"],["reviews","口コミ"]].map(([tab,label]) => `<button type="button" data-action="detail-tab" data-tab="${tab}" data-id="${id}" aria-controls="facility-pane-${tab}" aria-current="${facilityDetailTab === tab ? "page" : "false"}">${label}</button>`).join("")}
+      <nav class="facility-tabs se-dtabs" aria-label="施設詳細の表示">
+        ${[["info","施設の情報",null],["note","サ活ノート",noteCount],["reviews","口コミ",reviewCount]].map(([tab,label,count]) => `<button type="button" data-action="detail-tab" data-tab="${tab}" data-id="${id}" aria-controls="facility-pane-${tab}" aria-current="${facilityDetailTab === tab ? "page" : "false"}">${label}${count !== null ? `<span class="facility-tab-num num">${count}</span>` : ""}</button>`).join("")}
       </nav>
       <section id="facility-pane-info" class="facility-pane" aria-label="施設情報" ${facilityDetailTab !== "info" ? "hidden" : ""}>
         ${status ? `<p class="facility-notice">${escapeHtml(status.badge)} — 訪問前に公式で営業状況を確認してください。</p>` : ""}
@@ -3265,6 +3288,7 @@ function renderFacilityDetail() {
           ${missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
+        ${renderFacilityMapSection(facility)}
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
         <p class="facility-warn">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。<button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
         ${missingFields.length || facility.sourceCheckedAt ? `<details class="facility-disclosure"><summary>掲載範囲について</summary><p>未掲載の項目は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
@@ -3301,6 +3325,8 @@ function showFacilityDetailTab(facility, tab, { focus = false } = {}) {
   if (activeView !== "Facility" || activeFacilityId !== facility.id) openFacilityDetail(facility);
   facilityDetailTab = tab;
   el.facilityDetail.querySelector(".facility-primary-actions").hidden = tab !== "info";
+  const routeBlock = el.facilityDetail.querySelector(".facility-route-block");
+  if (routeBlock) routeBlock.hidden = tab !== "info";
   el.facilityDetail.querySelectorAll(".facility-pane").forEach(pane => { pane.hidden = pane.id !== `facility-pane-${tab}`; });
   el.facilityDetail.querySelectorAll('[data-action="detail-tab"]').forEach(button => button.setAttribute("aria-current", button.dataset.tab === tab ? "page" : "false"));
   el.main.scrollTo({ top: 0, behavior: "instant" });
@@ -3858,7 +3884,7 @@ function renderActivityNotebook(facility) {
     </form>
     ${memo ? `<details class="facility-disclosure"><summary>保存済みメモの管理</summary><p>${escapeHtml(memo.text)}</p><button class="tiny-undo-button" type="button" data-action="delete-note" data-id="${id}">メモを削除</button></details>` : ""}
     <details class="facility-disclosure activity-history"><summary>保存済みのサ活（${logs.length}件）</summary>
-      <div class="visit-log-list">${logs.length ? logs.map(log => `<article><strong>${escapeHtml(log.date)} · ${log.sets}セット · 体感${log.feeling}/5</strong><p>サウナ${log.saunaMinutes}分 / 水風呂${log.waterMinutes}分 / 休憩${log.restMinutes}分</p>${log.note ? `<p>${escapeHtml(log.note)}</p>` : ""}<div class="visit-log-actions"><button type="button" data-action="edit-activity" data-id="${id}" data-log-id="${escapeAttr(log.id)}">編集</button><button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">画像で共有</button><button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">削除</button></div></article>`).join("") : "<p>保存済みの訪問記録はありません。</p>"}</div>
+      <div class="visit-log-list">${logs.length ? logs.map(log => `<article><strong>${escapeHtml(log.date)} · ${log.sets}セット · 体感${log.feeling}/5</strong><p>サウナ${log.saunaMinutes}分 / 水風呂${log.waterMinutes}分 / 休憩${log.restMinutes}分</p>${log.note ? `<p class="visit-log-note">${escapeHtml(log.note)}</p>` : ""}<div class="visit-log-actions"><button type="button" data-action="edit-activity" data-id="${id}" data-log-id="${escapeAttr(log.id)}">編集</button><button class="visit-log-share-button" type="button" data-action="share-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">画像で共有</button><button class="tiny-undo-button" type="button" data-action="delete-visit-log" data-id="${id}" data-log-id="${escapeAttr(log.id)}">削除</button></div></article>`).join("") : "<p>保存済みの訪問記録はありません。</p>"}</div>
     </details>`;
 }
 
