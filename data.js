@@ -71254,5 +71254,25 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.city.hamada.shimane.jp/www/contents/1786521854127/simple/bosyuuyoukou.pdf",
     "officialUrl": "https://www.city.hamada.shimane.jp/"
+  },
+  {
+    "id": "manual-saga-okuureshino-mumeidaki",
+    "name": "奥嬉野 無名滝",
+    "prefecture": "佐賀県",
+    "address": "佐賀県嬉野市嬉野町岩屋川内岩ノ元乙1112-4",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-16",
+    "city": "嬉野市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定",
+      "貸切サウナ"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://goten-resort.jp/mumeidaki/",
+    "officialUrl": "https://goten-resort.jp/mumeidaki/"
   }
 ];

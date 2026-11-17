@@ -2858,6 +2858,21 @@ function showSearchPreparingState() {
   panel.innerHTML = `<div class="search-suggestions-head">検索を準備しています…</div>`;
   panel.hidden = false;
   if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+  revealSearchSuggestionsPanel(panel);
+}
+
+// SP でキーボードが開くと .main の見える高さが縮み、フォーム直下に出る候補
+// パネルが .main の下端で切れて下部タブバーの裏に隠れる（実機報告 2026-11-16）。
+// パネルが開いたタイミングで検索フォームを .main の先頭へ寄せ、フォーム下に
+// パネルの表示域を確保する。PC では余白が十分なため何もしない。
+function revealSearchSuggestionsPanel(panel) {
+  try {
+    if (!panel || panel.dataset.revealed === "1") return;
+    if (typeof window === "undefined" || !window.matchMedia || !window.matchMedia("(max-width: 1023px)").matches) return;
+    panel.dataset.revealed = "1";
+    const form = el.searchInput?.closest?.(".search-form");
+    if (form && typeof form.scrollIntoView === "function") form.scrollIntoView({ block: "start", behavior: "auto" });
+  } catch { /* 表示の補助なので、失敗しても候補表示は続ける */ }
 }
 
 function renderSearchSuggestions() {
@@ -2920,6 +2935,7 @@ function renderSearchSuggestions() {
   panel.innerHTML = `<div class="search-suggestions-head">候補 ${matches.length}件</div>${rows.join("")}`;
   panel.hidden = false;
   if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+  revealSearchSuggestionsPanel(panel);
 }
 
 function hideSearchSuggestions() {
@@ -2927,6 +2943,7 @@ function hideSearchSuggestions() {
   searchSuggestionIndex = -1;
   searchSuggestionFacilities = [];
   if (!panel) return;
+  if (panel.dataset) delete panel.dataset.revealed;
   panel.hidden = true;
   panel.innerHTML = "";
   if (el.searchInput && typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "false");

@@ -1371,9 +1371,9 @@ export const CURATED_FACILITY_EVIDENCE = [
     facts: [{ label: "営業時間", value: "BEB足だけサウナは2026年12月8日〜2027年3月31日の期間限定。9:00〜21:00（最終受付20:00）、50分ごとの交代制", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "料金", value: "足だけサウナ体験 1名300円（税込、ハーブロウリュ・貸出ポンチョ込み）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "設備・温度", value: "服を着たまま足元を温める屋外の足だけサウナ。室温約80度、セルフロウリュ可、HARVIA製ヒーター。定員1組3名", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "利用条件", value: "公式サイトで前日23:59まで要予約（空きがあれば当日開催前まで受付）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }],
   },
   {
-    ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "planned",
+    ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "open",
     features: ["個室"],
-    facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
+    facts: [{ label: "営業状況", value: "営業中（2026年11月16日にグランドオープン。公式サイトのお知らせ「グランドオープンのお知らせ」（2026年11月16日付）で開業を発表し、同日分の予約枠が公式予約サイトで申込可能であることを確認。女性専用・完全個室サウナ。営業時間8:00〜21:00）", sourceUrl: "https://kocoowa.com/blogs/news/261116", checkedAt: "2026-11-16" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
   },
   {
     ids: ["manual-kanagawa-renaissance-kamiooka"], name: "フィットネスクラブ＆サウナスパ ルネサンス上大岡", status: "open",

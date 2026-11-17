@@ -9744,8 +9744,11 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   left: 0;
   right: 0;
   z-index: 40;
-  max-height: min(46vh, 380px);
+  /* dvh でキーボード表示時の可視高さに追従させる（vh だと実機で見えている
+     範囲より背が高くなり、下端が .main の外＝タブバーの裏で切れてしまう） */
+  max-height: min(46dvh, 380px);
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 6px;
   background: #fffdf8;
   border: 1px solid var(--line);

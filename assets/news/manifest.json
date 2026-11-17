@@ -274,5 +274,17 @@
     "og": "/assets/news/tenet-sauna-mixed-use-og.png",
     "thumb": "/assets/news/tenet-sauna-mixed-use-thumb.webp",
     "generatedAt": "2026-11-17"
+  },
+  "okuureshino-mumeidaki-opening": {
+    "hero": "/assets/news/okuureshino-mumeidaki-opening-hero.webp",
+    "og": "/assets/news/okuureshino-mumeidaki-opening-og.png",
+    "thumb": "/assets/news/okuureshino-mumeidaki-opening-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "yudokoro-minori-iifuro-thanks-2026": {
+    "hero": "/assets/news/yudokoro-minori-iifuro-thanks-2026-hero.webp",
+    "og": "/assets/news/yudokoro-minori-iifuro-thanks-2026-og.png",
+    "thumb": "/assets/news/yudokoro-minori-iifuro-thanks-2026-thumb.webp",
+    "generatedAt": "2026-11-17"
   }
 }
