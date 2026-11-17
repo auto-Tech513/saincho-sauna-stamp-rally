@@ -269,7 +269,7 @@
             <form class="search-form" id="searchForm" role="search">
               <label class="search-box">
                 <span aria-hidden="true"></span>
-                <input id="searchInput" type="search" autocomplete="off" aria-label="施設名・都道府県・特徴で検索" placeholder="施設名・都道府県・特徴で探す" enterkeyhint="search" role="combobox" aria-controls="searchSuggestions" aria-autocomplete="list" aria-expanded="false" />
+                <input id="searchInput" type="search" autocomplete="off" aria-label="施設名・都道府県・特徴で検索" placeholder="施設名・県・特徴で探す" enterkeyhint="search" role="combobox" aria-controls="searchSuggestions" aria-autocomplete="list" aria-expanded="false" />
                 <button class="search-clear-button" id="searchClearButton" type="button" aria-label="検索文字を消す" hidden>
                   <span class="icon-close" aria-hidden="true"></span>
                 </button>
@@ -845,7 +845,7 @@
                   <label><span>都道府県</span><select name="prefecture" id="communityPrefecture" required></select></label>
                   <label><span>日時</span><input name="date" type="datetime-local" required /></label>
                 </div>
-                <label><span>集合施設</span><input name="venue" maxlength="64" required placeholder="施設名を入力" /></label>
+                <div class="venue-field"><label><span>集合施設</span><input id="communityVenueInput" name="venue" maxlength="64" required placeholder="施設名を入力" autocomplete="off" role="combobox" aria-controls="venueSuggestions" aria-autocomplete="list" aria-expanded="false" /></label><div class="search-suggestions venue-suggestions" id="venueSuggestions" role="listbox" aria-label="施設の候補" hidden></div></div>
                 <label><span>ひとこと</span><textarea name="note" maxlength="180" rows="3" placeholder="ペース、人数、初心者歓迎など"></textarea></label>
                 <button class="primary-button" type="submit">募集を公開</button>
                 <p class="community-status" id="communityStatus" role="status"></p>
@@ -1003,67 +1003,109 @@
     </dialog>
 
     <button class="settings-scrim" id="settingsScrim" type="button" aria-label="設定を閉じる" hidden></button>
-    <dialog class="settings-dialog" id="settingsDialog" aria-labelledby="settingsTitle">
-      <div class="dialog-head">
-        <h2 id="settingsTitle">メニュー</h2>
-        <button class="icon-button" id="closeSettingsButton" type="button" aria-label="メニューを閉じる">
+    <dialog class="settings-dialog menu-book" id="settingsDialog" aria-labelledby="settingsTitle">
+      <div class="mb-head">
+        <span class="mb-seal" aria-hidden="true">サ</span>
+        <div class="mb-head-copy">
+          <p class="mb-head-en" aria-hidden="true">MENU</p>
+          <h2 id="settingsTitle">サ印帳の目次</h2>
+        </div>
+        <button class="mb-close" id="closeSettingsButton" type="button" aria-label="メニューを閉じる">
           <span class="icon-close" aria-hidden="true"></span>
         </button>
       </div>
-      <section class="menu-group menu-area-group" aria-labelledby="menuAreaTitle">
-        <h3 id="menuAreaTitle">マイエリア</h3>
-        <label class="menu-select-row">
-          <span>よく行く県</span>
+      <div class="mb-body">
+        <form class="mb-search" id="menuSearchForm" role="search" autocomplete="off">
+          <label class="mb-search-box">
+            <span class="mb-search-icon" aria-hidden="true"></span>
+            <input id="menuSearchInput" type="search" autocomplete="off" aria-label="サ印帳の中を検索" placeholder="施設・県・ページ" enterkeyhint="search" role="combobox" aria-controls="menuSearchSuggestions" aria-autocomplete="list" aria-expanded="false" />
+          </label>
+          <button class="mb-search-submit" type="submit">検索</button>
+          <div class="search-suggestions mb-search-suggestions" id="menuSearchSuggestions" role="listbox" aria-label="検索候補" hidden></div>
+        </form>
+        <p class="mb-here" id="menuHere"><span class="mb-here-label">現在地</span><span id="menuHereName">サウナを探す（ホーム）</span></p>
+      <section class="mb-section" aria-labelledby="mbSec01">
+        <h3 class="mb-section-head" id="mbSec01"><span class="mb-no">01</span><span class="mb-section-name">サウナを探す</span><span class="mb-en" aria-hidden="true">SEARCH</span></h3>
+        <ul class="mb-list">
+            <li><button type="button" class="mb-item" data-menu-view="Explore" data-menu-key="Explore"><span class="mb-item-name">サウナを探す（ホーム）</span><span class="mb-item-desc">施設名・県・特徴で全国から探す</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" id="settingsNearbyButton"><span class="mb-item-name">現在地から近くを探す</span><span class="mb-item-desc">2km以内の候補を端末内で探す</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Add" data-menu-key="Add"><span class="mb-item-name">施設を追加</span><span class="mb-item-desc">掲載のない施設を自分の帳面に加える</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+        </ul>
+      </section>
+      <section class="mb-section" aria-labelledby="mbSec02">
+        <h3 class="mb-section-head" id="mbSec02"><span class="mb-no">02</span><span class="mb-section-name">サ印と記録</span><span class="mb-en" aria-hidden="true">STAMP</span></h3>
+        <ul class="mb-list">
+            <li><button type="button" class="mb-item" data-menu-view="Passport" data-menu-key="Passport"><span class="mb-item-name">サ印（押印帳）</span><span class="mb-item-desc">押した印を全県・県別にめくる</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-key="Stats"><span class="mb-item-name">サ活の記録</span><span class="mb-item-desc">押印数・県マスター・称号を見る</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="wishlistPanel"><span class="mb-item-name">行きたい</span><span class="mb-item-desc">次に行きたい施設の控え</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="favoritesPanel"><span class="mb-item-name">お気に入り</span><span class="mb-item-desc">気に入った施設の一覧</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="visitLogSummary"><span class="mb-item-name">サ活ログ</span><span class="mb-item-desc">セット数・時間・体感の自分用ログ</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="leaderboardPanel"><span class="mb-item-name">ランキング TOP10</span><span class="mb-item-desc">サ印数の上位と自分の順位</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="profileForm"><span class="mb-item-name">ランキングに参加する</span><span class="mb-item-desc">ニックネームを登録して順位に載る</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stats" data-menu-target="backupTitle"><span class="mb-item-name">記録のバックアップ・復元</span><span class="mb-item-desc">押印の記録を書き出す・読み込む</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+        </ul>
+      </section>
+      <section class="mb-section" aria-labelledby="mbSec03">
+        <h3 class="mb-section-head" id="mbSec03"><span class="mb-no">03</span><span class="mb-section-name">次のサ活を計画</span><span class="mb-en" aria-hidden="true">PLAN</span></h3>
+        <ul class="mb-list">
+            <li><button type="button" class="mb-item" data-menu-view="News" data-menu-key="News"><span class="mb-item-name">サウニュ〜</span><span class="mb-item-desc">新店・リニューアル・イベントのニュース</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Sameshi" data-menu-key="Sameshi"><span class="mb-item-name">サ飯</span><span class="mb-item-desc">サウナ後に食べたい県別のサ飯</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Gear" data-menu-key="Gear"><span class="mb-item-name">Gear</span><span class="mb-item-desc">サウナハット・マットなどのグッズ</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Stay" data-menu-key="Stay"><span class="mb-item-name">サウナ合宿先</span><span class="mb-item-desc">サウナ付きの宿を探す</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Guide" data-menu-key="Guide"><span class="mb-item-name">サウナ入門</span><span class="mb-item-desc">入り方・水風呂・持ち物・マナー</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+        </ul>
+      </section>
+      <section class="mb-section" aria-labelledby="mbSec04">
+        <h3 class="mb-section-head" id="mbSec04"><span class="mb-no">04</span><span class="mb-section-name">仲間と共有</span><span class="mb-en" aria-hidden="true">SHARE</span></h3>
+        <ul class="mb-list">
+            <li><button type="button" class="mb-item" data-menu-view="Community" data-menu-key="Community"><span class="mb-item-name">サウナ仲間</span><span class="mb-item-desc">少人数のサ活募集に参加する・募集する</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-app-action="share-app"><span class="mb-item-name">サ印帳を共有</span><span class="mb-item-desc">友だちにサ印帳を送る</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-app-action="copy-app-url"><span class="mb-item-name">URLをコピー</span><span class="mb-item-desc">サ印帳のURLをコピーする</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+        </ul>
+      </section>
+      <section class="mb-section" aria-labelledby="mbSec05">
+        <h3 class="mb-section-head" id="mbSec05"><span class="mb-no">05</span><span class="mb-section-name">サ印帳について</span><span class="mb-en" aria-hidden="true">ABOUT</span></h3>
+        <ul class="mb-list">
+            <li><button type="button" class="mb-item" data-menu-view="StampRally" data-menu-key="StampRally"><span class="mb-item-name">スタンプラリーの始め方</span><span class="mb-item-desc">探す・押印・振り返りの3つの手順</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Goshuin" data-menu-key="Goshuin"><span class="mb-item-name">サウナ御朱印とサ印の違い</span><span class="mb-item-desc">公式の御朱印・記念印とは別の個人記録</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="About" data-menu-key="About"><span class="mb-item-name">運営・データ方針</span><span class="mb-item-desc">施設データの確認基準と広告方針</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+            <li><button type="button" class="mb-item" data-menu-view="Contact" data-menu-key="Contact"><span class="mb-item-name">掲載・お問い合わせ</span><span class="mb-item-desc">広告掲載・内容修正・権利の連絡</span><span class="mb-item-go" aria-hidden="true"></span></button></li>
+        </ul>
+      </section>
+      <section class="mb-section mb-settings" aria-labelledby="mbSec06">
+        <h3 class="mb-section-head" id="mbSec06"><span class="mb-no">06</span><span class="mb-section-name">設定</span><span class="mb-en" aria-hidden="true">SETTINGS</span></h3>
+        <label class="mb-row mb-select-row">
+          <span class="mb-row-text"><strong>よく行く県</strong><small>マイ県として探す画面に出す</small></span>
           <select id="homePrefectureSelect"><option value="">未登録</option></select>
         </label>
-        <label class="toggle-row nearby-notification-row">
-          <span><strong>近隣サウナ通知</strong><small>起動時に2km以内を確認</small></span>
+        <label class="mb-row mb-toggle-row">
+          <span class="mb-row-text"><strong>近隣サウナ通知</strong><small>起動時に2km以内を確認</small></span>
           <input id="nearbyNotificationToggle" type="checkbox" />
         </label>
-        <button class="menu-location-button" id="settingsNearbyButton" type="button">現在地から近くを探す</button>
-        <p class="form-help">位置情報は端末内で2km以内の候補を探すために使い、サーバーには送信しません。近隣通知は有効にした場合だけ起動時に確認します。</p>
-      </section>
-      <section class="menu-group" aria-labelledby="menuMainTitle">
-        <h3 id="menuMainTitle">ホーム・記録</h3>
-        <div class="menu-actions menu-actions-grid" aria-label="ホーム・記録メニュー">
-          <button type="button" data-menu-view="Explore">ホーム</button>
-          <button type="button" data-menu-view="Passport">サ印を見る</button>
-          <button type="button" data-menu-view="Stats">記録</button>
-          <button type="button" data-menu-view="Stats" data-menu-target="wishlistPanel">行きたい</button>
-          <button type="button" data-menu-view="Stats" data-menu-target="favoritesPanel">お気に入り</button>
-          <button type="button" data-menu-view="Community">サウナ仲間</button>
+        <label class="mb-row mb-toggle-row">
+          <span class="mb-row-text"><strong>押印時の振動</strong><small>押印したときに端末を振動させる</small></span>
+          <input id="vibrationToggle" type="checkbox" checked />
+        </label>
+        <p class="mb-note">位置情報は端末内で2km以内の候補を探すために使い、サーバーには送信しません。近隣通知は有効にした場合だけ起動時に確認します。</p>
+        <div class="mb-tools">
+          <button class="mb-tool" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
+          <button class="mb-tool" type="button" data-app-action="reload-app">最新版を読み込む</button>
         </div>
-        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="profileForm">ランキングに参加する</button>
-        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="leaderboardPanel">ランキング TOP10</button>
-        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="visitLogSummary">サ活ログ</button>
-        <button type="button" class="menu-location-button" data-menu-view="Stats" data-menu-target="backupTitle">記録のバックアップ・復元</button>
+        <button class="mb-danger" id="resetButton" type="button">記録をリセット</button>
       </section>
-      <section class="menu-group" aria-labelledby="menuPlanTitle">
-        <h3 id="menuPlanTitle">次のサ活を計画</h3>
-        <div class="menu-actions menu-actions-grid" aria-label="サ活計画メニュー">
-          <button type="button" data-menu-view="Sameshi">サ飯</button>
-          <button type="button" data-menu-view="Stay">サウナ合宿</button>
-          <button type="button" data-menu-view="Guide">サウナ入門</button>
-          <button type="button" data-menu-view="News">サウニュ〜</button>
-          <button type="button" data-menu-view="Gear">Gear</button>
-        </div>
+      <section class="mb-network" aria-labelledby="mbNetTitle">
+        <h3 class="mb-network-head" id="mbNetTitle"><span class="mb-en">MANAPICK NETWORK</span><span>姉妹サイト</span></h3>
+        <ul class="mb-network-list">
+          <li><span class="mb-site is-current" aria-current="page"><i style="--dot:#b73528" aria-hidden="true"></i><b>サ印帳</b><span>全国サウナスタンプラリー</span><em>現在地</em></span></li>
+          <li><a class="mb-site" href="https://manapick.app/" rel="noopener"><i style="--dot:#1f3a8a" aria-hidden="true"></i><b>manapick</b><span>学ぶ — 無料の学習動画</span></a></li>
+          <li><a class="mb-site" href="https://ai.manapick.app/" rel="noopener"><i style="--dot:#ff4438" aria-hidden="true"></i><b>manapick AI</b><span>道具を選ぶ — AIの比較と使い方</span></a></li>
+          <li><a class="mb-site" href="https://license.manapick.app/" rel="noopener"><i style="--dot:#15803d" aria-hidden="true"></i><b>manapick license</b><span>証明する — 資格・検定の比較</span></a></li>
+          <li><a class="mb-site" href="https://career.manapick.app/" rel="noopener"><i style="--dot:#ffd700" aria-hidden="true"></i><b>manapick career</b><span>仕事につなぐ — 職業と学ぶ順番</span></a></li>
+          <li><a class="mb-site" href="https://company.manapick.app/" rel="noopener"><i style="--dot:#be185d" aria-hidden="true"></i><b>manapick company</b><span>企業を読む — 企業の物語と数字</span></a></li>
+          <li><a class="mb-site" href="https://politics.manapick.app/" rel="noopener"><i style="--dot:#6D28D9" aria-hidden="true"></i><b>manapick politics</b><span>政治と法律 — コミカルに易しく</span></a></li>
+        </ul>
       </section>
-      <section class="menu-group" aria-labelledby="menuServiceTitle">
-        <h3 id="menuServiceTitle">共有・サポート</h3>
-        <div class="menu-actions menu-actions-grid" aria-label="共有・サポートメニュー">
-          <button type="button" data-app-action="share-app">サ印帳を共有</button>
-          <button type="button" data-menu-view="Contact">掲載・問い合わせ</button>
-          <button type="button" data-menu-view="About">運営・データ方針</button>
-          <button type="button" data-app-action="copy-app-url">URLコピー</button>
-        </div>
-      </section>
-      <label class="toggle-row menu-vibration-row">
-        <span>押印時の振動</span>
-        <input id="vibrationToggle" type="checkbox" checked />
-      </label>
-      <button class="ghost-button full-button" id="installFromSettingsButton" type="button">ホーム画面に追加</button>
-      <button class="ghost-button full-button" type="button" data-app-action="reload-app">最新版を読み込む</button>
-      <button class="danger-button" id="resetButton" type="button">記録をリセット</button>
+      </div>
     </dialog>
 
     <dialog class="settings-dialog record-confirm-dialog" id="recordConfirmDialog" aria-labelledby="recordConfirmTitle" aria-describedby="recordConfirmDescription">
@@ -1162,7 +1204,7 @@
       <div class="ranking-facilities-list" id="rankingFacilitiesList"></div>
     </dialog>
 
-    <button class="back-to-top" id="backToTop" type="button" aria-label="このページの先頭へ戻る" hidden><span class="back-to-top-arrow" aria-hidden="true">↑</span>トップへ</button>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="このページの先頭へ戻る" hidden><span class="back-to-top-arrow" aria-hidden="true">↑</span><span class="back-to-top-label">トップへ</span></button>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <script type="module" src="./app.js?v=20260712-nearby-logshare-v3"></script>
   </body>
