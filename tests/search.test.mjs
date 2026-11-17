@@ -9,8 +9,9 @@ import * as evidence from "../facility-evidence.js";
 const source=(await readFile(new URL("../app.js",import.meta.url),"utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/,"")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/,"\n");
-const context=vm.createContext({...nearby,...evidence,URL,URLSearchParams,crypto:webcrypto,performance,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null},location:{hostname:"localhost",pathname:"/",protocol:"http:",port:"4173"},window:{matchMedia:()=>({matches:false})},document:{querySelector:()=>({}),querySelectorAll:()=>[]}});
+const context=vm.createContext({...nearby,...evidence,URL,URLSearchParams,crypto:webcrypto,performance,console,setTimeout,clearTimeout,HTMLElement:class {},MutationObserver:class { constructor(){} observe(){} disconnect(){} },localStorage:{getItem:()=>null},location:{hostname:"localhost",pathname:"/",protocol:"http:",port:"4173"},window:{matchMedia:()=>({matches:false})},document:{querySelector:()=>({}),querySelectorAll:()=>[]}});
 vm.runInContext(source,context);
 vm.runInContext('appModulesReady=true;',context);
 const search=(name,query)=>vm.runInContext(`matchesSearchBlob(buildSearchBlob([${JSON.stringify(name)}]),createSearchNeedles(${JSON.stringify(query)}))`,context);

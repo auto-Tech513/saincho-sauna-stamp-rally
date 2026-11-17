@@ -11,8 +11,9 @@ import { addressIssues, auditEvidence } from "../scripts/audit-facility-evidence
 const source = (await readFile(new URL("../app.js", import.meta.url), "utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/, "")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/, "\n");
-const context = vm.createContext({ ...evidence, ...nearby, URL, URLSearchParams, crypto: webcrypto, performance, console,
+const context = vm.createContext({ ...evidence, ...nearby, URL, URLSearchParams, crypto: webcrypto, performance, console, HTMLElement: class {}, MutationObserver: class { constructor(){} observe(){} disconnect(){} },
   localStorage: { getItem: () => null }, location: { hostname: "localhost", pathname: "/", protocol: "http:", port: "8788" },
   window: { matchMedia: () => ({ matches: false }) }, document: { querySelector: () => ({}), querySelectorAll: () => [] } });
 vm.runInContext(source, context);
