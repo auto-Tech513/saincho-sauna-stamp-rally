@@ -808,7 +808,7 @@ function renderNewsArticleSsr(article) {
   const h2Texts = (article.body || []).filter((block) => block.type === "h2").map((block) => block.text);
   const tocHtml = h2Texts.length >= 3 ? `
     <details class="news-toc"><summary>この記事の目次</summary>
-    <ol>${h2Texts.map((text, index) => `<li><a href="#news-h2-${index + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : "";
+    <ol>${h2Texts.map((text, index) => `<li><a href="${route}#news-h2-${index + 1}" data-toc-anchor="news-h2-${index + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : "";
   const facilities = (article.facilityIds || []).map(newsFacilityById).filter(Boolean);
   const facilityChips = facilities.length ? `
     <p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>`).join("")}</p>` : "";

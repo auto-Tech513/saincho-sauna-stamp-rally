@@ -10814,3 +10814,569 @@ figcaption { text-wrap: balance; }
   word-break: keep-all !important;
   overflow-wrap: break-word !important;
 }
+
+/* =====================================================================
+   メニュー「サ印帳の目次」（2026-11-17 全ページ監査）
+   旧メニュー（汎用の青緑ボタン格子）を、サ印帳のデザイン言語で作り直す：
+   夜色の羽目板の見出し＋朱の角印、生成りの帳面、明朝の区分見出し＋Barlow の番号、
+   点線の罫で区切った項目（名前＋短い説明＋朱の矢印）、現在地の朱の札、姉妹サイトの帯。
+   ===================================================================== */
+#settingsDialog.menu-book,
+#settingsDialog.menu-book[open] {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 120;
+  width: min(420px, calc(100vw - 28px));
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: var(--cream);
+  color: var(--ink);
+  border: 0;
+  border-radius: 18px 0 0 18px;
+  box-shadow: -18px 0 42px rgb(0 0 0 / 0.36);
+}
+#settingsDialog.menu-book { display: none; }
+#settingsDialog.menu-book[open] { display: block; }
+#settingsDialog.menu-book .mb-head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: calc(env(safe-area-inset-top) + 16px) 16px 16px 20px;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.03) 0 62px, rgb(0 0 0 / 0.2) 62px 64px),
+    var(--night);
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-seal {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  transform: rotate(-6deg);
+  background: var(--accent);
+  color: var(--cream);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 22px;
+  box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.65);
+}
+#settingsDialog.menu-book .mb-head-copy { flex: 1 1 auto; min-width: 0; }
+#settingsDialog.menu-book .mb-head-en {
+  margin: 0 0 2px;
+  font-family: var(--num-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #7FD6CB;
+}
+#settingsDialog.menu-book .mb-head h2 {
+  margin: 0;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1.5px solid rgb(255 250 242 / 0.55);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--cream);
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-close .icon-close { color: var(--cream); }
+#settingsDialog.menu-book .mb-close:focus-visible { outline: 2px solid #7FD6CB; outline-offset: 2px; }
+#settingsDialog.menu-book .mb-body {
+  padding: 18px 18px calc(env(safe-area-inset-bottom) + 28px);
+  background:
+    linear-gradient(90deg, var(--paper2) 0 6px, transparent 6px),
+    var(--cream);
+}
+
+/* 検索 */
+#settingsDialog.menu-book .mb-search {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+#settingsDialog.menu-book .mb-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 12px 0 40px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+}
+#settingsDialog.menu-book .mb-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid var(--ink-soft);
+  border-radius: 50%;
+}
+#settingsDialog.menu-book .mb-search-icon::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  bottom: -5px;
+  width: 7px;
+  height: 2px;
+  background: var(--ink-soft);
+  transform: rotate(45deg);
+}
+#settingsDialog.menu-book .mb-search-box input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  -webkit-appearance: none;
+  appearance: none;
+}
+#settingsDialog.menu-book .mb-search-box:focus-within { outline: 2px solid var(--primary); outline-offset: 2px; }
+#settingsDialog.menu-book .mb-search-submit {
+  height: 52px;
+  min-width: 64px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--primary);
+  color: var(--cream);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-search-suggestions {
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: min(56dvh, 420px);
+}
+
+/* 現在地 */
+#settingsDialog.menu-book .mb-here {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  padding: 10px 12px;
+  border: 1.5px dashed #CDBFA5;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-here > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+#settingsDialog.menu-book .mb-here-label {
+  flex: none;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--cream);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transform: rotate(-4deg);
+}
+
+/* 区分 */
+#settingsDialog.menu-book .mb-section { margin: 24px 0 0; }
+#settingsDialog.menu-book .mb-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 8px;
+  border-bottom: 1.5px solid var(--ink);
+}
+#settingsDialog.menu-book .mb-no {
+  font-family: var(--num-font);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primary);
+}
+#settingsDialog.menu-book .mb-section-name {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-en {
+  margin-left: auto;
+  font-family: var(--num-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: var(--ink-soft);
+}
+#settingsDialog.menu-book .mb-list { margin: 0; padding: 0; list-style: none; }
+#settingsDialog.menu-book .mb-list li { margin: 0; border-bottom: 1px dashed #CFC3AC; }
+#settingsDialog.menu-book .mb-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20px;
+  grid-template-areas: "name go" "desc go";
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  min-height: 60px;
+  margin: 0;
+  padding: 10px 4px 10px 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  box-shadow: none;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-item:hover { background: rgb(246 238 223 / 0.7); }
+#settingsDialog.menu-book .mb-item:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+#settingsDialog.menu-book .mb-item-name {
+  grid-area: name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+#settingsDialog.menu-book .mb-item-desc {
+  grid-area: desc;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+#settingsDialog.menu-book .mb-item-go {
+  grid-area: go;
+  justify-self: end;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  transform: rotate(45deg);
+}
+#settingsDialog.menu-book .mb-item.is-current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+#settingsDialog.menu-book .mb-item.is-current .mb-item-name { color: var(--primary); }
+#settingsDialog.menu-book .mb-item.is-current .mb-item-name::after {
+  content: "現在地";
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 6px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+
+/* 設定 */
+#settingsDialog.menu-book .mb-settings { display: grid; gap: 10px; }
+#settingsDialog.menu-book .mb-settings .mb-section-head { margin-bottom: 4px; }
+#settingsDialog.menu-book .mb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  margin: 0;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #DCCFB6;
+  border-radius: 12px;
+  box-shadow: none;
+}
+#settingsDialog.menu-book .mb-row-text { display: grid; gap: 2px; min-width: 0; }
+#settingsDialog.menu-book .mb-row-text strong { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--ink); }
+#settingsDialog.menu-book .mb-row-text small { font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
+#settingsDialog.menu-book .mb-select-row select {
+  flex: none;
+  width: 9.5em;
+  height: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--cream);
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-toggle-row input[type="checkbox"] {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+#settingsDialog.menu-book .mb-note { margin: 0; font-size: 13px; line-height: 1.7; color: var(--ink-soft); }
+#settingsDialog.menu-book .mb-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+#settingsDialog.menu-book .mb-tool,
+#settingsDialog.menu-book .mb-danger {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: none;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-danger { border-color: var(--accent); background: transparent; color: var(--accent); }
+
+/* 姉妹サイト */
+#settingsDialog.menu-book .mb-network {
+  margin: 28px 0 0;
+  padding: 16px 16px 8px;
+  border-radius: 14px;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.025) 0 62px, rgb(0 0 0 / 0.18) 62px 64px),
+    var(--night);
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-network-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-network-head .mb-en { order: 2; margin: 0; color: rgb(255 250 242 / 0.62); }
+#settingsDialog.menu-book .mb-network-list { margin: 0; padding: 0; list-style: none; }
+#settingsDialog.menu-book .mb-network-list li { border-top: 1px dashed rgb(255 250 242 / 0.18); }
+#settingsDialog.menu-book .mb-site {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  grid-template-areas: "dot name tag" "dot role tag";
+  align-items: center;
+  column-gap: 10px;
+  min-height: 52px;
+  padding: 8px 2px;
+  color: var(--cream);
+  text-decoration: none;
+}
+#settingsDialog.menu-book .mb-site i { grid-area: dot; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); box-shadow: 0 0 0 2px rgb(255 250 242 / 0.25); }
+#settingsDialog.menu-book .mb-site b { grid-area: name; font-size: 15px; font-weight: 700; line-height: 1.4; }
+#settingsDialog.menu-book .mb-site > span { grid-area: role; font-size: 13px; line-height: 1.5; color: rgb(255 250 242 / 0.74); }
+#settingsDialog.menu-book .mb-site em {
+  grid-area: tag;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--cream);
+  font-style: normal;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 12px;
+}
+#settingsDialog.menu-book a.mb-site:hover b { text-decoration: underline; text-underline-offset: 3px; }
+#settingsDialog.menu-book a.mb-site:focus-visible { outline: 2px solid #7FD6CB; outline-offset: 2px; }
+
+/* 検索候補：ページ・都道府県の行と0件の案内（探す画面とメニューで共通） */
+.search-suggestions .search-suggestions-head + .search-suggestion { margin-top: 0; }
+.search-suggestions .search-suggestion + .search-suggestions-head { margin-top: 4px; border-top: 1px dashed #DCCFB6; padding-top: 10px; }
+.search-suggestion-page .search-suggestion-name,
+.search-suggestion-pref .search-suggestion-name { color: var(--primary); }
+.search-suggestions-empty { display: grid; gap: 4px; padding: 10px; }
+.search-suggestions-empty strong { font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
+.search-suggestions-empty span { font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+.search-suggestions-head { font-size: 12px; }
+.search-suggestion-meta { font-size: 12px; }
+.search-suggestion { min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  #settingsDialog.menu-book[open] { animation: none; }
+}
+
+/* 全ページ監査（2026-11-17）の是正
+   - 日本語が12px未満になっていた箇所（記事の注記 <small>、照合札、サ飯見出しの県名ラベル、制覇マップのマス）を12pxに
+   - タップ領域が44px未満の操作（フッター帯のリンク、見出し横の「一覧 →」「コレクション →」、共有・更新などの小ボタン、記事のパンくず）を44pxに */
+.main small,
+.settings-dialog small { font-size: max(12px, 0.8em); }
+.fact-badge,
+.facility-h3-label { font-size: 12px; }
+.tile-cell { font-size: 12px; line-height: 1; color: rgb(255 250 242 / 0.72); }
+.stage-foot button { min-height: 44px; padding: 10px 2px; }
+.book-section-link,
+.facility-h3-link { min-height: 44px; display: inline-flex; align-items: center; }
+.tiny-share-button,
+.mini-button { min-height: 44px; }
+.main nav[aria-label*="パンくず"] a,
+.main .breadcrumb a,
+.main .breadcrumbs a { display: inline-flex; align-items: center; min-height: 44px; }
+.main a.secondary-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+/* 称号ダイアログの閉じるボタンがカードの角に接していた → 内側に収め、タップ領域を44pxに */
+.achievement-dialog .achievement-close { top: 14px; right: 14px; width: 44px; height: 44px; background: rgb(255 250 242 / 0.92); border: 1px solid #DCCFB6; border-radius: 12px; }
+/* SP：「トップへ」の横長ボタンがカードの「行きたい」等のボタンに重なって押せなかった →
+   帳面の右の余白に寄せた44pxの丸ボタンにし、重なる幅を小さくする（読み上げ名は aria-label のまま） */
+@media (max-width: 1023px) {
+  .back-to-top {
+    right: 4px;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    background: rgb(11 21 20 / 0.9);
+    border: 1.5px solid rgb(255 250 242 / 0.5);
+  }
+  .back-to-top-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .back-to-top-arrow { font-size: 18px; }
+}
+/* 押印帳の施設名：長いカタカナ名（例「ホテルモントレエーデルホフ札幌」）が文節改行（keep-all）のまま
+   グリッドの最小幅を押し広げ、カードの外へはみ出して切れていた → グリッド項目の最小幅を0にして枠内で折り返す */
+.stamp-tile > * { min-width: 0; max-width: 100%; }
+.facility-title-link { max-width: 100%; }
+/* 記録：県別の進捗マス
+   - 先頭の「県マスター」マスが白文字×生成り地で読めなかった → 称号の帯と同じ夜色の地に金の縁
+   - 「0/140湯 / あと／140」のように数字だけが次の行に残っていた → 「0/140湯 /」「あと140」の塊ごとに折り返す */
+.pref-board .pref-progress.pref-progress-master { background: var(--night); color: var(--cream); border-color: var(--gold2); }
+.pref-board .pref-progress.pref-progress-master strong { color: var(--cream); }
+.pref-board .pref-progress.pref-progress-master span { color: rgb(255 250 242 / 0.8); }
+.pref-progress .pp-chunk { display: inline-block; white-space: nowrap; }
+/* Gear の写真ラベル（「サウナハット」など）が92px幅の写真で「サウナハッ／ト」と1文字だけ折れていた → 1行に収める */
+.gear-card-visual span { left: 5px; bottom: 5px; max-width: calc(100% - 10px); padding: 4px 5px; white-space: nowrap; letter-spacing: -0.01em; }
+/* PC：帳面（中央の列）は最大560pxなのに施設カードを2列にしていたため、施設名が「RENOS／AUNA」、
+   経路ボタンが「経／路」と縦に割れていた → 帳面の中では1列にする */
+@media (min-width: 1100px) {
+  .view-explore .facility-list { grid-template-columns: minmax(0, 1fr); }
+}
+/* PC 左列のロゴ：縦書きの p に既定の余白が入り、タグライン「一湯、一印。」と英字が帳面の裏に隠れていた
+   （1024〜1440px のどの幅でも左列の外へ出ていた）→ 余白を0にし、左列が細い幅では間隔と印を詰めて英字を省く */
+@media (min-width: 1024px) {
+  .rail-logo p { margin: 0; padding: 0; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .rail-left { padding-left: 24px; padding-right: 24px; }
+  .rail-logo { gap: 10px; }
+  .rail-logo-side { gap: 10px; }
+  .rail-seal { width: 52px; height: 52px; font-size: 26px; }
+  .rail-en { display: none; }
+}
+/* PC 1024〜1199px：右列が232pxしかなく、Gear ボタンが帳面の裏に隠れ、制覇マップのマスがカードの外へはみ出し、
+   「次のサ活」が1文字ずつ縦に折れていた → 余白を詰め、ボタンは折り返して並べ、マスは色だけで示す（県名は読み上げ名と title に残る） */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .rail-right { padding: 32px 14px; gap: 14px; }
+  .rail-actions { flex-wrap: wrap; justify-content: stretch; gap: 8px; }
+  .rail-actions .rail-action-button { flex: 1 1 auto; height: 44px; padding: 0 10px; }
+  .rail-card { padding: 16px 12px; border-radius: 14px; }
+  .rail-card-title { flex-wrap: wrap; gap: 4px 8px; font-size: 16px; }
+  .rail-right .tile-map { gap: 2px; }
+  .rail-right .tile-cell { font-size: 0; }
+  .rail-right .tile-map-legend { flex-wrap: wrap; gap: 6px 12px; }
+  .rail-next-row { grid-template-columns: 1fr; gap: 6px; }
+  .rail-next-num { width: 36px; height: 36px; }
+}
+/* 「サウナスタンプラリーの始め方」「サウナ御朱印とサ印の違い」：PC の帳面（560px）で見出しの最小幅に
+   グリッドが引っ張られ、見出しと3列の手順が帳面の右へはみ出して切れていた → 列を帳面の幅に収め、手順は縦に並べる */
+.intent-page { grid-template-columns: minmax(0, 1fr); }
+.intent-page > h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; letter-spacing: 0.04em; }
+@media (min-width: 701px) {
+  .intent-page > h2 { font-size: 34px; line-height: 1.35; max-width: none; }
+  .intent-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* 運営・データ方針：PC の帳面（560px）で4列にしていたため「4,954」が枠からはみ出し、注記が隣の枠に重なっていた → 2列に */
+@media (min-width: 701px) {
+  .about-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-metrics strong { font-family: var(--num-font); font-weight: 600; font-size: 40px; }
+}
+.about-metrics article { min-width: 0; overflow-wrap: anywhere; }
+/* 探す画面の検索欄：右側の余白を「検索」ボタン分より広く取っていたため入力欄が114px（360px幅では84px）しかなく、
+   案内文が「施設名・都道府県」で切れていた → 余白をボタン幅に合わせ、案内文を短くして全文を見せる */
+#viewExplore .search-box { padding-right: 76px; }
+#viewExplore .search-submit-button { padding: 0 16px; }
+/* サウナ入門の記事一覧：題名の最後の1文字（「…日があ／る」）だけが次の行に残っていた → 文節で折り返し、行長をそろえる */
+.article-card summary strong { text-wrap: balance; }
+/* サウナ仲間「集合施設」の施設候補（探す画面・メニューと同じ候補欄） */
+.venue-field { position: relative; }
+.venue-field .venue-suggestions { top: calc(100% + 4px); z-index: 30; }
+/* 施設追加・サウナ仲間の都道府県など、帳面内のセレクトが高さ約24pxで押しにくかった → 44px・16px に */
+.main .view select { min-height: 44px; font-size: 16px; }
+/* 存在しない URL の案内（帳面の先頭） */
+.route-notfound { display: grid; gap: 4px; margin: 0 0 18px; padding: 14px 16px; border: 1.5px dashed var(--accent); border-radius: 12px; background: #fff; }
+.route-notfound-eyebrow { margin: 0; font-family: var(--num-font); font-size: 12px; font-weight: 600; letter-spacing: 0.24em; color: var(--accent); }
+.route-notfound strong { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 20px; line-height: 1.4; color: var(--ink); }
+.route-notfound span { font-size: 14px; line-height: 1.7; color: var(--ink-soft); }
+/* サウニュ〜記事の目次から飛んだ見出しが帳面の上端に密着しない／ヘッダーに隠れないように */
+[id^="news-h2-"] { scroll-margin-top: 16px; }
+@media (max-width: 1023px) { [id^="news-h2-"] { scroll-margin-top: 12px; } }
+/* 消去ボタンは文字があるときだけ出す設計だが、非表示でも幅44pxを占めて入力欄を狭めていた */
+#viewExplore .search-clear-button[hidden] { display: none; }
+.route-notfound span { text-wrap: balance; }
+#viewExplore .search-box input { flex: 1 1 auto; width: auto; min-width: 0; }
+#viewExplore .search-box { grid-template-columns: 22px minmax(0, 1fr) auto; column-gap: 8px; padding-left: 14px; }
+#viewExplore .search-box { column-gap: 6px; }
+/* 「サ活の進捗・次の一湯」を開いたとき、411px以上の幅で中の列が548pxに広がり、進捗・スロット・リンクが帳面の右へはみ出していた → 列を帳面の幅に収める */
+.explore-extras-content { grid-template-columns: minmax(0, 1fr) !important; }
+.explore-extras-content > * { min-width: 0; max-width: 100%; }
+.summary-band { grid-template-columns: minmax(0, 1fr) auto; }
+/* 残りの小さなタップ領域：施設詳細のパンくず（36px）、ホーム画面追加カードの閉じる（34px）、記事の目次（20px） */
+.facility-crumbs button { min-height: 44px; }
+.install-dismiss { min-width: 44px; min-height: 44px; }
+.news-toc li a { display: inline-block; padding: 10px 0; }
+/* 「次の一手」のボタン列が最小356pxの4列で、帳面（PC 560px の内側・430px幅）から「行きたい」「サ飯」がはみ出していた → 2×2 にそろえる */
+.quest-actions { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; min-width: 0 !important; }
+.quest-actions button { min-height: 44px; }
+.text-link-button { min-height: 44px; display: inline-flex; align-items: center; }
+#viewCommunity .feature-chip { min-height: 44px; }
+#settingsDialog.menu-book .mb-item-desc,
+#settingsDialog.menu-book .mb-site > span { text-wrap: balance; }
+#settingsDialog.menu-book .mb-search-box input::placeholder { font-size: 15px; }
+.lodging-search-card a { min-height: 44px; display: inline-flex; align-items: center; }
