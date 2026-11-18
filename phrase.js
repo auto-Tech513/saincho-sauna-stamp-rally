@@ -52,7 +52,7 @@ const LATIN = /[A-Za-z]/;
 const LONG_PHRASE = 8;
 const OPENING = /[「『（(【〔［\[〈《]/;
 const NO_LINE_START = /[」』）)】〕］\]〉》、。，．,.・：:；;！？!?ー～ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ]/;
-const PROTECTED_COMPOUNDS = ["問い合わせ", "打ち合わせ", "申し込み", "受け付け", "見積もり", "立ち上げ", "取り組み", "組み合わせ", "切り替え", "並べ替え"];
+const PROTECTED_COMPOUNDS = ["サウナシュラン", "問い合わせ", "打ち合わせ", "申し込み", "受け付け", "見積もり", "立ち上げ", "取り組み", "組み合わせ", "切り替え", "並べ替え"];
 const cache = new Map();
 
 /** 改行してよい位置（UTF-16 オフセット）。日本語を含まなければ空。 */
@@ -72,13 +72,17 @@ export function phraseBreaks(text) {
         const b = chunk[i];
         if ((KATAKANA.test(a) || a === "ー") && KANJI.test(b)) breaks.push(start + i);
         else if (KANJI.test(a) && KATAKANA.test(b)) breaks.push(start + i);
-        // 「ドーミーインEXPRESS三河安城」：英字の綴りと日本語の境目でも割る（2026-11-17 レイアウト監査）
-        else if ((LATIN.test(a) && JAPANESE.test(b)) || (JAPANESE.test(a) && LATIN.test(b))) breaks.push(start + i);
+        // 「ドーミーインEXPRESS三河安城」：3字以上の英字の綴りと日本語の境目でも割る（「1,450m｜の」「TV｜と」は割らない。2026-11-17 レイアウト監査）
+        else if ((LATIN.test(a) && JAPANESE.test(b) && /[A-Za-z]{3}$/.test(chunk.slice(0, i))) || (JAPANESE.test(a) && LATIN.test(b) && /^[A-Za-z]{3}/.test(chunk.slice(i)))) breaks.push(start + i);
+        // 「サウナスタンプラリーを」：長い塊では「サウナ」と後ろの5字以上のカタカナ語の間でも割る（「サウナシュラン」「サウナハット」は割らない）
+        else if (i >= 3 && chunk.slice(i - 3, i) === "サウナ" && /^[\u30a1-\u30fa\u30fc]{5,}/.test(chunk.slice(i))) breaks.push(start + i);
       }
     }
     for (let i = 1; i < chunk.length; i += 1) {
       // 「再始動｜フィンランド産」の縦棒、「ホテル-CABIN-札幌」の連結符の後でも割る（BudouX は縦棒で区切らず、題全体が1文節になって行幅を超える）
-      if (/[・／/→｜|&＆＋+]/.test(chunk[i - 1]) && !/[・／/→｜|&＆＋+]/.test(chunk[i])) breaks.push(start + i);
+      if (/[・／/→｜|&＆]/.test(chunk[i - 1]) && !/[・／/→｜|&＆]/.test(chunk[i])) breaks.push(start + i);
+      // 「＋」は後ろが数字（「サウナ+5℃」）のときは割らない
+      else if (/[＋+]/.test(chunk[i - 1]) && !/[＋+0-9０-９]/.test(chunk[i])) breaks.push(start + i);
       // 連結符は数字どうし（「2025-26」）では割らない
       else if (/[-－]/.test(chunk[i - 1]) && !/[-－0-9０-９]/.test(chunk[i]) && !/[0-9０-９]/.test(chunk[i - 2] || "")) breaks.push(start + i);
       else if (OPENING.test(chunk[i]) && !OPENING.test(chunk[i - 1])) breaks.push(start + i);
@@ -88,9 +92,9 @@ export function phraseBreaks(text) {
     start = end;
   }
   // 閉じ括弧・句読点・小書き仮名・長音が行頭に来る位置と、開き括弧が行末に残る位置には置かない。
-  // カタカナ語＋1字だけの漢字の接尾（「ケロ｜材の」「フィンランド｜産ケロ」「テルマー｜湯 」）の間でも割らない（2026-11-17 レイアウト監査）
+  // カタカナ語＋1字だけの漢字の接尾（「ケロ｜材の」「フィンランド｜産ケロ」「テルマー｜湯 」）の間でも割らない。後ろが助詞・句読点・空白・カタカナ・末尾のときだけ（「ドリンク｜飲み放題」は割る）（2026-11-17 レイアウト監査）
   const filtered = breaks.filter((b) => b > 0 && b < value.length && !/\s/.test(value[b - 1]) && !/\s/.test(value[b]) && !NO_LINE_START.test(value[b]) && !OPENING.test(value[b - 1])
-    && !((KATAKANA.test(value[b - 1]) || value[b - 1] === "ー") && KANJI.test(value[b]) && (b + 1 >= value.length || !KANJI.test(value[b + 1]))));
+    && !((KATAKANA.test(value[b - 1]) || value[b - 1] === "ー") && KANJI.test(value[b]) && (b + 1 >= value.length || /[\u306e\u3067\u306b\u3092\u306f\u304c\u3068\u3082\u3078\u3084\u3001\u3002\u300d\u300f\uff09)\s\u30a1-\u30fa]/.test(value[b + 1]))));
   const result = protectCompounds(value, mergeTinySegments(value, filtered));
   cache.set(value, result);
   return result;
@@ -111,6 +115,13 @@ function protectCompounds(text, breaks) {
   return inside.size ? breaks.filter((b) => !inside.has(b)) : breaks;
 }
 
+function isStrongBreak(text, b) {
+  const x = text[b - 1] || "", y = text[b] || "";
+  return OPENING.test(y) || /[・／/→｜|&＆＋+\-－]/.test(x)
+    || (KANJI.test(x) && KATAKANA.test(y)) || ((KATAKANA.test(x) || x === "ー") && KANJI.test(y))
+    || (LATIN.test(x) && JAPANESE.test(y)) || (JAPANESE.test(x) && LATIN.test(y));
+}
+
 function mergeTinySegments(text, breaks) {
   if (!breaks.length) return breaks;
   const sorted = [...new Set(breaks)].sort((a, b) => a - b);
@@ -118,9 +129,11 @@ function mergeTinySegments(text, breaks) {
   let prev = 0;
   for (const b of sorted) {
     if (b - prev <= 2) {
-      // 2字以下の断片は前の文節へ付ける（「ウェルネス｜新庄｜(葛城市…」→「ウェルネス新庄｜(葛城市…」、「暮らしの｜発酵｜ライフ…」→「暮らしの発酵｜ライフ…」）。
-      // 2026-11-17 レイアウト監査：後ろへ付けると括弧の前・漢字とカタカナの境目の切れ目が消え、長い名前が1塊になって語の途中で折れていた
-      if (kept.length && b - (kept.length > 1 ? kept[kept.length - 2] : 0) > 2) { kept[kept.length - 1] = b; prev = b; }
+      // 2字以下の断片は後ろの文節へ付ける（従来どおり「見た｜目より」→「見た目より」）。ただし断片の後ろが強い切れ目
+      // （括弧の手前・漢字とカタカナの境目など）で、後ろの文節が9字以上と長いときは前の文節へ付けて、その切れ目を残す
+      // （「ウェルネス｜新庄｜(葛城市…」→「ウェルネス新庄｜(葛城市…」、「暮らしの｜発酵｜ライフ…」→「暮らしの発酵｜ライフ…」。2026-11-17 レイアウト監査）
+      const next = sorted.find((x) => x > b) ?? text.length;
+      if (isStrongBreak(text, b) && next - b >= 9 && kept.length && b - (kept.length > 1 ? kept[kept.length - 2] : 0) > 2) { kept[kept.length - 1] = b; prev = b; }
       continue;
     }
     kept.push(b);
@@ -155,12 +168,16 @@ export function phraseHtml(text, escape) {
  * 「みのたにグリーンスポーツホテル」の「グリーンスポーツホテル」のように1塊が見出しの行幅を超えると、
  * 枠の外へはみ出すか語の途中で1文字だけ折れるため、見出し側で文字の大きさを塊の長さに合わせて下げるのに使う。
  */
-export function longestPhraseRun(text) {
-  return longestRunOf(glueShortTail(String(text ?? "")));
+export function longestPhraseRun(text, { joinTail = false, whole = false } = {}) {
+  return longestRunOf(glueShortTail(String(text ?? "")), joinTail, whole);
 }
 
-function longestRunOf(value) {
-  const cuts = [0, ...phraseBreaks(value), value.length];
+// joinTail: 末尾の漢字2字（「…オリエンタル｜神戸」）の切れ目を使わずに数える（1行に収められるならそうしたいので）
+// whole: 文節の切れ目を使わず、空白で区切った塊ごとに数える（名前全体を1行に収める大きさを求める）
+function longestRunOf(value, joinTail = false, whole = false) {
+  const breaks = whole ? [] : [...phraseBreaks(value)]; // phraseBreaks の結果はキャッシュと共有なので写してから変える
+  if (joinTail && breaks.length && value.length - breaks[breaks.length - 1] <= 2) breaks.pop();
+  const cuts = [0, ...breaks, value.length];
   let max = 0;
   for (let i = 1; i < cuts.length; i += 1) {
     for (const run of value.slice(cuts[i - 1], cuts[i]).split(/[ \t\n\u3000]+/)) {

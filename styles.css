@@ -11406,20 +11406,21 @@ html { line-break: strict; }
 .facility-shelf-item strong { overflow-wrap: anywhere; }
 /* (3) 施設名・店名：折り返せない1塊が行幅を超える名前（「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」など）は、
    その塊が1行に収まる大きさまで文字を下げる（--name-run は app.js の nameRunStyle が数えた最長の塊の字数。下限あり）。
-   これで枠を押し広げず、語の途中で折れたり1〜2字だけ次の行へ落ちたりしない。塊が行に収まる名前は従来の大きさのまま */
+   これで枠を押し広げず、語の途中で折れたり1〜2字だけ次の行へ落ちたりしない。塊が行に収まる名前は従来の大きさのまま。
+   末尾が漢字2字の地名の名前（「…オリエンタル神戸」）は、下限の大きさまでで名前全体が1行に入るならそうし、入らないときだけ地名の前で折る（--name-len） */
 .facility-dh,
 .facility-near-main,
 .facility-shelf-item,
 .facility-card .card-head .facility-name,
 .sameshi-card .card-head .facility-name { container-type: inline-size; }
-.facility-dh h2 { font-size: clamp(18px, calc(100cqi / (var(--name-run, 1) * 1.06)), 34px); text-wrap: balance; overflow-wrap: anywhere; }
+.facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 34px); text-wrap: balance; overflow-wrap: anywhere; }
 @media (max-width: 640px) {
-  .facility-dh h2 { font-size: clamp(18px, calc(100cqi / (var(--name-run, 1) * 1.06)), 26px); }
+  .facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 26px); }
 }
 .facility-near-main strong[style],
-.facility-shelf-item strong[style] { font-size: clamp(12px, calc(100cqi / (var(--name-run, 1) * 1.06)), 16px); }
-.facility-card .facility-name[style] .facility-title-link { font-size: clamp(12px, calc(100cqi / (var(--name-run, 1) * 1.06)), 17px); }
-.sameshi-card .facility-name[style] { font-size: clamp(12px, calc(100cqi / (var(--name-run, 1) * 1.06)), 17px); }
+.facility-shelf-item strong[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 16px); }
+.facility-card .facility-name[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
+.sameshi-card .facility-name[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
 /* (4) 施設詳細の小見出し「〇〇区のほかのサウナ」：flex の中の素の文字列が字単位で折れ「サウ／ナ」になっていた。
    題を span に入れて文節で折り、英字ラベル・「一覧 →」は収まらなければ次の行へ回す */
 .facility-h3 { flex-wrap: wrap; row-gap: 2px; }
@@ -11457,4 +11458,4 @@ html { line-break: strict; }
 }
 /* (9) サ印（押印帳）のタイル名：2列のタイルで長い名前の最後の1字が次の行へ落ちていた（「…サッポ／ロ」）→ 施設名と同じく塊が1行に入る大きさへ */
 .stamp-title[style] { container-type: inline-size; }
-.stamp-title[style] .facility-title-link { font-size: clamp(12px, calc(100cqi / (var(--name-run, 1) * 1.06)), 13px); }
+.stamp-title[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 13px); }

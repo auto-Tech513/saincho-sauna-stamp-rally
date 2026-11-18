@@ -3704,9 +3704,15 @@ function renderFacilitySameshiSection(facility) {
 
 // 施設名・店名の「折り返せない最長の塊」の字数を CSS 変数で渡す（styles.css がその塊を1行に収める大きさまで文字を下げる）。
 // 2026-11-17 レイアウト監査：「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」等が枠を押し広げる・語の途中で折れるのを防ぐ
+// --name-len は1行に収めたい長さ（空白の無い16字までの名前は全体、それ以外は末尾の漢字2字の地名を切り離さずに数えた最長の塊）。
+// 下限の大きさまでで1行に入るならそちらを優先し、入らないときだけ文節・地名の前で折る（styles.css の (3)）
 function nameRunStyle(name) {
-  const run = typeof longestPhraseRun === "function" ? longestPhraseRun(name) : 0;
-  return run > 0 ? ` style="--name-run:${run}"` : "";
+  if (typeof longestPhraseRun !== "function") return "";
+  const run = longestPhraseRun(name);
+  // 空白の無い16字までの名前は名前全体の長さ（下限の大きさまでで1行に入るなら1行にする）
+  const whole = longestPhraseRun(name, { whole: true });
+  const len = /\s/.test(String(name)) || whole > 16 ? longestPhraseRun(name, { joinTail: true }) : whole;
+  return run > 0 ? ` style="--name-run:${run};--name-len:${len}"` : "";
 }
 
 function formatMonthDay(dateText) {
@@ -8868,7 +8874,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current]";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {
