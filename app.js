@@ -8911,7 +8911,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place, .site-foot-note, .site-foot-brand p";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {
