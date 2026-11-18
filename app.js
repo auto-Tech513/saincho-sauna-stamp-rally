@@ -3618,7 +3618,7 @@ function renderFacilityDetail() {
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
-        <p class="facility-warn">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。<button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
+        <p class="facility-warn"><span class="facility-warn-text">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。</span><button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
         ${missingFields.length || facility.sourceCheckedAt ? `<details class="facility-disclosure"><summary>掲載範囲について</summary><p>未掲載の項目は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}</div>
         ${renderFacilityNearbySection(facility)}
@@ -8879,7 +8879,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {
