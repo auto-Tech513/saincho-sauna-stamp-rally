@@ -71293,5 +71293,24 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.yunessun.com/",
     "officialUrl": "https://www.yunessun.com/"
+  },
+  {
+    "id": "manual-hiroshima-core-sauna-anacrowne",
+    "name": "CORE SAUNA ANAクラウンプラザホテル広島店",
+    "prefecture": "広島県",
+    "address": "〒730-0037 広島県広島市中区中町7-20 ANAクラウンプラザホテル広島6F",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-19",
+    "city": "広島市中区",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://aigran-solution.jp/sauna/",
+    "officialUrl": "https://aigran-solution.jp/sauna/"
   }
 ];

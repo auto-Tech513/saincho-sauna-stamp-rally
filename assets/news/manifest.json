@@ -298,5 +298,35 @@
     "og": "/assets/news/yunessun-iifuro-special-day-2026-og.png",
     "thumb": "/assets/news/yunessun-iifuro-special-day-2026-thumb.webp",
     "generatedAt": "2026-11-18"
+  },
+  "core-sauna-hiroshima-opening": {
+    "hero": "/assets/news/core-sauna-hiroshima-opening-hero.webp",
+    "og": "/assets/news/core-sauna-hiroshima-opening-og.png",
+    "thumb": "/assets/news/core-sauna-hiroshima-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "kisuke-chibikko-aufguss-2026": {
+    "hero": "/assets/news/kisuke-chibikko-aufguss-2026-hero.webp",
+    "og": "/assets/news/kisuke-chibikko-aufguss-2026-og.png",
+    "thumb": "/assets/news/kisuke-chibikko-aufguss-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "ofurocafe-yusa-fuyugomori-2026": {
+    "hero": "/assets/news/ofurocafe-yusa-fuyugomori-2026-hero.webp",
+    "og": "/assets/news/ofurocafe-yusa-fuyugomori-2026-og.png",
+    "thumb": "/assets/news/ofurocafe-yusa-fuyugomori-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "sapporo-cabin-tsubaki-stamp-rally": {
+    "hero": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-hero.webp",
+    "og": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-og.png",
+    "thumb": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "soratomori-korpi-opening": {
+    "hero": "/assets/news/soratomori-korpi-opening-hero.webp",
+    "og": "/assets/news/soratomori-korpi-opening-og.png",
+    "thumb": "/assets/news/soratomori-korpi-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
   }
 }
