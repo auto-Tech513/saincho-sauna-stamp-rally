@@ -11380,3 +11380,82 @@ figcaption { text-wrap: balance; }
 #settingsDialog.menu-book .mb-site > span { text-wrap: balance; }
 #settingsDialog.menu-book .mb-search-box input::placeholder { font-size: 15px; }
 .lodging-search-card a { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* =====================================================================
+   全ページ レイアウト監査（2026-11-17 夜・iPhone 390 で全 5,232 ページを機械走査）
+   ===================================================================== */
+/* (1) 行頭の長音・小書き仮名：「施設ペ／ージ」「ジャグジ／ー」「データベ／ース」。
+   WebKit の line-break: auto は長音符・小書き仮名の前で折り返すため、サイト全体を strict にする */
+html { line-break: strict; }
+/* (2) 1列グリッドの列幅が「折り返せない一番長い語」に引っ張られ、ページ全体が画面の右へはみ出していた
+   （施設名「みのたにグリーンスポーツホテル」等で施設詳細の札・ボタン・本文がすべて右に見切れる。
+   ニュース見出し「…2025年11月15日再始動｜フィンランド…」で記事全体が57px はみ出す）。
+   列を minmax(0, 1fr) に固定し、長い語は枠の内側で折り返す */
+.facility-detail-shell,
+.facility-detail,
+.facility-near-list,
+.ssr-content { grid-template-columns: minmax(0, 1fr); }
+.facility-shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 640px) { .facility-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.facility-detail > *,
+.ssr-content > * { min-width: 0; }
+.facility-crumbs > [aria-current] { min-width: 0; overflow-wrap: anywhere; }
+.facility-near-main,
+.facility-shelf-item { min-width: 0; }
+.facility-near-main strong,
+.facility-shelf-item strong { overflow-wrap: anywhere; }
+/* (3) 施設名・店名：折り返せない1塊が行幅を超える名前（「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」など）は、
+   その塊が1行に収まる大きさまで文字を下げる（--name-run は app.js の nameRunStyle が数えた最長の塊の字数。下限あり）。
+   これで枠を押し広げず、語の途中で折れたり1〜2字だけ次の行へ落ちたりしない。塊が行に収まる名前は従来の大きさのまま。
+   末尾が漢字2字の地名の名前（「…オリエンタル神戸」）は、下限の大きさまでで名前全体が1行に入るならそうし、入らないときだけ地名の前で折る（--name-len） */
+.facility-dh,
+.facility-near-main,
+.facility-shelf-item,
+.facility-card .card-head .facility-name,
+.sameshi-card .card-head .facility-name { container-type: inline-size; }
+.facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 34px); text-wrap: balance; overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 26px); }
+}
+.facility-near-main strong[style],
+.facility-shelf-item strong[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 16px); }
+.facility-card .facility-name[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
+.sameshi-card .facility-name[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
+/* (4) 施設詳細の小見出し「〇〇区のほかのサウナ」：flex の中の素の文字列が字単位で折れ「サウ／ナ」になっていた。
+   題を span に入れて文節で折り、英字ラベル・「一覧 →」は収まらなければ次の行へ回す */
+.facility-h3 { flex-wrap: wrap; row-gap: 2px; }
+.facility-h3-title { min-width: 0; text-wrap: balance; }
+/* (5) 施設カードの項目名：62px 固定の列に「施設営業時間」「サウナストーブ」（6〜7字）が入らず「施設営業時／間」「サウナスト／ーブ」と折れていた。
+   列をカードの中の一番長い項目名の幅（上限7字）にそろえ、行どうしの頭は subgrid で揃えたままにする */
+.card-facts { grid-template-columns: fit-content(7.2em) minmax(0, 1fr); column-gap: 6px; }
+.card-facts > div { grid-column: 1 / -1; grid-template-columns: subgrid; }
+.card-facts dt { word-break: keep-all; }
+/* (6) カード・一覧の施設名：最後の行に1〜2字だけ落ちる（「…サッ／ポロ」「…パーク／岡崎」）のを行の長さをそろえて避ける */
+.facility-card .facility-name,
+.sameshi-card .facility-name,
+.stay-card h3 { text-wrap: balance; }
+/* (7) ホームの「印のページ」（押印記録がある端末だけで出る崩れ）
+   - メモのある施設は「日付 / メモ全文」が下端から上へ何行も伸び、印・縦書きの県名に重なって上端で切れていた
+     → メモは日付の上の1行に収めて末尾を「…」で省略（全文は施設詳細のサ活ノート）。メモがあるページは印を少し上へ寄せる
+   - 縦書きの「滋賀県・近江八幡市」のような長い所在地が下端の日付まで届き、日付と重なっていた
+     → 日付・メモは所在地の縦の列に入らない幅に収める。日付はサイトの数字書体（Barlow Condensed）で幅を詰める */
+.book-stamp-date { max-width: calc(100% - 20px - 20px); display: flex; flex-direction: column-reverse; font-family: var(--num-font); font-size: 13px; letter-spacing: 0.02em; }
+.book-stamp-memo { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--hand-font); font-size: 12px; letter-spacing: 0; }
+.book-stamp-sep { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.book-stamp-page:has(.book-stamp-memo) .book-stamp-seal { margin-bottom: 20px; }
+/* (8) 印の中の施設名：英字の長い語（「PROSTYLE」）が印の枠から出ていた → 枠の中で折る（印の内側は1行3〜5字と狭いため文節改行はかけず、行頭禁則は line-break: strict に任せる） */
+.book-stamp-seal-name { max-width: 100%; overflow-wrap: anywhere; }
+/* 印は縦書きの所在地の列を避けて少し左へ（押し跡が所在地の字に深くかぶらないように） */
+.book-stamp-page:not(.is-empty) { padding-left: 4px; padding-right: 26px; }
+/* 幅400px以下（1ページ約87〜100px）：縦書きの所在地（最長9字前後）が2列目へ折れて印に重なり、印も枠で切れていた。
+   ページを少し縦長にして所在地を1列に収め、印をひと回り小さくして所在地の列と日付の帯の間に置く */
+@media (max-width: 400px) {
+  .book-stamp-page { aspect-ratio: 3 / 4.3; }
+  .book-stamp-place { letter-spacing: 0.02em; }
+  .book-stamp-page:not(.is-empty) { padding-left: 2px; padding-right: 22px; }
+  .book-stamp-seal { width: 60px; height: 60px; padding: 4px; }
+  .book-stamp-seal-name { -webkit-line-clamp: 2; line-height: 1.25; }
+}
+/* (9) サ印（押印帳）のタイル名：2列のタイルで長い名前の最後の1字が次の行へ落ちていた（「…サッポ／ロ」）→ 施設名と同じく塊が1行に入る大きさへ */
+.stamp-title[style] { container-type: inline-size; }
+.stamp-title[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 13px); }

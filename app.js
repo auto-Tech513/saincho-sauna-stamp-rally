@@ -6,7 +6,7 @@ import {
   isUsableNearbyPosition,
 } from "./nearby.js";
 import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility } from "./facility-evidence.js";
-import { phraseHtml } from "./phrase.js";
+import { phraseHtml, longestPhraseRun } from "./phrase.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -3490,7 +3490,7 @@ function renderFacilityCard(facility) {
       ${renderStamp(facility, Boolean(visited))}
       <div class="card-body">
         <div class="card-head">
-          <h3 class="facility-name"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
+          <h3 class="facility-name"${nameRunStyle(facility.name)}><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
           <div class="card-head-actions">
             ${renderFavoriteButton(facility, favorite, true)}
           </div>
@@ -3593,7 +3593,7 @@ function renderFacilityDetail() {
       </nav>
       <header class="facility-dh">
         <p class="facility-dh-eyebrow">SAUNA DETAIL</p>
-        <h2>${escapeHtml(facility.name)}</h2>
+        <h2${nameRunStyle(facility.name)}>${escapeHtml(facility.name)}</h2>
         <p class="facility-dh-loc">${escapeHtml(getFacilityAreaLabel(facility))}</p>
         <div class="facility-dh-seal">${visited ? renderStamp(facility, true) : `<div class="facility-dh-seal-empty"><span>まだ押していない</span></div>`}</div>
       </header>
@@ -3676,14 +3676,14 @@ function renderFacilityNearbySection(facility) {
     .slice(0, 5);
   if (!peers.length) return "";
   return `<section class="facility-nearby" aria-label="同じ市区町村のほかのサウナ">
-    <h3 class="facility-h3">${escapeHtml(cityKey)}のほかのサウナ<span class="facility-h3-label" aria-hidden="true">NEARBY</span></h3>
+    <h3 class="facility-h3"><span class="facility-h3-title">${escapeHtml(cityKey)}のほかのサウナ</span><span class="facility-h3-label" aria-hidden="true">NEARBY</span></h3>
     <div class="facility-near-list">${peers.map((peer) => {
       const peerVisited = Boolean(state.visited[peer.id]);
       const peerWished = Boolean(state.wishlist[peer.id]);
       const mark = peerVisited ? "済" : peerWished ? "行" : "印";
       const markClass = peerVisited ? "is-done" : peerWished ? "is-wish" : "";
       const sub = peerVisited ? "押印済み" : peerWished ? "行きたい" : (peer.city || peer.prefecture || "");
-      return `<button type="button" class="facility-near-row" data-detail-card="${escapeAttr(peer.id)}"><span class="facility-near-mark ${markClass}" aria-hidden="true">${mark}</span><span class="facility-near-main"><strong>${escapeHtml(peer.name)}</strong><small>${escapeHtml(sub)}</small></span><span class="facility-near-arrow" aria-hidden="true">→</span></button>`;
+      return `<button type="button" class="facility-near-row" data-detail-card="${escapeAttr(peer.id)}"><span class="facility-near-mark ${markClass}" aria-hidden="true">${mark}</span><span class="facility-near-main"><strong${nameRunStyle(peer.name)}>${escapeHtml(peer.name)}</strong><small>${escapeHtml(sub)}</small></span><span class="facility-near-arrow" aria-hidden="true">→</span></button>`;
     }).join("")}</div>
   </section>`;
 }
@@ -3697,9 +3697,22 @@ function renderFacilitySameshiSection(facility) {
   if (!matched.length) return "";
   const prefSpotCount = SAMESHI_SPOTS.filter((spot) => spot.prefecture === facility.prefecture).length;
   return `<section class="facility-sameshi" aria-label="サ飯候補">
-    <h3 class="facility-h3">サ飯候補<span class="facility-h3-label" aria-hidden="true">SA-MESHI · ${escapeHtml(facility.prefecture)} ${prefSpotCount}件</span><button type="button" class="facility-h3-link" data-open-view="Sameshi">一覧 →</button></h3>
-    <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
+    <h3 class="facility-h3"><span class="facility-h3-title">サ飯候補</span><span class="facility-h3-label" aria-hidden="true">SA-MESHI · ${escapeHtml(facility.prefecture)} ${prefSpotCount}件</span><button type="button" class="facility-h3-link" data-open-view="Sameshi">一覧 →</button></h3>
+    <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong${nameRunStyle(spot.spot)}>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
   </section>`;
+}
+
+// 施設名・店名の「折り返せない最長の塊」の字数を CSS 変数で渡す（styles.css がその塊を1行に収める大きさまで文字を下げる）。
+// 2026-11-17 レイアウト監査：「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」等が枠を押し広げる・語の途中で折れるのを防ぐ
+// --name-len は1行に収めたい長さ（空白の無い16字までの名前は全体、それ以外は末尾の漢字2字の地名を切り離さずに数えた最長の塊）。
+// 下限の大きさまでで1行に入るならそちらを優先し、入らないときだけ文節・地名の前で折る（styles.css の (3)）
+function nameRunStyle(name) {
+  if (typeof longestPhraseRun !== "function") return "";
+  const run = longestPhraseRun(name);
+  // 空白の無い16字までの名前は名前全体の長さ（下限の大きさまでで1行に入るなら1行にする）
+  const whole = longestPhraseRun(name, { whole: true });
+  const len = /\s/.test(String(name)) || whole > 16 ? longestPhraseRun(name, { joinTail: true }) : whole;
+  return run > 0 ? ` style="--name-run:${run};--name-len:${len}"` : "";
 }
 
 function formatMonthDay(dateText) {
@@ -4107,7 +4120,7 @@ function renderPassport() {
     return `
       <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}">
         ${renderStamp(facility, Boolean(visited))}
-        <p class="stamp-title"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
+        <p class="stamp-title"${nameRunStyle(facility.name)}><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
         <span class="stamp-date${!visited && status ? " stamp-date-excluded" : ""}">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
         <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
@@ -5072,7 +5085,7 @@ function renderSameshiCard(item) {
       </div>
       <div class="sameshi-body">
         <div class="card-head">
-          <h3 class="facility-name">${escapeHtml(item.spot)}</h3>
+          <h3 class="facility-name"${nameRunStyle(item.spot)}>${escapeHtml(item.spot)}</h3>
           <a class="source-badge ${linkKind}" href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "参照")}</a>
         </div>
         <p class="facility-meta">${escapeHtml([item.prefecture, item.area].filter(Boolean).join(" / "))}</p>
@@ -8648,7 +8661,7 @@ function renderBookStamps() {
       <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}">
         <span class="book-stamp-place">${escapeHtml(place)}</span>
         <span class="book-stamp-seal${index % 2 ? " is-square" : ""}"><span class="book-stamp-seal-name">${escapeHtml(facility.name)}</span><span class="book-stamp-seal-mark">サ印</span></span>
-        <span class="book-stamp-date">${escapeHtml(getStampTileDateLabel(facility, record))}${memo?.text ? ` / ${escapeHtml(memo.text)}` : ""}</span>
+        <span class="book-stamp-date">${escapeHtml(getStampTileDateLabel(facility, record))}${memo?.text ? `<span class="book-stamp-memo"><span class="book-stamp-sep"> / </span>${escapeHtml(memo.text)}</span>` : ""}</span>
       </button>`);
   });
   const emptyCount = Math.max(1, 6 - cells.length - (visitedEntries.length > 5 ? 0 : 0));
@@ -8861,7 +8874,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {
