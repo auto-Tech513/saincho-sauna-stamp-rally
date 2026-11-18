@@ -11469,6 +11469,8 @@ html { line-break: strict; }
 /* 記事の要点枠：項目の値が列の最小幅で枠の右へはみ出していた（PC 1280 で 9〜20px）→ 値の列を枠に収める（SP も同じ指定だがはみ出しが無いので見た目は不変） */
 .news-factbox-row { grid-template-columns: 104px minmax(0, 1fr); }
 .news-factbox-row dd { min-width: 0; overflow-wrap: anywhere; }
+/* 要点枠の dl に記事全体向けの「.ssr-content dl は3列」（720px 以上）が当たり、PC で項目が3列に詰め込まれて値が1〜2字ずつ折れていた → 要点枠は1列（SP は元から1列） */
+.ssr-content .news-factbox dl { grid-template-columns: minmax(0, 1fr); }
 
 @media (min-width: 1024px) {
   /* 帳面の幅：560px 固定で、1280px では左右の墨色の柱が 360px ずつ・1440px では 440px ずつ空き、
@@ -11496,7 +11498,8 @@ html { line-break: strict; }
   .site-foot-col ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
   .site-foot-col a { display: inline-flex; align-items: center; min-height: 36px; color: var(--cream); font-size: 15px; text-decoration: none; }
   .site-foot-col a:hover, .site-foot-legal a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .site-foot-note { margin: 40px 0 0; padding-top: 24px; border-top: 1px dashed rgb(255 250 242 / 0.22); font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
+  .site-foot-grid { padding-bottom: 40px; border-bottom: 1px dashed rgb(255 250 242 / 0.22); }
+  .site-foot-note { max-width: 44em; margin: 24px 0 0; font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
   .site-foot-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 12px; font-size: 13px; }
   .site-foot-legal a, .site-foot-legal button { min-height: 44px; display: inline-flex; align-items: center; padding: 0; background: none; border: 0; color: rgb(255 250 242 / 0.8); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
   .site-foot-copy { margin-left: auto; color: rgb(255 250 242 / 0.5); font-family: var(--num-font); letter-spacing: 0.04em; }
