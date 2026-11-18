@@ -464,17 +464,19 @@
             </label>
             <button class="secondary-button" type="button" id="copyListButton" hidden>一覧をテキストでコピー</button>
           </div>
+          <p class="list-verify-note">照合日の表示がない施設の料金・営業時間・設備は公式で要確認</p>
           <p tabindex="-1" class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="facility-list" id="facilityList"></div>
 
           <section class="book-map-sp" aria-label="制覇マップ">
             <h3 class="rail-card-title">制覇マップ <span class="rail-card-count" id="tileMapCountSp">0 / 47</span></h3>
-            <div class="tile-map" id="tileMapSp"></div>
+            <div class="tile-map" id="tileMapSp" inert></div>
             <div class="tile-map-legend">
               <span><i class="legend-dot legend-stamped"></i>押印済み</span>
               <span><i class="legend-dot legend-wishlist"></i>行きたい</span>
               <span><i class="legend-dot legend-unvisited"></i>未訪問</span>
             </div>
+            <label class="tile-map-pick"><span>県を選んで探す</span><select id="tileMapSpSelect" aria-label="都道府県を選んで施設一覧を開く"><option value="">都道府県を選ぶ</option></select></label>
           </section>
         </section>
 
@@ -920,6 +922,52 @@
             <div class="intent-actions"><button class="primary-button" type="button" data-open-view="Explore">最初のサ印を探す</button><button class="secondary-button" type="button" data-open-view="Passport">コレクションを見る</button></div>
           </article>
         </section>
+        <!-- フッター（FOOTER_SPEC の骨格：サイトの案内＋注記＋最下段。メルマガは無し、ネットワーク帯はサ印帳では省略）。
+             本文は main.main の中だけがスクロールするため、フッターも main の末尾に置く（2026-11-18 監査 PC-H1・SP-M1） -->
+        <footer class="site-foot" aria-label="サイトの案内">
+          <div class="site-foot-in">
+            <div class="site-foot-grid">
+              <div class="site-foot-brand">
+                <a class="site-foot-logo" href="/"><span class="site-foot-seal" aria-hidden="true">サ</span><span class="site-foot-name">サ印帳</span></a>
+                <p>全国のサウナを、一湯ずつ押していく。</p>
+              </div>
+              <div class="site-foot-col">
+                <p class="site-foot-h">探す・記録する</p>
+                <ul>
+                  <li><a href="/">サウナを探す</a></li>
+                  <li><a href="/passport/">サ印（押印帳）</a></li>
+                  <li><a href="/ranking/">サ活の記録</a></li>
+                  <li><a href="/add/">施設を追加</a></li>
+                </ul>
+              </div>
+              <div class="site-foot-col">
+                <p class="site-foot-h">読む</p>
+                <ul>
+                  <li><a href="/news/">サウニュ〜</a></li>
+                  <li><a href="/guide/">サウナ入門</a></li>
+                  <li><a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a></li>
+                  <li><a href="/sauna-goshuin/">サウナ御朱印とサ印の違い</a></li>
+                </ul>
+              </div>
+              <div class="site-foot-col">
+                <p class="site-foot-h">整える・つながる</p>
+                <ul>
+                  <li><a href="/sameshi/">サ飯</a></li>
+                  <li><a href="/gear/">Gear</a></li>
+                  <li><a href="/stay/">合宿先</a></li>
+                  <li><a href="/community/">サウナ仲間</a></li>
+                </ul>
+              </div>
+            </div>
+            <p class="site-foot-note">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。</p>
+            <div class="site-foot-legal">
+              <a href="/about/">運営・データ方針</a>
+              <a href="/contact/">掲載・お問い合わせ</a>
+              <button type="button" data-foot-install>ホーム画面に追加</button>
+              <span class="site-foot-copy">© 2026 サ印帳</span>
+            </div>
+          </div>
+        </footer>
       </main>
 
       <aside class="rail-right" aria-label="進捗">
@@ -964,51 +1012,6 @@
         <button type="button" id="stageFootInstall">ホーム画面に追加</button>
       </footer>
 
-      <!-- PC フッター（FOOTER_SPEC の骨格：サイトの案内4列＋注記＋最下段。メルマガは無し、ネットワーク帯はサ印帳では省略）。SP は従来の .stage-foot のまま -->
-      <footer class="site-foot" aria-label="サイトの案内">
-        <div class="site-foot-in">
-          <div class="site-foot-grid">
-            <div class="site-foot-brand">
-              <a class="site-foot-logo" href="/"><span class="site-foot-seal" aria-hidden="true">サ</span><span class="site-foot-name">サ印帳</span></a>
-              <p>全国のサウナを、一湯ずつ押していく。</p>
-            </div>
-            <div class="site-foot-col">
-              <p class="site-foot-h">探す・記録する</p>
-              <ul>
-                <li><a href="/">サウナを探す</a></li>
-                <li><a href="/passport/">サ印（押印帳）</a></li>
-                <li><a href="/ranking/">サ活の記録</a></li>
-                <li><a href="/add/">施設を追加</a></li>
-              </ul>
-            </div>
-            <div class="site-foot-col">
-              <p class="site-foot-h">読む</p>
-              <ul>
-                <li><a href="/news/">サウニュ〜</a></li>
-                <li><a href="/guide/">サウナ入門</a></li>
-                <li><a href="/sauna-stamp-rally/">サウナスタンプラリーの始め方</a></li>
-                <li><a href="/sauna-goshuin/">サウナ御朱印とサ印の違い</a></li>
-              </ul>
-            </div>
-            <div class="site-foot-col">
-              <p class="site-foot-h">整える・つながる</p>
-              <ul>
-                <li><a href="/sameshi/">サ飯</a></li>
-                <li><a href="/gear/">Gear</a></li>
-                <li><a href="/stay/">合宿先</a></li>
-                <li><a href="/community/">サウナ仲間</a></li>
-              </ul>
-            </div>
-          </div>
-          <p class="site-foot-note">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。</p>
-          <div class="site-foot-legal">
-            <a href="/about/">運営・データ方針</a>
-            <a href="/contact/">掲載・お問い合わせ</a>
-            <button type="button" data-foot-install>ホーム画面に追加</button>
-            <span class="site-foot-copy">© 2026 サ印帳</span>
-          </div>
-        </div>
-      </footer>
 
       <nav class="bottom-nav" aria-label="主要ナビゲーション">
         <button class="nav-active" type="button" data-view="Explore" aria-current="page">

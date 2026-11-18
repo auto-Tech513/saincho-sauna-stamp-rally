@@ -10446,7 +10446,6 @@ body {
   .app-shell .topbar { grid-row: 1; }
   .app-shell .main { grid-row: 2; min-height: 0; margin: 0 10px; width: auto; }
   .app-shell .bottom-nav { grid-row: 3; position: static; }
-  .stage-foot { display: none; }
   .book-map-sp {
     display: block;
     margin-top: 28px;
@@ -11434,38 +11433,14 @@ html { line-break: strict; }
 .facility-card .facility-name,
 .sameshi-card .facility-name,
 .stay-card h3 { text-wrap: balance; }
-/* (7) ホームの「印のページ」（押印記録がある端末だけで出る崩れ）
-   - メモのある施設は「日付 / メモ全文」が下端から上へ何行も伸び、印・縦書きの県名に重なって上端で切れていた
-     → メモは日付の上の1行に収めて末尾を「…」で省略（全文は施設詳細のサ活ノート）。メモがあるページは印を少し上へ寄せる
-   - 縦書きの「滋賀県・近江八幡市」のような長い所在地が下端の日付まで届き、日付と重なっていた
-     → 日付・メモは所在地の縦の列に入らない幅に収める。日付はサイトの数字書体（Barlow Condensed）で幅を詰める */
-.book-stamp-date { max-width: calc(100% - 20px - 20px); display: flex; flex-direction: column-reverse; font-family: var(--num-font); font-size: 13px; letter-spacing: 0.02em; }
-.book-stamp-memo { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--hand-font); font-size: 12px; letter-spacing: 0; }
-.book-stamp-sep { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.book-stamp-page:has(.book-stamp-memo) .book-stamp-seal { margin-bottom: 20px; }
-/* (8) 印の中の施設名：英字の長い語（「PROSTYLE」）が印の枠から出ていた → 枠の中で折る（印の内側は1行3〜5字と狭いため文節改行はかけず、行頭禁則は line-break: strict に任せる） */
-.book-stamp-seal-name { max-width: 100%; overflow-wrap: anywhere; }
-/* 印は縦書きの所在地の列を避けて少し左へ（押し跡が所在地の字に深くかぶらないように） */
-.book-stamp-page:not(.is-empty) { padding-left: 4px; padding-right: 26px; }
-/* 幅400px以下（1ページ約87〜100px）：縦書きの所在地（最長9字前後）が2列目へ折れて印に重なり、印も枠で切れていた。
-   ページを少し縦長にして所在地を1列に収め、印をひと回り小さくして所在地の列と日付の帯の間に置く */
-@media (max-width: 400px) {
-  .book-stamp-page { aspect-ratio: 3 / 4.3; }
-  .book-stamp-place { letter-spacing: 0.02em; }
-  .book-stamp-page:not(.is-empty) { padding-left: 2px; padding-right: 22px; }
-  .book-stamp-seal { width: 60px; height: 60px; padding: 4px; }
-  .book-stamp-seal-name { -webkit-line-clamp: 2; line-height: 1.25; }
-}
 /* (9) サ印（押印帳）のタイル名：2列のタイルで長い名前の最後の1字が次の行へ落ちていた（「…サッポ／ロ」）→ 施設名と同じく塊が1行に入る大きさへ */
 .stamp-title[style] { container-type: inline-size; }
 .stamp-title[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 13px); }
 
 /* =====================================================================
    PC デザイン改善（2026-11-18）。ここから下は PC（1024px 以上）だけに効く指定と、
-   SP では見た目が変わらない修正（はみ出しの保険）だけ。SP の .stage-foot・帳面はそのまま。
+   SP では見た目が変わらない修正（はみ出しの保険）だけ（フッターは 2026-11-18 監査で main の末尾の共通フッターに変更）。
    ===================================================================== */
-/* PC フッター（FOOTER_SPEC）：SP では出さない */
-.site-foot { display: none; }
 /* 記事の要点枠：項目の値が列の最小幅で枠の右へはみ出していた（PC 1280 で 9〜20px）→ 値の列を枠に収める（SP も同じ指定だがはみ出しが無いので見た目は不変） */
 .news-factbox-row { grid-template-columns: 104px minmax(0, 1fr); }
 .news-factbox-row dd { min-width: 0; overflow-wrap: anywhere; }
@@ -11485,24 +11460,6 @@ html { line-break: strict; }
   .is-article .ssr-content > ul > li { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--ink); }
   .is-article .ssr-content > p:not(.eyebrow) + p { margin-top: 0.6em; }
 
-  /* PC フッター：墨色の1枚の帯（サイトの案内4列 → 注記 → 最下段）。帳面の下に3列ぶち抜きで置く */
-  .stage-foot { display: none; }
-  .site-foot { display: block; grid-column: 1 / -1; grid-row: 2; background: #16181d; color: var(--cream); border-top: 1px solid rgb(255 250 242 / 0.12); }
-  .site-foot-in { max-width: 1120px; margin: 0 auto; padding: 64px 40px 48px; }
-  .site-foot-grid { display: grid; grid-template-columns: 1.3fr repeat(3, minmax(0, 1fr)); gap: 40px; }
-  .site-foot-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--cream); text-decoration: none; }
-  .site-foot-seal { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--accent); color: var(--cream); font-family: var(--font-display); font-weight: 800; font-size: 24px; transform: rotate(-6deg); box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.6); }
-  .site-foot-name { font-family: var(--font-display); font-weight: 800; font-size: 26px; letter-spacing: 0.06em; }
-  .site-foot-brand p { margin: 14px 0 0; font-size: 14px; line-height: 1.7; color: rgb(255 250 242 / 0.72); }
-  .site-foot-h { margin: 0 0 10px; font-family: var(--num-font); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #7FD6CB; }
-  .site-foot-col ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
-  .site-foot-col a { display: inline-flex; align-items: center; min-height: 36px; color: var(--cream); font-size: 15px; text-decoration: none; }
-  .site-foot-col a:hover, .site-foot-legal a:hover { text-decoration: underline; text-underline-offset: 3px; }
-  .site-foot-grid { padding-bottom: 40px; border-bottom: 1px dashed rgb(255 250 242 / 0.22); }
-  .site-foot-note { max-width: 44em; margin: 24px 0 0; font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
-  .site-foot-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 12px; font-size: 13px; }
-  .site-foot-legal a, .site-foot-legal button { min-height: 44px; display: inline-flex; align-items: center; padding: 0; background: none; border: 0; color: rgb(255 250 242 / 0.8); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
-  .site-foot-copy { margin-left: auto; color: rgb(255 250 242 / 0.5); font-family: var(--num-font); letter-spacing: 0.04em; }
 }
 
 @media (min-width: 1024px) {
@@ -11535,3 +11492,135 @@ html { line-break: strict; }
   .news-factbox-row { gap: 14px; }
   .news-nav-heading { margin-left: 0; padding-left: 14px; }
 }
+
+/* =====================================================================
+   独立監査（2026-11-18）の指摘の是正
+   ===================================================================== */
+/* SP-H1 / PC-M6 印のページ：上から 印（種別の一字＋サ印）→ 施設名1行 → 日付 → 営業状況かメモ1行。縦書きの所在地は右の列。
+   どの要素も絶対配置をやめ、重ならない。名前・メモは1行に収め、収まらなければ「…」（全文は title・読み上げ名） */
+.book-stamp-page:not(.is-empty) { aspect-ratio: auto; min-height: 168px; justify-content: flex-start; gap: 4px; padding: 14px 28px 10px 8px; text-align: center; }
+.book-stamp-page:not(.is-empty) .book-stamp-seal { flex: none; width: 64px; height: 64px; padding: 4px; margin: 0 0 4px; }
+.book-stamp-seal-kanji { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; }
+.book-stamp-page .book-stamp-seal-mark { font-size: 12px; line-height: 1.2; margin-top: 2px; }
+.book-stamp-name,
+.book-stamp-sub { display: block; width: 100%; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.book-stamp-name { font-family: var(--font-display); font-weight: 800; font-size: 13px; line-height: 1.4; color: var(--ink); }
+.book-stamp-page .book-stamp-date { position: static; max-width: none; display: block; font-family: var(--num-font); font-size: 13px; line-height: 1.3; letter-spacing: 0.02em; color: var(--ink-soft); text-align: center; }
+.book-stamp-sub { font-family: var(--hand-font); font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+.book-stamp-sub.is-status { font-family: inherit; font-weight: 700; color: var(--accent); }
+.book-stamp-page .book-stamp-place { top: 12px; right: 8px; max-height: calc(100% - 24px); overflow: hidden; letter-spacing: 0.02em; line-height: 1.15; font-size: 12px; }
+@media (min-width: 1024px) {
+  .book-stamp-page:not(.is-empty) { min-height: 196px; padding-right: 34px; }
+  .book-stamp-page:not(.is-empty) .book-stamp-seal { width: 80px; height: 80px; }
+  .book-stamp-seal-kanji { font-size: 32px; }
+  .book-stamp-page .book-stamp-place { font-size: 14px; }
+  .book-stamp-name { font-size: 14px; }
+}
+
+/* PC-H1・SP-M1 フッター：main.main の末尾に置いた1枚の墨色の帯（FOOTER_SPEC の骨格）。
+   PC（1024px 以上）はフッターが文書の外（main の下）にあり、本文は main の中だけがスクロールするため、利用者がたどり着けなかった。
+   SP は従来の1行のリンク帯（.stage-foot）だったのを、2列のリンク格子＋小見出し＋注記＋最下段に。旧帯は出さない */
+.stage-foot, .app-shell .stage-foot { display: none !important; }
+.site-foot { display: block; margin: 40px 0 0; background: #16181d; color: var(--cream); border-radius: 18px 18px 0 0; }
+.site-foot-in { padding: 40px 20px calc(96px + env(safe-area-inset-bottom)); }
+.site-foot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; padding-bottom: 28px; border-bottom: 1px dashed rgb(255 250 242 / 0.22); }
+.site-foot-brand { grid-column: 1 / -1; }
+.site-foot-logo { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--cream); text-decoration: none; }
+.site-foot-seal { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: var(--cream); font-family: var(--font-display); font-weight: 800; font-size: 22px; transform: rotate(-6deg); box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.6); }
+.site-foot-name { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: 0.06em; }
+.site-foot-brand p { margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: rgb(255 250 242 / 0.72); }
+.site-foot-h { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #7FD6CB; }
+.site-foot-col ul { margin: 0; padding: 0; list-style: none; display: grid; }
+.site-foot-col a { display: flex; align-items: center; min-height: 44px; color: var(--cream); font-size: 14px; line-height: 1.4; text-decoration: none; }
+.site-foot-col a:hover, .site-foot-legal a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-foot-note { margin: 20px 0 0; font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
+.site-foot-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 0 20px; margin-top: 8px; font-size: 13px; }
+.site-foot-legal a, .site-foot-legal button { min-height: 44px; display: inline-flex; align-items: center; padding: 0; background: none; border: 0; color: rgb(255 250 242 / 0.8); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
+.site-foot-copy { color: rgb(255 250 242 / 0.5); font-family: var(--num-font); letter-spacing: 0.04em; }
+@media (min-width: 1024px) {
+  .site-foot { margin-top: 64px; border-radius: 18px; }
+  .site-foot-in { padding: 56px 36px 48px; }
+  .site-foot-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px 24px; padding-bottom: 36px; }
+  .site-foot-col a { font-size: 15px; }
+  .site-foot-h { font-family: var(--num-font); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; }
+  .site-foot-note { max-width: 44em; margin-top: 24px; }
+  .site-foot-legal { gap: 4px 24px; margin-top: 12px; }
+  .site-foot-copy { margin-left: auto; }
+}
+
+/* SP-M2 / PC-M1 ニュース記事下のナビカード：記事本文向けの「.ssr-content span は緑の12px」が分類チップ・題名にも当たり、
+   濃い地に緑の字（コントラスト 1.05〜1.57）・12px の題名になっていた → 本来の指定に戻す */
+.ssr-content .news-chip { color: #fff; font-size: 12px; font-weight: 800; }
+.ssr-content .news-nav-title { color: var(--ink); font-size: 0.95rem; font-weight: 700; line-height: 1.5; }
+.ssr-content .news-nav-kind { color: var(--primary); }
+.ssr-content .news-nav-meta { color: rgb(17 24 23 / 0.66); font-weight: 400; }
+.ssr-content .news-nav-meta time, .ssr-content .news-nav-meta span:not(.news-chip) { color: inherit; font-weight: 400; }
+
+/* SP-M3 / PC-M5 未確認の項目をまとめた1行：項目名が並ぶので折り返しを文節で */
+.facts-missing-row .fact-missing-note { color: var(--ink-soft); line-height: 1.7; }
+
+/* SP-M4 名前の折れ：検索候補・押印帳・サ活ログの施設名は行の長さをそろえる */
+.search-suggestion-name, .stamp-title, .visit-log-recent-item strong { text-wrap: balance; }
+
+/* SP-M5 押せる部品を44px以上に：絞り込みの「全部・未押印…」、並び替え、SP 制覇マップの県の選択 */
+#viewExplore .segment button { height: 44px; min-height: 44px; }
+#viewExplore .tool-band .feature-filter-toggle { height: 44px; min-height: 44px; }
+.sort-label select { min-height: 44px; }
+.book-map-sp .tile-cell { cursor: default; }
+.tile-map-pick { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 14px; font-weight: 700; color: var(--cream); }
+.tile-map-pick select { flex: 1 1 auto; min-width: 0; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid rgb(255 250 242 / 0.4); background: #fffdf7; color: var(--ink); font: inherit; font-size: 16px; }
+
+/* SP-L1 / PC-L1 一覧の上の1回だけの注記 */
+.list-verify-note { margin: 0 0 8px; font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+#viewExplore .list-verify-note { order: 15; margin-top: 4px; }
+#viewExplore #searchResultsStatus { order: 15; }
+
+/* SP-L4 施設詳細の「出典」・「情報修正を知らせる」：文の中の小さなリンクの押せる範囲を上下に広げる（行の高さは変えない） */
+.facility-facts dd a { display: inline-block; padding: 10px 6px; margin: -10px -2px; }
+.facility-warn button { display: inline-block; padding: 10px 2px; margin: -10px 0; }
+
+/* PC-M3 押印帳：未押印の升の「施設を共有」は線のボタン（黒い塗りのボタンが全升に並んで単調だった） */
+.tiny-share-button.is-quiet { color: var(--ink); background: transparent; border: 1px solid #CDBFA5; }
+
+@media (min-width: 1024px) {
+  /* PC-M3 押印帳：640〜760px の帳面に4列で、施設名が1字だけの行・語の途中で折れていた → 3列 */
+  .stamp-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+  /* PC-M4 掲載・お問い合わせ：4列の小カードが約140px で見出しが「経／路」と折れていた → 2列。料金プランの5枚目だけが1枚で残る → 最後の奇数枚は全幅 */
+  .business-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-plan-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  /* PC-L3 サ飯候補：3列で店名が語の途中で折れていた → 2列 */
+  .facility-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* PC-M2 1440px 以上：左右の柱の中身（ロゴ・目次／制覇マップ・次のサ活）が外側に寄り、帳面との間が大きく空いていた
+   → 帳面を最大 760px に広げ、柱の中身は帳面の側へ寄せる（外側の余白だけが残る） */
+@media (min-width: 1440px) {
+  .app-shell { grid-template-columns: minmax(0, 1fr) clamp(560px, 50vw, 760px) minmax(0, 1fr); }
+  .rail-left { padding-left: max(36px, calc(100% - 360px)); }
+  .rail-right { padding-right: max(32px, calc(100% - 380px)); }
+}
+/* 印のページの施設名は2行まで（文節で折り、収まらなければ「…」）。SP（640px 以下）は1ページ約110px と狭く、縦書きの所在地の列を取ると
+   名前が3字しか入らなかった → 所在地は上に横書きの1行で置き、名前・日付・状況は全幅を使う */
+.book-stamp-name { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-wrap: balance; line-height: 1.35; }
+@media (max-width: 640px) {
+  .book-stamp-page:not(.is-empty) { min-height: 0; padding: 10px 6px; }
+  .book-stamp-page .book-stamp-place { position: static; order: -1; writing-mode: horizontal-tb; width: 100%; max-height: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.4; letter-spacing: 0; color: var(--ink-soft); }
+  .book-stamp-page:not(.is-empty) .book-stamp-seal { width: 60px; height: 60px; margin: 2px 0 4px; }
+  .book-stamp-seal-kanji { font-size: 24px; }
+}
+@media (max-width: 640px) {
+  /* 所在地は「・」の後で2行まで（「福島県・／福島市」） */
+  .book-stamp-page .book-stamp-place { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.35; }
+}
+/* SP-M1 SP のフッター：見出しの下にリンクを2列の格子で並べる（FOOTER_SPEC の SP 骨格）。帳面（main）の左右と下の余白まで帯を伸ばす */
+@media (max-width: 1023px) {
+  .site-foot { margin: 40px -12px -96px; }
+  .site-foot-in { padding: 36px 20px 40px; }
+  .site-foot-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-bottom: 24px; }
+  .site-foot-col ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+}
+
+/* SP-M5 選択欄：WebKit の標準の見た目のままでは高さの指定が効かず 29px だった → 標準の見た目を外して 44px、矢印は線で描く */
+.sort-label select,
+.tile-map-pick select { -webkit-appearance: none; appearance: none; height: 44px; min-height: 44px; padding: 0 36px 0 12px; line-height: 1.2;
+  background: #fffdf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f1d18' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px; }
+.tile-map-pick > span { flex: none; white-space: nowrap; }
