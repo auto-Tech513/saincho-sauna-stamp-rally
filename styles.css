@@ -11459,3 +11459,76 @@ html { line-break: strict; }
 /* (9) サ印（押印帳）のタイル名：2列のタイルで長い名前の最後の1字が次の行へ落ちていた（「…サッポ／ロ」）→ 施設名と同じく塊が1行に入る大きさへ */
 .stamp-title[style] { container-type: inline-size; }
 .stamp-title[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 13px); }
+
+/* =====================================================================
+   PC デザイン改善（2026-11-18）。ここから下は PC（1024px 以上）だけに効く指定と、
+   SP では見た目が変わらない修正（はみ出しの保険）だけ。SP の .stage-foot・帳面はそのまま。
+   ===================================================================== */
+/* PC フッター（FOOTER_SPEC）：SP では出さない */
+.site-foot { display: none; }
+/* 記事の要点枠：項目の値が列の最小幅で枠の右へはみ出していた（PC 1280 で 9〜20px）→ 値の列を枠に収める（SP も同じ指定だがはみ出しが無いので見た目は不変） */
+.news-factbox-row { grid-template-columns: 104px minmax(0, 1fr); }
+.news-factbox-row dd { min-width: 0; overflow-wrap: anywhere; }
+
+@media (min-width: 1024px) {
+  /* 帳面の幅：560px 固定で、1280px では左右の墨色の柱が 360px ずつ・1440px では 440px ずつ空き、
+     本文の帳面だけが細く間延びして見えていた → 画面幅に合わせて 560〜700px（1280px で 640px）。左右の柱は 290px 以上を保つ */
+  .app-shell { grid-template-columns: minmax(0, 1fr) clamp(560px, 50vw, 700px) minmax(0, 1fr); }
+  .rail-left { padding: 40px 36px; }
+  .rail-right { padding: 40px 32px; }
+
+  /* 記事（ニュース・入門）の本文：14px の太字で詰まって読みにくかった → 本文は 16px の標準の太さ・行間 1.9。
+     要点・表・出典などの小さな文字はそのまま */
+  .is-article .ssr-content > p:not(.eyebrow):not(.news-facility-chips),
+  .is-article .ssr-content > ul > li { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--ink); }
+  .is-article .ssr-content > p:not(.eyebrow) + p { margin-top: 0.6em; }
+
+  /* PC フッター：墨色の1枚の帯（サイトの案内4列 → 注記 → 最下段）。帳面の下に3列ぶち抜きで置く */
+  .stage-foot { display: none; }
+  .site-foot { display: block; grid-column: 1 / -1; grid-row: 2; background: #16181d; color: var(--cream); border-top: 1px solid rgb(255 250 242 / 0.12); }
+  .site-foot-in { max-width: 1120px; margin: 0 auto; padding: 64px 40px 48px; }
+  .site-foot-grid { display: grid; grid-template-columns: 1.3fr repeat(3, minmax(0, 1fr)); gap: 40px; }
+  .site-foot-logo { display: inline-flex; align-items: center; gap: 12px; color: var(--cream); text-decoration: none; }
+  .site-foot-seal { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--accent); color: var(--cream); font-family: var(--font-display); font-weight: 800; font-size: 24px; transform: rotate(-6deg); box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.6); }
+  .site-foot-name { font-family: var(--font-display); font-weight: 800; font-size: 26px; letter-spacing: 0.06em; }
+  .site-foot-brand p { margin: 14px 0 0; font-size: 14px; line-height: 1.7; color: rgb(255 250 242 / 0.72); }
+  .site-foot-h { margin: 0 0 10px; font-family: var(--num-font); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #7FD6CB; }
+  .site-foot-col ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+  .site-foot-col a { display: inline-flex; align-items: center; min-height: 36px; color: var(--cream); font-size: 15px; text-decoration: none; }
+  .site-foot-col a:hover, .site-foot-legal a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .site-foot-note { margin: 40px 0 0; padding-top: 24px; border-top: 1px dashed rgb(255 250 242 / 0.22); font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
+  .site-foot-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 24px; margin-top: 12px; font-size: 13px; }
+  .site-foot-legal a, .site-foot-legal button { min-height: 44px; display: inline-flex; align-items: center; padding: 0; background: none; border: 0; color: rgb(255 250 242 / 0.8); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
+  .site-foot-copy { margin-left: auto; color: rgb(255 250 242 / 0.5); font-family: var(--num-font); letter-spacing: 0.04em; }
+}
+
+@media (min-width: 1024px) {
+  /* 探す：「全部・未押印・行きたい・お気に入り」と「特徴」が別の行で中央寄せになり、下の「現在地・マイ県・温泉付き…」と行頭がずれていた
+     → 検索欄の下に表示切替と「特徴」を1行に並べ、どの群も左端をそろえる */
+  #viewExplore .tool-band { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; column-gap: 8px; }
+  #viewExplore .tool-band > .search-form,
+  #viewExplore .tool-band > .feature-filter-panel { flex: 1 1 100%; }
+  #viewExplore .tool-band > .segment { flex: 0 1 auto; margin-top: 12px; }
+  #viewExplore .tool-band > .search-refiners { flex: 0 0 auto; margin-top: 12px; }
+  #viewExplore .tool-band .feature-filter-toggle { min-height: 38px; height: 38px; border-radius: 999px; padding: 0 16px; }
+  /* 「現在地・マイ県」と「温泉付き・個室・セルフロウリュ・外気あり」：1つの行に混ざって最後の1つだけ次の行に落ちていた → 2群を別の行に */
+  #viewExplore .area-shortcut { justify-content: flex-start; }
+  #viewExplore .area-shortcut .feature-pills { display: flex; flex: 1 1 100%; flex-wrap: wrap; gap: 8px; }
+  #viewExplore .area-shortcut .feature-pills { order: 2; }
+  #viewExplore .area-shortcut .nearby-result { order: 3; }
+  #viewExplore .area-shortcut .feature-pills button { width: auto; }
+
+  /* サウナ入門の記事一覧：2列で、開いた記事の本文が約270px（1行17字）に詰まり、隣の列に大きな空白ができていた → 1列 */
+  .article-list { grid-template-columns: minmax(0, 1fr); }
+  /* サウナ仲間：2列で左の「募集中のサ活」が約160pxに潰れ、見出しが1〜2字ずつ縦に折れていた → 一覧と募集フォームを縦に並べる */
+  .community-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  /* 記事の見出しの縦罫と文字が 6px しか離れず詰まって見えた → PC は 14px。要点枠も内側を広げ、項目名と値の間を空ける */
+  .news-article-body h2, .ssr-content h2, .article-body h2 { padding-left: 14px; }
+  .news-points h2, .news-factbox h3 { padding-left: 12px; }
+  .news-factbox { padding: 18px 20px; }
+  .news-factbox-row { gap: 14px; }
+  .news-nav-heading { margin-left: 0; padding-left: 14px; }
+}
