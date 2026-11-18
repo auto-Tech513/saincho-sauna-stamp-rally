@@ -286,5 +286,17 @@
     "og": "/assets/news/yudokoro-minori-iifuro-thanks-2026-og.png",
     "thumb": "/assets/news/yudokoro-minori-iifuro-thanks-2026-thumb.webp",
     "generatedAt": "2026-11-17"
+  },
+  "hadano-yukaraku-refresh-open-2026": {
+    "hero": "/assets/news/hadano-yukaraku-refresh-open-2026-hero.webp",
+    "og": "/assets/news/hadano-yukaraku-refresh-open-2026-og.png",
+    "thumb": "/assets/news/hadano-yukaraku-refresh-open-2026-thumb.webp",
+    "generatedAt": "2026-11-18"
+  },
+  "yunessun-iifuro-special-day-2026": {
+    "hero": "/assets/news/yunessun-iifuro-special-day-2026-hero.webp",
+    "og": "/assets/news/yunessun-iifuro-special-day-2026-og.png",
+    "thumb": "/assets/news/yunessun-iifuro-special-day-2026-thumb.webp",
+    "generatedAt": "2026-11-18"
   }
 }

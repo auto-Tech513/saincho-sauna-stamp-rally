@@ -71274,5 +71274,24 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://goten-resort.jp/mumeidaki/",
     "officialUrl": "https://goten-resort.jp/mumeidaki/"
+  },
+  {
+    "id": "manual-kanagawa-yunessun",
+    "name": "箱根小涌園ユネッサン",
+    "prefecture": "神奈川県",
+    "address": "神奈川県足柄下郡箱根町ニノ平1297",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-18",
+    "city": "足柄下郡箱根町",
+    "trait": "onsen",
+    "tags": [
+      "水着で入れる温泉"
+    ],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.yunessun.com/",
+    "officialUrl": "https://www.yunessun.com/"
   }
 ];
