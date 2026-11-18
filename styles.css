@@ -11624,3 +11624,6 @@ html { line-break: strict; }
 .tile-map-pick select { -webkit-appearance: none; appearance: none; height: 44px; min-height: 44px; padding: 0 36px 0 12px; line-height: 1.2;
   background: #fffdf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f1d18' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px; }
 .tile-map-pick > span { flex: none; white-space: nowrap; }
+/* 押印帳（/passport/）：同じ行のタイルの高さにそろえるとき、グリッドの行が伸びて「施設を共有」ボタンだけ縦長（約72px）になっていた
+   → タイルの中身は上から詰めて置き、ボタンは中身の高さのまま（2026-11-19 目視確認で発見） */
+.stamp-tile { align-content: start; }
