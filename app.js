@@ -770,7 +770,7 @@ const FACILITY_STATUS = {
   closed: { badge: "閉店", action: "閉店" },
   suspended: { badge: "臨時休業", action: "休業中" },
   planned: { badge: "開業予定", action: "開業待ち" },
-  verify: { badge: "要確認", action: "要確認" },
+  verify: { badge: "要確認", action: "押印対象外（営業確認中）" },
   restricted: { badge: "テナント専用", action: "一般利用不可" },
 };
 
@@ -3614,7 +3614,10 @@ function renderFacilityDetail() {
           ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd><span>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></span>${row.checkedAt ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(row.checkedAt))}</span>` : ""}</dd></div>`).join("")}
           ${renderSaunachelinAwardRow(facility)}
           <div><dt>住所</dt><dd><span>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}</span>${address ? (facility.addressCheckedAt && facility.addressCheckedAt !== "未確認" ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(facility.addressCheckedAt))}</span>` : "") : `<span class="fact-badge is-unverified">未確認</span>`}</dd></div>
-          ${missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
+          ${missingFields.length > 1
+            // 2026-11-18 監査 SP-M3/PC-M5：未確認の項目を1行ずつ並べると「公式照合で未確認［未確認］」の繰り返しになるため、項目名をまとめて1行で示す
+            ? `<div class="facts-missing-row"><dt>未確認の項目</dt><dd><span class="fact-missing-note">${missingFields.map(escapeHtml).join("・")}（公式照合で未確認）</span><span class="fact-badge is-unverified">未確認</span></dd></div>`
+            : missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
@@ -3727,7 +3730,7 @@ function getEvidenceDate(evidence) {
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
   const rows = evidence?.facts.filter(row => ["営業状況", "料金", "営業時間", "施設営業時間", "設備", "設備・温度", "サウナ設備", "サウナルーム", "サウナストーブ", "サウナ収容人数", "水風呂", "水風呂収容人数", "利用条件", "休館日"].includes(row.label)).slice(0, 4) || [];
-  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? `公式${evidence.method === "official-labeled-fields" ? "掲載値の確認日" : "照合日"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ` : "料金・営業時間・設備は公式で要確認"}</p>`;
+  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl>${evidence ? `<p class="card-verification">公式${evidence.method === "official-labeled-fields" ? "掲載値の確認日" : "照合日"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ</p>` : ""}`;
 }
 function renderCheckinPanel(facility) {
   const coordinate = getFacilityCoordinate(facility);
@@ -4123,7 +4126,7 @@ function renderPassport() {
         <p class="stamp-title"${nameRunStyle(facility.name)}><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
         <span class="stamp-date${!visited && status ? " stamp-date-excluded" : ""}">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
-        <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
+        <button class="tiny-share-button${visited ? "" : " is-quiet"}" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
         ${memo ? `<button class="tiny-share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
         ${visited ? `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
       </article>
@@ -8609,6 +8612,13 @@ function updateTocCurrent() {
   items.forEach((item, index) => item.classList.toggle("is-current", index === target));
 }
 
+// 制覇マップの升は「東京」「大阪」のような短い県名で持っているため、一覧の絞り込みに使う正式名（「東京都」）へ直す。
+// 2026-11-18 監査で、升を押すと「東京 · 0件」になっていた（短い名前のまま絞り込んでいた）ことを確認して修正
+function tilePrefectureName(short) {
+  const name = String(short || "");
+  return PREFECTURES.find((pref) => pref.name === name || pref.name.replace(/[都道府県]$/, "") === name)?.name || name;
+}
+
 function renderTileMap() {
   const layout = [["北海道",12,0],["青森",12,1],["秋田",11,2],["岩手",12,2],["山形",11,3],["宮城",12,3],["石川",8,4],["富山",9,4],["新潟",10,4],["福島",11,4],["島根",3,5],["鳥取",4,5],["兵庫",5,5],["京都",6,5],["福井",7,5],["岐阜",8,5],["長野",9,5],["群馬",10,5],["栃木",11,5],["茨城",12,5],["山口",2,6],["広島",3,6],["岡山",4,6],["大阪",5,6],["奈良",6,6],["滋賀",7,6],["愛知",8,6],["山梨",9,6],["埼玉",10,6],["東京",11,6],["千葉",12,6],["佐賀",1,7],["福岡",2,7],["愛媛",3,7],["香川",4,7],["和歌山",5,7],["三重",6,7],["静岡",8,7],["神奈川",10,7],["長崎",0,8],["熊本",1,8],["大分",2,8],["高知",3,8],["徳島",4,8],["鹿児島",1,9],["宮崎",2,9],["沖縄",0,10]];
   const visitedByPref = countVisitedByPrefecture();
@@ -8631,6 +8641,10 @@ function renderTileMap() {
     }
   }
   for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) root.innerHTML = html;
+  const tileSelect = document.querySelector("#tileMapSpSelect");
+  if (tileSelect && tileSelect.options.length <= 1) {
+    tileSelect.insertAdjacentHTML("beforeend", layout.map(([name]) => `<option value="${escapeAttr(tilePrefectureName(name))}">${escapeHtml(tilePrefectureName(name))}</option>`).join(""));
+  }
   for (const count of document.querySelectorAll("#tileMapCount, #tileMapCountSp")) count.textContent = `${visitedPrefCount} / 47`;
 }
 
@@ -8657,11 +8671,20 @@ function renderBookStamps() {
     const memo = getFacilityMemo(facility.id);
     const place = [facility.prefecture, facility.city].filter(Boolean).join("・");
     const fresh = record?.at && now - new Date(record.at).getTime() < 15000;
+    // 印のページ（2026-11-18 監査 SP-H1/PC-M6）：施設名は印の外の1行（収まらなければ「…」）、印の中は種別の一字と「サ印」。
+    // 日付の下の1行には営業状況（休業・テナント専用など）、無ければメモを1行で出す。全文は title と読み上げ名に残す
+    const status = getFacilityStatus(facility);
+    const date = record?.at ? formatDate(record.at) : "";
+    const sub = status ? status.badge : (memo?.text || "");
+    const kanji = (STAMP_STYLES[facility.trait] || STAMP_STYLES.custom).kanji;
+    const fullLabel = [facility.name, place, getStampTileDateLabel(facility, record), memo?.text].filter(Boolean).join(" / ");
     cells.push(`
-      <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}">
-        <span class="book-stamp-place">${escapeHtml(place)}</span>
-        <span class="book-stamp-seal${index % 2 ? " is-square" : ""}"><span class="book-stamp-seal-name">${escapeHtml(facility.name)}</span><span class="book-stamp-seal-mark">サ印</span></span>
-        <span class="book-stamp-date">${escapeHtml(getStampTileDateLabel(facility, record))}${memo?.text ? `<span class="book-stamp-memo"><span class="book-stamp-sep"> / </span>${escapeHtml(memo.text)}</span>` : ""}</span>
+      <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}" aria-label="${escapeAttr(fullLabel)}" title="${escapeAttr(fullLabel)}">
+        <span class="book-stamp-place" aria-hidden="true">${escapeHtml(place)}</span>
+        <span class="book-stamp-seal${index % 2 ? " is-square" : ""}" aria-hidden="true"><span class="book-stamp-seal-kanji">${escapeHtml(kanji)}</span><span class="book-stamp-seal-mark">サ印</span></span>
+        <span class="book-stamp-name" aria-hidden="true">${escapeHtml(facility.name)}</span>
+        <span class="book-stamp-date" aria-hidden="true">${escapeHtml(date)}</span>
+        ${sub ? `<span class="book-stamp-sub${status ? " is-status" : ""}" aria-hidden="true">${escapeHtml(sub)}</span>` : ""}
       </button>`);
   });
   const emptyCount = Math.max(1, 6 - cells.length - (visitedEntries.length > 5 ? 0 : 0));
@@ -8809,10 +8832,19 @@ function bindRenewalEvents() {
     stampFacility(facility);
     renderStampSheetList(lastSheetCandidates);
   });
+  document.querySelector("#tileMapSpSelect")?.addEventListener?.("change", (event) => {
+    const value = event.target.value;
+    if (!value) return;
+    selectedPrefecture = value;
+    visibleLimit = 36;
+    setView("Explore");
+    renderAll();
+    event.target.value = "";
+  });
   document.addEventListener?.("click", (event) => {
     const cell = event.target.closest?.("[data-tile-prefecture]");
     if (!cell) return;
-    selectedPrefecture = cell.dataset.tilePrefecture;
+    selectedPrefecture = tilePrefectureName(cell.dataset.tilePrefecture);
     visibleLimit = 36;
     setView("Explore");
     renderAll();
@@ -8879,7 +8911,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place, .site-foot-note, .site-foot-brand p";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {
