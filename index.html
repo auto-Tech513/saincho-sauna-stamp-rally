@@ -493,7 +493,7 @@
             <button class="ghost-button" id="clearFilterButton" type="button">全県</button>
           </div>
           <div class="passport-scope-strip" id="passportPrefStrip" aria-label="サ印の都道府県切替"></div>
-          <p class="passport-scope-note">県チップの分母は、押印できる施設の数です。閉店・臨時休業・開業予定・要確認・一般利用できない施設は含まないため、検索できる施設の数とは一致しません。一覧には押印対象外の施設も、理由（閉店・押印対象外など）つきで表示されます。</p>
+          <details class="passport-scope-note"><summary>県チップの分母は、押印できる施設の数です。</summary><p>閉店・臨時休業・開業予定・要確認・一般利用できない施設は含まないため、検索できる施設の数とは一致しません。一覧には押印対象外の施設も、理由（閉店・押印対象外など）つきで表示されます。</p></details>
           <div class="backup-hint" id="backupHint" hidden>
             <p class="backup-hint-text"><strong>記録はこの端末の中だけに保存されています。</strong>機種変更やブラウザのデータ削除で消えてしまうため、ときどきバックアップを書き出しておくと安心です。</p>
             <div class="backup-hint-actions">
@@ -581,7 +581,7 @@
               <button class="primary-button" type="submit">ランキングに参加</button>
             </form>
             <p class="form-help" id="profileVisibility">公開されるのはニックネーム・サ印数・称号です。押印した施設の一覧は、上の公開設定をオンにした場合だけ公開されます。メールアドレスは公開されません。サ印数は自己申告の記録です。</p>
-            <p class="form-help" id="profileFeedback" role="status" aria-live="polite">ニックネーム・サ印数・称号が公開されます。メールアドレスは公開されません。</p>
+            <p class="form-help" id="profileFeedback" role="status" aria-live="polite">ニックネームとメールで参加できます。</p>
           </section>
 
           <section class="japan-progress-panel" id="japanProgressPanel" aria-label="都道府県別サ印地図">
@@ -984,6 +984,7 @@
             <span><i class="legend-dot legend-wishlist"></i>行きたい</span>
             <span><i class="legend-dot legend-unvisited"></i>未訪問</span>
           </div>
+          <label class="tile-map-pick"><span>県を選んで探す</span><select id="tileMapSelect" aria-label="都道府県を選んで施設一覧を開く"><option value="">都道府県を選ぶ</option></select></label>
         </section>
         <section class="rail-card rail-next-card" aria-label="次のサ活">
           <h3 class="rail-card-title">次のサ活</h3>

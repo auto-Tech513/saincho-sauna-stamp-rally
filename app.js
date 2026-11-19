@@ -2166,53 +2166,6 @@ function stopNewsRailAutoScroll() {
   }
 }
 
-function startNewsRailAutoScroll(track) {
-  stopNewsRailAutoScroll();
-  if (!track || typeof window === "undefined") return;
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const half = track.children.length / 2;
-  if (!Number.isInteger(half) || half < 1) return;
-  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0, loopWidth: 0, lastTs: 0 };
-  const pause = () => {
-    state.pausedUntil = performance.now() + 5000;
-    state.pos = track.scrollLeft || 0;
-  };
-  track.addEventListener("pointerdown", pause);
-  track.addEventListener("touchstart", pause, { passive: true });
-  track.addEventListener("wheel", pause, { passive: true });
-  if (typeof IntersectionObserver !== "undefined") {
-    const observer = new IntersectionObserver((entries) => {
-      state.visible = entries.some((entry) => entry.isIntersecting);
-    }, { threshold: 0.05 });
-    observer.observe(track);
-    state.observer = observer;
-  }
-  const step = (ts) => {
-    if (newsRailScrollState !== state) return;
-    if (!track.isConnected) {
-      stopNewsRailAutoScroll();
-      return;
-    }
-    if (!state.loopWidth) {
-      state.loopWidth = track.children[half].offsetLeft - track.children[0].offsetLeft;
-    }
-    const loopWidth = state.loopWidth;
-    if (loopWidth > 0 && state.visible && !document.hidden && performance.now() >= state.pausedUntil) {
-      // 速度はフレーム間隔から決める（30px/秒）。フレーム毎の固定加算だと
-      // 120Hz 画面で2倍速になり、表示リフレッシュレートで速さが変わってしまう。
-      // scrollLeft への小数加算はブラウザが切り捨てるため、位置は自前で累積する
-      const delta = state.lastTs ? Math.min(ts - state.lastTs, 100) : 16.7;
-      state.pos += delta * 0.03;
-      if (state.pos >= loopWidth) state.pos -= loopWidth;
-      track.scrollLeft = state.pos;
-    }
-    state.lastTs = ts;
-    state.raf = requestAnimationFrame(step);
-  };
-  newsRailScrollState = state;
-  state.raf = requestAnimationFrame(step);
-}
-
 async function renderNewsRail() {
   const rail = document.getElementById("newsRail");
   if (!rail) return;
@@ -2242,7 +2195,6 @@ async function renderNewsRail() {
     // 同じ記事並びなら DOM を作り直さない。裏側の再描画で作り直すと、タップ中の
     // カードが差し替わってタップが失われ、帯のスクロール位置も先頭に戻ってしまう
     rail.hidden = false;
-    if (!newsRailScrollState) startNewsRailAutoScroll(existingTrack);
     return;
   }
   const cardsHtml = `
@@ -2258,20 +2210,10 @@ async function renderNewsRail() {
       <span class="news-rail-sub">サウナニュース</span>
     </div>
     <div class="news-rail-track">${cardsHtml}</div>`;
-  const track = rail.querySelector(".news-rail-track");
-  // ループ用に同じカード群を複製する（入れ子のグループ要素は iOS Safari で
-  // 配置が崩れるため、トラックの直下に平坦に並べる。複製は読み上げ・タブ移動の対象外）
-  [...track.children].forEach((child, index) => {
-    const clone = child.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    clone.inert = true;
-    clone.tabIndex = -1;
-    // 先頭カードの特集サイズは複製側にも付け、ループの継ぎ目で幅が変わらないようにする
-    if (index === 0) clone.classList.add("news-rail-card-featured");
-    track.appendChild(clone);
-  });
+  // 帯は自動で流さない（2026-11-19 独立監査2 中-5：0.7秒ごとに約21pxずつ流れ続け、どの瞬間も先頭のカードの左端が切れていた。
+  // 止める操作も無かった）。利用者が横に送るまで止めておき、送ったときはカードの切れ目で止まる（styles.css の scroll-snap）。
+  // ループ用の複製カードも作らない（流さないので不要。複製が並ぶと同じ記事が2回出る）
   rail.hidden = false;
-  startNewsRailAutoScroll(track);
   trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
 }
 
@@ -4810,7 +4752,8 @@ function renderLeaderboard() {
     ? `表示中は30秒ごとに確認${rankingUpdatedAt ? ` / 取得 ${formatDateTime(rankingUpdatedAt)}` : ""}`
     : "通信状態を確認して「更新」から再試行できます。";
   if (el.profileFeedback) {
-    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。公開されるのはニックネーム・サ印数・称号です。施設一覧は公開設定をオンにした場合のみ公開されます。");
+    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。");
+    // 公開範囲の説明は直上の #profileVisibility に1回だけ出す（同じ内容が2回続いていた。2026-11-19 独立監査2 中-6）
     el.profileFeedback.classList.toggle("is-error", Boolean(rankingLastError));
   }
   el.profileForm.querySelector('[type="submit"]').disabled = rankingSaving;
@@ -7668,6 +7611,54 @@ function saveSettings() {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
 }
 
+// PC：本文（.main）だけがスクロールする作り（左右の柱は動かない）のため、左右の柱の上のホイールと、開いた直後
+// （フォーカスが body のまま）の End・Space などのキー操作が効かず、フッターに届く経路が本文の上だけだった（2026-11-19 独立監査2 中-1）。
+// 文書全体のスクロールに作り替えると .main.scrollTo を前提にした各所（画面切替で先頭へ戻す・トップへボタン等）が壊れるため、
+// 柱の上のホイールは柱の中に動かせる箱が無ければ .main へ回し、body にフォーカスがあるときのキー操作も .main に効かせる。
+// フッターは .main の末尾にある（PR #20）ので、どちらの経路でもフッターまで届く。
+if (el.main?.addEventListener && typeof window !== "undefined" && typeof document.addEventListener === "function") {
+  const main = el.main;
+  const pageScrolls = () => {
+    const root = document.scrollingElement;
+    return Boolean(root) && root.scrollHeight > root.clientHeight + 1;
+  };
+  const mainScrolls = () => main.scrollHeight > main.clientHeight + 1 && main.isConnected && main.offsetParent !== null;
+  const innerCanScroll = (node, dy) => {
+    for (let n = node; n && n !== document.body && n !== document.documentElement; n = n.parentElement) {
+      if (n.scrollHeight <= n.clientHeight + 1) continue;
+      if (!/(auto|scroll)/.test(getComputedStyle(n).overflowY)) continue;
+      if (dy > 0 ? n.scrollTop + n.clientHeight < n.scrollHeight - 1 : n.scrollTop > 0) return true;
+    }
+    return false;
+  };
+  document.addEventListener("wheel", (event) => {
+    if (event.defaultPrevented || event.ctrlKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target || main.contains(target) || target.closest("dialog")) return;
+    if (!mainScrolls() || pageScrolls() || innerCanScroll(target, event.deltaY)) return;
+    const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? main.clientHeight : 1;
+    main.scrollTop += event.deltaY * unit;
+    event.preventDefault();
+  }, { passive: false });
+  const SCROLL_KEYS = { End: "end", Home: "home", PageDown: "page", PageUp: "-page", " ": "space", ArrowDown: "line", ArrowUp: "-line" };
+  document.addEventListener("keydown", (event) => {
+    const kind = SCROLL_KEYS[event.key];
+    if (!kind || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+    const active = document.activeElement;
+    const onBody = !active || active === document.body || active === document.documentElement;
+    // .main の中にフォーカスがあるときはブラウザ標準のスクロールに任せる。柱のボタン等にフォーカスがあるときは、
+    // ボタンの操作に使わない End・Home・PageUp・PageDown だけを .main へ回す
+    if (!onBody && (main.contains(active) || !/^(end|home|-?page)$/.test(kind) || active.closest("input, textarea, select, [contenteditable], dialog"))) return;
+    if (!mainScrolls() || pageScrolls()) return;
+    if (kind === "end" || kind === "home") main.scrollTo({ top: kind === "end" ? main.scrollHeight : 0, behavior: "auto" });
+    else {
+      const sign = kind.startsWith("-") || (kind === "space" && event.shiftKey) ? -1 : 1;
+      main.scrollBy({ top: sign * (kind.endsWith("line") ? 40 : main.clientHeight * 0.9), behavior: "auto" });
+    }
+    event.preventDefault();
+  });
+}
+
 // 「トップへ」ボタン: .main は内側スクロールコンテナなので、ブラウザ標準の
 // 先頭へ戻る操作（ステータスバーのタップ等）が効かない。約1画面分スクロール
 // したらボタンを出し、タップで先頭へ戻す。モーション抑制設定では即時移動。
@@ -8634,15 +8625,23 @@ function renderTileMap() {
     for (let x = 0; x < 13; x++) {
       const name = grid.get(`${x},${y}`);
       if (!name) { html += `<span class="tile-cell tile-empty" aria-hidden="true"></span>`; continue; }
-      const visited = (visitedByPref[name] || 0) > 0;
+      // 升は短い県名（「東京」）、押印・行きたいの集計は施設の正式名（「東京都」）で数えている → 正式名に直して照合する（2026-11-19 独立監査2 高-1）
+      const fullName = tilePrefectureName(name);
+      const visited = (visitedByPref[fullName] || 0) > 0;
       if (visited) visitedPrefCount++;
-      const cls = visited ? "tile-stamped" : wishlistPrefs.has(name) ? "tile-wishlist" : "tile-unvisited";
-      html += `<button type="button" class="tile-cell ${cls}" data-tile-prefecture="${escapeAttr(name)}" aria-label="${escapeAttr(name)}の施設一覧を開く" title="${escapeAttr(name)}">${escapeHtml(name[0])}</button>`;
+      const cls = visited ? "tile-stamped" : wishlistPrefs.has(fullName) ? "tile-wishlist" : "tile-unvisited";
+      const label = visited ? "押印済み" : cls === "tile-wishlist" ? "行きたい" : "未訪問";
+      // 升（13px）は見るだけの部品。県の一覧へは下の選択欄から開く（押せる部品を 44px 以上にするため）
+      html += `<span class="tile-cell ${cls}" data-tile-prefecture="${escapeAttr(name)}" title="${escapeAttr(fullName)}：${label}">${escapeHtml(name[0])}</span>`;
     }
   }
-  for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) root.innerHTML = html;
-  const tileSelect = document.querySelector("#tileMapSpSelect");
-  if (tileSelect && tileSelect.options.length <= 1) {
+  for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) {
+    root.innerHTML = html;
+    root.setAttribute("role", "img");
+    root.setAttribute("aria-label", `制覇マップ：47都道府県のうち${visitedPrefCount}都道府県で押印済み`);
+  }
+  for (const tileSelect of document.querySelectorAll("#tileMapSpSelect, #tileMapSelect")) {
+    if (tileSelect.options.length > 1) continue;
     tileSelect.insertAdjacentHTML("beforeend", layout.map(([name]) => `<option value="${escapeAttr(tilePrefectureName(name))}">${escapeHtml(tilePrefectureName(name))}</option>`).join(""));
   }
   for (const count of document.querySelectorAll("#tileMapCount, #tileMapCountSp")) count.textContent = `${visitedPrefCount} / 47`;
@@ -8832,7 +8831,7 @@ function bindRenewalEvents() {
     stampFacility(facility);
     renderStampSheetList(lastSheetCandidates);
   });
-  document.querySelector("#tileMapSpSelect")?.addEventListener?.("change", (event) => {
+  for (const tileSelect of document.querySelectorAll?.("#tileMapSpSelect, #tileMapSelect") || []) tileSelect.addEventListener?.("change", (event) => {
     const value = event.target.value;
     if (!value) return;
     selectedPrefecture = value;
@@ -8840,14 +8839,6 @@ function bindRenewalEvents() {
     setView("Explore");
     renderAll();
     event.target.value = "";
-  });
-  document.addEventListener?.("click", (event) => {
-    const cell = event.target.closest?.("[data-tile-prefecture]");
-    if (!cell) return;
-    selectedPrefecture = tilePrefectureName(cell.dataset.tilePrefecture);
-    visibleLimit = 36;
-    setView("Explore");
-    renderAll();
   });
   // PC フッターの「ホーム画面に追加」も SP の帯と同じ動き
   document.querySelectorAll?.("[data-foot-install]").forEach((button) => button.addEventListener("click", () => {
@@ -8911,7 +8902,7 @@ document.addEventListener?.("click", (event) => {
 // iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
 // 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
 // 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
-const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place, .site-foot-note, .site-foot-brand p";
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place, .site-foot-note, .site-foot-brand p, .list-verify-note";
 const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
 
 function applyPhraseBreak(node) {

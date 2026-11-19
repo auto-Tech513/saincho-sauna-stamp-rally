@@ -866,7 +866,7 @@ function renderNewsArticleSsr(article) {
   const endedNote = article.eventEndDate && article.eventEndDate < jstToday()
     ? `<p class="news-ended-note">この記事で紹介したイベント・期間は終了しました。</p>` : "";
   return wrapSsr(`
-    <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/news/">サウニュ〜（サウナニュース）</a> › ${escapeHtml(article.title)}</nav>
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/news/">サウニュ〜（サウナニュース）</a><span class="crumb-current"> › ${escapeHtml(article.title)}</span></nav>
     <p class="eyebrow">サウニュ〜 ・ ${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}</p>
     <h1>${escapeHtml(article.title)}</h1>
     <p><small>公開 <time datetime="${article.publishedAt}">${formatJaDate(article.publishedAt)}</time>${article.updatedAt !== article.publishedAt ? `／最終更新 <time datetime="${article.updatedAt}">${formatJaDate(article.updatedAt)}</time>` : ""}</small></p>
