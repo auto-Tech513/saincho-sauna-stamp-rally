@@ -11757,3 +11757,5 @@ a[data-affiliate-vendor]::after { content: ""; position: absolute; inset: calc((
 .record-backup details > summary { padding-block: 9.5px; margin-block: -9.5px; }
 /* 記録の地図の出典リンク 20px */
 .map-attribution { padding-block: 12px; margin: -4px 0 -12px; }
+/* 記録のランキングの「押印した施設を見る」24px（本番のランキングの行にだけ出る文字のボタン）→ 余白と負の margin で 44px（行の位置は変えない） */
+.leaderboard-facilities-button { padding-block: 12px; margin-block: -10px; }
