@@ -71312,5 +71312,59 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://aigran-solution.jp/sauna/",
     "officialUrl": "https://aigran-solution.jp/sauna/"
+  },
+  {
+    "id": "manual-saitama-tamagawa-onsen",
+    "name": "昭和レトロな温泉銭湯 玉川温泉",
+    "prefecture": "埼玉県",
+    "address": "〒355-0342 埼玉県比企郡ときがわ町大字玉川3700",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-19",
+    "city": "比企郡ときがわ町",
+    "trait": "onsen",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tamagawa-onsen.com/",
+    "officialUrl": "https://tamagawa-onsen.com/"
+  },
+  {
+    "id": "manual-saitama-hakujyu",
+    "name": "おふろcafé 白寿の湯",
+    "prefecture": "埼玉県",
+    "address": "埼玉県児玉郡神川町渡瀬337-1",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-19",
+    "city": "児玉郡神川町",
+    "trait": "onsen",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://ofurocafe-hakujyu.com/",
+    "officialUrl": "https://ofurocafe-hakujyu.com/"
+  },
+  {
+    "id": "manual-okinawa-dormy-inn-naha",
+    "name": "ドーミーイン那覇＜県庁前＞",
+    "prefecture": "沖縄県",
+    "address": "〒900-0015 沖縄県那覇市久茂地1丁目5番15号",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-19",
+    "city": "那覇市",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/",
+    "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/"
   }
 ];

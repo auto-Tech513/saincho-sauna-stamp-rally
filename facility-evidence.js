@@ -10408,6 +10408,11 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
  factNov14("営業状況", "2026年6月30日をもって閉店（公式サイトの閉店のお知らせ。回数券は越のゆ鯖江店とONSEN&SAUNA RESORT かいほつの湯で引き続き利用可能と案内）", "http://www.yu-iwashita.jp/fukui/"),
 ],
 },
+  {
+    ids: ["manual-okinawa-dormy-inn-naha"], name: "ドーミーイン那覇＜県庁前＞", status: "planned",
+    features: [],
+    facts: [{ label: "営業状況", value: "開業予定（2027年2月3日プレオープン予定。2026年11月18日に公式サイトで宿泊予約の受付を開始。開業までは押印対象外）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/naha/", checkedAt: "2026-11-19" }],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));

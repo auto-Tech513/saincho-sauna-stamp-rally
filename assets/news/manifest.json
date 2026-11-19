@@ -328,5 +328,23 @@
     "og": "/assets/news/soratomori-korpi-opening-og.png",
     "thumb": "/assets/news/soratomori-korpi-opening-thumb.webp",
     "generatedAt": "2026-11-19"
+  },
+  "onsen-dojo-iifuro-day-2026": {
+    "hero": "/assets/news/onsen-dojo-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/onsen-dojo-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/onsen-dojo-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "dormy-inn-naha-opening": {
+    "hero": "/assets/news/dormy-inn-naha-opening-hero.webp",
+    "og": "/assets/news/dormy-inn-naha-opening-og.png",
+    "thumb": "/assets/news/dormy-inn-naha-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "ofurocafe-arabian-night-season2": {
+    "hero": "/assets/news/ofurocafe-arabian-night-season2-hero.webp",
+    "og": "/assets/news/ofurocafe-arabian-night-season2-og.png",
+    "thumb": "/assets/news/ofurocafe-arabian-night-season2-thumb.webp",
+    "generatedAt": "2026-11-19"
   }
 }
