@@ -9601,7 +9601,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-/* 帯の自動スクロールは 2026-11-19 にやめた（独立監査2 中-5）。scroll-snap はファイル末尾で付けている。
+/* 帯の自動送りは app.js（数秒ごとに1枚ずつ送り、カードの切れ目で止める。2026-11-19 再開）。scroll-snap はファイル末尾で付けている。
    連番はカウンタではなく data-num 属性で持つ。 */
 .news-rail-card {
   position: relative;
@@ -11663,7 +11663,7 @@ html { line-break: strict; }
 .news-nav-meta .news-chip,
 .news-nav-meta time { flex: none; white-space: nowrap; }
 
-/* 中-5 トップの「サウニュ〜」の帯：自動で流すのをやめ（app.js）、横に送ったときはカードの切れ目で止める */
+/* 中-5 トップの「サウニュ〜」の帯：流し続けず、横に送ったとき（手でも自動送りでも。app.js）はカードの切れ目で止める */
 .news-rail-track { scroll-snap-type: x mandatory; scroll-padding-inline: 2px; }
 .news-rail-card { scroll-snap-align: start; }
 /* 流していたころは複製の特集カード（240px）に合わせて全カードが 240px の高さにそろっていた → 複製をやめても同じ高さを保つ */
