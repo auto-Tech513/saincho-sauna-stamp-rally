@@ -2200,12 +2200,140 @@ function newsRailCardHtml(article, index) {
       </a>`;
 }
 
+// 帯の自動送り（2026-11-19 オーナー指示で再開）。流し続けると先頭のカードの左端がいつも切れていた（独立監査2 中-5）ため、
+// 一定間隔で1枚ずつ送り、カードの切れ目（styles.css の scroll-snap と同じ位置）で止める。最後まで来たら先頭へなめらかに戻す
+// （同じ記事が2回出る複製カードは作らない）。触れている間・マウスを乗せている間・キーボードで中にいる間・帯が画面外のとき・
+// タブが裏のとき・動きを減らす設定のときは送らない。動いている間もタイマー1本だけで、毎フレームの処理は持たない
+const NEWS_RAIL_INTERVAL_MS = 4500;
+const NEWS_RAIL_RESUME_MS = 4000;
 let newsRailScrollState = null;
 function stopNewsRailAutoScroll() {
-  if (newsRailScrollState) {
-    cancelAnimationFrame(newsRailScrollState.raf);
-    if (newsRailScrollState.observer) newsRailScrollState.observer.disconnect();
-    newsRailScrollState = null;
+  const state = newsRailScrollState;
+  if (!state) return;
+  newsRailScrollState = null;
+  clearTimeout(state.timer);
+  if (state.observer) state.observer.disconnect();
+  state.cleanup.forEach((off) => off());
+}
+
+function newsRailSnapPositions(track) {
+  // 各カードの左端を、帯の scroll-padding の内側にそろえたときの scrollLeft（scroll-snap-align: start と同じ位置）。
+  // 帯の右端まで送り切った位置（scrollWidth - clientWidth）はカードの切れ目にそろわず左のカードが切れるため、送り先にしない
+  // （右端に近いカードは、その手前の位置で全体が見えている）
+  const trackRect = track.getBoundingClientRect();
+  const padStart = parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0;
+  const max = Math.max(0, track.scrollWidth - track.clientWidth);
+  const positions = [];
+  for (const card of track.children) {
+    const left = Math.max(0, Math.round(card.getBoundingClientRect().left - trackRect.left - track.clientLeft + track.scrollLeft - padStart));
+    if (left <= max + 1 && !positions.includes(left)) positions.push(Math.min(left, max));
+  }
+  return { positions: positions.sort((a, b) => a - b), max };
+}
+
+function startNewsRailAutoScroll(track) {
+  stopNewsRailAutoScroll();
+  if (!track || typeof window === "undefined") return;
+  const reduceQuery = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+  const state = { track, timer: 0, visible: false, hovering: false, touching: false, focused: false, holdUntil: 0, observer: null, cleanup: [] };
+  newsRailScrollState = state;
+  const listen = (target, type, handler, options) => {
+    target.addEventListener(type, handler, options);
+    state.cleanup.push(() => target.removeEventListener(type, handler, options));
+  };
+  const canRun = () =>
+    newsRailScrollState === state &&
+    track.isConnected &&
+    state.visible &&
+    !state.hovering &&
+    !state.touching &&
+    !state.focused &&
+    !document.hidden &&
+    !(reduceQuery && reduceQuery.matches);
+  const schedule = () => {
+    clearTimeout(state.timer);
+    state.timer = 0;
+    if (!canRun()) return;
+    const wait = Math.max(NEWS_RAIL_INTERVAL_MS, state.holdUntil - Date.now());
+    state.timer = setTimeout(advance, wait);
+  };
+  const advance = () => {
+    state.timer = 0;
+    if (newsRailScrollState !== state) return;
+    if (!track.isConnected) {
+      stopNewsRailAutoScroll();
+      return;
+    }
+    if (!canRun()) return;
+    const { positions, max } = newsRailSnapPositions(track);
+    if (max > 0) {
+      const current = track.scrollLeft;
+      const next = current >= max - 1 ? 0 : positions.find((left) => left > current + 1) ?? 0;
+      track.scrollTo({ left: next, behavior: "smooth" });
+    }
+    schedule();
+  };
+  const hold = () => {
+    state.holdUntil = Date.now() + NEWS_RAIL_RESUME_MS;
+    schedule();
+  };
+  listen(track, "touchstart", () => {
+    state.touching = true;
+    schedule();
+  }, { passive: true });
+  const touchEnd = (event) => {
+    if (event.touches && event.touches.length) return;
+    state.touching = false;
+    hold();
+  };
+  listen(track, "touchend", touchEnd, { passive: true });
+  listen(track, "touchcancel", touchEnd, { passive: true });
+  // マウスだけを見る（iPhone はタップで mouseenter を出したまま mouseleave を出さないことがある）
+  listen(track, "pointerenter", (event) => {
+    if (event.pointerType !== "mouse") return;
+    state.hovering = true;
+    schedule();
+  });
+  listen(track, "pointerleave", (event) => {
+    if (event.pointerType !== "mouse") return;
+    state.hovering = false;
+    hold();
+  });
+  // キーボードで帯の中に入ったときだけ止める（タップやクリックで付くフォーカスでは止めない）
+  listen(track, "focusin", (event) => {
+    let keyboard = false;
+    try {
+      keyboard = event.target.matches(":focus-visible");
+    } catch {
+      keyboard = false;
+    }
+    if (!keyboard) return;
+    state.focused = true;
+    schedule();
+  });
+  listen(track, "focusout", (event) => {
+    if (!state.focused || (event.relatedTarget && track.contains(event.relatedTarget))) return;
+    state.focused = false;
+    hold();
+  });
+  listen(document, "visibilitychange", schedule);
+  if (reduceQuery) {
+    if (reduceQuery.addEventListener) listen(reduceQuery, "change", schedule);
+    else if (reduceQuery.addListener) {
+      reduceQuery.addListener(schedule);
+      state.cleanup.push(() => reduceQuery.removeListener(schedule));
+    }
+  }
+  if ("IntersectionObserver" in window) {
+    state.observer = new IntersectionObserver((entries) => {
+      const entry = entries[entries.length - 1];
+      state.visible = Boolean(entry && entry.isIntersecting && entry.intersectionRatio >= 0.5);
+      schedule();
+    }, { threshold: [0, 0.5, 1] });
+    state.observer.observe(track);
+  } else {
+    state.visible = true;
+    schedule();
   }
 }
 
@@ -2238,6 +2366,7 @@ async function renderNewsRail() {
     // 同じ記事並びなら DOM を作り直さない。裏側の再描画で作り直すと、タップ中の
     // カードが差し替わってタップが失われ、帯のスクロール位置も先頭に戻ってしまう
     rail.hidden = false;
+    if (!newsRailScrollState) startNewsRailAutoScroll(existingTrack);
     return;
   }
   const cardsHtml = `
@@ -2253,10 +2382,10 @@ async function renderNewsRail() {
       <span class="news-rail-sub">サウナニュース</span>
     </div>
     <div class="news-rail-track">${cardsHtml}</div>`;
-  // 帯は自動で流さない（2026-11-19 独立監査2 中-5：0.7秒ごとに約21pxずつ流れ続け、どの瞬間も先頭のカードの左端が切れていた。
-  // 止める操作も無かった）。利用者が横に送るまで止めておき、送ったときはカードの切れ目で止まる（styles.css の scroll-snap）。
-  // ループ用の複製カードも作らない（流さないので不要。複製が並ぶと同じ記事が2回出る）
+  // 帯は流し続けず、一定間隔で1枚ずつ送ってカードの切れ目で止める（startNewsRailAutoScroll）。
+  // ループ用の複製カードは作らない（複製が並ぶと同じ記事が2回出る）。最後まで来たら先頭へなめらかに戻す
   rail.hidden = false;
+  startNewsRailAutoScroll(rail.querySelector(".news-rail-track"));
   trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
 }
 
