@@ -2190,9 +2190,21 @@ function trackNewsOnce(key, name, params) {
   track(name, params);
 }
 
+// 帯のカードの上半分の絵柄（2026-11-19 オーナー指示「色だけのカードは殺風景」）：記事の都道府県（記事データの prefecture）を
+// ロゴの「サ」と同じ朱の角印にして置く。4文字の県名は2文字ずつ2列の角印にする。都道府県が無い記事は角印を出さない（湯気の模様だけ）。
+// 飾りなので読み上げからは外す（カードの読み上げ名は今のまま）
+function newsRailSealHtml(article) {
+  const name = typeof article.prefecture === "string" ? article.prefecture.trim() : "";
+  if (!name) return "";
+  const chars = [...name];
+  const text = chars.length === 4 ? `${escapeHtml(chars.slice(0, 2).join(""))}<br>${escapeHtml(chars.slice(2).join(""))}` : escapeHtml(name);
+  return `<span class="news-rail-card-seal">${text}</span>`;
+}
+
 function newsRailCardHtml(article, index) {
   return `
       <a class="news-rail-card" href="/news/${escapeAttr(article.slug)}/" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
+        <span class="news-rail-card-art" aria-hidden="true">${newsRailSealHtml(article)}</span>
         <span class="news-rail-card-body">
           <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
           <span class="news-rail-card-title" data-num="${String(index + 1).padStart(2, "0")}">${escapeHtml(article.title)}</span>
