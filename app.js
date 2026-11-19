@@ -30,6 +30,8 @@ const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
 const NEWS_MODULE_PATH = "./news.js";
+// 地名の読み（総務省 全国地方公共団体コードのカナ）。検索の索引を作るときに読み込み、ひらがな・カタカナの地名を漢字の地名にもつなぐ
+const PLACE_READINGS_MODULE_PATH = "./search-readings.js";
 const GA_MEASUREMENT_ID = "G-FHGXDGF0M7";
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -840,6 +842,10 @@ let facilitySearchBuild = null;
 let facilityCacheVersion = 0;
 let searchGeneration = 0;
 let searchSynonymTokens = null;
+// 地名の読みの索引（読みのキー → 漢字の地名）。読み込めなかったときは空のまま（読みなしの検索は従来どおり動く）
+let placeReadingIndex = null;
+let placeReadingsLoad = null;
+let searchComposingSuggestionTimer = 0;
 const searchTokenCache = new Map();
 const activityDrafts = new Map();
 const activitySaves = new Set();
@@ -1341,7 +1347,11 @@ function bindEvents() {
 
   el.searchInput.addEventListener("input", (event) => {
     renderSearchClearButton();
-    if (event.isComposing || isSearchComposing) return;
+    if (event.isComposing || isSearchComposing) {
+      // 変換中（未確定のひらがな）も候補欄だけは出す。結果の一覧は確定してから描き直す（入力中に一覧を描き直さない）
+      scheduleComposingSearchSuggestions();
+      return;
+    }
     scheduleSearchRender(event.target.value);
   });
 
@@ -1353,6 +1363,7 @@ function bindEvents() {
 
   el.searchInput.addEventListener("compositionend", (event) => {
     isSearchComposing = false;
+    window.clearTimeout(searchComposingSuggestionTimer);
     scheduleSearchRender(event.target.value, { immediate: true });
   });
 
@@ -1360,6 +1371,13 @@ function bindEvents() {
     // 日本語の変換中の矢印（変換候補の移動）と、変換を確定する Enter（Safari は compositionend のあとに keyCode 229 で送る）では候補を動かさない・開かない
     if (isImeKeyEvent(event) || isSearchComposing) {
       if (event.key === "Enter") lastImeEnterAt = performance.now();
+      return;
+    }
+    if (event.key === "Escape") {
+      // Esc は候補を閉じるだけにする。PC の Chrome では type="search" の既定の動作で入力値まで消え、
+      // 「サウナ」→ Esc →「ラ」で「ラ」だけの検索（最初の候補が「ラ・フランス温泉館」）になっていた。消すときは検索欄の × を使う
+      event.preventDefault();
+      hideSearchSuggestions();
       return;
     }
     if (!searchSuggestionFacilities.length) return;
@@ -1371,8 +1389,6 @@ function bindEvents() {
     } else if (event.key === "Enter" && searchSuggestionIndex >= 0) {
       event.preventDefault();
       openSearchSuggestion(searchSuggestionFacilities[searchSuggestionIndex]);
-    } else if (event.key === "Escape") {
-      hideSearchSuggestions();
     }
   });
 
@@ -2945,7 +2961,7 @@ function findPrefectureSuggestions(value) {
   for (const pref of PREFECTURES) {
     const full = suggestionKey(pref.name);
     const short = suggestionKey(shortPrefName(pref.name));
-    if (full.startsWith(query) || short.startsWith(query) || (short.length >= 2 && query === short)) prefs.push({ type: "pref", name: pref.name });
+    if (full.startsWith(query) || short.startsWith(query) || (short.length >= 2 && query === short) || prefectureMatchesReading(pref.name, value)) prefs.push({ type: "pref", name: pref.name });
     if (prefs.length >= SUGGESTION_PREF_LIMIT) break;
   }
   return prefs;
@@ -2953,7 +2969,8 @@ function findPrefectureSuggestions(value) {
 
 // scoped=true は探す画面の検索欄（選択中の県・絞り込みに合わせる）、false はメニューの検索欄（全国から探す）
 function findFacilitySuggestions(value, { scoped }) {
-  const needles = scoped ? searchNeedles : createSearchNeedles(value);
+  // 日本語の変換中は、結果の一覧（searchNeedles）より先に候補だけを入力中の文字で出すため、検索語が違うときは作り直す
+  const needles = scoped && normalizeText(value) === searchTerm ? searchNeedles : createSearchNeedles(value);
   if (!needles.length) return { facilities: [], total: 0 };
   const awardYear = getSaunachelinAwardYear(normalizeText(value));
   const flatNeedles = uniqueStrings(needles.flat()).filter(Boolean);
@@ -3071,6 +3088,34 @@ function renderSearchSuggestions() {
   fitSuggestionPanel(panel);
 }
 
+// 日本語の変換中（未確定のひらがな）の候補：候補欄だけを入力中の文字で描く。
+// 結果の一覧・県の切り替え・帳面のスクロールは変えない（確定後の compositionend で従来どおり描き直す）
+function scheduleComposingSearchSuggestions() {
+  window.clearTimeout(searchComposingSuggestionTimer);
+  searchComposingSuggestionTimer = window.setTimeout(renderComposingSearchSuggestions, SEARCH_RENDER_DELAY_MS);
+}
+
+function renderComposingSearchSuggestions() {
+  const panel = el.searchSuggestions;
+  if (!panel || !isSearchComposing || activeView !== "Explore" || document.activeElement !== el.searchInput) return;
+  const value = el.searchInput.value;
+  if (!normalizeText(value)) {
+    hideSearchSuggestions();
+    return;
+  }
+  if (!appModulesReady) return;
+  if (!facilitySearchCache) {
+    ensureFacilitySearchRecords().then(() => renderComposingSearchSuggestions()).catch(() => {});
+    return;
+  }
+  const model = buildSuggestionItems(value, { scoped: true });
+  searchSuggestionFacilities = model.items;
+  searchSuggestionIndex = -1;
+  renderSuggestionPanel(panel, el.searchInput, value, "searchSuggestion", model);
+  revealSearchSuggestionsPanel(panel);
+  fitSuggestionPanel(panel);
+}
+
 function hideSearchSuggestions() {
   const panel = el.searchSuggestions;
   searchSuggestionIndex = -1;
@@ -3168,7 +3213,8 @@ function renderMenuSuggestions() {
   const input = document.querySelector("#menuSearchInput");
   if (!panel || !input) return;
   const value = input.value;
-  if (!normalizeText(value) || menuSearchComposing || document.activeElement !== input) {
+  // 変換中（未確定のひらがな）も候補を出す（メニューの検索欄は候補欄だけなので、入力中に描き直しても一覧は動かない）
+  if (!normalizeText(value) || document.activeElement !== input) {
     hideMenuSuggestions();
     return;
   }
@@ -3221,10 +3267,7 @@ function bindMenuSearch() {
     window.clearTimeout(menuSuggestionTimer);
     menuSuggestionTimer = window.setTimeout(renderMenuSuggestions, SEARCH_RENDER_DELAY_MS);
   };
-  input.addEventListener("input", (event) => {
-    if (event.isComposing || menuSearchComposing) return;
-    schedule();
-  });
+  input.addEventListener("input", () => schedule());
   input.addEventListener("compositionstart", () => { menuSearchComposing = true; });
   input.addEventListener("compositionend", () => { menuSearchComposing = false; schedule(); });
   input.addEventListener("focus", () => { if (input.value.trim()) schedule(); });
@@ -3233,10 +3276,13 @@ function bindMenuSearch() {
       if (event.key === "Enter") lastImeEnterAt = performance.now();
       return;
     }
-    if (event.key === "Escape" && !panel.hidden) {
+    if (event.key === "Escape") {
+      // 1回目の Esc は候補を閉じ、2回目はメニューを閉じる。入力値は消さない
+      // （PC の Chrome では2回目の Esc で type="search" の入力値が消えるだけで、メニューは閉じなかった）
       event.preventDefault();
       event.stopPropagation();
-      hideMenuSuggestions();
+      if (!panel.hidden) hideMenuSuggestions();
+      else closeSettingsDialog();
       return;
     }
     if (!menuSuggestionItems.length) return;
@@ -6695,6 +6741,8 @@ function ensureFacilitySearchRecords() {
   const version = facilityCacheVersion;
   const facilities = getFacilities();
   facilitySearchBuild = (async () => {
+    // 地名の読みは索引づくりと並行して読み込み、索引が使えるようになる前にそろえる
+    const readingsReady = loadPlaceReadings();
     const records = [];
     const buildStart = performance.now();
     let sliceStart = performance.now();
@@ -6713,6 +6761,8 @@ function ensureFacilitySearchRecords() {
       el.searchResultsStatus.dataset.searchIndexWorkMs = (performance.now() - buildStart - yieldWaitMs).toFixed(1);
       el.searchResultsStatus.dataset.searchIndexYieldMs = yieldWaitMs.toFixed(1);
     }
+    await readingsReady;
+    if (version !== facilityCacheVersion) return null;
     facilitySearchMemoSignature = memoSignature;
     facilitySearchCache = records;
     return records;
@@ -8177,6 +8227,8 @@ function tokenizeSearchInput(value) {
 
 function createSearchNeedleGroup(term) {
   return uniqueStrings([
+    // 地名の読み（「しんじゅく」→新宿・新宿区）は先頭に置き、96件の上限で落ちないようにする
+    ...findPlaceNamesByReading(term),
     ...createSearchPrimaryVariants(term),
     ...(shouldUseSynonymExpansion(term) ? expandSearchTerm(term) : []),
   ].map(normalizeSearchToken))
@@ -8466,6 +8518,107 @@ function toKatakana(value) {
 
 function toHiragana(value) {
   return String(value).replace(/[\u30a1-\u30f6]/g, (char) => String.fromCharCode(char.charCodeAt(0) - 0x60));
+}
+
+// --- 地名の読み（ひらがな・カタカナ・ローマ字の地名を、漢字の地名にもつなぐ） ---
+// 施設データには読みが無く、「しんじゅく」「ほっかいどう」が0件だった（PR #23 の要確認）。
+// 読みは search-readings.js（総務省 全国地方公共団体コードのカナ）だけを使い、推測した読みは足さない。
+const PLACE_NAME_SUFFIX_READINGS = [
+  ["市", ["シ"]], ["区", ["ク"]], ["町", ["チヨウ", "マチ"]], ["村", ["ムラ", "ソン"]],
+  ["都", ["ト"]], ["府", ["フ"]], ["県", ["ケン"]],
+];
+const PLACE_READING_PREFIX_MIN = 3;
+const PLACE_READING_PREFIX_REST_MAX = 2;
+const PLACE_READING_NAME_LIMIT = 12;
+const PLACE_READING_KEY_PATTERN = /^[ァ-ヶ]{2,}$/;
+
+function loadPlaceReadings() {
+  if (placeReadingIndex) return Promise.resolve(placeReadingIndex);
+  if (placeReadingsLoad) return placeReadingsLoad;
+  const fallback = (error) => {
+    if (error) console.warn("地名の読みを読み込めませんでした（読みなしで検索します）", error);
+    placeReadingIndex = buildPlaceReadingIndex("");
+    return placeReadingIndex;
+  };
+  try {
+    placeReadingsLoad = importWithTimeout(getVersionedModuleSpecifier(PLACE_READINGS_MODULE_PATH, encodeURIComponent(APP_BUILD_ID)), DATA_IMPORT_TIMEOUT_MS, "地名の読み")
+      .then((module) => { placeReadingIndex = buildPlaceReadingIndex(module.PLACE_READINGS); return placeReadingIndex; })
+      .catch(fallback);
+  } catch (error) {
+    placeReadingsLoad = Promise.resolve(fallback(error));
+  }
+  return placeReadingsLoad;
+}
+
+// 読みの照合キー：カタカナ・区切りなし・小書き文字を大きい文字に（出典のカナには「シンジヨウソン」のように小書きを使わない読みがあるため）
+function placeReadingKey(value) {
+  return normalizeKanaLoose(value);
+}
+
+function buildPlaceReadingIndex(source) {
+  const byKey = new Map();
+  const prefKeys = new Map();
+  const add = (key, name) => {
+    if (!key || !name) return;
+    const names = byKey.get(key) || new Set();
+    names.add(name);
+    byKey.set(key, names);
+  };
+  String(source || "").split("|").forEach((entry) => {
+    const at = entry.indexOf(":");
+    if (at < 1) return;
+    const name = entry.slice(at + 1);
+    const key = placeReadingKey(entry.slice(0, at));
+    if (!name || !PLACE_READING_KEY_PATTERN.test(key)) return;
+    add(key, name);
+    const keys = [key];
+    // 「新宿区（しんじゅくく）」は「新宿（しんじゅく）」でも引けるようにする。末尾の字と読みが出典どおりに対応するときだけ外す。
+    // 1字だけ残る地名（北区→北、津市→津）は、ほかの地名にも広く当たるため外さない
+    for (const [suffix, readings] of PLACE_NAME_SUFFIX_READINGS) {
+      if (!name.endsWith(suffix) || name.length < 3) continue;
+      const tail = readings.find((reading) => key.endsWith(reading) && key.length - reading.length >= 2);
+      if (!tail) continue;
+      const baseKey = key.slice(0, -tail.length);
+      add(baseKey, name.slice(0, -suffix.length));
+      keys.push(baseKey);
+      break;
+    }
+    if (name === "北海道" || /[都府県]$/.test(name)) prefKeys.set(name, keys);
+  });
+  return { byKey, prefKeys, keys: [...byKey.keys()] };
+}
+
+// 検索語（1語）の読みに当たる地名（漢字）を返す。読みと完全に一致する地名と、
+// 3文字以上の読みの先頭が一致し、残りが2文字以内の地名（「しんじゅ」→新宿）。漢字を含む語は対象外
+function findPlaceNamesByReading(term) {
+  const index = placeReadingIndex;
+  if (!index?.keys.length) return [];
+  const queryKeys = uniqueStrings([placeReadingKey(term), placeReadingKey(kanaFromRomajiSearchText(term))])
+    .filter((key) => PLACE_READING_KEY_PATTERN.test(key));
+  if (!queryKeys.length) return [];
+  const names = new Set();
+  for (const key of queryKeys) {
+    index.byKey.get(key)?.forEach((name) => names.add(name));
+  }
+  for (const key of queryKeys) {
+    if (key.length < PLACE_READING_PREFIX_MIN) continue;
+    for (const candidate of index.keys) {
+      if (names.size >= PLACE_READING_NAME_LIMIT) break;
+      if (candidate.length > key.length && candidate.length - key.length <= PLACE_READING_PREFIX_REST_MAX && candidate.startsWith(key)) {
+        index.byKey.get(candidate).forEach((name) => names.add(name));
+      }
+    }
+  }
+  return [...names].slice(0, PLACE_READING_NAME_LIMIT);
+}
+
+// 都道府県の候補：読みの先頭が2文字以上一致する県（「ほっ」→北海道、「おおさか」→大阪府）
+function prefectureMatchesReading(prefName, value) {
+  const keys = placeReadingIndex?.prefKeys.get(prefName);
+  if (!keys) return false;
+  const queries = [placeReadingKey(value), placeReadingKey(kanaFromRomajiSearchText(value))]
+    .filter((query) => PLACE_READING_KEY_PATTERN.test(query));
+  return queries.some((query) => keys.some((key) => key.startsWith(query)));
 }
 
 function normalizeFacilityName(value) {

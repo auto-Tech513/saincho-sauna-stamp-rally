@@ -19,6 +19,7 @@ const APP_SHELL_ASSETS = [
   "./content.js",
   "./nearby.js",
   "./phrase.js",
+  "./search-readings.js",
   "./facility-evidence.js",
   "./official-page-evidence.js",
   "./assets/japan-map-mobile.svg",
