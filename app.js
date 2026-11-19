@@ -823,6 +823,9 @@ let lastTrackedPagePath = "";
 let scrollTopBeforeViewChange = 0;
 // 日本語入力の確定の Enter を受けた時刻（その直後の送信を無視する）
 let lastImeEnterAt = -Infinity;
+// 404.html として配信されたとき（canonical が /404.html）の head を控える。
+// その URL にいる間は、表示用にホーム（探す）を描いても robots・canonical・title などを書き換えない（noindex のまま）
+const SERVED_404_HEAD = captureServed404Head();
 let memoDrafts = {};
 let facilitiesCache = null;
 let discoveryFacilitiesCache = null;
@@ -3202,7 +3205,10 @@ function submitMenuSearch(value) {
   renderSearchClearButton();
   setView("Explore");
   applySearchValue(el.searchInput.value).then((applied) => {
-    if (applied) el.searchResultsStatus.focus({ preventScroll: true });
+    if (!applied) return;
+    // 探す画面の検索欄からの送信と同じく、検索欄を画面の上に置いて件数と結果を見せる（先頭のままだと SP で結果が画面外だった）
+    el.searchForm.scrollIntoView({ block: "start", behavior: "instant" });
+    el.searchResultsStatus.focus({ preventScroll: true });
   });
 }
 
@@ -7942,8 +7948,35 @@ function getNewsMetaTags(article) {
   };
 }
 
+function captureServed404Head() {
+  try {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const href = typeof canonical?.getAttribute === "function" ? canonical.getAttribute("href") || "" : "";
+    if (!/\/404\.html$/.test(href)) return null;
+    const metas = [...document.querySelectorAll('meta[name="description"], meta[name="robots"], meta[name="googlebot"], meta[property^="og:"], meta[name^="twitter:"]')]
+      .map((node) => [node, node.getAttribute("content")]);
+    return { path: location.pathname, title: document.title, canonical: href, metas };
+  } catch {
+    return null;
+  }
+}
+
+// 404 として配信された URL にいる間は true。控えておいた 404 の head に戻す（履歴で戻ってきたときも）
+function restoreServed404Head() {
+  if (!SERVED_404_HEAD || location.pathname !== SERVED_404_HEAD.path) return false;
+  document.title = SERVED_404_HEAD.title;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", SERVED_404_HEAD.canonical);
+  SERVED_404_HEAD.metas.forEach(([node, content]) => {
+    if (content === null) node.removeAttribute("content");
+    else node.setAttribute("content", content);
+  });
+  return true;
+}
+
 function updateDocumentMetaForView(view, facility = null) {
   if (isArticleRoute()) return;
+  if (restoreServed404Head()) return;
   const baseMeta = VIEW_META[view] || VIEW_META.Explore;
   if (view === "NewsArticle" && newsModule && activeNewsSlug) {
     const article = (newsModule.SAUNA_NEWS || []).find((entry) => entry.slug === activeNewsSlug);
