@@ -11695,3 +11695,65 @@ details.passport-scope-note > p { margin: 0 0 4px; }
    入力のあとも拡大したまま横にずれる。/contact/（12px）・/ranking/ の参加欄（12px）・/add/（13px）・/community/ の募集欄と集合施設（15px）を 16px に */
 :root input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]),
 :root :is(select, textarea):not([data-keep-font]) { font-size: max(16px, 1em); }
+/* owner-1119 押せる範囲を 44px に（前回の指示に含まれず残っていた部品）。見た目と行の位置はほぼ変えない
+   ・枠や塗りのある部品：見た目の大きさはそのまま、枠の外に見えない当たり判定（::after）を足す。::after の上下は calc((100% - 44px) / 2) で、箱の高さによらず 44px にそろう（％は枠線の内側の高さ・幅から測る）
+   ・透明な文字の部品：余白を足し、同じだけ負の margin で打ち消す（行の高さ・位置は変わらない） */
+.stats-chip-nav button,
+.feature-option,
+.install-button,
+.growth-actions button,
+.stay-card a,
+.contact-choice,
+.business-payment-button,
+.visit-log-share-button,
+#communityFilter .feature-chip,
+.lodging-search-card a,
+.spotlight-gear-head .mini-button,
+.source-row a,
+#guideReferences a,
+.sameshi-card .source-badge { position: relative; }
+/* 記録（/ranking/）の項目チップ「行きたい」など 40px・記録の「共有」40px */
+.stats-chip-nav button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+.growth-actions button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* /add/ の特徴のチェック（label）：SP 38px・PC 34px */
+.feature-option::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+/* 421px 以上は特徴のチェックが 34px・行の間 8px で、当たり判定を 44px にすると上下の行と重なる → 行の間を 10px に */
+@media (min-width: 421px) { .feature-picker-grid { row-gap: 10px; } }
+/* 「ホーム画面に追加」の「手順」38px */
+.install-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+/* /stay/ の「掲載ページを見る」・/contact/ の種別と「問い合わせる」42px */
+.stay-card a::after,
+.contact-choice::after,
+.business-payment-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* 記録のサ活ログ「画像で共有」34px */
+.visit-log-share-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* /community/ の「全国」チップ 幅 42px・施設詳細の宿の「一休」幅 32px */
+#communityFilter .feature-chip::after { content: ""; position: absolute; inset: -1px -3px; }
+.lodging-search-card a::after { content: ""; position: absolute; inset: 0 calc((100% - 44px) / 2); }
+/* トップの Gear の「一覧」32px・「参照元」34px・入門の参考リンク 34px・サ飯の「参照」24px */
+.spotlight-gear-head .mini-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+.source-row a::after,
+#guideReferences a::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+#guideReferences { row-gap: 12px; }
+.sameshi-card .source-badge::after { content: ""; position: absolute; inset: 0 0 -20px -6px; }
+/* 横に送る「参照元」の列は、縦にはみ出した当たり判定が切れるため、列の上下に余白を足して同じだけ詰める */
+.source-row { padding-block: 6px; margin-top: -6px; margin-bottom: 6px; }
+@media (max-width: 420px) { .source-row { margin-bottom: 4px; } }
+/* Amazon・楽天の購入リンク 32〜38px */
+a[data-affiliate-vendor] { position: relative; }
+a[data-affiliate-vendor]::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* 入門の FAQ の問い 42px */
+.faq-card summary { padding-block: 13px; }
+/* 施設詳細の「出典」40px・「情報修正を知らせる」43px・パンくず「サ印帳」幅 40px */
+.facility-facts dd a { padding-block: 12px; margin-block: -12px; }
+.facility-warn button { padding-block: 11px; margin-block: -11px; }
+.facility-crumbs button { padding-inline: 4px; margin-inline: -2px; }
+/* ニュース記事の目次：見出し 32px・項目 42px */
+.news-toc summary { min-height: 44px; padding-block: 6px; margin-block: -6px; }
+.news-toc li a { padding-block: 11px; margin-block: -1px; }
+/* 記録の折りたたみ見出し「告知文テンプレ」24px・「記録のバックアップ・復元」29px・「対象データ・注意点」25px */
+.promotion-copy-details > summary { padding-block: 10px; margin: 0 0 -6px; }
+.record-backup > summary { padding-block: 7.5px; margin-block: -7.5px; }
+.record-backup details > summary { padding-block: 9.5px; margin-block: -9.5px; }
+/* 記録の地図の出典リンク 20px */
+.map-attribution { padding-block: 12px; margin: -4px 0 -12px; }
