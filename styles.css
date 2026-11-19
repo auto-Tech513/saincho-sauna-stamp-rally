@@ -11690,3 +11690,8 @@ details.passport-scope-note > p { margin: 0 0 4px; }
   .ssr-content img[src*="-hero.webp"],
   .news-article-hero { aspect-ratio: 1280 / 238; height: auto; object-fit: cover; object-position: center top; border-bottom: 3px solid #111817; }
 }
+
+/* 検索・入力欄（owner 11-19「入力すると画面がズレる」）：iPhone の Safari は文字が 16px 未満の入力欄にフォーカスすると画面を拡大し、
+   入力のあとも拡大したまま横にずれる。/contact/（12px）・/ranking/ の参加欄（12px）・/add/（13px）・/community/ の募集欄と集合施設（15px）を 16px に */
+:root input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]),
+:root :is(select, textarea):not([data-keep-font]) { font-size: max(16px, 1em); }

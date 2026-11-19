@@ -819,6 +819,10 @@ let deferredInstallPrompt = null;
 let menuSwipeStart = null;
 let pendingPrefectureSlug = "";
 let lastTrackedPagePath = "";
+// 表示を切り替える直前の帳面のスクロール位置（切り替えると前の画面が隠れて scrollTop が縮むため、先に控える）
+let scrollTopBeforeViewChange = 0;
+// 日本語入力の確定の Enter を受けた時刻（その直後の送信を無視する）
+let lastImeEnterAt = -Infinity;
 let memoDrafts = {};
 let facilitiesCache = null;
 let discoveryFacilitiesCache = null;
@@ -1039,7 +1043,7 @@ async function init() {
   }
   resumeActiveCheckin();
   checkNearbyOnLaunch();
-  window.addEventListener("popstate", () => {
+  window.addEventListener("popstate", (event) => {
     if ((/^\/guide\/[^/]+\/$/.test(location.pathname) || /^\/news\/[^/]+\/$/.test(location.pathname)) && !document.getElementById("ssrContent")) {
       location.reload();
       return;
@@ -1050,7 +1054,10 @@ async function init() {
     updateDocumentMetaForView(activeView);
     renderAll();
     trackPageView();
-    el.main.scrollTo({ top: 0, behavior: "smooth" });
+    // 検索結果から施設を開いて戻ったときは、離れたときの位置へ戻す（以前は先頭へ戻り、見ていた結果を探し直す必要があった）
+    const savedTop = Number(event.state?.mainScrollTop);
+    if (Number.isFinite(savedTop) && savedTop > 0) el.main.scrollTo({ top: savedTop, behavior: "instant" });
+    else el.main.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
@@ -1269,6 +1276,8 @@ function bindEvents() {
 
   el.searchForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    // 変換を確定した Enter で送信されたものは送信として扱わない（確定した文字での候補・結果の更新は compositionend 側で行う）
+    if (isImeEnterJustNow()) return;
     clearSearchRenderTimer();
     hideSearchSuggestions();
     const value = el.searchInput.value;
@@ -1278,7 +1287,12 @@ function bindEvents() {
       const applied = await applySearchValue(value);
       if (applied && activeView === "Explore") {
         el.searchInput.blur();
-        el.main.scrollTo({ top: 0, behavior: "instant" });
+        // 送信したあとは候補を閉じる（applySearchValue の最後で、まだフォーカスのある検索欄に候補が開き直し、結果の上に残っていた）
+        hideSearchSuggestions();
+        releaseSearchInputAnchorSpace();
+        // 帳面の先頭（scrollTop 0）へ戻すと、SP では検索欄が画面の下端に来て結果が1件も見えなかった（390×664 で検索欄の上端 553px）
+        // → 検索欄を画面の上に置き、その下に件数と結果が続くようにする
+        el.searchForm.scrollIntoView({ block: "start", behavior: "instant" });
         el.searchResultsStatus.focus({ preventScroll: true });
       }
     } finally { submit.disabled = false; }
@@ -1340,6 +1354,11 @@ function bindEvents() {
   });
 
   el.searchInput.addEventListener("keydown", (event) => {
+    // 日本語の変換中の矢印（変換候補の移動）と、変換を確定する Enter（Safari は compositionend のあとに keyCode 229 で送る）では候補を動かさない・開かない
+    if (isImeKeyEvent(event) || isSearchComposing) {
+      if (event.key === "Enter") lastImeEnterAt = performance.now();
+      return;
+    }
     if (!searchSuggestionFacilities.length) return;
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
@@ -1382,6 +1401,10 @@ function bindEvents() {
     });
   }
   document.addEventListener("pointerdown", handleSearchSuggestionOutsidePointer);
+  // キーボードの表示・非表示（visualViewport の大きさ・位置の変化）と帳面のスクロールに合わせて、開いている候補欄の高さを合わせ直す
+  window.visualViewport?.addEventListener("resize", refitVisibleSuggestionPanels);
+  window.visualViewport?.addEventListener("scroll", refitVisibleSuggestionPanels);
+  el.main?.addEventListener("scroll", refitVisibleSuggestionPanels, { passive: true });
 
   el.searchClearButton.addEventListener("click", () => {
     if (!el.searchInput.value) return;
@@ -2061,6 +2084,7 @@ function openFacilityDetail(facility) {
 }
 
 function applyActiveView(view) {
+  scrollTopBeforeViewChange = Math.round(el.main?.scrollTop || 0);
   hideSearchSuggestions();
   document.body.dataset.activeView = view.toLowerCase();
   Object.keys(VIEW_META).forEach((key) => {
@@ -2748,10 +2772,12 @@ async function applySearchValue(value, startedAt = performance.now()) {
   }
   if (value.trim()) {
     if (!facilitySearchCache) {
+      const anchor = captureSearchInputAnchor();
       el.facilityList.setAttribute("aria-busy", "true");
       el.facilityList.inert = true;
       el.searchResultsStatus.textContent = "検索を準備しています…";
       el.facilityList.innerHTML = `<div class="empty-state"><p>検索を準備しています…</p></div>`;
+      restoreSearchInputAnchor(anchor);
       // 候補欄も同じ待ち時間の間は空白にせず、準備中であることを示す
       if (document.activeElement === el.searchInput && !isSearchComposing) showSearchPreparingState();
     }
@@ -2769,6 +2795,8 @@ async function applySearchValue(value, startedAt = performance.now()) {
   }
   if (generation !== searchGeneration || activeView !== "Explore" || isSearchComposing || el.searchInput.value !== value) return false;
   const renderStartedAt = performance.now();
+  const anchor = captureSearchInputAnchor();
+  if (anchor === null) releaseSearchInputAnchorSpace();
   setSearchTerm(value);
   visibleLimit = 36;
   moveToSearchPrefecture(value);
@@ -2777,13 +2805,49 @@ async function applySearchValue(value, startedAt = performance.now()) {
     renderQuestPanel();
   }
   renderExplore();
-  if (document.activeElement === el.searchInput) el.main.scrollTo({ top: 0, behavior: "instant" });
+  // 入力中（検索欄にフォーカスがある間）は、結果の描き直しで検索欄が動かないようにする。
+  // 以前は1文字ごとに帳面を先頭（scrollTop 0）へ戻していたため、2文字目から検索欄がキーボードの下へ移り、
+  // iPhone の Safari が入力欄を見せようとして画面ごとずれていた（オーナー報告 11-19「入力すると画面がズレる」）
+  restoreSearchInputAnchor(anchor);
   // Local diagnostics only: no query text or timing is transmitted to a server.
   el.searchResultsStatus.dataset.searchElapsedMs = (performance.now() - startedAt).toFixed(1);
   el.searchResultsStatus.dataset.searchRenderMs = (performance.now() - renderStartedAt).toFixed(1);
   if (pendingSearchIntent?.value === value) pendingSearchIntent = null;
   renderSearchSuggestions();
   return true;
+}
+
+// 日本語入力の変換中（isComposing）か、変換の確定・操作のキー（keyCode 229）か
+function isImeKeyEvent(event) {
+  return Boolean(event.isComposing || event.keyCode === 229);
+}
+
+function isImeEnterJustNow() {
+  return performance.now() - lastImeEnterAt < 120;
+}
+
+// 検索欄にフォーカスがあるときだけ、描き直しの前の検索欄の画面上の位置を控える
+function captureSearchInputAnchor() {
+  if (!el.searchInput || document.activeElement !== el.searchInput || !el.main || typeof el.searchInput.getBoundingClientRect !== "function") return null;
+  return el.searchInput.getBoundingClientRect().top;
+}
+
+// 描き直しで検索欄の上下の高さが変わっても、検索欄を同じ画面位置に保つ。
+// 結果が減って帳面が短くなり、同じ位置までスクロールできないときは、一覧の下に一時的な余白を足す（フォーカスが外れたら外す）
+function restoreSearchInputAnchor(anchorTop) {
+  if (anchorTop === null || anchorTop === undefined || document.activeElement !== el.searchInput) return;
+  let delta = el.searchInput.getBoundingClientRect().top - anchorTop;
+  if (Math.abs(delta) < 1) return;
+  el.main.scrollTop += delta;
+  delta = el.searchInput.getBoundingClientRect().top - anchorTop;
+  if (delta >= 1 && el.facilityList) {
+    el.facilityList.style.minHeight = `${Math.ceil(el.facilityList.getBoundingClientRect().height + delta)}px`;
+    el.main.scrollTop += delta;
+  }
+}
+
+function releaseSearchInputAnchorSpace() {
+  if (el.facilityList?.style?.minHeight) el.facilityList.style.minHeight = "";
 }
 
 function getSearchSuggestionNameKeys(facility) {
@@ -2954,6 +3018,26 @@ function renderSuggestionPanel(panel, input, value, idPrefix, model) {
   panel.hidden = false;
   if (typeof input.setAttribute === "function") input.setAttribute("aria-expanded", "true");
   if (typeof input.removeAttribute === "function") input.removeAttribute("aria-activedescendant");
+  fitSuggestionPanel(panel);
+}
+
+// 候補欄の高さを、いま見えている範囲（キーボードを除いた visualViewport と下ナビの上端）に収める。
+// CSS の max-height（46dvh・380px）だけでは、iPhone でキーボードが出ても dvh が縮まず、候補の下半分がキーボードや下ナビの裏に隠れていた
+function fitSuggestionPanel(panel) {
+  if (!panel || panel.hidden || typeof panel.getBoundingClientRect !== "function") return;
+  const vv = window.visualViewport;
+  let bottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+  const nav = document.querySelector(".bottom-nav");
+  if (nav && !panel.closest("dialog")) {
+    const navRect = nav.getBoundingClientRect();
+    if (navRect.height > 0 && getComputedStyle(nav).display !== "none" && navRect.top < bottom) bottom = navRect.top;
+  }
+  const available = Math.floor(bottom - panel.getBoundingClientRect().top - 8);
+  panel.style.maxHeight = `${Math.max(132, Math.min(380, available))}px`;
+}
+
+function refitVisibleSuggestionPanels() {
+  document.querySelectorAll(".search-suggestions:not([hidden])").forEach(fitSuggestionPanel);
 }
 
 function renderSearchSuggestions() {
@@ -2981,6 +3065,7 @@ function renderSearchSuggestions() {
   searchSuggestionIndex = -1;
   renderSuggestionPanel(panel, el.searchInput, el.searchInput.value, "searchSuggestion", model);
   revealSearchSuggestionsPanel(panel);
+  fitSuggestionPanel(panel);
 }
 
 function hideSearchSuggestions() {
@@ -3138,6 +3223,10 @@ function bindMenuSearch() {
   input.addEventListener("compositionend", () => { menuSearchComposing = false; schedule(); });
   input.addEventListener("focus", () => { if (input.value.trim()) schedule(); });
   input.addEventListener("keydown", (event) => {
+    if (isImeKeyEvent(event) || menuSearchComposing) {
+      if (event.key === "Enter") lastImeEnterAt = performance.now();
+      return;
+    }
     if (event.key === "Escape" && !panel.hidden) {
       event.preventDefault();
       event.stopPropagation();
@@ -3162,6 +3251,7 @@ function bindMenuSearch() {
   });
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (isImeEnterJustNow()) return;
     submitMenuSearch(input.value);
   });
 }
@@ -3230,6 +3320,7 @@ function renderVenueSuggestions() {
   }
   panel.hidden = false;
   input.setAttribute("aria-expanded", "true");
+  fitSuggestionPanel(panel);
 }
 
 function chooseVenueSuggestion(facility) {
@@ -3253,6 +3344,7 @@ function bindVenueSuggestions() {
   input.addEventListener("compositionend", () => { composing = false; schedule(); });
   input.addEventListener("focus", () => { if (input.value.trim()) schedule(); });
   input.addEventListener("keydown", (event) => {
+    if (isImeKeyEvent(event) || composing) return;
     if (event.key === "Escape") { hideVenueSuggestions(); return; }
     if (!venueSuggestionItems.length) return;
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
@@ -6915,6 +7007,8 @@ function moveToSearchPrefecture(value) {
   const needles = createSearchNeedles(value);
   if (!term) return false;
   if (getSaunachelinAwardYear(value) !== null) return setSelectedPrefecture("全国");
+  // 1文字だけでは県を切り替えない（「し」を打った時点で一覧が宮城県に切り替わり、次の文字で全国に戻るなど、入力のたびに結果が跳ねていた）
+  if (normalizeCompact(term).length < 2) return false;
 
   const prefMatch = PREFECTURES.find((pref) => {
     const full = buildSearchBlob([pref.name]);
@@ -7819,7 +7913,11 @@ function pushViewUrl(view) {
     : view === "NewsArticle" && activeNewsSlug
       ? `/news/${encodeURIComponent(activeNewsSlug)}/`
       : VIEW_META[view]?.path || "/";
-  if (location.pathname !== path) history.pushState({ view }, "", path);
+  if (location.pathname !== path) {
+    // 戻るで戻ったときに、離れたときの帳面のスクロール位置（検索結果のどこを見ていたか）へ戻せるよう、今の履歴に控える
+    try { history.replaceState({ ...(history.state || {}), mainScrollTop: scrollTopBeforeViewChange }, ""); } catch { /* 控えられなくても移動は続ける */ }
+    history.pushState({ view }, "", path);
+  }
   updateDocumentMetaForView(view);
   trackPageView();
 }
