@@ -9601,9 +9601,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-/* 注意: レールに scroll-snap を付けると自動スクロール（rAFで scrollLeft を
-   少しずつ進める方式）がスナップに引き戻されて動かなくなる。付けないこと。
-   連番はカウンタではなく data-num 属性で持つ（ループ複製でも番号が一致する）。 */
+/* 帯の自動スクロールは 2026-11-19 にやめた（独立監査2 中-5）。scroll-snap はファイル末尾で付けている。
+   連番はカウンタではなく data-num 属性で持つ。 */
 .news-rail-card {
   position: relative;
 }
@@ -11627,3 +11626,67 @@ html { line-break: strict; }
 /* 押印帳（/passport/）：同じ行のタイルの高さにそろえるとき、グリッドの行が伸びて「施設を共有」ボタンだけ縦長（約72px）になっていた
    → タイルの中身は上から詰めて置き、ボタンは中身の高さのまま（2026-11-19 目視確認で発見） */
 .stamp-tile { align-content: start; }
+
+/* =====================================================================
+   独立監査2（2026-11-19）の指摘の是正
+   ===================================================================== */
+/* 高-2 記事（ニュース・入門）の本文：SP では「.ssr-content p, li, dd は 14px・太字・灰色」（一覧の SSR 要約向けの指定）が
+   本文の段落にも当たり、本文全体が 14px の太字の灰色になっていた（PC だけ 16px に上書きしていた）→ SP も PC と同じ 16px・標準の太さ・本文色 */
+.is-article .ssr-content > p:not(.eyebrow):not(.news-facility-chips),
+.is-article .ssr-content > ul > li { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--ink); }
+.is-article .ssr-content > p:not(.eyebrow) + p { margin-top: 0.6em; }
+
+/* 中-2 押せる部品を 44px 以上に */
+/* 探す：「現在地 2km」「マイ県」・特徴チップ（34px＋見えない当たり判定だった）→ 箱そのものを 44px */
+#viewExplore .area-shortcut button { height: 44px; min-height: 44px; }
+#viewExplore .area-shortcut button::after { content: none; }
+/* 押印帳・施設詳細の「取り消す」（32px）、押印帳の県チップ（40px） */
+.tiny-undo-button { min-height: 44px; }
+.pref-chip { min-height: 44px; }
+/* /add/・/community/ の県の選択欄：WebKit の標準の見た目のままでは高さの指定が効かず 29px だった → 標準の見た目を外して 44px、矢印は線で描く */
+.add-form select,
+.community-form-grid select,
+.community-form select { -webkit-appearance: none; appearance: none; height: 44px; min-height: 44px; padding: 0 36px 0 12px; line-height: 1.2;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f1d18' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px; }
+@media (min-width: 1024px) {
+  /* PC 右の柱の「Gear」「施設を追加」「メニュー」（42px） */
+  .rail-action-button { height: 44px; }
+}
+/* 高-1・中-2 制覇マップの升は見るだけ（13px の升を押す部品にしない）。県の一覧へは下の選択欄から開く */
+.tile-cell { cursor: default; }
+.rail-map-card .tile-map-pick { flex-direction: column; align-items: stretch; gap: 6px; }
+.rail-map-card .tile-map-pick select { width: 100%; }
+
+/* 中-3 ニュース記事下のナビカード：360px では本文の列が約150px しかなく、分類チップ（「受賞・発／表」）と日付（「…12／日」）が
+   途中で折れていた → チップと日付はそれぞれ1行のまま、入らなければ日付を次の行へ */
+.news-nav-meta { flex-wrap: wrap; row-gap: 4px; }
+.news-nav-meta .news-chip,
+.news-nav-meta time { flex: none; white-space: nowrap; }
+
+/* 中-5 トップの「サウニュ〜」の帯：自動で流すのをやめ（app.js）、横に送ったときはカードの切れ目で止める */
+.news-rail-track { scroll-snap-type: x mandatory; scroll-padding-inline: 2px; }
+.news-rail-card { scroll-snap-align: start; }
+/* 流していたころは複製の特集カード（240px）に合わせて全カードが 240px の高さにそろっていた → 複製をやめても同じ高さを保つ */
+#viewExplore .news-rail-card { min-height: 240px; }
+/* SP：先頭カード（84vw）が帯の幅より広く右端が切れ、次のカードがあることも見えなかった → 帯の幅から次のカードの端が覗く分を引いた幅 */
+@media (max-width: 640px) {
+  #viewExplore .news-rail-card:first-child { flex-basis: calc(100% - 36px); min-width: calc(100% - 36px); }
+}
+
+/* 中-6 施設詳細：「営業時間・料金・休館日は、訪問前に公式ページで再確認してください。」が本文の注意書きとページ下のフッターの注記で2回出ていた
+   → 施設詳細ではフッターの注記を出さない（本文の注意書きに同じ文がある） */
+body[data-active-view="facility"] .site-foot-note { display: none; }
+/* 中-6 押印帳：県チップの分母の説明（SP で5行）を折りたたむ。1文目だけを見出しにして、続きは開いて読む */
+details.passport-scope-note > summary { display: flex; align-items: center; gap: 6px; min-height: 44px; cursor: pointer; list-style: none; }
+details.passport-scope-note > summary::-webkit-details-marker { display: none; }
+details.passport-scope-note > summary::after { content: ""; flex: none; width: 7px; height: 7px; margin-left: 2px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+details.passport-scope-note[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
+details.passport-scope-note > p { margin: 0 0 4px; }
+
+/* 中-7 SP のニュース記事：最初の画面に題名が3回（パンくずの最後・見出し・アイキャッチのカード）出ていた
+   → SP ではパンくずの最後（今のページの題名）を画面に出さず（読み上げには残す）、アイキャッチは題名の手前（誌名と分類の帯）だけを見せる */
+@media (max-width: 1023px) {
+  .ssr-content .crumb-current { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .ssr-content img[src*="-hero.webp"],
+  .news-article-hero { aspect-ratio: 1280 / 238; height: auto; object-fit: cover; object-position: center top; border-bottom: 3px solid #111817; }
+}

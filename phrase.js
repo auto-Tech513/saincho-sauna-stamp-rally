@@ -52,7 +52,16 @@ const LATIN = /[A-Za-z]/;
 const LONG_PHRASE = 8;
 const OPENING = /[「『（(【〔［\[〈《]/;
 const NO_LINE_START = /[」』）)】〕］\]〉》、。，．,.・：:；;！？!?ー～ぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ]/;
-const PROTECTED_COMPOUNDS = ["サウナシュラン", "問い合わせ", "打ち合わせ", "申し込み", "受け付け", "見積もり", "立ち上げ", "取り組み", "組み合わせ", "切り替え", "並べ替え"];
+const PROTECTED_COMPOUNDS = ["サウナシュラン", "問い合わせ", "打ち合わせ", "申し込み", "受け付け", "見積もり", "立ち上げ", "取り組み", "組み合わせ", "切り替え", "並べ替え", "ふれあい", "からまつ"];
+// 長いカタカナの連なりを割ってよい語（施設名・記事題に多い語。2026-11-19 独立監査2 中-4）
+const HIRAGANA_NAME_WORDS = ["ふれあい", "からまつ"];
+const KATAKANA_JOINT_WORDS = ["サウナ", "スパ", "ホテル", "リゾート", "テラス", "センター", "サッポロ", "ガーデン", "パーク", "ランド", "ハウス", "ロッジ", "ステイ", "レスト", "キャビン", "カプセル", "プライベート", "ヴィラ", "ビレッジ", "ヴィレッジ", "オリエンタル", "スタンプラリー", "オープン", "リニューアル", "ロウリュ"];
+function katakanaRunJoint(chunk, i) {
+  const left = /[\u30a1-\u30fa\u30fc]+$/.exec(chunk.slice(0, i))?.[0] || "";
+  const right = /^[\u30a1-\u30fa\u30fc]+/.exec(chunk.slice(i))?.[0] || "";
+  if (left.length < 3 || right.length < 3 || left.length + right.length < 9 || right[0] === "ー") return false;
+  return KATAKANA_JOINT_WORDS.some((w) => right.startsWith(w) || left.endsWith(w));
+}
 const cache = new Map();
 
 /** 改行してよい位置（UTF-16 オフセット）。日本語を含まなければ空。 */
@@ -76,9 +85,20 @@ export function phraseBreaks(text) {
         else if ((LATIN.test(a) && JAPANESE.test(b) && /[A-Za-z]{3}$/.test(chunk.slice(0, i))) || (JAPANESE.test(a) && LATIN.test(b) && /^[A-Za-z]{3}/.test(chunk.slice(i)))) breaks.push(start + i);
         // 「サウナスタンプラリーを」：長い塊では「サウナ」と後ろの5字以上のカタカナ語の間でも割る（「サウナシュラン」「サウナハット」は割らない）
         else if (i >= 3 && chunk.slice(i - 3, i) === "サウナ" && /^[\u30a1-\u30fa\u30fc]{5,}/.test(chunk.slice(i))) breaks.push(start + i);
+        // 長い塊が行幅を超えると、ブラウザが任意の位置で折って「2位⏎・2021年」「サッ⏎ポロ」のように禁則も語も崩れる（2026-11-19 独立監査2 中-3・中-4）。
+        // ・3字以上のカタカナ語の後ろの数字（「サウナシュラン｜2026発表」。「第2回」「1,450m」は割らない）
+        else if ((KATAKANA.test(a) || a === "ー") && /[0-9０-９]/.test(b) && /[\u30a1-\u30fa\u30fc]{3}$/.test(chunk.slice(0, i))) breaks.push(start + i);
+        // ・ひらがなの後ろの3字以上のカタカナ語（「めぐり｜スタンプラリー」）
+        else if (/[\u3041-\u3096]/.test(a) && KATAKANA.test(b) && /^[\u30a1-\u30fa\u30fc]{3}/.test(chunk.slice(i))) breaks.push(start + i);
+        // ・9字以上続くカタカナの中の、施設名によく出る語の前後（「ガトーキングダム｜サッポロ」「センチュリオン｜サウナ｜レスト」「センター｜フロックス」）
+        else if (katakanaRunJoint(chunk, i)) breaks.push(start + i);
+        // ・漢字の後ろの3字以上のひらがな（「御湯印｜めぐり」。送り仮名の「取り」等は2字以下なので割らない）
+        else if (KANJI.test(a) && /^[\u3041-\u3096]{3}/.test(chunk.slice(i))) breaks.push(start + i);
       }
     }
     for (let i = 1; i < chunk.length; i += 1) {
+      // カタカナ語の後ろのひらがなの固有語（「プライベート｜からまつ山荘」。BudouX が「から｜まつ」と割るのを防いだ代わり。2026-11-19 独立監査2 中-4）
+      if ((KATAKANA.test(chunk[i - 1]) || chunk[i - 1] === "ー") && HIRAGANA_NAME_WORDS.some((w) => value.startsWith(w, start + i))) breaks.push(start + i);
       // 「再始動｜フィンランド産」の縦棒、「ホテル-CABIN-札幌」の連結符の後でも割る（BudouX は縦棒で区切らず、題全体が1文節になって行幅を超える）
       if (/[・／/→｜|&＆]/.test(chunk[i - 1]) && !/[・／/→｜|&＆]/.test(chunk[i])) breaks.push(start + i);
       // 「＋」は後ろが数字（「サウナ+5℃」）のときは割らない
@@ -103,6 +123,8 @@ export function phraseBreaks(text) {
 function protectCompounds(text, breaks) {
   if (!breaks.length) return breaks;
   const inside = new Set();
+  // 8字以下のかぎ括弧の中（「かるまる」「REBOOT!」）は割らない（2026-11-19 独立監査2 中-3）
+  for (const m of text.matchAll(/[「『][^「『」』]{1,8}[」』]/g)) for (const b of breaks) if (b > m.index + 1 && b < m.index + m[0].length - 1) inside.add(b);
   for (const word of PROTECTED_COMPOUNDS) {
     let from = 0;
     for (;;) {
