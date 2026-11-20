@@ -346,5 +346,17 @@
     "og": "/assets/news/ofurocafe-arabian-night-season2-og.png",
     "thumb": "/assets/news/ofurocafe-arabian-night-season2-thumb.webp",
     "generatedAt": "2026-11-19"
+  },
+  "flexkey-saunner-of-the-year-2026": {
+    "hero": "/assets/news/flexkey-saunner-of-the-year-2026-hero.webp",
+    "og": "/assets/news/flexkey-saunner-of-the-year-2026-og.png",
+    "thumb": "/assets/news/flexkey-saunner-of-the-year-2026-thumb.webp",
+    "generatedAt": "2026-11-20"
+  },
+  "syakenoko-yoshidaya-sannoukaku-2026": {
+    "hero": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-hero.webp",
+    "og": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-og.png",
+    "thumb": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-thumb.webp",
+    "generatedAt": "2026-11-20"
   }
 }

@@ -71366,5 +71366,26 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/",
     "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/"
+  },
+  {
+    "id": "manual-tokyo-baba-sauna",
+    "name": "馬場サウナ",
+    "prefecture": "東京都",
+    "address": "東京都新宿区高田馬場2-1-1 センテニアルタワー2階",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-20",
+    "city": "新宿区",
+    "trait": "urban",
+    "tags": [
+      "男性専用",
+      "ワークカフェ併設"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気浴あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://baba-sauna.com/",
+    "officialUrl": "https://baba-sauna.com/"
   }
 ];
