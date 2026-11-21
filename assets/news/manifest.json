@@ -370,5 +370,35 @@
     "og": "/assets/news/goodsauna-sapporo-1st-anniversary-2026-og.png",
     "thumb": "/assets/news/goodsauna-sapporo-1st-anniversary-2026-thumb.webp",
     "generatedAt": "2026-11-21"
+  },
+  "centurion-sauna-edo-tokyo-renewal": {
+    "hero": "/assets/news/centurion-sauna-edo-tokyo-renewal-hero.webp",
+    "og": "/assets/news/centurion-sauna-edo-tokyo-renewal-og.png",
+    "thumb": "/assets/news/centurion-sauna-edo-tokyo-renewal-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "cocofuro-misato-onsen-sauna-details": {
+    "hero": "/assets/news/cocofuro-misato-onsen-sauna-details-hero.webp",
+    "og": "/assets/news/cocofuro-misato-onsen-sauna-details-og.png",
+    "thumb": "/assets/news/cocofuro-misato-onsen-sauna-details-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "karinnoyu-iifuro-day-2026": {
+    "hero": "/assets/news/karinnoyu-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/karinnoyu-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/karinnoyu-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "sendai-korona-no-yu-refresh-2026": {
+    "hero": "/assets/news/sendai-korona-no-yu-refresh-2026-hero.webp",
+    "og": "/assets/news/sendai-korona-no-yu-refresh-2026-og.png",
+    "thumb": "/assets/news/sendai-korona-no-yu-refresh-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "yuranosato-kirari-iifuro-campaign-2026": {
+    "hero": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-hero.webp",
+    "og": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-og.png",
+    "thumb": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
   }
 }
