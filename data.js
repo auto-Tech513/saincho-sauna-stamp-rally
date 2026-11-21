@@ -2132,8 +2132,8 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1410/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://korona.ooedoonsen.jp/",
-    "officialUrlSource": "https://saunatime.jp/saunas/1410/"
+    "officialUrl": "https://www.korona.co.jp/onsen/sen/",
+    "officialUrlSource": "https://www.korona.co.jp/onsen/sen/"
   },
   {
     "id": "st-miyagi-2939",
@@ -71407,5 +71407,26 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://capsulespa-replus.com/",
     "officialUrl": "https://capsulespa-replus.com/"
+  },
+  {
+    "id": "manual-tokyo-centurion-edo-tokyo",
+    "name": "ザ・センチュリオンサウナ レスト＆ステイ 江戸東京",
+    "prefecture": "東京都",
+    "address": "〒110-0005 東京都台東区上野6丁目9番9号",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-22",
+    "city": "台東区",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "ロウリュあり",
+      "水風呂あり",
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.centurion-hotel.com/edo_tokyo/",
+    "officialUrl": "https://www.centurion-hotel.com/edo_tokyo/"
   }
 ];

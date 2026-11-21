@@ -1353,7 +1353,7 @@ export const CURATED_FACILITY_EVIDENCE = [
   {
     ids: ["manual-gunma-cocofuro-misato"], name: "COCOFURO plus みさと温泉", status: "planned",
     features: [],
-    facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }],
+    facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }, { label: "営業時間", value: "8:00〜24:00（最終入場23:30）、定休日は不定休（開業後の案内として公式サイトに掲載）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }, { label: "料金", value: "大人（中学生以上）平日880円／土日祝980円、小人（中学生未満）平日350円／土日祝450円、3歳未満は無料。カード式10回回数券8,000円（公式サイトに掲載の開業後の料金）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }, { label: "設備", value: "溶岩サウナ（蒸禅）と、音楽と連動して毎時10分・30分・50分にロウリュを行うミュージックロウリュサウナ（レンガ製サウナストーンSAUNA BRICKを採用予定）。源泉は箕郷元湯（ナトリウム-塩化物・炭酸水素塩温泉、源泉温度47.4℃）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }],
   },
   {
     ids: ["manual-shimane-mimata-ururu"], name: "美又温泉うるる", status: "planned",
@@ -3491,7 +3491,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     facts: [
       factNov14("料金", "お一人様当たり 平日：2時間3,500円、3時間4,500円、7時間8,500円／土日祝：2時間4,000円、3時間5,000円、7時間9,500円", "https://yachiho-sauna.jp/"),
       factNov14("営業時間", "AM9時からPM7時", "https://yachiho-sauna.jp/"),
-      factNov14("定休日", "休日：木曜日。今シーズンの営業期間は11月22日迄で、冬季は休業", "https://yachiho-sauna.jp/"),
+      { label: "定休日", value: "休日：木曜日。2026年シーズンの営業は11月22日までで、冬季は休業（公式サイトの案内「今シーズン営業期間は11月22日迄です。冬は休みとなります」で2026年11月22日に確認。来シーズンの開始日は未発表）", sourceUrl: "https://yachiho-sauna.jp/", checkedAt: "2026-11-22" },
       factNov14("設備", "3種類の本格薪焚きサウナ（小屋サウナ、バレルサウナ、テントサウナ）計9基。セルフロウリュ・セルフアウフグースが可能。低温60度から高温120度まで", "https://yachiho-sauna.jp/"),
       factNov14("水風呂", "北八ヶ岳の天然水を贅沢にかけ流した山の水プール・バレルプールがあり、渓流も利用できる", "https://yachiho-sauna.jp/"),
     ],
@@ -3815,7 +3815,8 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     features: ["ドライサウナ", "スチーム(ミスト)サウナ", "温泉付き", "サ飯あり"],
     facts: [
       factNov14("設備", "乾式・湿式サウナ、全10種類の岩盤スパ（日本最大級『発汗洞』）、天然温泉『美肌の湯』、湯の華食堂・湯の華亭", "https://www.spa-yunohana.com/"),
-      factNov14("定休日", "メンテナンス休館あり（2026年11月9日〜13日は休館し、11月14日朝9時より通常営業再開）", "https://www.spa-yunohana.com/"),
+      { label: "定休日", value: "年中無休（施設メンテナンスによる休館を除く）。2026年11月9日〜13日はメンテナンス休館し、11月14日朝9時より通常営業を再開（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.spa-yunohana.com/", checkedAt: "2026-11-22" },
+      { label: "設備", value: "男性側のバレルサウナ・水風呂と女性側の炭酸風呂・寝湯は改修中で、2026年12月中旬頃にリニューアルオープン予定（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.spa-yunohana.com/", checkedAt: "2026-11-22" },
     ],
   },
   {
@@ -6451,7 +6452,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("営業時間", "スカイスパ（宿泊者）15:00〜翌11:00", "https://www.candeohotels.com/ja/nagano-chino/skyspa/"),
       factNov14("料金", "日帰り入浴（平日のみ、タオルセット付・税込）スタンダード15〜23時 大人1,000円・小人500円、朝湯6〜11時 大人800円・小人400円", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
       factNov14("利用条件", "日帰り入浴は平日のみで、スカイスパ会員登録（顔写真付き身分証が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
-      factNov14("営業状況", "公式のお知らせ（2026年11月4日付）により、機器故障のため男女ともスカイスパの露天風呂が利用不可（復旧日程は未定）。内風呂・サウナ・水風呂は通常通り利用可", "https://www.candeohotels.com/ja/nagano-chino/"),
+      { label: "営業状況", value: "公式のお知らせ（2026年11月4日付）により、機器故障のため男女ともスカイスパの露天風呂が利用不可（復旧日程は未定）。内風呂・サウナ・水風呂は通常通り利用可。2026年11月22日時点でも復旧の案内はなく、利用不可が継続", sourceUrl: "https://www.candeohotels.com/ja/nagano-chino/information/", checkedAt: "2026-11-22" },
       { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/nagano-chino/", checkedAt: "2026-11-08" },
     ],
   },
@@ -7115,6 +7116,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("定休日", "4ヶ月に一度メンテナンス休館日あり（年3回不定休）", "https://www.korona.co.jp/onsen/basic/sen/224"),
       factNov14("設備", "天然温泉の大浴場に加え、フォーレスト（3種の岩盤浴ゾーン、ロウリュアトラクション、クールルーム、コミックコーナー等）がある", "https://www.korona.co.jp/onsen/basic/sen/224"),
       factNov14("利用条件", "刺青、タトゥー、タトゥーシールのある方は利用不可。レンタルタオルセット（バス・フェイス）380円", "https://www.korona.co.jp/onsen/basic/sen/224"),
+      { label: "営業状況", value: "2026年11月19日にリフレッシュオープン。男性サウナにオートロウリュと連動する送風機、男女サウナにオートロウリュと連動する照明演出を新設。洗い場の一部にパーテーション、水飲み場に冷却装置を設置（公式お知らせで2026年11月22日に確認）", sourceUrl: "https://www.korona.co.jp/onsen/storenews/sen/1205", checkedAt: "2026-11-22" },
     ],
   },
   {
@@ -7771,7 +7773,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ids: ["manual-hotel-apa-11"], name: "アパホテル＆リゾート〈札幌〉", officialUrl: "https://www.apahotel.com/resort/sapporo/", address: "〒005-0804 北海道札幌市南区川沿4条2丁目1-1", city: "札幌市",
     features: [],
     facts: [
-      factNov14("営業時間", "大浴殿の午後営業は通常15:00開始。2026年11月16日〜20日はサウナ改修工事のため18:00〜24:00に変更、期間中の朝のサウナは6:00〜8:00のみ利用可", "https://www.apahotel.com/resort/sapporo/news/detail-1618.html"),
+      { label: "営業時間", value: "大浴殿の午後営業は通常15:00開始。2026年11月16日〜20日のサウナ改修工事に伴う営業時間の変更（18:00〜24:00）は期間終了に伴い終了し、通常営業に戻っている（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.apahotel.com/resort/sapporo/", checkedAt: "2026-11-22" },
       factNov14("設備", "大浴殿内にサウナあり（公式お知らせが大浴殿内のサウナ改修工事を案内）", "https://www.apahotel.com/resort/sapporo/news/detail-1618.html"),
       { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～24:00", sourceUrl: "https://www.apahotel.com/resort/sapporo/", checkedAt: "2026-11-08" },
     ],
@@ -10412,6 +10414,11 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ids: ["manual-okinawa-dormy-inn-naha"], name: "ドーミーイン那覇＜県庁前＞", status: "planned",
     features: [],
     facts: [{ label: "営業状況", value: "開業予定（2027年2月3日プレオープン予定。2026年11月18日に公式サイトで宿泊予約の受付を開始。開業までは押印対象外）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/naha/", checkedAt: "2026-11-19" }],
+  },
+  {
+    ids: ["manual-tokyo-centurion-edo-tokyo"], name: "ザ・センチュリオンサウナ レスト＆ステイ 江戸東京", status: "planned",
+    features: ["ロウリュあり", "水風呂あり", "宿泊可"],
+    facts: [{ label: "営業状況", value: "開業予定（2026年12月12日にグランドリニューアルオープン予定。旧・上野ステーションホステル オリエンタル1を改装し、同日付で施設名を「ザ・センチュリオンサウナ レスト＆ステイ 江戸東京」に変更。開業までは押印対象外）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }, { label: "設備", value: "ツインヒーター完備で30名以上を収容する100℃超の大型サウナ、シングル水風呂と16℃のバイブラ水風呂の2種の水風呂、スタッフロウリュ（熱波）の毎日開催、ジムエリアとコワーキングスペースの新設（料金・営業時間は公式サイトで随時更新と案内）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }],
   },
 ];
 
