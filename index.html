@@ -52,14 +52,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css?v=20260712-nearby-logshare-v3" />
     <script>
-      window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-FHGXDGF0M7", {
-        "anonymize_ip": true,
-        "send_page_view": false
-      });
+      (function () {
+        // 自動操作のブラウザ（Playwright・Selenium 等。navigator.webdriver === true）では GA4 を使わない（2026-11-21）。
+        // __SAINCHO_GA_ID を置かないので app.js の loadAnalyticsWhenIdle も gtag.js を読み込まない
+        if (navigator.webdriver === true) return;
+        window.__SAINCHO_GA_ID = "G-FHGXDGF0M7";
+        gtag("js", new Date());
+        gtag("config", "G-FHGXDGF0M7", {
+          "anonymize_ip": true,
+          "send_page_view": false
+        });
+      })();
     </script>
     <script type="application/ld+json">
       {
