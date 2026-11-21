@@ -71387,5 +71387,25 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://baba-sauna.com/",
     "officialUrl": "https://baba-sauna.com/"
+  },
+  {
+    "id": "manual-miyagi-capsule-spa-replus",
+    "name": "Capsule & Spa Re.Plus",
+    "prefecture": "宮城県",
+    "address": "〒980-0803 宮城県仙台市青葉区国分町2丁目9-20",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-21",
+    "city": "仙台市青葉区",
+    "trait": "urban",
+    "tags": [
+      "宿泊可",
+      "カプセルホテル"
+    ],
+    "features": [
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://capsulespa-replus.com/",
+    "officialUrl": "https://capsulespa-replus.com/"
   }
 ];
