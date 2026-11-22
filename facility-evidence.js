@@ -10502,6 +10502,39 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       { label: "設備", value: "男性専用の大浴場・サウナと、男女それぞれの専用カプセルルームを備える", sourceUrl: "https://capsulespa-replus.com/", checkedAt: "2026-11-22" },
     ],
   },
+  {
+    ids: ["st-akita-4785"], name: "金浦温泉・学校の栖", officialUrl: "https://onsen-sumika.com/",
+    features: ["温泉付き", "宿泊可", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "樽型のバレルサウナを新設。男女それぞれの浴場に露天風呂も新たに整備した。大浴場は硫黄温泉", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "ラジウム鉱泉と硫黄水風呂（各40人可）を備える。奇数日と偶数日で男女の浴場が入れ替わる", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "日帰り入浴は午前6時〜午後8時30分", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-ishikawa-2187"], name: "極楽湯 金沢野々市店", officialUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html",
+    features: [],
+    facts: [
+      { label: "料金", value: "おとな（中学生以上）は平日860円・土日祝960円、こども（4才〜小学生）は450円。3才以下は入館無料。回数券は10枚綴り7,500円（すべて税込）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "お風呂は平日9:00〜25:00、土日祝6:00〜25:00（最終受付24:20）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+      { label: "利用条件", value: "入れ墨・ファッションタトゥー・タトゥーシールのある方は入館できない", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-mie-gokurakuyu-tsu"], name: "極楽湯 津店", officialUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "料金", value: "おとな（中学生以上）は平日900円・土日祝1,000円、こども（4才〜）は480円。3才以下は入館無料。回数券は10枚綴り7,800円（すべて税込）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/index.html", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "平日・祝日は9:00〜26:00、土日は6:00〜26:00", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/index.html", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-oita-4472"], name: "レゾネイトクラブくじゅう", officialUrl: "http://www.resonate.co.jp/relax/",
+    features: ["温泉付き", "宿泊可", "貸切可"],
+    facts: [
+      { label: "設備", value: "温泉は天然の保湿成分メタケイ酸を180mg以上含む「美人の湯」。大浴場「紅殻之湯（べんからの湯）」と露天風呂付きの貸切湯がある", sourceUrl: "http://www.resonate.co.jp/relax/", checkedAt: "2026-11-22" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
