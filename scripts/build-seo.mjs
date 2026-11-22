@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
 import { NEWS_CATEGORIES, SAUNA_NEWS, getPublishedNews, renderNewsBlocks } from "../news.js";
-import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility, splitPostalCodeFromAddress } from "../facility-evidence.js";
 import { haversineDistanceKm } from "../nearby.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -394,13 +394,15 @@ await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウ
 await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", `初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を${SAUNA_ARTICLES.length}記事で確認できます。`, renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
 await emitStaticRoute("/news/", "サウニュ〜（サウナニュース） | サ印帳", "サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えるサ印帳のニュースページです。", renderNewsIndexSsr(), LASTMOD.news);
 for (const article of PUBLISHED_NEWS) {
+  const heroUrl = `${APP_URL}/assets/news/${article.slug}-hero.webp`;
   await emitPage(`/news/${article.slug}/`, {
     ...pageMeta(`${article.title} | サウニュ〜`, article.lead),
     lastmod: article.updatedAt,
     type: "article",
     image: `${APP_URL}/assets/news/${article.slug}-og.png`,
     imageAlt: article.heroAlt,
-  }, renderNewsArticleSsr(article));
+    pageImage: heroUrl,
+  }, renderNewsArticleSsr(article, heroUrl));
 }
 await emitStaticRoute("/ranking/", "サウナの訪問数ランキングと称号 | サ印帳", "行ったサウナの数（サ印数）で称号が上がる、サ印帳の参加型ランキング。1湯「はじめの一湯」から2000湯「神人サウナー」までの称号一覧と参加方法を掲載。公開されるのはニックネーム・サ印数・称号のみです。", renderRankingSsr());
 await emitStaticRoute("/passport/", "サ印 | サ印帳", "全国と都道府県別のサ印収集状況を確認。県マスター、称号、押印済み施設を一目で振り返れます。", renderGenericSsr("サ印", "全国・県別のサ印進捗と称号を確認できます。"));
@@ -501,7 +503,7 @@ function renderHtml(route, meta, ssrHtml) {
           description: meta.description,
           inLanguage: "ja-JP",
           isPartOf: { "@id": `${APP_URL}/#website` },
-          image: OG_IMAGE,
+          image: meta.pageImage || OG_IMAGE,
           dateModified: meta.lastmod || undefined,
         },
       ],
@@ -780,9 +782,8 @@ function renderNewsIndexSsr() {
   `, { jsonLd });
 }
 
-function renderNewsArticleSsr(article) {
+function renderNewsArticleSsr(article, heroUrl) {
   const route = `/news/${article.slug}/`;
-  const heroUrl = `${APP_URL}/assets/news/${article.slug}-hero.webp`;
   const ogUrl = `${APP_URL}/assets/news/${article.slug}-og.png`;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
@@ -1290,13 +1291,14 @@ function localBusinessJsonLd(facility) {
   const longitude = Number(facility.lng);
   const hasCoordinates = address && latitude >= 20 && latitude <= 46 && longitude >= 122 && longitude <= 154;
   const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
+  const { streetAddress, postalCode } = splitPostalCodeFromAddress(address);
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${APP_URL}/facility/${encodeURIComponent(facility.id)}/#place`,
     name: facility.name,
     url: `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`,
     description: getFacilityDescription(facility),
-    address: address ? { "@type": "PostalAddress", streetAddress: address, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
+    address: address ? { "@type": "PostalAddress", streetAddress: streetAddress || undefined, postalCode, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
     geo: hasCoordinates ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
     hasMap: mapQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}` : undefined,
     sameAs: [facility.officialUrl].filter(Boolean),
