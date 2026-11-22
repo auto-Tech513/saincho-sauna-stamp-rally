@@ -10420,6 +10420,88 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     features: ["ロウリュあり", "水風呂あり", "宿泊可"],
     facts: [{ label: "営業状況", value: "開業予定（2026年12月12日にグランドリニューアルオープン予定。旧・上野ステーションホステル オリエンタル1を改装し、同日付で施設名を「ザ・センチュリオンサウナ レスト＆ステイ 江戸東京」に変更。開業までは押印対象外）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }, { label: "設備", value: "ツインヒーター完備で30名以上を収容する100℃超の大型サウナ、シングル水風呂と16℃のバイブラ水風呂の2種の水風呂、スタッフロウリュ（熱波）の毎日開催、ジムエリアとコワーキングスペースの新設（料金・営業時間は公式サイトで随時更新と案内）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }],
   },
+  {
+    ids: ["manual-kanagawa-yunessun"], name: "箱根小涌園ユネッサン", officialUrl: "https://www.yunessun.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "利用条件", value: "刺青（タトゥー・ワンポイント）のある方は原則として入場できない。水着エリア「ユネッサン」はラッシュガード等で隠せば利用でき、日帰り温泉「森の湯」は指定のタトゥーカバーシール（有料）2枚で完全に覆える場合に限り利用できる", sourceUrl: "https://www.yunessun.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-tokyo-baba-sauna"], name: "馬場サウナ", officialUrl: "https://baba-sauna.com/",
+    features: ["ドライサウナ", "オートロウリュ", "ロウリュあり", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "30名が同時に利用できる本格フィンランド式サウナ。オートロウリュを備える", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "水温約16℃・水深90cmの水風呂。潜水もできる", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+      { label: "利用条件", value: "男性専用施設", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-mie-sarubino"], name: "大山田温泉 さるびの", officialUrl: "https://www.sarubino.com/",
+    features: [],
+    facts: [
+      { label: "料金", value: "大人800円、小人400円、シルバー（70歳以上）650円、障がい者400円、障がい児200円。3歳未満は無料。回数券は12枚綴り（大人8,000円など）で有効期限は1年間", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "10:00〜21:00（入浴最終受付20:30）", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+      { label: "定休日", value: "毎週火曜日（火曜日が祝祭日の場合は営業）", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saitama-hakujyu"], name: "おふろcafé 白寿の湯", officialUrl: "https://ofurocafe-hakujyu.com/",
+    features: [],
+    facts: [
+      { label: "営業時間", value: "10:00〜23:00（最終入館22:30）", sourceUrl: "https://ofurocafe-hakujyu.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-hiroshima-core-sauna-anacrowne"], name: "CORE SAUNA ANAクラウンプラザホテル広島店", officialUrl: "https://aigran-solution.jp/sauna/",
+    features: ["オートロウリュ", "ロウリュあり", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "会話ができる大サウナ室、オートロウリュ対応で会話不可の小サウナ室、海底をイメージしたミストサウナを備える「没入型」サウナ施設", sourceUrl: "https://aigran-solution.jp/sauna/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "ウルトラファインバブルを使った水風呂。温度や色が異なる浴槽を用意", sourceUrl: "https://aigran-solution.jp/sauna/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saga-okuureshino-mumeidaki"], name: "奥嬉野 無名滝", officialUrl: "https://goten-resort.jp/mumeidaki/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      { label: "設備", value: "全室に露天風呂付き。スイートルーム（THE FALLS SUITEなど）には露天風呂に加えてサウナも付く", sourceUrl: "https://goten-resort.jp/mumeidaki/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saitama-tamagawa-onsen"], name: "昭和レトロな温泉銭湯 玉川温泉", officialUrl: "https://tamagawa-onsen.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "設備", value: "天然温泉はpH値10のアルカリ性単純温泉。加水なし・加温あり・濾過循環あり", sourceUrl: "https://tamagawa-onsen.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-kagoshima-924"], name: "ホテルビッグマリン奄美", officialUrl: "https://www.bigmarine.co.jp/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      { label: "設備", value: "光明石温泉とトルマリンサウナを備える", sourceUrl: "https://www.bigmarine.co.jp/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-aichi-shinoki-mantenbo"], name: "篠木温泉 満天望", officialUrl: "https://kasugai-mantenbo.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "設備", value: "5種類の露天風呂と7種類の内風呂、2種類のサウナ、岩盤サウナを用意", sourceUrl: "https://kasugai-mantenbo.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-fukuoka-3818"], name: "華の湯ＨＩＢＵＲＡＮ", officialUrl: "http://hananoyu-hiburan.com/",
+    features: [],
+    facts: [
+      { label: "設備", value: "サウナとマッサージを完備", sourceUrl: "http://hananoyu-hiburan.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-miyagi-capsule-spa-replus"], name: "Capsule & Spa Re.Plus", officialUrl: "https://capsulespa-replus.com/",
+    features: ["宿泊可"],
+    facts: [
+      { label: "設備", value: "男性専用の大浴場・サウナと、男女それぞれの専用カプセルルームを備える", sourceUrl: "https://capsulespa-replus.com/", checkedAt: "2026-11-22" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
