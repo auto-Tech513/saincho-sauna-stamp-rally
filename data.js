@@ -1632,7 +1632,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1324/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://houjunoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1324/"
   },
   {

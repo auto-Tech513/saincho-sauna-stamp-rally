@@ -1385,6 +1385,11 @@ export const CURATED_FACILITY_EVIDENCE = [
     features: [],
     facts: [{ label: "営業状況", value: "閉館（閉館日不明）。日帰り入浴の閉館リストに閉館として掲載（住所が登録情報と一致）。公式サイトは消滅し404。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://yuru-to.net/closed.php?oid=47706", checkedAt: "2026-11-10" }],
   },
+  {
+    ids: ["st-iwate-1324"], name: "瀬峯坂温泉宝珠の湯", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉館（閉館日不明）。ニフティ温泉の施設ページが「瀬峯坂温泉 宝珠の湯（閉館しました）」と表示（住所が登録情報と一致）。公式サイト houjunoyu.com はDNSが解決せず到達不能。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://onsen.nifty.com/kitakami-onsen/onsen006511/", checkedAt: "2026-11-23" }],
+  },
 {
 ids: ["st-hokkaido-976"], name: "森のスパリゾート 北海道ホテル", officialUrl: "https://www.hokkaidohotel.co.jp/stay/hotspring.html",
 features: ["セルフロウリュ", "ロウリュあり", "水風呂あり", "外気あり", "温泉付き", "宿泊可"],
