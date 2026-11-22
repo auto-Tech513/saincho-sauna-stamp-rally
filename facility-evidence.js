@@ -7108,7 +7108,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-miyagi-1410"], name: "大江戸温泉物語 仙台コロナの湯", officialUrl: "https://www.korona.co.jp/Onsen/sen/index.asp",
+    ids: ["st-miyagi-1410"], name: "天然温泉 仙台コロナの湯", officialUrl: "https://www.korona.co.jp/onsen/sen/",
     features: ["ロウリュあり", "温泉付き", "タオルレンタルあり"],
     facts: [
       factNov14("料金", "入泉料 大人（中学生以上）平日1,200円／土日祝1,400円（会員 平日1,100円／土日祝1,300円）、小人（3歳～小学生）平日550円／土日祝650円、2歳以下無料。別途入湯税70円", "https://www.korona.co.jp/onsen/basic/sen/224"),

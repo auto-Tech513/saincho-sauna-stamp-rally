@@ -2121,7 +2121,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "st-miyagi-1410",
-    "name": "大江戸温泉物語 仙台コロナの湯",
+    "name": "天然温泉 仙台コロナの湯",
     "prefecture": "宮城県",
     "address": "〒983-0005 宮城県仙台市宮城野区福室字田中前一番53−1",
     "addressSource": "SaunaTime参照ページ",
