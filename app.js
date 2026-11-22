@@ -8530,16 +8530,22 @@ function expandSearchTerm(term) {
 function expandSearchTextVariants(source) {
   const normalized = normalizeText(source);
   if (!normalized) return [];
-  const variants = new Set([normalized]);
+  const variants = [normalized];
+  const seen = new Set(variants);
   for (const [from, to] of SEARCH_READING_REPLACEMENTS) {
-    const current = [...variants];
-    for (const value of current) {
+    // Each rule applies only to variants that existed when the rule started.
+    const count = variants.length;
+    for (let index = 0; index < count; index += 1) {
+      const value = variants[index];
       if (!value.includes(from)) continue;
-      variants.add(value.split(from).join(to));
-      if (variants.size >= 80) return [...variants];
+      const variant = value.split(from).join(to);
+      if (seen.has(variant)) continue;
+      seen.add(variant);
+      variants.push(variant);
+      if (variants.length >= 80) return variants;
     }
   }
-  return [...variants];
+  return variants;
 }
 
 function normalizeSearchToken(value) {
