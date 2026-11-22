@@ -10475,3 +10475,13 @@ export function isFitnessFacility(facility) {
       || (host === "central.co.jp" && /\/club\//.test(url.pathname));
   } catch { return false; }
 }
+
+export function splitPostalCodeFromAddress(address) {
+  const text = address.trim();
+  const match = /^〒\s*(\d{3})[-−‐－ー]?(\d{4})(?!\d)\s*/.exec(text);
+  if (!match) return { streetAddress: text };
+  return {
+    postalCode: `${match[1]}-${match[2]}`,
+    streetAddress: text.slice(match[0].length),
+  };
+}

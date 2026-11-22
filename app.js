@@ -5,7 +5,7 @@ import {
   haversineDistanceKm,
   isUsableNearbyPosition,
 } from "./nearby.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility } from "./facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility, splitPostalCodeFromAddress } from "./facility-evidence.js";
 import { phraseHtml, longestPhraseRun } from "./phrase.js";
 
 const STORAGE_KEY = "saincho-state-v1";
@@ -8243,6 +8243,7 @@ function syncFacilityStructuredData(facility) {
   const address = getFacilityAddress(facility);
   const coordinate = getFacilityCoordinate(facility);
   const image = getDisplayImageUrl(facility);
+  const { streetAddress, postalCode } = splitPostalCodeFromAddress(address);
   const data = {
     "@context": "https://schema.org",
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
@@ -8253,7 +8254,8 @@ function syncFacilityStructuredData(facility) {
     image: image ? [image] : undefined,
     address: address ? {
       "@type": "PostalAddress",
-      streetAddress: address,
+      streetAddress: streetAddress || undefined,
+      postalCode,
       addressCountry: "JP",
     } : undefined,
     areaServed: getFacilityAreaLabel(facility) || undefined,
