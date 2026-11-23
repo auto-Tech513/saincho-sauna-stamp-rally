@@ -4983,7 +4983,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1604/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.hgp.co.jp/inf/Z10/hgp/",
+    "officialUrl": "https://www.hgp.co.jp/karuizawa/",
     "officialUrlSource": "https://saunatime.jp/saunas/1604/"
   },
   {

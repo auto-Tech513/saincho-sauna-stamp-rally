@@ -7235,7 +7235,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-gumma-1604"], name: "ホテルグリーンプラザ軽井沢", officialUrl: "https://www.hgp.co.jp/inf/Z10/hgp/",
+    ids: ["st-gumma-1604"], name: "ホテルグリーンプラザ軽井沢", officialUrl: "https://www.hgp.co.jp/karuizawa/",
     features: ["温泉付き", "外気あり", "宿泊可"],
     facts: [
       factNov14("設備", "自家源泉の天然温泉大浴場「暁の湯」（内湯・露天風呂）", "https://home.kingsoft.jp/news/pr/atpress/568758.html"),
