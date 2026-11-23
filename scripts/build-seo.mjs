@@ -784,7 +784,6 @@ function renderNewsIndexSsr() {
 
 function renderNewsArticleSsr(article, heroUrl) {
   const route = `/news/${article.slug}/`;
-  const ogUrl = `${APP_URL}/assets/news/${article.slug}-og.png`;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -800,7 +799,8 @@ function renderNewsArticleSsr(article, heroUrl) {
         inLanguage: "ja-JP",
         articleSection: NEWS_CATEGORIES[article.category] || "ニュース",
         description: article.lead,
-        image: [heroUrl, ogUrl],
+        // 本文に表示しているメイン画像だけを入れる（共有用の og.png は本文に表示していないので入れない。og:image はそのまま）。
+        image: [heroUrl],
         datePublished: article.publishedAt,
         dateModified: article.updatedAt,
         author: { "@id": `${APP_URL}/#organization` },
@@ -1295,7 +1295,8 @@ function localBusinessJsonLd(facility) {
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${APP_URL}/facility/${encodeURIComponent(facility.id)}/#place`,
-    name: facility.name,
+    // 見出し（h1）では前後の空白が表示されないので、構造化データの名前も前後の空白を除いて合わせる。
+    name: String(facility.name || "").trim(),
     url: `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`,
     description: getFacilityDescription(facility),
     address: address ? { "@type": "PostalAddress", streetAddress: streetAddress || undefined, postalCode, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,

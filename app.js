@@ -8248,7 +8248,8 @@ function syncFacilityStructuredData(facility) {
     "@context": "https://schema.org",
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${getFacilityDetailUrl(facility)}#place`,
-    name: facility.name,
+    // 画面の見出しでは前後の空白が表示されないので、名前も前後の空白を除く（scripts/build-seo.mjs と同じ）
+    name: String(facility.name || "").trim(),
     url: getFacilityDetailUrl(facility),
     sameAs: [facility.officialUrl, facility.sourceUrl].filter(Boolean),
     image: image ? [image] : undefined,
