@@ -615,7 +615,7 @@ function renderAboutSsr() {
     <p>検索エンジン向けの個別ページは、番地住所、施設公式URL、または所在地と固有説明のあるサウナ宿を確認できた候補に限定します。未確認候補はアプリ内検索には残し、情報を補完できるまでサイトマップへ載せません。</p>
     <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
-    <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。</p>
+    <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。</p>
     <h2>プライバシー</h2>
     <p>押印、行きたい、お気に入り、メモは原則として端末内に保存します。ランキングのメールアドレスはハッシュ化し、画面には表示しません。</p>
     <p><a href="/contact/">内容修正・権利連絡・掲載のお問い合わせ</a></p>
@@ -626,7 +626,7 @@ function renderGearSsr() {
   return wrapSsr(`
     <p class="eyebrow">GEAR</p>
     <h1>サウナ補給と持ち物</h1>
-    <p>サウナハット、サウナマット、水分補給、タオル、バッグなど${GEAR_PRODUCTS.length}件を、Amazonと楽天のレビュー検索導線で比較できます。</p>
+    <p>サウナハット、サウナマット、水分補給、タオル、バッグなど${GEAR_PRODUCTS.length}件を、Amazonと楽天のレビュー検索導線で比較できます。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。</p>
     <div class="ssr-grid">${GEAR_PRODUCTS.slice(0, 6).map((item) => `<article><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.category)}</span><p>${escapeHtml(item.reason)}</p></article>`).join("")}</div>
   `);
 }
