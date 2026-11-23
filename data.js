@@ -71427,5 +71427,24 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.centurion-hotel.com/edo_tokyo/",
     "officialUrl": "https://www.centurion-hotel.com/edo_tokyo/"
+  },
+  {
+    "id": "manual-kanagawa-fit-easy-tonarie-kurihama",
+    "name": "FIT-EASY トナリエ久里浜店",
+    "prefecture": "神奈川県",
+    "address": "〒239-0832 神奈川県横須賀市神明町58番7",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-23",
+    "city": "横須賀市",
+    "trait": "urban",
+    "tags": [
+      "個室サウナ"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/",
+    "officialUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/"
   }
 ];
