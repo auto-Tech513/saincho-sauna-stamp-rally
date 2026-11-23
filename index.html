@@ -49,7 +49,10 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <!-- Google Fonts の CSS は描画を止めない読み込み方にする（2026-11-24 オーナー決定）。書体・太さの指定は変えない。
+         先に preload で取り、読み込み後に stylesheet へ切り替える。JS が無い環境は noscript で従来どおり読む。 -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet" /></noscript>
     <link rel="stylesheet" href="./styles.css?v=20260712-nearby-logshare-v3" />
     <script>
       window.dataLayer = window.dataLayer || [];
