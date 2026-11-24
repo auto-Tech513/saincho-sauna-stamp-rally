@@ -8281,7 +8281,7 @@ export const SEED_FACILITIES = [
     "city": "南砺市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://tonamigreen.co.jp/hanatsubaki/index.htm",
+    "officialUrl": "https://yu-yuuland.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/329/"
   },
   {
