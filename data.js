@@ -6269,7 +6269,7 @@ export const SEED_FACILITIES = [
     "city": "君津市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.kimitsu-yu.com/index.html",
+    "officialUrl": "https://www.kimitsu-yu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1780/"
   },
   {

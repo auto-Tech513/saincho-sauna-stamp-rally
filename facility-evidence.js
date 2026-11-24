@@ -7272,7 +7272,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-chiba-1780"], name: "君津の湯", officialUrl: "https://www.kimitsu-yu.com/index.html",
+    ids: ["st-chiba-1780"], name: "君津の湯", officialUrl: "https://www.kimitsu-yu.com/",
     features: ["水風呂あり"],
     facts: [
       factNov14("営業時間", "9:00〜24:00（毎日）", "https://www.furusato-tax.jp/product/detail/12225/5998737"),
