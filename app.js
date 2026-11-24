@@ -5180,7 +5180,7 @@ function renderAboutPage() {
       <section class="about-card">
         <p class="eyebrow">MONETIZATION</p>
         <h3>広告・アフィリエイト</h3>
-        <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。表示順や説明は報酬額ではなく用途別に整理し、価格、在庫、レビューはリンク先の最新情報を優先します。広告掲載は広告であることが分かる表示にします。</p>
+        <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。表示順や説明は報酬額ではなく用途別に整理し、価格、在庫、レビューはリンク先の最新情報を優先します。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。広告掲載は広告であることが分かる表示にします。</p>
       </section>
       <section class="about-card about-card-wide">
         <p class="eyebrow">AUTOMATION</p>
