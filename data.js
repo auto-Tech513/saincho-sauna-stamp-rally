@@ -6095,7 +6095,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/367/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://rainbow-motoyawata.wix.com/rainbow",
+    "officialUrl": "https://hpdsp.jp/rainbow-motoyawata",
     "officialUrlSource": "https://saunatime.jp/saunas/367/"
   },
   {
