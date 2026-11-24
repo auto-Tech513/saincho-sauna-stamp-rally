@@ -412,5 +412,35 @@
     "og": "/assets/news/spa-herbs-iifuro-thanksgiving-2026-og.png",
     "thumb": "/assets/news/spa-herbs-iifuro-thanksgiving-2026-thumb.webp",
     "generatedAt": "2026-11-23"
+  },
+  "tamagawa-onsen-iifuro-day-2026": {
+    "hero": "/assets/news/tamagawa-onsen-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/tamagawa-onsen-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/tamagawa-onsen-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "onsendojo-saitama-kids-free-iifuro-2026": {
+    "hero": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-hero.webp",
+    "og": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-og.png",
+    "thumb": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "goldenkamuy-rakuspa-collab-2026": {
+    "hero": "/assets/news/goldenkamuy-rakuspa-collab-2026-hero.webp",
+    "og": "/assets/news/goldenkamuy-rakuspa-collab-2026-og.png",
+    "thumb": "/assets/news/goldenkamuy-rakuspa-collab-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "spa-herbs-bonen-onkatsu-2026": {
+    "hero": "/assets/news/spa-herbs-bonen-onkatsu-2026-hero.webp",
+    "og": "/assets/news/spa-herbs-bonen-onkatsu-2026-og.png",
+    "thumb": "/assets/news/spa-herbs-bonen-onkatsu-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "korona-no-yu-anjo-renewal-2026": {
+    "hero": "/assets/news/korona-no-yu-anjo-renewal-2026-hero.webp",
+    "og": "/assets/news/korona-no-yu-anjo-renewal-2026-og.png",
+    "thumb": "/assets/news/korona-no-yu-anjo-renewal-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
   }
 }
