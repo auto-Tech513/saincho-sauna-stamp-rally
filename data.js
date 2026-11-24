@@ -9299,7 +9299,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/126/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://only-you.sakura.ne.jp/wp/",
     "officialUrlSource": "https://saunatime.jp/saunas/126/"
   },
   {
