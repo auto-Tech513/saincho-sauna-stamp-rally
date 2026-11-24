@@ -71302,9 +71302,7 @@ export const SEED_FACILITIES = [
     "addressCheckedAt": "2026-11-19",
     "city": "広島市中区",
     "trait": "urban",
-    "tags": [
-      "開業予定"
-    ],
+    "tags": [],
     "features": [
       "水風呂あり"
     ],

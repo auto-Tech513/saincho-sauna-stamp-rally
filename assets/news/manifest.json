@@ -442,5 +442,17 @@
     "og": "/assets/news/korona-no-yu-anjo-renewal-2026-og.png",
     "thumb": "/assets/news/korona-no-yu-anjo-renewal-2026-thumb.webp",
     "generatedAt": "2026-11-24"
+  },
+  "iyashinoyu-nanao-reopening-1st-anniversary-2026": {
+    "hero": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-hero.webp",
+    "og": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-og.png",
+    "thumb": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "yunni-no-yu-december-events-2026": {
+    "hero": "/assets/news/yunni-no-yu-december-events-2026-hero.webp",
+    "og": "/assets/news/yunni-no-yu-december-events-2026-og.png",
+    "thumb": "/assets/news/yunni-no-yu-december-events-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
   }
 }
