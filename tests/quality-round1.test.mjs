@@ -9,12 +9,13 @@ import * as evidence from "../facility-evidence.js";
 const source = (await readFile(new URL("../app.js", import.meta.url), "utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/, "")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/, "\n");
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 function harness() {
   let failWrite = false, geoCalls = 0;
   const writes = [], status = { textContent: "" };
-  const context = vm.createContext({ ...nearby, ...evidence, URL, URLSearchParams, crypto: webcrypto, performance, console, AbortSignal,
+  const context = vm.createContext({ ...nearby, ...evidence, URL, URLSearchParams, crypto: webcrypto, performance, console, AbortSignal, HTMLElement: class {}, MutationObserver: class { constructor(){} observe(){} disconnect(){} },
     localStorage: { getItem: () => null, setItem: (key, value) => { if (failWrite) throw new Error("QuotaExceededError"); writes.push({ key, value }); } },
     location: { hostname: "localhost", pathname: "/", protocol: "http:", port: "8788" },
     window: { matchMedia: () => ({ matches: false }), setTimeout, clearTimeout },

@@ -9,6 +9,7 @@ import * as evidence from "../facility-evidence.js";
 const source = (await readFile(new URL("../app.js", import.meta.url), "utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/, "")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/, "\n");
 
 function harness(options = {}) {
@@ -17,7 +18,7 @@ function harness(options = {}) {
   const form = { dataset: { activityForm: "test" }, elements: { namedItem: name => values[name] }, reportValidity: () => true, querySelector: () => status };
   const button = { disabled: false, closest: () => form };
   const writes = [];
-  const context = vm.createContext({ ...nearby, ...evidence, URL, URLSearchParams, crypto: webcrypto, performance, console, AbortSignal, localStorage: { getItem: () => null, setItem: (key,value) => writes.push(JSON.parse(value)) }, location: { hostname: "localhost", pathname: "/", protocol: "http:", port: "8788" }, window: { matchMedia: () => ({ matches: false }) }, document: { querySelector: () => ({}), querySelectorAll: () => [] }, form, button, status });
+  const context = vm.createContext({ ...nearby, ...evidence, URL, URLSearchParams, crypto: webcrypto, performance, console, AbortSignal, HTMLElement: class {}, MutationObserver: class { constructor(){} observe(){} disconnect(){} }, localStorage: { getItem: () => null, setItem: (key,value) => writes.push(JSON.parse(value)) }, location: { hostname: "localhost", pathname: "/", protocol: "http:", port: "8788" }, window: { matchMedia: () => ({ matches: false }) }, document: { querySelector: () => ({}), querySelectorAll: () => [] }, form, button, status });
   vm.runInContext(source, context);
   vm.runInContext('renderFacilityDetail=()=>{}; invalidateFacilityCaches=()=>{}; el.facilityDetail={querySelector:()=>status}; activeView="Facility"; activeFacilityId="test";', context);
   return { context, status, values, writes, save: () => vm.runInContext('saveActivityNote({id:"test",name:"テスト施設"},button)', context), read: code => vm.runInContext(code,context) };

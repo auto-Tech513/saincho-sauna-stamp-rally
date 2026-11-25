@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
 import { NEWS_CATEGORIES, SAUNA_NEWS, getPublishedNews, renderNewsBlocks } from "../news.js";
-import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility } from "../facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility, splitPostalCodeFromAddress } from "../facility-evidence.js";
 import { haversineDistanceKm } from "../nearby.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -319,6 +319,8 @@ const sourceData = await read("data.js");
 const sourceContent = await read("content.js");
 const sourceNews = await read("news.js");
 const sourceNearby = await read("nearby.js");
+const sourcePhrase = await read("phrase.js");
+const sourceReadings = await read("search-readings.js");
 const sourceOfficialEvidence = await read("official-page-evidence.js");
 const officialEvidenceFile = `official-page-evidence.${hash(sourceOfficialEvidence)}.js`;
 const sourceEvidence = (await read("facility-evidence.js")).replace('from "./official-page-evidence.js";', `from "./${officialEvidenceFile}";`);
@@ -328,13 +330,17 @@ const contentFile = `content.${hash(sourceContent)}.js`;
 const newsFile = `news.${hash(sourceNews)}.js`;
 const stylesFile = `styles.${hash(sourceStyles)}.css`;
 const nearbyFile = `nearby.${hash(sourceNearby)}.js`;
+const phraseFile = `phrase.${hash(sourcePhrase)}.js`;
+const readingsFile = `search-readings.${hash(sourceReadings)}.js`;
 const evidenceFile = `facility-evidence.${hash(sourceEvidence)}.js`;
 const appSource = (await read("app.js"))
   .replace('from "./nearby.js";', `from "./${nearbyFile}";`)
+  .replace('from "./phrase.js";', `from "./${phraseFile}";`)
   .replace('from "./facility-evidence.js";', `from "./${evidenceFile}";`)
   .replace('const DATA_MODULE_PATH = "./data.js";', `const DATA_MODULE_PATH = "./${dataFile}";`)
   .replace('const CONTENT_MODULE_PATH = "./content.js";', `const CONTENT_MODULE_PATH = "./${contentFile}";`)
-  .replace('const NEWS_MODULE_PATH = "./news.js";', `const NEWS_MODULE_PATH = "./${newsFile}";`);
+  .replace('const NEWS_MODULE_PATH = "./news.js";', `const NEWS_MODULE_PATH = "./${newsFile}";`)
+  .replace('const PLACE_READINGS_MODULE_PATH = "./search-readings.js";', `const PLACE_READINGS_MODULE_PATH = "./${readingsFile}";`);
 const appFile = `app.${hash(appSource)}.js`;
 
 await write(dataFile, sourceData);
@@ -342,14 +348,16 @@ await write(contentFile, sourceContent);
 await write(newsFile, sourceNews);
 await write(stylesFile, sourceStyles);
 await write(nearbyFile, sourceNearby);
+await write(phraseFile, sourcePhrase);
+await write(readingsFile, sourceReadings);
 await write(officialEvidenceFile, sourceOfficialEvidence);
 await write(evidenceFile, sourceEvidence);
 await write(appFile, appSource);
 await write("version.json", JSON.stringify({ app: appFile, styles: stylesFile }));
-const shellModules = [appFile, stylesFile, dataFile, contentFile, nearbyFile, evidenceFile, officialEvidenceFile];
+const shellModules = [appFile, stylesFile, dataFile, contentFile, nearbyFile, phraseFile, readingsFile, evidenceFile, officialEvidenceFile];
 const builtSw = sourceSw
   .replace(/const CACHE_NAME = "[^"]+";/, `const CACHE_NAME = "saincho-${hash(sourceSw + shellModules.join(":"))}";`)
-  .replace(/"\.\/(?:app|styles|data|content|nearby|facility-evidence|official-page-evidence)\.(?:js|css)",\n/g, "")
+  .replace(/"\.\/(?:app|styles|data|content|nearby|phrase|search-readings|facility-evidence|official-page-evidence)\.(?:js|css)",\n/g, "")
   .replace("const APP_SHELL_ASSETS = [", `const APP_SHELL_ASSETS = [\n${shellModules.map(file => `  "./${file}",`).join("\n")}`);
 await write("sw.js", builtSw);
 await write(`${INDEXNOW_KEY}.txt`, INDEXNOW_KEY);
@@ -386,13 +394,15 @@ await emitStaticRoute("/gear/", "Gear | サ印帳", "サウナハット、サウ
 await emitStaticRoute("/guide/", "サウナ入門 | サ印帳", `初めてのサウナでも迷いにくい入り方、安全、マナー、水分補給、持ち物、メモの残し方を${SAUNA_ARTICLES.length}記事で確認できます。`, renderGuideSsr(SAUNA_ARTICLES), LASTMOD.content);
 await emitStaticRoute("/news/", "サウニュ〜（サウナニュース） | サ印帳", "サウナの新店、リニューアル、イベント、受賞、閉店のニュースを、施設や主催者の公式発表にもとづいて伝えるサ印帳のニュースページです。", renderNewsIndexSsr(), LASTMOD.news);
 for (const article of PUBLISHED_NEWS) {
+  const heroUrl = `${APP_URL}/assets/news/${article.slug}-hero.webp`;
   await emitPage(`/news/${article.slug}/`, {
     ...pageMeta(`${article.title} | サウニュ〜`, article.lead),
     lastmod: article.updatedAt,
     type: "article",
     image: `${APP_URL}/assets/news/${article.slug}-og.png`,
     imageAlt: article.heroAlt,
-  }, renderNewsArticleSsr(article));
+    pageImage: heroUrl,
+  }, renderNewsArticleSsr(article, heroUrl));
 }
 await emitStaticRoute("/ranking/", "サウナの訪問数ランキングと称号 | サ印帳", "行ったサウナの数（サ印数）で称号が上がる、サ印帳の参加型ランキング。1湯「はじめの一湯」から2000湯「神人サウナー」までの称号一覧と参加方法を掲載。公開されるのはニックネーム・サ印数・称号のみです。", renderRankingSsr());
 await emitStaticRoute("/passport/", "サ印 | サ印帳", "全国と都道府県別のサ印収集状況を確認。県マスター、称号、押印済み施設を一目で振り返れます。", renderGenericSsr("サ印", "全国・県別のサ印進捗と称号を確認できます。"));
@@ -493,7 +503,7 @@ function renderHtml(route, meta, ssrHtml) {
           description: meta.description,
           inLanguage: "ja-JP",
           isPartOf: { "@id": `${APP_URL}/#website` },
-          image: OG_IMAGE,
+          image: meta.pageImage || OG_IMAGE,
           dateModified: meta.lastmod || undefined,
         },
       ],
@@ -605,7 +615,7 @@ function renderAboutSsr() {
     <p>検索エンジン向けの個別ページは、番地住所、施設公式URL、または所在地と固有説明のあるサウナ宿を確認できた候補に限定します。未確認候補はアプリ内検索には残し、情報を補完できるまでサイトマップへ載せません。</p>
     <p><a href="${OFFICIAL_BLOG_URL}" rel="me">サ印帳公式ブログで更新情報を見る</a></p>
     <h2>広告・アフィリエイト</h2>
-    <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。</p>
+    <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。価格、在庫、レビューはリンク先の最新情報を優先し、広告掲載は広告と分かる表示にします。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。</p>
     <h2>プライバシー</h2>
     <p>押印、行きたい、お気に入り、メモは原則として端末内に保存します。ランキングのメールアドレスはハッシュ化し、画面には表示しません。</p>
     <p><a href="/contact/">内容修正・権利連絡・掲載のお問い合わせ</a></p>
@@ -616,7 +626,7 @@ function renderGearSsr() {
   return wrapSsr(`
     <p class="eyebrow">GEAR</p>
     <h1>サウナ補給と持ち物</h1>
-    <p>サウナハット、サウナマット、水分補給、タオル、バッグなど${GEAR_PRODUCTS.length}件を、Amazonと楽天のレビュー検索導線で比較できます。</p>
+    <p>サウナハット、サウナマット、水分補給、タオル、バッグなど${GEAR_PRODUCTS.length}件を、Amazonと楽天のレビュー検索導線で比較できます。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。</p>
     <div class="ssr-grid">${GEAR_PRODUCTS.slice(0, 6).map((item) => `<article><strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.category)}</span><p>${escapeHtml(item.reason)}</p></article>`).join("")}</div>
   `);
 }
@@ -772,10 +782,8 @@ function renderNewsIndexSsr() {
   `, { jsonLd });
 }
 
-function renderNewsArticleSsr(article) {
+function renderNewsArticleSsr(article, heroUrl) {
   const route = `/news/${article.slug}/`;
-  const heroUrl = `${APP_URL}/assets/news/${article.slug}-hero.webp`;
-  const ogUrl = `${APP_URL}/assets/news/${article.slug}-og.png`;
   const jsonLd = JSON.stringify({
     "@context": "https://schema.org",
     "@graph": [
@@ -791,7 +799,8 @@ function renderNewsArticleSsr(article) {
         inLanguage: "ja-JP",
         articleSection: NEWS_CATEGORIES[article.category] || "ニュース",
         description: article.lead,
-        image: [heroUrl, ogUrl],
+        // 本文に表示しているメイン画像だけを入れる（共有用の og.png は本文に表示していないので入れない。og:image はそのまま）。
+        image: [heroUrl],
         datePublished: article.publishedAt,
         dateModified: article.updatedAt,
         author: { "@id": `${APP_URL}/#organization` },
@@ -804,7 +813,7 @@ function renderNewsArticleSsr(article) {
   const h2Texts = (article.body || []).filter((block) => block.type === "h2").map((block) => block.text);
   const tocHtml = h2Texts.length >= 3 ? `
     <details class="news-toc"><summary>この記事の目次</summary>
-    <ol>${h2Texts.map((text, index) => `<li><a href="#news-h2-${index + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : "";
+    <ol>${h2Texts.map((text, index) => `<li><a href="${route}#news-h2-${index + 1}" data-toc-anchor="news-h2-${index + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : "";
   const facilities = (article.facilityIds || []).map(newsFacilityById).filter(Boolean);
   const facilityChips = facilities.length ? `
     <p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/">${escapeHtml(facility.name)}</a>`).join("")}</p>` : "";
@@ -862,7 +871,7 @@ function renderNewsArticleSsr(article) {
   const endedNote = article.eventEndDate && article.eventEndDate < jstToday()
     ? `<p class="news-ended-note">この記事で紹介したイベント・期間は終了しました。</p>` : "";
   return wrapSsr(`
-    <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/news/">サウニュ〜（サウナニュース）</a> › ${escapeHtml(article.title)}</nav>
+    <nav aria-label="パンくず"><a href="/">サ印帳</a> › <a href="/news/">サウニュ〜（サウナニュース）</a><span class="crumb-current"> › ${escapeHtml(article.title)}</span></nav>
     <p class="eyebrow">サウニュ〜 ・ ${escapeHtml(NEWS_CATEGORIES[article.category] || "ニュース")}</p>
     <h1>${escapeHtml(article.title)}</h1>
     <p><small>公開 <time datetime="${article.publishedAt}">${formatJaDate(article.publishedAt)}</time>${article.updatedAt !== article.publishedAt ? `／最終更新 <time datetime="${article.updatedAt}">${formatJaDate(article.updatedAt)}</time>` : ""}</small></p>
@@ -1287,13 +1296,15 @@ function localBusinessJsonLd(facility) {
   const longitude = Number(facility.lng);
   const hasCoordinates = address && latitude >= 20 && latitude <= 46 && longitude >= 122 && longitude <= 154;
   const mapQuery = [facility.name, address || facility.city, facility.prefecture].filter(Boolean).join(" ");
+  const { streetAddress, postalCode } = splitPostalCodeFromAddress(address);
   return {
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${APP_URL}/facility/${encodeURIComponent(facility.id)}/#place`,
-    name: facility.name,
+    // 見出し（h1）では前後の空白が表示されないので、構造化データの名前も前後の空白を除いて合わせる。
+    name: String(facility.name || "").trim(),
     url: `${APP_URL}/facility/${encodeURIComponent(facility.id)}/`,
     description: getFacilityDescription(facility),
-    address: address ? { "@type": "PostalAddress", streetAddress: address, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
+    address: address ? { "@type": "PostalAddress", streetAddress: streetAddress || undefined, postalCode, addressLocality: facility.city || undefined, addressRegion: facility.prefecture, addressCountry: "JP" } : undefined,
     geo: hasCoordinates ? { "@type": "GeoCoordinates", latitude, longitude } : undefined,
     hasMap: mapQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}` : undefined,
     sameAs: [facility.officialUrl].filter(Boolean),

@@ -5,7 +5,8 @@ import {
   haversineDistanceKm,
   isUsableNearbyPosition,
 } from "./nearby.js";
-import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility } from "./facility-evidence.js";
+import { applyFacilityEvidence, getFacilityEvidence, getVerifiedFeatures, getMissingEvidenceFields, isFitnessFacility, splitPostalCodeFromAddress } from "./facility-evidence.js";
+import { phraseHtml, longestPhraseRun } from "./phrase.js";
 
 const STORAGE_KEY = "saincho-state-v1";
 const LEGACY_STORAGE_KEY = "yuincho-state-v1";
@@ -29,6 +30,8 @@ const DATA_IMPORT_TIMEOUT_MS = 20000;
 const DATA_MODULE_PATH = "./data.js";
 const CONTENT_MODULE_PATH = "./content.js";
 const NEWS_MODULE_PATH = "./news.js";
+// 地名の読み（総務省 全国地方公共団体コードのカナ）。検索の索引を作るときに読み込み、ひらがな・カタカナの地名を漢字の地名にもつなぐ
+const PLACE_READINGS_MODULE_PATH = "./search-readings.js";
 const GA_MEASUREMENT_ID = "G-FHGXDGF0M7";
 const MOBILE_MENU_QUERY = window.matchMedia("(max-width: 899px)");
 const MENU_EDGE_WIDTH = 46;
@@ -769,7 +772,7 @@ const FACILITY_STATUS = {
   closed: { badge: "閉店", action: "閉店" },
   suspended: { badge: "臨時休業", action: "休業中" },
   planned: { badge: "開業予定", action: "開業待ち" },
-  verify: { badge: "要確認", action: "要確認" },
+  verify: { badge: "要確認", action: "押印対象外（営業確認中）" },
   restricted: { badge: "テナント専用", action: "一般利用不可" },
 };
 
@@ -818,6 +821,13 @@ let deferredInstallPrompt = null;
 let menuSwipeStart = null;
 let pendingPrefectureSlug = "";
 let lastTrackedPagePath = "";
+// 表示を切り替える直前の帳面のスクロール位置（切り替えると前の画面が隠れて scrollTop が縮むため、先に控える）
+let scrollTopBeforeViewChange = 0;
+// 日本語入力の確定の Enter を受けた時刻（その直後の送信を無視する）
+let lastImeEnterAt = -Infinity;
+// 404.html として配信されたとき（canonical が /404.html）の head を控える。
+// その URL にいる間は、表示用にホーム（探す）を描いても robots・canonical・title などを書き換えない（noindex のまま）
+const SERVED_404_HEAD = captureServed404Head();
 let memoDrafts = {};
 let facilitiesCache = null;
 let discoveryFacilitiesCache = null;
@@ -834,6 +844,10 @@ let facilitySearchBuild = null;
 let facilityCacheVersion = 0;
 let searchGeneration = 0;
 let searchSynonymTokens = null;
+// 地名の読みの索引（読みのキー → 漢字の地名）。読み込めなかったときは空のまま（読みなしの検索は従来どおり動く）
+let placeReadingIndex = null;
+let placeReadingsLoad = null;
+let searchComposingSuggestionTimer = 0;
 const searchTokenCache = new Map();
 const activityDrafts = new Map();
 const activitySaves = new Set();
@@ -1045,17 +1059,21 @@ async function init() {
   }
   resumeActiveCheckin();
   checkNearbyOnLaunch();
-  window.addEventListener("popstate", () => {
+  window.addEventListener("popstate", (event) => {
     if ((/^\/guide\/[^/]+\/$/.test(location.pathname) || /^\/news\/[^/]+\/$/.test(location.pathname)) && !document.getElementById("ssrContent")) {
       location.reload();
       return;
     }
+    document.querySelector("#routeNotFound")?.remove();
     activeView = getViewFromLocation();
     applyActiveView(activeView);
     updateDocumentMetaForView(activeView);
     renderAll();
     trackPageView();
-    el.main.scrollTo({ top: 0, behavior: "smooth" });
+    // 検索結果から施設を開いて戻ったときは、離れたときの位置へ戻す（以前は先頭へ戻り、見ていた結果を探し直す必要があった）
+    const savedTop = Number(event.state?.mainScrollTop);
+    if (Number.isFinite(savedTop) && savedTop > 0) el.main.scrollTo({ top: savedTop, behavior: "instant" });
+    else el.main.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
@@ -1279,6 +1297,8 @@ function bindEvents() {
 
   el.searchForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    // 変換を確定した Enter で送信されたものは送信として扱わない（確定した文字での候補・結果の更新は compositionend 側で行う）
+    if (isImeEnterJustNow()) return;
     clearSearchRenderTimer();
     hideSearchSuggestions();
     const value = el.searchInput.value;
@@ -1288,7 +1308,12 @@ function bindEvents() {
       const applied = await applySearchValue(value);
       if (applied && activeView === "Explore") {
         el.searchInput.blur();
-        el.main.scrollTo({ top: 0, behavior: "instant" });
+        // 送信したあとは候補を閉じる（applySearchValue の最後で、まだフォーカスのある検索欄に候補が開き直し、結果の上に残っていた）
+        hideSearchSuggestions();
+        releaseSearchInputAnchorSpace();
+        // 帳面の先頭（scrollTop 0）へ戻すと、SP では検索欄が画面の下端に来て結果が1件も見えなかった（390×664 で検索欄の上端 553px）
+        // → 検索欄を画面の上に置き、その下に件数と結果が続くようにする
+        el.searchForm.scrollIntoView({ block: "start", behavior: "instant" });
         el.searchResultsStatus.focus({ preventScroll: true });
       }
     } finally { submit.disabled = false; }
@@ -1345,7 +1370,11 @@ function bindEvents() {
 
   el.searchInput.addEventListener("input", (event) => {
     renderSearchClearButton();
-    if (event.isComposing || isSearchComposing) return;
+    if (event.isComposing || isSearchComposing) {
+      // 変換中（未確定のひらがな）も候補欄だけは出す。結果の一覧は確定してから描き直す（入力中に一覧を描き直さない）
+      scheduleComposingSearchSuggestions();
+      return;
+    }
     scheduleSearchRender(event.target.value);
   });
 
@@ -1357,10 +1386,23 @@ function bindEvents() {
 
   el.searchInput.addEventListener("compositionend", (event) => {
     isSearchComposing = false;
+    window.clearTimeout(searchComposingSuggestionTimer);
     scheduleSearchRender(event.target.value, { immediate: true });
   });
 
   el.searchInput.addEventListener("keydown", (event) => {
+    // 日本語の変換中の矢印（変換候補の移動）と、変換を確定する Enter（Safari は compositionend のあとに keyCode 229 で送る）では候補を動かさない・開かない
+    if (isImeKeyEvent(event) || isSearchComposing) {
+      if (event.key === "Enter") lastImeEnterAt = performance.now();
+      return;
+    }
+    if (event.key === "Escape") {
+      // Esc は候補を閉じるだけにする。PC の Chrome では type="search" の既定の動作で入力値まで消え、
+      // 「サウナ」→ Esc →「ラ」で「ラ」だけの検索（最初の候補が「ラ・フランス温泉館」）になっていた。消すときは検索欄の × を使う
+      event.preventDefault();
+      hideSearchSuggestions();
+      return;
+    }
     if (!searchSuggestionFacilities.length) return;
     if (event.key === "ArrowDown" || event.key === "ArrowUp") {
       event.preventDefault();
@@ -1370,9 +1412,16 @@ function bindEvents() {
     } else if (event.key === "Enter" && searchSuggestionIndex >= 0) {
       event.preventDefault();
       openSearchSuggestion(searchSuggestionFacilities[searchSuggestionIndex]);
-    } else if (event.key === "Escape") {
-      hideSearchSuggestions();
     }
+  });
+
+  // SP: キーボードが開くと検索欄の下に出る候補が画面外・下部ナビの裏に隠れて選べないため、検索欄を表示領域の上端へ寄せる
+  el.searchInput.addEventListener("focus", () => {
+    if (!window.matchMedia("(max-width: 640px)").matches) return;
+    window.setTimeout(() => {
+      const box = el.searchInput.closest(".search-form") || el.searchInput;
+      box.scrollIntoView({ block: "start", behavior: "smooth" });
+    }, 250);
   });
 
   el.searchInput.addEventListener("focus", () => {
@@ -1404,6 +1453,10 @@ function bindEvents() {
     });
   }
   document.addEventListener("pointerdown", handleSearchSuggestionOutsidePointer);
+  // キーボードの表示・非表示（visualViewport の大きさ・位置の変化）と帳面のスクロールに合わせて、開いている候補欄の高さを合わせ直す
+  window.visualViewport?.addEventListener("resize", refitVisibleSuggestionPanels);
+  window.visualViewport?.addEventListener("scroll", refitVisibleSuggestionPanels);
+  el.main?.addEventListener("scroll", refitVisibleSuggestionPanels, { passive: true });
 
   el.searchClearButton.addEventListener("click", () => {
     if (!el.searchInput.value) return;
@@ -1944,6 +1997,8 @@ function bindEvents() {
   });
   el.visitLogShareDialog?.addEventListener("close", clearVisitLogSharePreview);
   bindSwipeMenu();
+  bindMenuSearch();
+  bindVenueSuggestions();
 }
 
 function openSettingsDialog() {
@@ -1952,10 +2007,12 @@ function openSettingsDialog() {
   else el.settingsDialog.setAttribute("open", "");
   el.settingsScrim.hidden = typeof el.settingsDialog.showModal === "function";
   document.body.classList.add("settings-open");
+  updateMenuHere();
   window.requestAnimationFrame(() => el.closeSettingsButton.focus({ preventScroll: true }));
 }
 
 function closeSettingsDialog() {
+  hideMenuSuggestions();
   if (el.settingsDialog.open) {
     if (typeof el.settingsDialog.close === "function") el.settingsDialog.close();
     else el.settingsDialog.removeAttribute("open");
@@ -2060,6 +2117,7 @@ function setView(view) {
   if (view !== "Explore") stopNewsRailAutoScroll();
   if (view !== "NewsArticle") activeNewsSlug = "";
   activeView = view;
+  document.querySelector("#routeNotFound")?.remove();
   applyActiveView(view);
   pushViewUrl(view);
   renderAll();
@@ -2078,6 +2136,7 @@ function openFacilityDetail(facility) {
 }
 
 function applyActiveView(view) {
+  scrollTopBeforeViewChange = Math.round(el.main?.scrollTop || 0);
   hideSearchSuggestions();
   document.body.dataset.activeView = view.toLowerCase();
   Object.keys(VIEW_META).forEach((key) => {
@@ -2164,9 +2223,21 @@ function trackNewsOnce(key, name, params) {
   track(name, params);
 }
 
+// 帯のカードの上半分の絵柄（2026-11-19 オーナー指示「色だけのカードは殺風景」）：記事の都道府県（記事データの prefecture）を
+// ロゴの「サ」と同じ朱の角印にして置く。4文字の県名は2文字ずつ2列の角印にする。都道府県が無い記事は角印を出さない（湯気の模様だけ）。
+// 飾りなので読み上げからは外す（カードの読み上げ名は今のまま）
+function newsRailSealHtml(article) {
+  const name = typeof article.prefecture === "string" ? article.prefecture.trim() : "";
+  if (!name) return "";
+  const chars = [...name];
+  const text = chars.length === 4 ? `${escapeHtml(chars.slice(0, 2).join(""))}<br>${escapeHtml(chars.slice(2).join(""))}` : escapeHtml(name);
+  return `<span class="news-rail-card-seal">${text}</span>`;
+}
+
 function newsRailCardHtml(article, index) {
   return `
       <a class="news-rail-card" href="/news/${escapeAttr(article.slug)}/" data-news-open="${escapeAttr(article.slug)}" data-news-surface="rail">
+        <span class="news-rail-card-art" aria-hidden="true">${newsRailSealHtml(article)}</span>
         <span class="news-rail-card-body">
           <span class="news-rail-card-meta">${newsCategoryChip(article)}<time datetime="${article.publishedAt}">${formatDate(article.publishedAt)}</time></span>
           <span class="news-rail-card-title" data-num="${String(index + 1).padStart(2, "0")}">${escapeHtml(article.title)}</span>
@@ -2174,60 +2245,141 @@ function newsRailCardHtml(article, index) {
       </a>`;
 }
 
+// 帯の自動送り（2026-11-19 オーナー指示で再開）。流し続けると先頭のカードの左端がいつも切れていた（独立監査2 中-5）ため、
+// 一定間隔で1枚ずつ送り、カードの切れ目（styles.css の scroll-snap と同じ位置）で止める。最後まで来たら先頭へなめらかに戻す
+// （同じ記事が2回出る複製カードは作らない）。触れている間・マウスを乗せている間・キーボードで中にいる間・帯が画面外のとき・
+// タブが裏のとき・動きを減らす設定のときは送らない。動いている間もタイマー1本だけで、毎フレームの処理は持たない
+const NEWS_RAIL_INTERVAL_MS = 4500;
+const NEWS_RAIL_RESUME_MS = 4000;
 let newsRailScrollState = null;
 function stopNewsRailAutoScroll() {
-  if (newsRailScrollState) {
-    cancelAnimationFrame(newsRailScrollState.raf);
-    if (newsRailScrollState.observer) newsRailScrollState.observer.disconnect();
-    newsRailScrollState = null;
+  const state = newsRailScrollState;
+  if (!state) return;
+  newsRailScrollState = null;
+  clearTimeout(state.timer);
+  if (state.observer) state.observer.disconnect();
+  state.cleanup.forEach((off) => off());
+}
+
+function newsRailSnapPositions(track) {
+  // 各カードの左端を、帯の scroll-padding の内側にそろえたときの scrollLeft（scroll-snap-align: start と同じ位置）。
+  // 帯の右端まで送り切った位置（scrollWidth - clientWidth）はカードの切れ目にそろわず左のカードが切れるため、送り先にしない
+  // （右端に近いカードは、その手前の位置で全体が見えている）
+  const trackRect = track.getBoundingClientRect();
+  const padStart = parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0;
+  const max = Math.max(0, track.scrollWidth - track.clientWidth);
+  const positions = [];
+  for (const card of track.children) {
+    const left = Math.max(0, Math.round(card.getBoundingClientRect().left - trackRect.left - track.clientLeft + track.scrollLeft - padStart));
+    if (left <= max + 1 && !positions.includes(left)) positions.push(Math.min(left, max));
   }
+  return { positions: positions.sort((a, b) => a - b), max };
 }
 
 function startNewsRailAutoScroll(track) {
   stopNewsRailAutoScroll();
   if (!track || typeof window === "undefined") return;
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  const half = track.children.length / 2;
-  if (!Number.isInteger(half) || half < 1) return;
-  const state = { raf: 0, track, pausedUntil: 0, visible: true, pos: track.scrollLeft || 0, loopWidth: 0, lastTs: 0 };
-  const pause = () => {
-    state.pausedUntil = performance.now() + 5000;
-    state.pos = track.scrollLeft || 0;
+  const reduceQuery = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+  const state = { track, timer: 0, visible: false, hovering: false, touching: false, focused: false, holdUntil: 0, observer: null, cleanup: [] };
+  newsRailScrollState = state;
+  const listen = (target, type, handler, options) => {
+    target.addEventListener(type, handler, options);
+    state.cleanup.push(() => target.removeEventListener(type, handler, options));
   };
-  track.addEventListener("pointerdown", pause);
-  track.addEventListener("touchstart", pause, { passive: true });
-  track.addEventListener("wheel", pause, { passive: true });
-  if (typeof IntersectionObserver !== "undefined") {
-    const observer = new IntersectionObserver((entries) => {
-      state.visible = entries.some((entry) => entry.isIntersecting);
-    }, { threshold: 0.05 });
-    observer.observe(track);
-    state.observer = observer;
-  }
-  const step = (ts) => {
+  const canRun = () =>
+    newsRailScrollState === state &&
+    track.isConnected &&
+    state.visible &&
+    !state.hovering &&
+    !state.touching &&
+    !state.focused &&
+    !document.hidden &&
+    !(reduceQuery && reduceQuery.matches);
+  const schedule = () => {
+    clearTimeout(state.timer);
+    state.timer = 0;
+    if (!canRun()) return;
+    const wait = Math.max(NEWS_RAIL_INTERVAL_MS, state.holdUntil - Date.now());
+    state.timer = setTimeout(advance, wait);
+  };
+  const advance = () => {
+    state.timer = 0;
     if (newsRailScrollState !== state) return;
     if (!track.isConnected) {
       stopNewsRailAutoScroll();
       return;
     }
-    if (!state.loopWidth) {
-      state.loopWidth = track.children[half].offsetLeft - track.children[0].offsetLeft;
+    if (!canRun()) return;
+    const { positions, max } = newsRailSnapPositions(track);
+    if (max > 0) {
+      const current = track.scrollLeft;
+      const next = current >= max - 1 ? 0 : positions.find((left) => left > current + 1) ?? 0;
+      track.scrollTo({ left: next, behavior: "smooth" });
     }
-    const loopWidth = state.loopWidth;
-    if (loopWidth > 0 && state.visible && !document.hidden && performance.now() >= state.pausedUntil) {
-      // 速度はフレーム間隔から決める（30px/秒）。フレーム毎の固定加算だと
-      // 120Hz 画面で2倍速になり、表示リフレッシュレートで速さが変わってしまう。
-      // scrollLeft への小数加算はブラウザが切り捨てるため、位置は自前で累積する
-      const delta = state.lastTs ? Math.min(ts - state.lastTs, 100) : 16.7;
-      state.pos += delta * 0.03;
-      if (state.pos >= loopWidth) state.pos -= loopWidth;
-      track.scrollLeft = state.pos;
-    }
-    state.lastTs = ts;
-    state.raf = requestAnimationFrame(step);
+    schedule();
   };
-  newsRailScrollState = state;
-  state.raf = requestAnimationFrame(step);
+  const hold = () => {
+    state.holdUntil = Date.now() + NEWS_RAIL_RESUME_MS;
+    schedule();
+  };
+  listen(track, "touchstart", () => {
+    state.touching = true;
+    schedule();
+  }, { passive: true });
+  const touchEnd = (event) => {
+    if (event.touches && event.touches.length) return;
+    state.touching = false;
+    hold();
+  };
+  listen(track, "touchend", touchEnd, { passive: true });
+  listen(track, "touchcancel", touchEnd, { passive: true });
+  // マウスだけを見る（iPhone はタップで mouseenter を出したまま mouseleave を出さないことがある）
+  listen(track, "pointerenter", (event) => {
+    if (event.pointerType !== "mouse") return;
+    state.hovering = true;
+    schedule();
+  });
+  listen(track, "pointerleave", (event) => {
+    if (event.pointerType !== "mouse") return;
+    state.hovering = false;
+    hold();
+  });
+  // キーボードで帯の中に入ったときだけ止める（タップやクリックで付くフォーカスでは止めない）
+  listen(track, "focusin", (event) => {
+    let keyboard = false;
+    try {
+      keyboard = event.target.matches(":focus-visible");
+    } catch {
+      keyboard = false;
+    }
+    if (!keyboard) return;
+    state.focused = true;
+    schedule();
+  });
+  listen(track, "focusout", (event) => {
+    if (!state.focused || (event.relatedTarget && track.contains(event.relatedTarget))) return;
+    state.focused = false;
+    hold();
+  });
+  listen(document, "visibilitychange", schedule);
+  if (reduceQuery) {
+    if (reduceQuery.addEventListener) listen(reduceQuery, "change", schedule);
+    else if (reduceQuery.addListener) {
+      reduceQuery.addListener(schedule);
+      state.cleanup.push(() => reduceQuery.removeListener(schedule));
+    }
+  }
+  if ("IntersectionObserver" in window) {
+    state.observer = new IntersectionObserver((entries) => {
+      const entry = entries[entries.length - 1];
+      state.visible = Boolean(entry && entry.isIntersecting && entry.intersectionRatio >= 0.5);
+      schedule();
+    }, { threshold: [0, 0.5, 1] });
+    state.observer.observe(track);
+  } else {
+    state.visible = true;
+    schedule();
+  }
 }
 
 async function renderNewsRail() {
@@ -2275,20 +2427,10 @@ async function renderNewsRail() {
       <span class="news-rail-sub">サウナニュース</span>
     </div>
     <div class="news-rail-track">${cardsHtml}</div>`;
-  const track = rail.querySelector(".news-rail-track");
-  // ループ用に同じカード群を複製する（入れ子のグループ要素は iOS Safari で
-  // 配置が崩れるため、トラックの直下に平坦に並べる。複製は読み上げ・タブ移動の対象外）
-  [...track.children].forEach((child, index) => {
-    const clone = child.cloneNode(true);
-    clone.setAttribute("aria-hidden", "true");
-    clone.inert = true;
-    clone.tabIndex = -1;
-    // 先頭カードの特集サイズは複製側にも付け、ループの継ぎ目で幅が変わらないようにする
-    if (index === 0) clone.classList.add("news-rail-card-featured");
-    track.appendChild(clone);
-  });
+  // 帯は流し続けず、一定間隔で1枚ずつ送ってカードの切れ目で止める（startNewsRailAutoScroll）。
+  // ループ用の複製カードは作らない（複製が並ぶと同じ記事が2回出る）。最後まで来たら先頭へなめらかに戻す
   rail.hidden = false;
-  startNewsRailAutoScroll(track);
+  startNewsRailAutoScroll(rail.querySelector(".news-rail-track"));
   trackNewsOnce("rail", "news_list_view", { surface: "home_rail" });
 }
 
@@ -2394,7 +2536,7 @@ async function renderNewsArticle() {
     </section>
     ${facilities.length ? `<p class="news-facility-chips">${facilities.map((facility) => `<a href="/facility/${encodeURIComponent(facility.id)}/" data-news-facility="${escapeAttr(facility.id)}">${escapeHtml(facility.name)}</a>`).join("")}</p>` : ""}
     ${article.statusNote ? `<p class="news-status-note">${escapeHtml(article.statusNote)}</p>` : ""}
-    ${h2Texts.length >= 3 ? `<details class="news-toc"><summary>この記事の目次</summary><ol>${h2Texts.map((text, i) => `<li><a href="#news-h2-${i + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : ""}
+    ${h2Texts.length >= 3 ? `<details class="news-toc"><summary>この記事の目次</summary><ol>${h2Texts.map((text, i) => `<li><a href="/news/${encodeURIComponent(article.slug)}/#news-h2-${i + 1}" data-toc-anchor="news-h2-${i + 1}">${escapeHtml(text)}</a></li>`).join("")}</ol></details>` : ""}
     <div class="news-article-body">${newsModule.renderNewsBlocks(article.body, { h2IdPrefix: "news-h2-" })}</div>
     ${facilities.length ? `<section class="news-facilities"><h2>この記事に関連する施設</h2><p class="news-facilities-note">${escapeHtml(facilitiesNote)}</p>${facilities.map((facility) => renderFacilityCard(facility)).join("")}</section>` : ""}
     <p class="news-action"><strong>次の一歩:</strong> ${escapeHtml(article.action)}</p>
@@ -2824,10 +2966,12 @@ async function applySearchValue(value, startedAt = performance.now()) {
   }
   if (value.trim()) {
     if (!facilitySearchCache) {
+      const anchor = captureSearchInputAnchor();
       el.facilityList.setAttribute("aria-busy", "true");
       el.facilityList.inert = true;
       el.searchResultsStatus.textContent = "検索を準備しています…";
       el.facilityList.innerHTML = `<div class="empty-state"><p>検索を準備しています…</p></div>`;
+      restoreSearchInputAnchor(anchor);
       // 候補欄も同じ待ち時間の間は空白にせず、準備中であることを示す
       if (document.activeElement === el.searchInput && !isSearchComposing) showSearchPreparingState();
     }
@@ -2845,6 +2989,8 @@ async function applySearchValue(value, startedAt = performance.now()) {
   }
   if (generation !== searchGeneration || activeView !== "Explore" || isSearchComposing || el.searchInput.value !== value) return false;
   const renderStartedAt = performance.now();
+  const anchor = captureSearchInputAnchor();
+  if (anchor === null) releaseSearchInputAnchorSpace();
   setSearchTerm(value);
   visibleLimit = 36;
   moveToSearchPrefecture(value);
@@ -2853,13 +2999,49 @@ async function applySearchValue(value, startedAt = performance.now()) {
     renderQuestPanel();
   }
   renderExplore();
-  if (document.activeElement === el.searchInput) el.main.scrollTo({ top: 0, behavior: "instant" });
+  // 入力中（検索欄にフォーカスがある間）は、結果の描き直しで検索欄が動かないようにする。
+  // 以前は1文字ごとに帳面を先頭（scrollTop 0）へ戻していたため、2文字目から検索欄がキーボードの下へ移り、
+  // iPhone の Safari が入力欄を見せようとして画面ごとずれていた（オーナー報告 11-19「入力すると画面がズレる」）
+  restoreSearchInputAnchor(anchor);
   // Local diagnostics only: no query text or timing is transmitted to a server.
   el.searchResultsStatus.dataset.searchElapsedMs = (performance.now() - startedAt).toFixed(1);
   el.searchResultsStatus.dataset.searchRenderMs = (performance.now() - renderStartedAt).toFixed(1);
   if (pendingSearchIntent?.value === value) pendingSearchIntent = null;
   renderSearchSuggestions();
   return true;
+}
+
+// 日本語入力の変換中（isComposing）か、変換の確定・操作のキー（keyCode 229）か
+function isImeKeyEvent(event) {
+  return Boolean(event.isComposing || event.keyCode === 229);
+}
+
+function isImeEnterJustNow() {
+  return performance.now() - lastImeEnterAt < 120;
+}
+
+// 検索欄にフォーカスがあるときだけ、描き直しの前の検索欄の画面上の位置を控える
+function captureSearchInputAnchor() {
+  if (!el.searchInput || document.activeElement !== el.searchInput || !el.main || typeof el.searchInput.getBoundingClientRect !== "function") return null;
+  return el.searchInput.getBoundingClientRect().top;
+}
+
+// 描き直しで検索欄の上下の高さが変わっても、検索欄を同じ画面位置に保つ。
+// 結果が減って帳面が短くなり、同じ位置までスクロールできないときは、一覧の下に一時的な余白を足す（フォーカスが外れたら外す）
+function restoreSearchInputAnchor(anchorTop) {
+  if (anchorTop === null || anchorTop === undefined || document.activeElement !== el.searchInput) return;
+  let delta = el.searchInput.getBoundingClientRect().top - anchorTop;
+  if (Math.abs(delta) < 1) return;
+  el.main.scrollTop += delta;
+  delta = el.searchInput.getBoundingClientRect().top - anchorTop;
+  if (delta >= 1 && el.facilityList) {
+    el.facilityList.style.minHeight = `${Math.ceil(el.facilityList.getBoundingClientRect().height + delta)}px`;
+    el.main.scrollTop += delta;
+  }
+}
+
+function releaseSearchInputAnchorSpace() {
+  if (el.facilityList?.style?.minHeight) el.facilityList.style.minHeight = "";
 }
 
 function getSearchSuggestionNameKeys(facility) {
@@ -2882,6 +3064,219 @@ function showSearchPreparingState() {
   panel.innerHTML = `<div class="search-suggestions-head">検索を準備しています…</div>`;
   panel.hidden = false;
   if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+  revealSearchSuggestionsPanel(panel);
+}
+
+// SP でキーボードが開くと .main の見える高さが縮み、フォーム直下に出る候補
+// パネルが .main の下端で切れて下部タブバーの裏に隠れる（実機報告 2026-11-16）。
+// パネルが開いたタイミングで検索フォームを .main の先頭へ寄せ、フォーム下に
+// パネルの表示域を確保する。PC では余白が十分なため何もしない。
+function revealSearchSuggestionsPanel(panel) {
+  try {
+    if (!panel || panel.dataset.revealed === "1") return;
+    if (typeof window === "undefined" || !window.matchMedia || !window.matchMedia("(max-width: 1023px)").matches) return;
+    panel.dataset.revealed = "1";
+    const form = el.searchInput?.closest?.(".search-form");
+    if (form && typeof form.scrollIntoView === "function") form.scrollIntoView({ block: "start", behavior: "auto" });
+  } catch { /* 表示の補助なので、失敗しても候補表示は続ける */ }
+}
+
+// 検索候補（2026-11-17）：サ印帳内のすべての検索欄（探す画面・メニュー）で同じ候補表示にそろえる。
+// 施設に一致しない語（「Gear」「入門」など）でも候補欄を閉じずに、ページ・都道府県の候補と0件の案内を出す。
+const SITE_PAGE_SUGGESTIONS = [
+  { view: "Explore", label: "サウナを探す", desc: "全国の施設を探す", keys: ["サウナを探す", "探す", "ホーム", "home"] },
+  { view: "Passport", label: "サ印（押印帳）", desc: "押した印を全県・県別にめくる", keys: ["サ印", "押印帳", "押印", "スタンプ", "passport"] },
+  { view: "Stats", label: "サ活の記録", desc: "押印数・県マスター・称号", keys: ["記録", "サ活の記録", "称号", "マスター"] },
+  { view: "Stats", target: "leaderboardPanel", label: "ランキング TOP10", desc: "サ印数の上位と自分の順位", keys: ["ランキング", "ranking", "順位"] },
+  { view: "Stats", target: "wishlistPanel", label: "行きたい", desc: "次に行きたい施設の控え", keys: ["行きたい"] },
+  { view: "Stats", target: "favoritesPanel", label: "お気に入り", desc: "気に入った施設の一覧", keys: ["お気に入り"] },
+  { view: "Stats", target: "visitLogSummary", label: "サ活ログ", desc: "セット数・時間・体感の自分用ログ", keys: ["サ活ログ", "ログ"] },
+  { view: "Stats", target: "backupTitle", label: "記録のバックアップ・復元", desc: "押印の記録を書き出す・読み込む", keys: ["バックアップ", "復元", "backup"] },
+  { view: "News", label: "サウニュ〜", desc: "新店・リニューアル・イベントのニュース", keys: ["サウニュ〜", "サウニュー", "ニュース", "news", "新店"] },
+  { view: "Sameshi", label: "サ飯", desc: "サウナ後に食べたい県別のサ飯", keys: ["サ飯", "さめし", "sameshi", "グルメ"] },
+  { view: "Gear", label: "Gear", desc: "サウナハット・マットなどのグッズ", keys: ["Gear", "ギア", "グッズ", "サウナハット", "サウナマット"] },
+  { view: "Stay", label: "サウナ合宿先", desc: "サウナ付きの宿を探す", keys: ["合宿", "サウナ合宿", "宿", "stay"] },
+  { view: "Guide", label: "サウナ入門", desc: "入り方・水風呂・持ち物・マナー", keys: ["入門", "サウナ入門", "入り方", "初心者", "マナー", "guide"] },
+  { view: "Community", label: "サウナ仲間", desc: "少人数のサ活募集", keys: ["仲間", "サウナ仲間", "募集", "community"] },
+  { view: "Add", label: "施設を追加", desc: "掲載のない施設を自分の帳面に加える", keys: ["追加", "施設を追加", "add"] },
+  { view: "StampRally", label: "スタンプラリーの始め方", desc: "探す・押印・振り返りの手順", keys: ["スタンプラリー", "始め方", "使い方"] },
+  { view: "Goshuin", label: "サウナ御朱印とサ印の違い", desc: "公式の御朱印・記念印とは別の記録", keys: ["御朱印", "ごしゅいん"] },
+  { view: "About", label: "運営・データ方針", desc: "データの確認基準と広告方針", keys: ["運営", "データ方針", "プライバシー", "about"] },
+  { view: "Contact", label: "掲載・お問い合わせ", desc: "広告掲載・内容修正・権利の連絡", keys: ["お問い合わせ", "問い合わせ", "掲載", "contact"] },
+];
+const SUGGESTION_PAGE_LIMIT = 3;
+const SUGGESTION_PREF_LIMIT = 3;
+
+function suggestionKey(value) {
+  return normalizeCompact(toHiragana(normalizeText(value)));
+}
+
+function findPageSuggestions(value) {
+  const query = suggestionKey(value);
+  if (!query) return [];
+  const pages = [];
+  for (const page of SITE_PAGE_SUGGESTIONS) {
+    const hit = page.keys.some((key) => {
+      const k = suggestionKey(key);
+      if (!k) return false;
+      if (k === query) return true;
+      if (query.length >= 2 && k.startsWith(query)) return true;
+      return k.length >= 2 && query.includes(k);
+    });
+    if (hit) pages.push({ type: "page", ...page });
+    if (pages.length >= SUGGESTION_PAGE_LIMIT) break;
+  }
+  return pages;
+}
+
+function findPrefectureSuggestions(value) {
+  const query = suggestionKey(value);
+  if (!query) return [];
+  const prefs = [];
+  for (const pref of PREFECTURES) {
+    const full = suggestionKey(pref.name);
+    const short = suggestionKey(shortPrefName(pref.name));
+    if (full.startsWith(query) || short.startsWith(query) || (short.length >= 2 && query === short) || prefectureMatchesReading(pref.name, value)) prefs.push({ type: "pref", name: pref.name });
+    if (prefs.length >= SUGGESTION_PREF_LIMIT) break;
+  }
+  return prefs;
+}
+
+// scoped=true は探す画面の検索欄（選択中の県・絞り込みに合わせる）、false はメニューの検索欄（全国から探す）
+function findFacilitySuggestions(value, { scoped }) {
+  // 日本語の変換中は、結果の一覧（searchNeedles）より先に候補だけを入力中の文字で出すため、検索語が違うときは作り直す
+  const needles = scoped && normalizeText(value) === searchTerm ? searchNeedles : createSearchNeedles(value);
+  if (!needles.length) return { facilities: [], total: 0 };
+  const awardYear = getSaunachelinAwardYear(normalizeText(value));
+  const flatNeedles = uniqueStrings(needles.flat()).filter(Boolean);
+  const matches = [];
+  for (const { facility, features, haystack } of getFacilitySearchRecords()) {
+    if (scoped) {
+      if (selectedPrefecture !== "全国" && facility.prefecture !== selectedPrefecture) continue;
+      if (![...selectedFeatureFilters].every((feature) => features.includes(feature))) continue;
+      const matchesFilter =
+        activeFilter === "all" ||
+        (activeFilter === "unvisited" && !state.visited[facility.id]) ||
+        (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
+        (activeFilter === "favorite" && state.favorites[facility.id]);
+      if (!matchesFilter) continue;
+    }
+    const matchesSearch = awardYear !== null ? isSaunachelinAwardFacility(facility, awardYear) : matchesSearchBlob(haystack, needles);
+    if (!matchesSearch) continue;
+    const nameKeys = getSearchSuggestionNameKeys(facility);
+    let tier = 2;
+    for (const needle of flatNeedles) {
+      if (nameKeys.some((key) => key.startsWith(needle))) { tier = 0; break; }
+      if (tier > 1 && nameKeys.some((key) => key.includes(needle))) tier = 1;
+    }
+    matches.push({ facility, tier });
+  }
+  matches.sort((a, b) => a.tier - b.tier);
+  // design-extra SE-19：市区町村の候補（件数つき）。入力が2文字以上で、市町村名か
+  // 都道府県名に入力を含む施設だけを数える（PR-A の候補パネルの集計規則そのまま）
+  const queryText = (value || "").trim();
+  let areas = [];
+  if (queryText.length >= 2) {
+    const areaCounts = new Map();
+    for (const { facility } of matches) {
+      if (!facility.city) continue;
+      if (!facility.city.includes(queryText) && !facility.prefecture.includes(queryText)) continue;
+      const key = `${facility.prefecture} ${facility.city}`;
+      const entry = areaCounts.get(key) || { prefecture: facility.prefecture, city: facility.city, count: 0 };
+      entry.count += 1;
+      areaCounts.set(key, entry);
+    }
+    areas = [...areaCounts.values()].sort((a, b) => b.count - a.count).slice(0, 3);
+  }
+  return { facilities: matches.slice(0, SEARCH_SUGGESTION_LIMIT).map(({ facility }) => ({ type: "facility", facility })), total: matches.length, areas };
+}
+
+function buildSuggestionItems(value, { scoped }) {
+  const pages = findPageSuggestions(value);
+  const prefs = scoped && selectedPrefecture !== "全国" ? [] : findPrefectureSuggestions(value);
+  const { facilities, total, areas } = findFacilitySuggestions(value, { scoped });
+  return { items: [...pages, ...prefs, ...facilities], pages, prefs, facilities, total, areas };
+}
+
+// design-extra SE-19：候補の施設名で、入力に一致した部分を <mark> で示す。
+// 読み検索などで名前の文字列と一致しないときは、印を付けずそのまま表示する
+function highlightSuggestionName(name, value) {
+  const queryText = (value || "").trim();
+  if (!queryText) return escapeHtml(name);
+  const at = name.indexOf(queryText);
+  if (at < 0) return escapeHtml(name);
+  return `${escapeHtml(name.slice(0, at))}<mark>${escapeHtml(name.slice(at, at + queryText.length))}</mark>${escapeHtml(name.slice(at + queryText.length))}`;
+}
+
+function renderSuggestionPanel(panel, input, value, idPrefix, model) {
+  let index = 0;
+  const row = (item, name, meta, kind) => {
+    const html = `<button type="button" class="search-suggestion search-suggestion-${kind}" role="option" id="${idPrefix}${index}" data-suggestion-index="${index}" aria-selected="false"><span class="search-suggestion-name">${escapeHtml(name)}</span><span class="search-suggestion-meta">${escapeHtml(meta)}</span></button>`;
+    index += 1;
+    return html;
+  };
+  const parts = [];
+  if (model.pages.length) {
+    parts.push(`<div class="search-suggestions-head">ページ</div>`);
+    model.pages.forEach((page) => parts.push(row(page, page.label, page.desc, "page")));
+  }
+  if (model.prefs.length) {
+    parts.push(`<div class="search-suggestions-head">都道府県</div>`);
+    model.prefs.forEach((pref) => parts.push(row(pref, `${pref.name}のサウナ`, "県の施設一覧を開く", "pref")));
+  }
+  if (model.facilities.length) {
+    parts.push(`<div class="search-suggestions-head">施設 ${model.total.toLocaleString("ja-JP")}件</div>`);
+    model.facilities.forEach(({ facility }) => {
+      const status = getFacilityStatus(facility);
+      const meta = [facility.prefecture, facility.city, status ? status.label : ""].filter(Boolean).join(" ");
+      if (!model.submitAll) {
+        parts.push(row(facility, facility.name, meta, "facility"));
+        return;
+      }
+      // design-extra SE-19 の施設行：印影（押印済み・行きたい）＋名前の一致部分の印。
+      // 変換中の候補とメニュー検索では submitAll が付かないため、従来の行のまま
+      const seal = state.visited[facility.id]
+        ? '<span class="st0 d" aria-hidden="true">印</span>'
+        : state.wishlist[facility.id]
+          ? '<span class="st0 w" aria-hidden="true">行</span>'
+          : '<span class="st0" aria-hidden="true"></span>';
+      parts.push(`<button type="button" class="search-suggestion search-suggestion-facility se-sug" role="option" id="${idPrefix}${index}" data-suggestion-index="${index}" aria-selected="false">${seal}<span class="search-suggestion-main"><b class="search-suggestion-name">${highlightSuggestionName(facility.name, value)}</b><small class="search-suggestion-meta">${escapeHtml(meta)}</small></span></button>`);
+      index += 1;
+    });
+    if (model.submitAll) {
+      if (model.areas && model.areas.length) {
+        parts.push(`<h5 class="search-suggestions-subhead">都道府県・市</h5>${model.areas.map((area) => `<button type="button" class="search-suggestion search-suggestion-area se-sug" data-suggestion-area="${escapeAttr(area.city)}"><span class="st0 p" aria-hidden="true">県</span><span class="search-suggestion-main"><b>${escapeHtml(area.prefecture)} ${escapeHtml(area.city)}</b><small>${area.count}施設</small></span></button>`).join("")}`);
+      }
+      parts.push(`<button type="button" class="search-suggestions-all" data-suggestion-all>「${escapeHtml(value.trim())}」で探す（${model.total.toLocaleString("ja-JP")}件）<span aria-hidden="true">›</span></button>`);
+    }
+  }
+  if (!model.items.length) {
+    parts.push(`<div class="search-suggestions-empty"><strong>「${escapeHtml(value.trim().slice(0, 24))}」に一致する候補はありません</strong><span>施設名の一部や市区町村名でも探せます。</span></div>`);
+  }
+  panel.innerHTML = parts.join("");
+  panel.hidden = false;
+  if (typeof input.setAttribute === "function") input.setAttribute("aria-expanded", "true");
+  if (typeof input.removeAttribute === "function") input.removeAttribute("aria-activedescendant");
+  fitSuggestionPanel(panel);
+}
+
+// 候補欄の高さを、いま見えている範囲（キーボードを除いた visualViewport と下ナビの上端）に収める。
+// CSS の max-height（46dvh・380px）だけでは、iPhone でキーボードが出ても dvh が縮まず、候補の下半分がキーボードや下ナビの裏に隠れていた
+function fitSuggestionPanel(panel) {
+  if (!panel || panel.hidden || typeof panel.getBoundingClientRect !== "function") return;
+  const vv = window.visualViewport;
+  let bottom = vv ? vv.offsetTop + vv.height : window.innerHeight;
+  const nav = document.querySelector(".bottom-nav");
+  if (nav && !panel.closest("dialog")) {
+    const navRect = nav.getBoundingClientRect();
+    if (navRect.height > 0 && getComputedStyle(nav).display !== "none" && navRect.top < bottom) bottom = navRect.top;
+  }
+  const available = Math.floor(bottom - panel.getBoundingClientRect().top - 8);
+  panel.style.maxHeight = `${Math.max(132, Math.min(380, available))}px`;
+}
+
+function refitVisibleSuggestionPanels() {
+  document.querySelectorAll(".search-suggestions:not([hidden])").forEach(fitSuggestionPanel);
 }
 
 function renderSearchSuggestions() {
@@ -2904,74 +3299,43 @@ function renderSearchSuggestions() {
       .catch(() => {});
     return;
   }
-  const records = getFacilitySearchRecords();
-  if (!records.length) {
-    hideSearchSuggestions();
-    return;
-  }
-  const flatNeedles = uniqueStrings(searchNeedles.flat()).filter(Boolean);
-  const matches = [];
-  for (const { facility, features, haystack } of records) {
-    if (selectedPrefecture !== "全国" && facility.prefecture !== selectedPrefecture) continue;
-    if (!matchesSearchBlob(haystack, searchNeedles)) continue;
-    if (![...selectedFeatureFilters].every((feature) => features.includes(feature))) continue;
-    const matchesFilter =
-      activeFilter === "all" ||
-      (activeFilter === "unvisited" && !state.visited[facility.id]) ||
-      (activeFilter === "wishlist" && state.wishlist[facility.id]) ||
-      (activeFilter === "favorite" && state.favorites[facility.id]);
-    if (!matchesFilter) continue;
-    const nameKeys = getSearchSuggestionNameKeys(facility);
-    let tier = 2;
-    for (const needle of flatNeedles) {
-      if (nameKeys.some((key) => key.startsWith(needle))) { tier = 0; break; }
-      if (tier > 1 && nameKeys.some((key) => key.includes(needle))) tier = 1;
-    }
-    matches.push({ facility, tier });
-  }
-  if (!matches.length) {
-    hideSearchSuggestions();
-    return;
-  }
-  matches.sort((a, b) => a.tier - b.tier);
-  searchSuggestionFacilities = matches.slice(0, SEARCH_SUGGESTION_LIMIT).map(({ facility }) => facility);
+  const model = buildSuggestionItems(el.searchInput.value, { scoped: true });
+  // design-extra SE-19 の候補（市区町村・全件検索）は、確定後の通常候補だけに出す。
+  // 変換中の候補とメニュー検索の候補は従来どおり（submitAll を付けない）
+  model.submitAll = true;
+  searchSuggestionFacilities = model.items;
   searchSuggestionIndex = -1;
-  const queryText = el.searchInput.value.trim();
-  const highlightName = (name) => {
-    if (!queryText) return escapeHtml(name);
-    const at = name.indexOf(queryText);
-    if (at < 0) return escapeHtml(name);
-    return `${escapeHtml(name.slice(0, at))}<mark>${escapeHtml(name.slice(at, at + queryText.length))}</mark>${escapeHtml(name.slice(at + queryText.length))}`;
-  };
-  const rows = searchSuggestionFacilities.map((facility, index) => {
-    const status = getFacilityStatus(facility);
-    const meta = [facility.prefecture, facility.city, status ? status.label : ""].filter(Boolean).join(" ");
-    const seal = state.visited[facility.id]
-      ? '<span class="st0 d" aria-hidden="true">印</span>'
-      : state.wishlist[facility.id]
-        ? '<span class="st0 w" aria-hidden="true">行</span>'
-        : '<span class="st0" aria-hidden="true"></span>';
-    return `<button type="button" class="search-suggestion" role="option" id="searchSuggestion${index}" data-suggestion-index="${index}" aria-selected="false">${seal}<span class="search-suggestion-main"><b class="search-suggestion-name">${highlightName(facility.name)}</b><small class="search-suggestion-meta">${escapeHtml(meta)}</small></span></button>`;
-  });
-  let areaHtml = "";
-  if (queryText.length >= 2) {
-    const areaCounts = new Map();
-    for (const { facility } of matches) {
-      if (!facility.city) continue;
-      if (!facility.city.includes(queryText) && !facility.prefecture.includes(queryText)) continue;
-      const key = `${facility.prefecture} ${facility.city}`;
-      const entry = areaCounts.get(key) || { prefecture: facility.prefecture, city: facility.city, count: 0 };
-      entry.count += 1;
-      areaCounts.set(key, entry);
-    }
-    const areas = [...areaCounts.values()].sort((a, b) => b.count - a.count).slice(0, 3);
-    if (areas.length) {
-      areaHtml = `<h5 class="search-suggestions-subhead">都道府県・市</h5>${areas.map((area) => `<button type="button" class="search-suggestion search-suggestion-area" data-suggestion-area="${escapeAttr(area.city)}"><span class="st0 p" aria-hidden="true">県</span><span class="search-suggestion-main"><b>${escapeHtml(area.prefecture)} ${escapeHtml(area.city)}</b><small>${area.count}施設</small></span></button>`).join("")}`;
-    }
+  renderSuggestionPanel(panel, el.searchInput, el.searchInput.value, "searchSuggestion", model);
+  revealSearchSuggestionsPanel(panel);
+  fitSuggestionPanel(panel);
+}
+
+// 日本語の変換中（未確定のひらがな）の候補：候補欄だけを入力中の文字で描く。
+// 結果の一覧・県の切り替え・帳面のスクロールは変えない（確定後の compositionend で従来どおり描き直す）
+function scheduleComposingSearchSuggestions() {
+  window.clearTimeout(searchComposingSuggestionTimer);
+  searchComposingSuggestionTimer = window.setTimeout(renderComposingSearchSuggestions, SEARCH_RENDER_DELAY_MS);
+}
+
+function renderComposingSearchSuggestions() {
+  const panel = el.searchSuggestions;
+  if (!panel || !isSearchComposing || activeView !== "Explore" || document.activeElement !== el.searchInput) return;
+  const value = el.searchInput.value;
+  if (!normalizeText(value)) {
+    hideSearchSuggestions();
+    return;
   }
-  panel.innerHTML = `<h5 class="search-suggestions-subhead">施設</h5>${rows.join("")}${areaHtml}<button type="button" class="search-suggestions-all" data-suggestion-all>「${escapeHtml(queryText)}」で探す（${matches.length}件）<span aria-hidden="true">›</span></button>`;
-  panel.hidden = false;
-  if (typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "true");
+  if (!appModulesReady) return;
+  if (!facilitySearchCache) {
+    ensureFacilitySearchRecords().then(() => renderComposingSearchSuggestions()).catch(() => {});
+    return;
+  }
+  const model = buildSuggestionItems(value, { scoped: true });
+  searchSuggestionFacilities = model.items;
+  searchSuggestionIndex = -1;
+  renderSuggestionPanel(panel, el.searchInput, value, "searchSuggestion", model);
+  revealSearchSuggestionsPanel(panel);
+  fitSuggestionPanel(panel);
 }
 
 function hideSearchSuggestions() {
@@ -2979,32 +3343,70 @@ function hideSearchSuggestions() {
   searchSuggestionIndex = -1;
   searchSuggestionFacilities = [];
   if (!panel) return;
+  if (panel.dataset) delete panel.dataset.revealed;
   panel.hidden = true;
   panel.innerHTML = "";
   if (el.searchInput && typeof el.searchInput.setAttribute === "function") el.searchInput.setAttribute("aria-expanded", "false");
 }
 
-function setSearchSuggestionIndex(index) {
-  const panel = el.searchSuggestions;
-  if (!panel || !searchSuggestionFacilities.length) return;
-  searchSuggestionIndex = index;
+function setSuggestionActiveRow(panel, input, idPrefix, index) {
   panel.querySelectorAll(".search-suggestion").forEach((row) => {
     const active = Number(row.dataset.suggestionIndex) === index;
     row.classList.toggle("search-suggestion-active", active);
     row.setAttribute("aria-selected", String(active));
     if (active) row.scrollIntoView({ block: "nearest" });
   });
-  if (index >= 0) el.searchInput.setAttribute("aria-activedescendant", `searchSuggestion${index}`);
-  else el.searchInput.removeAttribute("aria-activedescendant");
+  if (index >= 0) input.setAttribute("aria-activedescendant", `${idPrefix}${index}`);
+  else input.removeAttribute("aria-activedescendant");
 }
 
-function openSearchSuggestion(facility) {
-  if (!facility) return;
+function setSearchSuggestionIndex(index) {
+  const panel = el.searchSuggestions;
+  if (!panel || !searchSuggestionFacilities.length) return;
+  searchSuggestionIndex = index;
+  setSuggestionActiveRow(panel, el.searchInput, "searchSuggestion", index);
+}
+
+function openSuggestionItem(item) {
+  if (!item) return;
+  if (item.type === "facility") {
+    track("search_suggestion_click");
+    openFacilityDetail(item.facility);
+    return;
+  }
+  if (item.type === "pref") {
+    el.searchInput.value = "";
+    setSearchTerm("");
+    renderSearchClearButton();
+    selectedPrefecture = item.name;
+    visibleLimit = 36;
+    setView("Explore");
+    return;
+  }
+  if (item.type === "page") {
+    setView(item.view);
+    if (item.target) scrollToMenuTarget(item.target);
+  }
+}
+
+function scrollToMenuTarget(targetId) {
+  requestAnimationFrame(() => {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+    target.closest("details")?.setAttribute("open", "");
+    target.scrollIntoView({ block: "start", behavior: "instant" });
+    if (targetId === "profileForm") el.profileNickname.focus({ preventScroll: true });
+  });
+}
+
+function openSearchSuggestion(item) {
+  if (!item) return;
   hideSearchSuggestions();
-  track("search_suggestion_click");
-  openFacilityDetail(facility);
+  openSuggestionItem(item);
 }
 
+// design-extra SE-19：候補パネルの「都道府県・市」行と「この言葉で探す」行から、
+// その言葉で通常の検索を実行する（候補の選択ではなく検索の確定）。
 async function submitSearchFromSuggestion(value) {
   const text = (value || "").trim();
   if (!text) return;
@@ -3023,9 +3425,277 @@ async function submitSearchFromSuggestion(value) {
 
 function handleSearchSuggestionOutsidePointer(event) {
   const panel = el.searchSuggestions;
-  if (!panel || panel.hidden) return;
-  if (panel.contains(event.target) || event.target === el.searchInput) return;
-  hideSearchSuggestions();
+  if (panel && !panel.hidden && !panel.contains(event.target) && event.target !== el.searchInput) hideSearchSuggestions();
+  const menuPanel = document.querySelector("#menuSearchSuggestions");
+  const menuInput = document.querySelector("#menuSearchInput");
+  if (menuPanel && !menuPanel.hidden && !menuPanel.contains(event.target) && event.target !== menuInput) hideMenuSuggestions();
+}
+
+// メニューの検索欄（全国から施設・都道府県・ページを探す）
+let menuSuggestionItems = [];
+let menuSuggestionIndex = -1;
+let menuSuggestionTimer = 0;
+let menuSearchComposing = false;
+
+function hideMenuSuggestions() {
+  const panel = document.querySelector("#menuSearchSuggestions");
+  const input = document.querySelector("#menuSearchInput");
+  menuSuggestionItems = [];
+  menuSuggestionIndex = -1;
+  if (!panel) return;
+  panel.hidden = true;
+  panel.innerHTML = "";
+  input?.setAttribute("aria-expanded", "false");
+}
+
+function renderMenuSuggestions() {
+  const panel = document.querySelector("#menuSearchSuggestions");
+  const input = document.querySelector("#menuSearchInput");
+  if (!panel || !input) return;
+  const value = input.value;
+  // 変換中（未確定のひらがな）も候補を出す（メニューの検索欄は候補欄だけなので、入力中に描き直しても一覧は動かない）
+  if (!normalizeText(value) || document.activeElement !== input) {
+    hideMenuSuggestions();
+    return;
+  }
+  if (!appModulesReady || !facilitySearchCache) {
+    panel.innerHTML = `<div class="search-suggestions-head">検索を準備しています…</div>`;
+    panel.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    if (appModulesReady) {
+      ensureFacilitySearchRecords()
+        .then(() => { if (document.activeElement === input) renderMenuSuggestions(); })
+        .catch(() => {});
+    }
+    return;
+  }
+  const model = buildSuggestionItems(value, { scoped: false });
+  menuSuggestionItems = model.items;
+  menuSuggestionIndex = -1;
+  renderSuggestionPanel(panel, input, value, "menuSearchSuggestion", model);
+}
+
+function openMenuSuggestion(item) {
+  if (!item) return;
+  hideMenuSuggestions();
+  closeSettingsDialog();
+  openSuggestionItem(item);
+}
+
+function submitMenuSearch(value) {
+  const query = String(value || "").trim();
+  if (!query) return;
+  hideMenuSuggestions();
+  closeSettingsDialog();
+  el.searchInput.value = query.slice(0, 80);
+  renderSearchClearButton();
+  setView("Explore");
+  applySearchValue(el.searchInput.value).then((applied) => {
+    if (!applied) return;
+    // 探す画面の検索欄からの送信と同じく、検索欄を画面の上に置いて件数と結果を見せる（先頭のままだと SP で結果が画面外だった）
+    el.searchForm.scrollIntoView({ block: "start", behavior: "instant" });
+    el.searchResultsStatus.focus({ preventScroll: true });
+  });
+}
+
+function bindMenuSearch() {
+  const form = document.querySelector("#menuSearchForm");
+  const input = document.querySelector("#menuSearchInput");
+  const panel = document.querySelector("#menuSearchSuggestions");
+  if (!form || !input || !panel) return;
+  const schedule = () => {
+    window.clearTimeout(menuSuggestionTimer);
+    menuSuggestionTimer = window.setTimeout(renderMenuSuggestions, SEARCH_RENDER_DELAY_MS);
+  };
+  input.addEventListener("input", () => schedule());
+  input.addEventListener("compositionstart", () => { menuSearchComposing = true; });
+  input.addEventListener("compositionend", () => { menuSearchComposing = false; schedule(); });
+  input.addEventListener("focus", () => { if (input.value.trim()) schedule(); });
+  input.addEventListener("keydown", (event) => {
+    if (isImeKeyEvent(event) || menuSearchComposing) {
+      if (event.key === "Enter") lastImeEnterAt = performance.now();
+      return;
+    }
+    if (event.key === "Escape") {
+      // 1回目の Esc は候補を閉じ、2回目はメニューを閉じる。入力値は消さない
+      // （PC の Chrome では2回目の Esc で type="search" の入力値が消えるだけで、メニューは閉じなかった）
+      event.preventDefault();
+      event.stopPropagation();
+      if (!panel.hidden) hideMenuSuggestions();
+      else closeSettingsDialog();
+      return;
+    }
+    if (!menuSuggestionItems.length) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const delta = event.key === "ArrowDown" ? 1 : -1;
+      menuSuggestionIndex = (menuSuggestionIndex + delta + menuSuggestionItems.length) % menuSuggestionItems.length;
+      setSuggestionActiveRow(panel, input, "menuSearchSuggestion", menuSuggestionIndex);
+    } else if (event.key === "Enter" && menuSuggestionIndex >= 0) {
+      event.preventDefault();
+      openMenuSuggestion(menuSuggestionItems[menuSuggestionIndex]);
+    }
+  });
+  panel.addEventListener("click", (event) => {
+    const row = event.target.closest("[data-suggestion-index]");
+    if (!row) return;
+    openMenuSuggestion(menuSuggestionItems[Number(row.dataset.suggestionIndex)]);
+  });
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (isImeEnterJustNow()) return;
+    submitMenuSearch(input.value);
+  });
+}
+
+// サウナ仲間の「集合施設」欄（施設名を入力する欄）にも、探す画面・メニューと同じ形の施設候補を出す。
+// 候補を選ぶと施設名が入るだけで、募集データの形式は変えない（自由入力もそのまま可能）
+let venueSuggestionItems = [];
+let venueSuggestionIndex = -1;
+let venueSuggestionTimer = 0;
+
+function hideVenueSuggestions() {
+  const panel = document.querySelector("#venueSuggestions");
+  const input = document.querySelector("#communityVenueInput");
+  venueSuggestionItems = [];
+  venueSuggestionIndex = -1;
+  if (!panel) return;
+  panel.hidden = true;
+  panel.innerHTML = "";
+  input?.setAttribute("aria-expanded", "false");
+}
+
+function renderVenueSuggestions() {
+  const panel = document.querySelector("#venueSuggestions");
+  const input = document.querySelector("#communityVenueInput");
+  if (!panel || !input) return;
+  const value = input.value;
+  if (!normalizeText(value) || document.activeElement !== input) {
+    hideVenueSuggestions();
+    return;
+  }
+  if (!appModulesReady || !facilitySearchCache) {
+    panel.innerHTML = `<div class="search-suggestions-head">検索を準備しています…</div>`;
+    panel.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    if (appModulesReady) {
+      ensureFacilitySearchRecords()
+        .then(() => { if (document.activeElement === input) renderVenueSuggestions(); })
+        .catch(() => {});
+    }
+    return;
+  }
+  const prefecture = el.communityPrefecture?.value || "";
+  const needles = createSearchNeedles(value);
+  const flatNeedles = uniqueStrings(needles.flat()).filter(Boolean);
+  const matches = [];
+  if (needles.length) {
+    for (const { facility, haystack } of getFacilitySearchRecords()) {
+      if (prefecture && facility.prefecture !== prefecture) continue;
+      if (!matchesSearchBlob(haystack, needles)) continue;
+      const nameKeys = getSearchSuggestionNameKeys(facility);
+      let tier = 2;
+      for (const needle of flatNeedles) {
+        if (nameKeys.some((key) => key.startsWith(needle))) { tier = 0; break; }
+        if (tier > 1 && nameKeys.some((key) => key.includes(needle))) tier = 1;
+      }
+      matches.push({ facility, tier });
+    }
+  }
+  matches.sort((a, b) => a.tier - b.tier);
+  venueSuggestionItems = matches.slice(0, 6).map(({ facility }) => facility);
+  venueSuggestionIndex = -1;
+  if (!venueSuggestionItems.length) {
+    panel.innerHTML = `<div class="search-suggestions-empty"><strong>「${escapeHtml(value.trim().slice(0, 24))}」に一致する施設はありません</strong><span>${prefecture ? `${escapeHtml(prefecture)}の施設から探しています。` : ""}施設名はそのまま入力して募集できます。</span></div>`;
+  } else {
+    panel.innerHTML = `<div class="search-suggestions-head">${prefecture ? `${escapeHtml(prefecture)}の施設` : "施設"} ${matches.length.toLocaleString("ja-JP")}件</div>` + venueSuggestionItems.map((facility, index) => `<button type="button" class="search-suggestion search-suggestion-facility" role="option" id="venueSuggestion${index}" data-suggestion-index="${index}" aria-selected="false"><span class="search-suggestion-name">${escapeHtml(facility.name)}</span><span class="search-suggestion-meta">${escapeHtml([facility.prefecture, facility.city].filter(Boolean).join(" "))}</span></button>`).join("");
+  }
+  panel.hidden = false;
+  input.setAttribute("aria-expanded", "true");
+  fitSuggestionPanel(panel);
+}
+
+function chooseVenueSuggestion(facility) {
+  const input = document.querySelector("#communityVenueInput");
+  if (!facility || !input) return;
+  input.value = facility.name.slice(0, 64);
+  hideVenueSuggestions();
+}
+
+function bindVenueSuggestions() {
+  const input = document.querySelector("#communityVenueInput");
+  const panel = document.querySelector("#venueSuggestions");
+  if (!input || !panel) return;
+  let composing = false;
+  const schedule = () => {
+    window.clearTimeout(venueSuggestionTimer);
+    venueSuggestionTimer = window.setTimeout(renderVenueSuggestions, SEARCH_RENDER_DELAY_MS);
+  };
+  input.addEventListener("input", (event) => { if (!event.isComposing && !composing) schedule(); });
+  input.addEventListener("compositionstart", () => { composing = true; });
+  input.addEventListener("compositionend", () => { composing = false; schedule(); });
+  input.addEventListener("focus", () => { if (input.value.trim()) schedule(); });
+  input.addEventListener("keydown", (event) => {
+    if (isImeKeyEvent(event) || composing) return;
+    if (event.key === "Escape") { hideVenueSuggestions(); return; }
+    if (!venueSuggestionItems.length) return;
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      event.preventDefault();
+      const delta = event.key === "ArrowDown" ? 1 : -1;
+      venueSuggestionIndex = (venueSuggestionIndex + delta + venueSuggestionItems.length) % venueSuggestionItems.length;
+      setSuggestionActiveRow(panel, input, "venueSuggestion", venueSuggestionIndex);
+    } else if (event.key === "Enter" && venueSuggestionIndex >= 0) {
+      event.preventDefault();
+      chooseVenueSuggestion(venueSuggestionItems[venueSuggestionIndex]);
+    }
+  });
+  panel.addEventListener("click", (event) => {
+    const row = event.target.closest("[data-suggestion-index]");
+    if (row) chooseVenueSuggestion(venueSuggestionItems[Number(row.dataset.suggestionIndex)]);
+  });
+  document.addEventListener("pointerdown", (event) => {
+    if (!panel.hidden && !panel.contains(event.target) && event.target !== input) hideVenueSuggestions();
+  });
+  el.communityPrefecture?.addEventListener("change", () => { if (document.activeElement === input) renderVenueSuggestions(); });
+}
+
+// メニューの現在地：開いているビューに対応する項目へ印を付ける
+const MENU_HERE_NAMES = {
+  Explore: "サウナを探す（ホーム）",
+  Facility: "施設詳細",
+  Passport: "サ印（押印帳）",
+  Stats: "サ活の記録",
+  Gear: "Gear",
+  Stay: "サウナ合宿先",
+  Contact: "掲載・お問い合わせ",
+  About: "運営・データ方針",
+  Sameshi: "サ飯",
+  Guide: "サウナ入門",
+  News: "サウニュ〜",
+  NewsArticle: "サウニュ〜の記事",
+  Community: "サウナ仲間",
+  Add: "施設を追加",
+  StampRally: "スタンプラリーの始め方",
+  Goshuin: "サウナ御朱印とサ印の違い",
+};
+
+function updateMenuHere() {
+  const key = activeView === "NewsArticle" ? "News" : activeView;
+  document.querySelectorAll("#settingsDialog [data-menu-key]").forEach((item) => {
+    const current = item.dataset.menuKey === key;
+    item.classList.toggle("is-current", current);
+    if (current) item.setAttribute("aria-current", "page");
+    else item.removeAttribute("aria-current");
+  });
+  const nameEl = document.querySelector("#menuHereName");
+  if (!nameEl) return;
+  let name = MENU_HERE_NAMES[activeView] || MENU_HERE_NAMES.Explore;
+  if (activeView === "Explore" && selectedPrefecture && selectedPrefecture !== "全国") name = `${selectedPrefecture}のサウナ`;
+  if (activeView === "Facility") {
+    const facility = activeFacilityId ? getFacilityById(activeFacilityId) : null;
+    if (facility) name = `施設詳細：${facility.name}`;
+  }
+  nameEl.textContent = name;
 }
 
 function renderPrefStrip() {
@@ -3146,7 +3816,7 @@ function renderFacilityCard(facility) {
       ${renderStamp(facility, Boolean(visited))}
       <div class="card-body">
         <div class="card-head">
-          <h3 class="facility-name"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
+          <h3 class="facility-name"${nameRunStyle(facility.name)}><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></h3>
           <div class="card-head-actions">
             ${renderFavoriteButton(facility, favorite, true)}
           </div>
@@ -3215,6 +3885,7 @@ function renderMapRouteLink(facility, { compact = false } = {}) {
   `;
 }
 
+// design-extra SE-29：施設詳細の経路・公式サイトの行（情報タブのときだけ表示）
 function renderFacilityRouteBlock(facility) {
   const hasLocation = Boolean(getFacilityAddress(facility) || getFacilityCoordinate(facility));
   const officialUrl = String(facility.officialUrl || "").trim();
@@ -3225,6 +3896,7 @@ function renderFacilityRouteBlock(facility) {
     </div>`;
 }
 
+// design-extra SE-26：情報タブ内の地図（情報表の直後）
 function renderFacilityMapSection(facility) {
   const address = getFacilityAddress(facility);
   const query = [facility.name, address || getFacilityAreaLabel(facility)].filter(Boolean).join(" ");
@@ -3272,7 +3944,7 @@ function renderFacilityDetail() {
       </nav>
       <header class="facility-dh">
         <p class="facility-dh-eyebrow">SAUNA DETAIL</p>
-        <h2>${escapeHtml(facility.name)}</h2>
+        <h2${nameRunStyle(facility.name)}>${escapeHtml(facility.name)}</h2>
         <p class="facility-dh-loc">${escapeHtml(getFacilityAreaLabel(facility))}</p>
         <div class="facility-dh-seal">${visited ? renderStamp(facility, true) : `<div class="facility-dh-seal-empty"><span>まだ押していない</span></div>`}</div>
       </header>
@@ -3293,12 +3965,15 @@ function renderFacilityDetail() {
           ${facts.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd><span>${escapeHtml(row.value)} <a href="${escapeAttr(row.sourceUrl)}" target="_blank" rel="noreferrer" aria-label="${escapeAttr(row.label)}の公式出典">出典</a></span>${row.checkedAt ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(row.checkedAt))}</span>` : ""}</dd></div>`).join("")}
           ${renderSaunachelinAwardRow(facility)}
           <div><dt>住所</dt><dd><span>${escapeHtml(address || `${getFacilityAreaLabel(facility)}（番地未確認）`)}</span>${address ? (facility.addressCheckedAt && facility.addressCheckedAt !== "未確認" ? `<span class="fact-badge">照合済 ${escapeHtml(formatMonthDay(facility.addressCheckedAt))}</span>` : "") : `<span class="fact-badge is-unverified">未確認</span>`}</dd></div>
-          ${missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
+          ${missingFields.length > 1
+            // 2026-11-18 監査 SP-M3/PC-M5：未確認の項目を1行ずつ並べると「公式照合で未確認［未確認］」の繰り返しになるため、項目名をまとめて1行で示す
+            ? `<div class="facts-missing-row"><dt>未確認の項目</dt><dd><span class="fact-missing-note">${missingFields.map(escapeHtml).join("・")}（公式照合で未確認）</span><span class="fact-badge is-unverified">未確認</span></dd></div>`
+            : missingFields.map(field => `<div><dt>${escapeHtml(field)}</dt><dd><span class="fact-missing-note">公式照合で未確認</span><span class="fact-badge is-unverified">未確認</span></dd></div>`).join("")}
           ${!evidence && facility.access ? `<div><dt>掲載アクセス</dt><dd>${escapeHtml(facility.access)}</dd></div>` : ""}
         </dl>
         ${renderFacilityMapSection(facility)}
         <p class="facility-provenance">${evidence ? `${evidence.method === "official-labeled-fields" ? "公式ページで項目を確認した日" : "掲載した公式情報を照合した日"}: ${escapeHtml(getEvidenceDate(evidence))}。${facts.some(row => row.label === "施設営業時間") ? "施設営業時間と浴場・サウナの利用時間は異なる場合があります。" : ""}${facts.some(row => /℃|[0-9０-９]度/.test(row.value)) ? "温度は掲載値であり実測ではありません。" : ""}臨時変更は公式へ。` : "料金・設備は参照元でご確認ください。確認できた項目から順次掲載します。"}</p>
-        <p class="facility-warn">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。<button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
+        <p class="facility-warn"><span class="facility-warn-text">営業時間・料金・休館日は、訪問前に公式ページで再確認してください。各項目の右の札は「公式照合の状態と確認日」です。</span><button type="button" data-action="report-facility" data-id="${id}">情報修正を知らせる</button></p>
         ${missingFields.length || facility.sourceCheckedAt ? `<details class="facility-disclosure"><summary>掲載範囲について</summary><p>未掲載の項目は「設備なし」を意味しません。${facility.sourceCheckedAt ? `参照ページの取得確認日: ${escapeHtml(facility.sourceCheckedAt)}（営業・設備の確認日ではありません）。` : ""}</p></details>` : ""}
         <div class="facility-inline-actions">${renderFacilitySourceBadge(facility)}${renderFacilityPhotoLink(facility)}</div>
         ${renderFacilityNearbySection(facility)}
@@ -3358,14 +4033,14 @@ function renderFacilityNearbySection(facility) {
     .slice(0, 5);
   if (!peers.length) return "";
   return `<section class="facility-nearby" aria-label="同じ市区町村のほかのサウナ">
-    <h3 class="facility-h3">${escapeHtml(cityKey)}のほかのサウナ<span class="facility-h3-label" aria-hidden="true">NEARBY</span></h3>
+    <h3 class="facility-h3"><span class="facility-h3-title">${escapeHtml(cityKey)}のほかのサウナ</span><span class="facility-h3-label" aria-hidden="true">NEARBY</span></h3>
     <div class="facility-near-list">${peers.map((peer) => {
       const peerVisited = Boolean(state.visited[peer.id]);
       const peerWished = Boolean(state.wishlist[peer.id]);
       const mark = peerVisited ? "済" : peerWished ? "行" : "印";
       const markClass = peerVisited ? "is-done" : peerWished ? "is-wish" : "";
       const sub = peerVisited ? "押印済み" : peerWished ? "行きたい" : (peer.city || peer.prefecture || "");
-      return `<button type="button" class="facility-near-row" data-detail-card="${escapeAttr(peer.id)}"><span class="facility-near-mark ${markClass}" aria-hidden="true">${mark}</span><span class="facility-near-main"><strong>${escapeHtml(peer.name)}</strong><small>${escapeHtml(sub)}</small></span><span class="facility-near-arrow" aria-hidden="true">→</span></button>`;
+      return `<button type="button" class="facility-near-row" data-detail-card="${escapeAttr(peer.id)}"><span class="facility-near-mark ${markClass}" aria-hidden="true">${mark}</span><span class="facility-near-main"><strong${nameRunStyle(peer.name)}>${escapeHtml(peer.name)}</strong><small>${escapeHtml(sub)}</small></span><span class="facility-near-arrow" aria-hidden="true">→</span></button>`;
     }).join("")}</div>
   </section>`;
 }
@@ -3379,9 +4054,22 @@ function renderFacilitySameshiSection(facility) {
   if (!matched.length) return "";
   const prefSpotCount = SAMESHI_SPOTS.filter((spot) => spot.prefecture === facility.prefecture).length;
   return `<section class="facility-sameshi" aria-label="サ飯候補">
-    <h3 class="facility-h3">サ飯候補<span class="facility-h3-label" aria-hidden="true">SA-MESHI · ${escapeHtml(facility.prefecture)} ${prefSpotCount}件</span><button type="button" class="facility-h3-link" data-open-view="Sameshi">一覧 →</button></h3>
-    <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
+    <h3 class="facility-h3"><span class="facility-h3-title">サ飯候補</span><span class="facility-h3-label" aria-hidden="true">SA-MESHI · ${escapeHtml(facility.prefecture)} ${prefSpotCount}件</span><button type="button" class="facility-h3-link" data-open-view="Sameshi">一覧 →</button></h3>
+    <div class="facility-shelf">${matched.map((spot) => `<a class="facility-shelf-item" href="${escapeAttr(spot.url)}" target="_blank" rel="noreferrer"><strong${nameRunStyle(spot.spot)}>${escapeHtml(spot.spot)}</strong><small>運営確認済み</small></a>`).join("")}</div>
   </section>`;
+}
+
+// 施設名・店名の「折り返せない最長の塊」の字数を CSS 変数で渡す（styles.css がその塊を1行に収める大きさまで文字を下げる）。
+// 2026-11-17 レイアウト監査：「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」等が枠を押し広げる・語の途中で折れるのを防ぐ
+// --name-len は1行に収めたい長さ（空白の無い16字までの名前は全体、それ以外は末尾の漢字2字の地名を切り離さずに数えた最長の塊）。
+// 下限の大きさまでで1行に入るならそちらを優先し、入らないときだけ文節・地名の前で折る（styles.css の (3)）
+function nameRunStyle(name) {
+  if (typeof longestPhraseRun !== "function") return "";
+  const run = longestPhraseRun(name);
+  // 空白の無い16字までの名前は名前全体の長さ（下限の大きさまでで1行に入るなら1行にする）
+  const whole = longestPhraseRun(name, { whole: true });
+  const len = /\s/.test(String(name)) || whole > 16 ? longestPhraseRun(name, { joinTail: true }) : whole;
+  return run > 0 ? ` style="--name-run:${run};--name-len:${len}"` : "";
 }
 
 function formatMonthDay(dateText) {
@@ -3396,7 +4084,7 @@ function getEvidenceDate(evidence) {
 function renderFacilityCardFacts(facility) {
   const evidence = getFacilityEvidence(facility);
   const rows = evidence?.facts.filter(row => ["営業状況", "料金", "営業時間", "施設営業時間", "設備", "設備・温度", "サウナ設備", "サウナルーム", "サウナストーブ", "サウナ収容人数", "水風呂", "水風呂収容人数", "利用条件", "休館日"].includes(row.label)).slice(0, 4) || [];
-  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl><p class="card-verification">${evidence ? `公式${evidence.method === "official-labeled-fields" ? "掲載値の確認日" : "照合日"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ` : "料金・営業時間・設備は公式で要確認"}</p>`;
+  return `<dl class="card-facts">${rows.map(row => `<div><dt>${escapeHtml(row.label)}</dt><dd>${escapeHtml(row.value)}</dd></div>`).join("")}</dl>${evidence ? `<p class="card-verification">公式${evidence.method === "official-labeled-fields" ? "掲載値の確認日" : "照合日"} ${escapeHtml(getEvidenceDate(evidence))} · 利用条件・出典は詳細へ</p>` : ""}`;
 }
 function renderCheckinPanel(facility) {
   const coordinate = getFacilityCoordinate(facility);
@@ -3789,10 +4477,10 @@ function renderPassport() {
     return `
       <article class="stamp-tile" data-detail-card="${escapeAttr(facility.id)}">
         ${renderStamp(facility, Boolean(visited))}
-        <p class="stamp-title"><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
+        <p class="stamp-title"${nameRunStyle(facility.name)}><a class="facility-title-link" href="${escapeAttr(getFacilityDetailPath(facility))}">${escapeHtml(facility.name)}</a></p>
         <span class="stamp-date${!visited && status ? " stamp-date-excluded" : ""}">${escapeHtml(date)}</span>
         ${memo ? `<p class="stamp-note">${escapeHtml(memo.text)}</p>` : ""}
-        <button class="tiny-share-button" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
+        <button class="tiny-share-button${visited ? "" : " is-quiet"}" type="button" data-action="share-facility" data-id="${escapeAttr(facility.id)}">施設を共有</button>
         ${memo ? `<button class="tiny-share-button" type="button" data-action="share-note" data-id="${escapeAttr(facility.id)}">Xで共有</button>` : ""}
         ${visited ? `<button class="tiny-undo-button" type="button" data-action="unstamp" data-id="${escapeAttr(facility.id)}">取り消す</button>` : ""}
       </article>
@@ -4363,7 +5051,7 @@ function renderStats() {
     return `
       <button class="pref-progress" type="button" data-prefecture="${escapeAttr(pref.name)}">
         <strong>${escapeHtml(shortPrefName(pref.name))}</strong>
-        <span>${count}/${candidateCount}湯 / ${badge}</span>
+        <span>${[`${count}/${candidateCount}湯`, ...badge.split(" / ")].map((part, index, parts) => `<span class="pp-chunk">${escapeHtml(part)}${index < parts.length - 1 ? " /" : ""}</span>`).join(" ")}</span>
       </button>
     `;
   }).join("");
@@ -4476,7 +5164,8 @@ function renderLeaderboard() {
     ? `表示中は30秒ごとに確認${rankingUpdatedAt ? ` / 取得 ${formatDateTime(rankingUpdatedAt)}` : ""}`
     : "通信状態を確認して「更新」から再試行できます。";
   if (el.profileFeedback) {
-    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。公開されるのはニックネーム・サ印数・称号です。施設一覧は公開設定をオンにした場合のみ公開されます。");
+    el.profileFeedback.textContent = rankingSaving ? "ランキングに送信しています…" : rankingLastError || (isProfileComplete() ? "登録内容はこの端末に保存されています。別端末への引き継ぎには対応していません。" : "ニックネームとメールで参加できます。");
+    // 公開範囲の説明は直上の #profileVisibility に1回だけ出す（同じ内容が2回続いていた。2026-11-19 独立監査2 中-6）
     el.profileFeedback.classList.toggle("is-error", Boolean(rankingLastError));
   }
   el.profileForm.querySelector('[type="submit"]').disabled = rankingSaving;
@@ -4618,7 +5307,7 @@ function renderAboutPage() {
       <section class="about-card">
         <p class="eyebrow">MONETIZATION</p>
         <h3>広告・アフィリエイト</h3>
-        <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。表示順や説明は報酬額ではなく用途別に整理し、価格、在庫、レビューはリンク先の最新情報を優先します。広告掲載は広告であることが分かる表示にします。</p>
+        <p>GearのAmazon・楽天リンクを経由した購入で運営が紹介料を受け取る場合があります。表示順や説明は報酬額ではなく用途別に整理し、価格、在庫、レビューはリンク先の最新情報を優先します。Amazonのアソシエイトとして、サ印帳は適格販売により収入を得ています。広告掲載は広告であることが分かる表示にします。</p>
       </section>
       <section class="about-card about-card-wide">
         <p class="eyebrow">AUTOMATION</p>
@@ -4754,7 +5443,7 @@ function renderSameshiCard(item) {
       </div>
       <div class="sameshi-body">
         <div class="card-head">
-          <h3 class="facility-name">${escapeHtml(item.spot)}</h3>
+          <h3 class="facility-name"${nameRunStyle(item.spot)}>${escapeHtml(item.spot)}</h3>
           <a class="source-badge ${linkKind}" href="${escapeAttr(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.linkLabel || "参照")}</a>
         </div>
         <p class="facility-meta">${escapeHtml([item.prefecture, item.area].filter(Boolean).join(" / "))}</p>
@@ -5185,7 +5874,7 @@ function renderGuideGearRail(articles) {
     <div class="guide-gear-head">
       <div>
         <span>READ TO GEAR</span>
-        <strong>読んだら、次のサウナを快適にする</strong>
+        <strong>読んだら、<wbr />次のサウナを快適にする</strong>
       </div>
       <button class="mini-button" type="button" data-open-view="Gear">Gear 30件</button>
     </div>
@@ -5596,6 +6285,8 @@ function renderFeatureFilterGrid() {
     const count = counts.get(feature) || 0;
     return { feature, available: count > 0 || active, html: `<button class="feature-chip ${active ? "is-active" : ""}" type="button" data-feature-filter="${escapeAttr(feature)}" aria-pressed="${active}" ${!count && !active ? 'disabled title="現在の条件に一致する確認情報はありません"' : ""}><span class="feature-chip-label">${escapeHtml(feature)}</span><em class="feature-chip-count num">${count}</em></button>` };
   });
+  // design-extra SE-17：特徴は群ごとに見出しを付けて並べる。解除はパネル下部の
+  // #featureFilterReset へ移したため、グリッド内には置かない
   const byFeature = new Map(buttons.map((item) => [item.feature, item]));
   const groupsHtml = FEATURE_GROUPS.map((group) => {
     const items = group.options.map((feature) => byFeature.get(feature)).filter((item) => item && item.available);
@@ -6329,6 +7020,8 @@ function ensureFacilitySearchRecords() {
   const version = facilityCacheVersion;
   const facilities = getFacilities();
   facilitySearchBuild = (async () => {
+    // 地名の読みは索引づくりと並行して読み込み、索引が使えるようになる前にそろえる
+    const readingsReady = loadPlaceReadings();
     const records = [];
     const buildStart = performance.now();
     let sliceStart = performance.now();
@@ -6347,6 +7040,8 @@ function ensureFacilitySearchRecords() {
       el.searchResultsStatus.dataset.searchIndexWorkMs = (performance.now() - buildStart - yieldWaitMs).toFixed(1);
       el.searchResultsStatus.dataset.searchIndexYieldMs = yieldWaitMs.toFixed(1);
     }
+    await readingsReady;
+    if (version !== facilityCacheVersion) return null;
     facilitySearchMemoSignature = memoSignature;
     facilitySearchCache = records;
     return records;
@@ -6647,6 +7342,8 @@ function moveToSearchPrefecture(value) {
   const needles = createSearchNeedles(value);
   if (!term) return false;
   if (getSaunachelinAwardYear(value) !== null) return setSelectedPrefecture("全国");
+  // 1文字だけでは県を切り替えない（「し」を打った時点で一覧が宮城県に切り替わり、次の文字で全国に戻るなど、入力のたびに結果が跳ねていた）
+  if (normalizeCompact(term).length < 2) return false;
 
   const prefMatch = PREFECTURES.find((pref) => {
     const full = buildSearchBlob([pref.name]);
@@ -7343,6 +8040,54 @@ function saveSettings() {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
 }
 
+// PC：本文（.main）だけがスクロールする作り（左右の柱は動かない）のため、左右の柱の上のホイールと、開いた直後
+// （フォーカスが body のまま）の End・Space などのキー操作が効かず、フッターに届く経路が本文の上だけだった（2026-11-19 独立監査2 中-1）。
+// 文書全体のスクロールに作り替えると .main.scrollTo を前提にした各所（画面切替で先頭へ戻す・トップへボタン等）が壊れるため、
+// 柱の上のホイールは柱の中に動かせる箱が無ければ .main へ回し、body にフォーカスがあるときのキー操作も .main に効かせる。
+// フッターは .main の末尾にある（PR #20）ので、どちらの経路でもフッターまで届く。
+if (el.main?.addEventListener && typeof window !== "undefined" && typeof document.addEventListener === "function") {
+  const main = el.main;
+  const pageScrolls = () => {
+    const root = document.scrollingElement;
+    return Boolean(root) && root.scrollHeight > root.clientHeight + 1;
+  };
+  const mainScrolls = () => main.scrollHeight > main.clientHeight + 1 && main.isConnected && main.offsetParent !== null;
+  const innerCanScroll = (node, dy) => {
+    for (let n = node; n && n !== document.body && n !== document.documentElement; n = n.parentElement) {
+      if (n.scrollHeight <= n.clientHeight + 1) continue;
+      if (!/(auto|scroll)/.test(getComputedStyle(n).overflowY)) continue;
+      if (dy > 0 ? n.scrollTop + n.clientHeight < n.scrollHeight - 1 : n.scrollTop > 0) return true;
+    }
+    return false;
+  };
+  document.addEventListener("wheel", (event) => {
+    if (event.defaultPrevented || event.ctrlKey || Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+    const target = event.target instanceof Element ? event.target : null;
+    if (!target || main.contains(target) || target.closest("dialog")) return;
+    if (!mainScrolls() || pageScrolls() || innerCanScroll(target, event.deltaY)) return;
+    const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? main.clientHeight : 1;
+    main.scrollTop += event.deltaY * unit;
+    event.preventDefault();
+  }, { passive: false });
+  const SCROLL_KEYS = { End: "end", Home: "home", PageDown: "page", PageUp: "-page", " ": "space", ArrowDown: "line", ArrowUp: "-line" };
+  document.addEventListener("keydown", (event) => {
+    const kind = SCROLL_KEYS[event.key];
+    if (!kind || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+    const active = document.activeElement;
+    const onBody = !active || active === document.body || active === document.documentElement;
+    // .main の中にフォーカスがあるときはブラウザ標準のスクロールに任せる。柱のボタン等にフォーカスがあるときは、
+    // ボタンの操作に使わない End・Home・PageUp・PageDown だけを .main へ回す
+    if (!onBody && (main.contains(active) || !/^(end|home|-?page)$/.test(kind) || active.closest("input, textarea, select, [contenteditable], dialog"))) return;
+    if (!mainScrolls() || pageScrolls()) return;
+    if (kind === "end" || kind === "home") main.scrollTo({ top: kind === "end" ? main.scrollHeight : 0, behavior: "auto" });
+    else {
+      const sign = kind.startsWith("-") || (kind === "space" && event.shiftKey) ? -1 : 1;
+      main.scrollBy({ top: sign * (kind.endsWith("line") ? 40 : main.clientHeight * 0.9), behavior: "auto" });
+    }
+    event.preventDefault();
+  });
+}
+
 // 「トップへ」ボタン: .main は内側スクロールコンテナなので、ブラウザ標準の
 // 先頭へ戻る操作（ステータスバーのタップ等）が効かない。約1画面分スクロール
 // したらボタンを出し、タップで先頭へ戻す。モーション抑制設定では即時移動。
@@ -7473,7 +8218,21 @@ function getViewFromLocation() {
   activeFacilityId = "";
   activeNewsSlug = "";
   const found = Object.entries(VIEW_META).find(([, meta]) => meta.path === path);
+  if (!found && path !== "/") showRouteNotFoundNotice();
   return found?.[0] || "Explore";
+}
+
+// 存在しない URL ではホーム（探す）を表示するが、何の案内もないと開きたかったページと取り違えるため、
+// 404.html と同じ文言の案内を帳面の先頭に出す（別のページへ移ると消える）
+function showRouteNotFoundNotice() {
+  const view = document.querySelector("#viewExplore");
+  if (!view || document.querySelector("#routeNotFound")) return;
+  const notice = document.createElement("div");
+  notice.className = "route-notfound";
+  notice.id = "routeNotFound";
+  notice.setAttribute("role", "status");
+  notice.innerHTML = `<p class="route-notfound-eyebrow">NOT FOUND</p><strong>ページが見つかりません</strong><span>検索画面からサウナ候補を探してください。</span>`;
+  view.prepend(notice);
 }
 
 function isArticleRoute() {
@@ -7490,7 +8249,11 @@ function pushViewUrl(view) {
     : view === "NewsArticle" && activeNewsSlug
       ? `/news/${encodeURIComponent(activeNewsSlug)}/`
       : VIEW_META[view]?.path || "/";
-  if (location.pathname !== path) history.pushState({ view }, "", path);
+  if (location.pathname !== path) {
+    // 戻るで戻ったときに、離れたときの帳面のスクロール位置（検索結果のどこを見ていたか）へ戻せるよう、今の履歴に控える
+    try { history.replaceState({ ...(history.state || {}), mainScrollTop: scrollTopBeforeViewChange }, ""); } catch { /* 控えられなくても移動は続ける */ }
+    history.pushState({ view }, "", path);
+  }
   updateDocumentMetaForView(view);
   trackPageView();
 }
@@ -7515,8 +8278,35 @@ function getNewsMetaTags(article) {
   };
 }
 
+function captureServed404Head() {
+  try {
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const href = typeof canonical?.getAttribute === "function" ? canonical.getAttribute("href") || "" : "";
+    if (!/\/404\.html$/.test(href)) return null;
+    const metas = [...document.querySelectorAll('meta[name="description"], meta[name="robots"], meta[name="googlebot"], meta[property^="og:"], meta[name^="twitter:"]')]
+      .map((node) => [node, node.getAttribute("content")]);
+    return { path: location.pathname, title: document.title, canonical: href, metas };
+  } catch {
+    return null;
+  }
+}
+
+// 404 として配信された URL にいる間は true。控えておいた 404 の head に戻す（履歴で戻ってきたときも）
+function restoreServed404Head() {
+  if (!SERVED_404_HEAD || location.pathname !== SERVED_404_HEAD.path) return false;
+  document.title = SERVED_404_HEAD.title;
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", SERVED_404_HEAD.canonical);
+  SERVED_404_HEAD.metas.forEach(([node, content]) => {
+    if (content === null) node.removeAttribute("content");
+    else node.setAttribute("content", content);
+  });
+  return true;
+}
+
 function updateDocumentMetaForView(view, facility = null) {
   if (isArticleRoute()) return;
+  if (restoreServed404Head()) return;
   const baseMeta = VIEW_META[view] || VIEW_META.Explore;
   if (view === "NewsArticle" && newsModule && activeNewsSlug) {
     const article = (newsModule.SAUNA_NEWS || []).find((entry) => entry.slug === activeNewsSlug);
@@ -7592,17 +8382,20 @@ function syncFacilityStructuredData(facility) {
   const address = getFacilityAddress(facility);
   const coordinate = getFacilityCoordinate(facility);
   const image = getDisplayImageUrl(facility);
+  const { streetAddress, postalCode } = splitPostalCodeFromAddress(address);
   const data = {
     "@context": "https://schema.org",
     "@type": facility.source === "Airbnb" ? "LodgingBusiness" : "LocalBusiness",
     "@id": `${getFacilityDetailUrl(facility)}#place`,
-    name: facility.name,
+    // 画面の見出しでは前後の空白が表示されないので、名前も前後の空白を除く（scripts/build-seo.mjs と同じ）
+    name: String(facility.name || "").trim(),
     url: getFacilityDetailUrl(facility),
     sameAs: [facility.officialUrl, facility.sourceUrl].filter(Boolean),
     image: image ? [image] : undefined,
     address: address ? {
       "@type": "PostalAddress",
-      streetAddress: address,
+      streetAddress: streetAddress || undefined,
+      postalCode,
       addressCountry: "JP",
     } : undefined,
     areaServed: getFacilityAreaLabel(facility) || undefined,
@@ -7717,6 +8510,8 @@ function tokenizeSearchInput(value) {
 
 function createSearchNeedleGroup(term) {
   return uniqueStrings([
+    // 地名の読み（「しんじゅく」→新宿・新宿区）は先頭に置き、96件の上限で落ちないようにする
+    ...findPlaceNamesByReading(term),
     ...createSearchPrimaryVariants(term),
     ...(shouldUseSynonymExpansion(term) ? expandSearchTerm(term) : []),
   ].map(normalizeSearchToken))
@@ -7875,16 +8670,22 @@ function expandSearchTerm(term) {
 function expandSearchTextVariants(source) {
   const normalized = normalizeText(source);
   if (!normalized) return [];
-  const variants = new Set([normalized]);
+  const variants = [normalized];
+  const seen = new Set(variants);
   for (const [from, to] of SEARCH_READING_REPLACEMENTS) {
-    const current = [...variants];
-    for (const value of current) {
+    // Each rule applies only to variants that existed when the rule started.
+    const count = variants.length;
+    for (let index = 0; index < count; index += 1) {
+      const value = variants[index];
       if (!value.includes(from)) continue;
-      variants.add(value.split(from).join(to));
-      if (variants.size >= 80) return [...variants];
+      const variant = value.split(from).join(to);
+      if (seen.has(variant)) continue;
+      seen.add(variant);
+      variants.push(variant);
+      if (variants.length >= 80) return variants;
     }
   }
-  return [...variants];
+  return variants;
 }
 
 function normalizeSearchToken(value) {
@@ -8006,6 +8807,107 @@ function toKatakana(value) {
 
 function toHiragana(value) {
   return String(value).replace(/[\u30a1-\u30f6]/g, (char) => String.fromCharCode(char.charCodeAt(0) - 0x60));
+}
+
+// --- 地名の読み（ひらがな・カタカナ・ローマ字の地名を、漢字の地名にもつなぐ） ---
+// 施設データには読みが無く、「しんじゅく」「ほっかいどう」が0件だった（PR #23 の要確認）。
+// 読みは search-readings.js（総務省 全国地方公共団体コードのカナ）だけを使い、推測した読みは足さない。
+const PLACE_NAME_SUFFIX_READINGS = [
+  ["市", ["シ"]], ["区", ["ク"]], ["町", ["チヨウ", "マチ"]], ["村", ["ムラ", "ソン"]],
+  ["都", ["ト"]], ["府", ["フ"]], ["県", ["ケン"]],
+];
+const PLACE_READING_PREFIX_MIN = 3;
+const PLACE_READING_PREFIX_REST_MAX = 2;
+const PLACE_READING_NAME_LIMIT = 12;
+const PLACE_READING_KEY_PATTERN = /^[ァ-ヶ]{2,}$/;
+
+function loadPlaceReadings() {
+  if (placeReadingIndex) return Promise.resolve(placeReadingIndex);
+  if (placeReadingsLoad) return placeReadingsLoad;
+  const fallback = (error) => {
+    if (error) console.warn("地名の読みを読み込めませんでした（読みなしで検索します）", error);
+    placeReadingIndex = buildPlaceReadingIndex("");
+    return placeReadingIndex;
+  };
+  try {
+    placeReadingsLoad = importWithTimeout(getVersionedModuleSpecifier(PLACE_READINGS_MODULE_PATH, encodeURIComponent(APP_BUILD_ID)), DATA_IMPORT_TIMEOUT_MS, "地名の読み")
+      .then((module) => { placeReadingIndex = buildPlaceReadingIndex(module.PLACE_READINGS); return placeReadingIndex; })
+      .catch(fallback);
+  } catch (error) {
+    placeReadingsLoad = Promise.resolve(fallback(error));
+  }
+  return placeReadingsLoad;
+}
+
+// 読みの照合キー：カタカナ・区切りなし・小書き文字を大きい文字に（出典のカナには「シンジヨウソン」のように小書きを使わない読みがあるため）
+function placeReadingKey(value) {
+  return normalizeKanaLoose(value);
+}
+
+function buildPlaceReadingIndex(source) {
+  const byKey = new Map();
+  const prefKeys = new Map();
+  const add = (key, name) => {
+    if (!key || !name) return;
+    const names = byKey.get(key) || new Set();
+    names.add(name);
+    byKey.set(key, names);
+  };
+  String(source || "").split("|").forEach((entry) => {
+    const at = entry.indexOf(":");
+    if (at < 1) return;
+    const name = entry.slice(at + 1);
+    const key = placeReadingKey(entry.slice(0, at));
+    if (!name || !PLACE_READING_KEY_PATTERN.test(key)) return;
+    add(key, name);
+    const keys = [key];
+    // 「新宿区（しんじゅくく）」は「新宿（しんじゅく）」でも引けるようにする。末尾の字と読みが出典どおりに対応するときだけ外す。
+    // 1字だけ残る地名（北区→北、津市→津）は、ほかの地名にも広く当たるため外さない
+    for (const [suffix, readings] of PLACE_NAME_SUFFIX_READINGS) {
+      if (!name.endsWith(suffix) || name.length < 3) continue;
+      const tail = readings.find((reading) => key.endsWith(reading) && key.length - reading.length >= 2);
+      if (!tail) continue;
+      const baseKey = key.slice(0, -tail.length);
+      add(baseKey, name.slice(0, -suffix.length));
+      keys.push(baseKey);
+      break;
+    }
+    if (name === "北海道" || /[都府県]$/.test(name)) prefKeys.set(name, keys);
+  });
+  return { byKey, prefKeys, keys: [...byKey.keys()] };
+}
+
+// 検索語（1語）の読みに当たる地名（漢字）を返す。読みと完全に一致する地名と、
+// 3文字以上の読みの先頭が一致し、残りが2文字以内の地名（「しんじゅ」→新宿）。漢字を含む語は対象外
+function findPlaceNamesByReading(term) {
+  const index = placeReadingIndex;
+  if (!index?.keys.length) return [];
+  const queryKeys = uniqueStrings([placeReadingKey(term), placeReadingKey(kanaFromRomajiSearchText(term))])
+    .filter((key) => PLACE_READING_KEY_PATTERN.test(key));
+  if (!queryKeys.length) return [];
+  const names = new Set();
+  for (const key of queryKeys) {
+    index.byKey.get(key)?.forEach((name) => names.add(name));
+  }
+  for (const key of queryKeys) {
+    if (key.length < PLACE_READING_PREFIX_MIN) continue;
+    for (const candidate of index.keys) {
+      if (names.size >= PLACE_READING_NAME_LIMIT) break;
+      if (candidate.length > key.length && candidate.length - key.length <= PLACE_READING_PREFIX_REST_MAX && candidate.startsWith(key)) {
+        index.byKey.get(candidate).forEach((name) => names.add(name));
+      }
+    }
+  }
+  return [...names].slice(0, PLACE_READING_NAME_LIMIT);
+}
+
+// 都道府県の候補：読みの先頭が2文字以上一致する県（「ほっ」→北海道、「おおさか」→大阪府）
+function prefectureMatchesReading(prefName, value) {
+  const keys = placeReadingIndex?.prefKeys.get(prefName);
+  if (!keys) return false;
+  const queries = [placeReadingKey(value), placeReadingKey(kanaFromRomajiSearchText(value))]
+    .filter((query) => PLACE_READING_KEY_PATTERN.test(query));
+  return queries.some((query) => keys.some((key) => key.startsWith(query)));
 }
 
 function normalizeFacilityName(value) {
@@ -8234,7 +9136,7 @@ function renderPrefBand() {
   const pref = selectedPrefecture;
   const active = Boolean(pref && pref !== "全国");
   view.classList.toggle("is-pref-mode", active);
-  if (el.searchInput) el.searchInput.placeholder = active ? `${pref}内の施設名・特徴で探す` : "施設名・都道府県・特徴で探す";
+  if (el.searchInput) el.searchInput.placeholder = active ? `${shortPrefName(pref)}の施設名・特徴` : "施設名・県・特徴で探す";
   if (!active) {
     band.hidden = true;
     band.innerHTML = "";
@@ -8275,6 +9177,13 @@ function updateTocCurrent() {
   items.forEach((item, index) => item.classList.toggle("is-current", index === target));
 }
 
+// 制覇マップの升は「東京」「大阪」のような短い県名で持っているため、一覧の絞り込みに使う正式名（「東京都」）へ直す。
+// 2026-11-18 監査で、升を押すと「東京 · 0件」になっていた（短い名前のまま絞り込んでいた）ことを確認して修正
+function tilePrefectureName(short) {
+  const name = String(short || "");
+  return PREFECTURES.find((pref) => pref.name === name || pref.name.replace(/[都道府県]$/, "") === name)?.name || name;
+}
+
 function renderTileMap() {
   const layout = [["北海道",12,0],["青森",12,1],["秋田",11,2],["岩手",12,2],["山形",11,3],["宮城",12,3],["石川",8,4],["富山",9,4],["新潟",10,4],["福島",11,4],["島根",3,5],["鳥取",4,5],["兵庫",5,5],["京都",6,5],["福井",7,5],["岐阜",8,5],["長野",9,5],["群馬",10,5],["栃木",11,5],["茨城",12,5],["山口",2,6],["広島",3,6],["岡山",4,6],["大阪",5,6],["奈良",6,6],["滋賀",7,6],["愛知",8,6],["山梨",9,6],["埼玉",10,6],["東京",11,6],["千葉",12,6],["佐賀",1,7],["福岡",2,7],["愛媛",3,7],["香川",4,7],["和歌山",5,7],["三重",6,7],["静岡",8,7],["神奈川",10,7],["長崎",0,8],["熊本",1,8],["大分",2,8],["高知",3,8],["徳島",4,8],["鹿児島",1,9],["宮崎",2,9],["沖縄",0,10]];
   const visitedByPref = countVisitedByPrefecture();
@@ -8290,13 +9199,25 @@ function renderTileMap() {
     for (let x = 0; x < 13; x++) {
       const name = grid.get(`${x},${y}`);
       if (!name) { html += `<span class="tile-cell tile-empty" aria-hidden="true"></span>`; continue; }
-      const visited = (visitedByPref[name] || 0) > 0;
+      // 升は短い県名（「東京」）、押印・行きたいの集計は施設の正式名（「東京都」）で数えている → 正式名に直して照合する（2026-11-19 独立監査2 高-1）
+      const fullName = tilePrefectureName(name);
+      const visited = (visitedByPref[fullName] || 0) > 0;
       if (visited) visitedPrefCount++;
-      const cls = visited ? "tile-stamped" : wishlistPrefs.has(name) ? "tile-wishlist" : "tile-unvisited";
-      html += `<button type="button" class="tile-cell ${cls}" data-tile-prefecture="${escapeAttr(name)}" aria-label="${escapeAttr(name)}の施設一覧を開く" title="${escapeAttr(name)}">${escapeHtml(name[0])}</button>`;
+      const cls = visited ? "tile-stamped" : wishlistPrefs.has(fullName) ? "tile-wishlist" : "tile-unvisited";
+      const label = visited ? "押印済み" : cls === "tile-wishlist" ? "行きたい" : "未訪問";
+      // 升（13px）は見るだけの部品。県の一覧へは下の選択欄から開く（押せる部品を 44px 以上にするため）
+      html += `<span class="tile-cell ${cls}" data-tile-prefecture="${escapeAttr(name)}" title="${escapeAttr(fullName)}：${label}">${escapeHtml(name[0])}</span>`;
     }
   }
-  for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) root.innerHTML = html;
+  for (const root of document.querySelectorAll("#tileMap, #tileMapSp")) {
+    root.innerHTML = html;
+    root.setAttribute("role", "img");
+    root.setAttribute("aria-label", `制覇マップ：47都道府県のうち${visitedPrefCount}都道府県で押印済み`);
+  }
+  for (const tileSelect of document.querySelectorAll("#tileMapSpSelect, #tileMapSelect")) {
+    if (tileSelect.options.length > 1) continue;
+    tileSelect.insertAdjacentHTML("beforeend", layout.map(([name]) => `<option value="${escapeAttr(tilePrefectureName(name))}">${escapeHtml(tilePrefectureName(name))}</option>`).join(""));
+  }
   for (const count of document.querySelectorAll("#tileMapCount, #tileMapCountSp")) count.textContent = `${visitedPrefCount} / 47`;
 }
 
@@ -8323,11 +9244,20 @@ function renderBookStamps() {
     const memo = getFacilityMemo(facility.id);
     const place = [facility.prefecture, facility.city].filter(Boolean).join("・");
     const fresh = record?.at && now - new Date(record.at).getTime() < 15000;
+    // 印のページ（2026-11-18 監査 SP-H1/PC-M6）：施設名は印の外の1行（収まらなければ「…」）、印の中は種別の一字と「サ印」。
+    // 日付の下の1行には営業状況（休業・テナント専用など）、無ければメモを1行で出す。全文は title と読み上げ名に残す
+    const status = getFacilityStatus(facility);
+    const date = record?.at ? formatDate(record.at) : "";
+    const sub = status ? status.badge : (memo?.text || "");
+    const kanji = (STAMP_STYLES[facility.trait] || STAMP_STYLES.custom).kanji;
+    const fullLabel = [facility.name, place, getStampTileDateLabel(facility, record), memo?.text].filter(Boolean).join(" / ");
     cells.push(`
-      <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}">
-        <span class="book-stamp-place">${escapeHtml(place)}</span>
-        <span class="book-stamp-seal${index % 2 ? " is-square" : ""}"><span class="book-stamp-seal-name">${escapeHtml(facility.name)}</span><span class="book-stamp-seal-mark">サ印</span></span>
-        <span class="book-stamp-date">${escapeHtml(getStampTileDateLabel(facility, record))}${memo?.text ? ` / ${escapeHtml(memo.text)}` : ""}</span>
+      <button type="button" class="book-stamp-page${fresh ? " is-fresh" : ""}" data-detail-card="${escapeAttr(facility.id)}" aria-label="${escapeAttr(fullLabel)}" title="${escapeAttr(fullLabel)}">
+        <span class="book-stamp-place" aria-hidden="true">${escapeHtml(place)}</span>
+        <span class="book-stamp-seal${index % 2 ? " is-square" : ""}" aria-hidden="true"><span class="book-stamp-seal-kanji">${escapeHtml(kanji)}</span><span class="book-stamp-seal-mark">サ印</span></span>
+        <span class="book-stamp-name" aria-hidden="true">${escapeHtml(facility.name)}</span>
+        <span class="book-stamp-date" aria-hidden="true">${escapeHtml(date)}</span>
+        ${sub ? `<span class="book-stamp-sub${status ? " is-status" : ""}" aria-hidden="true">${escapeHtml(sub)}</span>` : ""}
       </button>`);
   });
   const emptyCount = Math.max(1, 6 - cells.length - (visitedEntries.length > 5 ? 0 : 0));
@@ -8475,14 +9405,20 @@ function bindRenewalEvents() {
     stampFacility(facility);
     renderStampSheetList(lastSheetCandidates);
   });
-  document.addEventListener?.("click", (event) => {
-    const cell = event.target.closest?.("[data-tile-prefecture]");
-    if (!cell) return;
-    selectedPrefecture = cell.dataset.tilePrefecture;
+  for (const tileSelect of document.querySelectorAll?.("#tileMapSpSelect, #tileMapSelect") || []) tileSelect.addEventListener?.("change", (event) => {
+    const value = event.target.value;
+    if (!value) return;
+    selectedPrefecture = value;
     visibleLimit = 36;
     setView("Explore");
     renderAll();
+    event.target.value = "";
   });
+  // PC フッターの「ホーム画面に追加」も SP の帯と同じ動き
+  document.querySelectorAll?.("[data-foot-install]").forEach((button) => button.addEventListener("click", () => {
+    setView("Explore");
+    requestAnimationFrame(() => document.querySelector("#installButton")?.click());
+  }));
   document.querySelector("#stageFootInstall")?.addEventListener?.("click", () => {
     setView("Explore");
     requestAnimationFrame(() => document.querySelector("#installButton")?.click());
@@ -8522,3 +9458,48 @@ function bindRenewalEvents() {
 }
 
 bindRenewalEvents();
+
+// サウニュ〜記事の目次：<base href="/"> のため "#news-h2-1" がトップ（/#news-h2-1）として解決されていた。
+// href は記事の絶対パス＋# にし、押したときは帳面（.main）の中で該当見出しへスクロールする
+document.addEventListener?.("click", (event) => {
+  const link = event.target instanceof Element ? event.target.closest(".news-toc a") : null;
+  if (!link) return;
+  const id = link.dataset.tocAnchor || (link.getAttribute("href") || "").split("#")[1];
+  const target = id ? document.getElementById(id) : null;
+  if (!target) return;
+  event.preventDefault();
+  target.scrollIntoView({ block: "start", behavior: "smooth" });
+  if (location.protocol.startsWith("http")) history.replaceState(history.state, "", `${location.pathname}#${id}`);
+});
+
+// 見出し・カード題名・ボタン文言の文節改行（2026-11-17）
+// iPhone Safari は word-break: auto-phrase に対応しないため、「使｜い方」「覚え｜る」のように語の途中で折れる。
+// 文字だけを持つ見出し系の要素に、BudouX（phrase.js）で求めた文節の切れ目の <wbr> を入れる（文言は変えない）。
+// 描画後に差し替わる要素も拾うため、MutationObserver で追加・書き換えのたびに処理する。
+const PHRASE_SELECTOR = "h1, h2, h3, h4, button, a, [class*='title'], .guide-entry-text, .book-title-copy strong, .book-title-copy span, .article-card summary strong, .facility-near-main strong, .facility-shelf-item strong, .facility-crumbs [aria-current], .feature-option span, .facility-stamp-note, .facility-provenance, .facility-warn-text, .facility-notice, .search-suggestion-name, .visit-log-recent-item strong, .facility-dh-loc, .fact-missing-note, .book-stamp-name, .book-stamp-place, .site-foot-note, .site-foot-brand p, .list-verify-note";
+const PHRASE_JAPANESE = /[\u3040-\u30ff\u3400-\u9fff]/;
+
+function applyPhraseBreak(node) {
+  if (!(node instanceof HTMLElement) || node.childElementCount !== 0 || !node.matches(PHRASE_SELECTOR)) return;
+  const text = node.textContent || "";
+  if (text.length > 140 || !PHRASE_JAPANESE.test(text) || node.closest("[contenteditable], textarea, select, svg")) return;
+  const html = phraseHtml(text, escapeHtml);
+  if (html.startsWith("<span class=\"ph\">")) node.innerHTML = html;
+}
+
+function applyPhraseBreaks(scope) {
+  if (!(scope instanceof HTMLElement)) return;
+  applyPhraseBreak(scope);
+  scope.querySelectorAll(PHRASE_SELECTOR).forEach(applyPhraseBreak);
+}
+
+// DOM の無い環境（node のテスト用 vm）では何もしない
+if (typeof MutationObserver === "function" && typeof HTMLElement === "function" && document.body) {
+  applyPhraseBreaks(document.body);
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      applyPhraseBreak(mutation.target);
+      mutation.addedNodes.forEach(applyPhraseBreaks);
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+}
