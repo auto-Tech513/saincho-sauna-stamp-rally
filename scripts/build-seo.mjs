@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { DATASET_META, PREFECTURES, SEED_FACILITIES } from "../data.js";
 import { GEAR_PRODUCTS, GUIDE_FAQS, SAMESHI_SPOTS, SAUNA_ARTICLES, SAUNA_REFERENCES } from "../content.js";
 import { NEWS_CATEGORIES, SAUNA_NEWS, getPublishedNews, renderNewsBlocks } from "../news.js";
-import { applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility, splitPostalCodeFromAddress } from "../facility-evidence.js";
+import { FACILITY_EVIDENCE, applyFacilityEvidence, getFacilityEvidence, getMissingEvidenceFields, getVerifiedFeatures, isFitnessFacility, splitPostalCodeFromAddress } from "../facility-evidence.js";
 import { haversineDistanceKm } from "../nearby.js";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -62,12 +62,13 @@ const HIDDEN_TAGS = new Set([
 const PREF_SLUG = new Map(PREFECTURES.map((pref) => [pref.name, pref.slug]));
 const { facilities: CANONICAL_FACILITIES, aliases: FACILITY_ALIASES } = dedupeFacilitiesForSeo(SEED_FACILITIES.map(applyFacilityEvidence));
 const SEARCHABLE_FACILITIES = CANONICAL_FACILITIES.filter((facility) => !isFitnessFacility(facility));
-// 掲載件数の単一ソース: 数字の帯・ヒーロー・メタ等の表示はすべてこの2値を使う。
-// verified = 検索対象のうち公式照合プロファイルに fact が1件以上ある施設。
-const VERIFIED_FACILITIES = SEARCHABLE_FACILITIES.filter((facility) => {
-  const evidence = getFacilityEvidence(facility);
-  return evidence && Array.isArray(evidence.facts) && evidence.facts.length >= 1;
-});
+// トップの数字の帯の定義（2026-11-26 オーナー指示で実データに統一。運営・データ方針ページにも同じ定義を掲載）:
+// 掲載施設 = 台帳のシード総数（SEED_FACILITIES.length。重複統合前）
+// 公式照合済み = 公式照合プロファイルの総数（FACILITY_EVIDENCE.length。監査 audit-data の
+// officialProfilesWithFieldEvidence と同じ定義で、検索対象に限定しない）
+// ヒーローの「候補」とメタ説明は通常検索の対象（SEARCHABLE_FACILITIES）を指し、帯とは別定義。
+const LISTED_FACILITIES_COUNT = SEED_FACILITIES.length;
+const VERIFIED_PROFILES_COUNT = FACILITY_EVIDENCE.length;
 function getFacilityLastmod(facility) {
   const dates = [facility.sourceCheckedAt, facility.addressCheckedAt, ...((getFacilityEvidence(facility)?.facts || []).map((fact) => fact.checkedAt))].filter(Boolean).sort();
   return dates.at(-1) || LASTMOD.data;
@@ -383,7 +384,8 @@ const template = sourceIndex
   .replace(/href="\.\/styles\.css\?v=[^"]+"/, `href="./${stylesFile}"`)
   .replace(/src="\.\/app\.js\?v=[^"]+"/, `src="./${appFile}"`)
   .replaceAll("__CATALOG_FACILITIES__", SEARCHABLE_FACILITIES.length.toLocaleString("en-US"))
-  .replaceAll("__CATALOG_VERIFIED__", VERIFIED_FACILITIES.length.toLocaleString("en-US"));
+  .replaceAll("__CATALOG_LISTED__", LISTED_FACILITIES_COUNT.toLocaleString("en-US"))
+  .replaceAll("__CATALOG_VERIFIED__", VERIFIED_PROFILES_COUNT.toLocaleString("en-US"));
 
 const urls = [];
 let generatedPages = 0;
@@ -603,6 +605,8 @@ function renderAboutSsr() {
     <p>サ印帳は、確認できた事実と未確認項目を分けて掲載します。施設名、都道府県、参照URLを基礎情報とし、住所、公式URL、設備タグは公開確認できた場合のみ表示します。</p>
     <dl>
       <div><dt>重複統合後の候補</dt><dd>${CANONICAL_FACILITIES.length}件</dd></div>
+      <div><dt>掲載施設（トップの数字）</dt><dd>${LISTED_FACILITIES_COUNT}件（台帳に登録した全施設の件数です。重複統合前のため、候補数とは一致しません）</dd></div>
+      <div><dt>公式照合済み（トップの数字）</dt><dd>${VERIFIED_PROFILES_COUNT}件（公式ページで確認した事実を持つ照合プロファイルの総数です。通常検索の対象に限定していません）</dd></div>
       <div><dt>通常検索の対象</dt><dd>${SEARCHABLE_FACILITIES.length}件（ジム・フィットネス併設施設は通常検索から除くため、候補数とは一致しません）</dd></div>
       <div><dt>押印・県マスターの対象</dt><dd>${stampEligible}件（閉店・臨時休業・開業予定・要確認・一般利用できない施設は対象外のため、検索対象数とは一致しません）</dd></div>
       <div><dt>番地住所あり</dt><dd>${withAddress}件（${percent(withAddress)}）</dd></div>
