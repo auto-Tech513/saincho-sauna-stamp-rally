@@ -1632,7 +1632,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1324/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://houjunoyu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1324/"
   },
   {
@@ -2121,7 +2120,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "st-miyagi-1410",
-    "name": "大江戸温泉物語 仙台コロナの湯",
+    "name": "天然温泉 仙台コロナの湯",
     "prefecture": "宮城県",
     "address": "〒983-0005 宮城県仙台市宮城野区福室字田中前一番53−1",
     "addressSource": "SaunaTime参照ページ",
@@ -2132,8 +2131,8 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1410/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://korona.ooedoonsen.jp/",
-    "officialUrlSource": "https://saunatime.jp/saunas/1410/"
+    "officialUrl": "https://www.korona.co.jp/onsen/sen/",
+    "officialUrlSource": "https://www.korona.co.jp/onsen/sen/"
   },
   {
     "id": "st-miyagi-2939",
@@ -4984,7 +4983,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/1604/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.hgp.co.jp/inf/Z10/hgp/",
+    "officialUrl": "https://www.hgp.co.jp/karuizawa/",
     "officialUrlSource": "https://saunatime.jp/saunas/1604/"
   },
   {
@@ -6096,7 +6095,7 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/367/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://rainbow-motoyawata.wix.com/rainbow",
+    "officialUrl": "https://hpdsp.jp/rainbow-motoyawata",
     "officialUrlSource": "https://saunatime.jp/saunas/367/"
   },
   {
@@ -6270,7 +6269,7 @@ export const SEED_FACILITIES = [
     "city": "君津市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://www.kimitsu-yu.com/index.html",
+    "officialUrl": "https://www.kimitsu-yu.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/1780/"
   },
   {
@@ -8282,7 +8281,7 @@ export const SEED_FACILITIES = [
     "city": "南砺市",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://tonamigreen.co.jp/hanatsubaki/index.htm",
+    "officialUrl": "https://yu-yuuland.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/329/"
   },
   {
@@ -9300,7 +9299,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/126/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://only-you.sakura.ne.jp/wp/",
     "officialUrlSource": "https://saunatime.jp/saunas/126/"
   },
   {
@@ -71210,5 +71208,240 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://anytime-sauna.com/",
     "officialUrl": "https://anytime-sauna.com/"
+  },
+  {
+    "id": "manual-nagano-beb5-karuizawa",
+    "name": "BEB5軽井沢 by 星野リゾート（BEB足だけサウナ）",
+    "prefecture": "長野県",
+    "address": "〒389-0195 長野県北佐久郡軽井沢町星野",
+    "addressSource": "公式発表",
+    "addressCheckedAt": "2026-11-17",
+    "city": "北佐久郡軽井沢町",
+    "trait": "private",
+    "tags": [
+      "期間限定",
+      "足だけサウナ"
+    ],
+    "features": [
+      "セルフロウリュ",
+      "ロウリュあり",
+      "外気あり",
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://hoshinoresorts.com/ja/hotels/beb5karuizawa",
+    "officialUrl": "https://hoshinoresorts.com/ja/hotels/beb5karuizawa"
+  },
+  {
+    "id": "manual-shimane-mimata-ururu",
+    "name": "美又温泉うるる",
+    "prefecture": "島根県",
+    "address": "島根県浜田市金城町追原31番地3",
+    "addressSource": "浜田市の公表資料",
+    "addressCheckedAt": "2026-11-17",
+    "city": "浜田市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.city.hamada.shimane.jp/www/contents/1786521854127/simple/bosyuuyoukou.pdf",
+    "officialUrl": "https://www.city.hamada.shimane.jp/"
+  },
+  {
+    "id": "manual-saga-okuureshino-mumeidaki",
+    "name": "奥嬉野 無名滝",
+    "prefecture": "佐賀県",
+    "address": "佐賀県嬉野市嬉野町岩屋川内岩ノ元乙1112-4",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-16",
+    "city": "嬉野市",
+    "trait": "onsen",
+    "tags": [
+      "開業予定",
+      "貸切サウナ"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://goten-resort.jp/mumeidaki/",
+    "officialUrl": "https://goten-resort.jp/mumeidaki/"
+  },
+  {
+    "id": "manual-kanagawa-yunessun",
+    "name": "箱根小涌園ユネッサン",
+    "prefecture": "神奈川県",
+    "address": "神奈川県足柄下郡箱根町ニノ平1297",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-18",
+    "city": "足柄下郡箱根町",
+    "trait": "onsen",
+    "tags": [
+      "水着で入れる温泉"
+    ],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.yunessun.com/",
+    "officialUrl": "https://www.yunessun.com/"
+  },
+  {
+    "id": "manual-hiroshima-core-sauna-anacrowne",
+    "name": "CORE SAUNA ANAクラウンプラザホテル広島店",
+    "prefecture": "広島県",
+    "address": "〒730-0037 広島県広島市中区中町7-20 ANAクラウンプラザホテル広島6F",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-19",
+    "city": "広島市中区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://aigran-solution.jp/sauna/",
+    "officialUrl": "https://aigran-solution.jp/sauna/"
+  },
+  {
+    "id": "manual-saitama-tamagawa-onsen",
+    "name": "昭和レトロな温泉銭湯 玉川温泉",
+    "prefecture": "埼玉県",
+    "address": "〒355-0342 埼玉県比企郡ときがわ町大字玉川3700",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-19",
+    "city": "比企郡ときがわ町",
+    "trait": "onsen",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tamagawa-onsen.com/",
+    "officialUrl": "https://tamagawa-onsen.com/"
+  },
+  {
+    "id": "manual-saitama-hakujyu",
+    "name": "おふろcafé 白寿の湯",
+    "prefecture": "埼玉県",
+    "address": "埼玉県児玉郡神川町渡瀬337-1",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-19",
+    "city": "児玉郡神川町",
+    "trait": "onsen",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://ofurocafe-hakujyu.com/",
+    "officialUrl": "https://ofurocafe-hakujyu.com/"
+  },
+  {
+    "id": "manual-okinawa-dormy-inn-naha",
+    "name": "ドーミーイン那覇＜県庁前＞",
+    "prefecture": "沖縄県",
+    "address": "〒900-0015 沖縄県那覇市久茂地1丁目5番15号",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-19",
+    "city": "那覇市",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "温泉付き",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/",
+    "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/naha/"
+  },
+  {
+    "id": "manual-tokyo-baba-sauna",
+    "name": "馬場サウナ",
+    "prefecture": "東京都",
+    "address": "東京都新宿区高田馬場2-1-1 センテニアルタワー2階",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-20",
+    "city": "新宿区",
+    "trait": "urban",
+    "tags": [
+      "男性専用",
+      "ワークカフェ併設"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気浴あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://baba-sauna.com/",
+    "officialUrl": "https://baba-sauna.com/"
+  },
+  {
+    "id": "manual-miyagi-capsule-spa-replus",
+    "name": "Capsule & Spa Re.Plus",
+    "prefecture": "宮城県",
+    "address": "〒980-0803 宮城県仙台市青葉区国分町2丁目9-20",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-21",
+    "city": "仙台市青葉区",
+    "trait": "urban",
+    "tags": [
+      "宿泊可",
+      "カプセルホテル"
+    ],
+    "features": [
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://capsulespa-replus.com/",
+    "officialUrl": "https://capsulespa-replus.com/"
+  },
+  {
+    "id": "manual-tokyo-centurion-edo-tokyo",
+    "name": "ザ・センチュリオンサウナ レスト＆ステイ 江戸東京",
+    "prefecture": "東京都",
+    "address": "〒110-0005 東京都台東区上野6丁目9番9号",
+    "addressSource": "公式サイト",
+    "addressCheckedAt": "2026-11-22",
+    "city": "台東区",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "ロウリュあり",
+      "水風呂あり",
+      "宿泊可"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.centurion-hotel.com/edo_tokyo/",
+    "officialUrl": "https://www.centurion-hotel.com/edo_tokyo/"
+  },
+  {
+    "id": "manual-kanagawa-fit-easy-tonarie-kurihama",
+    "name": "FIT-EASY トナリエ久里浜店",
+    "prefecture": "神奈川県",
+    "address": "〒239-0832 神奈川県横須賀市神明町58番7",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-23",
+    "city": "横須賀市",
+    "trait": "urban",
+    "tags": [
+      "個室サウナ"
+    ],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/",
+    "officialUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/"
   }
 ];

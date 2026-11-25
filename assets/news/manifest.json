@@ -256,5 +256,203 @@
     "og": "/assets/news/iifuro-matsuri-2026-og.png",
     "thumb": "/assets/news/iifuro-matsuri-2026-thumb.webp",
     "generatedAt": "2026-11-15"
+  },
+  "beb5-karuizawa-ashidake-sauna": {
+    "hero": "/assets/news/beb5-karuizawa-ashidake-sauna-hero.webp",
+    "og": "/assets/news/beb5-karuizawa-ashidake-sauna-og.png",
+    "thumb": "/assets/news/beb5-karuizawa-ashidake-sauna-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "mimata-onsen-ururu-opening": {
+    "hero": "/assets/news/mimata-onsen-ururu-opening-hero.webp",
+    "og": "/assets/news/mimata-onsen-ururu-opening-og.png",
+    "thumb": "/assets/news/mimata-onsen-ururu-opening-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "tenet-sauna-mixed-use": {
+    "hero": "/assets/news/tenet-sauna-mixed-use-hero.webp",
+    "og": "/assets/news/tenet-sauna-mixed-use-og.png",
+    "thumb": "/assets/news/tenet-sauna-mixed-use-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "okuureshino-mumeidaki-opening": {
+    "hero": "/assets/news/okuureshino-mumeidaki-opening-hero.webp",
+    "og": "/assets/news/okuureshino-mumeidaki-opening-og.png",
+    "thumb": "/assets/news/okuureshino-mumeidaki-opening-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "yudokoro-minori-iifuro-thanks-2026": {
+    "hero": "/assets/news/yudokoro-minori-iifuro-thanks-2026-hero.webp",
+    "og": "/assets/news/yudokoro-minori-iifuro-thanks-2026-og.png",
+    "thumb": "/assets/news/yudokoro-minori-iifuro-thanks-2026-thumb.webp",
+    "generatedAt": "2026-11-17"
+  },
+  "hadano-yukaraku-refresh-open-2026": {
+    "hero": "/assets/news/hadano-yukaraku-refresh-open-2026-hero.webp",
+    "og": "/assets/news/hadano-yukaraku-refresh-open-2026-og.png",
+    "thumb": "/assets/news/hadano-yukaraku-refresh-open-2026-thumb.webp",
+    "generatedAt": "2026-11-18"
+  },
+  "yunessun-iifuro-special-day-2026": {
+    "hero": "/assets/news/yunessun-iifuro-special-day-2026-hero.webp",
+    "og": "/assets/news/yunessun-iifuro-special-day-2026-og.png",
+    "thumb": "/assets/news/yunessun-iifuro-special-day-2026-thumb.webp",
+    "generatedAt": "2026-11-18"
+  },
+  "core-sauna-hiroshima-opening": {
+    "hero": "/assets/news/core-sauna-hiroshima-opening-hero.webp",
+    "og": "/assets/news/core-sauna-hiroshima-opening-og.png",
+    "thumb": "/assets/news/core-sauna-hiroshima-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "kisuke-chibikko-aufguss-2026": {
+    "hero": "/assets/news/kisuke-chibikko-aufguss-2026-hero.webp",
+    "og": "/assets/news/kisuke-chibikko-aufguss-2026-og.png",
+    "thumb": "/assets/news/kisuke-chibikko-aufguss-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "ofurocafe-yusa-fuyugomori-2026": {
+    "hero": "/assets/news/ofurocafe-yusa-fuyugomori-2026-hero.webp",
+    "og": "/assets/news/ofurocafe-yusa-fuyugomori-2026-og.png",
+    "thumb": "/assets/news/ofurocafe-yusa-fuyugomori-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "sapporo-cabin-tsubaki-stamp-rally": {
+    "hero": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-hero.webp",
+    "og": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-og.png",
+    "thumb": "/assets/news/sapporo-cabin-tsubaki-stamp-rally-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "soratomori-korpi-opening": {
+    "hero": "/assets/news/soratomori-korpi-opening-hero.webp",
+    "og": "/assets/news/soratomori-korpi-opening-og.png",
+    "thumb": "/assets/news/soratomori-korpi-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "onsen-dojo-iifuro-day-2026": {
+    "hero": "/assets/news/onsen-dojo-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/onsen-dojo-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/onsen-dojo-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "dormy-inn-naha-opening": {
+    "hero": "/assets/news/dormy-inn-naha-opening-hero.webp",
+    "og": "/assets/news/dormy-inn-naha-opening-og.png",
+    "thumb": "/assets/news/dormy-inn-naha-opening-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "ofurocafe-arabian-night-season2": {
+    "hero": "/assets/news/ofurocafe-arabian-night-season2-hero.webp",
+    "og": "/assets/news/ofurocafe-arabian-night-season2-og.png",
+    "thumb": "/assets/news/ofurocafe-arabian-night-season2-thumb.webp",
+    "generatedAt": "2026-11-19"
+  },
+  "flexkey-saunner-of-the-year-2026": {
+    "hero": "/assets/news/flexkey-saunner-of-the-year-2026-hero.webp",
+    "og": "/assets/news/flexkey-saunner-of-the-year-2026-og.png",
+    "thumb": "/assets/news/flexkey-saunner-of-the-year-2026-thumb.webp",
+    "generatedAt": "2026-11-20"
+  },
+  "syakenoko-yoshidaya-sannoukaku-2026": {
+    "hero": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-hero.webp",
+    "og": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-og.png",
+    "thumb": "/assets/news/syakenoko-yoshidaya-sannoukaku-2026-thumb.webp",
+    "generatedAt": "2026-11-20"
+  },
+  "capsule-spa-replus-sendai-renewal": {
+    "hero": "/assets/news/capsule-spa-replus-sendai-renewal-hero.webp",
+    "og": "/assets/news/capsule-spa-replus-sendai-renewal-og.png",
+    "thumb": "/assets/news/capsule-spa-replus-sendai-renewal-thumb.webp",
+    "generatedAt": "2026-11-21"
+  },
+  "goodsauna-sapporo-1st-anniversary-2026": {
+    "hero": "/assets/news/goodsauna-sapporo-1st-anniversary-2026-hero.webp",
+    "og": "/assets/news/goodsauna-sapporo-1st-anniversary-2026-og.png",
+    "thumb": "/assets/news/goodsauna-sapporo-1st-anniversary-2026-thumb.webp",
+    "generatedAt": "2026-11-21"
+  },
+  "centurion-sauna-edo-tokyo-renewal": {
+    "hero": "/assets/news/centurion-sauna-edo-tokyo-renewal-hero.webp",
+    "og": "/assets/news/centurion-sauna-edo-tokyo-renewal-og.png",
+    "thumb": "/assets/news/centurion-sauna-edo-tokyo-renewal-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "cocofuro-misato-onsen-sauna-details": {
+    "hero": "/assets/news/cocofuro-misato-onsen-sauna-details-hero.webp",
+    "og": "/assets/news/cocofuro-misato-onsen-sauna-details-og.png",
+    "thumb": "/assets/news/cocofuro-misato-onsen-sauna-details-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "karinnoyu-iifuro-day-2026": {
+    "hero": "/assets/news/karinnoyu-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/karinnoyu-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/karinnoyu-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "sendai-korona-no-yu-refresh-2026": {
+    "hero": "/assets/news/sendai-korona-no-yu-refresh-2026-hero.webp",
+    "og": "/assets/news/sendai-korona-no-yu-refresh-2026-og.png",
+    "thumb": "/assets/news/sendai-korona-no-yu-refresh-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "yuranosato-kirari-iifuro-campaign-2026": {
+    "hero": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-hero.webp",
+    "og": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-og.png",
+    "thumb": "/assets/news/yuranosato-kirari-iifuro-campaign-2026-thumb.webp",
+    "generatedAt": "2026-11-22"
+  },
+  "fit-easy-tonarie-kurihama-opening-2026": {
+    "hero": "/assets/news/fit-easy-tonarie-kurihama-opening-2026-hero.webp",
+    "og": "/assets/news/fit-easy-tonarie-kurihama-opening-2026-og.png",
+    "thumb": "/assets/news/fit-easy-tonarie-kurihama-opening-2026-thumb.webp",
+    "generatedAt": "2026-11-23"
+  },
+  "spa-herbs-iifuro-thanksgiving-2026": {
+    "hero": "/assets/news/spa-herbs-iifuro-thanksgiving-2026-hero.webp",
+    "og": "/assets/news/spa-herbs-iifuro-thanksgiving-2026-og.png",
+    "thumb": "/assets/news/spa-herbs-iifuro-thanksgiving-2026-thumb.webp",
+    "generatedAt": "2026-11-23"
+  },
+  "tamagawa-onsen-iifuro-day-2026": {
+    "hero": "/assets/news/tamagawa-onsen-iifuro-day-2026-hero.webp",
+    "og": "/assets/news/tamagawa-onsen-iifuro-day-2026-og.png",
+    "thumb": "/assets/news/tamagawa-onsen-iifuro-day-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "onsendojo-saitama-kids-free-iifuro-2026": {
+    "hero": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-hero.webp",
+    "og": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-og.png",
+    "thumb": "/assets/news/onsendojo-saitama-kids-free-iifuro-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "goldenkamuy-rakuspa-collab-2026": {
+    "hero": "/assets/news/goldenkamuy-rakuspa-collab-2026-hero.webp",
+    "og": "/assets/news/goldenkamuy-rakuspa-collab-2026-og.png",
+    "thumb": "/assets/news/goldenkamuy-rakuspa-collab-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "spa-herbs-bonen-onkatsu-2026": {
+    "hero": "/assets/news/spa-herbs-bonen-onkatsu-2026-hero.webp",
+    "og": "/assets/news/spa-herbs-bonen-onkatsu-2026-og.png",
+    "thumb": "/assets/news/spa-herbs-bonen-onkatsu-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "korona-no-yu-anjo-renewal-2026": {
+    "hero": "/assets/news/korona-no-yu-anjo-renewal-2026-hero.webp",
+    "og": "/assets/news/korona-no-yu-anjo-renewal-2026-og.png",
+    "thumb": "/assets/news/korona-no-yu-anjo-renewal-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "iyashinoyu-nanao-reopening-1st-anniversary-2026": {
+    "hero": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-hero.webp",
+    "og": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-og.png",
+    "thumb": "/assets/news/iyashinoyu-nanao-reopening-1st-anniversary-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
+  },
+  "yunni-no-yu-december-events-2026": {
+    "hero": "/assets/news/yunni-no-yu-december-events-2026-hero.webp",
+    "og": "/assets/news/yunni-no-yu-december-events-2026-og.png",
+    "thumb": "/assets/news/yunni-no-yu-december-events-2026-thumb.webp",
+    "generatedAt": "2026-11-24"
   }
 }

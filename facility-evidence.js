@@ -1353,12 +1353,27 @@ export const CURATED_FACILITY_EVIDENCE = [
   {
     ids: ["manual-gunma-cocofuro-misato"], name: "COCOFURO plus みさと温泉", status: "planned",
     features: [],
-    facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }],
+    facts: [{ label: "営業状況", value: "開業予定（2026年12月グランドオープン予定。正式な開業日は未発表のため、開業までは押印対象外）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-13" }, { label: "営業時間", value: "8:00〜24:00（最終入場23:30）、定休日は不定休（開業後の案内として公式サイトに掲載）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }, { label: "料金", value: "大人（中学生以上）平日880円／土日祝980円、小人（中学生未満）平日350円／土日祝450円、3歳未満は無料。カード式10回回数券8,000円（公式サイトに掲載の開業後の料金）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }, { label: "設備", value: "溶岩サウナ（蒸禅）と、音楽と連動して毎時10分・30分・50分にロウリュを行うミュージックロウリュサウナ（レンガ製サウナストーンSAUNA BRICKを採用予定）。源泉は箕郷元湯（ナトリウム-塩化物・炭酸水素塩温泉、源泉温度47.4℃）", sourceUrl: "https://misato.cocofuro.com/", checkedAt: "2026-11-22" }],
   },
   {
-    ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "planned",
+    ids: ["manual-shimane-mimata-ururu"], name: "美又温泉うるる", status: "planned",
+    features: ["温泉付き", "水風呂あり", "外気あり"],
+    facts: [{ label: "営業状況", value: "開業予定（令和8年12月開業予定。工事の進捗により遅れる可能性があると浜田市が案内。開業までは押印対象外）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1786521854127/simple/bosyuuyoukou.pdf", checkedAt: "2026-11-17" }, { label: "設備", value: "計画では男性内湯にサウナと水風呂、女性内湯に炭酸風呂。貸切風呂3室、露天風呂、外気浴スペース、無料休憩室（浜田市の実施計画）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1757406429878/simple/jisshikeikaku.pdf", checkedAt: "2026-11-17" }],
+  },
+  {
+    ids: ["st-shimane-3611"], name: "美又温泉国民保養センター", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉店（令和8年3月31日で営業終了。後継の外湯施設「美又温泉うるる」を浜田市が整備中）", sourceUrl: "https://www.city.hamada.shimane.jp/www/contents/1757406429878/simple/jisshikeikaku.pdf", checkedAt: "2026-11-17" }],
+  },
+  {
+    ids: ["manual-nagano-beb5-karuizawa"], name: "BEB5軽井沢 by 星野リゾート（BEB足だけサウナ）", officialUrl: "https://hoshinoresorts.com/ja/hotels/beb5karuizawa",
+    features: ["セルフロウリュ", "ロウリュあり", "外気あり", "宿泊可"],
+    facts: [{ label: "営業時間", value: "BEB足だけサウナは2026年12月8日〜2027年3月31日の期間限定。9:00〜21:00（最終受付20:00）、50分ごとの交代制", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "料金", value: "足だけサウナ体験 1名300円（税込、ハーブロウリュ・貸出ポンチョ込み）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "設備・温度", value: "服を着たまま足元を温める屋外の足だけサウナ。室温約80度、セルフロウリュ可、HARVIA製ヒーター。定員1組3名", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }, { label: "利用条件", value: "公式サイトで前日23:59まで要予約（空きがあれば当日開催前まで受付）", sourceUrl: "https://prtimes.jp/main/html/rd/p/000002423.000033064.html", checkedAt: "2026-11-17" }],
+  },
+  {
+    ids: ["manual-tokyo-kocoowa-hiroo"], name: "Kocoo和", status: "open",
     features: ["個室"],
-    facts: [{ label: "営業状況", value: "開業予定（2026年11月16日グランドオープン予定。女性専用・完全個室サウナ。開業までは押印対象外）", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
+    facts: [{ label: "営業状況", value: "営業中（2026年11月16日にグランドオープン。公式サイトのお知らせ「グランドオープンのお知らせ」（2026年11月16日付）で開業を発表し、同日分の予約枠が公式予約サイトで申込可能であることを確認。女性専用・完全個室サウナ。営業時間8:00〜21:00）", sourceUrl: "https://kocoowa.com/blogs/news/261116", checkedAt: "2026-11-16" }, { label: "設備", value: "女性のためのビューティーリトリート施設。全室「横になれるサウナ」設計の完全個室で、好みの温度に調整可能なサウナで120分間過ごせる", sourceUrl: "https://kocoowa.com", checkedAt: "2026-11-14" }],
   },
   {
     ids: ["manual-kanagawa-renaissance-kamiooka"], name: "フィットネスクラブ＆サウナスパ ルネサンス上大岡", status: "open",
@@ -1369,6 +1384,11 @@ export const CURATED_FACILITY_EVIDENCE = [
     ids: ["st-iwate-187"], name: "サウナ＆カプセル宮古", status: "closed",
     features: [],
     facts: [{ label: "営業状況", value: "閉館（閉館日不明）。日帰り入浴の閉館リストに閉館として掲載（住所が登録情報と一致）。公式サイトは消滅し404。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://yuru-to.net/closed.php?oid=47706", checkedAt: "2026-11-10" }],
+  },
+  {
+    ids: ["st-iwate-1324"], name: "瀬峯坂温泉宝珠の湯", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉館（閉館日不明）。ニフティ温泉の施設ページが「瀬峯坂温泉 宝珠の湯（閉館しました）」と表示（住所が登録情報と一致）。公式サイト houjunoyu.com はDNSが解決せず到達不能。検索エンジンの地点情報も「Permanently Closed」と表示", sourceUrl: "https://onsen.nifty.com/kitakami-onsen/onsen006511/", checkedAt: "2026-11-23" }],
   },
 {
 ids: ["st-hokkaido-976"], name: "森のスパリゾート 北海道ホテル", officialUrl: "https://www.hokkaidohotel.co.jp/stay/hotspring.html",
@@ -3476,7 +3496,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     facts: [
       factNov14("料金", "お一人様当たり 平日：2時間3,500円、3時間4,500円、7時間8,500円／土日祝：2時間4,000円、3時間5,000円、7時間9,500円", "https://yachiho-sauna.jp/"),
       factNov14("営業時間", "AM9時からPM7時", "https://yachiho-sauna.jp/"),
-      factNov14("定休日", "休日：木曜日。今シーズンの営業期間は11月22日迄で、冬季は休業", "https://yachiho-sauna.jp/"),
+      { label: "定休日", value: "休日：木曜日。2026年シーズンの営業は11月22日までで、冬季は休業（公式サイトの案内「今シーズン営業期間は11月22日迄です。冬は休みとなります」で2026年11月22日に確認。来シーズンの開始日は未発表）", sourceUrl: "https://yachiho-sauna.jp/", checkedAt: "2026-11-22" },
       factNov14("設備", "3種類の本格薪焚きサウナ（小屋サウナ、バレルサウナ、テントサウナ）計9基。セルフロウリュ・セルフアウフグースが可能。低温60度から高温120度まで", "https://yachiho-sauna.jp/"),
       factNov14("水風呂", "北八ヶ岳の天然水を贅沢にかけ流した山の水プール・バレルプールがあり、渓流も利用できる", "https://yachiho-sauna.jp/"),
     ],
@@ -3800,7 +3820,8 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     features: ["ドライサウナ", "スチーム(ミスト)サウナ", "温泉付き", "サ飯あり"],
     facts: [
       factNov14("設備", "乾式・湿式サウナ、全10種類の岩盤スパ（日本最大級『発汗洞』）、天然温泉『美肌の湯』、湯の華食堂・湯の華亭", "https://www.spa-yunohana.com/"),
-      factNov14("定休日", "メンテナンス休館あり（2026年11月9日〜13日は休館し、11月14日朝9時より通常営業再開）", "https://www.spa-yunohana.com/"),
+      { label: "定休日", value: "年中無休（施設メンテナンスによる休館を除く）。2026年11月9日〜13日はメンテナンス休館し、11月14日朝9時より通常営業を再開（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.spa-yunohana.com/", checkedAt: "2026-11-22" },
+      { label: "設備", value: "男性側のバレルサウナ・水風呂と女性側の炭酸風呂・寝湯は改修中で、2026年12月中旬頃にリニューアルオープン予定（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.spa-yunohana.com/", checkedAt: "2026-11-22" },
     ],
   },
   {
@@ -6436,7 +6457,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("営業時間", "スカイスパ（宿泊者）15:00〜翌11:00", "https://www.candeohotels.com/ja/nagano-chino/skyspa/"),
       factNov14("料金", "日帰り入浴（平日のみ、タオルセット付・税込）スタンダード15〜23時 大人1,000円・小人500円、朝湯6〜11時 大人800円・小人400円", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
       factNov14("利用条件", "日帰り入浴は平日のみで、スカイスパ会員登録（顔写真付き身分証が必要）。タトゥーのある方は日帰り入浴不可", "https://www.candeohotels.com/ja/nagano-chino/offers/skyspa_visitor_chino/"),
-      factNov14("営業状況", "公式のお知らせ（2026年11月4日付）により、機器故障のため男女ともスカイスパの露天風呂が利用不可（復旧日程は未定）。内風呂・サウナ・水風呂は通常通り利用可", "https://www.candeohotels.com/ja/nagano-chino/"),
+      { label: "営業状況", value: "公式のお知らせ（2026年11月4日付）により、機器故障のため男女ともスカイスパの露天風呂が利用不可（復旧日程は未定）。内風呂・サウナ・水風呂は通常通り利用可。2026年11月22日時点でも復旧の案内はなく、利用不可が継続", sourceUrl: "https://www.candeohotels.com/ja/nagano-chino/information/", checkedAt: "2026-11-22" },
       { label: "大浴場・サウナ", value: "15:00〜翌11:00", sourceUrl: "https://www.candeohotels.com/ja/nagano-chino/", checkedAt: "2026-11-08" },
     ],
   },
@@ -7092,7 +7113,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-miyagi-1410"], name: "大江戸温泉物語 仙台コロナの湯", officialUrl: "https://www.korona.co.jp/Onsen/sen/index.asp",
+    ids: ["st-miyagi-1410"], name: "天然温泉 仙台コロナの湯", officialUrl: "https://www.korona.co.jp/onsen/sen/",
     features: ["ロウリュあり", "温泉付き", "タオルレンタルあり"],
     facts: [
       factNov14("料金", "入泉料 大人（中学生以上）平日1,200円／土日祝1,400円（会員 平日1,100円／土日祝1,300円）、小人（3歳～小学生）平日550円／土日祝650円、2歳以下無料。別途入湯税70円", "https://www.korona.co.jp/onsen/basic/sen/224"),
@@ -7100,6 +7121,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       factNov14("定休日", "4ヶ月に一度メンテナンス休館日あり（年3回不定休）", "https://www.korona.co.jp/onsen/basic/sen/224"),
       factNov14("設備", "天然温泉の大浴場に加え、フォーレスト（3種の岩盤浴ゾーン、ロウリュアトラクション、クールルーム、コミックコーナー等）がある", "https://www.korona.co.jp/onsen/basic/sen/224"),
       factNov14("利用条件", "刺青、タトゥー、タトゥーシールのある方は利用不可。レンタルタオルセット（バス・フェイス）380円", "https://www.korona.co.jp/onsen/basic/sen/224"),
+      { label: "営業状況", value: "2026年11月19日にリフレッシュオープン。男性サウナにオートロウリュと連動する送風機、男女サウナにオートロウリュと連動する照明演出を新設。洗い場の一部にパーテーション、水飲み場に冷却装置を設置（公式お知らせで2026年11月22日に確認）", sourceUrl: "https://www.korona.co.jp/onsen/storenews/sen/1205", checkedAt: "2026-11-22" },
     ],
   },
   {
@@ -7213,7 +7235,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-gumma-1604"], name: "ホテルグリーンプラザ軽井沢", officialUrl: "https://www.hgp.co.jp/inf/Z10/hgp/",
+    ids: ["st-gumma-1604"], name: "ホテルグリーンプラザ軽井沢", officialUrl: "https://www.hgp.co.jp/karuizawa/",
     features: ["温泉付き", "外気あり", "宿泊可"],
     facts: [
       factNov14("設備", "自家源泉の天然温泉大浴場「暁の湯」（内湯・露天風呂）", "https://home.kingsoft.jp/news/pr/atpress/568758.html"),
@@ -7250,7 +7272,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ],
   },
   {
-    ids: ["st-chiba-1780"], name: "君津の湯", officialUrl: "https://www.kimitsu-yu.com/index.html",
+    ids: ["st-chiba-1780"], name: "君津の湯", officialUrl: "https://www.kimitsu-yu.com/",
     features: ["水風呂あり"],
     facts: [
       factNov14("営業時間", "9:00〜24:00（毎日）", "https://www.furusato-tax.jp/product/detail/12225/5998737"),
@@ -7756,7 +7778,7 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     ids: ["manual-hotel-apa-11"], name: "アパホテル＆リゾート〈札幌〉", officialUrl: "https://www.apahotel.com/resort/sapporo/", address: "〒005-0804 北海道札幌市南区川沿4条2丁目1-1", city: "札幌市",
     features: [],
     facts: [
-      factNov14("営業時間", "大浴殿の午後営業は通常15:00開始。2026年11月16日〜20日はサウナ改修工事のため18:00〜24:00に変更、期間中の朝のサウナは6:00〜8:00のみ利用可", "https://www.apahotel.com/resort/sapporo/news/detail-1618.html"),
+      { label: "営業時間", value: "大浴殿の午後営業は通常15:00開始。2026年11月16日〜20日のサウナ改修工事に伴う営業時間の変更（18:00〜24:00）は期間終了に伴い終了し、通常営業に戻っている（公式サイトで2026年11月22日に確認）", sourceUrl: "https://www.apahotel.com/resort/sapporo/", checkedAt: "2026-11-22" },
       factNov14("設備", "大浴殿内にサウナあり（公式お知らせが大浴殿内のサウナ改修工事を案内）", "https://www.apahotel.com/resort/sapporo/news/detail-1618.html"),
       { label: "大浴場・サウナ", value: "6:00～10:00 / 15:00～24:00", sourceUrl: "https://www.apahotel.com/resort/sapporo/", checkedAt: "2026-11-08" },
     ],
@@ -10393,6 +10415,131 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
  factNov14("営業状況", "2026年6月30日をもって閉店（公式サイトの閉店のお知らせ。回数券は越のゆ鯖江店とONSEN&SAUNA RESORT かいほつの湯で引き続き利用可能と案内）", "http://www.yu-iwashita.jp/fukui/"),
 ],
 },
+  {
+    ids: ["manual-okinawa-dormy-inn-naha"], name: "ドーミーイン那覇＜県庁前＞", status: "planned",
+    features: [],
+    facts: [{ label: "営業状況", value: "開業予定（2027年2月3日プレオープン予定。2026年11月18日に公式サイトで宿泊予約の受付を開始。開業までは押印対象外）", sourceUrl: "https://dormy-hotels.com/dormyinn/hotels/naha/", checkedAt: "2026-11-19" }],
+  },
+  {
+    ids: ["manual-tokyo-centurion-edo-tokyo"], name: "ザ・センチュリオンサウナ レスト＆ステイ 江戸東京", status: "planned",
+    features: ["ロウリュあり", "水風呂あり", "宿泊可"],
+    facts: [{ label: "営業状況", value: "開業予定（2026年12月12日にグランドリニューアルオープン予定。旧・上野ステーションホステル オリエンタル1を改装し、同日付で施設名を「ザ・センチュリオンサウナ レスト＆ステイ 江戸東京」に変更。開業までは押印対象外）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }, { label: "設備", value: "ツインヒーター完備で30名以上を収容する100℃超の大型サウナ、シングル水風呂と16℃のバイブラ水風呂の2種の水風呂、スタッフロウリュ（熱波）の毎日開催、ジムエリアとコワーキングスペースの新設（料金・営業時間は公式サイトで随時更新と案内）", sourceUrl: "https://www.centurion-hotel.com/oriental_1/news/detail/1339/", checkedAt: "2026-11-22" }],
+  },
+  {
+    ids: ["manual-kanagawa-yunessun"], name: "箱根小涌園ユネッサン", officialUrl: "https://www.yunessun.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "利用条件", value: "刺青（タトゥー・ワンポイント）のある方は原則として入場できない。水着エリア「ユネッサン」はラッシュガード等で隠せば利用でき、日帰り温泉「森の湯」は指定のタトゥーカバーシール（有料）2枚で完全に覆える場合に限り利用できる", sourceUrl: "https://www.yunessun.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-tokyo-baba-sauna"], name: "馬場サウナ", officialUrl: "https://baba-sauna.com/",
+    features: ["ドライサウナ", "オートロウリュ", "ロウリュあり", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "30名が同時に利用できる本格フィンランド式サウナ。オートロウリュを備える", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "水温約16℃・水深90cmの水風呂。潜水もできる", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+      { label: "利用条件", value: "男性専用施設", sourceUrl: "https://baba-sauna.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-mie-sarubino"], name: "大山田温泉 さるびの", officialUrl: "https://www.sarubino.com/",
+    features: [],
+    facts: [
+      { label: "料金", value: "大人800円、小人400円、シルバー（70歳以上）650円、障がい者400円、障がい児200円。3歳未満は無料。回数券は12枚綴り（大人8,000円など）で有効期限は1年間", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "10:00〜21:00（入浴最終受付20:30）", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+      { label: "定休日", value: "毎週火曜日（火曜日が祝祭日の場合は営業）", sourceUrl: "https://www.sarubino.com/?page_id=25", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saitama-hakujyu"], name: "おふろcafé 白寿の湯", officialUrl: "https://ofurocafe-hakujyu.com/",
+    features: [],
+    facts: [
+      { label: "営業時間", value: "10:00〜23:00（最終入館22:30）", sourceUrl: "https://ofurocafe-hakujyu.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-hiroshima-core-sauna-anacrowne"], name: "CORE SAUNA ANAクラウンプラザホテル広島店", officialUrl: "https://aigran-solution.jp/sauna/",
+    features: ["オートロウリュ", "ロウリュあり", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "会話ができる大サウナ室、オートロウリュ対応で会話不可の小サウナ室、海底をイメージしたミストサウナを備える「没入型」サウナ施設", sourceUrl: "https://aigran-solution.jp/sauna/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "ウルトラファインバブルを使った水風呂。温度や色が異なる浴槽を用意", sourceUrl: "https://aigran-solution.jp/sauna/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saga-okuureshino-mumeidaki"], name: "奥嬉野 無名滝", officialUrl: "https://goten-resort.jp/mumeidaki/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      { label: "設備", value: "全室に露天風呂付き。スイートルーム（THE FALLS SUITEなど）には露天風呂に加えてサウナも付く", sourceUrl: "https://goten-resort.jp/mumeidaki/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-saitama-tamagawa-onsen"], name: "昭和レトロな温泉銭湯 玉川温泉", officialUrl: "https://tamagawa-onsen.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "設備", value: "天然温泉はpH値10のアルカリ性単純温泉。加水なし・加温あり・濾過循環あり", sourceUrl: "https://tamagawa-onsen.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-kagoshima-924"], name: "ホテルビッグマリン奄美", officialUrl: "https://www.bigmarine.co.jp/",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      { label: "設備", value: "光明石温泉とトルマリンサウナを備える", sourceUrl: "https://www.bigmarine.co.jp/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-aichi-shinoki-mantenbo"], name: "篠木温泉 満天望", officialUrl: "https://kasugai-mantenbo.com/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "設備", value: "5種類の露天風呂と7種類の内風呂、2種類のサウナ、岩盤サウナを用意", sourceUrl: "https://kasugai-mantenbo.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-fukuoka-3818"], name: "華の湯ＨＩＢＵＲＡＮ", officialUrl: "http://hananoyu-hiburan.com/",
+    features: [],
+    facts: [
+      { label: "設備", value: "サウナとマッサージを完備", sourceUrl: "http://hananoyu-hiburan.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-miyagi-capsule-spa-replus"], name: "Capsule & Spa Re.Plus", officialUrl: "https://capsulespa-replus.com/",
+    features: ["宿泊可"],
+    facts: [
+      { label: "設備", value: "男性専用の大浴場・サウナと、男女それぞれの専用カプセルルームを備える", sourceUrl: "https://capsulespa-replus.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-akita-4785"], name: "金浦温泉・学校の栖", officialUrl: "https://onsen-sumika.com/",
+    features: ["温泉付き", "宿泊可", "水風呂あり"],
+    facts: [
+      { label: "設備", value: "樽型のバレルサウナを新設。男女それぞれの浴場に露天風呂も新たに整備した。大浴場は硫黄温泉", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+      { label: "水風呂", value: "ラジウム鉱泉と硫黄水風呂（各40人可）を備える。奇数日と偶数日で男女の浴場が入れ替わる", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "日帰り入浴は午前6時〜午後8時30分", sourceUrl: "https://onsen-sumika.com/", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-ishikawa-2187"], name: "極楽湯 金沢野々市店", officialUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html",
+    features: [],
+    facts: [
+      { label: "料金", value: "おとな（中学生以上）は平日860円・土日祝960円、こども（4才〜小学生）は450円。3才以下は入館無料。回数券は10枚綴り7,500円（すべて税込）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "お風呂は平日9:00〜25:00、土日祝6:00〜25:00（最終受付24:20）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+      { label: "利用条件", value: "入れ墨・ファッションタトゥー・タトゥーシールのある方は入館できない", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/nonoichi/index.html", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["manual-mie-gokurakuyu-tsu"], name: "極楽湯 津店", officialUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/",
+    features: ["温泉付き"],
+    facts: [
+      { label: "料金", value: "おとな（中学生以上）は平日900円・土日祝1,000円、こども（4才〜）は480円。3才以下は入館無料。回数券は10枚綴り7,800円（すべて税込）", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/index.html", checkedAt: "2026-11-22" },
+      { label: "営業時間", value: "平日・祝日は9:00〜26:00、土日は6:00〜26:00", sourceUrl: "https://www.gokurakuyu.ne.jp/tempo/tsu/index.html", checkedAt: "2026-11-22" },
+    ],
+  },
+  {
+    ids: ["st-oita-4472"], name: "レゾネイトクラブくじゅう", officialUrl: "http://www.resonate.co.jp/relax/",
+    features: ["温泉付き", "宿泊可", "貸切可"],
+    facts: [
+      { label: "設備", value: "温泉は天然の保湿成分メタケイ酸を180mg以上含む「美人の湯」。大浴場「紅殻之湯（べんからの湯）」と露天風呂付きの貸切湯がある", sourceUrl: "http://www.resonate.co.jp/relax/", checkedAt: "2026-11-22" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
@@ -10447,4 +10594,14 @@ export function isFitnessFacility(facility) {
       || (host === "jexer.jp" && /\/fitness\//.test(url.pathname))
       || (host === "central.co.jp" && /\/club\//.test(url.pathname));
   } catch { return false; }
+}
+
+export function splitPostalCodeFromAddress(address) {
+  const text = address.trim();
+  const match = /^〒\s*(\d{3})[-−‐－ー]?(\d{4})(?!\d)\s*/.exec(text);
+  if (!match) return { streetAddress: text };
+  return {
+    postalCode: `${match[1]}-${match[2]}`,
+    streetAddress: text.slice(match[0].length),
+  };
 }

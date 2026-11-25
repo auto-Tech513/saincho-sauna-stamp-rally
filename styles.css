@@ -3212,7 +3212,7 @@ body {
 
 .nearby-notification-row small {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -3312,7 +3312,7 @@ body {
   color: #fff;
   background: rgb(10 17 16 / 0.82);
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -3388,7 +3388,7 @@ body {
   }
 
   .nearby-notification-row small {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .facility-card .facility-social-pair,
@@ -3429,7 +3429,7 @@ body {
   .sameshi-card .source-badge {
     max-width: 58px;
     padding-inline: 7px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
@@ -7840,7 +7840,7 @@ body {
 .lodging-search-card a {
   min-width: 0;
   white-space: nowrap;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0;
 }
 
@@ -8081,7 +8081,7 @@ body {
   display: inline-block;
   margin-top: 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .meal-photo {
@@ -8181,14 +8181,14 @@ body {
 .community-date strong,
 .community-date span { display: block; }
 .community-date strong { font-size: 13px; }
-.community-date span { font-size: 11px; }
+.community-date span { font-size: 12px; }
 
 .community-copy { min-width: 0; }
 .community-copy h3 { margin: 2px 0; font-size: 17px; }
 .community-copy p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
-.community-host { color: var(--wishlist); font-size: 11px; font-weight: 900; }
+.community-host { color: var(--wishlist); font-size: 12px; font-weight: 900; }
 .community-participation { display: grid; gap: 7px; text-align: center; }
-.community-participation span { color: var(--muted); font-size: 11px; font-weight: 800; }
+.community-participation span { color: var(--muted); font-size: 12px; font-weight: 800; }
 
 .community-form label,
 .menu-select-row {
@@ -8310,7 +8310,7 @@ body {
   .lodging-search-card a {
     min-height: 40px;
     padding: 0 4px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .checkin-panel,
@@ -8609,7 +8609,7 @@ body { color: var(--ink); background: #e6ece7; }
 
 .nearby-notification-row strong,
 .nearby-notification-row small { white-space: nowrap; }
-.nearby-notification-row small { color: var(--muted); font-size: 11px; font-weight: 700; }
+.nearby-notification-row small { color: var(--muted); font-size: 12px; font-weight: 700; }
 .nearby-notification-row input { flex: 0 0 24px; }
 
 .sameshi-body { min-width: 0; overflow: hidden; }
@@ -8679,7 +8679,7 @@ body { color: var(--ink); background: #e6ece7; }
   color: #fff;
   background: rgb(10 17 16 / 0.82);
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1.2;
 }
@@ -8709,7 +8709,7 @@ body { color: var(--ink); background: #e6ece7; }
   .nearby-notification-row { gap: 8px; padding-inline: 10px; }
   .nearby-notification-row > span { gap: 6px; }
   .nearby-notification-row strong { font-size: 14px; }
-  .nearby-notification-row small { font-size: 10px; }
+  .nearby-notification-row small { font-size: 12px; }
   .facility-card .facility-social-pair,
   .detail-action-grid .facility-social-pair { grid-column: 1 / -1; }
   .commerce-hero { min-height: 250px; padding: 20px 18px; background-position: 44% center; }
@@ -8718,11 +8718,11 @@ body { color: var(--ink); background: #e6ece7; }
   .gear-card-visual { width: 92px; height: 104px; }
   .shop-card-actions { grid-column: 1 / -1; }
   .sameshi-card .facility-name { font-size: 17px; line-height: 1.3; }
-  .sameshi-card .source-badge { max-width: 58px; padding-inline: 7px; font-size: 10px; }
+  .sameshi-card .source-badge { max-width: 58px; padding-inline: 7px; font-size: 12px; }
 }
 
 @media (max-width: 390px) {
-  .nearby-notification-row small { display: inline; font-size: 9px; }
+  .nearby-notification-row small { display: inline; font-size: 12px; }
   .sameshi-card { grid-template-columns: 88px minmax(0, 1fr); gap: 9px; }
   .meal-photo { height: 104px; }
 }
@@ -8752,7 +8752,7 @@ body { color: var(--ink); background: #e6ece7; }
   }
 
   .install-card span {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.25;
   }
 
@@ -8797,19 +8797,19 @@ body { color: var(--ink); background: #e6ece7; }
   .topbar .brand-name { font-size: 27px; line-height: 1.2; }
   .topbar-promise { display: none; }
   .brand-mark { width: 44px; height: 44px; }
-  .topbar .eyebrow { font-size: 10px; }
+  .topbar .eyebrow { font-size: 12px; }
   .top-gear-button { min-width: 58px; min-height: 44px; }
   .icon-button#settingsButton { width: 44px; height: 44px; }
   .view-explore .summary-band { min-height: 0; padding: 14px; gap: 10px; }
   .view-explore .summary-copy { display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: center; }
-  .view-explore .summary-label { font-size: 11px; grid-column: 1; }
+  .view-explore .summary-label { font-size: 12px; grid-column: 1; }
   .view-explore .summary-copy strong { grid-row: 2 / 4; grid-column: 1; font-size: 34px; }
   .view-explore #nextMilestone, .view-explore #collectionScope { grid-column: 2; font-size: 12px; }
   .view-explore .progress-ring { width: 48px; height: 48px; border-width: 3px; font-size: 12px; }
   .view-explore .hero-metrics { display: none; }
   .view-explore .reward-nudge { gap: 6px; }
   .view-explore .reward-pill { min-height: 0; padding: 6px 8px; }
-  .view-explore .reward-pill span, .view-explore .reward-pill em { font-size: 10px; }
+  .view-explore .reward-pill span, .view-explore .reward-pill em { font-size: 12px; }
   .view-explore .reward-pill strong { font-size: 13px; }
   body:not(.view-explore) .summary-band, body:not(.view-explore) .install-card { display: none; }
   .tool-band { backdrop-filter: none; background: #f6faf8; box-shadow: 0 2px 8px rgb(17 24 23 / .08); }
@@ -8817,7 +8817,7 @@ body { color: var(--ink); background: #e6ece7; }
   .search-box input::placeholder { color: #667871; font-size: 14px; }
   .profile-panel, .leaderboard-panel { scroll-margin-top: 12px; }
   .nearby-notification-row > span { flex-wrap: wrap; row-gap: 3px; }
-  .nearby-notification-row small { font-size: 11px; }
+  .nearby-notification-row small { font-size: 12px; }
 }
 
 /* Search-first layout and action hierarchy. */
@@ -8872,7 +8872,7 @@ body { color: var(--ink); background: #e6ece7; }
 .facility-card .card-actions { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; margin: 0; }
 .facility-card .card-actions > * { min-width: 0; min-height: 44px; padding: 6px; font-size: 14px; line-height: 1.3; font-weight: 600; letter-spacing: 0; }
 .card-evidence { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-width: 0; }
-.card-evidence .tag { font-size: 11px; line-height: 18px; padding: 2px 6px; }
+.card-evidence .tag { font-size: 12px; line-height: 18px; padding: 2px 6px; }
 .card-evidence .source-badge-group { display: contents; }
 .card-evidence a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; padding: 6px 8px; font-size: 12px; }
 .facility-card .source-badge-official { color: #fff; background: #006d64; letter-spacing: 0; }
@@ -8944,7 +8944,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .facility-facts dt { color: #52665c; font-size: 13px; font-weight: 550; }
 .facility-facts dd { margin: 0; color: #172b25; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; font-weight: 400; }
 .facility-facts a { display: inline-block; color: #00685e; font-size: 12px; text-underline-offset: 3px; padding: 4px; }
-.address-checked { display: block; color: #52665c; font-size: 11px; font-weight: 400; }
+.address-checked { display: block; color: #52665c; font-size: 12px; font-weight: 400; }
 .facility-provenance, .notebook-privacy { margin: 8px 0; color: #52665c; font-size: 12px; line-height: 1.7; }
 .facility-inline-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .facility-inline-actions a, .facility-inline-actions button, .notebook-head button { display: inline-flex; min-height: 44px; align-items: center; padding: 6px 8px; color: #245244; border: 0; border-radius: 0; background: transparent; font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; }
@@ -8993,7 +8993,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .card-facts dd { color: #172b25; overflow-wrap: anywhere; }
 .card-facts dd { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
 .card-facts:empty { display: none; }
-.card-verification { margin: 0; color: #52665c; font-size: 11px; line-height: 1.6; }
+.card-verification { margin: 0; color: #52665c; font-size: 12px; line-height: 1.6; }
 .app-update-notice:not([hidden]) { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 10px 12px; margin-bottom: 12px; border: 1px solid #607d70; border-radius: 6px; color: #244537; background: #fff; font-size: 13px; line-height: 1.6; }
 .app-update-notice button { flex: 0 0 auto; min-height: 44px; }
 .settings-dialog.app-update-dialog,
@@ -9024,7 +9024,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .app-update-actions button { min-height: 44px; }
 #featureFilterPanel .feature-chip { display: inline-flex; align-items: center; justify-content: space-between; gap: 6px; }
 #featureFilterPanel .feature-chip-label { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
-#featureFilterPanel .feature-chip-count { flex: 0 0 auto; white-space: nowrap; font-size: 11px; font-weight: 400; }
+#featureFilterPanel .feature-chip-count { flex: 0 0 auto; white-space: nowrap; font-size: 12px; font-weight: 400; }
 #featureFilterPanel .feature-chip:disabled { color: #59665e; background: #eff2ef; border-color: #bdc9c1; cursor: not-allowed; box-shadow: none; }
 .feature-unavailable { grid-column: 1 / -1; flex-basis: 100%; width: 100%; }
 .feature-unavailable summary { min-height: 44px; padding: 10px 0; color: #52665c; font-size: 13px; cursor: pointer; }
@@ -9032,7 +9032,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .feature-reset { grid-column: 1 / -1; min-height: 44px; padding: 8px 12px; border: 1px solid #607d70; border-radius: 6px; color: #244537; background: #fff; font: inherit; font-size: 13px; }
 @media (max-width: 360px) {
   #featureFilterPanel .feature-chip { padding-inline: 6px; gap: 4px; font-size: 12px; }
-  #featureFilterPanel .feature-chip-count { font-size: 10px; }
+  #featureFilterPanel .feature-chip-count { font-size: 12px; }
 }
 @media (max-width: 760px) {
   .topbar { padding-top: calc(10px + env(safe-area-inset-top, 0px)); padding-bottom: 10px; }
@@ -9249,7 +9249,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .first-steps-actions { display: flex; gap: 8px; align-items: center; }
 
 /* ===== サウニュ〜（サウナニュース） ===== */
-.news-chip { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; }
+.news-chip { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 999px; color: #fff; font-size: 12px; font-weight: 800; letter-spacing: 0.04em; }
 .news-chip-opening { background: #006d64; }
 .news-chip-event { background: #344840; }
 .news-chip-renewal { background: #596763; }
@@ -9266,7 +9266,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .news-rail-card { flex: 0 0 248px; min-width: 248px; display: flex; flex-direction: column; background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; color: var(--ink); text-decoration: none; }
 .news-rail-card img { display: block; width: 100%; height: 155px; object-fit: cover; }
 .news-rail-card-body { display: block; padding: 8px 10px 10px; }
-.news-rail-card-meta { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: rgb(17 24 23 / 0.6); }
+.news-rail-card-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(17 24 23 / 0.6); }
 .news-rail-card-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-top: 4px; font-size: 0.85rem; font-weight: 700; line-height: 1.5; }
 .news-rail-more { align-items: center; justify-content: center; gap: 6px; padding: 16px 10px; text-align: center; }
 .news-rail-more-text { font-weight: 800; }
@@ -9282,7 +9282,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .news-card-main { display: flex; gap: 12px; width: 100%; padding: 0; background: none; border: 0; font: inherit; color: var(--ink); text-align: left; cursor: pointer; }
 .news-card-thumb { flex: 0 0 120px; width: 120px; height: 90px; align-self: center; object-fit: cover; }
 .news-card-body { display: grid; gap: 6px; align-content: start; padding: 10px 12px 10px 0; }
-.news-card-meta { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: rgb(17 24 23 / 0.6); }
+.news-card-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(17 24 23 / 0.6); }
 .news-card-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 1rem; font-weight: 800; line-height: 1.5; }
 .news-card-featured .news-card-main { display: block; }
 .news-card-featured .news-card-hero { display: block; width: 100%; height: 168px; object-fit: cover; }
@@ -9338,9 +9338,9 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
 .news-nav-card { display: flex; align-items: stretch; gap: 12px; padding: 10px; background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); border-radius: 8px; color: var(--ink); text-decoration: none; font: inherit; text-align: left; cursor: pointer; width: 100%; }
 .news-nav-thumb { flex: 0 0 104px; width: 104px; height: 88px; align-self: center; object-fit: cover; border-radius: 6px; }
 .news-nav-body { display: grid; gap: 4px; align-content: start; min-width: 0; }
-.news-nav-kind { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; color: var(--primary); }
+.news-nav-kind { font-size: 12px; font-weight: 800; letter-spacing: 0.04em; color: var(--primary); }
 .news-nav-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.85rem; font-weight: 700; line-height: 1.5; }
-.news-nav-meta { display: flex; align-items: center; gap: 8px; font-size: 0.72rem; color: rgb(17 24 23 / 0.6); }
+.news-nav-meta { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgb(17 24 23 / 0.6); }
 .news-share { margin-top: 22px; padding: 14px; background: rgb(255 255 255 / 0.78); border: 1px solid var(--line); border-radius: 8px; }
 .news-share-label { display: block; font-size: 0.85rem; font-weight: 800; }
 .news-share-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -9601,9 +9601,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   font-weight: 700;
   letter-spacing: 0.08em;
 }
-/* 注意: レールに scroll-snap を付けると自動スクロール（rAFで scrollLeft を
-   少しずつ進める方式）がスナップに引き戻されて動かなくなる。付けないこと。
-   連番はカウンタではなく data-num 属性で持つ（ループ複製でも番号が一致する）。 */
+/* 帯の自動送りは app.js（数秒ごとに1枚ずつ送り、カードの切れ目で止める。2026-11-19 再開）。scroll-snap はファイル末尾で付けている。
+   連番はカウンタではなく data-num 属性で持つ。 */
 .news-rail-card {
   position: relative;
 }
@@ -9744,8 +9743,11 @@ button:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visib
   left: 0;
   right: 0;
   z-index: 40;
-  max-height: min(46vh, 380px);
+  /* dvh でキーボード表示時の可視高さに追従させる（vh だと実機で見えている
+     範囲より背が高くなり、下端が .main の外＝タブバーの裏で切れてしまう） */
+  max-height: min(46dvh, 380px);
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 6px;
   background: #fffdf8;
   border: 1px solid var(--line);
@@ -9917,7 +9919,7 @@ body {
 .tile-cell.tile-wishlist { background: var(--teal2); color: #fff; }
 .tile-cell.tile-stamped { background: var(--accent); color: #fff; }
 .tile-cell.tile-empty { background: transparent; cursor: default; }
-.tile-map-legend { display: flex; gap: 14px; font-size: 11px; margin-top: 12px; opacity: 0.85; color: var(--cream); }
+.tile-map-legend { display: flex; gap: 14px; font-size: 12px; margin-top: 12px; opacity: 0.85; color: var(--cream); }
 .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
 .legend-stamped { background: var(--accent); }
 .legend-wishlist { background: var(--teal2); }
@@ -9966,7 +9968,7 @@ body {
   border: none;
   color: var(--cream);
   font-family: inherit;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   opacity: 0.7;
   cursor: pointer;
@@ -9983,6 +9985,8 @@ body {
   background: repeating-linear-gradient(180deg, currentColor 0 2px, transparent 2px 8px);
   width: 20px;
   height: 18px;
+  /* 他のタブのアイコン（22px）と高さをそろえ、ラベルの縦位置のずれ（2px）をなくす */
+  margin-block: 2px;
 }
 .bottom-nav .tab-stamp { opacity: 1; position: relative; }
 .tab-stamp-seal {
@@ -10252,7 +10256,7 @@ body {
 .book-stamp-seal-name {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -10441,7 +10445,6 @@ body {
   .app-shell .topbar { grid-row: 1; }
   .app-shell .main { grid-row: 2; min-height: 0; margin: 0 10px; width: auto; }
   .app-shell .bottom-nav { grid-row: 3; position: static; }
-  .stage-foot { display: none; }
   .book-map-sp {
     display: block;
     margin-top: 28px;
@@ -10688,7 +10691,7 @@ body {
 .facility-shelf { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .facility-shelf-item { background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 10px; text-decoration: none; color: var(--ink); }
 .facility-shelf-item strong { display: block; font-family: "Shippori Mincho B1", serif; font-size: 16px; margin-bottom: 2px; }
-.facility-shelf-item small { color: var(--ink-soft); font-size: 0.72rem; }
+.facility-shelf-item small { color: var(--ink-soft); font-size: 12px; }
 .facility-back-pref { margin: 18px 0 4px; width: 100%; height: 48px; border-radius: 12px; border: 1.5px solid var(--ink); background: #fff; font-size: 16px; font-weight: 700; cursor: pointer; }
 @media (max-width: 640px) { .facility-shelf { grid-template-columns: repeat(2, 1fr); } }
 
@@ -10733,10 +10736,1073 @@ body {
   .app-shell .stage-foot button { color: var(--ink-soft); }
 }
 
+/* =====================================================================
+   本番監査（2026-11-16）の修正
+   - PC（1080px〜）：中央の列が細いのに Gear のカードを3列にしていたため、
+     商品名・説明が1行2〜3文字で縦に流れていた → 列の幅に合わせて並べる（1枚 320px 以上）
+   - ヘッダーのボタン「施設を追加」「メニュー」が2行に割れていた → 1行に
+   - 施設名：小さい「ッ」「ー」が行頭に来ないように
+   ===================================================================== */
+.gear-grid, .shop-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)) !important; }
+.topbar-actions a, .topbar-actions button { white-space: nowrap; }
+.facility-name, .gear-card-copy h4 { line-break: strict; text-wrap: pretty; }
+/* PC 右列の「施設を追加」「メニュー」が2行に割れていた → 1行に（左右の余白を詰める） */
+.rail-action-button { white-space: nowrap; padding-left: 14px; padding-right: 14px; }
+/* 探す画面の「全部・未押印・行きたい・お気に入り」：等幅で「お気に入り」が枠からはみ出していた → 文字の長さに合わせる */
+#viewExplore .segment button { flex: 1 1 auto; padding: 0 12px; white-space: nowrap; }
+
+/* 2026-11-17 監査: 中央カラムが狭い PC 幅で、サ飯・宿カードが2列になり本文列が約34pxに潰れる／ランキング参加ボタンが縦長になるのを直す */
+@media (min-width: 720px) {
+  .sameshi-grid,
+  .stay-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  }
+
+  .profile-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  }
+
+  .profile-form .profile-share-row,
+  .profile-form > .primary-button {
+    grid-column: 1 / -1;
+  }
+
+  .profile-form .profile-share-row {
+    height: auto;
+    min-height: 52px;
+    padding-block: 8px;
+  }
+
+  .profile-form > .primary-button {
+    justify-self: start;
+    min-width: 200px;
+    white-space: nowrap;
+  }
+}
+
+/* iPhone 表示の是正（2026-11-17） */
+/* 比較バー：0件のときは hidden で隠す設計だが display:flex に負けて常に表示され、
+   スクロール中も施設カードの上に「比較中 0件」が重なっていた。選択時は下の内容が透けないようにする */
+.compare-bar[hidden] { display: none; }
+.compare-bar { background: rgb(255 255 255 / 0.98); }
+/* 帳面の空き枠：「まだ／押していな／い」と1文字だけ次の行に残らないようにする。
+   枠の内側が78px（360px幅では約70px）しかなく「押していない」6文字が入らないため、空き枠だけ左右の余白を詰め12pxにする */
+.book-stamp-page.is-empty { padding-inline: 4px; }
+.book-stamp-empty-text { font-size: 12px; word-break: keep-all; overflow-wrap: anywhere; }
+/* 見出し・出典リンクは行長をそろえ、「覚え／る」「マナ／ー」「（…サウナ／）」のような改行を避ける */
+.guide-starter-title,
+.news-facility-chips a,
+figcaption { text-wrap: balance; }
+/* 「読んだら、次のサウナを快適に／する」：文中の <wbr>（「、」の後）だけで折り返す */
+.guide-gear-head strong { word-break: keep-all; overflow-wrap: anywhere; }
+/* 出典リンクは空白・括弧の位置で折り返す（「星野リゾー／ト」のような語の途中を避ける） */
+.news-facility-chips a { word-break: keep-all; overflow-wrap: anywhere; }
+/* ニュース一覧のサムネイル：横長画像を中央で切り抜くと左端の分類名（「新店・開店」など）が欠けるため左寄せで切り抜く */
+.news-card-thumb { object-position: left center; }
+/* 検索欄を上端へ寄せたときに見出し帯へ密着させない */
+#viewExplore .search-form { scroll-margin-top: 12px; }
+
+/* 見出し・カード題名の文節改行（2026-11-17）
+   phrase.js が文節の切れ目に <wbr> を入れ、ここで <wbr> と空白以外の改行を止める（iPhone Safari は auto-phrase 未対応）。
+   keep-all と overflow-wrap: anywhere の組み合わせは Safari で数字の途中で折れるため、1文節が行幅を超えるときの保険は break-word。
+   all: unset で「.guide-entry span」等の周囲の span 向けスタイルを受けず、見た目は親のまま。 */
+.ph {
+  all: unset !important;
+  display: inline !important;
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+
+/* =====================================================================
+   メニュー「サ印帳の目次」（2026-11-17 全ページ監査）
+   旧メニュー（汎用の青緑ボタン格子）を、サ印帳のデザイン言語で作り直す：
+   夜色の羽目板の見出し＋朱の角印、生成りの帳面、明朝の区分見出し＋Barlow の番号、
+   点線の罫で区切った項目（名前＋短い説明＋朱の矢印）、現在地の朱の札、姉妹サイトの帯。
+   ===================================================================== */
+#settingsDialog.menu-book,
+#settingsDialog.menu-book[open] {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 120;
+  width: min(420px, calc(100vw - 28px));
+  height: 100dvh;
+  max-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: var(--cream);
+  color: var(--ink);
+  border: 0;
+  border-radius: 18px 0 0 18px;
+  box-shadow: -18px 0 42px rgb(0 0 0 / 0.36);
+}
+#settingsDialog.menu-book { display: none; }
+#settingsDialog.menu-book[open] { display: block; }
+#settingsDialog.menu-book .mb-head {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: calc(env(safe-area-inset-top) + 16px) 16px 16px 20px;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.03) 0 62px, rgb(0 0 0 / 0.2) 62px 64px),
+    var(--night);
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-seal {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  transform: rotate(-6deg);
+  background: var(--accent);
+  color: var(--cream);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 22px;
+  box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.65);
+}
+#settingsDialog.menu-book .mb-head-copy { flex: 1 1 auto; min-width: 0; }
+#settingsDialog.menu-book .mb-head-en {
+  margin: 0 0 2px;
+  font-family: var(--num-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #7FD6CB;
+}
+#settingsDialog.menu-book .mb-head h2 {
+  margin: 0;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-close {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1.5px solid rgb(255 250 242 / 0.55);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--cream);
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-close .icon-close { color: var(--cream); }
+#settingsDialog.menu-book .mb-close:focus-visible { outline: 2px solid #7FD6CB; outline-offset: 2px; }
+#settingsDialog.menu-book .mb-body {
+  padding: 18px 18px calc(env(safe-area-inset-bottom) + 28px);
+  background:
+    linear-gradient(90deg, var(--paper2) 0 6px, transparent 6px),
+    var(--cream);
+}
+
+/* 検索 */
+#settingsDialog.menu-book .mb-search {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+#settingsDialog.menu-book .mb-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  padding: 0 12px 0 40px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+}
+#settingsDialog.menu-book .mb-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid var(--ink-soft);
+  border-radius: 50%;
+}
+#settingsDialog.menu-book .mb-search-icon::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  bottom: -5px;
+  width: 7px;
+  height: 2px;
+  background: var(--ink-soft);
+  transform: rotate(45deg);
+}
+#settingsDialog.menu-book .mb-search-box input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  -webkit-appearance: none;
+  appearance: none;
+}
+#settingsDialog.menu-book .mb-search-box:focus-within { outline: 2px solid var(--primary); outline-offset: 2px; }
+#settingsDialog.menu-book .mb-search-submit {
+  height: 52px;
+  min-width: 64px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--primary);
+  color: var(--cream);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-search-suggestions {
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 5;
+  max-height: min(56dvh, 420px);
+}
+
+/* 現在地 */
+#settingsDialog.menu-book .mb-here {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 6px;
+  padding: 10px 12px;
+  border: 1.5px dashed #CDBFA5;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-here > span:last-child { min-width: 0; overflow-wrap: anywhere; }
+#settingsDialog.menu-book .mb-here-label {
+  flex: none;
+  padding: 2px 7px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--cream);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  transform: rotate(-4deg);
+}
+
+/* 区分 */
+#settingsDialog.menu-book .mb-section { margin: 24px 0 0; }
+#settingsDialog.menu-book .mb-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  padding: 0 0 8px;
+  border-bottom: 1.5px solid var(--ink);
+}
+#settingsDialog.menu-book .mb-no {
+  font-family: var(--num-font);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primary);
+}
+#settingsDialog.menu-book .mb-section-name {
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-en {
+  margin-left: auto;
+  font-family: var(--num-font);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: var(--ink-soft);
+}
+#settingsDialog.menu-book .mb-list { margin: 0; padding: 0; list-style: none; }
+#settingsDialog.menu-book .mb-list li { margin: 0; border-bottom: 1px dashed #CFC3AC; }
+#settingsDialog.menu-book .mb-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 20px;
+  grid-template-areas: "name go" "desc go";
+  align-items: center;
+  column-gap: 10px;
+  width: 100%;
+  min-height: 60px;
+  margin: 0;
+  padding: 10px 4px 10px 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  box-shadow: none;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-item:hover { background: rgb(246 238 223 / 0.7); }
+#settingsDialog.menu-book .mb-item:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
+#settingsDialog.menu-book .mb-item-name {
+  grid-area: name;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+#settingsDialog.menu-book .mb-item-desc {
+  grid-area: desc;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+#settingsDialog.menu-book .mb-item-go {
+  grid-area: go;
+  justify-self: end;
+  width: 9px;
+  height: 9px;
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+  transform: rotate(45deg);
+}
+#settingsDialog.menu-book .mb-item.is-current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+#settingsDialog.menu-book .mb-item.is-current .mb-item-name { color: var(--primary); }
+#settingsDialog.menu-book .mb-item.is-current .mb-item-name::after {
+  content: "現在地";
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 6px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  vertical-align: 2px;
+}
+
+/* 設定 */
+#settingsDialog.menu-book .mb-settings { display: grid; gap: 10px; }
+#settingsDialog.menu-book .mb-settings .mb-section-head { margin-bottom: 4px; }
+#settingsDialog.menu-book .mb-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 60px;
+  margin: 0;
+  padding: 10px 14px;
+  background: #fff;
+  border: 1px solid #DCCFB6;
+  border-radius: 12px;
+  box-shadow: none;
+}
+#settingsDialog.menu-book .mb-row-text { display: grid; gap: 2px; min-width: 0; }
+#settingsDialog.menu-book .mb-row-text strong { font-size: 16px; font-weight: 700; line-height: 1.4; color: var(--ink); }
+#settingsDialog.menu-book .mb-row-text small { font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
+#settingsDialog.menu-book .mb-select-row select {
+  flex: none;
+  width: 9.5em;
+  height: 44px;
+  min-height: 44px;
+  margin: 0;
+  padding: 0 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--cream);
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+}
+#settingsDialog.menu-book .mb-toggle-row input[type="checkbox"] {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  accent-color: var(--primary);
+}
+#settingsDialog.menu-book .mb-note { margin: 0; font-size: 13px; line-height: 1.7; color: var(--ink-soft); }
+#settingsDialog.menu-book .mb-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+#settingsDialog.menu-book .mb-tool,
+#settingsDialog.menu-book .mb-danger {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+  padding: 8px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  box-shadow: none;
+  cursor: pointer;
+}
+#settingsDialog.menu-book .mb-danger { border-color: var(--accent); background: transparent; color: var(--accent); }
+
+/* 姉妹サイト */
+#settingsDialog.menu-book .mb-network {
+  margin: 28px 0 0;
+  padding: 16px 16px 8px;
+  border-radius: 14px;
+  background:
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.025) 0 62px, rgb(0 0 0 / 0.18) 62px 64px),
+    var(--night);
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-network-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 6px;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: var(--cream);
+}
+#settingsDialog.menu-book .mb-network-head .mb-en { order: 2; margin: 0; color: rgb(255 250 242 / 0.62); }
+#settingsDialog.menu-book .mb-network-list { margin: 0; padding: 0; list-style: none; }
+#settingsDialog.menu-book .mb-network-list li { border-top: 1px dashed rgb(255 250 242 / 0.18); }
+#settingsDialog.menu-book .mb-site {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
+  grid-template-areas: "dot name tag" "dot role tag";
+  align-items: center;
+  column-gap: 10px;
+  min-height: 52px;
+  padding: 8px 2px;
+  color: var(--cream);
+  text-decoration: none;
+}
+#settingsDialog.menu-book .mb-site i { grid-area: dot; width: 10px; height: 10px; border-radius: 50%; background: var(--dot); box-shadow: 0 0 0 2px rgb(255 250 242 / 0.25); }
+#settingsDialog.menu-book .mb-site b { grid-area: name; font-size: 15px; font-weight: 700; line-height: 1.4; }
+#settingsDialog.menu-book .mb-site > span { grid-area: role; font-size: 13px; line-height: 1.5; color: rgb(255 250 242 / 0.74); }
+#settingsDialog.menu-book .mb-site em {
+  grid-area: tag;
+  padding: 1px 7px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--cream);
+  font-style: normal;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 12px;
+}
+#settingsDialog.menu-book a.mb-site:hover b { text-decoration: underline; text-underline-offset: 3px; }
+#settingsDialog.menu-book a.mb-site:focus-visible { outline: 2px solid #7FD6CB; outline-offset: 2px; }
+
+/* 検索候補：ページ・都道府県の行と0件の案内（探す画面とメニューで共通） */
+.search-suggestions .search-suggestions-head + .search-suggestion { margin-top: 0; }
+.search-suggestions .search-suggestion + .search-suggestions-head { margin-top: 4px; border-top: 1px dashed #DCCFB6; padding-top: 10px; }
+.search-suggestion-page .search-suggestion-name,
+.search-suggestion-pref .search-suggestion-name { color: var(--primary); }
+.search-suggestions-empty { display: grid; gap: 4px; padding: 10px; }
+.search-suggestions-empty strong { font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--ink); overflow-wrap: anywhere; }
+.search-suggestions-empty span { font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+.search-suggestions-head { font-size: 12px; }
+.search-suggestion-meta { font-size: 12px; }
+.search-suggestion { min-height: 44px; }
+
+@media (prefers-reduced-motion: reduce) {
+  #settingsDialog.menu-book[open] { animation: none; }
+}
+
+/* 全ページ監査（2026-11-17）の是正
+   - 日本語が12px未満になっていた箇所（記事の注記 <small>、照合札、サ飯見出しの県名ラベル、制覇マップのマス）を12pxに
+   - タップ領域が44px未満の操作（フッター帯のリンク、見出し横の「一覧 →」「コレクション →」、共有・更新などの小ボタン、記事のパンくず）を44pxに */
+.main small,
+.settings-dialog small { font-size: max(12px, 0.8em); }
+.fact-badge,
+.facility-h3-label { font-size: 12px; }
+.tile-cell { font-size: 12px; line-height: 1; color: rgb(255 250 242 / 0.72); }
+.stage-foot button { min-height: 44px; padding: 10px 2px; }
+.book-section-link,
+.facility-h3-link { min-height: 44px; display: inline-flex; align-items: center; }
+.tiny-share-button,
+.mini-button { min-height: 44px; }
+.main nav[aria-label*="パンくず"] a,
+.main .breadcrumb a,
+.main .breadcrumbs a { display: inline-flex; align-items: center; min-height: 44px; }
+.main a.secondary-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+/* 称号ダイアログの閉じるボタンがカードの角に接していた → 内側に収め、タップ領域を44pxに */
+.achievement-dialog .achievement-close { top: 14px; right: 14px; width: 44px; height: 44px; background: rgb(255 250 242 / 0.92); border: 1px solid #DCCFB6; border-radius: 12px; }
+/* SP：「トップへ」の横長ボタンがカードの「行きたい」等のボタンに重なって押せなかった →
+   帳面の右の余白に寄せた44pxの丸ボタンにし、重なる幅を小さくする（読み上げ名は aria-label のまま） */
+@media (max-width: 1023px) {
+  .back-to-top {
+    right: 4px;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+    background: rgb(11 21 20 / 0.9);
+    border: 1.5px solid rgb(255 250 242 / 0.5);
+  }
+  .back-to-top-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .back-to-top-arrow { font-size: 18px; }
+}
+/* 押印帳の施設名：長いカタカナ名（例「ホテルモントレエーデルホフ札幌」）が文節改行（keep-all）のまま
+   グリッドの最小幅を押し広げ、カードの外へはみ出して切れていた → グリッド項目の最小幅を0にして枠内で折り返す */
+.stamp-tile > * { min-width: 0; max-width: 100%; }
+.facility-title-link { max-width: 100%; }
+/* 記録：県別の進捗マス
+   - 先頭の「県マスター」マスが白文字×生成り地で読めなかった → 称号の帯と同じ夜色の地に金の縁
+   - 「0/140湯 / あと／140」のように数字だけが次の行に残っていた → 「0/140湯 /」「あと140」の塊ごとに折り返す */
+.pref-board .pref-progress.pref-progress-master { background: var(--night); color: var(--cream); border-color: var(--gold2); }
+.pref-board .pref-progress.pref-progress-master strong { color: var(--cream); }
+.pref-board .pref-progress.pref-progress-master span { color: rgb(255 250 242 / 0.8); }
+.pref-progress .pp-chunk { display: inline-block; white-space: nowrap; }
+/* Gear の写真ラベル（「サウナハット」など）が92px幅の写真で「サウナハッ／ト」と1文字だけ折れていた → 1行に収める */
+.gear-card-visual span { left: 5px; bottom: 5px; max-width: calc(100% - 10px); padding: 4px 5px; white-space: nowrap; letter-spacing: -0.01em; }
+/* PC：帳面（中央の列）は最大560pxなのに施設カードを2列にしていたため、施設名が「RENOS／AUNA」、
+   経路ボタンが「経／路」と縦に割れていた → 帳面の中では1列にする */
+@media (min-width: 1100px) {
+  .view-explore .facility-list { grid-template-columns: minmax(0, 1fr); }
+}
+/* PC 左列のロゴ：縦書きの p に既定の余白が入り、タグライン「一湯、一印。」と英字が帳面の裏に隠れていた
+   （1024〜1440px のどの幅でも左列の外へ出ていた）→ 余白を0にし、左列が細い幅では間隔と印を詰めて英字を省く */
+@media (min-width: 1024px) {
+  .rail-logo p { margin: 0; padding: 0; }
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .rail-left { padding-left: 24px; padding-right: 24px; }
+  .rail-logo { gap: 10px; }
+  .rail-logo-side { gap: 10px; }
+  .rail-seal { width: 52px; height: 52px; font-size: 26px; }
+  .rail-en { display: none; }
+}
+/* PC 1024〜1199px：右列が232pxしかなく、Gear ボタンが帳面の裏に隠れ、制覇マップのマスがカードの外へはみ出し、
+   「次のサ活」が1文字ずつ縦に折れていた → 余白を詰め、ボタンは折り返して並べ、マスは色だけで示す（県名は読み上げ名と title に残る） */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .rail-right { padding: 32px 14px; gap: 14px; }
+  .rail-actions { flex-wrap: wrap; justify-content: stretch; gap: 8px; }
+  .rail-actions .rail-action-button { flex: 1 1 auto; height: 44px; padding: 0 10px; }
+  .rail-card { padding: 16px 12px; border-radius: 14px; }
+  .rail-card-title { flex-wrap: wrap; gap: 4px 8px; font-size: 16px; }
+  .rail-right .tile-map { gap: 2px; }
+  .rail-right .tile-cell { font-size: 0; }
+  .rail-right .tile-map-legend { flex-wrap: wrap; gap: 6px 12px; }
+  .rail-next-row { grid-template-columns: 1fr; gap: 6px; }
+  .rail-next-num { width: 36px; height: 36px; }
+}
+/* 「サウナスタンプラリーの始め方」「サウナ御朱印とサ印の違い」：PC の帳面（560px）で見出しの最小幅に
+   グリッドが引っ張られ、見出しと3列の手順が帳面の右へはみ出して切れていた → 列を帳面の幅に収め、手順は縦に並べる */
+.intent-page { grid-template-columns: minmax(0, 1fr); }
+.intent-page > h2 { font-family: "Shippori Mincho B1", serif; font-weight: 800; letter-spacing: 0.04em; }
+@media (min-width: 701px) {
+  .intent-page > h2 { font-size: 34px; line-height: 1.35; max-width: none; }
+  .intent-grid { grid-template-columns: minmax(0, 1fr); }
+}
+/* 運営・データ方針：PC の帳面（560px）で4列にしていたため「4,954」が枠からはみ出し、注記が隣の枠に重なっていた → 2列に */
+@media (min-width: 701px) {
+  .about-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .about-metrics strong { font-family: var(--num-font); font-weight: 600; font-size: 40px; }
+}
+.about-metrics article { min-width: 0; overflow-wrap: anywhere; }
+/* 探す画面の検索欄：右側の余白を「検索」ボタン分より広く取っていたため入力欄が114px（360px幅では84px）しかなく、
+   案内文が「施設名・都道府県」で切れていた → 余白をボタン幅に合わせ、案内文を短くして全文を見せる */
+#viewExplore .search-box { padding-right: 76px; }
+#viewExplore .search-submit-button { padding: 0 16px; }
+/* サウナ入門の記事一覧：題名の最後の1文字（「…日があ／る」）だけが次の行に残っていた → 文節で折り返し、行長をそろえる */
+.article-card summary strong { text-wrap: balance; }
+/* サウナ仲間「集合施設」の施設候補（探す画面・メニューと同じ候補欄） */
+.venue-field { position: relative; }
+.venue-field .venue-suggestions { top: calc(100% + 4px); z-index: 30; }
+/* 施設追加・サウナ仲間の都道府県など、帳面内のセレクトが高さ約24pxで押しにくかった → 44px・16px に */
+.main .view select { min-height: 44px; font-size: 16px; }
+/* 存在しない URL の案内（帳面の先頭） */
+.route-notfound { display: grid; gap: 4px; margin: 0 0 18px; padding: 14px 16px; border: 1.5px dashed var(--accent); border-radius: 12px; background: #fff; }
+.route-notfound-eyebrow { margin: 0; font-family: var(--num-font); font-size: 12px; font-weight: 600; letter-spacing: 0.24em; color: var(--accent); }
+.route-notfound strong { font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 20px; line-height: 1.4; color: var(--ink); }
+.route-notfound span { font-size: 14px; line-height: 1.7; color: var(--ink-soft); }
+/* サウニュ〜記事の目次から飛んだ見出しが帳面の上端に密着しない／ヘッダーに隠れないように */
+[id^="news-h2-"] { scroll-margin-top: 16px; }
+@media (max-width: 1023px) { [id^="news-h2-"] { scroll-margin-top: 12px; } }
+/* 消去ボタンは文字があるときだけ出す設計だが、非表示でも幅44pxを占めて入力欄を狭めていた */
+#viewExplore .search-clear-button[hidden] { display: none; }
+.route-notfound span { text-wrap: balance; }
+#viewExplore .search-box input { flex: 1 1 auto; width: auto; min-width: 0; }
+#viewExplore .search-box { grid-template-columns: 22px minmax(0, 1fr) auto; column-gap: 8px; padding-left: 14px; }
+#viewExplore .search-box { column-gap: 6px; }
+/* 「サ活の進捗・次の一湯」を開いたとき、411px以上の幅で中の列が548pxに広がり、進捗・スロット・リンクが帳面の右へはみ出していた → 列を帳面の幅に収める */
+.explore-extras-content { grid-template-columns: minmax(0, 1fr) !important; }
+.explore-extras-content > * { min-width: 0; max-width: 100%; }
+.summary-band { grid-template-columns: minmax(0, 1fr) auto; }
+/* 残りの小さなタップ領域：施設詳細のパンくず（36px）、ホーム画面追加カードの閉じる（34px）、記事の目次（20px） */
+.facility-crumbs button { min-height: 44px; }
+.install-dismiss { min-width: 44px; min-height: 44px; }
+.news-toc li a { display: inline-block; padding: 10px 0; }
+/* 「次の一手」のボタン列が最小356pxの4列で、帳面（PC 560px の内側・430px幅）から「行きたい」「サ飯」がはみ出していた → 2×2 にそろえる */
+.quest-actions { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; min-width: 0 !important; }
+.quest-actions button { min-height: 44px; }
+.text-link-button { min-height: 44px; display: inline-flex; align-items: center; }
+#viewCommunity .feature-chip { min-height: 44px; }
+#settingsDialog.menu-book .mb-item-desc,
+#settingsDialog.menu-book .mb-site > span { text-wrap: balance; }
+#settingsDialog.menu-book .mb-search-box input::placeholder { font-size: 15px; }
+.lodging-search-card a { min-height: 44px; display: inline-flex; align-items: center; }
+
+/* =====================================================================
+   全ページ レイアウト監査（2026-11-17 夜・iPhone 390 で全 5,232 ページを機械走査）
+   ===================================================================== */
+/* (1) 行頭の長音・小書き仮名：「施設ペ／ージ」「ジャグジ／ー」「データベ／ース」。
+   WebKit の line-break: auto は長音符・小書き仮名の前で折り返すため、サイト全体を strict にする */
+html { line-break: strict; }
+/* (2) 1列グリッドの列幅が「折り返せない一番長い語」に引っ張られ、ページ全体が画面の右へはみ出していた
+   （施設名「みのたにグリーンスポーツホテル」等で施設詳細の札・ボタン・本文がすべて右に見切れる。
+   ニュース見出し「…2025年11月15日再始動｜フィンランド…」で記事全体が57px はみ出す）。
+   列を minmax(0, 1fr) に固定し、長い語は枠の内側で折り返す */
+.facility-detail-shell,
+.facility-detail,
+.facility-near-list,
+.ssr-content { grid-template-columns: minmax(0, 1fr); }
+.facility-shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 640px) { .facility-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.facility-detail > *,
+.ssr-content > * { min-width: 0; }
+.facility-crumbs > [aria-current] { min-width: 0; overflow-wrap: anywhere; }
+.facility-near-main,
+.facility-shelf-item { min-width: 0; }
+.facility-near-main strong,
+.facility-shelf-item strong { overflow-wrap: anywhere; }
+/* (3) 施設名・店名：折り返せない1塊が行幅を超える名前（「グリーンスポーツホテル」「サウナリゾートオリエンタル神戸」など）は、
+   その塊が1行に収まる大きさまで文字を下げる（--name-run は app.js の nameRunStyle が数えた最長の塊の字数。下限あり）。
+   これで枠を押し広げず、語の途中で折れたり1〜2字だけ次の行へ落ちたりしない。塊が行に収まる名前は従来の大きさのまま。
+   末尾が漢字2字の地名の名前（「…オリエンタル神戸」）は、下限の大きさまでで名前全体が1行に入るならそうし、入らないときだけ地名の前で折る（--name-len） */
+.facility-dh,
+.facility-near-main,
+.facility-shelf-item,
+.facility-card .card-head .facility-name,
+.sameshi-card .card-head .facility-name { container-type: inline-size; }
+.facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 34px); text-wrap: balance; overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .facility-dh h2 { font-size: clamp(18px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(18px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 26px); }
+}
+.facility-near-main strong[style],
+.facility-shelf-item strong[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 16px); }
+.facility-card .facility-name[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
+.sameshi-card .facility-name[style] { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 17px); }
+/* (4) 施設詳細の小見出し「〇〇区のほかのサウナ」：flex の中の素の文字列が字単位で折れ「サウ／ナ」になっていた。
+   題を span に入れて文節で折り、英字ラベル・「一覧 →」は収まらなければ次の行へ回す */
+.facility-h3 { flex-wrap: wrap; row-gap: 2px; }
+.facility-h3-title { min-width: 0; text-wrap: balance; }
+/* (5) 施設カードの項目名：62px 固定の列に「施設営業時間」「サウナストーブ」（6〜7字）が入らず「施設営業時／間」「サウナスト／ーブ」と折れていた。
+   列をカードの中の一番長い項目名の幅（上限7字）にそろえ、行どうしの頭は subgrid で揃えたままにする */
+.card-facts { grid-template-columns: fit-content(7.2em) minmax(0, 1fr); column-gap: 6px; }
+.card-facts > div { grid-column: 1 / -1; grid-template-columns: subgrid; }
+.card-facts dt { word-break: keep-all; }
+/* (6) カード・一覧の施設名：最後の行に1〜2字だけ落ちる（「…サッ／ポロ」「…パーク／岡崎」）のを行の長さをそろえて避ける */
+.facility-card .facility-name,
+.sameshi-card .facility-name,
+.stay-card h3 { text-wrap: balance; }
+/* (9) サ印（押印帳）のタイル名：2列のタイルで長い名前の最後の1字が次の行へ落ちていた（「…サッポ／ロ」）→ 施設名と同じく塊が1行に入る大きさへ */
+.stamp-title[style] { container-type: inline-size; }
+.stamp-title[style] .facility-title-link { font-size: clamp(12px, max(calc(100cqi / (var(--name-len, var(--name-run, 1)) * 1.06)), min(12px, calc(100cqi / (var(--name-run, 1) * 1.06)))), 13px); }
+
+/* =====================================================================
+   PC デザイン改善（2026-11-18）。ここから下は PC（1024px 以上）だけに効く指定と、
+   SP では見た目が変わらない修正（はみ出しの保険）だけ（フッターは 2026-11-18 監査で main の末尾の共通フッターに変更）。
+   ===================================================================== */
+/* 記事の要点枠：項目の値が列の最小幅で枠の右へはみ出していた（PC 1280 で 9〜20px）→ 値の列を枠に収める（SP も同じ指定だがはみ出しが無いので見た目は不変） */
+.news-factbox-row { grid-template-columns: 104px minmax(0, 1fr); }
+.news-factbox-row dd { min-width: 0; overflow-wrap: anywhere; }
+/* 要点枠の dl に記事全体向けの「.ssr-content dl は3列」（720px 以上）が当たり、PC で項目が3列に詰め込まれて値が1〜2字ずつ折れていた → 要点枠は1列（SP は元から1列） */
+.ssr-content .news-factbox dl { grid-template-columns: minmax(0, 1fr); }
+
+@media (min-width: 1024px) {
+  /* 帳面の幅：560px 固定で、1280px では左右の墨色の柱が 360px ずつ・1440px では 440px ずつ空き、
+     本文の帳面だけが細く間延びして見えていた → 画面幅に合わせて 560〜700px（1280px で 640px）。左右の柱は 290px 以上を保つ */
+  .app-shell { grid-template-columns: minmax(0, 1fr) clamp(560px, 50vw, 700px) minmax(0, 1fr); }
+  .rail-left { padding: 40px 36px; }
+  .rail-right { padding: 40px 32px; }
+
+  /* 記事（ニュース・入門）の本文：14px の太字で詰まって読みにくかった → 本文は 16px の標準の太さ・行間 1.9。
+     要点・表・出典などの小さな文字はそのまま */
+  .is-article .ssr-content > p:not(.eyebrow):not(.news-facility-chips),
+  .is-article .ssr-content > ul > li { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--ink); }
+  .is-article .ssr-content > p:not(.eyebrow) + p { margin-top: 0.6em; }
+
+}
+
+@media (min-width: 1024px) {
+  /* 探す：「全部・未押印・行きたい・お気に入り」と「特徴」が別の行で中央寄せになり、下の「現在地・マイ県・温泉付き…」と行頭がずれていた
+     → 検索欄の下に表示切替と「特徴」を1行に並べ、どの群も左端をそろえる */
+  #viewExplore .tool-band { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: flex-start; column-gap: 8px; }
+  #viewExplore .tool-band > .search-form,
+  #viewExplore .tool-band > .feature-filter-panel { flex: 1 1 100%; }
+  #viewExplore .tool-band > .segment { flex: 0 1 auto; margin-top: 12px; }
+  #viewExplore .tool-band > .search-refiners { flex: 0 0 auto; margin-top: 12px; }
+  #viewExplore .tool-band .feature-filter-toggle { min-height: 38px; height: 38px; border-radius: 999px; padding: 0 16px; }
+  /* 「現在地・マイ県」と「温泉付き・個室・セルフロウリュ・外気あり」：1つの行に混ざって最後の1つだけ次の行に落ちていた → 2群を別の行に */
+  #viewExplore .area-shortcut { justify-content: flex-start; }
+  #viewExplore .area-shortcut .feature-pills { display: flex; flex: 1 1 100%; flex-wrap: wrap; gap: 8px; }
+  #viewExplore .area-shortcut .feature-pills { order: 2; }
+  #viewExplore .area-shortcut .nearby-result { order: 3; }
+  #viewExplore .area-shortcut .feature-pills button { width: auto; }
+
+  /* サウナ入門の記事一覧：2列で、開いた記事の本文が約270px（1行17字）に詰まり、隣の列に大きな空白ができていた → 1列 */
+  .article-list { grid-template-columns: minmax(0, 1fr); }
+  /* サウナ仲間：2列で左の「募集中のサ活」が約160pxに潰れ、見出しが1〜2字ずつ縦に折れていた → 一覧と募集フォームを縦に並べる */
+  .community-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  /* 記事の見出しの縦罫と文字が 6px しか離れず詰まって見えた → PC は 14px。要点枠も内側を広げ、項目名と値の間を空ける */
+  .news-article-body h2, .ssr-content h2, .article-body h2 { padding-left: 14px; }
+  .news-points h2, .news-factbox h3 { padding-left: 12px; }
+  .news-factbox { padding: 18px 20px; }
+  .news-factbox-row { gap: 14px; }
+  .news-nav-heading { margin-left: 0; padding-left: 14px; }
+}
+
+/* =====================================================================
+   独立監査（2026-11-18）の指摘の是正
+   ===================================================================== */
+/* SP-H1 / PC-M6 印のページ：上から 印（種別の一字＋サ印）→ 施設名1行 → 日付 → 営業状況かメモ1行。縦書きの所在地は右の列。
+   どの要素も絶対配置をやめ、重ならない。名前・メモは1行に収め、収まらなければ「…」（全文は title・読み上げ名） */
+.book-stamp-page:not(.is-empty) { aspect-ratio: auto; min-height: 168px; justify-content: flex-start; gap: 4px; padding: 14px 28px 10px 8px; text-align: center; }
+.book-stamp-page:not(.is-empty) .book-stamp-seal { flex: none; width: 64px; height: 64px; padding: 4px; margin: 0 0 4px; }
+.book-stamp-seal-kanji { font-family: var(--font-display); font-weight: 800; font-size: 26px; line-height: 1; }
+.book-stamp-page .book-stamp-seal-mark { font-size: 12px; line-height: 1.2; margin-top: 2px; }
+.book-stamp-name,
+.book-stamp-sub { display: block; width: 100%; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.book-stamp-name { font-family: var(--font-display); font-weight: 800; font-size: 13px; line-height: 1.4; color: var(--ink); }
+.book-stamp-page .book-stamp-date { position: static; max-width: none; display: block; font-family: var(--num-font); font-size: 13px; line-height: 1.3; letter-spacing: 0.02em; color: var(--ink-soft); text-align: center; }
+.book-stamp-sub { font-family: var(--hand-font); font-size: 12px; line-height: 1.4; color: var(--ink-soft); }
+.book-stamp-sub.is-status { font-family: inherit; font-weight: 700; color: var(--accent); }
+.book-stamp-page .book-stamp-place { top: 12px; right: 8px; max-height: calc(100% - 24px); overflow: hidden; letter-spacing: 0.02em; line-height: 1.15; font-size: 12px; }
+@media (min-width: 1024px) {
+  .book-stamp-page:not(.is-empty) { min-height: 196px; padding-right: 34px; }
+  .book-stamp-page:not(.is-empty) .book-stamp-seal { width: 80px; height: 80px; }
+  .book-stamp-seal-kanji { font-size: 32px; }
+  .book-stamp-page .book-stamp-place { font-size: 14px; }
+  .book-stamp-name { font-size: 14px; }
+}
+
+/* PC-H1・SP-M1 フッター：main.main の末尾に置いた1枚の墨色の帯（FOOTER_SPEC の骨格）。
+   PC（1024px 以上）はフッターが文書の外（main の下）にあり、本文は main の中だけがスクロールするため、利用者がたどり着けなかった。
+   SP は従来の1行のリンク帯（.stage-foot）だったのを、2列のリンク格子＋小見出し＋注記＋最下段に。旧帯は出さない */
+.stage-foot, .app-shell .stage-foot { display: none !important; }
+.site-foot { display: block; margin: 40px 0 0; background: #16181d; color: var(--cream); border-radius: 18px 18px 0 0; }
+.site-foot-in { padding: 40px 20px calc(96px + env(safe-area-inset-bottom)); }
+.site-foot-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; padding-bottom: 28px; border-bottom: 1px dashed rgb(255 250 242 / 0.22); }
+.site-foot-brand { grid-column: 1 / -1; }
+.site-foot-logo { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--cream); text-decoration: none; }
+.site-foot-seal { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: var(--cream); font-family: var(--font-display); font-weight: 800; font-size: 22px; transform: rotate(-6deg); box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.6); }
+.site-foot-name { font-family: var(--font-display); font-weight: 800; font-size: 24px; letter-spacing: 0.06em; }
+.site-foot-brand p { margin: 8px 0 0; font-size: 14px; line-height: 1.7; color: rgb(255 250 242 / 0.72); }
+.site-foot-h { margin: 0 0 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: #7FD6CB; }
+.site-foot-col ul { margin: 0; padding: 0; list-style: none; display: grid; }
+.site-foot-col a { display: flex; align-items: center; min-height: 44px; color: var(--cream); font-size: 14px; line-height: 1.4; text-decoration: none; }
+.site-foot-col a:hover, .site-foot-legal a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.site-foot-note { margin: 20px 0 0; font-size: 13px; line-height: 1.7; color: rgb(255 250 242 / 0.66); }
+.site-foot-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 0 20px; margin-top: 8px; font-size: 13px; }
+.site-foot-legal a, .site-foot-legal button { min-height: 44px; display: inline-flex; align-items: center; padding: 0; background: none; border: 0; color: rgb(255 250 242 / 0.8); font: inherit; font-size: 13px; text-decoration: none; cursor: pointer; }
+.site-foot-copy { color: rgb(255 250 242 / 0.5); font-family: var(--num-font); letter-spacing: 0.04em; }
+@media (min-width: 1024px) {
+  .site-foot { margin-top: 64px; border-radius: 18px; }
+  .site-foot-in { padding: 56px 36px 48px; }
+  .site-foot-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px 24px; padding-bottom: 36px; }
+  .site-foot-col a { font-size: 15px; }
+  .site-foot-h { font-family: var(--num-font); font-size: 13px; font-weight: 600; letter-spacing: 0.12em; }
+  .site-foot-note { max-width: 44em; margin-top: 24px; }
+  .site-foot-legal { gap: 4px 24px; margin-top: 12px; }
+  .site-foot-copy { margin-left: auto; }
+}
+
+/* SP-M2 / PC-M1 ニュース記事下のナビカード：記事本文向けの「.ssr-content span は緑の12px」が分類チップ・題名にも当たり、
+   濃い地に緑の字（コントラスト 1.05〜1.57）・12px の題名になっていた → 本来の指定に戻す */
+.ssr-content .news-chip { color: #fff; font-size: 12px; font-weight: 800; }
+.ssr-content .news-nav-title { color: var(--ink); font-size: 0.95rem; font-weight: 700; line-height: 1.5; }
+.ssr-content .news-nav-kind { color: var(--primary); }
+.ssr-content .news-nav-meta { color: rgb(17 24 23 / 0.66); font-weight: 400; }
+.ssr-content .news-nav-meta time, .ssr-content .news-nav-meta span:not(.news-chip) { color: inherit; font-weight: 400; }
+
+/* SP-M3 / PC-M5 未確認の項目をまとめた1行：項目名が並ぶので折り返しを文節で */
+.facts-missing-row .fact-missing-note { color: var(--ink-soft); line-height: 1.7; }
+
+/* SP-M4 名前の折れ：検索候補・押印帳・サ活ログの施設名は行の長さをそろえる */
+.search-suggestion-name, .stamp-title, .visit-log-recent-item strong { text-wrap: balance; }
+
+/* SP-M5 押せる部品を44px以上に：絞り込みの「全部・未押印…」、並び替え、SP 制覇マップの県の選択 */
+#viewExplore .segment button { height: 44px; min-height: 44px; }
+#viewExplore .tool-band .feature-filter-toggle { height: 44px; min-height: 44px; }
+.sort-label select { min-height: 44px; }
+.book-map-sp .tile-cell { cursor: default; }
+.tile-map-pick { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 14px; font-weight: 700; color: var(--cream); }
+.tile-map-pick select { flex: 1 1 auto; min-width: 0; min-height: 44px; padding: 0 12px; border-radius: 10px; border: 1px solid rgb(255 250 242 / 0.4); background: #fffdf7; color: var(--ink); font: inherit; font-size: 16px; }
+
+/* SP-L1 / PC-L1 一覧の上の1回だけの注記 */
+.list-verify-note { margin: 0 0 8px; font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+#viewExplore .list-verify-note { order: 15; margin-top: 4px; }
+#viewExplore #searchResultsStatus { order: 15; }
+
+/* SP-L4 施設詳細の「出典」・「情報修正を知らせる」：文の中の小さなリンクの押せる範囲を上下に広げる（行の高さは変えない） */
+.facility-facts dd a { display: inline-block; padding: 10px 6px; margin: -10px -2px; }
+.facility-warn button { display: inline-block; padding: 10px 2px; margin: -10px 0; }
+
+/* PC-M3 押印帳：未押印の升の「施設を共有」は線のボタン（黒い塗りのボタンが全升に並んで単調だった） */
+.tiny-share-button.is-quiet { color: var(--ink); background: transparent; border: 1px solid #CDBFA5; }
+
+@media (min-width: 1024px) {
+  /* PC-M3 押印帳：640〜760px の帳面に4列で、施設名が1字だけの行・語の途中で折れていた → 3列 */
+  .stamp-grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+  /* PC-M4 掲載・お問い合わせ：4列の小カードが約140px で見出しが「経／路」と折れていた → 2列。料金プランの5枚目だけが1枚で残る → 最後の奇数枚は全幅 */
+  .business-value-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .business-plan-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  /* PC-L3 サ飯候補：3列で店名が語の途中で折れていた → 2列 */
+  .facility-shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+/* PC-M2 1440px 以上：左右の柱の中身（ロゴ・目次／制覇マップ・次のサ活）が外側に寄り、帳面との間が大きく空いていた
+   → 帳面を最大 760px に広げ、柱の中身は帳面の側へ寄せる（外側の余白だけが残る） */
+@media (min-width: 1440px) {
+  .app-shell { grid-template-columns: minmax(0, 1fr) clamp(560px, 50vw, 760px) minmax(0, 1fr); }
+  .rail-left { padding-left: max(36px, calc(100% - 360px)); }
+  .rail-right { padding-right: max(32px, calc(100% - 380px)); }
+}
+/* 印のページの施設名は2行まで（文節で折り、収まらなければ「…」）。SP（640px 以下）は1ページ約110px と狭く、縦書きの所在地の列を取ると
+   名前が3字しか入らなかった → 所在地は上に横書きの1行で置き、名前・日付・状況は全幅を使う */
+.book-stamp-name { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-wrap: balance; line-height: 1.35; }
+@media (max-width: 640px) {
+  .book-stamp-page:not(.is-empty) { min-height: 0; padding: 10px 6px; }
+  .book-stamp-page .book-stamp-place { position: static; order: -1; writing-mode: horizontal-tb; width: 100%; max-height: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; line-height: 1.4; letter-spacing: 0; color: var(--ink-soft); }
+  .book-stamp-page:not(.is-empty) .book-stamp-seal { width: 60px; height: 60px; margin: 2px 0 4px; }
+  .book-stamp-seal-kanji { font-size: 24px; }
+}
+@media (max-width: 640px) {
+  /* 所在地は「・」の後で2行まで（「福島県・／福島市」） */
+  .book-stamp-page .book-stamp-place { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.35; }
+}
+/* SP-M1 SP のフッター：見出しの下にリンクを2列の格子で並べる（FOOTER_SPEC の SP 骨格）。帳面（main）の左右と下の余白まで帯を伸ばす */
+@media (max-width: 1023px) {
+  .site-foot { margin: 40px -12px -96px; }
+  .site-foot-in { padding: 36px 20px 40px; }
+  .site-foot-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-bottom: 24px; }
+  .site-foot-col ul { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+}
+
+/* SP-M5 選択欄：WebKit の標準の見た目のままでは高さの指定が効かず 29px だった → 標準の見た目を外して 44px、矢印は線で描く */
+.sort-label select,
+.tile-map-pick select { -webkit-appearance: none; appearance: none; height: 44px; min-height: 44px; padding: 0 36px 0 12px; line-height: 1.2;
+  background: #fffdf7 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f1d18' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px; }
+.tile-map-pick > span { flex: none; white-space: nowrap; }
+/* 押印帳（/passport/）：同じ行のタイルの高さにそろえるとき、グリッドの行が伸びて「施設を共有」ボタンだけ縦長（約72px）になっていた
+   → タイルの中身は上から詰めて置き、ボタンは中身の高さのまま（2026-11-19 目視確認で発見） */
+.stamp-tile { align-content: start; }
+
+/* =====================================================================
+   独立監査2（2026-11-19）の指摘の是正
+   ===================================================================== */
+/* 高-2 記事（ニュース・入門）の本文：SP では「.ssr-content p, li, dd は 14px・太字・灰色」（一覧の SSR 要約向けの指定）が
+   本文の段落にも当たり、本文全体が 14px の太字の灰色になっていた（PC だけ 16px に上書きしていた）→ SP も PC と同じ 16px・標準の太さ・本文色 */
+.is-article .ssr-content > p:not(.eyebrow):not(.news-facility-chips),
+.is-article .ssr-content > ul > li { font-size: 16px; font-weight: 400; line-height: 1.9; color: var(--ink); }
+.is-article .ssr-content > p:not(.eyebrow) + p { margin-top: 0.6em; }
+
+/* 中-2 押せる部品を 44px 以上に */
+/* 探す：「現在地 2km」「マイ県」・特徴チップ（34px＋見えない当たり判定だった）→ 箱そのものを 44px */
+#viewExplore .area-shortcut button { height: 44px; min-height: 44px; }
+#viewExplore .area-shortcut button::after { content: none; }
+/* 押印帳・施設詳細の「取り消す」（32px）、押印帳の県チップ（40px） */
+.tiny-undo-button { min-height: 44px; }
+.pref-chip { min-height: 44px; }
+/* /add/・/community/ の県の選択欄：WebKit の標準の見た目のままでは高さの指定が効かず 29px だった → 標準の見た目を外して 44px、矢印は線で描く */
+.add-form select,
+.community-form-grid select,
+.community-form select { -webkit-appearance: none; appearance: none; height: 44px; min-height: 44px; padding: 0 36px 0 12px; line-height: 1.2;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231f1d18' stroke-width='1.8'/%3E%3C/svg%3E") no-repeat right 14px center / 12px 8px; }
+@media (min-width: 1024px) {
+  /* PC 右の柱の「Gear」「施設を追加」「メニュー」（42px） */
+  .rail-action-button { height: 44px; }
+}
+/* 高-1・中-2 制覇マップの升は見るだけ（13px の升を押す部品にしない）。県の一覧へは下の選択欄から開く */
+.tile-cell { cursor: default; }
+.rail-map-card .tile-map-pick { flex-direction: column; align-items: stretch; gap: 6px; }
+.rail-map-card .tile-map-pick select { width: 100%; }
+
+/* 中-3 ニュース記事下のナビカード：360px では本文の列が約150px しかなく、分類チップ（「受賞・発／表」）と日付（「…12／日」）が
+   途中で折れていた → チップと日付はそれぞれ1行のまま、入らなければ日付を次の行へ */
+.news-nav-meta { flex-wrap: wrap; row-gap: 4px; }
+.news-nav-meta .news-chip,
+.news-nav-meta time { flex: none; white-space: nowrap; }
+
+/* 中-5 トップの「サウニュ〜」の帯：流し続けず、横に送ったとき（手でも自動送りでも。app.js）はカードの切れ目で止める */
+.news-rail-track { scroll-snap-type: x mandatory; scroll-padding-inline: 2px; }
+.news-rail-card { scroll-snap-align: start; }
+/* 流していたころは複製の特集カード（240px）に合わせて全カードが 240px の高さにそろっていた → 複製をやめても同じ高さを保つ */
+#viewExplore .news-rail-card { min-height: 240px; }
+/* SP：先頭カード（84vw）が帯の幅より広く右端が切れ、次のカードがあることも見えなかった → 帯の幅から次のカードの端が覗く分を引いた幅 */
+@media (max-width: 640px) {
+  #viewExplore .news-rail-card:first-child { flex-basis: calc(100% - 36px); min-width: calc(100% - 36px); }
+}
+/* サウニュ〜の帯のカード（2026-11-19 オーナー指示「写真なしの色だけのカードは殺風景」）：
+   上半分の無地の色面に、帳面の上端（.book-steam）と同じ湯気の線を生成り色で淡く立ちのぼらせ、右上に記事の都道府県を
+   ロゴの「サ」（.brand-kakuiin）と同じ朱の角印で押す（app.js の newsRailSealHtml。都道府県が無い記事は湯気だけ）。
+   色は既存の --accent / --cream と分類の色面のまま、書体も既存の明朝。カードの高さ（240px）と文字の位置は変えない。 */
+#viewExplore .news-rail-card-art { position: relative; flex: 1 1 auto; min-height: 0; overflow: hidden; pointer-events: none; }
+#viewExplore .news-rail-card-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='84'%3E%3Cpath d='M20 84c-14-14 14-22 0-36s14-22 0-36' fill='none' stroke='%23FFFAF2' stroke-width='1.3'/%3E%3C/svg%3E") 0 100% / 40px 84px repeat-x;
+  opacity: 0.2;
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to top, #000, transparent);
+}
+#viewExplore .news-rail-card-seal {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  writing-mode: vertical-rl;
+  padding: 10px 7px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--cream);
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  transform: rotate(-6deg);
+  box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3.5px rgb(255 250 242 / 0.65);
+}
+/* 分類の札と日付の文字：受賞・発表（渋金）とリニューアルの色面で 4.5:1 に届かなかった（札 3.55、日付 3.88）→ 札は白の塗りをやめて生成りの細い枠に、日付と連番は題名と同じ白に */
+#viewExplore .news-rail-card .news-chip { background: transparent; box-shadow: inset 0 0 0 1px rgb(255 250 242 / 0.6); }
+#viewExplore .news-rail-card-meta,
+#viewExplore .news-rail-card-title::before { color: #fff; }
+
+/* 中-6 施設詳細：「営業時間・料金・休館日は、訪問前に公式ページで再確認してください。」が本文の注意書きとページ下のフッターの注記で2回出ていた
+   → 施設詳細ではフッターの注記を出さない（本文の注意書きに同じ文がある） */
+body[data-active-view="facility"] .site-foot-note { display: none; }
+/* 中-6 押印帳：県チップの分母の説明（SP で5行）を折りたたむ。1文目だけを見出しにして、続きは開いて読む */
+details.passport-scope-note > summary { display: flex; align-items: center; gap: 6px; min-height: 44px; cursor: pointer; list-style: none; }
+details.passport-scope-note > summary::-webkit-details-marker { display: none; }
+details.passport-scope-note > summary::after { content: ""; flex: none; width: 7px; height: 7px; margin-left: 2px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+details.passport-scope-note[open] > summary::after { transform: translateY(2px) rotate(-135deg); }
+details.passport-scope-note > p { margin: 0 0 4px; }
+
+/* 中-7 SP のニュース記事：最初の画面に題名が3回（パンくずの最後・見出し・アイキャッチのカード）出ていた
+   → SP ではパンくずの最後（今のページの題名）を画面に出さず（読み上げには残す）、アイキャッチは題名の手前（誌名と分類の帯）だけを見せる */
+@media (max-width: 1023px) {
+  .ssr-content .crumb-current { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .ssr-content img[src*="-hero.webp"],
+  .news-article-hero { aspect-ratio: 1280 / 238; height: auto; object-fit: cover; object-position: center top; border-bottom: 3px solid #111817; }
+}
+
+/* 検索・入力欄（owner 11-19「入力すると画面がズレる」）：iPhone の Safari は文字が 16px 未満の入力欄にフォーカスすると画面を拡大し、
+   入力のあとも拡大したまま横にずれる。/contact/（12px）・/ranking/ の参加欄（12px）・/add/（13px）・/community/ の募集欄と集合施設（15px）を 16px に */
+:root input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]),
+:root :is(select, textarea):not([data-keep-font]) { font-size: max(16px, 1em); }
+/* owner-1119 押せる範囲を 44px に（前回の指示に含まれず残っていた部品）。見た目と行の位置はほぼ変えない
+   ・枠や塗りのある部品：見た目の大きさはそのまま、枠の外に見えない当たり判定（::after）を足す。::after の上下は calc((100% - 44px) / 2) で、箱の高さによらず 44px にそろう（％は枠線の内側の高さ・幅から測る）
+   ・透明な文字の部品：余白を足し、同じだけ負の margin で打ち消す（行の高さ・位置は変わらない） */
+.stats-chip-nav button,
+.feature-option,
+.install-button,
+.growth-actions button,
+.stay-card a,
+.contact-choice,
+.business-payment-button,
+.visit-log-share-button,
+#communityFilter .feature-chip,
+.lodging-search-card a,
+.spotlight-gear-head .mini-button,
+.source-row a,
+#guideReferences a,
+.sameshi-card .source-badge { position: relative; }
+/* 記録（/ranking/）の項目チップ「行きたい」など 40px・記録の「共有」40px */
+.stats-chip-nav button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+.growth-actions button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* /add/ の特徴のチェック（label）：SP 38px・PC 34px */
+.feature-option::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+/* 421px 以上は特徴のチェックが 34px・行の間 8px で、当たり判定を 44px にすると上下の行と重なる → 行の間を 10px に */
+@media (min-width: 421px) { .feature-picker-grid { row-gap: 10px; } }
+/* 「ホーム画面に追加」の「手順」38px */
+.install-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+/* /stay/ の「掲載ページを見る」・/contact/ の種別と「問い合わせる」42px */
+.stay-card a::after,
+.contact-choice::after,
+.business-payment-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* 記録のサ活ログ「画像で共有」34px */
+.visit-log-share-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* /community/ の「全国」チップ 幅 42px・施設詳細の宿の「一休」幅 32px */
+#communityFilter .feature-chip::after { content: ""; position: absolute; inset: -1px -3px; }
+.lodging-search-card a::after { content: ""; position: absolute; inset: 0 calc((100% - 44px) / 2); }
+/* トップの Gear の「一覧」32px・「参照元」34px・入門の参考リンク 34px・サ飯の「参照」24px */
+.spotlight-gear-head .mini-button::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+.source-row a::after,
+#guideReferences a::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) -1px; }
+#guideReferences { row-gap: 12px; }
+.sameshi-card .source-badge::after { content: ""; position: absolute; inset: 0 0 -20px -6px; }
+/* 横に送る「参照元」の列は、縦にはみ出した当たり判定が切れるため、列の上下に余白を足して同じだけ詰める */
+.source-row { padding-block: 6px; margin-top: -6px; margin-bottom: 6px; }
+@media (max-width: 420px) { .source-row { margin-bottom: 4px; } }
+/* Amazon・楽天の購入リンク 32〜38px */
+a[data-affiliate-vendor] { position: relative; }
+a[data-affiliate-vendor]::after { content: ""; position: absolute; inset: calc((100% - 44px) / 2) 0; }
+/* 入門の FAQ の問い 42px */
+.faq-card summary { padding-block: 13px; }
+/* 施設詳細の「出典」40px・「情報修正を知らせる」43px・パンくず「サ印帳」幅 40px */
+.facility-facts dd a { padding-block: 12px; margin-block: -12px; }
+.facility-warn button { padding-block: 11px; margin-block: -11px; }
+.facility-crumbs button { padding-inline: 4px; margin-inline: -2px; }
+/* ニュース記事の目次：見出し 32px・項目 42px */
+.news-toc summary { min-height: 44px; padding-block: 6px; margin-block: -6px; }
+.news-toc li a { padding-block: 11px; margin-block: -1px; }
+/* 記録の折りたたみ見出し「告知文テンプレ」24px・「記録のバックアップ・復元」29px・「対象データ・注意点」25px */
+.promotion-copy-details > summary { padding-block: 10px; margin: 0 0 -6px; }
+.record-backup > summary { padding-block: 7.5px; margin-block: -7.5px; }
+.record-backup details > summary { padding-block: 9.5px; margin-block: -9.5px; }
+/* 記録の地図の出典リンク 20px */
+.map-attribution { padding-block: 12px; margin: -4px 0 -12px; }
+/* 記録のランキングの「押印した施設を見る」24px（本番のランキングの行にだけ出る文字のボタン）→ 余白と負の margin で 44px（行の位置は変えない） */
+.leaderboard-facilities-button { padding-block: 12px; margin-block: -10px; }
+
 /* ============================================================
    design-extra PR-A（SE-17 特徴パネル / SE-18 並び替え / SE-19 検索候補）
    Mac側Claude の sa-extra.css が正。変数は現行トークンへ読み替えた
    （--num→--num-font、--red→--accent、--sub→--ink-soft、--paper→--paper2）。
+   移植時の範囲調整（決定キュー #59、2026-11-25）：SE-19 は探索画面の検索候補が
+   対象のため、パネルの外観と行の組みは #searchSuggestions と .se-sug 行に限定し、
+   後から増えたメニュー検索・開催地の候補（同じクラスを共用）の見た目は変えない。
    ============================================================ */
 /* SE-17 特徴の全件パネル */
 .feature-filter-toggle, .feature-filter-toggle[aria-expanded="true"] { background: var(--primary); border-color: var(--primary); color: #fff; border-radius: 999px; min-height: 44px; padding: 0 16px; }
@@ -10747,6 +11813,9 @@ body {
 .se-fp-hd span { font-size: 14px; color: var(--primary); font-weight: 700; }
 .se-fp-x { margin-left: auto; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--ink); background: #fff; font-size: 20px; cursor: pointer; flex: none; }
 .se-fp .form-help { font-size: 12.5px; color: var(--ink-soft); line-height: 1.7; margin: 10px 0 0; }
+/* 現行の SP 向け規則（#featureFilterPanel .feature-filter-grid の2列・内部スクロール）は
+   SE-17 の「群を縦に積む」組みと両立しないため、se-fp の範囲では組みを戻す */
+#featureFilterPanel.se-fp .feature-filter-grid { display: block; max-height: none; overflow-y: visible; padding: 0; }
 .se-fp-gp { padding: 12px 0; border-bottom: 1px dashed #CFC3AC; }
 .se-fp-gp h5 { font-size: 13px; color: var(--ink-soft); margin-bottom: 8px; }
 .se-fp-pills { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -10768,13 +11837,13 @@ body {
 .se-sort .k { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); }
 .se-sort select { appearance: none; -webkit-appearance: none; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 700; min-height: 44px; padding: 0; cursor: pointer; }
 .se-sort .cv { position: absolute; right: 14px; pointer-events: none; }
-/* SE-19 検索候補パネル */
-.search-suggestions { background: #fff; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 0 14px 30px rgb(0 0 0 / 0.18); padding: 0 0 6px; }
-.search-suggestions-head { padding: 12px 16px 6px; font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0; }
+/* SE-19 検索候補パネル（探索画面の #searchSuggestions のみ） */
+#searchSuggestions { background: #fff; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 0 14px 30px rgb(0 0 0 / 0.18); padding: 0 0 6px; }
+#searchSuggestions .search-suggestions-head { padding: 12px 16px 6px; font-size: 12.5px; color: var(--ink-soft); letter-spacing: 0; }
 .search-suggestions-subhead { padding: 8px 16px 2px; font-size: 12.5px; color: var(--ink-soft); font-weight: 700; }
-.search-suggestion { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 58px; padding: 6px 16px; border: 2px solid transparent; border-radius: 0; }
-.search-suggestion:hover, .search-suggestion-active { background: var(--paper2); }
-.search-suggestion-active { border-color: var(--ink); }
+#searchSuggestions .search-suggestion.se-sug { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 58px; padding: 6px 16px; border: 2px solid transparent; border-radius: 0; }
+#searchSuggestions .search-suggestion:hover, #searchSuggestions .search-suggestion-active { background: var(--paper2); }
+#searchSuggestions .search-suggestion.se-sug.search-suggestion-active { border-color: var(--ink); }
 .search-suggestion-main { min-width: 0; }
 .search-suggestion-main b { display: block; font-size: 16px; line-height: 1.45; }
 .search-suggestion-main small { display: block; font-size: 12.5px; color: var(--ink-soft); line-height: 1.5; }

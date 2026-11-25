@@ -10,9 +10,10 @@ import * as nearby from "../nearby.js";
 const source = (await readFile(new URL("../app.js", import.meta.url), "utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/, "")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/, "\n");
 function harness() {
-  const context = vm.createContext({ ...evidence, ...nearby, URL, URLSearchParams, crypto: webcrypto, performance,
+  const context = vm.createContext({ ...evidence, ...nearby, URL, URLSearchParams, crypto: webcrypto, performance, HTMLElement: class {}, MutationObserver: class { constructor(){} observe(){} disconnect(){} },
     localStorage: { getItem: () => null }, location: { hostname: "localhost", pathname: "/", protocol: "http:" },
     window: { matchMedia: () => ({ matches: false }) }, document: { querySelector: () => ({}), querySelectorAll: () => [] } });
   vm.runInContext(source, context);
