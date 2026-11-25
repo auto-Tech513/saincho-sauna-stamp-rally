@@ -115,9 +115,28 @@ export function phraseBreaks(text) {
   // カタカナ語＋1字だけの漢字の接尾（「ケロ｜材の」「フィンランド｜産ケロ」「テルマー｜湯 」）の間でも割らない。後ろが助詞・句読点・空白・カタカナ・末尾のときだけ（「ドリンク｜飲み放題」は割る）（2026-11-17 レイアウト監査）
   const filtered = breaks.filter((b) => b > 0 && b < value.length && !/\s/.test(value[b - 1]) && !/\s/.test(value[b]) && !NO_LINE_START.test(value[b]) && !OPENING.test(value[b - 1])
     && !((KATAKANA.test(value[b - 1]) || value[b - 1] === "ー") && KANJI.test(value[b]) && (b + 1 >= value.length || /[\u306e\u3067\u306b\u3092\u306f\u304c\u3068\u3082\u3078\u3084\u3001\u3002\u300d\u300f\uff09)\s\u30a1-\u30fa]/.test(value[b + 1]))));
-  const result = protectCompounds(value, mergeTinySegments(value, filtered));
+  const result = protectNumbers(value, protectCompounds(value, mergeTinySegments(value, filtered)));
   cache.set(value, result);
   return result;
+}
+
+/**
+ * 数字の途中では割らない（決定キュー #41、2026-11-25）。BudouX が「水深1｜40cm」「水温1｜6.5℃」のように
+ * 数字の内部へ切れ目を置くことがあるため、桁の間と、桁に挟まれた区切り（3桁区切り・小数点）の前後にある切れ目を除く。
+ * 数字の前後の切れ目（「温度は｜42.5度」）は従来どおり残す。
+ */
+function protectNumbers(text, breaks) {
+  if (!breaks.length) return breaks;
+  const digit = /[0-9０-９]/;
+  const sep = /[,，.．]/;
+  return breaks.filter((b) => {
+    const x = text[b - 1] || "";
+    const y = text[b] || "";
+    if (digit.test(x) && digit.test(y)) return false;
+    if (digit.test(x) && sep.test(y) && digit.test(text[b + 1] || "")) return false;
+    if (sep.test(x) && digit.test(y) && digit.test(text[b - 2] || "")) return false;
+    return true;
+  });
 }
 
 function protectCompounds(text, breaks) {
