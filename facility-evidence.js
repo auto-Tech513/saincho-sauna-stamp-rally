@@ -10611,6 +10611,150 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     features: [],
     facts: [{ label: "営業状況", value: "営業終了（2023年10月末）。賃貸借契約の終了に伴い運営を終了。施設を所有するベガスベガスグループが別の名前で温浴施設を運営（後継は「ゆ～とぴあ仙台南」で、同住所・ベガロポリス仙台南1階で営業中）。公式サイト spa-yamabiko.jp はドメイン登録済みの駐車ページで施設のサイトは存在しない", sourceUrl: "https://newsdig.tbs.co.jp/articles/tbc/714929?display=1", checkedAt: "2026-11-26" }],
   },
+  {
+    ids: ["st-saitama-4903"], name: "ルネサンス浦和駅前24", officialUrl: "https://www.sportsoasis.co.jp/sh56/",
+    features: ["ドライサウナ"],
+    facts: [
+      { label: "営業時間", value: "通常営業10:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh56/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週金曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh56/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは男女とも86度前後、収容人数6人", sourceUrl: "https://www.sportsoasis.co.jp/sh56/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水風呂はなく、オーバーヘッドタイプの水シャワーとととのい椅子で休憩する", sourceUrl: "https://www.sportsoasis.co.jp/sh56/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-saitama-4902"], name: "ルネサンス川口", officialUrl: "https://www.sportsoasis.co.jp/sh52/",
+    features: ["ドライサウナ"],
+    facts: [
+      { label: "営業時間", value: "9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）", sourceUrl: "https://www.sportsoasis.co.jp/sh52/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週月曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh52/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは男女とも90度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh52/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-chiba-4767"], name: "セントラルウェルネスクラブ長沼", officialUrl: "https://www.central.co.jp/club/naganuma/",
+    features: ["ドライサウナ", "温泉付き"],
+    facts: [
+      { label: "営業時間", value: "平日10:00～22:30、土曜10:00～20:00、日曜・祝日10:00～19:00", sourceUrl: "https://www.central.co.jp/club/naganuma/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週水曜日、及び季節休業", sourceUrl: "https://www.central.co.jp/club/naganuma/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナと温泉、スパ＆バスルームを備える（サウナの温度・定員の明記なし）", sourceUrl: "https://www.central.co.jp/club/naganuma/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4904"], name: "ルネサンス金町駅前24", officialUrl: "https://www.sportsoasis.co.jp/sh67/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "通常営業9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh67/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週水曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh67/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは90度前後、収容人数は男性6人・女性7人", sourceUrl: "https://www.sportsoasis.co.jp/sh67/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温19度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh67/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4898"], name: "ルネサンス新宿24", officialUrl: "https://www.sportsoasis.co.jp/sh53/",
+    features: ["ドライサウナ"],
+    facts: [
+      { label: "営業時間", value: "通常営業9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh53/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週金曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh53/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは90度前後、収容人数は男性17人・女性15人", sourceUrl: "https://www.sportsoasis.co.jp/sh53/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "クールミストサウナ（サウナ後のクールダウン用）がある", sourceUrl: "https://www.sportsoasis.co.jp/sh53/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4900"], name: "ルネサンス聖路加ガーデン", officialUrl: "https://www.sportsoasis.co.jp/sh65/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "平日9:00～23:00、土曜10:00～21:00、日曜・祝日10:00～20:00", sourceUrl: "https://www.sportsoasis.co.jp/sh65/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週木曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh65/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "男性サウナは92度前後、収容人数8人", sourceUrl: "https://www.sportsoasis.co.jp/sh65/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "女性サウナは85度前後、収容人数8人", sourceUrl: "https://www.sportsoasis.co.jp/sh65/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温16度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh65/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4905"], name: "ルネサンス雪谷24", officialUrl: "https://www.sportsoasis.co.jp/sh73/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "通常営業10:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh73/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週水曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh73/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは85度前後、収容数5人", sourceUrl: "https://www.sportsoasis.co.jp/sh73/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温18度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh73/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4901"], name: "ルネサンス多摩川", officialUrl: "https://www.sportsoasis.co.jp/sh51/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "10:00～22:30（土曜22:00まで、日曜・祝日18:30まで）", sourceUrl: "https://www.sportsoasis.co.jp/sh51/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週月曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh51/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは85度前後、収容数5人", sourceUrl: "https://www.sportsoasis.co.jp/sh51/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温20度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh51/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-tokyo-4899"], name: "ルネサンス武蔵小金井24", officialUrl: "https://www.sportsoasis.co.jp/sh64/",
+    features: ["ドライサウナ"],
+    facts: [
+      { label: "営業時間", value: "通常営業9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh64/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週木曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh64/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "サウナは85度前後、収容人数6人（サービス内容にドライサウナと明記）", sourceUrl: "https://www.sportsoasis.co.jp/sh64/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水風呂なし（スタンドシャワー：男性1台・女性2台）", sourceUrl: "https://www.sportsoasis.co.jp/sh64/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-kyoto-4910"], name: "ルネサンス桂川24", officialUrl: "https://www.sportsoasis.co.jp/sh17/",
+    features: ["ドライサウナ", "水風呂あり", "外気あり"],
+    facts: [
+      { label: "営業時間", value: "通常営業9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh17/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週木曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh17/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは男女とも90度前後、収容人数は女性14人・男性13人", sourceUrl: "https://www.sportsoasis.co.jp/sh17/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "外気浴は男性のみ（39度前後）、炭酸泉は女性のみ（38度前後）", sourceUrl: "https://www.sportsoasis.co.jp/sh17/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温19度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh17/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-osaka-4911"], name: "ルネサンスもりのみやキューズモール24", officialUrl: "https://www.sportsoasis.co.jp/sh18/",
+    features: ["ドライサウナ", "水風呂あり", "外気あり"],
+    facts: [
+      { label: "営業時間", value: "通常営業9:00～23:00（土曜21:00まで、日曜・祝日20:00まで）。通常営業時間外はセルフ営業（スタッフ無人）", sourceUrl: "https://www.sportsoasis.co.jp/sh18/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "毎週火曜・年末年始・施設メンテナンス日", sourceUrl: "https://www.sportsoasis.co.jp/sh18/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "ドライサウナは男女とも90度前後、収容人数は男性9人・女性6人", sourceUrl: "https://www.sportsoasis.co.jp/sh18/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "外気浴は男性のみ（42度前後）、炭酸泉は女性のみ（38.5度前後）", sourceUrl: "https://www.sportsoasis.co.jp/sh18/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水温18度前後", sourceUrl: "https://www.sportsoasis.co.jp/sh18/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-osaka-4918"], name: "ルネサンス今里24", officialUrl: "https://www.s-re.jp/imazato/", status: "closed",
+    features: [],
+    facts: [
+      { label: "営業状況", value: "営業終了（2026年9月30日をもって営業を終了）", sourceUrl: "https://www.s-re.jp/imazato/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-kumamoto-4931"], name: "ルネサンス光の森24", officialUrl: "https://www.s-re.jp/kumamoto-hikarinomori/",
+    features: ["水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "火曜～金曜10:00～23:00、土曜10:00～21:00、日曜・祝日10:00～20:00。ジムエリアは24時間（日曜20:00～火曜10:00の休館時間を除く）", sourceUrl: "https://www.s-re.jp/kumamoto-hikarinomori/", checkedAt: "2026-11-26" },
+      { label: "休館日", value: "月曜日・年末年始、他", sourceUrl: "https://www.s-re.jp/kumamoto-hikarinomori/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "サウナ・水風呂と内湯などのスパがある（サウナの温度・定員の明記なし）", sourceUrl: "https://www.s-re.jp/kumamoto-hikarinomori/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["manual-aichi-fit-easy-okazakiminami"], name: "FIT-EASY 岡崎南店", officialUrl: "https://lp.fiteasy.jp/lp-aichi-okazakiminami/",
+    features: ["個室", "水風呂あり"],
+    facts: [
+      { label: "営業時間", value: "24時間営業・年中無休", sourceUrl: "https://lp.fiteasy.jp/lp-aichi-okazakiminami/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "完全個室サウナ（FIT-SAUNA）と、ととのいスペース", sourceUrl: "https://lp.fiteasy.jp/lp-aichi-okazakiminami/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水風呂あり（水風呂なしのブースもある）", sourceUrl: "https://lp.fiteasy.jp/lp-aichi-okazakiminami/", checkedAt: "2026-11-26" },
+      { label: "利用条件", value: "FIT-SAUNAの利用は原則スタッフ駐在時間（11:00～20:00）のみ。会費内で利用可", sourceUrl: "https://lp.fiteasy.jp/lp-aichi-okazakiminami/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["manual-hyogo-be-wanderlust-hotel"], name: "BE WANDERLUST HOTEL", officialUrl: "https://hotel-wanderlust.jp",
+    features: [],
+    facts: [
+      { label: "営業状況", value: "開業前（2026年12月開業予定）", sourceUrl: "https://hotel-wanderlust.jp", checkedAt: "2026-11-26" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
