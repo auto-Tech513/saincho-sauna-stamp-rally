@@ -71443,5 +71443,43 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/",
     "officialUrl": "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/"
+  },
+  {
+    "id": "manual-aichi-fit-easy-okazakiminami",
+    "name": "FIT-EASY 岡崎南店",
+    "prefecture": "愛知県",
+    "address": "〒444-0205 愛知県岡崎市牧御堂町油田1-1",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-25",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [
+      "個室サウナ"
+    ],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://lp.fiteasy.jp/lp-aichi-okazakiminami/",
+    "officialUrl": "https://lp.fiteasy.jp/lp-aichi-okazakiminami/"
+  },
+  {
+    "id": "manual-hyogo-be-wanderlust-hotel",
+    "name": "BE WANDERLUST HOTEL",
+    "prefecture": "兵庫県",
+    "address": "〒656-0545 兵庫県南あわじ市阿万西町 AMA SUNSET CLIFF",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-25",
+    "city": "南あわじ市",
+    "trait": "wood",
+    "tags": [
+      "宿泊可"
+    ],
+    "features": [
+      "ロウリュあり",
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://hotel-wanderlust.jp",
+    "officialUrl": "https://hotel-wanderlust.jp"
   }
 ];

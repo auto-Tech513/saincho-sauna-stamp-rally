@@ -454,5 +454,23 @@
     "og": "/assets/news/yunni-no-yu-december-events-2026-og.png",
     "thumb": "/assets/news/yunni-no-yu-december-events-2026-thumb.webp",
     "generatedAt": "2026-11-24"
+  },
+  "be-wanderlust-hotel-awaji-opening-2026": {
+    "hero": "/assets/news/be-wanderlust-hotel-awaji-opening-2026-hero.webp",
+    "og": "/assets/news/be-wanderlust-hotel-awaji-opening-2026-og.png",
+    "thumb": "/assets/news/be-wanderlust-hotel-awaji-opening-2026-thumb.webp",
+    "generatedAt": "2026-11-25"
+  },
+  "fit-easy-okazakiminami-opening-2026": {
+    "hero": "/assets/news/fit-easy-okazakiminami-opening-2026-hero.webp",
+    "og": "/assets/news/fit-easy-okazakiminami-opening-2026-og.png",
+    "thumb": "/assets/news/fit-easy-okazakiminami-opening-2026-thumb.webp",
+    "generatedAt": "2026-11-25"
+  },
+  "saunahouse-share-sauna-day-2026": {
+    "hero": "/assets/news/saunahouse-share-sauna-day-2026-hero.webp",
+    "og": "/assets/news/saunahouse-share-sauna-day-2026-og.png",
+    "thumb": "/assets/news/saunahouse-share-sauna-day-2026-thumb.webp",
+    "generatedAt": "2026-11-25"
   }
 }
