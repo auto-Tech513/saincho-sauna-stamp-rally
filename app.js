@@ -896,6 +896,10 @@ const el = {
   sourceRow: document.querySelector("#sourceRow"),
   featureFilterGrid: document.querySelector("#featureFilterGrid"),
   featureFilterCount: document.querySelector("#featureFilterCount"),
+  featureFilterClose: document.querySelector("#featureFilterClose"),
+  featureFilterReset: document.querySelector("#featureFilterReset"),
+  featureFilterSelectedLabel: document.querySelector("#featureFilterSelectedLabel"),
+  resultsCountNum: document.querySelector("#resultsCountNum"),
   addFeatureGrid: document.querySelector("#addFeatureGrid"),
   spotlight: document.querySelector("#spotlight"),
   facilityList: document.querySelector("#facilityList"),
@@ -1344,6 +1348,17 @@ function bindEvents() {
     el.main.scrollTo({ top: 0, behavior: "instant" });
     el.searchResultsStatus.focus({ preventScroll: true });
   });
+  el.featureFilterClose?.addEventListener("click", () => {
+    el.featureFilterPanel.hidden = true;
+    el.featureFilterToggle.setAttribute("aria-expanded", "false");
+    el.featureFilterToggle.focus({ preventScroll: true });
+  });
+  el.featureFilterReset?.addEventListener("click", () => {
+    selectedFeatureFilters.clear();
+    visibleLimit = 36;
+    renderExplore();
+    renderFeatureFilterGrid();
+  });
 
   el.searchInput.addEventListener("input", (event) => {
     renderSearchClearButton();
@@ -1415,8 +1430,18 @@ function bindEvents() {
     // row must scroll the panel/page instead of navigating away.
     el.searchSuggestions.addEventListener("click", (event) => {
       const row = event.target.closest("[data-suggestion-index]");
-      if (!row) return;
-      openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
+      if (row) {
+        openSearchSuggestion(searchSuggestionFacilities[Number(row.dataset.suggestionIndex)]);
+        return;
+      }
+      const areaRow = event.target.closest("[data-suggestion-area]");
+      if (areaRow) {
+        submitSearchFromSuggestion(areaRow.dataset.suggestionArea);
+        return;
+      }
+      if (event.target.closest("[data-suggestion-all]")) {
+        submitSearchFromSuggestion(el.searchInput.value);
+      }
     });
   }
   document.addEventListener("pointerdown", handleSearchSuggestionOutsidePointer);
@@ -2867,6 +2892,7 @@ function renderExplore() {
   if (el.searchResultsStatus) el.searchResultsStatus.textContent = statusAwardYear !== null
     ? `サウナシュラン${statusAwardYear ? `${statusAwardYear} ` : ""}(TTNE主催) 受賞施設 · ${facilities.length.toLocaleString("ja-JP")}件${specialAwardCount ? `（受賞${facilities.length - specialAwardCount}施設＋特別賞${specialAwardCount}施設）` : ""}`
     : `${selectedPrefecture} · ${facilities.length.toLocaleString("ja-JP")}件`;
+  if (el.resultsCountNum) el.resultsCountNum.textContent = facilities.length.toLocaleString("ja-JP");
   if (!searchTerm.trim()) renderSpotlight(facilities);
 
   if (!facilities.length) {
@@ -3138,14 +3164,40 @@ function findFacilitySuggestions(value, { scoped }) {
     matches.push({ facility, tier });
   }
   matches.sort((a, b) => a.tier - b.tier);
-  return { facilities: matches.slice(0, SEARCH_SUGGESTION_LIMIT).map(({ facility }) => ({ type: "facility", facility })), total: matches.length };
+  // design-extra SE-19：市区町村の候補（件数つき）。入力が2文字以上で、市町村名か
+  // 都道府県名に入力を含む施設だけを数える（PR-A の候補パネルの集計規則そのまま）
+  const queryText = (value || "").trim();
+  let areas = [];
+  if (queryText.length >= 2) {
+    const areaCounts = new Map();
+    for (const { facility } of matches) {
+      if (!facility.city) continue;
+      if (!facility.city.includes(queryText) && !facility.prefecture.includes(queryText)) continue;
+      const key = `${facility.prefecture} ${facility.city}`;
+      const entry = areaCounts.get(key) || { prefecture: facility.prefecture, city: facility.city, count: 0 };
+      entry.count += 1;
+      areaCounts.set(key, entry);
+    }
+    areas = [...areaCounts.values()].sort((a, b) => b.count - a.count).slice(0, 3);
+  }
+  return { facilities: matches.slice(0, SEARCH_SUGGESTION_LIMIT).map(({ facility }) => ({ type: "facility", facility })), total: matches.length, areas };
 }
 
 function buildSuggestionItems(value, { scoped }) {
   const pages = findPageSuggestions(value);
   const prefs = scoped && selectedPrefecture !== "全国" ? [] : findPrefectureSuggestions(value);
-  const { facilities, total } = findFacilitySuggestions(value, { scoped });
-  return { items: [...pages, ...prefs, ...facilities], pages, prefs, facilities, total };
+  const { facilities, total, areas } = findFacilitySuggestions(value, { scoped });
+  return { items: [...pages, ...prefs, ...facilities], pages, prefs, facilities, total, areas };
+}
+
+// design-extra SE-19：候補の施設名で、入力に一致した部分を <mark> で示す。
+// 読み検索などで名前の文字列と一致しないときは、印を付けずそのまま表示する
+function highlightSuggestionName(name, value) {
+  const queryText = (value || "").trim();
+  if (!queryText) return escapeHtml(name);
+  const at = name.indexOf(queryText);
+  if (at < 0) return escapeHtml(name);
+  return `${escapeHtml(name.slice(0, at))}<mark>${escapeHtml(name.slice(at, at + queryText.length))}</mark>${escapeHtml(name.slice(at + queryText.length))}`;
 }
 
 function renderSuggestionPanel(panel, input, value, idPrefix, model) {
@@ -3169,8 +3221,26 @@ function renderSuggestionPanel(panel, input, value, idPrefix, model) {
     model.facilities.forEach(({ facility }) => {
       const status = getFacilityStatus(facility);
       const meta = [facility.prefecture, facility.city, status ? status.label : ""].filter(Boolean).join(" ");
-      parts.push(row(facility, facility.name, meta, "facility"));
+      if (!model.submitAll) {
+        parts.push(row(facility, facility.name, meta, "facility"));
+        return;
+      }
+      // design-extra SE-19 の施設行：印影（押印済み・行きたい）＋名前の一致部分の印。
+      // 変換中の候補とメニュー検索では submitAll が付かないため、従来の行のまま
+      const seal = state.visited[facility.id]
+        ? '<span class="st0 d" aria-hidden="true">印</span>'
+        : state.wishlist[facility.id]
+          ? '<span class="st0 w" aria-hidden="true">行</span>'
+          : '<span class="st0" aria-hidden="true"></span>';
+      parts.push(`<button type="button" class="search-suggestion search-suggestion-facility se-sug" role="option" id="${idPrefix}${index}" data-suggestion-index="${index}" aria-selected="false">${seal}<span class="search-suggestion-main"><b class="search-suggestion-name">${highlightSuggestionName(facility.name, value)}</b><small class="search-suggestion-meta">${escapeHtml(meta)}</small></span></button>`);
+      index += 1;
     });
+    if (model.submitAll) {
+      if (model.areas && model.areas.length) {
+        parts.push(`<h5 class="search-suggestions-subhead">都道府県・市</h5>${model.areas.map((area) => `<button type="button" class="search-suggestion search-suggestion-area se-sug" data-suggestion-area="${escapeAttr(area.city)}"><span class="st0 p" aria-hidden="true">県</span><span class="search-suggestion-main"><b>${escapeHtml(area.prefecture)} ${escapeHtml(area.city)}</b><small>${area.count}施設</small></span></button>`).join("")}`);
+      }
+      parts.push(`<button type="button" class="search-suggestions-all" data-suggestion-all>「${escapeHtml(value.trim())}」で探す（${model.total.toLocaleString("ja-JP")}件）<span aria-hidden="true">›</span></button>`);
+    }
   }
   if (!model.items.length) {
     parts.push(`<div class="search-suggestions-empty"><strong>「${escapeHtml(value.trim().slice(0, 24))}」に一致する候補はありません</strong><span>施設名の一部や市区町村名でも探せます。</span></div>`);
@@ -3222,6 +3292,9 @@ function renderSearchSuggestions() {
     return;
   }
   const model = buildSuggestionItems(el.searchInput.value, { scoped: true });
+  // design-extra SE-19 の候補（市区町村・全件検索）は、確定後の通常候補だけに出す。
+  // 変換中の候補とメニュー検索の候補は従来どおり（submitAll を付けない）
+  model.submitAll = true;
   searchSuggestionFacilities = model.items;
   searchSuggestionIndex = -1;
   renderSuggestionPanel(panel, el.searchInput, el.searchInput.value, "searchSuggestion", model);
@@ -3322,6 +3395,24 @@ function openSearchSuggestion(item) {
   if (!item) return;
   hideSearchSuggestions();
   openSuggestionItem(item);
+}
+
+// design-extra SE-19：候補パネルの「都道府県・市」行と「この言葉で探す」行から、
+// その言葉で通常の検索を実行する（候補の選択ではなく検索の確定）。
+async function submitSearchFromSuggestion(value) {
+  const text = (value || "").trim();
+  if (!text) return;
+  el.searchInput.value = text;
+  renderSearchClearButton();
+  clearSearchRenderTimer();
+  hideSearchSuggestions();
+  track("search_suggestion_click");
+  const applied = await applySearchValue(text);
+  if (applied && activeView === "Explore") {
+    el.searchInput.blur();
+    el.main.scrollTo({ top: 0, behavior: "instant" });
+    el.searchResultsStatus.focus({ preventScroll: true });
+  }
 }
 
 function handleSearchSuggestionOutsidePointer(event) {
@@ -6142,6 +6233,8 @@ function renderFeatureFilterGrid() {
   syncFeaturePills();
   const selectedCount = selectedFeatureFilters.size;
   el.featureFilterCount.textContent = selectedCount ? `${selectedCount}件選択中` : "指定なし";
+  if (el.featureFilterSelectedLabel) el.featureFilterSelectedLabel.textContent = selectedCount ? `${selectedCount}件選択中` : "";
+  if (el.featureFilterReset) el.featureFilterReset.hidden = selectedCount === 0;
   if (el.featureFilterPanel.hidden) return;
   if (!facilitySearchCache) {
     el.featureFilterGrid.innerHTML = '<p role="status">確認済みの特徴を集計しています…</p>';
@@ -6154,11 +6247,20 @@ function renderFeatureFilterGrid() {
   const buttons = FEATURE_OPTIONS.map((feature) => {
     const active = selectedFeatureFilters.has(feature);
     const count = counts.get(feature) || 0;
-    return { available: count > 0 || active, html: `<button class="feature-chip ${active ? "is-active" : ""}" type="button" data-feature-filter="${escapeAttr(feature)}" aria-pressed="${active}" ${!count && !active ? 'disabled title="現在の条件に一致する確認情報はありません"' : ""}><span class="feature-chip-label">${escapeHtml(feature)}</span> <span class="feature-chip-count">${count}件</span></button>` };
+    return { feature, available: count > 0 || active, html: `<button class="feature-chip ${active ? "is-active" : ""}" type="button" data-feature-filter="${escapeAttr(feature)}" aria-pressed="${active}" ${!count && !active ? 'disabled title="現在の条件に一致する確認情報はありません"' : ""}><span class="feature-chip-label">${escapeHtml(feature)}</span><em class="feature-chip-count num">${count}</em></button>` };
   });
-  el.featureFilterGrid.innerHTML = buttons.filter(item => item.available).map(item => item.html).join("")
-    + `<details class="feature-unavailable"><summary>一致する確認情報がない特徴</summary>${buttons.filter(item => !item.available).map(item => item.html).join("")}</details>`
-    + (selectedCount ? '<button class="feature-reset" type="button" data-feature-reset>特徴の選択を解除</button>' : "");
+  // design-extra SE-17：特徴は群ごとに見出しを付けて並べる。解除はパネル下部の
+  // #featureFilterReset へ移したため、グリッド内には置かない
+  const byFeature = new Map(buttons.map((item) => [item.feature, item]));
+  const groupsHtml = FEATURE_GROUPS.map((group) => {
+    const items = group.options.map((feature) => byFeature.get(feature)).filter((item) => item && item.available);
+    if (!items.length) return "";
+    return `<div class="se-fp-gp"><h5>${escapeHtml(group.label)}</h5><div class="se-fp-pills">${items.map((item) => item.html).join("")}</div></div>`;
+  }).join("");
+  const unavailable = buttons.filter((item) => !item.available);
+  el.featureFilterGrid.innerHTML = groupsHtml
+    + (unavailable.length ? `<details class="feature-unavailable"><summary>一致する確認情報がない特徴</summary><div class="se-fp-pills">${unavailable.map((item) => item.html).join("")}</div></details>` : "");
+  if (el.featureFilterApply) el.featureFilterApply.textContent = `${getFilteredFacilities().length.toLocaleString("ja-JP")}件を表示`;
 }
 
 function getFeatureAvailabilityCounts() {

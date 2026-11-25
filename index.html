@@ -294,10 +294,18 @@
             <div class="search-refiners">
               <button class="feature-filter-toggle" id="featureFilterToggle" type="button" aria-expanded="false" aria-controls="featureFilterPanel">特徴 <strong id="featureFilterCount">指定なし</strong></button>
             </div>
-            <section class="feature-filter-panel" id="featureFilterPanel" aria-label="特徴で絞り込み" hidden>
+            <section class="feature-filter-panel se-fp" id="featureFilterPanel" aria-label="特徴で絞り込み" hidden>
+              <div class="se-fp-hd">
+                <b>特徴で絞り込み</b>
+                <span id="featureFilterSelectedLabel"></span>
+                <button class="se-fp-x" id="featureFilterClose" type="button" aria-label="特徴のパネルを閉じる">×</button>
+              </div>
               <p class="form-help">現在の検索・都道府県に一致する件数です。複数選択はすべての条件に一致する施設を表示します。未確認は「設備なし」には含めません。</p>
               <div class="feature-filter-grid" id="featureFilterGrid"></div>
-              <button class="search-submit-button" id="featureFilterApply" type="button">結果を見る</button>
+              <div class="se-fp-ft">
+                <button class="se-fp-tl" id="featureFilterReset" type="button" data-feature-reset hidden>すべて解除</button>
+                <button class="search-submit-button" id="featureFilterApply" type="button">結果を見る</button>
+              </div>
             </section>
           </div>
 
@@ -462,15 +470,17 @@
               <button class="primary-button" type="button" id="compareOpenButton">比較表を見る</button>
             </div>
           </div>
-          <div class="results-controls">
-            <label class="sort-label">並び替え
+          <div class="results-controls se-bar">
+            <span class="se-bar-cnt"><b class="num" id="resultsCountNum">0</b>件</span>
+            <button class="secondary-button" type="button" id="copyListButton" hidden>一覧をテキストでコピー</button>
+            <label class="se-sort"><span class="k">並び替え</span>
               <select id="facilitySortSelect" aria-label="施設の並び替え">
                 <option value="standard">標準</option>
                 <option value="name">名前順</option>
                 <option value="verified">情報が確認できている順</option>
               </select>
+              <span class="cv" aria-hidden="true">▾</span>
             </label>
-            <button class="secondary-button" type="button" id="copyListButton" hidden>一覧をテキストでコピー</button>
           </div>
           <p class="list-verify-note">照合日の表示がない施設の料金・営業時間・設備は公式で要確認</p>
           <p tabindex="-1" class="search-results-status" id="searchResultsStatus" role="status" aria-live="polite" aria-atomic="true"></p>
