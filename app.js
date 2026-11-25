@@ -3877,6 +3877,7 @@ function renderMapRouteLink(facility, { compact = false } = {}) {
   `;
 }
 
+// design-extra SE-29：施設詳細の経路・公式サイトの行（情報タブのときだけ表示）
 function renderFacilityRouteBlock(facility) {
   const hasLocation = Boolean(getFacilityAddress(facility) || getFacilityCoordinate(facility));
   const officialUrl = String(facility.officialUrl || "").trim();
@@ -3887,6 +3888,7 @@ function renderFacilityRouteBlock(facility) {
     </div>`;
 }
 
+// design-extra SE-26：情報タブ内の地図（情報表の直後）
 function renderFacilityMapSection(facility) {
   const address = getFacilityAddress(facility);
   const query = [facility.name, address || getFacilityAreaLabel(facility)].filter(Boolean).join(" ");
