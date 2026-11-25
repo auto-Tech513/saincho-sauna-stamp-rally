@@ -10540,6 +10540,67 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       { label: "設備", value: "温泉は天然の保湿成分メタケイ酸を180mg以上含む「美人の湯」。大浴場「紅殻之湯（べんからの湯）」と露天風呂付きの貸切湯がある", sourceUrl: "http://www.resonate.co.jp/relax/", checkedAt: "2026-11-22" },
     ],
   },
+  {
+    ids: ["st-nagano-2326"], name: "ほりでーゆー四季の郷", officialUrl: "http://www.holiday-you.co.jp/index.html",
+    features: ["温泉付き", "宿泊可"],
+    facts: [
+      { label: "料金", value: "日帰り入浴 大人700円・小学生400円（2025年4月1日改定）", sourceUrl: "http://www.holiday-you.co.jp/index.html", checkedAt: "2026-11-26" },
+      { label: "設備", value: "天然温泉（ラドン）の浴場とアルプス展望の露天風呂", sourceUrl: "http://www.holiday-you.co.jp/index.html", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-chiba-367"], name: "カプセルホテルレインボー本八幡", officialUrl: "https://hpdsp.jp/rainbow-motoyawata",
+    features: ["水風呂あり", "宿泊可", "オートロウリュ"],
+    facts: [
+      { label: "営業時間", value: "24時間営業", sourceUrl: "https://hpdsp.jp/rainbow-motoyawata", checkedAt: "2026-11-26" },
+      { label: "設備", value: "高温サウナ（昭和ストロングサウナ）とオートロウリュの瞑想サウナの2種のサウナ、カプセルルーム", sourceUrl: "https://hpdsp.jp/rainbow-motoyawata", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "温度の異なる2種類の水風呂", sourceUrl: "https://hpdsp.jp/rainbow-motoyawata", checkedAt: "2026-11-26" },
+      { label: "利用条件", value: "タトゥー・刺青のある方は入館不可", sourceUrl: "https://hpdsp.jp/rainbow-motoyawata", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-gifu-4833"], name: "ヤオツサウナ&スパイス", officialUrl: "https://www.big-advance.site/s/137/2379",
+    features: ["薪サウナ"],
+    facts: [
+      { label: "設備", value: "薪ストーブのアウトドアサウナ", sourceUrl: "https://www.big-advance.site/s/137/2379", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-fukuoka-4399"], name: "ホテルニューガイアイン中洲東", officialUrl: "http://www.hotelnewgaea.com/nakasuhigashi/bath/", status: "closed",
+    features: [],
+    facts: [
+      { label: "営業状況", value: "2020年8月31日をもって閉館（公式サイトの閉館告知による）", sourceUrl: "http://www.hotelnewgaea.com/nakasuhigashi/bath/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["st-miyazaki-4705"], name: "Hostel ALA", officialUrl: "https://ala-tsuno.com/",
+    features: ["テントサウナ", "宿泊可"],
+    facts: [
+      { label: "設備", value: "テントサウナ", sourceUrl: "https://ala-tsuno.com/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["manual-fukushima-anytime-sauna"], name: "いつでもサウナ", officialUrl: "https://anytime-sauna.com/",
+    features: ["水風呂あり", "温泉付き"],
+    facts: [
+      { label: "営業状況", value: "2026年秋オープン予定（開業準備中。以下は公式サイト掲載のオープン時の案内）", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+      { label: "営業時間", value: "平日12:00–24:00／休日9:00–24:00", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+      { label: "料金", value: "平日60分1,200円・90分1,500円・120分1,700円／土日・祝日60分1,300円・90分1,600円・120分1,800円（30分延長ごとに+300円）", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+      { label: "設備", value: "金庫室を活かしたサウナ室（ペレットストーブ・HARVIAストーブ）、飯坂温泉の源泉を引く浴室、整い椅子約30脚、ヒーリングルーム、コミュニティルーム", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "深さ140cmの水風呂", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+      { label: "利用条件", value: "レディースDAYを月1〜2回のペースで開催（予定）", sourceUrl: "https://anytime-sauna.com/", checkedAt: "2026-11-26" },
+    ],
+  },
+  {
+    ids: ["manual-kanagawa-fit-easy-tonarie-kurihama"], name: "FIT-EASY トナリエ久里浜店", officialUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/",
+    features: ["水風呂あり", "個室"],
+    facts: [
+      { label: "設備", value: "完全個室サウナ（FIT-SAUNA）と、ととのいスペース", sourceUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/", checkedAt: "2026-11-26" },
+      { label: "水風呂", value: "水風呂あり", sourceUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/", checkedAt: "2026-11-26" },
+      { label: "利用条件", value: "FIT-SAUNAは要予約", sourceUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/", checkedAt: "2026-11-26" },
+      { label: "利用条件", value: "FIT-SAUNAの利用は原則スタッフ駐在時間（11:00～20:00）のみ。会費内で利用可", sourceUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/", checkedAt: "2026-11-26" },
+    ],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
