@@ -834,6 +834,8 @@ let discoveryFacilitiesCache = null;
 let discoveryFacilitiesSource = null;
 let lastUpdateCheckAt = 0;
 let updateCheckPending = null;
+let pendingUpdateApp = null;
+let dismissedUpdateApp = null;
 let appModulesReady = false;
 let pendingSearchIntent = null;
 let facilitySearchCache = null;
@@ -994,6 +996,7 @@ const el = {
   sharedAddHint: document.querySelector("#sharedAddHint"),
   achievementDialog: document.querySelector("#achievementDialog"),
   achievementEyebrow: document.querySelector("#achievementEyebrow"),
+  achievementMedal: document.querySelector("#achievementMedal"),
   achievementTitle: document.querySelector("#achievementTitle"),
   achievementBody: document.querySelector("#achievementBody"),
   closeAchievementButton: document.querySelector("#closeAchievementButton"),
@@ -1248,6 +1251,11 @@ function bindEvents() {
     if (appActionButton.dataset.appAction === "copy-app-url") copyAppUrl();
     if (appActionButton.dataset.appAction === "share-line") shareToLine();
     if (appActionButton.dataset.appAction === "copy-promo") copyPromotionText(appActionButton.dataset.copyIndex);
+    if (appActionButton.dataset.appAction === "dismiss-update") {
+      dismissedUpdateApp = pendingUpdateApp;
+      const notice = document.querySelector("#appUpdateNotice");
+      if (notice) notice.hidden = true;
+    }
     if (appActionButton.dataset.appAction === "reload-app") document.querySelector("#appUpdateDialog")?.showModal();
     if (appActionButton.dataset.appAction === "cancel-reload-app") document.querySelector("#appUpdateDialog")?.close();
     if (appActionButton.dataset.appAction === "confirm-reload-app") {
@@ -8141,6 +8149,7 @@ function showAchievement({ eyebrow, title, body }) {
   el.achievementEyebrow.textContent = eyebrow;
   el.achievementTitle.textContent = title;
   el.achievementBody.textContent = body;
+  if (el.achievementMedal) el.achievementMedal.textContent = (title || "称").slice(0, 1);
   if (typeof el.achievementDialog.showModal === "function") {
     el.achievementDialog.showModal();
     return;
@@ -9045,8 +9054,9 @@ async function checkAppUpdate({ force = false } = {}) {
       const styles = document.querySelector('link[rel="stylesheet"][href*="styles."]');
       const sameStyles = !version.styles || (styles?.href && new URL(styles.href).pathname.split("/").pop() === version.styles);
       const upToDate = new URL(script.src).pathname.split("/").pop() === version.app && Boolean(sameStyles);
-      notice.hidden = upToDate;
-      if (!upToDate) maybeAutoApplyUpdate(version.app);
+      pendingUpdateApp = upToDate ? null : version.app;
+      notice.hidden = upToDate || dismissedUpdateApp === version.app;
+      if (!upToDate && dismissedUpdateApp !== version.app) maybeAutoApplyUpdate(version.app);
     } catch {
       // Offline or unavailable version metadata must not interrupt a draft.
     }
