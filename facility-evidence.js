@@ -10601,6 +10601,16 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       { label: "利用条件", value: "FIT-SAUNAの利用は原則スタッフ駐在時間（11:00～20:00）のみ。会費内で利用可", sourceUrl: "https://lp.fiteasy.jp/lp-kanagawa-tonariekurihama/", checkedAt: "2026-11-26" },
     ],
   },
+  {
+    ids: ["st-yamagata-4423"], name: "がまの湯温泉 いいで旅館", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "閉館（2026年3月末）。旧運営会社（有）いいで旅館は2021年11月に破産。施設を引き継いだ「まちづくりきらりいいで」が「神乃湯ホテル」として2023年5月から営業したが、2026年3月末で閉館し、2026年10月15日に破産手続き開始決定。公式サイト gamanoyu.jp は東京都江戸川区の整体院サイトに転用されており施設とは無関係", sourceUrl: "https://news.yahoo.co.jp/articles/bd3ce2f0802cf5acd409538208aadd64212f7005", checkedAt: "2026-11-26" }],
+  },
+  {
+    ids: ["st-miyagi-4688"], name: "やまびこの湯 ベガロポリス仙台南", status: "closed",
+    features: [],
+    facts: [{ label: "営業状況", value: "営業終了（2023年10月末）。賃貸借契約の終了に伴い運営を終了。施設を所有するベガスベガスグループが別の名前で温浴施設を運営（後継は「ゆ～とぴあ仙台南」で、同住所・ベガロポリス仙台南1階で営業中）。公式サイト spa-yamabiko.jp はドメイン登録済みの駐車ページで施設のサイトは存在しない", sourceUrl: "https://newsdig.tbs.co.jp/articles/tbc/714929?display=1", checkedAt: "2026-11-26" }],
+  },
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));

@@ -1946,7 +1946,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4688/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "https://spa-yamabiko.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/4688/"
   },
   {
@@ -2893,7 +2892,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/4423/",
     "sourceCheckedAt": "2026-11-04",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://www.gamanoyu.jp/index.html",
     "officialUrlSource": "https://saunatime.jp/saunas/4423/"
   },
   {
@@ -10728,7 +10726,7 @@ export const SEED_FACILITIES = [
     "address": "〒390-0841 長野県松本市渚1丁目7 渚1-7-1 なぎさライフサイト内",
     "addressSource": "SaunaTime参照ページ",
     "addressCheckedAt": "2026-11-04",
-    "officialUrl": "http://zui.sakura.ne.jp/index.php",
+    "officialUrl": "https://zuisho-matsumoto.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/2296/",
     "lat": 36.232926,
     "lng": 137.955024
@@ -19087,7 +19085,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/721/",
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
-    "officialUrl": "http://wonderfulresort.jp/",
     "officialUrlSource": "https://saunatime.jp/saunas/721/"
   },
   {
@@ -20012,7 +20009,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/760/",
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
-    "officialUrl": "http://www.yamato-onsen.com/",
     "officialUrlSource": "https://saunatime.jp/saunas/760/"
   },
   {
@@ -20146,7 +20142,6 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://saunatime.jp/saunas/3525/",
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
-    "officialUrl": "https://www.manten-no-yu.net/",
     "officialUrlSource": "https://saunatime.jp/saunas/3525/"
   },
   {
@@ -24789,7 +24784,6 @@ export const SEED_FACILITIES = [
     "city": "熊本市",
     "sourceCheckedAt": "2026-11-08",
     "addressCheckedAt": "2026-11-08",
-    "officialUrl": "http://www.yasuyadocheck.com/kenko/ken/kumamoto/tomiai.html",
     "officialUrlSource": "https://saunatime.jp/saunas/849/"
   },
   {
