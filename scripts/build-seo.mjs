@@ -1024,6 +1024,11 @@ function renderFacilitySsr(facility) {
       ${missingFields.length ? `<div><dt>公式照合で未確認の項目</dt><dd><span class="fact-badge is-unverified">未確認</span> ${escapeHtml(missingFields.join("・"))}（未確認は「設備なし」を意味しません）</dd></div>` : ""}
       ${renderProvenanceRows(facility, evidence)}
     </dl>
+    ${mapUrl ? `<div class="se-route"><a class="r1" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapQuery)}" rel="noreferrer"><span class="ic" aria-hidden="true">経</span><span><b>経路</b><small>地図アプリで開く</small></span><span class="go" aria-hidden="true">›</span></a>${facility.officialUrl ? `<a class="wide" href="${escapeAttr(facility.officialUrl)}" rel="noreferrer"><span class="ic" aria-hidden="true">公</span><span><b>公式サイト</b><small>営業時間を確認</small></span><span class="go" aria-hidden="true">›</span></a>` : ""}</div>
+    <section class="facility-map" aria-label="地図">
+      <h2 class="facility-h3">地図<span class="facility-h3-label" aria-hidden="true">MAP</span><a class="facility-h3-more" href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapQuery)}" rel="noreferrer">経路 ›</a></h2>
+      <div class="facility-map-box"><iframe title="${escapeAttr(facility.name)}の地図" src="https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>` : ""}
     <p>${escapeHtml(quality.description)}</p>
     <p><a href="/contact/">情報修正を知らせる</a></p>
     ${renderFacilityRelations(facility)}

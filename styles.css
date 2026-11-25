@@ -11853,3 +11853,29 @@ a[data-affiliate-vendor]::after { content: ""; position: absolute; inset: calc((
 .st0.w { border: 2.5px solid var(--teal2); color: var(--teal2); }
 .st0.p { border: 2px solid var(--ink); color: var(--ink); border-radius: 8px; }
 .search-suggestions-all { display: flex; justify-content: space-between; align-items: center; width: 100%; min-height: 52px; padding: 0 16px; border: 0; border-top: 1px dashed #CFC3AC; background: none; font: inherit; font-weight: 700; font-size: 15px; color: var(--ink); cursor: pointer; text-align: left; }
+
+/* ============================================================
+   design-extra PR-B1（SE-29 経路リンク / SE-26 施設詳細のタブと地図）
+   ============================================================ */
+/* SE-29 経路・公式サイトの行 */
+.se-route { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+.se-route a { display: flex; align-items: center; gap: 10px; min-height: 56px; padding: 6px 12px; border: 1.5px solid var(--ink); border-radius: 12px; background: #fff; color: var(--ink); text-decoration: none; }
+.se-route a.r1 { grid-column: 1 / -1; background: #E6F3F1; border-color: var(--primary); }
+.se-route a.wide { grid-column: 1 / -1; }
+.se-route .ic { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--cream); font-family: "Shippori Mincho B1", serif; font-weight: 800; font-size: 13px; flex: none; }
+.se-route a.r1 .ic { background: var(--primary); }
+.se-route b { display: block; font-size: 15px; line-height: 1.35; }
+.se-route small { font-size: 12px; color: var(--ink-soft); }
+.se-route .go { margin-left: auto; color: var(--ink-soft); }
+/* SE-26 タブ（52px・件数つき） */
+.facility-tabs.se-dtabs { display: flex; border-bottom: 1.5px solid var(--ink); margin: 18px 0 14px; }
+.facility-tabs.se-dtabs button { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 52px; font-weight: 700; font-size: 15px; color: var(--ink-soft); border: 0; border-bottom: 4px solid transparent; margin-bottom: -1.5px; background: transparent; cursor: pointer; }
+.facility-tabs.se-dtabs button[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
+.facility-tab-num { font-size: 14px; color: var(--primary); font-family: var(--num-font); }
+/* SE-26 地図（情報タブ内・情報表の直後） */
+.facility-h3-more { margin-left: auto; display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; color: var(--primary); text-decoration: none; font-family: "Zen Kaku Gothic New", sans-serif; font-weight: 700; letter-spacing: 0; }
+.facility-map-box { border: 1.5px solid var(--ink); border-radius: 14px; overflow: hidden; background: var(--paper2); }
+.facility-map-box iframe { display: block; width: 100%; height: 190px; border: 0; }
+/* SE-26 サ活ノートの保存済み記録（罫紙＋手書き） */
+#facility-pane-note .visit-log-list article { background: #fff; border: 1px solid #DCCFB6; border-radius: 12px; padding: 12px 14px; background-image: repeating-linear-gradient(transparent 0 31px, #F0E6D3 31px 32px); }
+#facility-pane-note .visit-log-note { font-family: var(--hand-font); font-size: 16px; line-height: 2; }
