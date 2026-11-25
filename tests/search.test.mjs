@@ -9,8 +9,9 @@ import * as evidence from "../facility-evidence.js";
 const source=(await readFile(new URL("../app.js",import.meta.url),"utf8"))
   .replace(/^import\s*\{[\s\S]*?from "\.\/nearby.js";/,"")
   .replace(/^import[^\n]*from "\.\/facility-evidence.js";/m, "")
+  .replace(/^import[^\n]*from "\.\/phrase.js";/m, "")
   .replace(/\ninit\(\);/,"\n");
-const context=vm.createContext({...nearby,...evidence,URL,URLSearchParams,crypto:webcrypto,performance,console,setTimeout,clearTimeout,localStorage:{getItem:()=>null},location:{hostname:"localhost",pathname:"/",protocol:"http:",port:"4173"},window:{matchMedia:()=>({matches:false})},document:{querySelector:()=>({}),querySelectorAll:()=>[]}});
+const context=vm.createContext({...nearby,...evidence,URL,URLSearchParams,crypto:webcrypto,performance,console,setTimeout,clearTimeout,HTMLElement:class {},MutationObserver:class { constructor(){} observe(){} disconnect(){} },localStorage:{getItem:()=>null},location:{hostname:"localhost",pathname:"/",protocol:"http:",port:"4173"},window:{matchMedia:()=>({matches:false})},document:{querySelector:()=>({}),querySelectorAll:()=>[]}});
 vm.runInContext(source,context);
 vm.runInContext('appModulesReady=true;',context);
 const search=(name,query)=>vm.runInContext(`matchesSearchBlob(buildSearchBlob([${JSON.stringify(name)}]),createSearchNeedles(${JSON.stringify(query)}))`,context);
@@ -125,4 +126,40 @@ test("facility photo link points to a Google Maps search and photo-less faciliti
   assert.match(link, /data-id="photo-1"/);
   const photo = vm.runInContext(`getFacilityPhoto({ id: "photo-2", name: "プレースホルダの湯", prefecture: "富山県" })`, context);
   assert.equal(photo.isFallback, true);
+});
+
+test("place names typed in hiragana, katakana or romaji match the kanji place (official readings only)", async () => {
+  const readings = await import("../search-readings.js");
+  const { PREFECTURES: allPrefectures } = await import("../data.js");
+  const readingSource = await readFile(new URL("../search-readings.js", import.meta.url), "utf8");
+  assert.match(readingSource, /https:\/\/www\.soumu\.go\.jp\/main_content\/000925835\.xlsx/);
+  assert.match(readingSource, /取得日\s+\d{4}-\d{2}-\d{2}/);
+  assert.equal(readings.PLACE_READINGS_SOURCE.page, "https://www.soumu.go.jp/denshijiti/code.html");
+  const names = new Set(readings.PLACE_READINGS.split("|").map((entry) => entry.split(":")[1]));
+  for (const pref of allPrefectures) assert.ok(names.has(pref.name), `${pref.name} has a reading`);
+  vm.runInContext(`placeReadingIndex = buildPlaceReadingIndex(${JSON.stringify(readings.PLACE_READINGS)}); PREFECTURES = ${JSON.stringify(allPrefectures)};`, context);
+  try {
+    for (const query of ["しんじゅく", "シンジュク", "ｼﾝｼﾞｭｸ", "しんじゅくく", "shinjuku", "しんじゅ"]) {
+      assert.ok(search("東京都新宿区西新宿1-1", query), query);
+    }
+    for (const query of ["ほっかいどう", "ホッカイドウ", "hokkaido", "さっぽろ", "サッポロ"]) {
+      assert.ok(search("北海道札幌市中央区南3条西", query), query);
+    }
+    assert.ok(search("大阪府大阪市北区", "おおさか"));
+    assert.ok(search("大阪府大阪市北区", "オオサカ"));
+    assert.equal(search("東京都港区芝公園", "しんじゅく"), false);
+    assert.equal(search("北海道札幌市中央区", "おおさか"), false);
+    // 1文字・1字だけ残る地名は広げない（「北区」→「北」、「津市」→「津」）
+    assert.deepEqual([...vm.runInContext(`findPlaceNamesByReading("つ")`, context)], []);
+    assert.ok(!vm.runInContext(`findPlaceNamesByReading("きた")`, context).includes("北"));
+    // 漢字の検索語は読みで広げない
+    assert.deepEqual([...vm.runInContext(`findPlaceNamesByReading("新宿")`, context)], []);
+    // 都道府県の候補は読みの先頭2文字から
+    assert.deepEqual([...vm.runInContext(`findPrefectureSuggestions("ほっ").map((p) => p.name)`, context)], ["北海道"]);
+    assert.ok(vm.runInContext(`findPrefectureSuggestions("おおさか").map((p) => p.name)`, context).includes("大阪府"));
+    // 施設名そのものの読みは持たない（ひらがな・カタカナの相互変換は従来どおり）
+    assert.ok(search("ゴクラク湯", "ごくらく"));
+  } finally {
+    vm.runInContext(`placeReadingIndex = null;`, context);
+  }
 });

@@ -1,4 +1,4 @@
-const CACHE_NAME = "saincho-v57-quality-round1-20261022";
+const CACHE_NAME = "saincho-v63-fullaudit-20261117";
 const APP_SHELL_CACHE = `${CACHE_NAME}-shell`;
 const RUNTIME_CACHE = `${CACHE_NAME}-runtime`;
 
@@ -18,6 +18,8 @@ const APP_SHELL_ASSETS = [
   "./data.js",
   "./content.js",
   "./nearby.js",
+  "./phrase.js",
+  "./search-readings.js",
   "./facility-evidence.js",
   "./official-page-evidence.js",
   "./assets/japan-map-mobile.svg",
