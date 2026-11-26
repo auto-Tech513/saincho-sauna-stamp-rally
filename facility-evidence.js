@@ -40725,7 +40725,311 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
-}
+},
+  {
+    ids: ["st-tochigi-331"], name: "小山やすらぎの湯", officialUrl: "https://www.yasuraginoyu.jp/oyama",
+    features: ["温泉付き"],
+    facts: [
+      {"label": "設備", "value": "天然温泉・炭酸泉、3種類のサウナ", "sourceUrl": "https://www.yasuraginoyu.jp/oyama", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "月〜金 10:00〜24:00／土日祝 9:00〜24:00（23:00受付終了、浴室・サウナのご利用は23:45まで）", "sourceUrl": "https://www.yasuraginoyu.jp/oyama", "checkedAt": "2026-11-26"},
+      {"label": "住所", "value": "栃木県小山市東城南5丁目26-5", "sourceUrl": "https://www.yasuraginoyu.jp/oyama", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0285-31-2617", "sourceUrl": "https://www.yasuraginoyu.jp/oyama", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-yamanashi-2414"], name: "遊・湯ふれあい公園", officialUrl: "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu",
+    facts: [
+      {"label": "住所", "value": "山梨県南アルプス市鏡中條3782", "sourceUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "055-282-7610", "sourceUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "温泉施設 9:30～21:30", "sourceUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "毎週金曜日（その他、施設メンテナンス及び行事により休館となる場合あり）", "sourceUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "男女浴場、サウナ風呂、休憩室", "sourceUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-shizuoka-4772"], name: "熱海Moonlight", officialUrl: "https://atami-moonlight.jp/",
+    features: ["ロウリュあり"],
+    facts: [
+      {"label": "設備", "value": "本格派フィンランド式セルフロウリュの森林浴サウナ＆露天風呂", "sourceUrl": "https://atami-moonlight.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["kyoto-user-1ogm6x8"], name: "新シ湯", officialUrl: "http://www.kyo1010.com/atarashi-yu/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "京都市東山区古門前通大和大路東入ル3丁目古西町316", "sourceUrl": "http://www.kyo1010.com/atarashi-yu/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "075-561-4210", "sourceUrl": "http://www.kyo1010.com/atarashi-yu/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "15:00～24:00", "sourceUrl": "http://www.kyo1010.com/atarashi-yu/", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "金曜日", "sourceUrl": "http://www.kyo1010.com/atarashi-yu/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "主湯、ジェット風呂、電気風呂、水風呂、薬湯、サウナ", "sourceUrl": "http://www.kyo1010.com/atarashi-yu/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["ikitai-nara-gose-takarayu"], name: "御所宝湯", officialUrl: "https://www.gosemachi.com/",
+    facts: [
+      {"label": "電話", "value": "0745-49-0854", "sourceUrl": "https://www.gosemachi.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "サウナ（予約制）", "sourceUrl": "https://www.gosemachi.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-tokushima-3694"], name: "月ヶ谷温泉", officialUrl: "https://www.e-kamikatsu.jp/asp/nwsitem.asp?nw_id=1145",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "営業時間", "value": "温泉 10時～20時受付", "sourceUrl": "https://www.e-kamikatsu.jp/asp/nwsitem.asp?nw_id=1145", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "大人（中学生以上）800円（入湯税100円含む）、小人（3歳～小学生）400円", "sourceUrl": "https://www.e-kamikatsu.jp/asp/nwsitem.asp?nw_id=1145", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0885-46-0371", "sourceUrl": "https://www.e-kamikatsu.jp/asp/nwsitem.asp?nw_id=1145", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "各浴場に気泡湯・ジェット、サウナ、水風呂", "sourceUrl": "https://www.e-kamikatsu.jp/asp/nwsitem.asp?nw_id=1145", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-hokkaido-85"], name: "芦別温泉 おふろcafé 星遊館 (芦別温泉スターライトホテル)", officialUrl: "https://ofurocafe-seiyukan.com/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "北海道芦別市旭町油谷1番地", "sourceUrl": "https://ofurocafe-seiyukan.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0124-23-1155", "sourceUrl": "https://ofurocafe-seiyukan.com/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "6:00～22:00（最終入館21:00）", "sourceUrl": "https://ofurocafe-seiyukan.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "3種のサウナ（塩サウナなど）、貸切バレルサウナ、源泉水風呂", "sourceUrl": "https://ofurocafe-seiyukan.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-akita-530"], name: "中里温泉", officialUrl: "https://www.city.daisen.lg.jp/docs/2021061100018/",
+    features: ["ロウリュあり", "水風呂あり"],
+    facts: [
+      {"label": "設備", "value": "オートロウリュサウナ、東北最深級の水風呂", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "午前9時～午後9時（最終受付 午後8時30分）", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "大人（中学生以上）600円", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "第三月曜日（国民の祝日の場合は営業し、翌日を休館日とする）", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+      {"label": "住所", "value": "秋田県大仙市太田町中里字新屋敷114", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0187-88-1471", "sourceUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-yamagata-8956"], name: "高源ゆ", officialUrl: "https://kogenyu.com/",
+    features: ["温泉付き"],
+    facts: [
+      {"label": "住所", "value": "山形県上山市蔵王坊平国有林241林班", "sourceUrl": "https://kogenyu.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "023-616-3717", "sourceUrl": "https://kogenyu.com/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "通常期：午前の部 6:00-12:00、午後の部 平日14:00-20:00・土日祝14:00-21:00／冬期：全日12:00-19:00", "sourceUrl": "https://kogenyu.com/", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "通常期：木曜日午前の部・第三木曜日終日／冬期：木曜日（祝日の場合は営業、翌平日振替休館）", "sourceUrl": "https://kogenyu.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "日帰り本格サウナ・温泉、プール、スタジオ、酸素カプセル", "sourceUrl": "https://kogenyu.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-kagoshima-81268"], name: "繋がるサウナ THE BARREL", officialUrl: "https://thebarrel.jp/",
+    features: ["ロウリュあり", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "鹿児島県鹿児島市与次郎1丁目8-5", "sourceUrl": "https://thebarrel.jp/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "10:00～24:00（最終受付23:00）", "sourceUrl": "https://thebarrel.jp/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "バレルサウナ（国内最大直径・最小直径）、セルフロウリュ、水風呂", "sourceUrl": "https://thebarrel.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-fukui-494"], name: "越のゆ鯖江店", officialUrl: "https://www.yu-iwashita.jp/sabae/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "福井県鯖江市神中町2丁目2-26", "sourceUrl": "https://www.yu-iwashita.jp/sabae/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "早朝7:00〜深夜1:00（最終受付0:30）", "sourceUrl": "https://www.yu-iwashita.jp/sabae/", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "入浴料 大人 平日800円・土日祝900円", "sourceUrl": "https://www.yu-iwashita.jp/sabae/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "高温サウナ、冷たい水風呂、高濃度炭酸泉", "sourceUrl": "https://www.yu-iwashita.jp/sabae/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-yamanashi-8094"], name: "ホテルマウント富士", officialUrl: "https://www.mtfuji-hotel.com/",
+    features: ["ロウリュあり"],
+    facts: [
+      {"label": "住所", "value": "山梨県南都留郡山中湖村山中1360-83", "sourceUrl": "https://www.mtfuji-hotel.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0555-62-2111", "sourceUrl": "https://www.mtfuji-hotel.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "ロウリュサウナ、満天星の湯（富士山と星空・サウナを楽しめる）", "sourceUrl": "https://www.mtfuji-hotel.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-79453"], name: "アウトドアスペース TAKITSUBO", officialUrl: "https://takitsubo.jimdofree.com/",
+    facts: [
+      {"label": "料金", "value": "大人1名（中学生以上）1,500円（税抜き）", "sourceUrl": "https://takitsubo.jimdofree.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "090-8886-9711", "sourceUrl": "https://takitsubo.jimdofree.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "テントサウナ（レンタル）、滝壺、ドラム缶風呂", "sourceUrl": "https://takitsubo.jimdofree.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-nara-2849"], name: "生駒山麓公園ふれあいセンター", officialUrl: "https://ikoma36.jp/fureai",
+    facts: [
+      {"label": "住所", "value": "奈良県生駒市俵口町2088", "sourceUrl": "https://ikoma36.jp/fureai", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0743-73-8880", "sourceUrl": "https://ikoma36.jp/fureai", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "10月〜5月の火曜日（祝日の場合は開館）、12月27日〜1月5日", "sourceUrl": "https://ikoma36.jp/fureai", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "白湯・バイブラ湯（泡風呂）、露天風呂の3種の浴槽と打たせ湯、サウナを備えた浴場", "sourceUrl": "https://ikoma36.jp/fureai", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-shimane-3606"], name: "亀嵩温泉 玉峰山荘", officialUrl: "http://tamamine.jp/",
+    facts: [
+      {"label": "住所", "value": "島根県仁多郡奥出雲町亀嵩3609-1", "sourceUrl": "http://tamamine.jp/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0854-57-0800", "sourceUrl": "http://tamamine.jp/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "10:00〜19:30（最終受付19:00）", "sourceUrl": "http://tamamine.jp/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "露天風呂・内湯・サウナ・家族風呂", "sourceUrl": "http://tamamine.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-yamaguchi-4632"], name: "下関ステーションホテル", officialUrl: "http://www.shimonoseki-station-hotel.jp/index.php",
+    facts: [
+      {"label": "住所", "value": "山口県下関市竹崎町2-8-11", "sourceUrl": "http://www.shimonoseki-station-hotel.jp/index.php", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "083-231-2225", "sourceUrl": "http://www.shimonoseki-station-hotel.jp/index.php", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "かけ流しの大浴場とサウナ", "sourceUrl": "http://www.shimonoseki-station-hotel.jp/index.php", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-tokushima-3695"], name: "剣山木綿麻温泉", officialUrl: "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "徳島県美馬郡つるぎ町貞光字長瀬127-2", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0883-62-5500", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "午前10時～午後8時30分（最終受付 午後8時）", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "毎週月曜（祝祭日の場合は翌平日）", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "入浴料 大人400円（中学生以上）、小人200円（3歳～小学生以下）", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "大浴場、薬湯（季節のハーブ風呂）、露天風呂、サウナ、水風呂", "sourceUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-kagawa-740"], name: "琴弾廻廊", officialUrl: "https://kotohiki-kairo.co.jp/",
+    features: ["水風呂あり", "温泉付き"],
+    facts: [
+      {"label": "住所", "value": "香川県観音寺市有明町6-6", "sourceUrl": "https://kotohiki-kairo.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0875-24-4567", "sourceUrl": "https://kotohiki-kairo.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "温泉/宿泊 11:00-23:00（受付 22:00まで）", "sourceUrl": "https://kotohiki-kairo.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "全11種類のサウナ、温泉水を使った水風呂をはじめ7種類の水風呂", "sourceUrl": "https://kotohiki-kairo.co.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-fukuoka-10698"], name: "小倉サウナ TOTONOI (ととのい)", officialUrl: "https://www.totonoikokura.com/",
+    features: ["ロウリュあり"],
+    facts: [
+      {"label": "住所", "value": "福岡県北九州市小倉北区鍛冶町1丁目6-17 鍛冶町第一ビル3F", "sourceUrl": "https://www.totonoikokura.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "093-512-7820", "sourceUrl": "https://www.totonoikokura.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "ロウリュサウナ（アロマ入りロウリュヒーター、セルフで利用可能）", "sourceUrl": "https://www.totonoikokura.com/", "checkedAt": "2026-11-26"},
+      {"label": "利用条件", "value": "男性専用（飲食・マッサージ・個室サウナは女性可）", "sourceUrl": "https://www.totonoikokura.com/", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "年中無休（12/31～1/3を除く）", "sourceUrl": "https://www.totonoikokura.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-yamagata-628"], name: "水沢温泉館", officialUrl: "https://www.gassan.co.jp/facility/02_mizusawa",
+    facts: [
+      {"label": "住所", "value": "山形県西村山郡西川町大字水沢2304", "sourceUrl": "https://www.gassan.co.jp/facility/02_mizusawa", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "日〜木曜日 7:00～21:00／金・土曜日 7:00～22:00（12月〜3月は開始が1時間遅い）", "sourceUrl": "https://www.gassan.co.jp/facility/02_mizusawa", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "第2火曜日（祝日の場合後日）", "sourceUrl": "https://www.gassan.co.jp/facility/02_mizusawa", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "入浴料 大人350円", "sourceUrl": "https://www.gassan.co.jp/facility/02_mizusawa", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "サウナ（サウナ＋入浴料 850円）", "sourceUrl": "https://www.gassan.co.jp/facility/02_mizusawa", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-tokyo-63706"], name: "生姜サウナ 金の亀", officialUrl: "https://kinnokame.com/",
+    features: ["ロウリュあり", "水風呂あり"],
+    facts: [
+      {"label": "営業時間", "value": "月火木 9:00〜23:30／水曜 8:00〜23:00／金土日祝日 8:00〜23:30", "sourceUrl": "https://kinnokame.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "岩塩ブロックサウナ、生姜水出しロウリュ、生姜もみ出し水風呂", "sourceUrl": "https://kinnokame.com/", "checkedAt": "2026-11-26"},
+      {"label": "利用条件", "value": "水曜日以外は男性専用、毎週水曜日はレディースDAY（女性専用）", "sourceUrl": "https://kinnokame.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-kanagawa-2147"], name: "RAKU SPA 鶴見", officialUrl: "https://rakuspa.com/tsurumi/",
+    facts: [
+      {"label": "住所", "value": "神奈川県横浜市鶴見区元宮2-1-39", "sourceUrl": "https://rakuspa.com/tsurumi/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "045-574-4126", "sourceUrl": "https://rakuspa.com/tsurumi/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "日～木・祝 10:00～翌2:00（最終受付 翌1:00）／金・土・祝前日 10:00～翌8:00（最終受付 翌1:00）", "sourceUrl": "https://rakuspa.com/tsurumi/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "15種類のお風呂とサウナ", "sourceUrl": "https://rakuspa.com/tsurumi/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-3012"], name: "神州温泉 あるごの湯", officialUrl: "http://www.algo7.jp/spa/",
+    facts: [
+      {"label": "住所", "value": "大阪府豊中市神洲町1-16", "sourceUrl": "http://www.algo7.jp/spa/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "06-6335-0035", "sourceUrl": "http://www.algo7.jp/spa/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "10:00〜26:00（最終受付 25:00）", "sourceUrl": "http://www.algo7.jp/spa/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "内湯・露天風呂とサウナ、チムジルバン（美蒸房）", "sourceUrl": "http://www.algo7.jp/spa/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-4790"], name: "湯ごころ ゆるり", officialUrl: "https://yugokoro-yururi.jp/",
+    features: ["温泉付き"],
+    facts: [
+      {"label": "住所", "value": "愛知県春日井市松河戸町2-5-4", "sourceUrl": "https://yugokoro-yururi.jp/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0568-37-4126", "sourceUrl": "https://yugokoro-yururi.jp/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "平日 8:00～24:00／土日祝 6:00～24:00（最終受付 23:15）", "sourceUrl": "https://yugokoro-yururi.jp/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "温泉、岩盤浴・サウナ", "sourceUrl": "https://yugokoro-yururi.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-iwate-505"], name: "SPA銭湯ゆっこ盛岡", officialUrl: "https://yukko-morioka.jp",
+    facts: [
+      {"label": "電話", "value": "019-647-7500", "sourceUrl": "https://yukko-morioka.jp", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "5時00分〜1時00分", "sourceUrl": "https://yukko-morioka.jp", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "シルク湯、炭酸泉、ジェットバス、露天風呂、サウナ", "sourceUrl": "https://yukko-morioka.jp", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-ibaraki-11135"], name: "HARTA SAUNA YUKI-IBARAKI", officialUrl: "https://harta-sauna.soun.co.jp/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "茨城県結城市結城183", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "080-7024-5635", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "10:00～21:00（朝・夜サウナ開催時はこの限りではない）", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "定休日", "value": "不定休（月曜日～日曜日営業）", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "料金", "value": "平日 2,500円／土日祝 3,500円（貸切：平日 20,000円、土日祝 14,000円〜）", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "蔵を改装したサウナ（蔵サウナ）、水風呂、外気浴", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+      {"label": "利用条件", "value": "セッションごとの予約制、定員8名のシェアサウナ（相席）", "sourceUrl": "https://harta-sauna.soun.co.jp/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-gumma-340"], name: "天然温泉伊勢崎ゆまーる", officialUrl: "http://www.yumarl.com/",
+    facts: [
+      {"label": "住所", "value": "群馬県伊勢崎市太田町1136番地9号", "sourceUrl": "http://www.yumarl.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0270-75-4126", "sourceUrl": "http://www.yumarl.com/", "checkedAt": "2026-11-26"},
+      {"label": "営業時間", "value": "9:00〜24:00（最終受付 23:30）", "sourceUrl": "http://www.yumarl.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "100℃の高温サウナ、源泉かけ流しの内湯・露天風呂", "sourceUrl": "http://www.yumarl.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["si-chiba-8464"], name: "八街ヴィラ", officialUrl: "https://yachimata-villa.com/",
+    features: ["ロウリュあり", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "千葉県八街市吉倉379-2", "sourceUrl": "https://yachimata-villa.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "043-308-4485", "sourceUrl": "https://yachimata-villa.com/", "checkedAt": "2026-11-26"},
+      {"label": "設備", "value": "フィンランド式のロウリュサウナ、水風呂、プール（1日1組限定の一棟貸し）", "sourceUrl": "https://yachimata-villa.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-iwate-65"], name: "ゆファミリーレストラン古戦場", officialUrl: "http://kosenjyo.com/",
+    features: ["サ飯あり"],
+    facts: [
+      {"label": "営業時間", "value": "10:00～21:30、10:00～20:30", "sourceUrl": "http://kosenjyo.com/", "checkedAt": "2026-11-14"},
+      {"label": "設備", "value": "人工温泉（炭酸水素イオン泉）、岩盤サウナ、電気風呂、岩盤湯。小上がりの休憩スペースや大広間あり", "sourceUrl": "http://kosenjyo.com/", "checkedAt": "2026-11-14"},
+      {"label": "住所", "value": "岩手県一関市赤荻字堺78-2", "sourceUrl": "http://kosenjyo.com/", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0120-282-500（フリーダイヤル）", "sourceUrl": "http://kosenjyo.com/", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["manual-mie-mitasunoyu"], name: "みたすの湯", officialUrl: "https://mts-ise.com/",
+    features: ["温泉付き", "サ飯あり"],
+    facts: [
+      {"label": "営業時間", "value": "9:00〜23:00（最終受付22:30）。毎月1日は朝6時から営業", "sourceUrl": "http://www.mts-ise.com/yu/", "checkedAt": "2026-11-14"},
+      {"label": "定休日", "value": "無休", "sourceUrl": "https://mts-ise.com/", "checkedAt": "2026-11-14"},
+      {"label": "設備", "value": "11種類のお風呂とサウナ（高温サウナ・釜風呂あり）。お食事処あり", "sourceUrl": "http://www.mts-ise.com/yu/", "checkedAt": "2026-11-14"},
+      {"label": "住所", "value": "三重県伊勢市船江1丁目471番3", "sourceUrl": "https://mts-ise.com/yu", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "0596-29-4126", "sourceUrl": "https://mts-ise.com/yu", "checkedAt": "2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-miyagi-1410"], name: "天然温泉 仙台コロナの湯", officialUrl: "https://www.korona.co.jp/onsen/sen/",
+    features: ["ロウリュあり", "温泉付き", "タオルレンタルあり"],
+    facts: [
+      {"label": "料金", "value": "入泉料 大人（中学生以上）平日1,200円／土日祝1,400円（会員 平日1,100円／土日祝1,300円）、小人（3歳～小学生）平日550円／土日祝650円、2歳以下無料。別途入湯税70円", "sourceUrl": "https://www.korona.co.jp/onsen/basic/sen/224", "checkedAt": "2026-11-14"},
+      {"label": "営業時間", "value": "コロナの湯 全日 6:00～翌2:00（最終受付 翌1:30）。フォーレスト（岩盤浴エリア）は6:00～翌1:00", "sourceUrl": "https://www.korona.co.jp/onsen/basic/sen/224", "checkedAt": "2026-11-14"},
+      {"label": "定休日", "value": "4ヶ月に一度メンテナンス休館日あり（年3回不定休）", "sourceUrl": "https://www.korona.co.jp/onsen/basic/sen/224", "checkedAt": "2026-11-14"},
+      {"label": "設備", "value": "天然温泉の大浴場に加え、フォーレスト（3種の岩盤浴ゾーン、ロウリュアトラクション、クールルーム、コミックコーナー等）がある", "sourceUrl": "https://www.korona.co.jp/onsen/basic/sen/224", "checkedAt": "2026-11-14"},
+      {"label": "利用条件", "value": "刺青、タトゥー、タトゥーシールのある方は利用不可。レンタルタオルセット（バス・フェイス）380円", "sourceUrl": "https://www.korona.co.jp/onsen/basic/sen/224", "checkedAt": "2026-11-14"},
+      {"label": "営業状況", "value": "2026年11月19日にリフレッシュオープン。男性サウナにオートロウリュと連動する送風機、男女サウナにオートロウリュと連動する照明演出を新設。洗い場の一部にパーテーション、水飲み場に冷却装置を設置（公式お知らせで2026年11月22日に確認）", "sourceUrl": "https://www.korona.co.jp/onsen/storenews/sen/1205", "checkedAt": "2026-11-22"},
+      {"label": "住所", "value": "宮城県仙台市宮城野区福室字田中前1-53-1", "sourceUrl": "https://www.korona.co.jp/sp/Onsen/sen/index.asp", "checkedAt": "2026-11-26"},
+      {"label": "電話", "value": "022-766-9567", "sourceUrl": "https://www.korona.co.jp/sp/Onsen/sen/index.asp", "checkedAt": "2026-11-26"},
+    ],
+  }
 ];
 
 const curatedIds = new Set(CURATED_FACILITY_EVIDENCE.flatMap(profile => profile.ids));
