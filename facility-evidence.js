@@ -27990,6 +27990,1476 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "manual-central-kotoni"
+  ],
+  "name": "セントラルウェルネスクラブ 琴似",
+  "officialUrl": "https://www.central.co.jp/club/kotoni/",
+  "features": [
+    "ドライサウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "施設の特徴",
+      "value": "JR琴似直結で天然温泉・サウナのあるスポーツクラブです",
+      "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9：30 ～ 22:30／土 9：00 ～ 20:00／日 9：00 ～ 19:00／祝 9：00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、温泉、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "函館本線 JR琴似駅西出口（改札出て右）徒歩5分",
+      "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-sapporo"
+  ],
+  "name": "セントラルウェルネスクラブ24 札幌",
+  "officialUrl": "https://www.central.co.jp/club/sapporo/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒064-0804 北海道札幌市中央区南4条西10-1005-4 5Ｆ",
+      "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 10:00 ～ 22:30 （各種手続き/電話受付時間11：00〜21：00）／土 09:00 ～ 19:30 （各種手続き/電話受付時間11：00〜18：30）／日 09:00 ～ 18:00 （各種手続き/電話受付時間11：00〜17：00）／祝 09:00 ～ 18:00 （各種手続き/電話受付時間11：00〜17：00）",
+      "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日及び季節休館",
+      "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "2件隣のビル5階。徒歩8分／南北線すすきの駅徒歩10分",
+      "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-higashinaebo"
+  ],
+  "name": "セントラルフィットネスクラブ24 東苗穂",
+  "officialUrl": "https://www.central.co.jp/club/higashinaebo/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒007-0804 北海道札幌市東区東苗穂4条2-5-1 アクロスプラザ東苗穂2F",
+      "sourceUrl": "https://www.central.co.jp/club/higashinaebo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:00／土 9:00 ～ 19:45／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/higashinaebo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日（スクールのみ営業）・季節休館日",
+      "sourceUrl": "https://www.central.co.jp/club/higashinaebo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/higashinaebo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-kg-yamahana"
+  ],
+  "name": "セントラルフィットネスクラブ 山鼻",
+  "officialUrl": "https://www.central.co.jp/club/kg-yamahana/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒064-0922 北海道札幌市中央区南22条西12-1-1 プロム山鼻 2F",
+      "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 22:30 （各種手続き受付時間10：00〜21：00）／土 9:00 ～ 20:30 （各種手続き受付時間10：00〜19：30）／日 9:00 ～ 19:00 （各種手続き受付時間10：00〜18：00）／祝 9:00 ～ 19:00 （各種手続き受付時間10：00〜18：00）",
+      "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日・季節休館日",
+      "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "◆札幌市電線 中央図書館駅 徒歩1分",
+      "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-morioka"
+  ],
+  "name": "セントラルフィットネスクラブ24 盛岡",
+  "officialUrl": "https://www.central.co.jp/club/morioka/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒020-0034 岩手県盛岡市盛岡駅前通15-20 東日本不動産盛岡駅前ビル201 2F",
+      "sourceUrl": "https://www.central.co.jp/club/morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00 ～ 22:00／土 09:00 ～ 20:00／日 09:00 ～ 18:00／祝 09:00 ～ 18:00",
+      "sourceUrl": "https://www.central.co.jp/club/morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日は休館日です。",
+      "sourceUrl": "https://www.central.co.jp/club/morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（スチーム）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "盛岡駅徒歩2分、スカッシュコートも備えた地域最大級のスポーツクラブです！豊富なレッスンプログラムと元気なスタッフが皆様のお越しをお待ちしております。",
+      "sourceUrl": "https://www.central.co.jp/club/morioka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-kitasendai"
+  ],
+  "name": "セントラルウェルネスクラブ 北仙台",
+  "officialUrl": "https://www.central.co.jp/club/kitasendai/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒981-0913 宮城県仙台市青葉区昭和町1-37 ＪＡＣビル2Ｆ",
+      "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30 ～ 22:30／土 9:00 ～ 21:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00（月曜日を除く）",
+      "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業。 毎週月曜日はキッズスクール（水泳・運動能力）のみ実施。",
+      "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "北仙台駅より徒歩５分",
+      "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-izumi"
+  ],
+  "name": "セントラルフィットネスクラブ 仙台泉中央",
+  "officialUrl": "https://www.central.co.jp/club/izumi/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒981-3133 宮城県仙台市泉区泉中央1-1-2",
+      "sourceUrl": "https://www.central.co.jp/club/izumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00（お手続き・電話対応 11:00～21:00） ～ 22:00／土 09:00（お手続き・電話対応 9:00～18:00） ～ 19:00／日 09:00（お手続き・電話対応 9:00～17:00） ～ 18:00／祝 09:00（お手続き・電話対応 11:00～17:00） ～ 18:00",
+      "sourceUrl": "https://www.central.co.jp/club/izumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "フィットネス：毎週木曜日及び季節休館日 スクール：季節休館日のみ。（※スクール実施時のみ お手続き・電話受付 12:00～19:00）",
+      "sourceUrl": "https://www.central.co.jp/club/izumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/izumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "仙台市地下鉄南北線 泉中央駅 東1出口より徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/izumi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-minamikoizumi"
+  ],
+  "name": "セントラルウェルネスクラブ24 仙台南小泉",
+  "officialUrl": "https://www.central.co.jp/club/minamikoizumi/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒984-0823 宮城県仙台市若林区遠見塚3-2-1",
+      "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:30／土 9:00 ～ 20:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "仙台市営地下鉄 薬師堂駅 徒歩18分",
+      "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-natoriminamisendai"
+  ],
+  "name": "セントラルフィットネスクラブ24 名取南仙台",
+  "officialUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒981-1222 宮城県名取市上余田字千刈田289-1",
+      "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9：30（お手続き・電話対応10：30～21：00） ～ 22：00／土 9：00（お手続き・電話対応10：00～18：00） ～ 19：00／日 9：00（お手続き・電話対応10：00～18：00） ～ 19：00／祝 9：00（お手続き・電話対応10：00～18：00） ～ 19：00",
+      "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "火曜日、季節休館 ※火曜17：30〜（60分）チアダンススクールのみ実施",
+      "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR南仙台徒歩18分, JR名取駅徒歩22分, 4号バイパスTSUTAYA仙台南店隣",
+      "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-higashine"
+  ],
+  "name": "セントラルフィットネスクラブ 東根",
+  "officialUrl": "https://www.central.co.jp/club/higashine/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒999-3711 山形県東根市中央1-13-1",
+      "sourceUrl": "https://www.central.co.jp/club/higashine/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00 ～ 22:00／土 9:00 ～ 19:00／日 9:00 ～ 18:00／祝 9:00 ～ 18:00",
+      "sourceUrl": "https://www.central.co.jp/club/higashine/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び年末年始季節休業。",
+      "sourceUrl": "https://www.central.co.jp/club/higashine/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/higashine/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR奥羽線 さくらんぼ東根駅 東口より徒歩15分",
+      "sourceUrl": "https://www.central.co.jp/club/higashine/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-fukushima"
+  ],
+  "name": "セントラルウェルネスクラブ24 福島",
+  "officialUrl": "https://www.central.co.jp/club/fukushima/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒960-8031 福島県福島市栄町1-31",
+      "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:30（月曜日除く）／土 9:00 ～ 20:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00（月曜日除く）",
+      "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（スチーム）、温泉、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR福島駅東口徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-utsunomiya-f"
+  ],
+  "name": "セントラルフィットネスクラブ 宇都宮",
+  "officialUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒321-0964 栃木県宇都宮市駅前通り1-4-6 西口ビル10F",
+      "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10：00 ～ 22：00 (お手続き・電話対応11:00～21:00)／土 曜 9：00(プールは9：30より) ～ 21：00(お手続き・電話対応10:00～20:00)／日 曜 9：00 ～ 19：00(お手続き・電話対応10:00～18:00)／祝 日 9：00 ～ 19：00(お手続き・電話対応10:00～18:00)",
+      "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "■フィットネスは、毎週火曜日及び季節休業日 ■火曜日のスクール開催日のお手続き・電話対応時間は10：00～12：00と15：00～18：00となります。",
+      "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "宇都宮駅徒歩2分の総合型フィットネスクラブです。",
+      "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-takasaki"
+  ],
+  "name": "セントラルウェルネスクラブ24 高崎",
+  "officialUrl": "https://www.central.co.jp/club/takasaki/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒370-0045 群馬県高崎市東町6",
+      "sourceUrl": "https://www.central.co.jp/club/takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:30／土 09:00 ～ 20:00／日 09:00 ～ 19:00／祝 09:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "フィットネスは毎週水曜日及び季節休業 ※但し、キッズ体育スクールのみ実施しております。",
+      "sourceUrl": "https://www.central.co.jp/club/takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/takasaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-maebashi"
+  ],
+  "name": "セントラルウェルネスクラブ24 前橋",
+  "officialUrl": "https://www.central.co.jp/club/maebashi/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒379-2154 群馬県前橋市天川大島町1-2-1",
+      "sourceUrl": "https://www.central.co.jp/club/maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:00 ～ 22:30 (電話及び受付対応時間は10:00〜21:00)／土 9:00 ～ 20:00 (電話及び受付対応時間は9:30〜19:00)／日 9:00 ～ 19:00 (電話及び受付対応時間は9:30〜18:00)／祝 9:00 ～ 19:00 (電話及び受付対応時間は10:00〜18:00)",
+      "sourceUrl": "https://www.central.co.jp/club/maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、及び季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、温泉、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/maebashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-kitamoto"
+  ],
+  "name": "セントラルウェルネスクラブ24 桶川北本",
+  "officialUrl": "https://www.central.co.jp/club/kitamoto/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒364-0014 埼玉県北本市二ツ家4-103-1",
+      "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30（お手続き・電話対応10:30～21:00） ～ 22:00／土 9:00（お手続き・電話対応10:30～19:00） ～ 20:00／日 9:00（お手続き・電話対応10:30～18:00） ～ 19:00／祝 9:00（お手続き・電話対応10:30～18:00） ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日及び季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、温泉、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR桶川駅東口より車で5分もしくは徒歩25分",
+      "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-koshigaya_lt"
+  ],
+  "name": "セントラルフィットネスクラブ24 越谷レイクタウン",
+  "officialUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒343-0828 埼玉県越谷市レイクタウン7-2-8",
+      "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:00／土 9:00 ～ 20:30／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "◎毎週金曜日(スクールのみ営業/お電話開通＆お手続き可能時間) ◎季節休館",
+      "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR武蔵野線「越谷レイクタウン駅」南口徒歩9分",
+      "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-shiki"
+  ],
+  "name": "セントラルウェルネスクラブ 志木",
+  "officialUrl": "https://www.central.co.jp/club/shiki/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒353-0004 埼玉県志木市本町5-16-21",
+      "sourceUrl": "https://www.central.co.jp/club/shiki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 23:00 ※手続き・電話対応 10:00～21:00／土 9:00 ～ 21:00 ※手続き・電話対応 10:00～20:00／日 9:00 ～ 20:00 ※手続き・電話対応 10:00～19:00／祝 9:00 ～ 20:00 ※手続き・電話対応 10:00～19:00",
+      "sourceUrl": "https://www.central.co.jp/club/shiki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業 月曜日はスクールのみ実施のため、受付時間 15:00～19:00 となります。",
+      "sourceUrl": "https://www.central.co.jp/club/shiki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/shiki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東武東上線志木駅（東口）徒歩5分",
+      "sourceUrl": "https://www.central.co.jp/club/shiki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-misato"
+  ],
+  "name": "セントラルフィットネスクラブ 24 新三郷",
+  "officialUrl": "https://www.central.co.jp/club/misato/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒341-0021 埼玉県三郷市さつき平2-1-1",
+      "sourceUrl": "https://www.central.co.jp/club/misato/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 8:30（お手続き及び電話対応時間9：30～21：00） ～ 22:00／土 9:00（お手続き及び電話対応時間10：00～19：00） ～ 20:00／日 9:00（お手続き及び電話対応時間10：00～18：00） ～ 19:00／祝 9:00（お手続き及び電話対応時間10：00～18：00） ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/misato/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "フィットネス：毎週木曜日及び季節休館日 スクール：毎週日曜日及び季節休館日。※毎週木曜日はキッズスクール（水泳・体育・ダンス）のみ実施。スクール電話受付時間15：30～19：30",
+      "sourceUrl": "https://www.central.co.jp/club/misato/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（スチーム）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/misato/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "■ＪＲ武蔵野線 新三郷駅 西口徒歩11分。",
+      "sourceUrl": "https://www.central.co.jp/club/misato/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-ichikawa"
+  ],
+  "name": "セントラルフィットネスクラブ 市川",
+  "officialUrl": "https://www.central.co.jp/club/ichikawa/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒272-0034 千葉県市川市市川1-3-18 4F・5F",
+      "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 8:30 ～ 22:30／土 9:00 ～ 21:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、季節休館日 ※水曜日が祝日の場合も休館日となります。なお水曜日は、各種キッズスクール、大人有料スクールは営業しています。(スクールお電話受付時間10：00〜19：00）",
+      "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（スチーム）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "ＪＲ総武線 市川駅 北口徒歩2分、改札出て右 駅ロータリーを右回り デイリーヤマザキ市川駅前店さんを右折し商店街を直進 100ｍ先の交差点を左折 50ｍ先右手にベローチェさんがあるのでその建物エレベーター4Fまでおこしください、そのほか京成線 市川真間駅 南口徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-kashiwa"
+  ],
+  "name": "セントラルウェルネスクラブ24 柏",
+  "officialUrl": "https://www.central.co.jp/club/kashiwa/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒277-0842 千葉県柏市末広町6-1 5F",
+      "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 09:00 ～ 22:30／土 09:00 ～ 20:00／日 09:00 ～ 20:00／祝 09:00 ～ 20:00",
+      "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休館 ※月曜日は、キッズスクール・カルチャースクールのみ営業致します。",
+      "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、サウナ（スチーム）、温泉、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR常磐線・東武野田線 柏駅西口 徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-tokiwadai"
+  ],
+  "name": "セントラルウェルネスクラブ24 ときわ台",
+  "officialUrl": "https://www.central.co.jp/club/tokiwadai/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒174-0063 東京都板橋区前野町2-17-6 カリーノときわ台5F",
+      "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:00 ～ 22:30／土 9:00 ～ 20:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業 月曜日はキッズスクール（水泳・体操・ダンス・空手）のみ営業",
+      "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、温泉、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東武東上線 ときわ台駅北口より徒歩8分",
+      "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-kiyose"
+  ],
+  "name": "セントラルウェルネスクラブ24 清瀬",
+  "officialUrl": "https://www.central.co.jp/club/kiyose/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒204-0021 東京都清瀬市元町1-7-3",
+      "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30（お手続き・電話対応時間10:30～21:00） ～ 22:30／土 9:00（お手続き・電話対応時間9:00～19:00） ～ 20:00／日 9:00（お手続き・電話対応時間10:30～18:00） ～ 19:00／祝 9:00（お手続き・電話対応時間10:30～18:00） ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "フィットネスは毎週月曜日及び季節休業日 キッズスクール（スイミング・体操・ダンス）は季節及び各月指定休館日※スクールカレンダーを参照願います。",
+      "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西武池袋線 清瀬駅北口より徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-omori"
+  ],
+  "name": "セントラルウェルネスクラブ24 大森",
+  "officialUrl": "https://www.central.co.jp/club/omori/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒143-0016 東京都大田区大森北1-8-2 icot大森5F",
+      "sourceUrl": "https://www.central.co.jp/club/omori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30 ～ 22:00／土 09:00 ～ 20:00／日 09:00 ～ 19:00／祝 09:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/omori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業 ※月曜日は、キッズスクール（水泳・体育・ダンス・Jrバレエ）のみ営業しております。",
+      "sourceUrl": "https://www.central.co.jp/club/omori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、温泉、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/omori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR京浜東北線大森駅東口より徒歩3分",
+      "sourceUrl": "https://www.central.co.jp/club/omori/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-higashijujo"
+  ],
+  "name": "セントラルウェルネスクラブ24 東十条",
+  "officialUrl": "https://www.central.co.jp/club/higashijujo/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒114-0001 東京都北区東十条1-24-5",
+      "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:30 ～ 22:30（電話対応及び受付対応時間は10:30-21:00）／土 9:00 ～ 20:00（電話対応及び受付対応時間は11:00-19:00）／日 9:00 ～ 19:00（電話対応及び受付対応時間は11:00-18:00）／祝 9:00 ～ 19:00（電話対応及び受付対応時間は11:00-18:00）",
+      "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び季節休業 水曜日はキッズスクール, （水泳・体操）のみ営業, （15:30-18:30の各クラス）, スクールお電話受付時間, 15:00-19:00",
+      "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、温泉、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "■JR京浜東北線東十条駅南口 徒歩5分",
+      "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-yoga"
+  ],
+  "name": "セントラルフィットネスクラブ24 用賀",
+  "officialUrl": "https://www.central.co.jp/club/yoga/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒158-0097 東京都世田谷区用賀2-41-11 平成ビル用賀3F",
+      "sourceUrl": "https://www.central.co.jp/club/yoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:00 ～ 22:30／土 9:00 ～ 21:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/yoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日定休及び季節休業日※火曜日はスクール・カルチャーのみ 10:00-19:30にて営業（スクールお電話受付時間13:00-19:00）",
+      "sourceUrl": "https://www.central.co.jp/club/yoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/yoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線 用賀駅南口直結 徒歩0分",
+      "sourceUrl": "https://www.central.co.jp/club/yoga/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-minamiaoyama"
+  ],
+  "name": "セントラルフィットネスクラブ24 南青山",
+  "officialUrl": "https://www.central.co.jp/club/minamiaoyama/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒107-0062 東京都港区南青山6-1-3 コレッツィオーネB1F",
+      "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 22:30／土 9:00 ～ 20:00／日 9:00 ～ 19:00／祝 9:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休業日 ※月曜日はベビー・キッズスクールのみ営業、電話受付時間10:00〜19:00、スクール休館は年間カレンダーをご覧ください。",
+      "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東京メトロ 表参道駅より徒歩6分",
+      "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-shinkawasaki"
+  ],
+  "name": "セントラルフィットネスクラブ 新川崎",
+  "officialUrl": "https://www.central.co.jp/club/shinkawasaki/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒212-0054 神奈川県川崎市幸区小倉1-1 パークシティ新川崎内 プール棟",
+      "sourceUrl": "https://www.central.co.jp/club/shinkawasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 22:00(電話受付時間10:00～21:00）／土 9:00 ～ 19:00(電話受付時間9:00～18:00）／日 9:00 ～ 19:00(電話受付時間9:00～18:00）／祝 9:00 ～ 19:00(電話受付時間10:00～18:00）",
+      "sourceUrl": "https://www.central.co.jp/club/shinkawasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日及び季節休館日 ※月曜日が祝日の場合もフィットネスは、休館日となります。※月曜日はスクールのみ営業いたします。（月曜日電話受付時間15：00〜20：00）",
+      "sourceUrl": "https://www.central.co.jp/club/shinkawasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/shinkawasaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-mizonokuchi"
+  ],
+  "name": "セントラルフィットネスクラブ24 溝ノ口",
+  "officialUrl": "https://www.central.co.jp/club/mizonokuchi/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒213-0001 神奈川県川崎市高津区溝口2-10-22",
+      "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 09:00 ～ 23:00※各種手続き/電話対応可能時間10:00-21:00／土 09:00 ～ 20:00※各種手続き11:00-19:00/電話対応可能時間8:00-19:00／日 09:00 ～ 19:00※各種手続き11:00-18:00/電話対応可能時間8:00-18:00／祝 09:00 ～ 19:00※各種手続き11:00-18:00/電話対応可能時間 ｽｸｰﾙ開始時間-18:00",
+      "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び季節休館日 ※水曜日が祝日の場合もフィットネスは、休館日となります。 ※水曜日は、スクール・カルチャーのみ営業致します。(水曜日各種手続き/電話受付時間11:00-20:00)",
+      "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（スチーム）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線『溝の口駅』正面改札を出て東口より又はJR南武線 『武蔵溝ノ口』駅改札を出て 北口より徒歩3分(溝ノ口神社向い）",
+      "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-musashikosugi"
+  ],
+  "name": "セントラルフィットネスクラブ24 武蔵小杉",
+  "officialUrl": "https://www.central.co.jp/club/musashikosugi/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒211-0004 神奈川県川崎市中原区新丸子東3-1159",
+      "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 09:00 ～ 23:00／土 09:00 ～ 21:00（※プールエリアのみ10:00～）／日 09:00 ～ 19:00（※プールエリアのみ10:00～）／祝 09:00 ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日及び季節休館日 ・木曜日が祝日の場合もフィットネスは、休館日となります。",
+      "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "ＪＲ横須賀線武蔵小杉駅（新南口）から徒歩1分",
+      "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-hiratsuka"
+  ],
+  "name": "セントラルフィットネスクラブ 湘南平塚",
+  "officialUrl": "https://www.central.co.jp/club/hiratsuka/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒254-0034 神奈川県平塚市宝町3-1 MNプラザ4Ｆ",
+      "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9：00(お手続き・電話対応時間10：00～21：00) ～ 22：00／土 9：00(お手続き・電話対応時間10：00～19：00) ～ 20：00／日 9：00(お手続き・電話対応時間10：00～18：00) ～ 19：00／祝 9：00(お手続き・電話対応時間10：00～18：00) ～ 19：00",
+      "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、季節休館日 ※水曜日が祝日の場合も休館日となります。",
+      "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR東海道線 平塚駅北口 徒歩1分",
+      "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-hachioji"
+  ],
+  "name": "セントラルフィットネスクラブ 八王子",
+  "officialUrl": "https://www.central.co.jp/club/hachioji/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒192-0065 東京都八王子市新町2-5 コスモリード八王子1F",
+      "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 22:00(事務手続き・電話対応10:00～21：00）／土 9:00 ～ 20:00(事務手続き・電話対応9:00～19：00）／日 9:00 ～ 19:00(事務手続き・電話対応9:00～18：00）／祝 9:00 ～ 19:00(事務手続き・電話対応10:00～18：00）",
+      "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "■フィットネス 毎週月曜日および季節休業",
+      "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）",
+      "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "・JR八王子駅 北口徒歩７分/中央改札右折の北口コンコースより駅前中央通りを直進、国道２０号を越えて１つ目の信号を右折(右手建物に案内板あり)、１つ目の信号を越えた左手の建物です。",
+      "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-cw-hiyoshi"
+  ],
+  "name": "セントラルウェルネスクラブ 慶應日吉",
+  "officialUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒223-0061 神奈川県横浜市港北区日吉4-1-1 慶應義塾大学日吉キャンパス 協生館地下1F",
+      "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 7：00 ～ 22：30／土 9：00 ～ 20：00／日 9：00 ～ 19：00／祝 9：00 ～ 19：00",
+      "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜 及び 季節休業 ※月曜はキッズスクール・カルチャースクールのみ営業（電話・手続き対応時間 10：00～13：00／14：30～20：00）",
+      "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、サウナ（ミスト）、スパ＆バスルーム、プールサイドスパ＆ジャグジー",
+      "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "■東横線日吉駅慶應大学側出口より徒歩1分（慶應大学協生館地下1階に受付があります）",
+      "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-suminoe"
+  ],
+  "name": "セントラルウェルネスクラブ24 住ノ江",
+  "officialUrl": "https://www.central.co.jp/club/suminoe/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒559-0005 大阪府大阪市住之江区西住之江1-1-21",
+      "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（深夜早朝はセルフ利用）。通常営業時間：平日 9:00（各種お手続き10：00～21：30） ～ 22:30／土 9:00（各種お手続き10：00～19：00） ～ 20:00／日 9:00（各種お手続き10：00～18：00） ～ 19:00／祝 9:00（各種お手続き10：00～18：00） ～ 19:00",
+      "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "フィットネスは、毎週木曜日、及び季節休業日。 キッズスクール（水泳・体操・ダンス・新体操）は、季節休業日。",
+      "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "南海本線住ノ江駅 高架下徒歩1分（改札口を出て、右側の階段を下り、右側に住ノ江駅前クリニック、左側に100円ショップWattsを直進し、30秒ほどで入口がございます。）",
+      "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-miyakojima"
+  ],
+  "name": "セントラルウェルネスクラブ 都島",
+  "officialUrl": "https://www.central.co.jp/club/miyakojima/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒534-0016 大阪府大阪市都島区友渕町1-5-97",
+      "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00 ～ 22:30(受付10：00～21：00・電話対応14：00～19：30）／土 9:00 ～ 20:00（受付10：00～19：00・電話対応9：00～18：30）／日 9:00 ～ 19:00（受付10：00～18：00・電話対応9：00～18：30）／祝 9:00 ～ 19:00（受付・電話対応 該当の曜日と同じ、スクール休みの際は、18：30まで）",
+      "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日及び季節休館日 水曜日は、キッズスクールのみ実施。",
+      "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）、スパ＆バスルーム",
+      "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "＜電車の場合＞大阪市営地下鉄谷町線「都島駅」4番出口から徒歩15分。赤川天王寺線を北へ1.1ｋｍ、ベルファ都島西側。JRおおさか東線「城北公園通駅」から徒歩10分。赤川天王寺線を南へ800ｍ、都島西側。",
+      "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-central-fuchu"
+  ],
+  "name": "セントラルフィットネスクラブ 府中",
+  "officialUrl": "https://www.central.co.jp/club/fuchu/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "営業時間",
+      "value": "平日 9：00 ～ 22：00（お手続き・電話対応10：00〜21：00）／土 9：00 ～ 20：00（お手続き・電話対応10：00〜19：00）／日 9：00 ～ 19：00（お手続き・電話対応11：00〜18：00）／祝 9：00 ～ 19：00（お手続き・電話対応11：00〜18：00）",
+      "sourceUrl": "https://www.central.co.jp/club/fuchu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日 及び季節休館日 ※金曜日はキッズスクールのみ15：00〜19：00まで営業致します。",
+      "sourceUrl": "https://www.central.co.jp/club/fuchu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：サウナ（ドライ）",
+      "sourceUrl": "https://www.central.co.jp/club/fuchu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "◇京王本線 府中駅南口（くるる側改札出口）正面の旧甲州街道まで直進。旧甲州街道沿いを左方向へ徒歩6分",
+      "sourceUrl": "https://www.central.co.jp/club/fuchu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 

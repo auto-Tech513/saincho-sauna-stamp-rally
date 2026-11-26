@@ -76014,5 +76014,630 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
     "officialUrl": "https://www.megalos.co.jp/tachikawa_kita/"
+  },
+  {
+    "id": "manual-central-kotoni",
+    "name": "セントラルウェルネスクラブ 琴似",
+    "prefecture": "北海道",
+    "address": "北海道札幌市西区八軒1条西1-1-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kotoni/",
+    "officialUrl": "https://www.central.co.jp/club/kotoni/"
+  },
+  {
+    "id": "manual-central-sapporo",
+    "name": "セントラルウェルネスクラブ24 札幌",
+    "prefecture": "北海道",
+    "address": "北海道札幌市中央区南4条西10-1005-4 5Ｆ",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/sapporo/",
+    "officialUrl": "https://www.central.co.jp/club/sapporo/"
+  },
+  {
+    "id": "manual-central-higashinaebo",
+    "name": "セントラルフィットネスクラブ24 東苗穂",
+    "prefecture": "北海道",
+    "address": "北海道札幌市東区東苗穂4条2-5-1 アクロスプラザ東苗穂2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/higashinaebo/",
+    "officialUrl": "https://www.central.co.jp/club/higashinaebo/"
+  },
+  {
+    "id": "manual-central-kg-yamahana",
+    "name": "セントラルフィットネスクラブ 山鼻",
+    "prefecture": "北海道",
+    "address": "北海道札幌市中央区南22条西12-1-1 プロム山鼻 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kg-yamahana/",
+    "officialUrl": "https://www.central.co.jp/club/kg-yamahana/"
+  },
+  {
+    "id": "manual-central-morioka",
+    "name": "セントラルフィットネスクラブ24 盛岡",
+    "prefecture": "岩手県",
+    "address": "岩手県盛岡市盛岡駅前通15-20 東日本不動産盛岡駅前ビル201 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "盛岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/morioka/",
+    "officialUrl": "https://www.central.co.jp/club/morioka/"
+  },
+  {
+    "id": "manual-central-kitasendai",
+    "name": "セントラルウェルネスクラブ 北仙台",
+    "prefecture": "宮城県",
+    "address": "宮城県仙台市青葉区昭和町1-37 ＪＡＣビル2Ｆ",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kitasendai/",
+    "officialUrl": "https://www.central.co.jp/club/kitasendai/"
+  },
+  {
+    "id": "manual-central-izumi",
+    "name": "セントラルフィットネスクラブ 仙台泉中央",
+    "prefecture": "宮城県",
+    "address": "宮城県仙台市泉区泉中央1-1-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/izumi/",
+    "officialUrl": "https://www.central.co.jp/club/izumi/"
+  },
+  {
+    "id": "manual-central-minamikoizumi",
+    "name": "セントラルウェルネスクラブ24 仙台南小泉",
+    "prefecture": "宮城県",
+    "address": "宮城県仙台市若林区遠見塚3-2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/minamikoizumi/",
+    "officialUrl": "https://www.central.co.jp/club/minamikoizumi/"
+  },
+  {
+    "id": "manual-central-natoriminamisendai",
+    "name": "セントラルフィットネスクラブ24 名取南仙台",
+    "prefecture": "宮城県",
+    "address": "宮城県名取市上余田字千刈田289-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名取市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/natoriminamisendai/",
+    "officialUrl": "https://www.central.co.jp/club/natoriminamisendai/"
+  },
+  {
+    "id": "manual-central-higashine",
+    "name": "セントラルフィットネスクラブ 東根",
+    "prefecture": "山形県",
+    "address": "山形県東根市中央1-13-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東根市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/higashine/",
+    "officialUrl": "https://www.central.co.jp/club/higashine/"
+  },
+  {
+    "id": "manual-central-fukushima",
+    "name": "セントラルウェルネスクラブ24 福島",
+    "prefecture": "福島県",
+    "address": "福島県福島市栄町1-31",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/fukushima/",
+    "officialUrl": "https://www.central.co.jp/club/fukushima/"
+  },
+  {
+    "id": "manual-central-utsunomiya-f",
+    "name": "セントラルフィットネスクラブ 宇都宮",
+    "prefecture": "栃木県",
+    "address": "栃木県宇都宮市駅前通り1-4-6 西口ビル10F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宇都宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/utsunomiya-f/",
+    "officialUrl": "https://www.central.co.jp/club/utsunomiya-f/"
+  },
+  {
+    "id": "manual-central-takasaki",
+    "name": "セントラルウェルネスクラブ24 高崎",
+    "prefecture": "群馬県",
+    "address": "群馬県高崎市東町6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/takasaki/",
+    "officialUrl": "https://www.central.co.jp/club/takasaki/"
+  },
+  {
+    "id": "manual-central-maebashi",
+    "name": "セントラルウェルネスクラブ24 前橋",
+    "prefecture": "群馬県",
+    "address": "群馬県前橋市天川大島町1-2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "前橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/maebashi/",
+    "officialUrl": "https://www.central.co.jp/club/maebashi/"
+  },
+  {
+    "id": "manual-central-kitamoto",
+    "name": "セントラルウェルネスクラブ24 桶川北本",
+    "prefecture": "埼玉県",
+    "address": "埼玉県北本市二ツ家4-103-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北本市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kitamoto/",
+    "officialUrl": "https://www.central.co.jp/club/kitamoto/"
+  },
+  {
+    "id": "manual-central-koshigaya_lt",
+    "name": "セントラルフィットネスクラブ24 越谷レイクタウン",
+    "prefecture": "埼玉県",
+    "address": "埼玉県越谷市レイクタウン7-2-8",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "越谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/koshigaya_lt/",
+    "officialUrl": "https://www.central.co.jp/club/koshigaya_lt/"
+  },
+  {
+    "id": "manual-central-shiki",
+    "name": "セントラルウェルネスクラブ 志木",
+    "prefecture": "埼玉県",
+    "address": "埼玉県志木市本町5-16-21",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "志木市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/shiki/",
+    "officialUrl": "https://www.central.co.jp/club/shiki/"
+  },
+  {
+    "id": "manual-central-misato",
+    "name": "セントラルフィットネスクラブ 24 新三郷",
+    "prefecture": "埼玉県",
+    "address": "埼玉県三郷市さつき平2-1-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "三郷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/misato/",
+    "officialUrl": "https://www.central.co.jp/club/misato/"
+  },
+  {
+    "id": "manual-central-ichikawa",
+    "name": "セントラルフィットネスクラブ 市川",
+    "prefecture": "千葉県",
+    "address": "千葉県市川市市川1-3-18 4F・5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/ichikawa/",
+    "officialUrl": "https://www.central.co.jp/club/ichikawa/"
+  },
+  {
+    "id": "manual-central-kashiwa",
+    "name": "セントラルウェルネスクラブ24 柏",
+    "prefecture": "千葉県",
+    "address": "千葉県柏市末広町6-1 5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "柏市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kashiwa/",
+    "officialUrl": "https://www.central.co.jp/club/kashiwa/"
+  },
+  {
+    "id": "manual-central-tokiwadai",
+    "name": "セントラルウェルネスクラブ24 ときわ台",
+    "prefecture": "東京都",
+    "address": "東京都板橋区前野町2-17-6 カリーノときわ台5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "板橋区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/tokiwadai/",
+    "officialUrl": "https://www.central.co.jp/club/tokiwadai/"
+  },
+  {
+    "id": "manual-central-kiyose",
+    "name": "セントラルウェルネスクラブ24 清瀬",
+    "prefecture": "東京都",
+    "address": "東京都清瀬市元町1-7-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "清瀬市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/kiyose/",
+    "officialUrl": "https://www.central.co.jp/club/kiyose/"
+  },
+  {
+    "id": "manual-central-omori",
+    "name": "セントラルウェルネスクラブ24 大森",
+    "prefecture": "東京都",
+    "address": "東京都大田区大森北1-8-2 icot大森5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/omori/",
+    "officialUrl": "https://www.central.co.jp/club/omori/"
+  },
+  {
+    "id": "manual-central-higashijujo",
+    "name": "セントラルウェルネスクラブ24 東十条",
+    "prefecture": "東京都",
+    "address": "東京都北区東十条1-24-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/higashijujo/",
+    "officialUrl": "https://www.central.co.jp/club/higashijujo/"
+  },
+  {
+    "id": "manual-central-yoga",
+    "name": "セントラルフィットネスクラブ24 用賀",
+    "prefecture": "東京都",
+    "address": "東京都世田谷区用賀2-41-11 平成ビル用賀3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/yoga/",
+    "officialUrl": "https://www.central.co.jp/club/yoga/"
+  },
+  {
+    "id": "manual-central-minamiaoyama",
+    "name": "セントラルフィットネスクラブ24 南青山",
+    "prefecture": "東京都",
+    "address": "東京都港区南青山6-1-3 コレッツィオーネB1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "港区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/minamiaoyama/",
+    "officialUrl": "https://www.central.co.jp/club/minamiaoyama/"
+  },
+  {
+    "id": "manual-central-shinkawasaki",
+    "name": "セントラルフィットネスクラブ 新川崎",
+    "prefecture": "神奈川県",
+    "address": "神奈川県川崎市幸区小倉1-1 パークシティ新川崎内 プール棟",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/shinkawasaki/",
+    "officialUrl": "https://www.central.co.jp/club/shinkawasaki/"
+  },
+  {
+    "id": "manual-central-mizonokuchi",
+    "name": "セントラルフィットネスクラブ24 溝ノ口",
+    "prefecture": "神奈川県",
+    "address": "神奈川県川崎市高津区溝口2-10-22",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/mizonokuchi/",
+    "officialUrl": "https://www.central.co.jp/club/mizonokuchi/"
+  },
+  {
+    "id": "manual-central-musashikosugi",
+    "name": "セントラルフィットネスクラブ24 武蔵小杉",
+    "prefecture": "神奈川県",
+    "address": "神奈川県川崎市中原区新丸子東3-1159",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/musashikosugi/",
+    "officialUrl": "https://www.central.co.jp/club/musashikosugi/"
+  },
+  {
+    "id": "manual-central-hiratsuka",
+    "name": "セントラルフィットネスクラブ 湘南平塚",
+    "prefecture": "神奈川県",
+    "address": "神奈川県平塚市宝町3-1 MNプラザ4Ｆ",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "平塚市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/hiratsuka/",
+    "officialUrl": "https://www.central.co.jp/club/hiratsuka/"
+  },
+  {
+    "id": "manual-central-hachioji",
+    "name": "セントラルフィットネスクラブ 八王子",
+    "prefecture": "東京都",
+    "address": "東京都八王子市新町2-5 コスモリード八王子1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "八王子市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/hachioji/",
+    "officialUrl": "https://www.central.co.jp/club/hachioji/"
+  },
+  {
+    "id": "manual-central-cw-hiyoshi",
+    "name": "セントラルウェルネスクラブ 慶應日吉",
+    "prefecture": "神奈川県",
+    "address": "神奈川県横浜市港北区日吉4-1-1 慶應義塾大学日吉キャンパス 協生館地下1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/cw-hiyoshi/",
+    "officialUrl": "https://www.central.co.jp/club/cw-hiyoshi/"
+  },
+  {
+    "id": "manual-central-suminoe",
+    "name": "セントラルウェルネスクラブ24 住ノ江",
+    "prefecture": "大阪府",
+    "address": "大阪府大阪市住之江区西住之江1-1-21",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/suminoe/",
+    "officialUrl": "https://www.central.co.jp/club/suminoe/"
+  },
+  {
+    "id": "manual-central-miyakojima",
+    "name": "セントラルウェルネスクラブ 都島",
+    "prefecture": "大阪府",
+    "address": "大阪府大阪市都島区友渕町1-5-97",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/miyakojima/",
+    "officialUrl": "https://www.central.co.jp/club/miyakojima/"
+  },
+  {
+    "id": "manual-central-fuchu",
+    "name": "セントラルフィットネスクラブ 府中",
+    "prefecture": "東京都",
+    "address": "東京都府中市八幡町1-9",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "府中市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.central.co.jp/club/fuchu/",
+    "officialUrl": "https://www.central.co.jp/club/fuchu/"
   }
 ];
