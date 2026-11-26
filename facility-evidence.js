@@ -20258,6 +20258,4124 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "manual-konami-004061"
+  ],
+  "name": "コナミスポーツクラブ 新札幌",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004061/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒004-0052 北海道札幌市厚別区厚別中央2条4丁目6",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]※各曜日営業終了時間の30分前まで利用時間となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※定期清掃日となります。 [お盆、年末年始等]※休館の際は、HPお知らせ欄にて日程をお知らせさせていただきます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、気泡プール、マシンジム、マシンジム、マシンジム、フリーウエイト・ダンベル、体育館、浴槽、ドライサウナ、スチームサウナ、タンニング、建物外観、フロント、エレベーター、ロッカールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR新札幌駅 地下鉄東西線新さっぽろ駅5番出口",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004058"
+  ],
+  "name": "コナミスポーツクラブ もいわ",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004058/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒005-0802 北海道札幌市南区川沿2条1丁目1-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～22:00 [土日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は21:00(フロント前マシン21:30)まで、土日祝は17:30までとなります。 [各種手続開始時間]コース変更・退会・休会・その他諸手続きは営業開始の1時間後からでございます。 [各種手続終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※年末年始休館・お盆休館は別途ご案内いたします。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、プール、ギャラリー、気泡プール、マシンジム、フリーウェイト、スタジオ2(体育館)、浴室、ドライサウナ、プロショップ、施設外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "じょうてつバス 藻岩高校前 じょうてつバス 川沿1条1丁目",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004416"
+  ],
+  "name": "コナミスポーツクラブ 札幌",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004416/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒060-0004 北海道札幌市中央区北4条西6丁目3番4号 タイムズステーション札幌駅前ビル7～9階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業終了30分前までとなります。 [浴室・ロッカー]営業終了時間までの退館にご協力をお願い致します。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[※休館日]毎週木曜日 [※休館日について]年末年始・お盆等は別途ご案内いたします。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、マシンジム、パーソナルゾーン、ランニングマシン、フリーウェイト、ランニングトラック、ゴルフレンジ(スクール制)、浴室、サウナ、タンニング、エステ、プロショップ、施設、フロント、契約ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄さっぽろ駅下車 徒歩5分 JR札幌駅下車 徒歩5分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004407"
+  ],
+  "name": "コナミスポーツクラブ 札幌円山",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004407/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒064-0801 北海道札幌市中央区南1条西27丁目1-1 マルヤマクラス4～5階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の30分前となります。 [各種手続開始時間]コース変更・退会・休会・その他諸手続きは営業開始の1時間後からでございます。 [各種手続終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※年末年始休館・お盆休館は別途ご案内いたします。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、体操場(スタジオ3)、プール、マシンジム、フリーウエイトゾーン、浴室、温浴・スパ、アトラクションプール、サウナ、タンニング、建物外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄東西線 円山公園駅 6番出口直結",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004101"
+  ],
+  "name": "コナミスポーツクラブ 仙台長町",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004101/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒982-0011 宮城県仙台市太白区長町7-20-5 ララガーデン長町4・5階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～19:00 [日・祝休日] 10:00～18:00 [マシンジム)]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の30分前となります。 [各種お手続き]お手続き受付時間は、営業開始時間の1時間後、営業終了時間の2時間前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、第3スタジオ、マシンジム、フリーウエイト、ゴルフアカデミー、シェイプサークル、浴室1、温浴スパ利用、浴室2、サウナ、タンニング(日焼け)マシン、ボディケア、フロント、ロッカー、契約ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄「長町南駅」直結 「長町南駅・太白区役所前」バス停",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004060"
+  ],
+  "name": "コナミスポーツクラブ 川口",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004060/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒332-0028 埼玉県川口市宮町18-9 ララガーデン川口 1・2階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～21:00 [日・祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールエリアの利用は営業終了20分前までとなります。 [各種手続き受付時間]月水木金11:00～20:00、土11:00～19:00、日祝休日11:00～16:00 [※キャッシュレス施設]現金の取り扱いをしていない施設となります。詳細については施設までお問合せください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、歩行専用プール、アトラクションプール、マシンジム、フリーウエイト、プライベートトレーニングスペース、ミルキーバス、白湯、水風呂、ドライサウナ、タンニング(男性のみ)、エステ、外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR京浜東北線 川口駅西口よりバスで約8分です。 JR京浜東北線 西川口駅西口 徒歩約18分 JR川口駅方面から【詳しくは「詳細を見る」を押下ください】 JR戸田公園駅方面から【詳しくは「詳細を見る」を押下ください】",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004081"
+  ],
+  "name": "コナミスポーツクラブ 武蔵浦和",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004081/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒336-0021 埼玉県さいたま市南区別所7‐2‐1 ザ・ファーストタワー2階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日] 10:00～18:00 [祝休日] 10:00～18:00 [運動施設利用時間]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の20分前となります。 [各種手続き受付時間]各種手続き時間は、営業終了時間の2時間前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日 、お盆、年末年始など",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、アトラクションプール、ランニングマシン、カーディオマシン、ウェイトマシン、フリーウェイトゾーン、浴室、水風呂、ドライサウナ、タンニング(男性のみ)、施設、フロント、男女更衣室、提携駐車場(市営地下駐車場)、無料駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "武蔵浦和駅徒歩4分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004447"
+  ],
+  "name": "コナミスポーツクラブ 川越",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004447/",
+  "features": [
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒350-0809 埼玉県川越市鯨井新田10-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～21:00 [■各施設利用時間]マシンジム・プールの利用時間は営業終了30分前まで、お風呂は15分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、多目的スタジオ、プール、マシンジム1、マシンジム2、ファンクショナルゾーン、パーソナルプログラムゾーン、フリーウエイトゾーン、ゴルフ、テニス、サッカーコート(インドア)、天然温泉、イベント湯、ハイパージェット、各種サウナ、タンニング、エステ、外観、総合フロント、ロッカー、契約ロッカー、Base Camp 川越、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東武東上線「鶴ヶ島駅」西口徒歩5分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004498"
+  ],
+  "name": "コナミスポーツクラブ 入間",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004498/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒358-0003 埼玉県入間市豊岡1-1-12",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～21:00 [各種手続受付時間]月水木金11:00～21:00、土11:00～19:00、日・祝日11:00～19:00 [利用時間]マシンジムエリア・プールエリア・ゴルフフリー打席のご利用は、営業終了時間の15分前までです。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日、お盆、年末年始]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、プール、マシンジム、カーディオマシン、フリーウェイト、ゴルフアカデミー、ゴルフ セルフ打席、スカッシュコート、卓球場、浴室、露天風呂、サウナ、タンニング、エステ、エントランス、総合フロント、契約ロッカー、biima sports、プログラミング Swimmy、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "入間市駅徒歩5分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007879"
+  ],
+  "name": "コナミスポーツクラブ 北上尾",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007879/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒362-0015 埼玉県上尾市緑丘3-4-61 P・A・P・A上尾ショッピングアヴェニュー内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [■利用時間]マシンジム・プールエリアのご利用は、営業終了時間の30分前までです",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、第3スタジオ、プール、マッサージプール、マシンスペース、有酸素マシン、ストレッチスペース、フリーウエイト、ゴルフ セルフ打席、スカッシュ・ラケットボールコート、浴槽、ドライサウナ、タンニング(男性のみ)、エンダモロジー(セルライトケア)、施設、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "北上尾駅徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004462"
+  ],
+  "name": "コナミスポーツクラブ 稲毛",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004462/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒263-0043 千葉県千葉市稲毛区小仲台1-4-20 イオン稲毛店4F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～21:00 [土] 10:00～18:00 [日・祝休日] 10:00～18:00 毎週火曜日は休館日 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の20分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[火曜日]※お盆、年末年始等は別途ご案内いたします。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、プールギャラリー、マシンジム、フリーウエイト、体育館、温浴、ドライサウナ、外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR稲毛駅より徒歩2分 京成稲毛駅より徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004483"
+  ],
+  "name": "コナミスポーツクラブ 都賀",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004483/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒264-0025 千葉県千葉市若葉区都賀3-11-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～20:00 [マシンジム・プール]営業終了30分前までのご利用となります。 [その他施設利用時間]その他施設の利用時間は施設へお問い合わせください(℡043-234-0126)。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ(5階)、スタジオ2(5階)、プール(7階)、マシンジム(7階)、フリーウェイト(7階マシンジム内)、ゴルフアカデミー(5階)、スカッシュコート(7階)、温浴(6階男女ロッカー内)、露天風呂、ドライサウナ(6階男女浴室内)、タンニング、子ども英語教室(レプトン)、コミックコーナー、休憩スペース、あいらぼ整骨院(6階)、施設外観、フロント、契約ロッカー、マッサージチェア、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR総武本線・成田線都賀駅東口より徒歩1分 千葉都市モノレール都賀駅徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004475"
+  ],
+  "name": "コナミスポーツクラブ 北小金",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004475/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒270-0014 千葉県松戸市小金一番地 イオン北小金5F(運動塾)/6F(フィットネス)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～19:00 [日] 10:00～18:00 [祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールの利用時間は、営業終了15分前までとさせて頂きます。 [土曜日が祝日の場合]祝日営業時間とさせて頂きます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ(6階)、第2スタジオ(6階)、ストレッチゾーン、プール(5階)、プールギャラリー、マシンジム(6階)、マシンジム(フリーウエイト)、風呂(6階男女ロッカー内)、ドライサウナ、外観、総合フロント、ロッカー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "北小金駅南口(改札を出て右側)より徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004089"
+  ],
+  "name": "コナミスポーツクラブ 五香",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004089/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒270-2261 千葉県松戸市常盤平5-1-6",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各エリア利用時間]マシン・プール・浴室ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ(1階)、第2スタジオ(2階)、プール(1階)、マシンジム(カーディオマシン)(2階)、マシンジム(ウエイトマシン)(2階)、マシンジム(ランニングマシン)(2階)、マシンジム(フリーウエイト)(2階)、浴室(2階)、シャワールーム、サウナ、施設外観、ロッカー(2階)、パウダールーム(2階)、契約ロッカー(2階)、プログラミング Swimmy、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新京成五香駅西口(改札を出て右側)より徒歩3分。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-000401"
+  ],
+  "name": "コナミスポーツクラブ 市川",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/000401/",
+  "features": [
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒272-0015 千葉県市川市鬼高1-1-1 ニッケコルトンプラザ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2(体育館)、シェイプサークル、プール、プールギャラリー、アトラクションプール、有酸素マシン、ウエイトマシン、フリーウェイト、浴室、外気浴、サウナ、タンニング、外観、フロント、更衣ロッカー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR・地下鉄 本八幡駅 JR下総中山駅 京成鬼越駅",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004067"
+  ],
+  "name": "コナミスポーツクラブ 妙典",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004067/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒272-0111 千葉県市川市妙典4-4-27 妙典センタービル4・5F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日] 10:00～19:00 [祝休日] 10:00～19:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、アトラクションプール、マシンジム、フリーウエイトゾーン、浴室、ドライサウナ、タンニング、エステ、施設、フロント、更衣ロッカー、マッサージチェア、プールギャラリー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東西線妙典駅から徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004404"
+  ],
+  "name": "コナミスポーツクラブ 船橋",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004404/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒273-0011 千葉県船橋市湊町2-8-45 コナミスポーツクラブ 船橋(船橋市役所前・船橋中央消防署横)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～20:00 [マシンジム・プール]平日 10:00～22:00 土 10:00～20:30 日・祝10:00～19:30 [ゴルフ]平日 13:00～22:00 土 09:00～20:00 日・祝09:00～19:00 [鍼灸接骨院]平日 11:00～20:00 土 11:00～20:00 日・祝 11:00～19:30",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日 ※お盆、年末年始等は別途ご案内いたします。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ(5階)、スタジオ2(5階)、プール(5階)、マシンジム(5階)※カーディオマシン、マシンジム(5階)※ストレングスマシン、プライベートトレーニングスペース、フリーウエイト(5階)、ゴルフ(5階)、卓球、体操場、白湯(4階浴室内)、露天風呂(4階浴室内)、寝湯(4階浴室内)、岩盤浴(4階女性浴室内)、ドライサウナ(4階浴室内)、タンニング(4階男性ロッカールーム内)、コラーゲンマシン(4階女性ロッカー)、接骨院(4階)、外観、フロント(2階)、カワイ音楽教室(2階)、休憩室(4階男性ロッカー内)、契約ロッカー(4階)、じぶんdeエステ、駐車場(1～3階)、駐輪場(1階)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "市川・西船橋方面からお越しの方 津田沼・千葉方面からお越しの方 京成船橋駅徒歩8分 JR総武線船橋駅徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004423"
+  ],
+  "name": "コナミスポーツクラブ 西船橋",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004423/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒273-0025 千葉県船橋市印内町579-1 ロクロービル",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00 [施設利用時間(平日)]・マシンジム:22:30まで ・プール:22:00まで [施設利用時間(土曜)]・マシンジム:19:30まで ・プール:19:45まで [施設利用時間(日祝)]・マシンジム:18:30まで ・プール:18:30まで",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等 [全館共通]お盆・年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ(4階)、スタジオ2(4階)、フロント、プール(5階)、マシンジム(4階)、フリーウェイト(4階)、テニスコート(6階)、浴槽(5階男女ロッカー内)、水風呂、ドライサウナ(5階男女浴室内)、タンニング、エステティック(エンダモロジー)、施設、ロッカー、パウダールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR線・地下鉄東西線・東葉高速鉄道線西船橋駅南口(徒歩1分) 京成・西船駅(徒歩5分) 京成バス西船橋駅(北口)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004442"
+  ],
+  "name": "コナミスポーツクラブ 下総中山",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004442/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒273-0035 千葉県船橋市本中山2丁目10番1号 ミレニティ中山 5・6階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始、",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、プールギャラリー、気泡プール、マシンジム  エアロビクスゾーン、マシンジム ストレングスゾーン、フリーウェイト、ゴルフアカデミー、温浴、浴室、水風呂、ドライサウナ、タンニング、施設外観、フロント、ロッカー、パウダールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR下総中山駅徒歩1分 京成中山駅徒歩7分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004411"
+  ],
+  "name": "コナミスポーツクラブ 津田沼",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004411/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒275-0016 千葉県習志野市津田沼1-8-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～18:00 [各種諸手続き受付時間]月水木金10:00～20:00、土10:00～18:00、日・祝休日10:00～16:00 [テニス・ゴルフ]祝日のレッスンについてはタイムスケジュールにてご確認下さい。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2(2階)、プール、プールギャラリー、マシンジム(カーディオマシン)、マシンジム(ダンベル)、マシンジム(フリーウエイト・バーベル)、マシンジム(ウエイトマシン)、ゴルフ、アウトドアテニス、インドアテニスコート、ラケットボール(2階)、フロント、体育館、浴室、サウナ、タンニング(1階男性ロッカー内)、エステ、外観、契約ロッカー、biima sports、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR津田沼駅より徒歩5分 京成松戸線 新津田沼駅より徒歩2分 国道14号方面から 国道296号方面から",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004039"
+  ],
+  "name": "コナミスポーツクラブ 五井",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004039/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒290-0056 千葉県市原市五井5232-2",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～21:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [■各施設利用時間]マシンジム・プールの利用時間は、営業終了10分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、多目的スタジオ(スクール)、プール、プール2、気泡プール、スイミングスクールギャラリー、採暖室、マシンジム、フリーウェイト、体操スクールギャラリー、温浴、シャワー、水風呂、ドライサウナ、タンニング、外観、フロント、ロッカールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "五井駅から徒歩15分 本仲通り五井病院近く",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003964"
+  ],
+  "name": "コナミスポーツクラブ 船堀",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003964/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒134-0091 東京都江戸川区船堀3-5-7 TOKIビル4F 電話番号 03-5605-5311",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木] 09:00～23:00 [金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日・お盆・年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: メインスタジオ、ビギナースタジオ、プール、マシンジム、ストレッチゾーン、フリーウェイト、ギャラリー、ゴルフ、浴室、サウナ、サウナ(子ども)、施設外観、フロント(大人)、フロント(子ども)、ロッカー、契約ロッカー、パウダールーム、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "都営新宿線船堀駅下車徒歩1分 都営バス船堀駅前下車徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-000589"
+  ],
+  "name": "コナミスポーツクラブ 東大島",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/000589/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒136-0072 東京都江東区大島7-38-30 イオン東大島4階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～21:00 [土] 10:00～18:00 [日・祝休日] 10:00～18:00 [施設利用時間]マシンジム利用時間は営業終了15分前まで。プール利用時間30分前まで。(土曜プール17時まで)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、フリーウェイト、プール、マシンジム、浴槽、シャワーブース、ドライサウナ、タンニング、外観、フロント、子供ロッカー、ロッカールーム、パウダールーム、契約ロッカー、提携駐車場、提携駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "都営新宿線、東大島駅 大島口より徒歩3分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004501"
+  ],
+  "name": "コナミスポーツクラブ 本店",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004501/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒140-0002 東京都品川区東品川4-10-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 07:00～23:00 [土] 08:30～21:00 [日] 08:30～18:30 [祝休日] 08:30～21:00 [日曜日が祝日の場合]日曜日の営業時間とさせていただきます。 [マシンジム・プール]営業終了時間(最終チェックアウト時間)の30分前までのご利用となります。 [ロッカー・温浴施設]営業終了時間(最終チェックアウト時間)の15分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、マシンジム(3F)、マシンジム(4F)、フリーウェイト、ランニングトラック、ゴルフ、テニス、サッカーコート(アリーナ)、アリーナ、浴室、サウナ、施設、フロント、契約ロッカー、biima sports、プログラミング Swimmy、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京急本線『青物横丁駅』より徒歩6分 りんかい線『品川シーサイド駅』より徒歩7分 東急大井町線『大井町駅』より徒歩15分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003930"
+  ],
+  "name": "コナミスポーツクラブ 五反田",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003930/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒141-0022 東京都品川区東五反田1-22-1 日本生命五反田イーストビルB1F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 10:00～21:30 [土日・祝休日] 09:00～18:00 [子供スクール時間]営業中に更衣室・プールが利用できない時間があります。お知らせ欄を確認下さい。 [マシンジム・プール]ご利用最終時間は営業終了30分前までです。 [更衣室]ご利用最終時間は営業終了15分前までです。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、ジム・カーディオゾーン、ジム・ウエイトマシンゾーン、フリーウエイト、シャワールーム、ドライサウナ、フロント、ロッカールーム、契約ロッカー、biima sports",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR五反田駅徒歩3分 都営浅草線五反田駅徒歩3分 東急池上線五反田駅徒歩3分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007877"
+  ],
+  "name": "コナミスポーツクラブ 大森町",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007877/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒143-0015 東京都大田区大森西3-31-8 マルエツ大森町店3階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 09:30～22:00 [土] 09:30～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の30分前となります。 [各種手続き開始時間]コース変更・退会・休会・その他諸手続きは営業時間の1時間後からでございます。 [各種手続き終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、大プール、小プール、気泡プール(寝湯・座湯・立湯)、マシンジム3階・4階、ダンベル、フリーウエイト拡大ゾーン、ゴルフアカデミー、スカッシュコート、浴室、ドライサウナ、スチームサウナ、タンニング、プロショップ、外観、フロント、契約ロッカー、biima sports、民間学童えすこーと、会員専用駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京浜急行/大森町駅 徒歩5分 京浜急行/平和島駅 徒歩7分 京浜急行バス/大森警察署前 徒歩2分 専用駐車場はございません",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007876"
+  ],
+  "name": "コナミスポーツクラブ 蒲田",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007876/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒144-0052 東京都大田区蒲田5-47-7 マルエツ蒲田5F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:30～22:30 [土] 09:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]マシンジム・プールエリアの利用時間は、営業終了30分前までのご利用となります。 [プール]プールエリアは、子供スクールのみ利用する時間がございます。タイムスケジュールをご確認ください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始休館等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、ギャラリー(観覧席)、気泡プール、マシンエリア、レジスタンスマシン、カーディオマシン、フリーウエイト、ランニングトラック、シャワーブース、ドライサウナ、ロッカールーム、パウダールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "◆JR京浜東北線/蒲田駅◆徒歩3分 ◆京浜急行/京急蒲田駅◆徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006023"
+  ],
+  "name": "コナミスポーツクラブ 恵比寿",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006023/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒150-0012 東京都渋谷区広尾1-1-40 恵比寿プライムスクエア内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～21:00 [各種ご予約について]お電話でのご予約は、11時00分～営業終了時間の2時間前に承っております。 [運動エリア]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の30分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、プール、ジャグジー、マシンジム(ウェイトマシン)、マシンジム(カーディオマシン)、フリーウェイト、ゴルフレンジ、スカッシュコート、浴槽、ドライサウナ、スチームサウナ、タンニング、治療院、施設入口、フロント、ロッカー、契約ロッカー、biima sports、b-discovery、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR・東京メトロ日比谷線「恵比寿駅」徒歩7分 都営バス渋谷橋停留所下車すぐ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007871"
+  ],
+  "name": "コナミスポーツクラブ 渋谷",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007871/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒150-0045 東京都渋谷区神泉町18-11",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～20:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 7Fスタジオ、2Fプール、6Fプライベートプール、3Fマシンジム、4Fマシンジム、3Fフリーウエイト、3Fフリーウェイト(初めての方向け)、4Fゴルフアカデミー、浴室、サウナ、タンニングマシン、1Fフロント、駐輪場、契約ロッカー",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR線『渋谷駅』3a出口より文化村通りをまっすぐ。徒歩約12分。 京王井の頭線『神泉駅』改札左手西口を出て徒歩約4分。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006034"
+  ],
+  "name": "コナミスポーツクラブ 碑文谷",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006034/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒152-0003 東京都目黒区碑文谷2-1-24",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [各種手続受付時間]月火木金 10:00-20:00、 土 10:00-18:00、日祝 10:00-17:00 [※土曜日が祝日の場合]土曜日が祝日の場合、祝日営業時間となります",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、気泡プール、マシンジム、フリーウェイト、ゴルフアカデミー、浴室、ドライサウナ、タンニング、外観、フロント、契約ロッカー、biima sports、駐車場、バイク駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "学芸大学駅から徒歩7分 「鷹番」バス停より徒歩1分 目黒通り沿いに施設がございます",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006029"
+  ],
+  "name": "コナミスポーツクラブ 自由が丘駅前",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006029/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒152-0035 東京都目黒区自由が丘2-12-17",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～22:00 [土日・祝休日] 09:00～20:00 [各種手続受付時間]月火水金 10:00-20:00、 土日祝 10:00-18:00 [ご利用時間のご案内]マシンジム、プール、ゴルフエリアのご利用は、閉館30分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、プールサイド、気泡プール・寝湯、マシンジム1、マシンジム2、マシンジム3、マシンジム4、フリーウエイト1、フリーウエイト2、ゴルフアカデミー、浴室、浴室/洗い場、個室シャワー(女性ロッカー内のみ)、水風呂、ドライサウナ、スチームサウナ、タンニング、フロント、パウダールーム、契約ロッカー各種、biima sports、b-discovery",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "自由が丘駅より徒歩2分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004446"
+  ],
+  "name": "コナミスポーツクラブ 目黒青葉台",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004446/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒153-0042 東京都目黒区青葉台2-19-10",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土日・祝休日] 10:00～21:00 [チェックイン]営業終了までにチェックアウトをお願いいたします。 [マシンジム・プール]マシンジム及びプールのご利用時間/月・水・木・金=22:50/土日祝=20:50 [浴室]浴室のご利用時間/営業終了の10分前までとなります。(平日22:50/土日祝20:50)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、スタジオ1 Club Style、プール、マシンジム、マシンジム、フリーウエイト、ゴルフ、浴室、浴室内洗い場、歩行湯、白湯、寝湯、ハイパージェット、ドライサウナ、タンニング、エステティック、ラウンジ、鍼灸マッサージ治療院、施設外観、フロント、コミックコーナー、ロッカー、契約ロッカー、じぶんdeエステ、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急東横線「中目黒」駅 徒歩8分 東急田園都市線「池尻大橋」駅 徒歩8分 東急バス 渋谷駅発「菅刈小学校」もしくは「東山一丁目」下車(所要時間約10分) 徒歩1分 東急バス・トランセ渋谷駅発「青葉台2丁目」下車(所要時間約9分) 徒歩2分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006022"
+  ],
+  "name": "コナミスポーツクラブ 目黒",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006022/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒153-0064 東京都目黒区下目黒1-8-1 アルコタワー3階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 10:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [利用可能時間のご案内]ジム&プール 営業終了15分前迄 / スパ営業終了15分前迄 [各種お問い合わせ]お電話でのご予約・キャンセルは、営業開始時間～営業終了時間の1時間前まで承っております。 [電話受付時間]・平日 10:00-21:00 ・土9:00‐19:00 ・日祝9:00-18:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始、及び臨時休館日",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、プール、マシンジム、フリーウェイト、【個室】プライベートレンタルスペース、ゴルフアカデミー、サイエンスフィット、スパエリア、ドライサウナ、タンニング、コンディショニングラボ、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR・東急目黒・南北・都営三田線「目黒駅」から徒歩で約5分 東急目黒線・南北線・都営三田線目黒駅正面口から徒歩で約5分 山手通り(都道317号線)から 外苑西通り(都道418号線、首都高速2号線目黒出口)から 目黒雅叙園ホテル東京駐車場をご利用ください",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004461"
+  ],
+  "name": "コナミスポーツクラブ 二子玉川",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004461/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒158-0094 東京都世田谷区玉川2-27-10",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 09:00～20:00 [日] 09:00～18:00 [祝休日] 10:00～18:00 [※土日が祝休日の場合]土日が祝休日の場合は、営業時間が9:00～18:00となります。 [各種手続き受付時間]月水木金11:00～20:00、土11:00～18:00、日・祝休日11:00～16:00 [プールエリア]ご利用いただける時間が決まっております。詳しくはタイムテーブル更新情報をご確認下さい。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スイミング準備体操場、プール、プールギャラリー、マシンジム、ランニングマシン、フリーウエイト、体育館、専用教室体育館、シャワーブース、ドライサウナ、タンニング、建物外観、フロント、子どもロッカー、大人ロッカー、パウダールーム、契約ロッカー、biima sports、プログラミング Swimmy、b-discovery、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線・東急大井町線二子玉川駅徒歩5分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004414"
+  ],
+  "name": "コナミスポーツクラブ 飯田橋",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004414/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒162-0824 東京都新宿区揚場町2-1 軽子坂MNビル地下1階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 07:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～17:00 [(マシン・プール)]ご利用は 営業終了時刻の30分前まででございます。(9/19から土曜日プールのご利用は11:00～) [(各種手続き時間)]コース変更・退会・その他手続きは営業開始1時間後から営業終了2時間前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、パーソナルトレーニングルーム 1、パーソナルトレーニングルーム 2、プール、マシンジム、有酸素マシン、フリーウェイトエリア、女性専用エリア、ドライサウナ、スチームサウナ、タンニング、施設外観、フロント、契約ロッカー(有料)、biima sports",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東京メトロ/飯田橋駅/B4b出口直結 JR総武線/飯田橋駅西口 東京メトロ東西線/飯田橋駅 東京メトロ有楽町線/飯田橋駅 東京メトロ南北線/飯田橋駅 都営大江戸線/飯田橋駅",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006024"
+  ],
+  "name": "コナミスポーツクラブ 荻窪南口",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006024/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒167-0051 東京都杉並区荻窪5-30-17",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [施設ご利用時間]マシンジム・プールの利用時間は、営業終了30分前までのご利用となります。 ※2026年7月より、日曜日のプールご利用開始時間が9:20からとなります。 [各種手続き受付時間]月火水金10:00-20:00、土10:00-18:00、日祝10:00-17:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等 ※ゴルフアカデミーレッスンの方は2階専用入口より入館ください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、ピラティスルーム、プール、マシンジム、フリーウェイト、ゴルフレンジ、ゴルフアカデミー、浴室、ドライサウナ、タンニング、施設外観、フロント、ロッカールーム、契約ロッカー(通常)、契約ロッカー(大)、ゴルフ契約ロッカー(小)、ゴルフ契約ロッカー(大)、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "荻窪駅徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007833"
+  ],
+  "name": "コナミスポーツクラブ 成増",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007833/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒175-0094 東京都板橋区成増3-30-19",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00 [■各種手続受付時間]月火木金11:00～20:00、土11:00～18:00、日・祝休日11:00～17:00 [■各施設利用時間]マシンジム・プールエリアのご利用時間は、営業終了15分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、気泡プール、マシンジム、ダンベル、ゴルフレンジ、スカッシュコート、浴槽、シャワー、ドライサウナ、タンニング、プロショップ、建物外観、フロント、契約ロッカー、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "成増駅徒歩5分 地下鉄成増駅徒歩9分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003932"
+  ],
+  "name": "コナミスポーツクラブ 武蔵野",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003932/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒180-0006 東京都武蔵野市中町1-11-4 武蔵野ニッセイプラザ7F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム利用時間]マシンジムのご利用時間は、営業終了15分前までのご利用となります。 [プール]火・水・金の17:00～19:15は子どもスクールのため大人の方のご利用はできません。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、マシンジム、スミスマシン、フリーウェイト、体育館、女性浴室、シャワーブース、サウナ、施設エントランス、フロント、ロッカー、契約ロッカー、駐輪スペース",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "三鷹駅徒歩5分 武蔵野警察署前",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006028"
+  ],
+  "name": "コナミスポーツクラブ 武蔵境",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006028/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒180-0023 東京都武蔵野市境南町2-1-6 ライザ武蔵境内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールのご利用時間は営業終了30分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、プール、マシンジム、フリーウェイト、ゴルフレンジ、ゴルフアカデミー、浴室、ドライサウナ、タンニング、フロント、施設外観、ロッカー、契約ロッカー、じぶんdeエステ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線武蔵境駅 徒歩1分 西武多摩川線武蔵境駅 徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004469"
+  ],
+  "name": "コナミスポーツクラブ 府中",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004469/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒183-0022 東京都府中市宮西町1-27-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～22:00 [日・祝休日] 10:00～21:00 [フィットネス]マシンジム、プールは営業終了時間30分前までご利用頂けます。(温浴施設は営業終了時間の15分前まで) [最終チェックイン]最終チェックイン時間は営業終了時間 30分前となります。 [マシンジム]平日15時～18時はマシンジムスタッフは駐在しておりません。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、スタジオ3、プール、マシンジム、マシンジム、女性優先エリア、マシンジム、フリーウェイト、フリーウエイト2、4階ゴルフレンジ、パター練習場、1階ゴルフレンジ、インドアテニス、サンドバレーコート、インドアサッカー、温浴スパ、温浴施設、浴室内休憩ゾーン、温浴施設、露天風呂、水風呂、ジェットバス、サウナ、タンニング、エステ、施設、フロント、エントランス、ロッカー、コミックコーナー、契約ロッカー、マッサージ器、プログラミング Swimmy、TACTIVE、b-discovery、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京王線府中駅徒歩5分 他京王線3駅利用可(府中・分倍河原・府中競馬正門前駅) JR武蔵野線・南武線府中本町駅徒歩6分 他JR線3駅利用可(府中本町・分倍河原・北府中駅) 駐車場のご案内(コナミスポーツクラブ府中2階タイムズ24駐車場) 駐車場のご案内(府中駅前タワーパーキング) 無料駐輪場のご案内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004054"
+  ],
+  "name": "コナミスポーツクラブ 一橋学園",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004054/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒187-0022 東京都小平市上水本町4-16-12",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業終了時間の30分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、夏季",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、6コースプール、4コースプール、プールギャラリー、気泡プール、マシンジム、フリーウェイト、お風呂、水風呂、ドライサウナ、マッサージ器、施設全景、フロント、ロッカー、契約ロッカー、Swimmy、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西武多摩湖線・一橋学園駅徒歩8分 西武バス・桜堤バス停下車2分 五日市街道からお越しの場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004085"
+  ],
+  "name": "コナミスポーツクラブ 稲城",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004085/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒206-0802 東京都稲城市東長沼3107-4 京王リトナード稲城5・6階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00 [各種手続き受付時間] 月火水金11:00～20:00 土11:00～18:00 日・祝日11:00～17:00 [《施設利用時間》]マシンジム、プールの利用は営業終了時刻の30分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、アトラクションプール、マシンジム、フリーウェイト、浴室、露天風呂、ドライサウナ、外観(入口)、フロント、契約ロッカー、Swimmy、じぶんdeエステ、提携駐車場、提携駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京王線「稲城駅」徒歩1分(北口) JR南武線「稲城長沼駅」から徒歩15分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004070"
+  ],
+  "name": "コナミスポーツクラブ 武蔵小杉",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004070/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒211-0004 神奈川県川崎市中原区新丸子東3-1100-14",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 09:00～23:00 [土] 09:00～21:00 [日・祝休日] 09:00～19:00 [月曜日～木曜日]運動施設(ジムエリア・プールエリア)利用時間22:30まで [土曜日]運動施設(ジムエリア・プールエリア)利用時間20:30まで [日曜、祝日]運動施設(ジムエリア・プールエリア)利用時間18:30まで",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、アトラクションプール、マシンジム、サプリメントサーバー、浴室、サウナ、タンニング、エステティック、ウォーターサーバー、施設外観、フロント、ロッカールーム、マッサージ機、契約ロッカー、biima sports、コナミスポーツ伸芽''Sアカデミー、じぶんdeエステ、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急東横線武蔵小杉駅徒歩1分(中央口2) JR南武線武蔵小杉駅徒歩3分(北改札口) JR横須賀線武蔵小杉駅徒歩5分(新南改札口)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004479"
+  ],
+  "name": "コナミスポーツクラブ 川崎",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004479/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒212-8576 神奈川県川崎市幸区堀川町72-1 ラゾーナ川崎プラザ5階・6階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日] 10:00～21:00 [祝休日] 10:00～21:00 [諸手続き受付時間]平日11:00-20:00 土日祝日11:00-18:00 ※毎週火曜日休館。※ご予約の方優先案内 [各施設ご利用時間]マシンジム・プールの利用時間は、営業終了30分前までのご利用となります。 [※特別営業日受付]お盆期間・年末年始等の特別営業日の手続受付時間は、営業開始1時間後から営業終了2時間前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、アトラクションプール、採暖室、マシンジム、フリーウエイト、浴室、ドライサウナ、タンニング、エステティック、鍼灸マッサージ治療院、外観、フロント、ロッカールーム、パウダールーム、契約ロッカー、biima sports、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR川崎駅直結ラゾーナ川崎プラザ5階・6階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004079"
+  ],
+  "name": "コナミスポーツクラブ 横浜",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004079/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒221-0844 神奈川県横浜市神奈川区沢渡5番地",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土日・祝休日] 09:00～20:00 [■各施設利用時間]マシン・プールの利用時間は、営業終了30分前迄となります。土日は、プールのみ10:00～となります。 [■各種受付について]営業終了(平日2時間前、土日祝2時間前)土・日の手続きは大変込み合います。予めご了承ください。 [■駐車場について]土日は、大変混雑しお待たせする場合がございます。何卒ご容赦の上、ご理解賜りますよう、お願い申し上げす",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、プール、マシンジム、フリーウェイト、ランニングトラック、ゴルフアカデミー、スタジオ(レンタル)、スマート卓球ジム、浴室、ドライサウナ、タンニング、エステティック、休憩スペース、治療院、外観、フロント、契約ロッカー、ニューロン麻雀スクール、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "横浜駅西口・相鉄ジョイナス地下街出口から徒歩5分 【お車でお越しの場合】",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006026"
+  ],
+  "name": "コナミスポーツクラブ たまプラーザ",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006026/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒225-0002 神奈川県横浜市青葉区美しが丘1-13-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、プール、気泡プール、マシンジム、フリーウェイト、ゴルフアカデミー、浴槽、ドライサウナ、ウェットサウナ、タンニングマシン、治療院、外観、フロント、契約ロッカー、じぶんdeエステ、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線「たまプラーザ駅」より徒歩3分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004409"
+  ],
+  "name": "コナミスポーツクラブ 上大岡",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004409/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒233-0002 神奈川県横浜市港南区上大岡西1-18-5 mioka2階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～19:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト)の30分前となります。 [各種手続き開始時間]コース変更・退会・休会・その他諸手続きは営業開始時間の1時間後からでございます。 [各種手続き終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前まででございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、スイミングギャラリー、マシンジム、フリーウェイト、浴室、サウナ、エントランス、フロント、ロッカー、パウダールーム、契約ロッカー、じぶんdeエステ、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京浜急行線 上大岡駅直結!(雨の日も安心) 横浜市営地下鉄ブルーライン 上大岡駅直結!(雨の日も安心)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006033"
+  ],
+  "name": "コナミスポーツクラブ 磯子",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006033/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒235-0023 神奈川県横浜市磯子区森1-12-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [諸手続き受付時間]平日11:00-18:00土日祝12:00-17:00※毎週月曜休館※ご予約の方優先案内 [各施設利用時間]マシンジム・プールの利用時間は、営業終了30分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、プール、マシンジム、フリーウェイト、ゴルフアカデミー、浴室、ドライサウナ、タンニング、施設外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "行き方のご案内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004048"
+  ],
+  "name": "コナミスポーツクラブ 洋光台",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004048/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒235-0045 神奈川県横浜市磯子区洋光台3-1-4 洋光台商事ビル",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～21:00 [土日・祝休日] 08:30～18:00 [スポーツ施設利用時間]スポーツ施設のご利用は営業時間30分前までとなります。プールは一部ご利用出来ない時間がございます。 [電話受付時間]平日10:00‐20:00/土曜8:30‐17:00/日・祝8:30‐17:00 [早朝利用可能施設]土日祝8:30-9:30はマシンジムのみご利用頂けます。※ロッカールームはご利用頂けません。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、マシンジム、フリーウェイト、体育館、シャワーブース、低温 サウナ、施設、フロント、契約ロッカー",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "洋光台駅徒歩2分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-006027"
+  ],
+  "name": "コナミスポーツクラブ 希望が丘",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/006027/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒241-0826 神奈川県横浜市旭区東希望が丘107",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオA、スタジオB、フリースペース、プール、気泡プール、マシンジム、フリーウエイト、フリーウエイト、ストレッチエリア、ゴルフアカデミー、浴室、ドライサウナ、スチームサウナ、認可保育所、施設外観、フロント、ロッカールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "相鉄線「希望ヶ丘駅」から徒歩4分 厚木街道「希望が丘駅入口」交差点から駐車場へ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004464"
+  ],
+  "name": "コナミスポーツクラブ 中央林間",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004464/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒242-0007 神奈川県大和市中央林間6丁目6-24番地",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [3F 25mプール]運動塾(お子様スクール)の時間帯は、大部分の時間帯でご利用頂けません。詳しくはお問い合わせ下さい。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、3階 25Mプール、2階 20Mプール、スイミングギャラリー、マシンジム(ストレングス・有酸素)、マシンジム(フリーウエイトゾーン)、ゴルフアカデミー、体育館、浴室、サウナ、タンニング、施設、フロント、ロッカー、契約ロッカー、b-discovery、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "小田急江ノ島線の中央林間駅(北口) 小田急江ノ島線の中央林間駅(南口) 田園都市線の中央林間駅",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-000643"
+  ],
+  "name": "コナミスポーツクラブ 厚木",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/000643/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒243-0031 神奈川県厚木市戸室5-31-1 アツギトレリス4階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 10:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～18:00 [各施設ご利用時間]営業終了30分前まで(日曜日・祝日のプール利用可能時間のみ営業終了15分前まで)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、マシンジム、ファンクショナルゾーン、有酸素系マシン、フリーウエイトエリア、浴室、ドライサウナ、施設から見える風景、フロント、成人ロッカー、契約ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国道246号線方面より車でお越しの方 小田急線本厚木駅よりバスをご利用の方 小田急線本厚木駅",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004071"
+  ],
+  "name": "コナミスポーツクラブ 三ツ境",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004071/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒246-0022 神奈川県横浜市瀬谷区三ツ境7-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～21:00 [土] 09:00～20:00 [日・祝休日] 09:00～19:00 [スイミングスクール]お子様向けのスクールです。月4週制となりますので、スクールカレンダーをご確認ください。 [テニススクール]毎週木はスクール休講です。月4週制となりますので、スクールカレンダーをご確認ください。 [マシンジム・プール]プール利用時間は営業終了30分前まで。マシンジム利用時間は営業終了時間までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始など",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、プール、プールギャラリー、マシンジム、フリーウェイト、テニスコート、浴室、サウナ、タンニング、施設外観、フロント、成人ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "三ツ境駅徒歩5分 厚木街道からすぐ 三ツ境駅バス停徒歩4分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-000584"
+  ],
+  "name": "コナミスポーツクラブ 橋本",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/000584/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒252-0131 神奈川県相模原市緑区西橋本5-1-1 ラ・フロール橋本4F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム・プール]利用時間は営業終了30分前までのご利用となります。 [プール]お子様の運動塾の時間帯は、大人の方のご利用ができません。休講日の利用はお問い合わせください。 [プール運動塾の時間帯]月火水金15:30～18:55 土12:15～17:45 日10:00～14:30",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、マシンジム、フリーウェイト、テニスコート、ラケットボールコート、シャワールーム、ドライサウナ、タンニング、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR横浜線・相模線 橋本駅徒歩10分 京王線 橋本駅徒歩10分 神奈川中央バス 上町バス停徒歩2分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004456"
+  ],
+  "name": "コナミスポーツクラブ 岐阜",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004456/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒500-8856 岐阜県岐阜市橋本町1-10-1 アクティブG2F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土日・祝休日] 10:00～20:00 [各種手続受付時間]月水木金 11:00～21:00、土日・祝休日 11:00～18:00 [施設利用時間]平日(月水木金)マシン・プール利用22:00迄、浴室利用22:45迄、未成年の利用は22:00迄 土日祝休日マシン・プール利用19:45迄、浴室利用19:45迄",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※お盆期間・年末年始等の特別休館に関しては、別途ご案内致します。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、プール、気泡プール、マシンジム、プライベートトレーニングスペース、フリーウェイト、ゴルフレンジ、シャワーブース・洗い場、露天風呂、白湯&amp;寝湯、水風呂、サウナ、コラーゲンマシン、エンダモロジー、フードコート、リラクゼーション、サプリメントサーバー・ウォーター会員、施設外観、フロント、仮眠コーナー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR岐阜駅直結 名鉄岐阜駅徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004052"
+  ],
+  "name": "コナミスポーツクラブ 大垣",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004052/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0808 岐阜県大垣市三塚町463-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金 11:00～20:00 土11:00～18:00 日・祝休日11:00～16:00 [プール]営業時間の15分前までのご利用となります [マシンジム]営業時間の15分前までのご利用となります",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、プールA、プールB、1階運動塾ギャラリー、ワールプール、マシンジム、マシンジム(有酸素マシン)、フリーウェイト、シャワーブース、白湯、露天風呂、水風呂、ドライサウナ、スチームサウナ(採暖室)、フロント、更衣ロッカー、パウダールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR大垣駅徒歩15分 [岐大バイパスからお越しのお客様] [258号線からお越しのお客様]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007858"
+  ],
+  "name": "コナミスポーツクラブ 岡崎",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007858/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-0068 愛知県岡崎市井田南町3-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00～20:00、土11:00～18:00、日・祝休日11:00～16:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。 [キャッシュレス施設]施設フロントでのお支払いは、クレジットカード・電子マネー・QRコード決済となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始、等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、マシンジム、シャワールーム、ドライサウナ、施設外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国道248号蒲郡方面より 国道248号豊田方面より 愛知環状鉄道線、北岡崎駅より徒歩6分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004050"
+  ],
+  "name": "コナミスポーツクラブ 鳴海山下",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004050/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒458-0801 愛知県名古屋市緑区鳴海町字山下78-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00～20:00、土11:00～18:00、日・祝休日11:00～16:00 [マシンジム・プール]マシンジム・プールの利用時間は、営業終了15分前までのご利用となります。 [キャッシュレス施設]現金の取扱いをしておりません。クレジットカードや電子マネー等をご利用ください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、体育館兼第2スタジオ、プール、気泡プール、マシンジム、ファンクショナルエリア、フリーウェイト、ゴルフアカデミー、浴室、水風呂、ドライサウナ、タンニング、施設外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "徳重・神の倉方面より 1号線方面より 地下鉄桜通線【野並駅】より徒歩15分 名鉄名古屋本線【鳴海駅】より徒歩25分 名古屋市営バス【鳴海山下】停留所下車 名古屋市営バス【鳴海山下】停留所下車",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004092"
+  ],
+  "name": "コナミスポーツクラブ 星ヶ丘",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004092/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒464-0801 愛知県名古屋市千種区星ヶ丘1丁目1番7号テックランド星ヶ丘5F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00~21:00 土11:00~18:00 日・祝11:00~16:00 [施設利用時間]プール・マシンジムの利用は、営業終了時間の30分前までとなります。 [子供実施時間]一部実施ができない時間がございますので、施設またはタイムスケジュールのご確認をお願いします",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※お盆期間・年末年始等の特別休館に関しては、別途ご案内致します。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、気泡プール、マシンジム、ランニングマシン、レジスタンスマシン、フリーウエイト、温浴、洗い場、水浴風呂、サウナ、エンダモロジー、フロント、ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄東山線『星ヶ丘駅』すぐ 名古屋市営バス『星ヶ丘住宅』停留所下車 名古屋市営バス『星ヶ丘』停留所下車 名鉄バス『星ヶ丘』停留所下車 名古屋方面からお越しの方 東名自動車道、名古屋インターチェンジ方面からお越しの方",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004047"
+  ],
+  "name": "コナミスポーツクラブ いりなか",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004047/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒466-0826 愛知県名古屋市昭和区滝川町18-3",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00～20:00、土11:00～18:00、日・祝日11:00～16:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、ランニングマシン等、ウエイトマシン、フリーウェイト、浴室、シャワー・洗い場、サウナ、タンニング(日焼けマシン)、エンダモロジールーム、施設外観、フロント、成人ロッカー、3階フィットネスエリア、4階プールエリア、有料駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "市営地下鉄 鶴舞線 いりなか駅 から徒歩5分 市営地下鉄 名城線 八事日赤駅 から徒歩10分 市営バス バス停「滝川町」 からすぐ 山手グリーンロードをご利用の場合 国道153号をご利用の場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-007857"
+  ],
+  "name": "コナミスポーツクラブ 鈴鹿",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/007857/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒513-0801 三重県鈴鹿市神戸3丁目24-28",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00-20:00 土11:00-18:00 日祝休日11:00-16:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の30分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、プール(運動塾)、アトラクションプール、マシンジム、フリーウェイト、ストレッチゾーン、テニス・サッカー/屋上、運動塾体操場、温浴、露天風呂、水風呂、サウナ、フロント、パウダールーム、契約ロッカー(更衣室)、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオンモール鈴鹿から23号線方向へ車で20分 津方面からお越しの方は23号線北玉垣町北交差点を左折で2分 伊勢鉄道鈴鹿駅徒歩5分 近鉄鈴鹿線鈴鹿市駅徒歩20分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004477"
+  ],
+  "name": "コナミスポーツクラブ 北大路",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004477/",
+  "features": [
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒603-8142 京都府京都市北区小山北上総町49-1 イオンモール北大路3F(イオンモール館内・北側エレベーターで3階に)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [■マシンジム利用時間]□営業終了時間15分前まで [■プール利用時間]□営業終了時間15分前まで",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始休館等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、スチームサウナ、マシンジム、フリーウェイト、浴室、個室シャワールーム、サウナ、タンニング、エントランス、フロント、施設入口、ロッカー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄烏丸線、北大路駅真上 京都市バス系統、北大路バスターミナル真上 イオンモール北大路3Fまでの行き方動画 「堀川北大路」交差点東へすぐ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004427"
+  ],
+  "name": "コナミスポーツクラブ 西大路御池",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004427/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒604-8437 京都府京都市中京区西ノ京東中合町70",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～22:00 [日・祝休日] 10:00～19:00 [マシンジム]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[休館日]毎週木曜日・お盆休館・年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、マシンジム、フリーウェイト、ゴルフアカデミー、浴槽、露天風呂、ドライサウナ、エステティック、施設、フロント、ロッカールーム、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄東西線 西大路御池 2番出口徒歩2分 JR 嵯峨野線 円町駅 徒歩10分 京都市バス 西大路御池 下車すぐ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004023"
+  ],
+  "name": "コナミスポーツクラブ 伏見",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004023/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒612-8082 京都府京都市伏見区両替町2丁目348-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日] 09:00～18:00 [祝休日] 10:00～18:00 [マシンジム・プール]ご利用最終時間は、営業時間(最終チェックアウト時間)の15分前となります。 [プール]平日17時～19時は子供スクール専用利用となり大人の方のプールコース利用はいただけません。 [土・日曜が祝日の場合]祝日営業時間となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日] [年末年始、お盆休館等]※施設ホームページ「お知らせ」欄をご確認ください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、プールギャラリー、カーディオゾーン、レジスタンスゾーン、ストレッチゾーン、フリーウエイト、体育館、浴室、サウナ、エンダモロジー、施設外観、フロント、ロッカー、運動塾専用ロッカー、パウダールーム、契約ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京阪電車 伏見桃山駅 徒歩5分 近鉄電車 桃山御陵前駅 徒歩6分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004105"
+  ],
+  "name": "コナミスポーツクラブ 大阪ステーションシティ",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004105/",
+  "features": [
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒530-0001 大阪府大阪市北区梅田3-1-3 大阪ステーションシティノースゲートビルディング11階~13階(入口:11階)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [マシンジム利用時間]営業終了30分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、スタジオ1 Club Style、スタジオ2 オンラインクラス、ウェイトマシン、ランニングマシン、フィットネスバイク、フリーウエイト、ゴルフアカデミー、PRGRサイエンスフィット、浴槽、サウナ、ミストサウナ(女性のみ)、タンニングマシン、コンディショニングラボ、外観、フロント、ロッカールーム、契約ロッカー、13Fラウンジエリア",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "☆施設アクセス動画UP☆ JR大阪駅徒歩4分(駅直結) 大阪メトロ御堂筋線梅田駅徒歩7分 阪急大阪梅田駅徒歩8分 阪神電車大阪梅田駅徒歩8分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004421"
+  ],
+  "name": "コナミスポーツクラブ 新大阪",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004421/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒532-0004 大阪府大阪市淀川区西宮原2-1-3 ソーラ新大阪21ビル4・5F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [プール利用について]土日は子供クラス実施により11:00～の利用となります。 [各種手続受付時間]月水木金 11:00～21:00 土 11:00～18:00 日・祝休日 11:00～16:00 [マシンジム・プール]営業終了30分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[休館日]毎週火曜日、お盆、年末年始による臨時休館日等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、多目的スペース、プール、プール(夜)、気泡プール、マシンジム(有酸素系)、マシンジム(ウェイト)、フリーウェイト、ストレッチスペース、男性浴室、個室シャワー、カラン、女性浴室、ドライサウナ、タンニング、エンダモロジールーム、施設外観、フロント、無料更衣ロッカー、パウダールーム、マッサージ機、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "大阪メトロ御堂筋線新大阪駅4号出口より徒歩7分 JR新大阪駅東改札口をでて北口経由で徒歩12分 梅田方向からお越しの場合 千里中央方面からお越しの場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004098"
+  ],
+  "name": "コナミスポーツクラブ 上新庄",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004098/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒533-0006 大阪府大阪市東淀川区上新庄2-24-24 上新庄南阪急ビル2F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:30～22:00 [土] 09:30～20:00 [日・祝休日] 09:30～18:00 毎週火曜日は休館日 [■施設利用時間]マシンジム・スタジオ・プール等、運動施設のご利用時間は営業終了の15分前までとさせていただきます。 [■プール利用時間]土曜日のプールは18:00までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日・お盆・年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、マシンジム、シャワー、ドライサウナ、施設外観、フロント、ロッカー、契約ロッカー、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急京都線上新庄駅「南出口」より徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004415"
+  ],
+  "name": "コナミスポーツクラブ 北浜",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004415/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒541-0043 大阪府大阪市中央区高麗橋1-7-3 The Kitahama Plaza 4～6階(入口:4階)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木金] 10:00～23:00 [土] 10:00～20:00 [各種手続き受付時間]月火水木金11:00～21:00、土11:00～18:00 [マシンジム・プール]月火水木金10:00～22:30、土10:00～19:30",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週日曜日、祝休日、その他(お盆・年末年始・臨時メンテナンス等)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、アトラクションプール、マシンジム、マシンジム、ストレッチゾーン、フリーウエイト、お風呂、サウナ、タンニング、エステ、施設外観、フロント、ロッカースペース、パウダールーム、ロッカー内休憩スペース、契約ロッカー、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄堺筋線北浜駅 京阪北浜駅直結 地下鉄御堂筋線淀屋橋駅 提携駐車場はございません",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004445"
+  ],
+  "name": "コナミスポーツクラブ 心斎橋",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004445/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒542-0081 大阪府大阪市中央区南船場3-4-26 THE PEAK SHINSAIBASHI 3～9階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:30 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [■各施設利用時間]マシンジム・プールの利用時間は施設営業時間と同じ※チェックアウトは営業終了時間までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始、ビル法定点検日(毎年10月中旬)、等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、マシンジム、フリーウエイト、ランニングトラック、浴室、サウナ、タンニング、エンダモロジー、フロント、建物外観、ロッカー、契約ロッカー",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄御堂筋線/長堀鶴見緑地線「心斎橋駅」下車 徒歩約3分 地下鉄堺筋線/長堀鶴見緑地線「長堀駅」下車 徒歩約4分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003929"
+  ],
+  "name": "コナミスポーツクラブ 南千里",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003929/",
+  "features": [
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒565-0833 大阪府吹田市五月が丘西7-2",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[火水木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～18:00 [各種手続受付時間]火水木金 10:00～20:00 土 10:00～18:00 日祝 10:00～16:00 [施設利用時間]マシンジム・スタジオ・プール等、運動施設のご利用時間は営業終了の15分前までとさせていただきます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、お盆、年末年始等 ※月曜日が祝日の場合も休館となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、スクール観覧ギャラリー、気泡プール・スチームサウナ、ランニングマシン、有酸素系マシン、マシンジム、体育館、シャワー、施設外観、フロント、ロッカールーム、契約ロッカー、第1駐車場、第2駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急千里線「南千里駅」よりバス10分 JR京都線「吹田駅」よりバス12分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004476"
+  ],
+  "name": "コナミスポーツクラブ 北千里",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004476/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒565-0874 大阪府吹田市古江台4丁目2-50イオン北千里店7階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月火水金 10:00～20:00 土 11:00～18:00 日祝 11:00～16:00 [運動塾問い合わせ時間]月火水金 9:15～19:00 土 10:15～18:30 日祝 10:15～16:30 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等 ※木曜日が祝日の場合も休館となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、マシンジム、カーディオ、フリーウェイト、体育館、ギャラリー、浴室(浴槽)・サウナ、浴室(シャワー)、サウナ、エンダモロジー、休憩室、建物外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急:北千里駅前徒歩1分! 阪急バス:北千里バス停目の前!",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004055"
+  ],
+  "name": "コナミスポーツクラブ 茨木",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004055/",
+  "features": [
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒567-0041 大阪府茨木市下穂積1丁目7番5号 イオンモール茨木別棟",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～22:00 [日・祝休日] 10:00～20:00 [■利用時間]マシンジム・プールは営業終了30分前、浴室は営業終了15分前、 未成年の利用は22:00まで。 [■各種受付時間][月水木金] 11:00～21:00 [土]11:00～20:00 [日・祝]11:00～18:00 [■火曜日休館]お盆・年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、プール、気泡プール、マシンジム、フリーウエイトゾーン、ゴルフアカデミー、内湯、天然温泉(露天風呂)、サウナ、タンニング、エンダモロジー、コンディショニングラボ、建物外観、フロント、ロッカー、契約ロッカー、マッサージチェア、コミックコーナー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR茨木駅から徒歩約10分 モノレール宇野辺駅から徒歩約6分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004076"
+  ],
+  "name": "コナミスポーツクラブ 守口",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004076/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒570-0084 大阪府守口市緑町2-13",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [施設利用時間]マシンジム・プール・アリーナ・ラケットコートのご利用は営業終了時刻30分前まで",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、プール、マシンジム、フリーウェイト、ランニングトラック、ラケットボール、アリーナ、浴室、シャワーブース、ドライサウナ、タンニング、エンダモロジー、休憩スペース、建物外観、フロント、ロッカー、契約ロッカー、biima sports、駐車場・自動二輪置場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄 太子橋今市駅徒歩3分 京阪 土居駅 徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004484"
+  ],
+  "name": "コナミスポーツクラブ 寝屋川",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004484/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒572-0832 大阪府寝屋川市本町17-8",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 09:00～20:00 [日・祝休日] 09:00～18:00 毎週火曜日は休館日。 [施設利用時間]各施設利用時間は営業終了15分前とさせていただきます。 [最終チェックアウト]チェックアウトは営業終了時間までにお願いいたします。(各施設利用は営業終了15分前まで)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 3階スタジオB、2階スタジオA、プール、気泡プール、マシンジム、フリーウェイト、浴室、サウナ、タンニング、エンダモロジー、休憩・飲食スペース、施設外観、フロント、ロッカールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京阪本線寝屋川市駅より徒歩約7分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004087"
+  ],
+  "name": "コナミスポーツクラブ 香里ケ丘",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004087/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒573-0084 大阪府枚方市香里ケ丘3丁目3-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00 [マシンジム・プール]営業終了15分前までのご利用となります。(タンニング含む) [各種手続き開始時間]コース変更・退会・休会・その他手続きは営業開始時間の1時間後からでございます。 [各種手続き終了時間]コース変更・退会・休会・その他手続きは営業終了時間の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週木曜日] [お盆、年末年始等]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、プール、アトラクションプール、マシンジム、フリーウエイト、ゴルフ、浴室、サウナ、タンニング、エンダモロジー、休憩ゾーン、施設外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京阪バス藤田川バス停下車",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004091"
+  ],
+  "name": "コナミスポーツクラブ 新石切",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004091/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒579-8013 大阪府東大阪市西石切町7丁目1-25",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [施設利用時間]各施設は営業時間内ご利用いただけます。最終チェックアウトは営業終了時間までにお願いいたします。 [各種手続き開始時間]コース変更・退会・休会・その他諸手続きは営業開始時間の1時間後からでございます。 [各種手続き終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前まででございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等 火曜日が祝日の場合は休館日",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ(Aスタジオ)、第2スタジオ(Bスタジオ)、プール(25m&times;9レーン)、気泡プール、マシンジム:レジスタンスマシン、マシンジム:カーディオ(有酸素)マシン①、マシンジム:カーディオ(有酸素)マシン②、マシンジム:フリーウエイトゾーン、温浴施設、ドライサウナ、タンニング、休憩・飲食スペース、建物外観、フロント、契約者専用ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新石切駅徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004038"
+  ],
+  "name": "コナミスポーツクラブ 光明池",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004038/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒590-0138 大阪府堺市南区鴨谷台2-1-5 サンピア2番館5.6.7.8階",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～22:30 [土] 09:00～20:30 [日] 09:00～18:30 [祝休日] 09:00～18:30 [Jrサッカースクール]火16:00～19:00 [テニススクール]月・水～金9:30~21:55 土:8:40~20:40 日:9:00~18:00 [各種手続き受付時間]月水木金10:00～20:30、土10:00～18:30、日祝休日10:00～16:30",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日]※Jrサッカースクールのみ火曜日16:00-19:00営業 ※お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、体育館、フリーウェイト、プール、クラブプール、マシンジム、ゴルフアカデミー、テニスコート、休憩スペース、サッカーコート(インドア)、浴室、サウナ、タンニング、エステティック、施設外観、フロント、ロッカールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "光明池駅徒歩3分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004072"
+  ],
+  "name": "コナミスポーツクラブ 和泉中央",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004072/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒594-0041 大阪府和泉市いぶき野5丁目6-2",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [毎週木曜日は休館日] [各種手続き受付時間]平日11:00～21:00・土11:00～18:00・日祝11:00～16:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、 お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プールⅠ、プールサイド気泡プール、歩行プール、マシンジム、ランニングマシン、レジスタンスマシン、カーディオマシン、フリーウェイト、内風呂、浴室、露天風呂、寝湯、水風呂、サウナ、タンニング、施設外観、フロント、パウダールーム、契約ロッカー、じぶんdeエステ、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "泉北高速鉄道 和泉中央駅徒歩4分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004032"
+  ],
+  "name": "コナミスポーツクラブ 東岸和田",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004032/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒596-0827 大阪府岸和田市上松町2-11-15",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [施設ご利用可能時間]マシンジム・プールのご利用は、営業終了15分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等 緊急施設点検日",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ【3階】、カルチャールーム【1階】、プール・スクール専用【3階】6レーン、プール大人専用【3階】4レーン、アトラクションプール【3階】プールサイド、マシンジム【3階】、マシンジム【3階】、マシンジム【3階】、フリーウェイト【3階】マシンジム内、体育館【3階】、内湯【4階】、露天風呂【4階】、ドライサウナ、タンニング【4階】、施設外観、フロント【3階】、運動塾ギャラリー【3階】、ロッカー(ドレッサー)【4階】、ロッカールーム【4階】、休憩スペース【4階】ロッカー内、契約ロッカー【4階】ロッカー内、駐車場【1階2階】、駐輪場【1階】",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR阪和線東岸和田駅徒歩7分 国道26号線別所東2号交差点を南へ500メートル。岸和田リハビリテーション病院の向い側。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003937"
+  ],
+  "name": "コナミスポーツクラブ 神戸",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003937/",
+  "features": [
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒650-0044 兵庫県神戸市中央区東川崎町1-7-7 神戸ハーバーランドumie NORTHMALL5～7F(入口は6F)※東エレベーター6F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールの利用時間は、営業終了15分前までのご利用となります。 [各種手続き開始時間]コース変更・退会・休会・その他諸手続きは営業時間の1時間からでございます。 [各種手続き終了時間]コース変更・退会・休会・その他諸手続きは営業終了時間の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始(お知らせ欄をご確認ください) 等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、7階多目的、プール、気泡プール、マシンジム、ストレッチエリア、フリーウェイト、ゴルフ、バンカー、浴室、浴室サウナ、プールスチームサウナ、エンダモロジー、施設外観、フロント、休憩スペース、ロッカー、契約ロッカー、biima sports、提携駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR神戸駅徒歩7分 高速神戸駅徒歩12分 西元町駅徒歩7分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004090"
+  ],
+  "name": "コナミスポーツクラブ 三宮",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004090/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒651-0087 兵庫県神戸市中央区御幸通5丁目1-21 富永ビル",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月火木金11:00～20:00、土11:00～18:00、日祝11:00～16:00 [各施設利用時間]マシンジム・プールの利用時間は、営業終了15分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週水曜日、お盆、年末年始等]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、プール、プライベートトレーニングスペース、マシンジム、有酸素運動系マシン、フリーウエイト、浴室、ドライサウナ、タンニング(日焼マシン)、エンダモロジー、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR三ノ宮駅より徒歩7分 その他路線の場合:JR三ノ宮駅へお向かいください",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004489"
+  ],
+  "name": "コナミスポーツクラブ ジェームス山",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004489/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒655-0873 兵庫県神戸市垂水区青山台7-7-1 イオンジェームス山店4F (立体駐車場7F)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 09:00～22:00 [土] 09:00～20:00 [日・祝休日] 09:00～18:00 [各施設の最終利用時間]マシンジム・プールの最終ご利用時間は、営業終了時間の15分前まで [各種手続受付時間][月水木金]10:00～20:00、[土]10:00～18:00 、[日祝]10:00～16:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[通常休館日] 毎週火曜日 [その他] お盆・年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: Aスタジオ、Bスタジオ、プール、気泡プール、マシンジム、フリーウェイト(バーベル)、浴槽(温浴・水風呂)、浴室、ドライサウナ、タンニング、コラーゲンマシン、エンダモロジー、外観、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR「垂水駅」 山陽電車「山陽垂水駅」から山陽バス「垂水東口駅」23系統乗車 イオンジェームス山店共用駐車場無料",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004471"
+  ],
+  "name": "コナミスポーツクラブ 本山南",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004471/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒658-0014 兵庫県神戸市東灘区北青木2-10-5",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00～20:00、土11:00～18:00、日祝11:00～16:00 [入会最終受付時間枠]月水木金19:00~20:00、土17:00～18:00、日祝15:00～16:00 [各施設ご利用時間]マシンジム・プールの利用時間は、営業終了の15分前までとなります",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日、お盆、年末年始等]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第一スタジオ(3階マシンジム内)、第二スタジオ(3階マシンジム内)、第一スタジオ(Party Style!)、プール(4階)、屋外気泡プール(4階プールエリア内)、気泡プール(4階プールエリア内)、マシンジム(3階)、フリーウェイトゾーン(3階マシンジム内)、浴室(4階男女ロッカールーム内)、露天風呂(4階男女ロッカールーム内)、サウナ(4階男女浴室内)、タンニング(4階男性ロッカールーム内)、コラーゲンマシン(女性ロッカールーム内)、エンダモロジー(女性ロッカールーム内)、施設外観、フロント(3階)、ロッカールーム(4階)、契約ロッカー(4階)、じぶんdeエステ、駐車場(1～2階)、駐輪場(1階)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪神本線青木駅徒歩8分 JR摂津本山駅徒歩15分 阪急岡本駅徒歩20分 神戸市バス37系統深田バス停",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004064"
+  ],
+  "name": "コナミスポーツクラブ 本店西宮アネックス",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004064/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒662-0846 兵庫県西宮市森下町10-21",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～20:00 [土日・祝休日] 10:00～17:00 [プール利用について]大人の方のプール利用については時間が限定されております。必ずご確認の上ご利用ください。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ(5階)、スタジオ(4階)、25mプール(スクールプール・3階)、25mプール(クラブプール・3階)、プールギャラリー(3階)、マシンジム(4階)、体育館(3階)、体操場(3階)、浴室(4階男女ロッカー内)、サウナ(4階男女浴室内)、建物外観、フロント(4階)、子供ロッカー(3階)、コナミスポーツ伸芽'Sアカデミー(5階)、キッズスペース(4階)、駐車場(1階・2階)、駐輪場(1階)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急西宮北口駅徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004021"
+  ],
+  "name": "コナミスポーツクラブ 本店西宮",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004021/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒663-8204 兵庫県西宮市高松町3-7",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～23:00 [土] 09:00～21:00 [日・祝休日] 09:00～19:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。 [各種手続き開始時間]コース変更・退会・休会・その他諸手続きは営業開始の1時間後からとなります。 [各種手続き終了時間]コース変更・退会・休会・その他諸手続きは営業終了の2時間前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、多目的ルーム、プール、アトラクションプール、マシンジム①、マシンジム②、マシンジム③、ストレッチゾーン、フリーウェイトゾーン、ランニングトラック、ゴルフアカデミー、テニスコート(インドア)、スカッシュ、サッカーコート(インドア)、浴室、サウナ、エステ、施設、フロント、ロッカー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急西宮北口駅",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004097"
+  ],
+  "name": "コナミスポーツクラブ 川西",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004097/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒666-0016 兵庫県川西市中央町3-12 ビッグボックス川西内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 プール・マシンジムのご利用時間は閉館15分前までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日 お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ、25m&times;7レーンプール、マシンジム、ランニングマシン、フリーウェイト、浴室、ドライサウナ、エンダモロジー、施設外観、フロント、ロッカールーム、契約ロッカー、ビッグボックス駐車場(提携駐車場)、ビッグボックス駐輪場(提携駐輪場)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急・能勢電鉄「川西能勢口駅」徒歩2分 JR「川西池田駅」徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004074"
+  ],
+  "name": "コナミスポーツクラブ 三田",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004074/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒669-1513 兵庫県三田市三輪1-3",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続受付時間]月水木金11:00-20:00 土11:00-18:00 日・祝11:00-16:00 [マシンジム・プール]ご利用最終時間は、営業終了時間(最終チェックアウト時間)の15分前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日、お盆、年末年始]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2(体育館)、プール、採暖室、アトラクションプール、カーディオマシン、レジスタンスマシン、フリーウエイト、運動塾体操場、浴室、サウナ、タンニング、エンダモロジー、建物外観、フロント、ロッカー、パウダールーム、キッズロッカー、運動塾ギャラリー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR三田駅徒歩1分 神鉄三田駅徒歩1分 神姫バスJR三田駅北側バス停留所すぐ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004036"
+  ],
+  "name": "コナミスポーツクラブ 明石",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004036/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒673-0891 兵庫県明石市大明石町2-3-31",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各施設の最終利用時]マシンジム、プールの最終ご利用時間は、営業終了時間の15分前までとなります [各種手続受付時間][月水木金]11:00～20:00、[土]11:00～18:00 、[日祝]11:00～16:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[通常休館日]毎週火曜日 [その他]夏季(お盆)・年末年始",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、気泡プール、マッサージプール、マシンジム(カーディオマシン)、マシンジム(レジスタンスマシン)、ストレッチゾーン、フリーウェイト、ゴルフ、テニスコート・サッカーコート、ミニスタジオ、体育館、浴室、ドライサウナ、スチームサウナ、タンニング、エステティック、エンダモロジー、外観、フロント、パウダールーム、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "明石駅(JR・山陽)徒歩7分 明石郵便局前より徒歩2分 姫路・加古川方面からお越しの場合 大阪・神戸方面からお越しの場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004485"
+  ],
+  "name": "コナミスポーツクラブ 明石大久保",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004485/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒674-0068 兵庫県明石市大久保町ゆりのき通2丁目3-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 09:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～19:00 [各施設のご利用時間]営業時間終了15分前まで [各種手続き開始時間]コース変更・休会・退会その他の諸手続きは、営業開始の1時間後からでございます。 [各種手続き終了時間]コース変更・休会・退会その他の諸手続きは、営業終了の2時間前でございます。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週木曜日、夏季休館、年末年始]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第1スタジオ、第2スタジオ、コミックコーナー、3F ストレッチコーナー、プール、プールギャラリー、屋外プール、採暖室、3階マシンジム 有酸素マシン、3階マシンジム 筋力トレーニングマシン、2階マシンジム フリーウエイトエリア、2階マシンジム フリーウエイトエリア、4階 マシンジム 初心者向けエリア、ゴルフアカデミー、スカッシュ、体育館、トランポリン、体育館ギャラリー、白湯、水風呂、ハイパージェット、檜風呂、打たせ湯、露天風呂、かけ湯、露天風呂、寝湯、バイブラジェット、ドライサウナ、ミストサウナ、カラン・シャワー、カラン・シャワー、タンニング(日焼け)、エステティック、マッサージチェアあんま王、サプリメントサーバー、建物外観、施設外観、フロント、ロッカールーム、ロッカールーム(ごろりん)、パウダールーム、契約ロッカー、biima sports、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR神戸線大久保駅(直結)徒歩5分 山陽電鉄中八木駅徒歩15分 大阪・神戸方面からお越しの場合 姫路・加古川方面からお越しの場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004044"
+  ],
+  "name": "コナミスポーツクラブ 東加古川",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004044/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒675-0012 兵庫県加古川市野口町野口字竹ノ下210-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [施設ご利用時間]マシンジム・プールの利用時間は、平日/営業終了15分前・土日祝/営業終了30分前迄のご利用となります [電話受付時間]各営業時間内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週火曜日・夏季休館・年末年始休館等] [年末年始休館]2026年12月29日(水)～2027年1月3日(日)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 5F/スタジオ、3F/スクールプール、3F/クラブプール、3F/マッサージプール、4F/プールギャラリー、4F/マシンジム(有酸素運動)、4F/マシンジム(筋力トレーニング)、4F/フリーウェイト、4F/体育館、3F/お子様体操場、3F/浴室(男性)、3F/浴室(女性)、3F/ドライサウナ、3F/スチームサウナ、外観、1F/フロント、3F/ロッカールーム(大人)、3F/ロッカールーム(お子様)、3F/パウダールーム、1・3F/契約ロッカー、1・2F/駐車場、1F/駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR東加古川駅徒歩20分 神姫バス野口バス停徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-000361"
+  ],
+  "name": "コナミスポーツクラブ 加古川",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/000361/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒675-0066 兵庫県加古川市加古川町寺家町269-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールの利用時間は、営業終了15分前までのご利用となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "[毎週水曜日、夏季休館、年末年始等]",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、プール、プール(ウォーキングコース)、アトラクションプール、マシンジム/カーディオマシン、マシンシジム/ウェイトマシン、マシンジム/ストレッチ、フリーウェイトゾーン、パウダールーム、個別立ちシャワー、カラン、温浴、寝湯、水風呂、サウナ、タンニング(男性のみ)、エンダモロジールーム、カルチャー教室(レプトン英会話)、カルチャー教室2、カルチャー教室1、ピアノ(河合楽器)、サプリメントサーバー、フロント、ロッカー、リラクゼーションルーム、運動塾子どもロッカー、運動塾子ども観覧席、契約ロッカー、ベビーおむつ交換台、運動塾ドライヤー、運動塾トイレベビーチェア、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR加古川駅徒歩7分 加古川バイパス 加古川ランプ南へ",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004025"
+  ],
+  "name": "コナミスポーツクラブ 生駒",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004025/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒630-0251 奈良県生駒市谷田町1613",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～19:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 【1階】第1スタジオ、【2階】第2スタジオ、【3階】プール、気泡プール、【4階】プールギャラリー、【1階】マシンジム、【1階】フリーウエイト、【2階】風呂、【2階】サウナ、【2階】タンニング、施設外観、【1階】総合フロント、【2階】ロッカー、【2階】契約ロッカー、第1駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "近鉄生駒駅から徒歩5分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004075"
+  ],
+  "name": "コナミスポーツクラブ はりまや橋",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004075/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒781-0832 高知県高知市九反田4-10 トップワン四国2・3F",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水金] 10:00～22:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各種手続き受付時間]月火水金 11:00～20:00 土 11:00～18:00 日祝日11:00～16:00 [最終退館時間]営業終了時間までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、お盆、年末年始等 お支払いは現金取り扱いを終了しキャッシュレス対応とさせていただいております",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、プール、マシンジム、フリーウェイト、浴室、サウナ、エンダモロジー、施設外観、フロント、ロッカー、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "とさでん交通 菜園場町電停下車 とさでん交通バス 菜園場町バス停下車 とさでん交通バス 南はりまや橋バス停下車",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004084"
+  ],
+  "name": "コナミスポーツクラブ 福岡城南",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004084/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒814-0104 福岡県福岡市城南区別府3-1-26 ※地下鉄七隈線で別府駅3番出口を出て左に徒歩1分!!城南区役所目の前",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 [各施設利用時間]マシンジム・プールの利用時間は、営業終了15分前までのご利用となります。 [各種手続き開始時間]コース変更・退会・休会・その他手続きは営業時間の1時間後となります。 [各種手続き終了時間]コース変更・退会・休会・その他手続きは営業終了時間の2時間前となります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、体育館、グループエクササイズゾーン、25M&times;4コースプール、25M&times;5コースプール、気泡プール、カーディオゾーン、フリーウエイト、ストレッチゾーン、レジスタンスゾーン、ゴルフアカデミー、白湯、シャワー、水風呂、パウダールーム、ドライサウナ、ミストサウナ、タンニング、エンダモロジー、城南スポーツ接骨院・鍼灸マッサージ院、運動塾フロント、総合フロント、スイミングギャラリー、ロッカー、建物外観、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "別府駅徒歩1分【福岡市営地下鉄七隈線】 202号線別府1丁目交差点より20M 別府駅前(旧別府2丁目)停留所下車徒歩3分【西鉄バス】",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004452"
+  ],
+  "name": "コナミスポーツクラブ 長崎",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004452/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ",
+    "塩サウナ",
+    "温泉付き"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒850-0036 長崎県長崎市五島町5-38",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～20:00 平日:運動エリア(マシンジム・プール)のご利用最終時間は、22:30までとなります。 土曜日:運動エリア(マシンジム・プール)のご利用最終時間は、20:30までとなります。 日祝日:運動エリア(マシンジム・プール)のご利用最終時間は、19:45までとなります。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、夏期休館、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 8階スタジオ、10階スタジオ、プール1、気泡プール、マシンジム、フリーウェイト、ゴルフアカデミー、ゴルフセルフ打席利用、浴室、温浴都度利用(天然温泉)、露天風呂、ドライサウナ、スチームサウナ、塩サウナ、タンニング、コラーゲンマシン、エンダモロジー、レストルーム、コミュニティゾーン、コミックコーナー、施設外観、フロント、ロッカー(男女)、契約ロッカー、駐車場/駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR長崎駅より徒歩7分 五島町電停より徒歩1分 大波止方面行き乗車の場合「五島町停留所」 長崎駅方面行き乗車の場合「大波止停留所」 浦上・長崎駅方面からお越しの場合 大浦・愛宕方面からお越しの場合",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003968"
+  ],
+  "name": "コナミスポーツクラブ 天草",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003968/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒863-0016 熊本県天草市城下町6番18号 リンドマールTAIYO 駐車場内",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火水木] 10:00～22:00 [土] 10:00～19:00 [日・祝休日] 10:00～17:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日 、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: 第一スタジオ、第二スタジオ、リラックススペース、学習ルーム、プール、スクールギャラリー、気泡プール、採暖室、マシンジム、マシンジム2、ストレッチスペース、フリーウェイト、浴室、サウナ、リラックスルーム、フロント、更衣ロッカー、男子スクールロッカー、女子スクールロッカー、パウダールーム",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "九州産交バス 「船の尾」バス停下車 徒歩1分 九州産交バス 市内循環バス(のってみゅうかー)「船の尾」バス停下車 徒歩1分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004065"
+  ],
+  "name": "コナミスポーツクラブ 沖縄",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004065/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒900-0005 沖縄県那覇市天久902",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月火木金] 10:00～23:00 [土] 10:00～20:00 [日・祝休日] 10:00～18:00 未成年の施設利用は22:00まで",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、夏期特別休館、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ、スタジオ2、プール、気泡プール、マシンジム、フリーウエイト、温浴・冷浴、露天風呂、サウナ、エンダモロジー、外観、フロント、biima sports、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国道58号線沿い天久(アメク)バス停前",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-003967"
+  ],
+  "name": "コナミスポーツクラブ 北上",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/003967/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒024-0092 岩手県北上市新穀町1丁目4-1 ツインモールプラザ西館7・8階 電話番号 0197-61-4700",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～18:00",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日 、お盆、年末年始等",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1、スタジオ2、スタジオ3、プール、マシンジム、フリーウエイト、浴室、サウナ、タンニング、コラーゲンカプセル、プロショップ、ロッカールーム、契約ロッカー、駐車場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "「北上駅」徒歩10分",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-konami-004028"
+  ],
+  "name": "コナミスポーツクラブ 岡山",
+  "officialUrl": "https://information.konamisportsclub.jp/ksc/004028/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒700-0903 岡山県岡山市北区幸町10-1",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "[月水木金] 10:00～23:00 [土] 10:00～21:00 [日・祝休日] 10:00～18:00 [プール利用時間]プールのご利用可能時間は平日22時まで。土曜日20時までです。",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、お盆、年末年始 キャッシュレス施設のためクレジット・電子マネー・QRコードでのみお支払い可",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "施設内エリア: スタジオ1(3F)、スタジオ2(2F)、プール、アトラクションプール、マシンジム、フリーウェイトゾーン、体育館、温浴施設、パウダールーム、ドライサウナ、タンニング、エンダモロジー、ライトケア、施設、フロント、契約ロッカー、駐車場、駐輪場",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/facility.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR岡山駅 下石井公園横 両備幸町パーキング(提携駐車場)",
+      "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/facility.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 

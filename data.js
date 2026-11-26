@@ -73905,5 +73905,1648 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
     "officialUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/"
+  },
+  {
+    "id": "manual-konami-004061",
+    "name": "コナミスポーツクラブ 新札幌",
+    "prefecture": "北海道",
+    "address": "〒004-0052 北海道札幌市厚別区厚別中央2条4丁目6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004061/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004061/"
+  },
+  {
+    "id": "manual-konami-004058",
+    "name": "コナミスポーツクラブ もいわ",
+    "prefecture": "北海道",
+    "address": "〒005-0802 北海道札幌市南区川沿2条1丁目1-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004058/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004058/"
+  },
+  {
+    "id": "manual-konami-004416",
+    "name": "コナミスポーツクラブ 札幌",
+    "prefecture": "北海道",
+    "address": "〒060-0004 北海道札幌市中央区北4条西6丁目3番4号 タイムズステーション札幌駅前ビル7～9階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004416/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004416/"
+  },
+  {
+    "id": "manual-konami-004407",
+    "name": "コナミスポーツクラブ 札幌円山",
+    "prefecture": "北海道",
+    "address": "〒064-0801 北海道札幌市中央区南1条西27丁目1-1 マルヤマクラス4～5階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004407/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004407/"
+  },
+  {
+    "id": "manual-konami-004101",
+    "name": "コナミスポーツクラブ 仙台長町",
+    "prefecture": "宮城県",
+    "address": "〒982-0011 宮城県仙台市太白区長町7-20-5 ララガーデン長町4・5階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004101/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004101/"
+  },
+  {
+    "id": "manual-konami-004060",
+    "name": "コナミスポーツクラブ 川口",
+    "prefecture": "埼玉県",
+    "address": "〒332-0028 埼玉県川口市宮町18-9 ララガーデン川口 1・2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川口市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004060/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004060/"
+  },
+  {
+    "id": "manual-konami-004081",
+    "name": "コナミスポーツクラブ 武蔵浦和",
+    "prefecture": "埼玉県",
+    "address": "〒336-0021 埼玉県さいたま市南区別所7‐2‐1 ザ・ファーストタワー2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "さいたま市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004081/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004081/"
+  },
+  {
+    "id": "manual-konami-004447",
+    "name": "コナミスポーツクラブ 川越",
+    "prefecture": "埼玉県",
+    "address": "〒350-0809 埼玉県川越市鯨井新田10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川越市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004447/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004447/"
+  },
+  {
+    "id": "manual-konami-004498",
+    "name": "コナミスポーツクラブ 入間",
+    "prefecture": "埼玉県",
+    "address": "〒358-0003 埼玉県入間市豊岡1-1-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "入間市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004498/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004498/"
+  },
+  {
+    "id": "manual-konami-007879",
+    "name": "コナミスポーツクラブ 北上尾",
+    "prefecture": "埼玉県",
+    "address": "〒362-0015 埼玉県上尾市緑丘3-4-61 P・A・P・A上尾ショッピングアヴェニュー内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "上尾市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007879/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007879/"
+  },
+  {
+    "id": "manual-konami-004462",
+    "name": "コナミスポーツクラブ 稲毛",
+    "prefecture": "千葉県",
+    "address": "〒263-0043 千葉県千葉市稲毛区小仲台1-4-20 イオン稲毛店4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004462/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004462/"
+  },
+  {
+    "id": "manual-konami-004483",
+    "name": "コナミスポーツクラブ 都賀",
+    "prefecture": "千葉県",
+    "address": "〒264-0025 千葉県千葉市若葉区都賀3-11-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004483/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004483/"
+  },
+  {
+    "id": "manual-konami-004475",
+    "name": "コナミスポーツクラブ 北小金",
+    "prefecture": "千葉県",
+    "address": "〒270-0014 千葉県松戸市小金一番地 イオン北小金5F(運動塾)/6F(フィットネス)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004475/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004475/"
+  },
+  {
+    "id": "manual-konami-004089",
+    "name": "コナミスポーツクラブ 五香",
+    "prefecture": "千葉県",
+    "address": "〒270-2261 千葉県松戸市常盤平5-1-6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004089/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004089/"
+  },
+  {
+    "id": "manual-konami-000401",
+    "name": "コナミスポーツクラブ 市川",
+    "prefecture": "千葉県",
+    "address": "〒272-0015 千葉県市川市鬼高1-1-1 ニッケコルトンプラザ",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000401/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/000401/"
+  },
+  {
+    "id": "manual-konami-004067",
+    "name": "コナミスポーツクラブ 妙典",
+    "prefecture": "千葉県",
+    "address": "〒272-0111 千葉県市川市妙典4-4-27 妙典センタービル4・5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004067/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004067/"
+  },
+  {
+    "id": "manual-konami-004404",
+    "name": "コナミスポーツクラブ 船橋",
+    "prefecture": "千葉県",
+    "address": "〒273-0011 千葉県船橋市湊町2-8-45 コナミスポーツクラブ 船橋(船橋市役所前・船橋中央消防署横)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "船橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004404/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004404/"
+  },
+  {
+    "id": "manual-konami-004423",
+    "name": "コナミスポーツクラブ 西船橋",
+    "prefecture": "千葉県",
+    "address": "〒273-0025 千葉県船橋市印内町579-1 ロクロービル",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "船橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004423/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004423/"
+  },
+  {
+    "id": "manual-konami-004442",
+    "name": "コナミスポーツクラブ 下総中山",
+    "prefecture": "千葉県",
+    "address": "〒273-0035 千葉県船橋市本中山2丁目10番1号 ミレニティ中山 5・6階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "船橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004442/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004442/"
+  },
+  {
+    "id": "manual-konami-004411",
+    "name": "コナミスポーツクラブ 津田沼",
+    "prefecture": "千葉県",
+    "address": "〒275-0016 千葉県習志野市津田沼1-8-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "習志野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004411/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004411/"
+  },
+  {
+    "id": "manual-konami-004039",
+    "name": "コナミスポーツクラブ 五井",
+    "prefecture": "千葉県",
+    "address": "〒290-0056 千葉県市原市五井5232-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004039/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004039/"
+  },
+  {
+    "id": "manual-konami-003964",
+    "name": "コナミスポーツクラブ 船堀",
+    "prefecture": "東京都",
+    "address": "〒134-0091 東京都江戸川区船堀3-5-7 TOKIビル4F 電話番号 03-5605-5311",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江戸川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003964/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003964/"
+  },
+  {
+    "id": "manual-konami-000589",
+    "name": "コナミスポーツクラブ 東大島",
+    "prefecture": "東京都",
+    "address": "〒136-0072 東京都江東区大島7-38-30 イオン東大島4階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江東区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000589/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/000589/"
+  },
+  {
+    "id": "manual-konami-004501",
+    "name": "コナミスポーツクラブ 本店",
+    "prefecture": "東京都",
+    "address": "〒140-0002 東京都品川区東品川4-10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004501/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004501/"
+  },
+  {
+    "id": "manual-konami-003930",
+    "name": "コナミスポーツクラブ 五反田",
+    "prefecture": "東京都",
+    "address": "〒141-0022 東京都品川区東五反田1-22-1 日本生命五反田イーストビルB1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003930/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003930/"
+  },
+  {
+    "id": "manual-konami-007877",
+    "name": "コナミスポーツクラブ 大森町",
+    "prefecture": "東京都",
+    "address": "〒143-0015 東京都大田区大森西3-31-8 マルエツ大森町店3階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007877/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007877/"
+  },
+  {
+    "id": "manual-konami-007876",
+    "name": "コナミスポーツクラブ 蒲田",
+    "prefecture": "東京都",
+    "address": "〒144-0052 東京都大田区蒲田5-47-7 マルエツ蒲田5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007876/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007876/"
+  },
+  {
+    "id": "manual-konami-006023",
+    "name": "コナミスポーツクラブ 恵比寿",
+    "prefecture": "東京都",
+    "address": "〒150-0012 東京都渋谷区広尾1-1-40 恵比寿プライムスクエア内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "渋谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006023/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006023/"
+  },
+  {
+    "id": "manual-konami-007871",
+    "name": "コナミスポーツクラブ 渋谷",
+    "prefecture": "東京都",
+    "address": "〒150-0045 東京都渋谷区神泉町18-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "渋谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007871/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007871/"
+  },
+  {
+    "id": "manual-konami-006034",
+    "name": "コナミスポーツクラブ 碑文谷",
+    "prefecture": "東京都",
+    "address": "〒152-0003 東京都目黒区碑文谷2-1-24",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006034/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006034/"
+  },
+  {
+    "id": "manual-konami-006029",
+    "name": "コナミスポーツクラブ 自由が丘駅前",
+    "prefecture": "東京都",
+    "address": "〒152-0035 東京都目黒区自由が丘2-12-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006029/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006029/"
+  },
+  {
+    "id": "manual-konami-004446",
+    "name": "コナミスポーツクラブ 目黒青葉台",
+    "prefecture": "東京都",
+    "address": "〒153-0042 東京都目黒区青葉台2-19-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004446/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004446/"
+  },
+  {
+    "id": "manual-konami-006022",
+    "name": "コナミスポーツクラブ 目黒",
+    "prefecture": "東京都",
+    "address": "〒153-0064 東京都目黒区下目黒1-8-1 アルコタワー3階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006022/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006022/"
+  },
+  {
+    "id": "manual-konami-004461",
+    "name": "コナミスポーツクラブ 二子玉川",
+    "prefecture": "東京都",
+    "address": "〒158-0094 東京都世田谷区玉川2-27-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004461/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004461/"
+  },
+  {
+    "id": "manual-konami-004414",
+    "name": "コナミスポーツクラブ 飯田橋",
+    "prefecture": "東京都",
+    "address": "〒162-0824 東京都新宿区揚場町2-1 軽子坂MNビル地下1階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新宿区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004414/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004414/"
+  },
+  {
+    "id": "manual-konami-006024",
+    "name": "コナミスポーツクラブ 荻窪南口",
+    "prefecture": "東京都",
+    "address": "〒167-0051 東京都杉並区荻窪5-30-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "杉並区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006024/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006024/"
+  },
+  {
+    "id": "manual-konami-007833",
+    "name": "コナミスポーツクラブ 成増",
+    "prefecture": "東京都",
+    "address": "〒175-0094 東京都板橋区成増3-30-19",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "板橋区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007833/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007833/"
+  },
+  {
+    "id": "manual-konami-003932",
+    "name": "コナミスポーツクラブ 武蔵野",
+    "prefecture": "東京都",
+    "address": "〒180-0006 東京都武蔵野市中町1-11-4 武蔵野ニッセイプラザ7F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003932/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003932/"
+  },
+  {
+    "id": "manual-konami-006028",
+    "name": "コナミスポーツクラブ 武蔵境",
+    "prefecture": "東京都",
+    "address": "〒180-0023 東京都武蔵野市境南町2-1-6 ライザ武蔵境内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006028/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006028/"
+  },
+  {
+    "id": "manual-konami-004469",
+    "name": "コナミスポーツクラブ 府中",
+    "prefecture": "東京都",
+    "address": "〒183-0022 東京都府中市宮西町1-27-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "府中市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004469/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004469/"
+  },
+  {
+    "id": "manual-konami-004054",
+    "name": "コナミスポーツクラブ 一橋学園",
+    "prefecture": "東京都",
+    "address": "〒187-0022 東京都小平市上水本町4-16-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小平市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004054/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004054/"
+  },
+  {
+    "id": "manual-konami-004085",
+    "name": "コナミスポーツクラブ 稲城",
+    "prefecture": "東京都",
+    "address": "〒206-0802 東京都稲城市東長沼3107-4 京王リトナード稲城5・6階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "稲城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004085/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004085/"
+  },
+  {
+    "id": "manual-konami-004070",
+    "name": "コナミスポーツクラブ 武蔵小杉",
+    "prefecture": "神奈川県",
+    "address": "〒211-0004 神奈川県川崎市中原区新丸子東3-1100-14",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004070/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004070/"
+  },
+  {
+    "id": "manual-konami-004479",
+    "name": "コナミスポーツクラブ 川崎",
+    "prefecture": "神奈川県",
+    "address": "〒212-8576 神奈川県川崎市幸区堀川町72-1 ラゾーナ川崎プラザ5階・6階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004479/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004479/"
+  },
+  {
+    "id": "manual-konami-004079",
+    "name": "コナミスポーツクラブ 横浜",
+    "prefecture": "神奈川県",
+    "address": "〒221-0844 神奈川県横浜市神奈川区沢渡5番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004079/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004079/"
+  },
+  {
+    "id": "manual-konami-006026",
+    "name": "コナミスポーツクラブ たまプラーザ",
+    "prefecture": "神奈川県",
+    "address": "〒225-0002 神奈川県横浜市青葉区美しが丘1-13-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006026/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006026/"
+  },
+  {
+    "id": "manual-konami-004409",
+    "name": "コナミスポーツクラブ 上大岡",
+    "prefecture": "神奈川県",
+    "address": "〒233-0002 神奈川県横浜市港南区上大岡西1-18-5 mioka2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004409/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004409/"
+  },
+  {
+    "id": "manual-konami-006033",
+    "name": "コナミスポーツクラブ 磯子",
+    "prefecture": "神奈川県",
+    "address": "〒235-0023 神奈川県横浜市磯子区森1-12-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006033/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006033/"
+  },
+  {
+    "id": "manual-konami-004048",
+    "name": "コナミスポーツクラブ 洋光台",
+    "prefecture": "神奈川県",
+    "address": "〒235-0045 神奈川県横浜市磯子区洋光台3-1-4 洋光台商事ビル",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004048/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004048/"
+  },
+  {
+    "id": "manual-konami-006027",
+    "name": "コナミスポーツクラブ 希望が丘",
+    "prefecture": "神奈川県",
+    "address": "〒241-0826 神奈川県横浜市旭区東希望が丘107",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/006027/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/006027/"
+  },
+  {
+    "id": "manual-konami-004464",
+    "name": "コナミスポーツクラブ 中央林間",
+    "prefecture": "神奈川県",
+    "address": "〒242-0007 神奈川県大和市中央林間6丁目6-24番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大和市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004464/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004464/"
+  },
+  {
+    "id": "manual-konami-000643",
+    "name": "コナミスポーツクラブ 厚木",
+    "prefecture": "神奈川県",
+    "address": "〒243-0031 神奈川県厚木市戸室5-31-1 アツギトレリス4階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "厚木市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000643/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/000643/"
+  },
+  {
+    "id": "manual-konami-004071",
+    "name": "コナミスポーツクラブ 三ツ境",
+    "prefecture": "神奈川県",
+    "address": "〒246-0022 神奈川県横浜市瀬谷区三ツ境7-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004071/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004071/"
+  },
+  {
+    "id": "manual-konami-000584",
+    "name": "コナミスポーツクラブ 橋本",
+    "prefecture": "神奈川県",
+    "address": "〒252-0131 神奈川県相模原市緑区西橋本5-1-1 ラ・フロール橋本4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "相模原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000584/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/000584/"
+  },
+  {
+    "id": "manual-konami-004456",
+    "name": "コナミスポーツクラブ 岐阜",
+    "prefecture": "岐阜県",
+    "address": "〒500-8856 岐阜県岐阜市橋本町1-10-1 アクティブG2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岐阜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004456/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004456/"
+  },
+  {
+    "id": "manual-konami-004052",
+    "name": "コナミスポーツクラブ 大垣",
+    "prefecture": "岐阜県",
+    "address": "〒503-0808 岐阜県大垣市三塚町463-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大垣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004052/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004052/"
+  },
+  {
+    "id": "manual-konami-007858",
+    "name": "コナミスポーツクラブ 岡崎",
+    "prefecture": "愛知県",
+    "address": "〒444-0068 愛知県岡崎市井田南町3-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007858/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007858/"
+  },
+  {
+    "id": "manual-konami-004050",
+    "name": "コナミスポーツクラブ 鳴海山下",
+    "prefecture": "愛知県",
+    "address": "〒458-0801 愛知県名古屋市緑区鳴海町字山下78-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004050/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004050/"
+  },
+  {
+    "id": "manual-konami-004092",
+    "name": "コナミスポーツクラブ 星ヶ丘",
+    "prefecture": "愛知県",
+    "address": "〒464-0801 愛知県名古屋市千種区星ヶ丘1丁目1番7号テックランド星ヶ丘5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004092/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004092/"
+  },
+  {
+    "id": "manual-konami-004047",
+    "name": "コナミスポーツクラブ いりなか",
+    "prefecture": "愛知県",
+    "address": "〒466-0826 愛知県名古屋市昭和区滝川町18-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004047/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004047/"
+  },
+  {
+    "id": "manual-konami-007857",
+    "name": "コナミスポーツクラブ 鈴鹿",
+    "prefecture": "三重県",
+    "address": "〒513-0801 三重県鈴鹿市神戸3丁目24-28",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鈴鹿市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/007857/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/007857/"
+  },
+  {
+    "id": "manual-konami-004477",
+    "name": "コナミスポーツクラブ 北大路",
+    "prefecture": "京都府",
+    "address": "〒603-8142 京都府京都市北区小山北上総町49-1 イオンモール北大路3F(イオンモール館内・北側エレベーターで3階に)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "京都市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004477/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004477/"
+  },
+  {
+    "id": "manual-konami-004427",
+    "name": "コナミスポーツクラブ 西大路御池",
+    "prefecture": "京都府",
+    "address": "〒604-8437 京都府京都市中京区西ノ京東中合町70",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "京都市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004427/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004427/"
+  },
+  {
+    "id": "manual-konami-004023",
+    "name": "コナミスポーツクラブ 伏見",
+    "prefecture": "京都府",
+    "address": "〒612-8082 京都府京都市伏見区両替町2丁目348-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "京都市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004023/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004023/"
+  },
+  {
+    "id": "manual-konami-004105",
+    "name": "コナミスポーツクラブ 大阪ステーションシティ",
+    "prefecture": "大阪府",
+    "address": "〒530-0001 大阪府大阪市北区梅田3-1-3 大阪ステーションシティノースゲートビルディング11階~13階(入口:11階)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004105/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004105/"
+  },
+  {
+    "id": "manual-konami-004421",
+    "name": "コナミスポーツクラブ 新大阪",
+    "prefecture": "大阪府",
+    "address": "〒532-0004 大阪府大阪市淀川区西宮原2-1-3 ソーラ新大阪21ビル4・5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004421/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004421/"
+  },
+  {
+    "id": "manual-konami-004098",
+    "name": "コナミスポーツクラブ 上新庄",
+    "prefecture": "大阪府",
+    "address": "〒533-0006 大阪府大阪市東淀川区上新庄2-24-24 上新庄南阪急ビル2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004098/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004098/"
+  },
+  {
+    "id": "manual-konami-004415",
+    "name": "コナミスポーツクラブ 北浜",
+    "prefecture": "大阪府",
+    "address": "〒541-0043 大阪府大阪市中央区高麗橋1-7-3 The Kitahama Plaza 4～6階(入口:4階)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004415/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004415/"
+  },
+  {
+    "id": "manual-konami-004445",
+    "name": "コナミスポーツクラブ 心斎橋",
+    "prefecture": "大阪府",
+    "address": "〒542-0081 大阪府大阪市中央区南船場3-4-26 THE PEAK SHINSAIBASHI 3～9階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004445/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004445/"
+  },
+  {
+    "id": "manual-konami-003929",
+    "name": "コナミスポーツクラブ 南千里",
+    "prefecture": "大阪府",
+    "address": "〒565-0833 大阪府吹田市五月が丘西7-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "吹田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003929/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003929/"
+  },
+  {
+    "id": "manual-konami-004476",
+    "name": "コナミスポーツクラブ 北千里",
+    "prefecture": "大阪府",
+    "address": "〒565-0874 大阪府吹田市古江台4丁目2-50イオン北千里店7階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "吹田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004476/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004476/"
+  },
+  {
+    "id": "manual-konami-004055",
+    "name": "コナミスポーツクラブ 茨木",
+    "prefecture": "大阪府",
+    "address": "〒567-0041 大阪府茨木市下穂積1丁目7番5号 イオンモール茨木別棟",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "茨木市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004055/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004055/"
+  },
+  {
+    "id": "manual-konami-004076",
+    "name": "コナミスポーツクラブ 守口",
+    "prefecture": "大阪府",
+    "address": "〒570-0084 大阪府守口市緑町2-13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "守口市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004076/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004076/"
+  },
+  {
+    "id": "manual-konami-004484",
+    "name": "コナミスポーツクラブ 寝屋川",
+    "prefecture": "大阪府",
+    "address": "〒572-0832 大阪府寝屋川市本町17-8",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "寝屋川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004484/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004484/"
+  },
+  {
+    "id": "manual-konami-004087",
+    "name": "コナミスポーツクラブ 香里ケ丘",
+    "prefecture": "大阪府",
+    "address": "〒573-0084 大阪府枚方市香里ケ丘3丁目3-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "枚方市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004087/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004087/"
+  },
+  {
+    "id": "manual-konami-004091",
+    "name": "コナミスポーツクラブ 新石切",
+    "prefecture": "大阪府",
+    "address": "〒579-8013 大阪府東大阪市西石切町7丁目1-25",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004091/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004091/"
+  },
+  {
+    "id": "manual-konami-004038",
+    "name": "コナミスポーツクラブ 光明池",
+    "prefecture": "大阪府",
+    "address": "〒590-0138 大阪府堺市南区鴨谷台2-1-5 サンピア2番館5.6.7.8階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "堺市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004038/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004038/"
+  },
+  {
+    "id": "manual-konami-004072",
+    "name": "コナミスポーツクラブ 和泉中央",
+    "prefecture": "大阪府",
+    "address": "〒594-0041 大阪府和泉市いぶき野5丁目6-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "和泉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004072/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004072/"
+  },
+  {
+    "id": "manual-konami-004032",
+    "name": "コナミスポーツクラブ 東岸和田",
+    "prefecture": "大阪府",
+    "address": "〒596-0827 大阪府岸和田市上松町2-11-15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岸和田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004032/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004032/"
+  },
+  {
+    "id": "manual-konami-003937",
+    "name": "コナミスポーツクラブ 神戸",
+    "prefecture": "兵庫県",
+    "address": "〒650-0044 兵庫県神戸市中央区東川崎町1-7-7 神戸ハーバーランドumie NORTHMALL5～7F(入口は6F)※東エレベーター6F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "神戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003937/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003937/"
+  },
+  {
+    "id": "manual-konami-004090",
+    "name": "コナミスポーツクラブ 三宮",
+    "prefecture": "兵庫県",
+    "address": "〒651-0087 兵庫県神戸市中央区御幸通5丁目1-21 富永ビル",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "神戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004090/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004090/"
+  },
+  {
+    "id": "manual-konami-004489",
+    "name": "コナミスポーツクラブ ジェームス山",
+    "prefecture": "兵庫県",
+    "address": "〒655-0873 兵庫県神戸市垂水区青山台7-7-1 イオンジェームス山店4F (立体駐車場7F)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "神戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004489/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004489/"
+  },
+  {
+    "id": "manual-konami-004471",
+    "name": "コナミスポーツクラブ 本山南",
+    "prefecture": "兵庫県",
+    "address": "〒658-0014 兵庫県神戸市東灘区北青木2-10-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "神戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004471/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004471/"
+  },
+  {
+    "id": "manual-konami-004064",
+    "name": "コナミスポーツクラブ 本店西宮アネックス",
+    "prefecture": "兵庫県",
+    "address": "〒662-0846 兵庫県西宮市森下町10-21",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "西宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004064/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004064/"
+  },
+  {
+    "id": "manual-konami-004021",
+    "name": "コナミスポーツクラブ 本店西宮",
+    "prefecture": "兵庫県",
+    "address": "〒663-8204 兵庫県西宮市高松町3-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "西宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004021/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004021/"
+  },
+  {
+    "id": "manual-konami-004097",
+    "name": "コナミスポーツクラブ 川西",
+    "prefecture": "兵庫県",
+    "address": "〒666-0016 兵庫県川西市中央町3-12 ビッグボックス川西内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川西市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004097/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004097/"
+  },
+  {
+    "id": "manual-konami-004074",
+    "name": "コナミスポーツクラブ 三田",
+    "prefecture": "兵庫県",
+    "address": "〒669-1513 兵庫県三田市三輪1-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "三田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004074/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004074/"
+  },
+  {
+    "id": "manual-konami-004036",
+    "name": "コナミスポーツクラブ 明石",
+    "prefecture": "兵庫県",
+    "address": "〒673-0891 兵庫県明石市大明石町2-3-31",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "明石市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004036/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004036/"
+  },
+  {
+    "id": "manual-konami-004485",
+    "name": "コナミスポーツクラブ 明石大久保",
+    "prefecture": "兵庫県",
+    "address": "〒674-0068 兵庫県明石市大久保町ゆりのき通2丁目3-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "明石市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004485/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004485/"
+  },
+  {
+    "id": "manual-konami-004044",
+    "name": "コナミスポーツクラブ 東加古川",
+    "prefecture": "兵庫県",
+    "address": "〒675-0012 兵庫県加古川市野口町野口字竹ノ下210-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "加古川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004044/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004044/"
+  },
+  {
+    "id": "manual-konami-000361",
+    "name": "コナミスポーツクラブ 加古川",
+    "prefecture": "兵庫県",
+    "address": "〒675-0066 兵庫県加古川市加古川町寺家町269-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "加古川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/000361/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/000361/"
+  },
+  {
+    "id": "manual-konami-004025",
+    "name": "コナミスポーツクラブ 生駒",
+    "prefecture": "奈良県",
+    "address": "〒630-0251 奈良県生駒市谷田町1613",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "生駒市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004025/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004025/"
+  },
+  {
+    "id": "manual-konami-004075",
+    "name": "コナミスポーツクラブ はりまや橋",
+    "prefecture": "高知県",
+    "address": "〒781-0832 高知県高知市九反田4-10 トップワン四国2・3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高知市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004075/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004075/"
+  },
+  {
+    "id": "manual-konami-004084",
+    "name": "コナミスポーツクラブ 福岡城南",
+    "prefecture": "福岡県",
+    "address": "〒814-0104 福岡県福岡市城南区別府3-1-26 ※地下鉄七隈線で別府駅3番出口を出て左に徒歩1分!!城南区役所目の前",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004084/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004084/"
+  },
+  {
+    "id": "manual-konami-004452",
+    "name": "コナミスポーツクラブ 長崎",
+    "prefecture": "長崎県",
+    "address": "〒850-0036 長崎県長崎市五島町5-38",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "塩サウナ",
+      "温泉付き"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004452/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004452/"
+  },
+  {
+    "id": "manual-konami-003968",
+    "name": "コナミスポーツクラブ 天草",
+    "prefecture": "熊本県",
+    "address": "〒863-0016 熊本県天草市城下町6番18号 リンドマールTAIYO 駐車場内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "天草市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003968/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003968/"
+  },
+  {
+    "id": "manual-konami-004065",
+    "name": "コナミスポーツクラブ 沖縄",
+    "prefecture": "沖縄県",
+    "address": "〒900-0005 沖縄県那覇市天久902",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "那覇市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004065/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004065/"
+  },
+  {
+    "id": "manual-konami-003967",
+    "name": "コナミスポーツクラブ 北上",
+    "prefecture": "岩手県",
+    "address": "〒024-0092 岩手県北上市新穀町1丁目4-1 ツインモールプラザ西館7・8階 電話番号 0197-61-4700",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北上市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/003967/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/003967/"
+  },
+  {
+    "id": "manual-konami-004028",
+    "name": "コナミスポーツクラブ 岡山",
+    "prefecture": "岡山県",
+    "address": "〒700-0903 岡山県岡山市北区幸町10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/",
+    "officialUrl": "https://information.konamisportsclub.jp/ksc/004028/"
   }
 ];
