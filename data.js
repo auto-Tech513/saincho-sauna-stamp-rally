@@ -71475,5 +71475,46 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://hotel-wanderlust.jp",
     "officialUrl": "https://hotel-wanderlust.jp"
-  }
+  },
+{
+  "id": "manual-tokyo-sengenyu-ekoda",
+  "name": "浅間湯",
+  "prefecture": "東京都",
+  "address": "東京都練馬区栄町38-3",
+  "addressSource": "公式プレスリリース",
+  "addressCheckedAt": "2026-11-26",
+  "city": "練馬区",
+  "trait": "urban",
+  "tags": [
+    "開業予定"
+  ],
+  "features": [
+    "水風呂あり",
+    "セルフロウリュ"
+  ],
+  "source": "公式",
+  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000193047.html"
+},
+{
+  "id": "manual-yamanashi-saden",
+  "name": "サ電（SADEN）",
+  "prefecture": "山梨県",
+  "address": "山梨県富士吉田市新町二丁目8-12",
+  "addressSource": "公式プレスリリース",
+  "addressCheckedAt": "2026-11-26",
+  "city": "富士吉田市",
+  "trait": "custom",
+  "tags": [
+    "開業予定"
+  ],
+  "features": [
+    "水風呂あり",
+    "外気あり",
+    "セルフロウリュ",
+    "薪サウナ"
+  ],
+  "source": "公式",
+  "sourceUrl": "https://saden.jp/",
+  "officialUrl": "https://saden.jp/"
+}
 ];

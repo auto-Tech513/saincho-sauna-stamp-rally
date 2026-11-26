@@ -472,5 +472,23 @@
     "og": "/assets/news/saunahouse-share-sauna-day-2026-og.png",
     "thumb": "/assets/news/saunahouse-share-sauna-day-2026-thumb.webp",
     "generatedAt": "2026-11-25"
+  },
+  "yunoizumi-souka-bakido-collab-2026": {
+    "hero": "/assets/news/yunoizumi-souka-bakido-collab-2026-hero.webp",
+    "og": "/assets/news/yunoizumi-souka-bakido-collab-2026-og.png",
+    "thumb": "/assets/news/yunoizumi-souka-bakido-collab-2026-thumb.webp",
+    "generatedAt": "2026-11-26"
+  },
+  "sengenyu-ekoda-renewal-2026": {
+    "hero": "/assets/news/sengenyu-ekoda-renewal-2026-hero.webp",
+    "og": "/assets/news/sengenyu-ekoda-renewal-2026-og.png",
+    "thumb": "/assets/news/sengenyu-ekoda-renewal-2026-thumb.webp",
+    "generatedAt": "2026-11-26"
+  },
+  "saden-fujiyoshida-opening-2026": {
+    "hero": "/assets/news/saden-fujiyoshida-opening-2026-hero.webp",
+    "og": "/assets/news/saden-fujiyoshida-opening-2026-og.png",
+    "thumb": "/assets/news/saden-fujiyoshida-opening-2026-thumb.webp",
+    "generatedAt": "2026-11-26"
   }
 }
