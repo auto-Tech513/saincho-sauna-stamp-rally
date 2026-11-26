@@ -72346,5 +72346,1564 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
     "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP100/"
+  },
+  {
+    "id": "manual-holiday-001-mikawaanjo",
+    "name": "ホリデイスポーツクラブ 三河安城店",
+    "prefecture": "愛知県",
+    "address": "〒446-0058 愛知県安城市三河安城南町２丁目２−３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "安城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/"
+  },
+  {
+    "id": "manual-holiday-002-kariyachiryu",
+    "name": "ホリデイスポーツクラブ 刈谷知立店",
+    "prefecture": "愛知県",
+    "address": "〒472-0058 愛知県知立市上重原６丁目６１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "知立市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/"
+  },
+  {
+    "id": "manual-holiday-003-ichinomiya",
+    "name": "ホリデイスポーツクラブ 一宮店",
+    "prefecture": "愛知県",
+    "address": "〒491-0853 愛知県一宮市川田町５丁目１０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "一宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/"
+  },
+  {
+    "id": "manual-holiday-004-toyohashi",
+    "name": "ホリデイスポーツクラブ 豊橋店",
+    "prefecture": "愛知県",
+    "address": "〒441-8149 愛知県豊橋市中野町字平北80",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/"
+  },
+  {
+    "id": "manual-holiday-007-suzuka",
+    "name": "ホリデイスポーツクラブ 鈴鹿店",
+    "prefecture": "三重県",
+    "address": "〒513-0813 三重県鈴鹿市北玉垣町１６８３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鈴鹿市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/007-suzuka/"
+  },
+  {
+    "id": "manual-holiday-008-matsuyama",
+    "name": "ホリデイスポーツクラブ 松山店",
+    "prefecture": "愛媛県",
+    "address": "〒790-0962 愛媛県松山市枝松３丁目２７６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/"
+  },
+  {
+    "id": "manual-holiday-009-numazu",
+    "name": "ホリデイスポーツクラブ 沼津店",
+    "prefecture": "静岡県",
+    "address": "〒410-0033 静岡県沼津市杉崎町１１−６６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "沼津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/009-numazu/"
+  },
+  {
+    "id": "manual-holiday-010-yokkaichi",
+    "name": "ホリデイスポーツクラブ 四日市店",
+    "prefecture": "三重県",
+    "address": "〒510-0833 三重県四日市市中川原３丁目９−７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "四日市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/"
+  },
+  {
+    "id": "manual-holiday-011-matsumoto",
+    "name": "ホリデイスポーツクラブ 松本店",
+    "prefecture": "長野県",
+    "address": "〒390-0832 長野県松本市南松本２丁目５−４３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松本市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/"
+  },
+  {
+    "id": "manual-holiday-012-hamamatsu",
+    "name": "ホリデイスポーツクラブ 浜松店",
+    "prefecture": "静岡県",
+    "address": "〒430-0901 静岡県浜松市中央区曳馬６丁目１６−２０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/"
+  },
+  {
+    "id": "manual-holiday-013-saga",
+    "name": "ホリデイスポーツクラブ 佐賀店",
+    "prefecture": "佐賀県",
+    "address": "〒849-0934 佐賀県佐賀市開成６丁目５−３５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "佐賀市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/013-saga/"
+  },
+  {
+    "id": "manual-holiday-014-isesaki",
+    "name": "ホリデイスポーツクラブ 伊勢崎店",
+    "prefecture": "群馬県",
+    "address": "〒372-0041 群馬県伊勢崎市平和町１９－２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "伊勢崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/014-isesaki/"
+  },
+  {
+    "id": "manual-holiday-015-toyama",
+    "name": "ホリデイスポーツクラブ 富山店",
+    "prefecture": "富山県",
+    "address": "〒939-8073 富山県富山市大町52−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/015-toyama/"
+  },
+  {
+    "id": "manual-holiday-016-kofu",
+    "name": "ホリデイスポーツクラブ 甲府店",
+    "prefecture": "山梨県",
+    "address": "〒400-0035 山梨県甲府市飯田３丁目４−２６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "甲府市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/016-kofu/"
+  },
+  {
+    "id": "manual-holiday-017-fukuyama",
+    "name": "ホリデイスポーツクラブ 福山店",
+    "prefecture": "広島県",
+    "address": "〒720-0821 広島県福山市東川口町２丁目３−１５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/"
+  },
+  {
+    "id": "manual-holiday-019-kanazawa",
+    "name": "ホリデイスポーツクラブ 金沢店",
+    "prefecture": "石川県",
+    "address": "〒921-8043 石川県金沢市西泉２丁目９",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "金沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/"
+  },
+  {
+    "id": "manual-holiday-020-takaoka",
+    "name": "ホリデイスポーツクラブ 高岡店",
+    "prefecture": "富山県",
+    "address": "〒933-0946 富山県高岡市昭和町１丁目２−１２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/020-takaoka/"
+  },
+  {
+    "id": "manual-holiday-021-izumiotsu",
+    "name": "ホリデイスポーツクラブ 泉大津店",
+    "prefecture": "大阪府",
+    "address": "〒595-0036 大阪府泉大津市昭和町４−２２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "泉大津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/"
+  },
+  {
+    "id": "manual-holiday-022-umebayashi",
+    "name": "ホリデイスポーツクラブ 福岡梅林店",
+    "prefecture": "福岡県",
+    "address": "〒814-0144 福岡県福岡市城南区梅林４丁目７−２３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/"
+  },
+  {
+    "id": "manual-holiday-023-takasaki",
+    "name": "ホリデイスポーツクラブ 高崎店",
+    "prefecture": "群馬県",
+    "address": "〒370-0069 群馬県高崎市飯塚町４６４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/023-takasaki/"
+  },
+  {
+    "id": "manual-holiday-024-bentenbashi",
+    "name": "ホリデイスポーツクラブ 新潟弁天橋店",
+    "prefecture": "新潟県",
+    "address": "〒950-0925 新潟県新潟市中央区弁天橋通１丁目６−２５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新潟市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/"
+  },
+  {
+    "id": "manual-holiday-026-kumamotokita",
+    "name": "ホリデイスポーツクラブ 熊本北店",
+    "prefecture": "熊本県",
+    "address": "〒860-0863 熊本県熊本市中央区坪井６丁目２５−２０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "熊本市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/"
+  },
+  {
+    "id": "manual-holiday-027-oita",
+    "name": "ホリデイスポーツクラブ 大分店",
+    "prefecture": "大分県",
+    "address": "〒870-0005 大分県大分市王子北町５−３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大分市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/027-oita/"
+  },
+  {
+    "id": "manual-holiday-030-yahatanishi",
+    "name": "ホリデイスポーツクラブ 八幡西店",
+    "prefecture": "福岡県",
+    "address": "〒807-0072 福岡県北九州市八幡西区上上津役３丁目１７−２４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北九州市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/"
+  },
+  {
+    "id": "manual-holiday-031-hakodate",
+    "name": "ホリデイスポーツクラブ 函館店",
+    "prefecture": "北海道",
+    "address": "〒042-0942 北海道函館市柏木町１−３６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "函館市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/031-hakodate/"
+  },
+  {
+    "id": "manual-holiday-032-maebashi",
+    "name": "ホリデイスポーツクラブ 前橋店",
+    "prefecture": "群馬県",
+    "address": "〒371-0801 群馬県前橋市文京町１丁目４０−１３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "前橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/032-maebashi/"
+  },
+  {
+    "id": "manual-holiday-034-omuta",
+    "name": "ホリデイスポーツクラブ 大牟田店",
+    "prefecture": "福岡県",
+    "address": "〒836-0807 福岡県大牟田市旭町２丁目２８−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大牟田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/034-omuta/"
+  },
+  {
+    "id": "manual-holiday-036-utsunomiya",
+    "name": "ホリデイスポーツクラブ 宇都宮店",
+    "prefecture": "栃木県",
+    "address": "〒320-0052 栃木県宇都宮市中戸祭町８２８−１５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宇都宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/"
+  },
+  {
+    "id": "manual-holiday-037-nagano",
+    "name": "ホリデイスポーツクラブ 長野店",
+    "prefecture": "長野県",
+    "address": "〒381-0034 長野県長野市高田５３０−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/037-nagano/"
+  },
+  {
+    "id": "manual-holiday-038-asahikawa",
+    "name": "ホリデイスポーツクラブ 旭川店",
+    "prefecture": "北海道",
+    "address": "〒078-8336 北海道旭川市南６条通２０丁目１９７８−１７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "旭川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/"
+  },
+  {
+    "id": "manual-holiday-039-kiyota",
+    "name": "ホリデイスポーツクラブ 札幌清田店",
+    "prefecture": "北海道",
+    "address": "〒004-0864 北海道札幌市清田区北野４条５丁目７−２０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/039-kiyota/"
+  },
+  {
+    "id": "manual-holiday-040-akita",
+    "name": "ホリデイスポーツクラブ 秋田店",
+    "prefecture": "秋田県",
+    "address": "〒010-0002 秋田県秋田市東通仲町５−６４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "秋田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/040-akita/"
+  },
+  {
+    "id": "manual-holiday-041-narumi",
+    "name": "ホリデイスポーツクラブ 名古屋鳴海店",
+    "prefecture": "愛知県",
+    "address": "〒458-0844 愛知県名古屋市緑区鳴海町伝治山３−２１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/041-narumi/"
+  },
+  {
+    "id": "manual-holiday-042-nagaoka",
+    "name": "ホリデイスポーツクラブ 長岡店",
+    "prefecture": "新潟県",
+    "address": "〒940-0857 新潟県長岡市沖田１丁目５６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/"
+  },
+  {
+    "id": "manual-holiday-043-ota",
+    "name": "ホリデイスポーツクラブ 太田店",
+    "prefecture": "群馬県",
+    "address": "〒373-0817 群馬県太田市飯塚町９７７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "太田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/043-ota/"
+  },
+  {
+    "id": "manual-holiday-044-kita24",
+    "name": "ホリデイスポーツクラブ 札幌北24条店",
+    "prefecture": "北海道",
+    "address": "〒065-0024 北海道札幌市東区北２４条東１丁目１−２０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/044-kita24/"
+  },
+  {
+    "id": "manual-holiday-045-tomakomai",
+    "name": "ホリデイスポーツクラブ 苫小牧店",
+    "prefecture": "北海道",
+    "address": "〒053-0853 北海道苫小牧市花園町１丁目５−２２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "苫小牧市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/"
+  },
+  {
+    "id": "manual-holiday-046-izumo",
+    "name": "ホリデイスポーツクラブ 出雲店",
+    "prefecture": "島根県",
+    "address": "〒693-0063 島根県出雲市大塚町７２９−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "出雲市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/046-izumo/"
+  },
+  {
+    "id": "manual-holiday-047-ueda",
+    "name": "ホリデイスポーツクラブ 上田店",
+    "prefecture": "長野県",
+    "address": "〒386-0018 長野県上田市常田１丁目１０−６７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "上田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/047-ueda/"
+  },
+  {
+    "id": "manual-holiday-049-funabashi",
+    "name": "ホリデイスポーツクラブ 船橋日大前店",
+    "prefecture": "千葉県",
+    "address": "〒274-0060 千葉県船橋市坪井東４丁目３−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "船橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/049-funabashi/"
+  },
+  {
+    "id": "manual-holiday-050-nisshin",
+    "name": "ホリデイスポーツクラブ 日進長久手店",
+    "prefecture": "愛知県",
+    "address": "〒470-0136 愛知県日進市竹の山４丁目２７２３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "日進市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/050-nisshin/"
+  },
+  {
+    "id": "manual-holiday-052-ebina",
+    "name": "ホリデイスポーツクラブ 海老名かしわ台店",
+    "prefecture": "神奈川県",
+    "address": "〒243-0402 神奈川県海老名市柏ケ谷３丁目７−２８",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "海老名市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/052-ebina/"
+  },
+  {
+    "id": "manual-holiday-053-kodaira",
+    "name": "ホリデイスポーツクラブ 小平店",
+    "prefecture": "東京都",
+    "address": "〒187-0002 東京都小平市花小金井６丁目２−２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小平市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/053-kodaira/"
+  },
+  {
+    "id": "manual-holiday-054-higashiosaka",
+    "name": "ホリデイスポーツクラブ 東大阪店",
+    "prefecture": "大阪府",
+    "address": "〒577-0002 大阪府東大阪市稲田上町２丁目６−３７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/"
+  },
+  {
+    "id": "manual-holiday-055-morioka",
+    "name": "ホリデイスポーツクラブ 盛岡店",
+    "prefecture": "岩手県",
+    "address": "〒020-0121 岩手県盛岡市月が丘２丁目２−８",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "盛岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/055-morioka/"
+  },
+  {
+    "id": "manual-holiday-056-ichiharagoi",
+    "name": "ホリデイスポーツクラブ 市原五井店",
+    "prefecture": "千葉県",
+    "address": "〒290-0050 千葉県市原市更級１丁目８−１４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/"
+  },
+  {
+    "id": "manual-holiday-057-neyagawa",
+    "name": "ホリデイスポーツクラブ 寝屋川店",
+    "prefecture": "大阪府",
+    "address": "〒572-0059 大阪府寝屋川市黒原新町１１−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "寝屋川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/"
+  },
+  {
+    "id": "manual-holiday-058-okegawa",
+    "name": "ホリデイスポーツクラブ 桶川店",
+    "prefecture": "埼玉県",
+    "address": "〒363-0025 埼玉県桶川市下日出谷９２４−５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "桶川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/058-okegawa/"
+  },
+  {
+    "id": "manual-holiday-059-kusatsu",
+    "name": "ホリデイスポーツクラブ 草津店",
+    "prefecture": "滋賀県",
+    "address": "〒525-0027 滋賀県草津市野村４丁目３−１１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "草津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/"
+  },
+  {
+    "id": "manual-holiday-060-shimizu",
+    "name": "ホリデイスポーツクラブ 清水店",
+    "prefecture": "静岡県",
+    "address": "〒424-0044 静岡県静岡市清水区江尻台町２２−７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "静岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/060-shimizu/"
+  },
+  {
+    "id": "manual-holiday-061-fukaya",
+    "name": "ホリデイスポーツクラブ 深谷店",
+    "prefecture": "埼玉県",
+    "address": "〒366-0824 埼玉県深谷市西島町３丁目８−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "深谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/061-fukaya/"
+  },
+  {
+    "id": "manual-holiday-062-fuji",
+    "name": "ホリデイスポーツクラブ 富士店",
+    "prefecture": "静岡県",
+    "address": "〒416-0915 静岡県富士市富士町１−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富士市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/062-fuji/"
+  },
+  {
+    "id": "manual-holiday-063-hirano",
+    "name": "ホリデイスポーツクラブ 平野店",
+    "prefecture": "大阪府",
+    "address": "〒547-0021 大阪府大阪市平野区喜連東２丁目１１−２５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/063-hirano/"
+  },
+  {
+    "id": "manual-holiday-064-sagamihara",
+    "name": "ホリデイスポーツクラブ 相模原店",
+    "prefecture": "神奈川県",
+    "address": "〒252-0344 神奈川県相模原市南区古淵３丁目８−２６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "相模原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/"
+  },
+  {
+    "id": "manual-holiday-065-ogaki",
+    "name": "ホリデイスポーツクラブ 大垣店",
+    "prefecture": "岐阜県",
+    "address": "〒503-0015 岐阜県大垣市林町６丁目80番55",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大垣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/065-ogaki/"
+  },
+  {
+    "id": "manual-holiday-066-toyokawa",
+    "name": "ホリデイスポーツクラブ 豊川店",
+    "prefecture": "愛知県",
+    "address": "〒442-0068 愛知県豊川市諏訪４丁目１５６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/"
+  },
+  {
+    "id": "manual-holiday-067-himeji",
+    "name": "ホリデイスポーツクラブ 姫路店",
+    "prefecture": "兵庫県",
+    "address": "〒670-0961 兵庫県姫路市南畝町６８１−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "姫路市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/067-himeji/"
+  },
+  {
+    "id": "manual-holiday-068-mukonoso",
+    "name": "ホリデイスポーツクラブ 武庫之荘店",
+    "prefecture": "兵庫県",
+    "address": "〒661-0035 兵庫県尼崎市武庫之荘４丁目３２−４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "尼崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/"
+  },
+  {
+    "id": "manual-holiday-069-soka",
+    "name": "ホリデイスポーツクラブ 草加店",
+    "prefecture": "埼玉県",
+    "address": "〒340-0048 埼玉県草加市原町３丁目１３−３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "草加市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/069-soka/"
+  },
+  {
+    "id": "manual-holiday-070-fujinomiya",
+    "name": "ホリデイスポーツクラブ 富士宮店",
+    "prefecture": "静岡県",
+    "address": "〒418-0022 静岡県富士宮市小泉 権現169-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富士宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/"
+  },
+  {
+    "id": "manual-holiday-071-owariasahi",
+    "name": "ホリデイスポーツクラブ 尾張旭店",
+    "prefecture": "愛知県",
+    "address": "〒488-0012 愛知県尾張旭市三郷町角田１１２３−３２７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "尾張旭市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/"
+  },
+  {
+    "id": "manual-holiday-073-miyazaki",
+    "name": "ホリデイスポーツクラブ 宮崎店",
+    "prefecture": "宮崎県",
+    "address": "〒880-0916 宮崎県宮崎市恒久４３７８−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宮崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/"
+  },
+  {
+    "id": "manual-holiday-074-chibachuo",
+    "name": "ホリデイスポーツクラブ 千葉中央店",
+    "prefecture": "千葉県",
+    "address": "〒260-0851 千葉県千葉市中央区矢作町５７−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/"
+  },
+  {
+    "id": "manual-holiday-075-yaizu",
+    "name": "ホリデイスポーツクラブ 焼津店",
+    "prefecture": "静岡県",
+    "address": "〒425-0026 静岡県焼津市焼津５丁目１６−１７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "焼津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/075-yaizu/"
+  },
+  {
+    "id": "manual-holiday-076-kisarazu",
+    "name": "ホリデイスポーツクラブ 木更津店",
+    "prefecture": "千葉県",
+    "address": "〒292-0055 千葉県木更津市朝日２丁目７−３４",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "木更津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/"
+  },
+  {
+    "id": "manual-holiday-078-wakayama",
+    "name": "ホリデイスポーツクラブ 和歌山店",
+    "prefecture": "和歌山県",
+    "address": "〒640-8286 和歌山県和歌山市湊御殿３丁目１−２",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "和歌山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/078-wakayama/"
+  },
+  {
+    "id": "manual-holiday-079-gifu",
+    "name": "ホリデイスポーツクラブ 岐阜店",
+    "prefecture": "岐阜県",
+    "address": "〒500-8362 岐阜県岐阜市西荘３丁目２−１５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岐阜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/079-gifu/"
+  },
+  {
+    "id": "manual-holiday-080-fukuokakoga",
+    "name": "ホリデイスポーツクラブ 福岡古賀店",
+    "prefecture": "福岡県",
+    "address": "〒811-3119 福岡県古賀市美郷１９７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "古賀市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/"
+  },
+  {
+    "id": "manual-holiday-081-shinhassamu",
+    "name": "ホリデイスポーツクラブ 札幌新発寒店",
+    "prefecture": "北海道",
+    "address": "〒006-0802 北海道札幌市手稲区新発寒２条１丁目１−７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/"
+  },
+  {
+    "id": "manual-holiday-082-higashisapporo",
+    "name": "ホリデイスポーツクラブ 東札幌店",
+    "prefecture": "北海道",
+    "address": "〒003-0002 北海道札幌市白石区東札幌２条２丁目１−３３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/"
+  },
+  {
+    "id": "manual-holiday-083-okazaki",
+    "name": "ホリデイスポーツクラブ 岡崎店",
+    "prefecture": "愛知県",
+    "address": "〒444-0826 愛知県岡崎市若松町丸山田15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/083-okazaki/"
+  },
+  {
+    "id": "manual-holiday-085-kokuraminami",
+    "name": "ホリデイスポーツクラブ 小倉南店",
+    "prefecture": "福岡県",
+    "address": "〒800-0255 福岡県北九州市小倉南区上葛原１丁目１０−３５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北九州市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/"
+  },
+  {
+    "id": "manual-holiday-086-koga",
+    "name": "ホリデイスポーツクラブ 古河店",
+    "prefecture": "茨城県",
+    "address": "〒306-0012 茨城県古河市旭町１丁目１７−４５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "古河市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/086-koga/"
+  },
+  {
+    "id": "manual-holiday-088-shimonoseki",
+    "name": "ホリデイスポーツクラブ 下関店",
+    "prefecture": "山口県",
+    "address": "〒751-0829 山口県下関市幡生宮の下町４−５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "下関市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/"
+  },
+  {
+    "id": "manual-holiday-089-fukuokahigashi",
+    "name": "ホリデイスポーツクラブ 福岡東店",
+    "prefecture": "福岡県",
+    "address": "〒811-2304 福岡県糟屋郡粕屋町仲原２５７４−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "糟屋郡粕屋町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/"
+  },
+  {
+    "id": "manual-holiday-090-miyakonojo",
+    "name": "ホリデイスポーツクラブ 都城店",
+    "prefecture": "宮崎県",
+    "address": "〒885-0023 宮崎県都城市栄町１３−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "都城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/"
+  },
+  {
+    "id": "manual-holiday-091-nagoyanakagawa",
+    "name": "ホリデイスポーツクラブ 名古屋中川店",
+    "prefecture": "愛知県",
+    "address": "〒454-0864 愛知県名古屋市中川区平戸町２丁目１−１０",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/"
+  },
+  {
+    "id": "manual-holiday-093-iwata",
+    "name": "ホリデイスポーツクラブ 磐田店",
+    "prefecture": "静岡県",
+    "address": "〒438-0045 静岡県磐田市上岡田１−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "磐田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/093-iwata/"
+  },
+  {
+    "id": "manual-holiday-095-aomori",
+    "name": "ホリデイスポーツクラブ 青森店",
+    "prefecture": "青森県",
+    "address": "〒038-0003 青森県青森市石江江渡１５１−５",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "青森市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/095-aomori/"
+  },
+  {
+    "id": "manual-holiday-096-kirishima",
+    "name": "ホリデイスポーツクラブ 霧島店",
+    "prefecture": "鹿児島県",
+    "address": "〒899-5117 鹿児島県霧島市隼人町見次１１９２−１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "霧島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/096-kirishima/"
+  },
+  {
+    "id": "manual-holiday-097-okayama",
+    "name": "ホリデイスポーツクラブ 岡山店",
+    "prefecture": "岡山県",
+    "address": "〒700-0941 岡山県岡山市北区青江２丁目６−３３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/097-okayama/"
+  },
+  {
+    "id": "manual-holiday-098-kamagaya",
+    "name": "ホリデイスポーツクラブ 鎌ケ谷店",
+    "prefecture": "千葉県",
+    "address": "〒273-0102 千葉県鎌ケ谷市右京塚９−２９",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鎌ケ谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/"
+  },
+  {
+    "id": "manual-holiday-099-komaki",
+    "name": "ホリデイスポーツクラブ 小牧店",
+    "prefecture": "愛知県",
+    "address": "〒485-0831 愛知県小牧市東１丁目２３",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小牧市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/099-komaki/"
+  },
+  {
+    "id": "manual-holiday-100-hofu",
+    "name": "ホリデイスポーツクラブ 防府店",
+    "prefecture": "山口県",
+    "address": "〒747-0025 山口県防府市美和町１−４７",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "防府市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/100-hofu/"
+  },
+  {
+    "id": "manual-holiday-101-kyoto",
+    "name": "ホリデイスポーツクラブ 京都店",
+    "prefecture": "京都府",
+    "address": "〒615-0801 京都府京都市右京区西京極豆田町2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "京都市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/101-kyoto/"
+  },
+  {
+    "id": "manual-holiday-102-ube",
+    "name": "ホリデイスポーツクラブ 宇部店",
+    "prefecture": "山口県",
+    "address": "〒755-0022 山口県宇部市神原町２丁目４−１６",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宇部市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/102-ube/"
+  },
+  {
+    "id": "manual-holiday-103-handa",
+    "name": "ホリデイスポーツクラブ 半田店",
+    "prefecture": "愛知県",
+    "address": "〒475-0862 愛知県半田市住吉町２丁目１３８",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "半田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/103-handa/"
+  },
+  {
+    "id": "manual-holiday-104-higashihiroshima",
+    "name": "ホリデイスポーツクラブ 東広島店",
+    "prefecture": "広島県",
+    "address": "〒739-0021 広島県東広島市西条町助実1194番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東広島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/"
+  },
+  {
+    "id": "manual-holiday-105-higashikishiwada",
+    "name": "ホリデイスポーツクラブ 東岸和田店",
+    "prefecture": "大阪府",
+    "address": "〒596-0825 大阪府岸和田市土生町２丁目３２−４１",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岸和田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+    "officialUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/"
   }
 ];

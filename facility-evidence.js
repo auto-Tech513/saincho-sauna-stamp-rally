@@ -15563,6 +15563,3790 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "manual-holiday-001-mikawaanjo"
+  ],
+  "name": "ホリデイスポーツクラブ 三河安城店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒446-0058 愛知県安城市三河安城南町２丁目２−３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時（モーニング会員は7時〜）、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "あんくるバス「ツインパーク」より 徒歩3分 新幹線「三河安城」駅より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/001-mikawaanjo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-002-kariyachiryu"
+  ],
+  "name": "ホリデイスポーツクラブ 刈谷知立店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒472-0058 愛知県知立市上重原６丁目６１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "23号線 上重原インター西 ミニバス「ドミー」より 徒歩1分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/002-kariyachiryu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-003-ichinomiya"
+  ],
+  "name": "ホリデイスポーツクラブ 一宮店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒491-0853 愛知県一宮市川田町５丁目１０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "名鉄バス「東一宮」より 徒歩5分 ＪＲ「尾張一宮」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/003-ichinomiya/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-004-toyohashi"
+  ],
+  "name": "ホリデイスポーツクラブ 豊橋店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒441-8149 愛知県豊橋市中野町字平北80",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "豊鉄バス 中浜大崎線「ユタカ自動車学校前」より 徒歩1分 豊橋鉄道 渥美線「南栄」駅より 徒歩10分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/004-toyohashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-007-suzuka"
+  ],
+  "name": "ホリデイスポーツクラブ 鈴鹿店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒513-0813 三重県鈴鹿市北玉垣町１６８３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "三重交通 鈴鹿市内線「北玉垣」より 徒歩3分 北玉垣ショッピングパーク内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/007-suzuka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-008-matsuyama"
+  ],
+  "name": "ホリデイスポーツクラブ 松山店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒790-0962 愛媛県松山市枝松３丁目２７６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：10時〜21時 / 日曜・祝日：10時〜17時",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "旧国道11号線沿い 伊予鉄バス「南小坂」より 徒歩1分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/008-matsuyama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-009-numazu"
+  ],
+  "name": "ホリデイスポーツクラブ 沼津店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒410-0033 静岡県沼津市杉崎町１１−６６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "伊豆箱根バス「社会保険事務所入口」より 徒歩３分 JR「沼津」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/009-numazu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-010-yokkaichi"
+  ],
+  "name": "ホリデイスポーツクラブ 四日市店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒510-0833 三重県四日市市中川原３丁目９−７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "三交バス「中川原駅前」より 徒歩2分 近鉄湯の山線「中川原」駅より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/010-yokkaichi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-011-matsumoto"
+  ],
+  "name": "ホリデイスポーツクラブ 松本店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒390-0832 長野県松本市南松本２丁目５−４３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "松本電鉄バス「高宮」より 徒歩10分 ＪＲ「南松本」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/011-matsumoto/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-012-hamamatsu"
+  ],
+  "name": "ホリデイスポーツクラブ 浜松店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒430-0901 静岡県浜松市中央区曳馬６丁目１６−２０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "遠鉄バス「四ツ池公園入口」より 徒歩1分 遠鉄電車「曳馬」駅より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/012-hamamatsu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-013-saga"
+  ],
+  "name": "ホリデイスポーツクラブ 佐賀店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒849-0934 佐賀県佐賀市開成６丁目５−３５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西部環状線沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/013-saga/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-014-isesaki"
+  ],
+  "name": "ホリデイスポーツクラブ 伊勢崎店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒372-0041 群馬県伊勢崎市平和町１９－２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "群馬中央バス「平和町停留所」より 徒歩5分 とりせん平和町店すぐ隣り",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/014-isesaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-015-toyama"
+  ],
+  "name": "ホリデイスポーツクラブ 富山店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒939-8073 富山県富山市大町52−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "富山地方鉄道「南富山」駅より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/015-toyama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-016-kofu"
+  ],
+  "name": "ホリデイスポーツクラブ 甲府店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒400-0035 山梨県甲府市飯田３丁目４−２６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "山梨交通バス利用「飯田三丁目」より 徒歩3分 JR中央線「甲府」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/016-kofu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-017-fukuyama"
+  ],
+  "name": "ホリデイスポーツクラブ 福山店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒720-0821 広島県福山市東川口町２丁目３−１５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "中国バス「四ツ樋」より 徒歩2分 「福山市立大学」より 徒歩3分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/017-fukuyama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-019-kanazawa"
+  ],
+  "name": "ホリデイスポーツクラブ 金沢店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒921-8043 石川県金沢市西泉２丁目９",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "北陸交通バス「西泉住宅」より 徒歩3分 昭和大通り沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/019-kanazawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-020-takaoka"
+  ],
+  "name": "ホリデイスポーツクラブ 高岡店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+  "features": [
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒933-0946 富山県高岡市昭和町１丁目２−１２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "加越能バス「横田本町」より 徒歩1分 昭和通り沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/020-takaoka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-021-izumiotsu"
+  ],
+  "name": "ホリデイスポーツクラブ 泉大津店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒595-0036 大阪府泉大津市昭和町４−２２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※各種手続き・電話受付・見学案内時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "南海電鉄「泉大津」駅より 徒歩10分 富田林泉大津線沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/021-izumiotsu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-022-umebayashi"
+  ],
+  "name": "ホリデイスポーツクラブ 福岡梅林店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒814-0144 福岡県福岡市城南区梅林４丁目７−２３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西鉄バス「東梅林」より 徒歩3分 地下鉄七隈線「梅林」駅より 徒歩0分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/022-umebayashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-023-takasaki"
+  ],
+  "name": "ホリデイスポーツクラブ 高崎店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒370-0069 群馬県高崎市飯塚町４６４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "群馬バス「追分入口」より 徒歩2分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/023-takasaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-024-bentenbashi"
+  ],
+  "name": "ホリデイスポーツクラブ 新潟弁天橋店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒950-0925 新潟県新潟市中央区弁天橋通１丁目６−２５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新潟交通バス「原の台」より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/024-bentenbashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-026-kumamotokita"
+  ],
+  "name": "ホリデイスポーツクラブ 熊本北店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒860-0863 熊本県熊本市中央区坪井６丁目２５−２０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "清水バイパスからすぐ 熊本電鉄「坪井川公園」駅より 徒歩1分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/026-kumamotokita/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-027-oita"
+  ],
+  "name": "ホリデイスポーツクラブ 大分店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒870-0005 大分県大分市王子北町５−３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "大分交通バス「王子中町」より 徒歩2分 「春日神社前」より 徒歩3分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/027-oita/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-030-yahatanishi"
+  ],
+  "name": "ホリデイスポーツクラブ 八幡西店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒807-0072 福岡県北九州市八幡西区上上津役３丁目１７−２４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西鉄バス「下上津役」より 徒歩1分 国道211号沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/030-yahatanishi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-031-hakodate"
+  ],
+  "name": "ホリデイスポーツクラブ 函館店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒042-0942 北海道函館市柏木町１−３６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、露天風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "函館バス「柏木町」より 徒歩３分 函館市電「柏木町」駅より 徒歩２分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/031-hakodate/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-032-maebashi"
+  ],
+  "name": "ホリデイスポーツクラブ 前橋店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒371-0801 群馬県前橋市文京町１丁目４０−１３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "日本中央バス「けやきウォーク前橋北」より 徒歩3分 ＪＲ「前橋」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/032-maebashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-034-omuta"
+  ],
+  "name": "ホリデイスポーツクラブ 大牟田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒836-0807 福岡県大牟田市旭町２丁目２８−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西鉄バス「ゆめタウン大牟田」より 徒歩1分 西日本鉄道「新栄町」駅より 徒歩8分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/034-omuta/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-036-utsunomiya"
+  ],
+  "name": "ホリデイスポーツクラブ 宇都宮店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒320-0052 栃木県宇都宮市中戸祭町８２８−１５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "関東バス「体育館前」より 徒歩3分 JR「宇都宮」駅より 車で15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/036-utsunomiya/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-037-nagano"
+  ],
+  "name": "ホリデイスポーツクラブ 長野店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒381-0034 長野県長野市高田５３０−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "北屋島線「五分一」より 徒歩20秒 JR「長野」駅より 車で15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/037-nagano/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-038-asahikawa"
+  ],
+  "name": "ホリデイスポーツクラブ 旭川店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒078-8336 北海道旭川市南６条通２０丁目１９７８−１７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "旭川電気軌道「南５条通２０丁目」より 徒歩５分 JR「旭川」駅より 車で５分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/038-asahikawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-039-kiyota"
+  ],
+  "name": "ホリデイスポーツクラブ 札幌清田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒004-0864 北海道札幌市清田区北野４条５丁目７−２０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "中央バス「北野4条5丁目」より 徒歩3分 厚別滝野公園通り沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/039-kiyota/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-040-akita"
+  ],
+  "name": "ホリデイスポーツクラブ 秋田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒010-0002 秋田県秋田市東通仲町５−６４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "秋田中央交通「秋田」駅東口より 徒歩2分 ＪＲ「秋田」駅より 徒歩3分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/040-akita/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-041-narumi"
+  ],
+  "name": "ホリデイスポーツクラブ 名古屋鳴海店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒458-0844 愛知県名古屋市緑区鳴海町伝治山３−２１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "月2回の日曜日(隣接住宅展示場イベント開催日) ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "名鉄バス「鳴海製陶前」・市バス「伝治山」より 徒歩1分 名鉄「鳴海」駅・地下鉄「野並」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/041-narumi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-042-nagaoka"
+  ],
+  "name": "ホリデイスポーツクラブ 長岡店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒940-0857 新潟県長岡市沖田１丁目５６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "越後交通「長岡地域振興局前」より 徒歩30秒 JR「長岡」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/042-nagaoka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-043-ota"
+  ],
+  "name": "ホリデイスポーツクラブ 太田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒373-0817 群馬県太田市飯塚町９７７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "「バスターミナルおおた」より 徒歩5分 東部伊勢崎線「太田」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/043-ota/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-044-kita24"
+  ],
+  "name": "ホリデイスポーツクラブ 札幌北24条店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒065-0024 北海道札幌市東区北２４条東１丁目１−２０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "中央バス「北24条東1丁目」より 徒歩1分 地下鉄南北線「北24条駅」より 徒歩7分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/044-kita24/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-045-tomakomai"
+  ],
+  "name": "ホリデイスポーツクラブ 苫小牧店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒053-0853 北海道苫小牧市花園町１丁目５−２２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "道南バス「北光通」より 徒歩2分 マックスバリュ新花園店 東",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/045-tomakomai/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-046-izumo"
+  ],
+  "name": "ホリデイスポーツクラブ 出雲店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒693-0063 島根県出雲市大塚町７２９−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "出雲市内循環線「ゆめタウン前」より 徒歩3分 ゆめタウン出雲内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/046-izumo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-047-ueda"
+  ],
+  "name": "ホリデイスポーツクラブ 上田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒386-0018 長野県上田市常田１丁目１０−６７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオン上田 南側",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/047-ueda/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-049-funabashi"
+  ],
+  "name": "ホリデイスポーツクラブ 船橋日大前店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒274-0060 千葉県船橋市坪井東４丁目３−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週日曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東葉高速線「船橋日大前」駅より 徒歩約6分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/049-funabashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-050-nisshin"
+  ],
+  "name": "ホリデイスポーツクラブ 日進長久手店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒470-0136 愛知県日進市竹の山４丁目２７２３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "名古屋市営バス「猪高緑地南」より 徒歩5分 マックスバリュ長久手店南",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/050-nisshin/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-052-ebina"
+  ],
+  "name": "ホリデイスポーツクラブ 海老名かしわ台店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒243-0402 神奈川県海老名市柏ケ谷３丁目７−２８",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "神奈中バス「東建ハイツ前」より 徒歩3分 相鉄線「かしわ台」駅より 徒歩7分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/052-ebina/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-053-kodaira"
+  ],
+  "name": "ホリデイスポーツクラブ 小平店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒187-0002 東京都小平市花小金井６丁目２−２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西武バス・立川バス・都バス「昭和病院」すぐ 青梅街道沿い 昭和病院向い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/053-kodaira/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-054-higashiosaka"
+  ],
+  "name": "ホリデイスポーツクラブ 東大阪店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒577-0002 大阪府東大阪市稲田上町２丁目６−３７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR徳庵駅より 徒歩11分 近鉄バス「稲田車庫前」より 徒歩5分 フレスポ東大阪北向い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/054-higashiosaka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-055-morioka"
+  ],
+  "name": "ホリデイスポーツクラブ 盛岡店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒020-0121 岩手県盛岡市月が丘２丁目２−８",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "岩手県交通「月が丘２丁目」より 徒歩１分 旧シティ青山内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/055-morioka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-056-ichiharagoi"
+  ],
+  "name": "ホリデイスポーツクラブ 市原五井店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒290-0050 千葉県市原市更級１丁目８−１４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "小湊バス「アリオ市原」より 徒歩3分 ＪＲ「五井」駅より 徒歩15分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/056-ichiharagoi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-057-neyagawa"
+  ],
+  "name": "ホリデイスポーツクラブ 寝屋川店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒572-0059 大阪府寝屋川市黒原新町１１−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京阪バス「黒原」より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/057-neyagawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-058-okegawa"
+  ],
+  "name": "ホリデイスポーツクラブ 桶川店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒363-0025 埼玉県桶川市下日出谷９２４−５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "県道12号 桶川市役所西へ約400m 東武バス「泉二丁目」より 徒歩5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/058-okegawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-059-kusatsu"
+  ],
+  "name": "ホリデイスポーツクラブ 草津店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒525-0027 滋賀県草津市野村４丁目３−１１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "近江鉄道バス「市金工業前」すぐ 県道42号 草津守山線 野村南",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/059-kusatsu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-060-shimizu"
+  ],
+  "name": "ホリデイスポーツクラブ 清水店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒424-0044 静岡県静岡市清水区江尻台町２２−７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "静鉄バス「永楽町」より 徒歩1分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/060-shimizu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-061-fukaya"
+  ],
+  "name": "ホリデイスポーツクラブ 深谷店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒366-0824 埼玉県深谷市西島町３丁目８−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始及び深谷まつり開催日",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR高崎線「深谷」駅より 徒歩２分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/061-fukaya/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-062-fuji"
+  ],
+  "name": "ホリデイスポーツクラブ 富士店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒416-0915 静岡県富士市富士町１−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "富士駅北 イトーヨーカドー跡地",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/062-fuji/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-063-hirano"
+  ],
+  "name": "ホリデイスポーツクラブ 平野店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒547-0021 大阪府大阪市平野区喜連東２丁目１１−２５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "大阪市営バス「喜連東三丁目」より 徒歩2分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/063-hirano/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-064-sagamihara"
+  ],
+  "name": "ホリデイスポーツクラブ 相模原店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒252-0344 神奈川県相模原市南区古淵３丁目８−２６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "古淵駅より徒歩約5分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/064-sagamihara/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-065-ogaki"
+  ],
+  "name": "ホリデイスポーツクラブ 大垣店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0015 岐阜県大垣市林町６丁目80番55",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "大垣駅より徒歩約4分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/065-ogaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-066-toyokawa"
+  ],
+  "name": "ホリデイスポーツクラブ 豊川店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒442-0068 愛知県豊川市諏訪４丁目１５６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "姫街道沿い 出雲殿跡地",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/066-toyokawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-067-himeji"
+  ],
+  "name": "ホリデイスポーツクラブ 姫路店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒670-0961 兵庫県姫路市南畝町６８１−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：10時〜21時 / 日曜・祝日：10時〜17時",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "姫路駅南 イオンタウン姫路 東隣",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/067-himeji/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-068-mukonoso"
+  ],
+  "name": "ホリデイスポーツクラブ 武庫之荘店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒661-0035 兵庫県尼崎市武庫之荘４丁目３２−４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "武庫之荘駅北へ徒歩約8分 コープ向かい",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/068-mukonoso/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-069-soka"
+  ],
+  "name": "ホリデイスポーツクラブ 草加店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒340-0048 埼玉県草加市原町３丁目１３−３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東京外環自動車道 原町3丁目交差点北へすぐ",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/069-soka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-070-fujinomiya"
+  ],
+  "name": "ホリデイスポーツクラブ 富士宮店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒418-0022 静岡県富士宮市小泉 権現169-1",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、外気浴、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "139号線 小泉権現交差点東",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/070-fujinomiya/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-071-owariasahi"
+  ],
+  "name": "ホリデイスポーツクラブ 尾張旭店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒488-0012 愛知県尾張旭市三郷町角田１１２３−３２７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※各種手続き・電話受付・見学案内時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "名鉄三郷駅北側 東へ約500m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/071-owariasahi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-073-miyazaki"
+  ],
+  "name": "ホリデイスポーツクラブ 宮崎店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒880-0916 宮崎県宮崎市恒久４３７８−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※各種手続き・電話受付・見学案内時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "宮崎市恒久 鵬翔高校となり",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/073-miyazaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-074-chibachuo"
+  ],
+  "name": "ホリデイスポーツクラブ 千葉中央店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒260-0851 千葉県千葉市中央区矢作町５７−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "千葉市中央区矢作町 都川沿い かわまち矢作モール内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/074-chibachuo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-075-yaizu"
+  ],
+  "name": "ホリデイスポーツクラブ 焼津店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒425-0026 静岡県焼津市焼津５丁目１６−１７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜22時、日・祝休日 10時〜19時、金曜 7時〜22時 ※セルフ営業日(ジム・ラウンジ・ロッカー一部のみ利用可能)、※手続き及び電話受付時間 月〜木・土曜：21時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "焼津市焼津5丁目 旧鰹節会館",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/075-yaizu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-076-kisarazu"
+  ],
+  "name": "ホリデイスポーツクラブ 木更津店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒292-0055 千葉県木更津市朝日２丁目７−３４",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "木更津市役所 朝日庁舎 西隣り",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/076-kisarazu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-078-wakayama"
+  ],
+  "name": "ホリデイスポーツクラブ 和歌山店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒640-8286 和歌山県和歌山市湊御殿３丁目１−２",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "和歌山市湊御殿 舟津町交差点南西",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/078-wakayama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-079-gifu"
+  ],
+  "name": "ホリデイスポーツクラブ 岐阜店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒500-8362 岐阜県岐阜市西荘３丁目２−１５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "岐阜市鏡島 西岐阜駅北へ約500m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/079-gifu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-080-fukuokakoga"
+  ],
+  "name": "ホリデイスポーツクラブ 福岡古賀店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒811-3119 福岡県古賀市美郷１９７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "古賀市高田 イオンモール福津から南へ約１km",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/080-fukuokakoga/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-081-shinhassamu"
+  ],
+  "name": "ホリデイスポーツクラブ 札幌新発寒店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒006-0802 北海道札幌市手稲区新発寒２条１丁目１−７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、金曜 7時〜22時 ※セルフ営業日(ジム・ラウンジ・ロッカー一部のみ利用可能)、※手続き及び電話受付時間 月〜木・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "手稲区 追分通沿い クロスモール新発寒内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/081-shinhassamu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-082-higashisapporo"
+  ],
+  "name": "ホリデイスポーツクラブ 東札幌店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒003-0002 北海道札幌市白石区東札幌２条２丁目１−３３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄東西線東札幌駅2番出口より南に約400m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/082-higashisapporo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-083-okazaki"
+  ],
+  "name": "ホリデイスポーツクラブ 岡崎店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-0826 愛知県岡崎市若松町丸山田15",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "岡崎市若松町 ドミー若松店西側",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/083-okazaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-085-kokuraminami"
+  ],
+  "name": "ホリデイスポーツクラブ 小倉南店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒800-0255 福岡県北九州市小倉南区上葛原１丁目１０−３５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "サンリブシティ小倉から北へ約400m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/085-kokuraminami/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-086-koga"
+  ],
+  "name": "ホリデイスポーツクラブ 古河店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒306-0012 茨城県古河市旭町１丁目１７−４５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオン古河店東側",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/086-koga/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-088-shimonoseki"
+  ],
+  "name": "ホリデイスポーツクラブ 下関店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒751-0829 山口県下関市幡生宮の下町４−５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "幡生駅より東へ約400m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/088-shimonoseki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-089-fukuokahigashi"
+  ],
+  "name": "ホリデイスポーツクラブ 福岡東店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒811-2304 福岡県糟屋郡粕屋町仲原２５７４−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオン福岡東ショッピングセンター西側",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/089-fukuokahigashi/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-090-miyakonojo"
+  ],
+  "name": "ホリデイスポーツクラブ 都城店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒885-0023 宮崎県都城市栄町１３−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 9時〜23時、日・祝休日 9時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオンモール都城駅前 南側",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/090-miyakonojo/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-091-nagoyanakagawa"
+  ],
+  "name": "ホリデイスポーツクラブ 名古屋中川店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒454-0864 愛知県名古屋市中川区平戸町２丁目１−１０",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "あおなみ線中島駅から北東へ約400m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/091-nagoyanakagawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-093-iwata"
+  ],
+  "name": "ホリデイスポーツクラブ 磐田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒438-0045 静岡県磐田市上岡田１−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "磐田駅より南に1.5km",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/093-iwata/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-095-aomori"
+  ],
+  "name": "ホリデイスポーツクラブ 青森店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒038-0003 青森県青森市石江江渡１５１−５",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新青森駅より東に約700m 旧7号線沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/095-aomori/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-096-kirishima"
+  ],
+  "name": "ホリデイスポーツクラブ 霧島店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒899-5117 鹿児島県霧島市隼人町見次１１９２−１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜22時、日・祝休日 10時〜19時、【プールエリア利用時間】、平日・土曜：10時〜15時・18時〜21時、日曜・祝日：営業なし、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオン隼人国分ショッピングセンター 敷地内南隣",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/096-kirishima/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-097-okayama"
+  ],
+  "name": "ホリデイスポーツクラブ 岡山店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒700-0941 岡山県岡山市北区青江２丁目６−３３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオンスタイル岡山青江 敷地内東隣",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/097-okayama/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-098-kamagaya"
+  ],
+  "name": "ホリデイスポーツクラブ 鎌ケ谷店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒273-0102 千葉県鎌ケ谷市右京塚９−２９",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：22時まで / 日曜・祝日：18時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "中央消防署より南へ約100m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/098-kamagaya/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-099-komaki"
+  ],
+  "name": "ホリデイスポーツクラブ 小牧店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒485-0831 愛知県小牧市東１丁目２３",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオン小牧店 敷地内北隣",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/099-komaki/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-100-hofu"
+  ],
+  "name": "ホリデイスポーツクラブ 防府店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒747-0025 山口県防府市美和町１−４７",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国分寺入口交差点東",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/100-hofu/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-101-kyoto"
+  ],
+  "name": "ホリデイスポーツクラブ 京都店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒615-0801 京都府京都市右京区西京極豆田町2",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "西小路花屋町より北西に約100m",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/101-kyoto/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-102-ube"
+  ],
+  "name": "ホリデイスポーツクラブ 宇部店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒755-0022 山口県宇部市神原町２丁目４−１６",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 10時〜23時、日・祝休日 10時〜19時、※手続き及び電話受付時間 平日・土曜：21時まで / 日曜・祝日：17時まで",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "神原町２丁目 産業道路沿い",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/102-ube/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-103-handa"
+  ],
+  "name": "ホリデイスポーツクラブ 半田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒475-0862 愛知県半田市住吉町２丁目１３８",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 6時〜23時、日・祝休日 6時〜19時、※6時〜10時まではセルフタイムとなり、ジムエリアのみの営業。スタッフサポートはありません。※平日・土の15時～18時は、フロント事務手続き業務及び電話受付は行っておりません。",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、個室シャワー、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "名鉄「半田口駅」・JR「乙川駅」 徒歩約10分",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/103-handa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-104-higashihiroshima"
+  ],
+  "name": "ホリデイスポーツクラブ 東広島店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒739-0021 広島県東広島市西条町助実1194番地",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 6時〜23時、日・祝休日 6時〜19時、※6時〜10時まではセルフタイムとなり、ジムエリアのみの営業。スタッフサポートはありません。※平日・土の15時～18時は、フロント事務手続き業務及び電話受付は行っておりません。",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "ゆめモール西条内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/104-higashihiroshima/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-holiday-105-higashikishiwada"
+  ],
+  "name": "ホリデイスポーツクラブ 東岸和田店",
+  "officialUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒596-0825 大阪府岸和田市土生町２丁目３２−４１",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日・土曜 6時〜23時、日・祝休日 6時〜19時、※6時〜10時まではセルフタイムとなり、ジムエリアのみの営業。スタッフサポートはありません。※平日・土の15時～18時は、フロント事務手続き業務及び電話受付は行っておりません。",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜 ※特別休館：4月上旬・お盆時期・年末年始",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "温浴、サウナ、水風呂、洗い場",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "そよら東岸和田 敷地内",
+      "sourceUrl": "https://www.holiday-sc.jp/shops/105-higashikishiwada/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 
