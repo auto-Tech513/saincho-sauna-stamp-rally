@@ -29460,6 +29460,8610 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop109"
+  ],
+  "name": "FIT-EASY 名駅南店",
+  "officialUrl": "https://shops.fiteasy.jp/shop109",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒454-0003 愛知県名古屋市中川区松重町4-35",
+      "sourceUrl": "https://shops.fiteasy.jp/shop109",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、水素水、プロテイン、タンニングマシン、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop109",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop109",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用500台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop109",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop109",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop117"
+  ],
+  "name": "FIT-EASY 西尾店",
+  "officialUrl": "https://shops.fiteasy.jp/shop117",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒445-0812 愛知県西尾市道光寺1-4-15",
+      "sourceUrl": "https://shops.fiteasy.jp/shop117",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop117",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop117",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：73台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop117",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop117",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop118"
+  ],
+  "name": "FIT-EASY 名古屋栄店",
+  "officialUrl": "https://shops.fiteasy.jp/shop118",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒460-0008 愛知県名古屋市中区栄3-3-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop118",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、水素水、プロテイン、体組成計、コラーゲンマシン",
+      "sourceUrl": "https://shops.fiteasy.jp/shop118",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop118",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：100台（マルエイガレリア屋上有料パーキング）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop118",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop118",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop120"
+  ],
+  "name": "FIT-EASY 袋井店",
+  "officialUrl": "https://shops.fiteasy.jp/shop120",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒437-0064 静岡県袋井市川井1151",
+      "sourceUrl": "https://shops.fiteasy.jp/shop120",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop120",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop120",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop120",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop120",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop121"
+  ],
+  "name": "FIT-EASY 名東極楽店",
+  "officialUrl": "https://shops.fiteasy.jp/shop121",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒465-0053 愛知県名古屋市名東区極楽4-310",
+      "sourceUrl": "https://shops.fiteasy.jp/shop121",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop121",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop121",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：23台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop121",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop121",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop122"
+  ],
+  "name": "FIT-EASY 湘南二宮店",
+  "officialUrl": "https://shops.fiteasy.jp/shop122",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒259-0131 神奈川県中郡二宮町中里2-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop122",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop122",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop122",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：90台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop122",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop122",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop123"
+  ],
+  "name": "FIT-EASY 大垣西店",
+  "officialUrl": "https://shops.fiteasy.jp/shop123",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0032 岐阜県大垣市熊野町312",
+      "sourceUrl": "https://shops.fiteasy.jp/shop123",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop123",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop123",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：-",
+      "sourceUrl": "https://shops.fiteasy.jp/shop123",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop123",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop125"
+  ],
+  "name": "FIT-EASY 札幌清田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop125",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒004-0841 北海道札幌市清田区清田一条1-6-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop125",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、FIT-RACE、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop125",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop125",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用90台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop125",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop125",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop126"
+  ],
+  "name": "FIT-EASY 東松山店",
+  "officialUrl": "https://shops.fiteasy.jp/shop126",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒355-0021 埼玉県東松山市神明町2-13-27",
+      "sourceUrl": "https://shops.fiteasy.jp/shop126",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop126",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop126",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：55台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop126",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop126",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop127"
+  ],
+  "name": "FIT-EASY 刈谷かりがね店",
+  "officialUrl": "https://shops.fiteasy.jp/shop127",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒448-0011 愛知県刈谷市築地町2-1-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop127",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop127",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop127",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：60台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop127",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop127",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop128"
+  ],
+  "name": "FIT-EASY 植田駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop128",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒468-0051 愛知県名古屋市天白区植田1-1310",
+      "sourceUrl": "https://shops.fiteasy.jp/shop128",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、タンニングマシン、体組成計、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop128",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop128",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：10",
+      "sourceUrl": "https://shops.fiteasy.jp/shop128",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop128",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop129"
+  ],
+  "name": "FIT-EASY 佐久平店",
+  "officialUrl": "https://shops.fiteasy.jp/shop129",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒385-0029 長野県佐久市佐久平駅南25-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop129",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop129",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop129",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop129",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop129",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop131"
+  ],
+  "name": "FIT-EASY 一宮尾西店",
+  "officialUrl": "https://shops.fiteasy.jp/shop131",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒494-0001 愛知県一宮市開明流50-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop131",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop131",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop131",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop131",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop131",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop132"
+  ],
+  "name": "FIT-EASY 知多店",
+  "officialUrl": "https://shops.fiteasy.jp/shop132",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒478-0055 愛知県知多市にしの台2-100-7 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop132",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-TENNIS、FIT-FUTSAL、岩盤浴",
+      "sourceUrl": "https://shops.fiteasy.jp/shop132",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop132",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：100台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop132",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop132",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop133"
+  ],
+  "name": "FIT-EASY 豊田四郷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop133",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒470-0373 愛知県豊田市四郷町森前南7-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop133",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop133",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop133",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：33台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop133",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop133",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop134"
+  ],
+  "name": "FIT-EASY 伊集院店",
+  "officialUrl": "https://shops.fiteasy.jp/shop134",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒899-2502 鹿児島県日置市伊集院町徳重3-9-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop134",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop134",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop134",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用150台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop134",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop134",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop135"
+  ],
+  "name": "FIT-EASY イオンタウン湖西新居店",
+  "officialUrl": "https://shops.fiteasy.jp/shop135",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒431-0302 静岡県湖西市新居町新居250",
+      "sourceUrl": "https://shops.fiteasy.jp/shop135",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop135",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop135",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：280",
+      "sourceUrl": "https://shops.fiteasy.jp/shop135",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop135",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop136"
+  ],
+  "name": "FIT-EASY コムタウン岡崎店",
+  "officialUrl": "https://shops.fiteasy.jp/shop136",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-0859 愛知県岡崎市上六名町林20-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop136",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、タンニングマシン、体組成計、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop136",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop136",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：1238",
+      "sourceUrl": "https://shops.fiteasy.jp/shop136",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop136",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop137"
+  ],
+  "name": "FIT-EASY 新安城店",
+  "officialUrl": "https://shops.fiteasy.jp/shop137",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒446-0071 愛知県安城市今池町3-2-37",
+      "sourceUrl": "https://shops.fiteasy.jp/shop137",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop137",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop137",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：26台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop137",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop137",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop138"
+  ],
+  "name": "FIT-EASY 札幌新道東店",
+  "officialUrl": "https://shops.fiteasy.jp/shop138",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒007-0834 北海道札幌市東区北34条東16-1-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop138",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop138",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop138",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：15台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop138",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop138",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop139"
+  ],
+  "name": "FIT-EASY 大垣バイパス店",
+  "officialUrl": "https://shops.fiteasy.jp/shop139",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0015 岐阜県大垣市林町7-614",
+      "sourceUrl": "https://shops.fiteasy.jp/shop139",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、ホワイトニング、水素水、プロテイン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop139",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop139",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：27台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop139",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop139",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop140"
+  ],
+  "name": "FIT-EASY 花小金井店",
+  "officialUrl": "https://shops.fiteasy.jp/shop140",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒187-0002 東京都小平市花小金井3-15-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop140",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop140",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop140",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：110台 駐輪場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop140",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop140",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop141"
+  ],
+  "name": "FIT-EASY 安曇野店",
+  "officialUrl": "https://shops.fiteasy.jp/shop141",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒399-8205 長野県安曇野市豊科5478",
+      "sourceUrl": "https://shops.fiteasy.jp/shop141",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop141",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop141",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：45台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop141",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop141",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop142"
+  ],
+  "name": "FIT-EASY 飯田かなえ店",
+  "officialUrl": "https://shops.fiteasy.jp/shop142",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒395-0806 長野県飯田市鼎上山3729-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop142",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、FIT-RACE、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop142",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop142",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：46台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop142",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop142",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop143"
+  ],
+  "name": "FIT-EASY あま七宝店",
+  "officialUrl": "https://shops.fiteasy.jp/shop143",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒497-0004 愛知県あま市七宝町桂親田14 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop143",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop143",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop143",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用80台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop143",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop143",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop144"
+  ],
+  "name": "FIT-EASY 羽村店",
+  "officialUrl": "https://shops.fiteasy.jp/shop144",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒205-0002 東京都羽村市栄町2-3-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop144",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、マッサージチェア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop144",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop144",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台 駐輪場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop144",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop144",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop145"
+  ],
+  "name": "FIT-EASY 久喜店",
+  "officialUrl": "https://shops.fiteasy.jp/shop145",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒346-0014 埼玉県久喜市吉羽2-29-6",
+      "sourceUrl": "https://shops.fiteasy.jp/shop145",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop145",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop145",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop145",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop145",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop146"
+  ],
+  "name": "FIT-EASY 豊田インター店",
+  "officialUrl": "https://shops.fiteasy.jp/shop146",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒471-0841 愛知県豊田市深田町1-65-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop146",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop146",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop146",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共有50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop146",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop146",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop147"
+  ],
+  "name": "FIT-EASY 豊田高橋店",
+  "officialUrl": "https://shops.fiteasy.jp/shop147",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒471-0807 愛知県豊田市広川町7-91-5",
+      "sourceUrl": "https://shops.fiteasy.jp/shop147",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop147",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop147",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop147",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop147",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop148"
+  ],
+  "name": "FIT-EASY 滝ノ水店",
+  "officialUrl": "https://shops.fiteasy.jp/shop148",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒458-0021 愛知県名古屋市緑区滝ノ水5-803",
+      "sourceUrl": "https://shops.fiteasy.jp/shop148",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop148",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop148",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop148",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop148",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop149"
+  ],
+  "name": "FIT-EASY 猪高店",
+  "officialUrl": "https://shops.fiteasy.jp/shop149",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒464-0005 愛知県名古屋市千種区千代が丘5",
+      "sourceUrl": "https://shops.fiteasy.jp/shop149",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop149",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop149",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：60台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop149",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop149",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop150"
+  ],
+  "name": "FIT-EASY 多治見駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop150",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒507-0033 岐阜県多治見市本町1-122",
+      "sourceUrl": "https://shops.fiteasy.jp/shop150",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop150",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop150",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop150",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop150",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop151"
+  ],
+  "name": "FIT-EASY 秋田広面店",
+  "officialUrl": "https://shops.fiteasy.jp/shop151",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒010-0041 秋田県秋田市広面宮田27-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop151",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop151",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop151",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop151",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop151",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop152"
+  ],
+  "name": "FIT-EASY イオンモール四日市北店",
+  "officialUrl": "https://shops.fiteasy.jp/shop152",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒510-8016 三重県四日市市富州原町2-40",
+      "sourceUrl": "https://shops.fiteasy.jp/shop152",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop152",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop152",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用2200台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop152",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop152",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop153"
+  ],
+  "name": "FIT-EASY 磐田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop153",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒438-0071 静岡県磐田市今之浦3-1-9",
+      "sourceUrl": "https://shops.fiteasy.jp/shop153",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop153",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop153",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：26台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop153",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop153",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop155"
+  ],
+  "name": "FIT-EASY 静岡駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop155",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒420-0857 静岡県静岡市葵区御幸町6-5 パレス第3ビル 1F・2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop155",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop155",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop155",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：駐輪場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop155",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop155",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop156"
+  ],
+  "name": "FIT-EASY 矢場町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop156",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒460-0008 愛知県名古屋市中区栄3-25-34",
+      "sourceUrl": "https://shops.fiteasy.jp/shop156",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop156",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop156",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：駐輪場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop156",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop156",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop157"
+  ],
+  "name": "FIT-EASY 福山緑町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop157",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒720-0804 広島県福山市緑町1-30 みどり町モール2階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop157",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop157",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop157",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用278台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop157",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop157",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop159"
+  ],
+  "name": "FIT-EASY 日進赤池店",
+  "officialUrl": "https://shops.fiteasy.jp/shop159",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒470-0125 愛知県日進市赤池2丁目601番地",
+      "sourceUrl": "https://shops.fiteasy.jp/shop159",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop159",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop159",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用68台（3時間無料）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop159",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop159",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop160"
+  ],
+  "name": "FIT-EASY 豊橋汐田橋店",
+  "officialUrl": "https://shops.fiteasy.jp/shop160",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒441-8087 愛知県豊橋市牟呂町扇田13",
+      "sourceUrl": "https://shops.fiteasy.jp/shop160",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop160",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop160",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop160",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop160",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop161"
+  ],
+  "name": "FIT-EASY 岩倉店",
+  "officialUrl": "https://shops.fiteasy.jp/shop161",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒482-0036 愛知県岩倉市西市町無量寺57-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop161",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop161",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop161",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：29台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop161",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop161",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop162"
+  ],
+  "name": "FIT-EASY 太田丸山店",
+  "officialUrl": "https://shops.fiteasy.jp/shop162",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒373-0018 群馬県太田市丸山町1380",
+      "sourceUrl": "https://shops.fiteasy.jp/shop162",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop162",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop162",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：カインズ共用駐車場",
+      "sourceUrl": "https://shops.fiteasy.jp/shop162",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop162",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop163"
+  ],
+  "name": "FIT-EASY 加賀店",
+  "officialUrl": "https://shops.fiteasy.jp/shop163",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒922-0241 石川県加賀市加茂町130",
+      "sourceUrl": "https://shops.fiteasy.jp/shop163",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop163",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop163",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：57台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop163",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop163",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop164"
+  ],
+  "name": "FIT-EASY 新大村駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop164",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒856-0027 長崎県大村市植松3丁目59番地",
+      "sourceUrl": "https://shops.fiteasy.jp/shop164",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop164",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop164",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用268台（夜間は裏口のみ）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop164",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop164",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop165"
+  ],
+  "name": "FIT-EASY 豊川店",
+  "officialUrl": "https://shops.fiteasy.jp/shop165",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒442-0888 愛知県豊川市千歳通3丁目6-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop165",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop165",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop165",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：32台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop165",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop165",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop167"
+  ],
+  "name": "FIT-EASY 長久手グリーンロード店",
+  "officialUrl": "https://shops.fiteasy.jp/shop167",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒480-1144 愛知県長久手市熊田210",
+      "sourceUrl": "https://shops.fiteasy.jp/shop167",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、H2ルーム",
+      "sourceUrl": "https://shops.fiteasy.jp/shop167",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop167",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop167",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop167",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop169"
+  ],
+  "name": "FIT-EASY 西尾上町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop169",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒445-0894 愛知県西尾市上町山崎13",
+      "sourceUrl": "https://shops.fiteasy.jp/shop169",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、FIT-BASEBALL、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop169",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop169",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop169",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop169",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop170"
+  ],
+  "name": "FIT-EASY イオンモール香椎浜店",
+  "officialUrl": "https://shops.fiteasy.jp/shop170",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒813-0016 福岡県福岡市東区香椎浜三丁目1番3号 香椎いーなテラス2階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop170",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コラーゲンマシン、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop170",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop170",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop170",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop170",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop171"
+  ],
+  "name": "FIT-EASY 富士宮店",
+  "officialUrl": "https://shops.fiteasy.jp/shop171",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒418-0072 静岡県富士宮市矢立町935",
+      "sourceUrl": "https://shops.fiteasy.jp/shop171",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop171",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop171",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用50台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop171",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop171",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop172"
+  ],
+  "name": "FIT-EASY 彦根店",
+  "officialUrl": "https://shops.fiteasy.jp/shop172",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒522-0002 滋賀県彦根市松原町字石持1836",
+      "sourceUrl": "https://shops.fiteasy.jp/shop172",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、FIT-BASEBALL、ランドリー、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー、マッサージチェア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop172",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop172",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop172",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop172",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop173"
+  ],
+  "name": "FIT-EASY 柳津店",
+  "officialUrl": "https://shops.fiteasy.jp/shop173",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-6103 岐阜県岐阜市柳津町蓮池3-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop173",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop173",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop173",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用51台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop173",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop173",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop174"
+  ],
+  "name": "FIT-EASY 常滑インター店",
+  "officialUrl": "https://shops.fiteasy.jp/shop174",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒479-0868 愛知県常滑市飛香台3丁目3-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop174",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop174",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop174",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用80台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop174",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop174",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop175"
+  ],
+  "name": "FIT-EASY 高畑店",
+  "officialUrl": "https://shops.fiteasy.jp/shop175",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒454-0873 愛知県名古屋市中川区上高畑2丁目180番2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop175",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop175",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop175",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop175",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop175",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop176"
+  ],
+  "name": "FIT-EASY 小牧インター店",
+  "officialUrl": "https://shops.fiteasy.jp/shop176",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒485-0046 愛知県小牧市堀の内2丁目15",
+      "sourceUrl": "https://shops.fiteasy.jp/shop176",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop176",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop176",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：45台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop176",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop176",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop177"
+  ],
+  "name": "FIT-EASY 吉野店",
+  "officialUrl": "https://shops.fiteasy.jp/shop177",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒892-0871 鹿児島県鹿児島市吉野町2097",
+      "sourceUrl": "https://shops.fiteasy.jp/shop177",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop177",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop177",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop177",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop177",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop178"
+  ],
+  "name": "FIT-EASY 長泉店",
+  "officialUrl": "https://shops.fiteasy.jp/shop178",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒411-0944 静岡県駿東郡長泉町竹原285-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop178",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop178",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop178",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop178",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop178",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop179"
+  ],
+  "name": "FIT-EASY 練馬中村橋店",
+  "officialUrl": "https://shops.fiteasy.jp/shop179",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒176-0022 東京都練馬区向山1-19-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop179",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、FIT-LOUNGE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop179",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop179",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：駐輪場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop179",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop179",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop180"
+  ],
+  "name": "FIT-EASY 秋田飯島店",
+  "officialUrl": "https://shops.fiteasy.jp/shop180",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒011-0917 秋田県秋田市飯島道東1丁目1-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop180",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、体組成計",
+      "sourceUrl": "https://shops.fiteasy.jp/shop180",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop180",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用40台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop180",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop180",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop182"
+  ],
+  "name": "FIT-EASY 稲沢警察署前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop182",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒492-8268 愛知県稲沢市朝府町14-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop182",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、ランドリー、ホワイトニング、ピラティス、水素水、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop182",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop182",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用60台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop182",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop182",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop183"
+  ],
+  "name": "FIT-EASY 弘前城東店",
+  "officialUrl": "https://shops.fiteasy.jp/shop183",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒036-8084 青森県弘前市高田4丁目3-11",
+      "sourceUrl": "https://shops.fiteasy.jp/shop183",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop183",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop183",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：駐車場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop183",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop183",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop185"
+  ],
+  "name": "FIT-EASY 伊勢崎宮子店",
+  "officialUrl": "https://shops.fiteasy.jp/shop185",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒372-0801 群馬県伊勢崎市宮子町3299-1 TAGモール内2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop185",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、女性専用エリア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop185",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop185",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：多数あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop185",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop185",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop186"
+  ],
+  "name": "FIT-EASY 守山自衛隊前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop186",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒463-0067 愛知県名古屋市守山区守山3-10-22",
+      "sourceUrl": "https://shops.fiteasy.jp/shop186",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム",
+      "sourceUrl": "https://shops.fiteasy.jp/shop186",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop186",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：28台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop186",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop186",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop189"
+  ],
+  "name": "FIT-EASY 高知店",
+  "officialUrl": "https://shops.fiteasy.jp/shop189",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒780-0046 高知県高知市伊勢崎町14- 28",
+      "sourceUrl": "https://shops.fiteasy.jp/shop189",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コラーゲンマシン",
+      "sourceUrl": "https://shops.fiteasy.jp/shop189",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop189",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：33台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop189",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop189",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop190"
+  ],
+  "name": "FIT-EASY 千種店",
+  "officialUrl": "https://shops.fiteasy.jp/shop190",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒460-0007 愛知県名古屋市中区新栄3丁目20番24号",
+      "sourceUrl": "https://shops.fiteasy.jp/shop190",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、FIT-BASEBALL、ランドリー、ホワイトニング、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コラーゲンマシン、コーヒーサーバー、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop190",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop190",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用駐車場あり",
+      "sourceUrl": "https://shops.fiteasy.jp/shop190",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop190",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop191"
+  ],
+  "name": "FIT-EASY 古河店",
+  "officialUrl": "https://shops.fiteasy.jp/shop191",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒306-0234 茨城県古河市上辺見549-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop191",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop191",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop191",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop191",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop191",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop192"
+  ],
+  "name": "FIT-EASY 福津店",
+  "officialUrl": "https://shops.fiteasy.jp/shop192",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒811-3217 福岡県福津市中央1丁目19-13",
+      "sourceUrl": "https://shops.fiteasy.jp/shop192",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ランドリー、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop192",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop192",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop192",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop192",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop193"
+  ],
+  "name": "FIT-EASY 秦野店",
+  "officialUrl": "https://shops.fiteasy.jp/shop193",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒257-0031 神奈川県秦野市曽屋3511",
+      "sourceUrl": "https://shops.fiteasy.jp/shop193",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ランドリー、ホワイトニング、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop193",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop193",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：43台（第二駐車場あり）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop193",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop193",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop194"
+  ],
+  "name": "FIT-EASY 片江店",
+  "officialUrl": "https://shops.fiteasy.jp/shop194",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒814-0142 福岡県福岡市城南区片江3丁目1-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop194",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ランドリー、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop194",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop194",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop194",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop194",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop195"
+  ],
+  "name": "FIT-EASY 羽島竹鼻店",
+  "officialUrl": "https://shops.fiteasy.jp/shop195",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-6235 岐阜県羽島市竹鼻町蜂尻17",
+      "sourceUrl": "https://shops.fiteasy.jp/shop195",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、FIT-BASEBALL、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop195",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop195",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：35台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop195",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop195",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop196"
+  ],
+  "name": "FIT-EASY 亀山店",
+  "officialUrl": "https://shops.fiteasy.jp/shop196",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒519-0124 三重県亀山市東御幸町51",
+      "sourceUrl": "https://shops.fiteasy.jp/shop196",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、FIT-BASEBALL、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コラーゲンマシン、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop196",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop196",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：34台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop196",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop196",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop197"
+  ],
+  "name": "FIT-EASY 那覇新都心店",
+  "officialUrl": "https://shops.fiteasy.jp/shop197",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒900-0011 沖縄県那覇市上之屋1丁目1-28",
+      "sourceUrl": "https://shops.fiteasy.jp/shop197",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー",
+      "sourceUrl": "https://shops.fiteasy.jp/shop197",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop197",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用56台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop197",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop197",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop198"
+  ],
+  "name": "FIT-EASY 新発田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop198",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒957-0062 新潟県新発田市富塚町2丁目967-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop198",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop198",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop198",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用80台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop198",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop198",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop199"
+  ],
+  "name": "FIT-EASY 諫早店",
+  "officialUrl": "https://shops.fiteasy.jp/shop199",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒854-0053 長崎県諫早市小川町1273-6",
+      "sourceUrl": "https://shops.fiteasy.jp/shop199",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop199",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop199",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop199",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop199",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop201"
+  ],
+  "name": "FIT-EASY アクロスプラザ南栄店",
+  "officialUrl": "https://shops.fiteasy.jp/shop201",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒891-0122 鹿児島県鹿児島市南栄1丁目11-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop201",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop201",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop201",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用220台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop201",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop201",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop202"
+  ],
+  "name": "FIT-EASY 福山西店",
+  "officialUrl": "https://shops.fiteasy.jp/shop202",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒729-0106 広島県福山市高西町4丁目3-61",
+      "sourceUrl": "https://shops.fiteasy.jp/shop202",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop202",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop202",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop202",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop202",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop203"
+  ],
+  "name": "FIT-EASY 南国店",
+  "officialUrl": "https://shops.fiteasy.jp/shop203",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒783-0004 高知県南国市大そね甲2520-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop203",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、FIT-LOUNGE、体組成計、女性専用エリア、コラーゲンマシン、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop203",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop203",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop203",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop203",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop204"
+  ],
+  "name": "FIT-EASY 茨木店",
+  "officialUrl": "https://shops.fiteasy.jp/shop204",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒567-0825 大阪府茨木市園田町2-4 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop204",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コーヒーサーバー、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop204",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop204",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用50台（3時間まで無料）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop204",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop204",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop205"
+  ],
+  "name": "FIT-EASY 蒲郡店",
+  "officialUrl": "https://shops.fiteasy.jp/shop205",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒443-0037 愛知県蒲郡市鹿島町浅井新田1-26",
+      "sourceUrl": "https://shops.fiteasy.jp/shop205",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、コラーゲンマシン、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop205",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop205",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用1100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop205",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop205",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop206"
+  ],
+  "name": "FIT-EASY 関旭ヶ丘店",
+  "officialUrl": "https://shops.fiteasy.jp/shop206",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-3824 岐阜県関市東新町1丁目5-12",
+      "sourceUrl": "https://shops.fiteasy.jp/shop206",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop206",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop206",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：22台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop206",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop206",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop207"
+  ],
+  "name": "FIT-EASY 新潟横越店",
+  "officialUrl": "https://shops.fiteasy.jp/shop207",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒950-0210 新潟県新潟市江南区横越上町5丁目1-32",
+      "sourceUrl": "https://shops.fiteasy.jp/shop207",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop207",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop207",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用206台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop207",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop207",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop208"
+  ],
+  "name": "FIT-EASY 西浦和店",
+  "officialUrl": "https://shops.fiteasy.jp/shop208",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒338-0837 埼玉県さいたま市桜区田島 8-2-12 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop208",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop208",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop208",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop208",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop209"
+  ],
+  "name": "FIT-EASY 江南店",
+  "officialUrl": "https://shops.fiteasy.jp/shop209",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒483-8201 愛知県江南市野白町葭場102",
+      "sourceUrl": "https://shops.fiteasy.jp/shop209",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop209",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop209",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：48台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop209",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop209",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop210"
+  ],
+  "name": "FIT-EASY 上田しおだ野店",
+  "officialUrl": "https://shops.fiteasy.jp/shop210",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒386-1103 長野県上田市神畑字浦田105",
+      "sourceUrl": "https://shops.fiteasy.jp/shop210",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop210",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop210",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop210",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop210",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop213"
+  ],
+  "name": "FIT-EASY 九大学研都市店",
+  "officialUrl": "https://shops.fiteasy.jp/shop213",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒819-0379 福岡県福岡市西区北原2丁目6-6 2階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop213",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop213",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop213",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop213",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop213",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop214"
+  ],
+  "name": "FIT-EASY 豊橋牧野店",
+  "officialUrl": "https://shops.fiteasy.jp/shop214",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒441-8112 愛知県豊橋市牧野町牧野26番地47",
+      "sourceUrl": "https://shops.fiteasy.jp/shop214",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop214",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop214",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：35台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop214",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop214",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop215"
+  ],
+  "name": "FIT-EASY 鈴鹿南玉垣店",
+  "officialUrl": "https://shops.fiteasy.jp/shop215",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒513-0816 三重県鈴鹿市南玉垣町7188",
+      "sourceUrl": "https://shops.fiteasy.jp/shop215",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop215",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop215",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop215",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop215",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop216"
+  ],
+  "name": "FIT-EASY 岡崎大樹寺店",
+  "officialUrl": "https://shops.fiteasy.jp/shop216",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-2121 愛知県岡崎市鴨田町広元270",
+      "sourceUrl": "https://shops.fiteasy.jp/shop216",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop216",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop216",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：58台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop216",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop216",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop217"
+  ],
+  "name": "FIT-EASY 高浜店",
+  "officialUrl": "https://shops.fiteasy.jp/shop217",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-1321 愛知県高浜市稗田町3丁目2-22番地2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop217",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-BASKETBALL",
+      "sourceUrl": "https://shops.fiteasy.jp/shop217",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop217",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：32台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop217",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop217",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop218"
+  ],
+  "name": "FIT-EASY 新潟赤道店",
+  "officialUrl": "https://shops.fiteasy.jp/shop218",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒950-0063 新潟県新潟市東区上王瀬町2-47 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop218",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、FIT-BASEBALL、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop218",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop218",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop218",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop218",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop219"
+  ],
+  "name": "FIT-EASY 三田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop219",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒669-1322 兵庫県三田市すずかけ台3丁目3-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop219",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop219",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop219",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop219",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop219",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop221"
+  ],
+  "name": "FIT-EASY 萩野通店",
+  "officialUrl": "https://shops.fiteasy.jp/shop221",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒462-0026 愛知県名古屋市北区萩野通2丁目19-1 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop221",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop221",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop221",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用70台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop221",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop221",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop222"
+  ],
+  "name": "FIT-EASY 都城店",
+  "officialUrl": "https://shops.fiteasy.jp/shop222",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒885-0012 宮崎県都城市上川東1丁目2-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop222",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア",
+      "sourceUrl": "https://shops.fiteasy.jp/shop222",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop222",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用70台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop222",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop222",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop223"
+  ],
+  "name": "FIT-EASY 沼津店",
+  "officialUrl": "https://shops.fiteasy.jp/shop223",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒410-0022 静岡県沼津市大岡1559-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop223",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR",
+      "sourceUrl": "https://shops.fiteasy.jp/shop223",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop223",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop223",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop223",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop224"
+  ],
+  "name": "FIT-EASY 渋谷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop224",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒150-0031 東京都渋谷区桜丘町1-4 渋谷サクラステージ SHIBUYAサイド 2F,3F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop224",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、コラーゲンマシン、コーヒーサーバー、FIT-CHAIR、H2ルーム、FIT-SHAPE、PWR PLATE、FIT-HYPOXIC",
+      "sourceUrl": "https://shops.fiteasy.jp/shop224",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop224",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop224",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop225"
+  ],
+  "name": "FIT-EASY 高富店",
+  "officialUrl": "https://shops.fiteasy.jp/shop225",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-2105 岐阜県山県市高富2405",
+      "sourceUrl": "https://shops.fiteasy.jp/shop225",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop225",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop225",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用70台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop225",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop225",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop226"
+  ],
+  "name": "FIT-EASY 大垣安井店",
+  "officialUrl": "https://shops.fiteasy.jp/shop226",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0837 岐阜県大垣市安井町4丁目7-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop226",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop226",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop226",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用85台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop226",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop226",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop227"
+  ],
+  "name": "FIT-EASY 目黒碑文谷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop227",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒152-0003 東京都目黒区碑文谷2丁目21-6 1F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop227",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム",
+      "sourceUrl": "https://shops.fiteasy.jp/shop227",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop227",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：16台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop227",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop227",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop228"
+  ],
+  "name": "FIT-EASY 海津店",
+  "officialUrl": "https://shops.fiteasy.jp/shop228",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-0652 岐阜県海津市海津町馬目347-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop228",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop228",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop228",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop228",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop228",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop230"
+  ],
+  "name": "FIT-EASY 成増店",
+  "officialUrl": "https://shops.fiteasy.jp/shop230",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒175-0094 東京都板橋区成増2丁目17-24 成増GRAVITY 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop230",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop230",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop230",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop230",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop231"
+  ],
+  "name": "FIT-EASY 松阪駅部田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop231",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒515-0045 三重県松阪市駅部田町153番地1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop231",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop231",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop231",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：52台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop231",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop231",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop232"
+  ],
+  "name": "FIT-EASY 西一之江店",
+  "officialUrl": "https://shops.fiteasy.jp/shop232",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒132-0023 東京都江戸川区西一之江1丁目17-11 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop232",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop232",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop232",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop232",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop233"
+  ],
+  "name": "FIT-EASY 半田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop233",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒475-0837 愛知県半田市有楽町6丁目201-8",
+      "sourceUrl": "https://shops.fiteasy.jp/shop233",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、FIT-AERO（スタジオ）、セルフエステ、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop233",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop233",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用100台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop233",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop233",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop234"
+  ],
+  "name": "FIT-EASY 春日店",
+  "officialUrl": "https://shops.fiteasy.jp/shop234",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒816-0847 福岡県春日市大土居2丁目104",
+      "sourceUrl": "https://shops.fiteasy.jp/shop234",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop234",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop234",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop234",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop234",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop235"
+  ],
+  "name": "FIT-EASY 笠寺店",
+  "officialUrl": "https://shops.fiteasy.jp/shop235",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒457-0058 愛知県名古屋市南区前浜通3丁目6番 コノミヤ笠寺3F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop235",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop235",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop235",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用74台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop235",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop235",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop236"
+  ],
+  "name": "FIT-EASY 津島店",
+  "officialUrl": "https://shops.fiteasy.jp/shop236",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒496-0803 愛知県津島市今市場町3丁目17-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop236",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop236",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop236",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop236",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop236",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop238"
+  ],
+  "name": "FIT-EASY 池袋西口店",
+  "officialUrl": "https://shops.fiteasy.jp/shop238",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒171-0021 東京都豊島区西池袋1丁目18-2 1F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop238",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop238",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop238",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop238",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop239"
+  ],
+  "name": "FIT-EASY ドン・キホーテUNY可児店",
+  "officialUrl": "https://shops.fiteasy.jp/shop239",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒509-0202 岐阜県可児市中恵土字溝向2120-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop239",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ホワイトニング、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop239",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop239",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用204台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop239",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop239",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop240"
+  ],
+  "name": "FIT-EASY 新発田緑町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop240",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒957-0018 新潟県新発田市緑町2丁目5-27",
+      "sourceUrl": "https://shops.fiteasy.jp/shop240",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop240",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop240",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：34台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop240",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop240",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-101108"
+  ],
+  "name": "FIT-EASY 山形北店",
+  "officialUrl": "https://shops.fiteasy.jp/shop241",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒990-0810 山形県山形市馬見ケ崎3丁目22-15",
+      "sourceUrl": "https://shops.fiteasy.jp/shop241",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop241",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop241",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：31台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop241",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop241",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop242"
+  ],
+  "name": "FIT-EASY 浜松葵西店",
+  "officialUrl": "https://shops.fiteasy.jp/shop242",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒433-8111 静岡県浜松市中央区葵西2丁目17-48",
+      "sourceUrl": "https://shops.fiteasy.jp/shop242",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop242",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop242",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：47台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop242",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop242",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop243"
+  ],
+  "name": "FIT-EASY 枇杷島店",
+  "officialUrl": "https://shops.fiteasy.jp/shop243",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒452-0001 愛知県清須市西枇杷島町古城2丁目17-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop243",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop243",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop243",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop243",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop243",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop244"
+  ],
+  "name": "FIT-EASY アクロスプラザ徳島大松店",
+  "officialUrl": "https://shops.fiteasy.jp/shop244",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒770-8022 徳島県徳島市大松町榎原外77-50",
+      "sourceUrl": "https://shops.fiteasy.jp/shop244",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop244",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop244",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用160台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop244",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop244",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop245"
+  ],
+  "name": "FIT-EASY 長居公園店",
+  "officialUrl": "https://shops.fiteasy.jp/shop245",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒558-0004 大阪府大阪市住吉区長居東1丁目7-32",
+      "sourceUrl": "https://shops.fiteasy.jp/shop245",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop245",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop245",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：34台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop245",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop245",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop246"
+  ],
+  "name": "FIT-EASY 梅田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop246",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒530-0003 大阪府大阪市北区堂島1丁目1-5 1階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop246",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop246",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop246",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop246",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop247"
+  ],
+  "name": "FIT-EASY 駒ヶ根店",
+  "officialUrl": "https://shops.fiteasy.jp/shop247",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒399-4117 長野県駒ヶ根市赤穂11233-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop247",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、FIT-LOUNGE、体組成計、女性専用エリア、コーヒーサーバー、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop247",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop247",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用31台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop247",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop247",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop248"
+  ],
+  "name": "FIT-EASY 盛岡南大通店",
+  "officialUrl": "https://shops.fiteasy.jp/shop248",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒020-0874 岩手県盛岡市南大通2丁目9-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop248",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop248",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop248",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop248",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop248",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop249"
+  ],
+  "name": "FIT-EASY 五反田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop249",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒141-0022 東京都品川区東五反田5丁目25-19 東京デザインセンタービル1F・B1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop249",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop249",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop249",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop249",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop250"
+  ],
+  "name": "FIT-EASY 栄広小路通店",
+  "officialUrl": "https://shops.fiteasy.jp/shop250",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒460-0008 愛知県名古屋市中区栄4丁目6-1 3F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop250",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop250",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop250",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop250",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop251"
+  ],
+  "name": "FIT-EASY 大野城店",
+  "officialUrl": "https://shops.fiteasy.jp/shop251",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒816-0932 福岡県大野城市瓦田3丁目13-10 ステータスM II 1F2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop251",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop251",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop251",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：20台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop251",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop251",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop252"
+  ],
+  "name": "FIT-EASY 名古屋みなと店",
+  "officialUrl": "https://shops.fiteasy.jp/shop252",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒455-0018 愛知県名古屋市港区港明2丁目2-11",
+      "sourceUrl": "https://shops.fiteasy.jp/shop252",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop252",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop252",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop252",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop252",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop253"
+  ],
+  "name": "FIT-EASY 自由が丘店",
+  "officialUrl": "https://shops.fiteasy.jp/shop253",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒152-0035 東京都目黒区自由が丘2丁目11 白樺広小路スクエアビル 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop253",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop253",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop253",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop253",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop254"
+  ],
+  "name": "FIT-EASY ミラモール東岸和田駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop254",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒596-0825 大阪府岸和田市土生町三丁目6番1号ミラモール東岸和田駅前2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop254",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop254",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop254",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用347台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop254",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop254",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop255"
+  ],
+  "name": "FIT-EASY 津島崎店",
+  "officialUrl": "https://shops.fiteasy.jp/shop255",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒514-0002 三重県津市島崎町5-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop255",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、コラーゲンマシン、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop255",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop255",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop255",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop255",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop256"
+  ],
+  "name": "FIT-EASY 岡崎羽根店",
+  "officialUrl": "https://shops.fiteasy.jp/shop256",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-0813 愛知県岡崎市羽根町前田34-6",
+      "sourceUrl": "https://shops.fiteasy.jp/shop256",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop256",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop256",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：無料駐車場42台完備",
+      "sourceUrl": "https://shops.fiteasy.jp/shop256",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop256",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop257"
+  ],
+  "name": "FIT-EASY 清須新川橋店",
+  "officialUrl": "https://shops.fiteasy.jp/shop257",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒452-0914 愛知県清須市土器野本山149-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop257",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop257",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop257",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：35台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop257",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop257",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop258"
+  ],
+  "name": "FIT-EASY 和泉和気店",
+  "officialUrl": "https://shops.fiteasy.jp/shop258",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒594-0073 大阪府和泉市和気町1丁目30-41",
+      "sourceUrl": "https://shops.fiteasy.jp/shop258",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop258",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop258",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用60台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop258",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop258",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop259"
+  ],
+  "name": "FIT-EASY 福山駅家店",
+  "officialUrl": "https://shops.fiteasy.jp/shop259",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒720-1132 広島県福山市駅家町大字倉光141番地1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop259",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ピラティス、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE、PWR PLATE、FIT-BASKETBALL",
+      "sourceUrl": "https://shops.fiteasy.jp/shop259",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop259",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：56台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop259",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop259",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop261"
+  ],
+  "name": "FIT-EASY 佐賀北部バイパス店",
+  "officialUrl": "https://shops.fiteasy.jp/shop261",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒849-0934 佐賀県佐賀市開成6丁目12-35",
+      "sourceUrl": "https://shops.fiteasy.jp/shop261",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop261",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop261",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：24台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop261",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop261",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop262"
+  ],
+  "name": "FIT-EASY 中村亀島店",
+  "officialUrl": "https://shops.fiteasy.jp/shop262",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒453-0018 愛知県名古屋市中村区佐古前町9 SKビルディング 1F2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop262",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop262",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop262",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：4台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop262",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop262",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop263"
+  ],
+  "name": "FIT-EASY 秋田旭南店",
+  "officialUrl": "https://shops.fiteasy.jp/shop263",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒010-0925 秋田県秋田市旭南3丁目1-32",
+      "sourceUrl": "https://shops.fiteasy.jp/shop263",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop263",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop263",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop263",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop263",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop264"
+  ],
+  "name": "FIT-EASY 豊川八幡店",
+  "officialUrl": "https://shops.fiteasy.jp/shop264",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒442-0857 愛知県豊川市八幡町宮前49-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop264",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop264",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop264",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop264",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop264",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop265"
+  ],
+  "name": "FIT-EASY 長浜店",
+  "officialUrl": "https://shops.fiteasy.jp/shop265",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒526-0021 滋賀県長浜市八幡中山町473-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop265",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop265",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop265",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用60台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop265",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop265",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop266"
+  ],
+  "name": "FIT-EASY 長吉長原店",
+  "officialUrl": "https://shops.fiteasy.jp/shop266",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒547-0016 大阪府大阪市平野区長吉長原4丁目19-12",
+      "sourceUrl": "https://shops.fiteasy.jp/shop266",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop266",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop266",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：27台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop266",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop266",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop267"
+  ],
+  "name": "FIT-EASY 岐阜河渡店",
+  "officialUrl": "https://shops.fiteasy.jp/shop267",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-0105 岐阜県岐阜市河渡3丁目37-38",
+      "sourceUrl": "https://shops.fiteasy.jp/shop267",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop267",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop267",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：48台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop267",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop267",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop268"
+  ],
+  "name": "FIT-EASY 郡上八幡店",
+  "officialUrl": "https://shops.fiteasy.jp/shop268",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-4234 岐阜県郡上市八幡町五町4丁目4-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop268",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop268",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop268",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：34台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop268",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop268",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop271"
+  ],
+  "name": "FIT-EASY 藤沢駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop271",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒251-0052 神奈川県藤沢市藤沢460番1 AB藤沢ビル3階・4階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop271",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、コーヒーサーバー、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop271",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop271",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop271",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop272"
+  ],
+  "name": "FIT-EASY フレスポ佐久インター店",
+  "officialUrl": "https://shops.fiteasy.jp/shop272",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒385-0023 長野県佐久市岩村田北1丁目22-3 フレスポ佐久インター内",
+      "sourceUrl": "https://shops.fiteasy.jp/shop272",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop272",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop272",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用178台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop272",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop272",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop273"
+  ],
+  "name": "FIT-EASY 豊橋飯村店",
+  "officialUrl": "https://shops.fiteasy.jp/shop273",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒440-0835 愛知県豊橋市飯村南2丁目22-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop273",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop273",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop273",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：43台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop273",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop273",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop274"
+  ],
+  "name": "FIT-EASY 仲六郷雑色店",
+  "officialUrl": "https://shops.fiteasy.jp/shop274",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒144-0055 東京都大田区仲六郷2丁目39-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop274",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop274",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop274",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop274",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop275"
+  ],
+  "name": "FIT-EASY 岡崎稲熊店",
+  "officialUrl": "https://shops.fiteasy.jp/shop275",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒444-0071 愛知県岡崎市稲熊町1丁目23(2F)",
+      "sourceUrl": "https://shops.fiteasy.jp/shop275",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、セルフエステ、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop275",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop275",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用44台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop275",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop275",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop276"
+  ],
+  "name": "FIT-EASY 一宮中島通店",
+  "officialUrl": "https://shops.fiteasy.jp/shop276",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒491-0072 愛知県一宮市中島通1丁目26",
+      "sourceUrl": "https://shops.fiteasy.jp/shop276",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop276",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop276",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：44台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop276",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop276",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop277"
+  ],
+  "name": "FIT-EASY 三河豊田駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop277",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒471-0833 愛知県豊田市山之手4丁目152",
+      "sourceUrl": "https://shops.fiteasy.jp/shop277",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、水素水、FIT-LOUNGE、体組成計、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop277",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop277",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：4台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop277",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop277",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop278"
+  ],
+  "name": "FIT-EASY 名張店",
+  "officialUrl": "https://shops.fiteasy.jp/shop278",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒518-0441 三重県名張市夏見3222-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop278",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop278",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop278",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用64台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop278",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop278",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop279"
+  ],
+  "name": "FIT-EASY 浜松ディーラー通り店",
+  "officialUrl": "https://shops.fiteasy.jp/shop279",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒435-0042 静岡県浜松市中央区篠ケ瀬町2000",
+      "sourceUrl": "https://shops.fiteasy.jp/shop279",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop279",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop279",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：32台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop279",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop279",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop280"
+  ],
+  "name": "FIT-EASY 南仙台店",
+  "officialUrl": "https://shops.fiteasy.jp/shop280",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒981-1106 宮城県仙台市太白区柳生1丁目6-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop280",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BASKETBALL",
+      "sourceUrl": "https://shops.fiteasy.jp/shop280",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop280",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：専用25台＋共用70台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop280",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop280",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop281"
+  ],
+  "name": "FIT-EASY 大府共和店",
+  "officialUrl": "https://shops.fiteasy.jp/shop281",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒474-0071 愛知県大府市梶田町6丁目179-3",
+      "sourceUrl": "https://shops.fiteasy.jp/shop281",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ホワイトニング、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop281",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop281",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop281",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop281",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop282"
+  ],
+  "name": "FIT-EASY アクロスプラザ三芳店",
+  "officialUrl": "https://shops.fiteasy.jp/shop282",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒354-0041 埼玉県入間郡三芳町藤久保855-403 アクロスプラザ三芳 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop282",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop282",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop282",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用多数",
+      "sourceUrl": "https://shops.fiteasy.jp/shop282",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop282",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop283"
+  ],
+  "name": "FIT-EASY 中村岩塚店",
+  "officialUrl": "https://shops.fiteasy.jp/shop283",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒453-0861 愛知県名古屋市中村区岩塚本通2丁目1-2 MSインテリジェンスビル1F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop283",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop283",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop283",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：24台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop283",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop283",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop284"
+  ],
+  "name": "FIT-EASY アクロスプラザ北柏店",
+  "officialUrl": "https://shops.fiteasy.jp/shop284",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒277-0831 千葉県柏市根戸1854番地11 北柏26街区2 B棟",
+      "sourceUrl": "https://shops.fiteasy.jp/shop284",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop284",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop284",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用224台（2時間無料）",
+      "sourceUrl": "https://shops.fiteasy.jp/shop284",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop284",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop285"
+  ],
+  "name": "FIT-EASY 川越的場店",
+  "officialUrl": "https://shops.fiteasy.jp/shop285",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒350-1107 埼玉県川越市的場新町21-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop285",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop285",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop285",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用300台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop285",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop285",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop286"
+  ],
+  "name": "FIT-EASY 土浦店",
+  "officialUrl": "https://shops.fiteasy.jp/shop286",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒300-0051 茨城県土浦市真鍋5丁目8-15",
+      "sourceUrl": "https://shops.fiteasy.jp/shop286",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop286",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop286",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：55台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop286",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop286",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop288"
+  ],
+  "name": "FIT-EASY 守山志段味店",
+  "officialUrl": "https://shops.fiteasy.jp/shop288",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒463-0805 愛知県名古屋市守山区青山台628-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop288",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop288",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop288",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用119台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop288",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop288",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop289"
+  ],
+  "name": "FIT-EASY 池田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop289",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒503-2424 岐阜県揖斐郡池田町池野228-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop289",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop289",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop289",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：41台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop289",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop289",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop290"
+  ],
+  "name": "FIT-EASY 柏崎岩上店",
+  "officialUrl": "https://shops.fiteasy.jp/shop290",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒945-0811 新潟県柏崎市岩上7-16",
+      "sourceUrl": "https://shops.fiteasy.jp/shop290",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop290",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop290",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用200台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop290",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop290",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop291"
+  ],
+  "name": "FIT-EASY 浜松志都呂店",
+  "officialUrl": "https://shops.fiteasy.jp/shop291",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒432-8069 静岡県浜松市中央区志都呂1丁目25-14",
+      "sourceUrl": "https://shops.fiteasy.jp/shop291",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop291",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop291",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：49台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop291",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop291",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop292"
+  ],
+  "name": "FIT-EASY 立川店",
+  "officialUrl": "https://shops.fiteasy.jp/shop292",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒190-0023 東京都立川市柴崎町5丁目5-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop292",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop292",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop292",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：専用39台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop292",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop292",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop293"
+  ],
+  "name": "FIT-EASY 高松太田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop293",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒761-8082 香川県高松市鹿角町170番地4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop293",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop293",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop293",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：36台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop293",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop293",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop294"
+  ],
+  "name": "FIT-EASY 松阪三雲店",
+  "officialUrl": "https://shops.fiteasy.jp/shop294",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒515-2122 三重県松阪市久米町1174-13",
+      "sourceUrl": "https://shops.fiteasy.jp/shop294",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop294",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop294",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用35台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop294",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop294",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop295"
+  ],
+  "name": "FIT-EASY 刈谷富士松店",
+  "officialUrl": "https://shops.fiteasy.jp/shop295",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒448-0007 愛知県刈谷市東境町児山418-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop295",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop295",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop295",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop295",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop295",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop296"
+  ],
+  "name": "FIT-EASY 浜松鴨江店",
+  "officialUrl": "https://shops.fiteasy.jp/shop296",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒432-8023 静岡県浜松市中央区鴨江2丁目57-28",
+      "sourceUrl": "https://shops.fiteasy.jp/shop296",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop296",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop296",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：57台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop296",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop296",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop297"
+  ],
+  "name": "FIT-EASY 高山石浦店",
+  "officialUrl": "https://shops.fiteasy.jp/shop297",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒506-0825 岐阜県高山市石浦町2丁目396",
+      "sourceUrl": "https://shops.fiteasy.jp/shop297",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop297",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop297",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：45台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop297",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop297",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop298"
+  ],
+  "name": "FIT-EASY 本巣文殊店",
+  "officialUrl": "https://shops.fiteasy.jp/shop298",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒501-1203 岐阜県本巣市文殊字天辺1006-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop298",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop298",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop298",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用103台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop298",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop298",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop299"
+  ],
+  "name": "FIT-EASY 新城店",
+  "officialUrl": "https://shops.fiteasy.jp/shop299",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒441-1348 愛知県新城市市場台2丁目2-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop299",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop299",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop299",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop299",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop299",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop302"
+  ],
+  "name": "FIT-EASY 徳島沖浜店",
+  "officialUrl": "https://shops.fiteasy.jp/shop302",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒770-8052 徳島県徳島市沖浜2丁目5",
+      "sourceUrl": "https://shops.fiteasy.jp/shop302",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop302",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop302",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用52台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop302",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop302",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop303"
+  ],
+  "name": "FIT-EASY 北名古屋西春店",
+  "officialUrl": "https://shops.fiteasy.jp/shop303",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒481-0004 愛知県北名古屋市鹿田3450-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop303",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE、4Dストレッチ",
+      "sourceUrl": "https://shops.fiteasy.jp/shop303",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop303",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：専用25台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop303",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop303",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop305"
+  ],
+  "name": "FIT-EASY 錦糸町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop305",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒130-0022 東京都墨田区江東橋4丁目27-14 楽天地ビル 7階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop305",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、セルフエステ、ホワイトニング、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE、4Dストレッチ",
+      "sourceUrl": "https://shops.fiteasy.jp/shop305",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop305",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop305",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop306"
+  ],
+  "name": "FIT-EASY 沼津バイパス店",
+  "officialUrl": "https://shops.fiteasy.jp/shop306",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒410-0007 静岡県沼津市西沢田479 番 有賀園モール沼津3F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop306",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop306",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop306",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用200台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop306",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop306",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop307"
+  ],
+  "name": "FIT-EASY 瑞浪店",
+  "officialUrl": "https://shops.fiteasy.jp/shop307",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒509-6135 岐阜県瑞浪市薬師町2丁目92",
+      "sourceUrl": "https://shops.fiteasy.jp/shop307",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop307",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop307",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：46台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop307",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop307",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop308"
+  ],
+  "name": "FIT-EASY 高辻南店",
+  "officialUrl": "https://shops.fiteasy.jp/shop308",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒467-0861 愛知県名古屋市瑞穂区二野町3-7 高辻中駒ビル1F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop308",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop308",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop308",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：25台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop308",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop308",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop309"
+  ],
+  "name": "FIT-EASY 南風原店",
+  "officialUrl": "https://shops.fiteasy.jp/shop309",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒901-1111 沖縄県島尻郡南風原町兼城602",
+      "sourceUrl": "https://shops.fiteasy.jp/shop309",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop309",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop309",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop309",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop309",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop310"
+  ],
+  "name": "FIT-EASY ひたちなか大成町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop310",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒312-0055 茨城県ひたちなか市大成町5-5",
+      "sourceUrl": "https://shops.fiteasy.jp/shop310",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop310",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop310",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop310",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop312"
+  ],
+  "name": "FIT-EASY 東郷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop312",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒470-0162 愛知県愛知郡東郷町春木深池1773",
+      "sourceUrl": "https://shops.fiteasy.jp/shop312",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop312",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop312",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用56台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop312",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop312",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop313"
+  ],
+  "name": "FIT-EASY 燕三条店",
+  "officialUrl": "https://shops.fiteasy.jp/shop313",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒959-1232 新潟県燕市井土巻2丁目225番地",
+      "sourceUrl": "https://shops.fiteasy.jp/shop313",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop313",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop313",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：66台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop313",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop313",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop314"
+  ],
+  "name": "FIT-EASY 瀬戸苗場店",
+  "officialUrl": "https://shops.fiteasy.jp/shop314",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒489-0983 愛知県瀬戸市苗場町130-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop314",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop314",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop314",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：28台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop314",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop314",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop315"
+  ],
+  "name": "FIT-EASY 神戸北店",
+  "officialUrl": "https://shops.fiteasy.jp/shop315",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒651-1313 兵庫県神戸市北区有野中町4丁目8-12",
+      "sourceUrl": "https://shops.fiteasy.jp/shop315",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop315",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop315",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：35台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop315",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop315",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop316"
+  ],
+  "name": "FIT-EASY 名駅牛島店",
+  "officialUrl": "https://shops.fiteasy.jp/shop316",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒451-0046 愛知県名古屋市西区牛島町6-24",
+      "sourceUrl": "https://shops.fiteasy.jp/shop316",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop316",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop316",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop318"
+  ],
+  "name": "FIT-EASY 東刈谷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop318",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒448-0807 愛知県刈谷市東刈谷町1丁目9-6",
+      "sourceUrl": "https://shops.fiteasy.jp/shop318",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop318",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop318",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：23台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop318",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop318",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop319"
+  ],
+  "name": "FIT-EASY 廿日市本町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop319",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒738-0015 広島県廿日市市本町4-22",
+      "sourceUrl": "https://shops.fiteasy.jp/shop319",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop319",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop319",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop319",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop319",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop320"
+  ],
+  "name": "FIT-EASY 恵那店",
+  "officialUrl": "https://shops.fiteasy.jp/shop320",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒509-7203 岐阜県恵那市長島町正家2丁目6-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop320",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop320",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop320",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop320",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop320",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop321"
+  ],
+  "name": "FIT-EASY 野々市店",
+  "officialUrl": "https://shops.fiteasy.jp/shop321",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒921-8806 石川県野々市市三日市2丁目73",
+      "sourceUrl": "https://shops.fiteasy.jp/shop321",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop321",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop321",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：38台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop321",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop322"
+  ],
+  "name": "FIT-EASY 奈良橿原店",
+  "officialUrl": "https://shops.fiteasy.jp/shop322",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒634-0006 奈良県橿原市新賀町坊ノ坪206-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop322",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop322",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop322",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop322",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop323"
+  ],
+  "name": "FIT-EASY 太田川駅前店",
+  "officialUrl": "https://shops.fiteasy.jp/shop323",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒477-0031 愛知県東海市大田町後田1158",
+      "sourceUrl": "https://shops.fiteasy.jp/shop323",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop323",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop323",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用198台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop323",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop323",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop324"
+  ],
+  "name": "FIT-EASY 玉城店",
+  "officialUrl": "https://shops.fiteasy.jp/shop324",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒519-0401 三重県度会郡玉城町世古401-16",
+      "sourceUrl": "https://shops.fiteasy.jp/shop324",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop324",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop324",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：58台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop324",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop325"
+  ],
+  "name": "FIT-EASY 福井松本店",
+  "officialUrl": "https://shops.fiteasy.jp/shop325",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒910-0003 福井県福井市松本2丁目23-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop325",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、PWR PLATE、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop325",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop325",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop325",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop326"
+  ],
+  "name": "FIT-EASY 浜松中瀬店",
+  "officialUrl": "https://shops.fiteasy.jp/shop326",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒434-0012 静岡県浜松市浜名区中瀬104-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop326",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-BASEBALL、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop326",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop326",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：56台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop326",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop327"
+  ],
+  "name": "FIT-EASY 長野高田店",
+  "officialUrl": "https://shops.fiteasy.jp/shop327",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒381-0034 長野県長野市高田1889-1 2F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop327",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop327",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop327",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用94台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop327",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop329"
+  ],
+  "name": "FIT-EASY 福山蔵王店",
+  "officialUrl": "https://shops.fiteasy.jp/shop329",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒721-0973 広島県福山市南蔵王町6丁目20-20",
+      "sourceUrl": "https://shops.fiteasy.jp/shop329",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、FIT-BASEBALL、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop329",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop329",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用49台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop329",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop330"
+  ],
+  "name": "FIT-EASY 新潟西店",
+  "officialUrl": "https://shops.fiteasy.jp/shop330",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒950-2011 新潟県新潟市西区小針上山10-20",
+      "sourceUrl": "https://shops.fiteasy.jp/shop330",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop330",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop330",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop330",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop331"
+  ],
+  "name": "FIT-EASY 中川コロナワールド店",
+  "officialUrl": "https://shops.fiteasy.jp/shop331",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒454-0954 愛知県名古屋市中川区江松3丁目110 中川コロナワールド 4F",
+      "sourceUrl": "https://shops.fiteasy.jp/shop331",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、4Dストレッチ",
+      "sourceUrl": "https://shops.fiteasy.jp/shop331",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop331",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用1,500台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop331",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop332"
+  ],
+  "name": "FIT-EASY 奈良平群店",
+  "officialUrl": "https://shops.fiteasy.jp/shop332",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒636-0904 奈良県生駒郡平群町三里728番地1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop332",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop332",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop332",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用73台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop332",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop333"
+  ],
+  "name": "FIT-EASY 宮崎大橋店",
+  "officialUrl": "https://shops.fiteasy.jp/shop333",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒880-0022 宮崎県宮崎市大橋3丁目4-26 2階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop333",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop333",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop333",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用54台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop333",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop334"
+  ],
+  "name": "FIT-EASY 薩摩川内店",
+  "officialUrl": "https://shops.fiteasy.jp/shop334",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒895-0025 鹿児島県薩摩川内市向田町1060-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop334",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、タンニングマシン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、マッサージチェア、PWR PLATE、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop334",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop334",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop334",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop335"
+  ],
+  "name": "FIT-EASY 太田小舞木店",
+  "officialUrl": "https://shops.fiteasy.jp/shop335",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒373-0818 群馬県太田市小舞木町244-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop335",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop335",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop335",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用29台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop335",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop336"
+  ],
+  "name": "FIT-EASY 常滑りんくう店",
+  "officialUrl": "https://shops.fiteasy.jp/shop336",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒479-0882 愛知県常滑市りんくう町1丁目25-11",
+      "sourceUrl": "https://shops.fiteasy.jp/shop336",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop336",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop336",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：70台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop336",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop337"
+  ],
+  "name": "FIT-EASY 寝屋川店",
+  "officialUrl": "https://shops.fiteasy.jp/shop337",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒572-0846 大阪府寝屋川市高宮栄町10-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop337",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop337",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop337",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop338"
+  ],
+  "name": "FIT-EASY 有賀園千葉店",
+  "officialUrl": "https://shops.fiteasy.jp/shop338",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒261-0001 千葉県千葉市美浜区幸町1丁目26-4",
+      "sourceUrl": "https://shops.fiteasy.jp/shop338",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop338",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop338",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用52台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop338",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop339"
+  ],
+  "name": "FIT-EASY 久留米国分店",
+  "officialUrl": "https://shops.fiteasy.jp/shop339",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒839-0863 福岡県久留米市国分町1167-8",
+      "sourceUrl": "https://shops.fiteasy.jp/shop339",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop339",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop339",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用47台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop339",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop340"
+  ],
+  "name": "FIT-EASY 土岐店",
+  "officialUrl": "https://shops.fiteasy.jp/shop340",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒509-5102 岐阜県土岐市泉町定林寺112",
+      "sourceUrl": "https://shops.fiteasy.jp/shop340",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、マッサージチェア、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop340",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop340",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用215台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop340",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop341"
+  ],
+  "name": "FIT-EASY 和白店",
+  "officialUrl": "https://shops.fiteasy.jp/shop341",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒811-0213 福岡県福岡市東区和白丘3丁目1-20",
+      "sourceUrl": "https://shops.fiteasy.jp/shop341",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop341",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop341",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop341",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop341",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop342"
+  ],
+  "name": "FIT-EASY 掛川店",
+  "officialUrl": "https://shops.fiteasy.jp/shop342",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒436-0074 静岡県掛川市葛川452-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop342",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、マッサージチェア、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop342",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop342",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：27台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop342",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop342",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop343"
+  ],
+  "name": "FIT-EASY ファボーレ富山店",
+  "officialUrl": "https://shops.fiteasy.jp/shop343",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒939-2716 富山県富山市婦中町下轡田165-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop343",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY",
+      "sourceUrl": "https://shops.fiteasy.jp/shop343",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop343",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用3650台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop343",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop343",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop344"
+  ],
+  "name": "FIT-EASY 高崎問屋町店",
+  "officialUrl": "https://shops.fiteasy.jp/shop344",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒370-0069 群馬県高崎市飯塚町問屋町前1126",
+      "sourceUrl": "https://shops.fiteasy.jp/shop344",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop344",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop344",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：専用30台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop344",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop344",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop345"
+  ],
+  "name": "FIT-EASY 金沢入江店",
+  "officialUrl": "https://shops.fiteasy.jp/shop345",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒921-8015 石川県金沢市東力4丁目236",
+      "sourceUrl": "https://shops.fiteasy.jp/shop345",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop345",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop345",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用60台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop345",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop345",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop347"
+  ],
+  "name": "FIT-EASY 明石二見店",
+  "officialUrl": "https://shops.fiteasy.jp/shop347",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒674-0094 兵庫県明石市二見町西二見89-7",
+      "sourceUrl": "https://shops.fiteasy.jp/shop347",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、岩盤浴、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop347",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop347",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用300台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop347",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop347",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop348"
+  ],
+  "name": "FIT-EASY 伏見御園店",
+  "officialUrl": "https://shops.fiteasy.jp/shop348",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒460-0008 愛知県名古屋市中区栄1丁目11-2",
+      "sourceUrl": "https://shops.fiteasy.jp/shop348",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-SAUNA、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、H2ルーム、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop348",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop348",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop348",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop349"
+  ],
+  "name": "FIT-EASY 敦賀店",
+  "officialUrl": "https://shops.fiteasy.jp/shop349",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒914-0802 福井県敦賀市呉竹町2丁目2-1",
+      "sourceUrl": "https://shops.fiteasy.jp/shop349",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、マッサージチェア、PWR PLATE、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop349",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop349",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：40台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop349",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop349",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop352"
+  ],
+  "name": "FIT-EASY 松山東長戸店",
+  "officialUrl": "https://shops.fiteasy.jp/shop352",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒791-8005 愛媛県松山市東長戸4丁目8-33",
+      "sourceUrl": "https://shops.fiteasy.jp/shop352",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、FIT-AERO（スタジオ）、ピラティス、水素水、プロテイン、FIT-LOUNGE、体組成計、女性専用エリア、岩盤浴、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、4Dストレッチ",
+      "sourceUrl": "https://shops.fiteasy.jp/shop352",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop352",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：43台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop352",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop352",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop353"
+  ],
+  "name": "FIT-EASY 北谷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop353",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒904-0117 沖縄県中頭郡北谷町北前1丁目13",
+      "sourceUrl": "https://shops.fiteasy.jp/shop353",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、FIT-SHAPE、PWR PLATE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop353",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop353",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用50台",
+      "sourceUrl": "https://shops.fiteasy.jp/shop353",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop353",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop354"
+  ],
+  "name": "FIT-EASY 久喜菖蒲店",
+  "officialUrl": "https://shops.fiteasy.jp/shop354",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒346-0106 埼玉県久喜市菖蒲町菖蒲7001",
+      "sourceUrl": "https://shops.fiteasy.jp/shop354",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop354",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop354",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "駐車場",
+      "value": "駐車場：共用200台以上",
+      "sourceUrl": "https://shops.fiteasy.jp/shop354",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop354",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-fiteasy-shop355"
+  ],
+  "name": "FIT-EASY 市ヶ谷店",
+  "officialUrl": "https://shops.fiteasy.jp/shop355",
+  "features": [
+    "個室"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒102-0076 東京都千代田区五番町6番地1 AKビルディング 2階",
+      "sourceUrl": "https://shops.fiteasy.jp/shop355",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "公式ページの設備表示：FIT-GOLF、FIT-SAUNA、O2ルーム（酸素ルーム）、水素水、プロテイン、FIT-LOUNGE、体組成計、岩盤浴、FIT-CHAIR、マッサージチェア、FIT-SHAPE、PWR PLATE、FIT-BEAUTY、FIT-VOICE",
+      "sourceUrl": "https://shops.fiteasy.jp/shop355",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用条件",
+      "value": "FIT-SAUNAのご利用は、原則スタッフタイムのみとなります。一部、24時間ご利用いただける店舗もございます。",
+      "sourceUrl": "https://shops.fiteasy.jp/shop355",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業",
+      "sourceUrl": "https://shops.fiteasy.jp/shop355",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 

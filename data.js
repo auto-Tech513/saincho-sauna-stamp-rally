@@ -76639,5 +76639,3558 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.central.co.jp/club/fuchu/",
     "officialUrl": "https://www.central.co.jp/club/fuchu/"
+  },
+  {
+    "id": "manual-fiteasy-shop109",
+    "name": "FIT-EASY 名駅南店",
+    "prefecture": "愛知県",
+    "address": "〒454-0003 愛知県名古屋市中川区松重町4-35",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop109",
+    "officialUrl": "https://shops.fiteasy.jp/shop109"
+  },
+  {
+    "id": "manual-fiteasy-shop117",
+    "name": "FIT-EASY 西尾店",
+    "prefecture": "愛知県",
+    "address": "〒445-0812 愛知県西尾市道光寺1-4-15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "西尾市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop117",
+    "officialUrl": "https://shops.fiteasy.jp/shop117"
+  },
+  {
+    "id": "manual-fiteasy-shop118",
+    "name": "FIT-EASY 名古屋栄店",
+    "prefecture": "愛知県",
+    "address": "〒460-0008 愛知県名古屋市中区栄3-3-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop118",
+    "officialUrl": "https://shops.fiteasy.jp/shop118"
+  },
+  {
+    "id": "manual-fiteasy-shop120",
+    "name": "FIT-EASY 袋井店",
+    "prefecture": "静岡県",
+    "address": "〒437-0064 静岡県袋井市川井1151",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "袋井市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop120",
+    "officialUrl": "https://shops.fiteasy.jp/shop120"
+  },
+  {
+    "id": "manual-fiteasy-shop121",
+    "name": "FIT-EASY 名東極楽店",
+    "prefecture": "愛知県",
+    "address": "〒465-0053 愛知県名古屋市名東区極楽4-310",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop121",
+    "officialUrl": "https://shops.fiteasy.jp/shop121"
+  },
+  {
+    "id": "manual-fiteasy-shop122",
+    "name": "FIT-EASY 湘南二宮店",
+    "prefecture": "神奈川県",
+    "address": "〒259-0131 神奈川県中郡二宮町中里2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "中郡二宮町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop122",
+    "officialUrl": "https://shops.fiteasy.jp/shop122"
+  },
+  {
+    "id": "manual-fiteasy-shop123",
+    "name": "FIT-EASY 大垣西店",
+    "prefecture": "岐阜県",
+    "address": "〒503-0032 岐阜県大垣市熊野町312",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大垣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop123",
+    "officialUrl": "https://shops.fiteasy.jp/shop123"
+  },
+  {
+    "id": "manual-fiteasy-shop125",
+    "name": "FIT-EASY 札幌清田店",
+    "prefecture": "北海道",
+    "address": "〒004-0841 北海道札幌市清田区清田一条1-6-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop125",
+    "officialUrl": "https://shops.fiteasy.jp/shop125"
+  },
+  {
+    "id": "manual-fiteasy-shop126",
+    "name": "FIT-EASY 東松山店",
+    "prefecture": "埼玉県",
+    "address": "〒355-0021 埼玉県東松山市神明町2-13-27",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東松山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop126",
+    "officialUrl": "https://shops.fiteasy.jp/shop126"
+  },
+  {
+    "id": "manual-fiteasy-shop127",
+    "name": "FIT-EASY 刈谷かりがね店",
+    "prefecture": "愛知県",
+    "address": "〒448-0011 愛知県刈谷市築地町2-1-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "刈谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop127",
+    "officialUrl": "https://shops.fiteasy.jp/shop127"
+  },
+  {
+    "id": "manual-fiteasy-shop128",
+    "name": "FIT-EASY 植田駅前店",
+    "prefecture": "愛知県",
+    "address": "〒468-0051 愛知県名古屋市天白区植田1-1310",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop128",
+    "officialUrl": "https://shops.fiteasy.jp/shop128"
+  },
+  {
+    "id": "manual-fiteasy-shop129",
+    "name": "FIT-EASY 佐久平店",
+    "prefecture": "長野県",
+    "address": "〒385-0029 長野県佐久市佐久平駅南25-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "佐久市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop129",
+    "officialUrl": "https://shops.fiteasy.jp/shop129"
+  },
+  {
+    "id": "manual-fiteasy-shop131",
+    "name": "FIT-EASY 一宮尾西店",
+    "prefecture": "愛知県",
+    "address": "〒494-0001 愛知県一宮市開明流50-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "一宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop131",
+    "officialUrl": "https://shops.fiteasy.jp/shop131"
+  },
+  {
+    "id": "manual-fiteasy-shop132",
+    "name": "FIT-EASY 知多店",
+    "prefecture": "愛知県",
+    "address": "〒478-0055 愛知県知多市にしの台2-100-7 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "知多市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop132",
+    "officialUrl": "https://shops.fiteasy.jp/shop132"
+  },
+  {
+    "id": "manual-fiteasy-shop133",
+    "name": "FIT-EASY 豊田四郷店",
+    "prefecture": "愛知県",
+    "address": "〒470-0373 愛知県豊田市四郷町森前南7-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop133",
+    "officialUrl": "https://shops.fiteasy.jp/shop133"
+  },
+  {
+    "id": "manual-fiteasy-shop134",
+    "name": "FIT-EASY 伊集院店",
+    "prefecture": "鹿児島県",
+    "address": "〒899-2502 鹿児島県日置市伊集院町徳重3-9-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "日置市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop134",
+    "officialUrl": "https://shops.fiteasy.jp/shop134"
+  },
+  {
+    "id": "manual-fiteasy-shop135",
+    "name": "FIT-EASY イオンタウン湖西新居店",
+    "prefecture": "静岡県",
+    "address": "〒431-0302 静岡県湖西市新居町新居250",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "湖西市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop135",
+    "officialUrl": "https://shops.fiteasy.jp/shop135"
+  },
+  {
+    "id": "manual-fiteasy-shop136",
+    "name": "FIT-EASY コムタウン岡崎店",
+    "prefecture": "愛知県",
+    "address": "〒444-0859 愛知県岡崎市上六名町林20-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop136",
+    "officialUrl": "https://shops.fiteasy.jp/shop136"
+  },
+  {
+    "id": "manual-fiteasy-shop137",
+    "name": "FIT-EASY 新安城店",
+    "prefecture": "愛知県",
+    "address": "〒446-0071 愛知県安城市今池町3-2-37",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "安城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop137",
+    "officialUrl": "https://shops.fiteasy.jp/shop137"
+  },
+  {
+    "id": "manual-fiteasy-shop138",
+    "name": "FIT-EASY 札幌新道東店",
+    "prefecture": "北海道",
+    "address": "〒007-0834 北海道札幌市東区北34条東16-1-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop138",
+    "officialUrl": "https://shops.fiteasy.jp/shop138"
+  },
+  {
+    "id": "manual-fiteasy-shop139",
+    "name": "FIT-EASY 大垣バイパス店",
+    "prefecture": "岐阜県",
+    "address": "〒503-0015 岐阜県大垣市林町7-614",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大垣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop139",
+    "officialUrl": "https://shops.fiteasy.jp/shop139"
+  },
+  {
+    "id": "manual-fiteasy-shop140",
+    "name": "FIT-EASY 花小金井店",
+    "prefecture": "東京都",
+    "address": "〒187-0002 東京都小平市花小金井3-15-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小平市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop140",
+    "officialUrl": "https://shops.fiteasy.jp/shop140"
+  },
+  {
+    "id": "manual-fiteasy-shop141",
+    "name": "FIT-EASY 安曇野店",
+    "prefecture": "長野県",
+    "address": "〒399-8205 長野県安曇野市豊科5478",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "安曇野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop141",
+    "officialUrl": "https://shops.fiteasy.jp/shop141"
+  },
+  {
+    "id": "manual-fiteasy-shop142",
+    "name": "FIT-EASY 飯田かなえ店",
+    "prefecture": "長野県",
+    "address": "〒395-0806 長野県飯田市鼎上山3729-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "飯田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop142",
+    "officialUrl": "https://shops.fiteasy.jp/shop142"
+  },
+  {
+    "id": "manual-fiteasy-shop143",
+    "name": "FIT-EASY あま七宝店",
+    "prefecture": "愛知県",
+    "address": "〒497-0004 愛知県あま市七宝町桂親田14 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "あま市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop143",
+    "officialUrl": "https://shops.fiteasy.jp/shop143"
+  },
+  {
+    "id": "manual-fiteasy-shop144",
+    "name": "FIT-EASY 羽村店",
+    "prefecture": "東京都",
+    "address": "〒205-0002 東京都羽村市栄町2-3-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "羽村市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop144",
+    "officialUrl": "https://shops.fiteasy.jp/shop144"
+  },
+  {
+    "id": "manual-fiteasy-shop145",
+    "name": "FIT-EASY 久喜店",
+    "prefecture": "埼玉県",
+    "address": "〒346-0014 埼玉県久喜市吉羽2-29-6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "久喜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop145",
+    "officialUrl": "https://shops.fiteasy.jp/shop145"
+  },
+  {
+    "id": "manual-fiteasy-shop146",
+    "name": "FIT-EASY 豊田インター店",
+    "prefecture": "愛知県",
+    "address": "〒471-0841 愛知県豊田市深田町1-65-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop146",
+    "officialUrl": "https://shops.fiteasy.jp/shop146"
+  },
+  {
+    "id": "manual-fiteasy-shop147",
+    "name": "FIT-EASY 豊田高橋店",
+    "prefecture": "愛知県",
+    "address": "〒471-0807 愛知県豊田市広川町7-91-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop147",
+    "officialUrl": "https://shops.fiteasy.jp/shop147"
+  },
+  {
+    "id": "manual-fiteasy-shop148",
+    "name": "FIT-EASY 滝ノ水店",
+    "prefecture": "愛知県",
+    "address": "〒458-0021 愛知県名古屋市緑区滝ノ水5-803",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop148",
+    "officialUrl": "https://shops.fiteasy.jp/shop148"
+  },
+  {
+    "id": "manual-fiteasy-shop149",
+    "name": "FIT-EASY 猪高店",
+    "prefecture": "愛知県",
+    "address": "〒464-0005 愛知県名古屋市千種区千代が丘5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop149",
+    "officialUrl": "https://shops.fiteasy.jp/shop149"
+  },
+  {
+    "id": "manual-fiteasy-shop150",
+    "name": "FIT-EASY 多治見駅前店",
+    "prefecture": "岐阜県",
+    "address": "〒507-0033 岐阜県多治見市本町1-122",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "多治見市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop150",
+    "officialUrl": "https://shops.fiteasy.jp/shop150"
+  },
+  {
+    "id": "manual-fiteasy-shop151",
+    "name": "FIT-EASY 秋田広面店",
+    "prefecture": "秋田県",
+    "address": "〒010-0041 秋田県秋田市広面宮田27-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "秋田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop151",
+    "officialUrl": "https://shops.fiteasy.jp/shop151"
+  },
+  {
+    "id": "manual-fiteasy-shop152",
+    "name": "FIT-EASY イオンモール四日市北店",
+    "prefecture": "三重県",
+    "address": "〒510-8016 三重県四日市市富州原町2-40",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "四日市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop152",
+    "officialUrl": "https://shops.fiteasy.jp/shop152"
+  },
+  {
+    "id": "manual-fiteasy-shop153",
+    "name": "FIT-EASY 磐田店",
+    "prefecture": "静岡県",
+    "address": "〒438-0071 静岡県磐田市今之浦3-1-9",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "磐田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop153",
+    "officialUrl": "https://shops.fiteasy.jp/shop153"
+  },
+  {
+    "id": "manual-fiteasy-shop155",
+    "name": "FIT-EASY 静岡駅前店",
+    "prefecture": "静岡県",
+    "address": "〒420-0857 静岡県静岡市葵区御幸町6-5 パレス第3ビル 1F・2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "静岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop155",
+    "officialUrl": "https://shops.fiteasy.jp/shop155"
+  },
+  {
+    "id": "manual-fiteasy-shop156",
+    "name": "FIT-EASY 矢場町店",
+    "prefecture": "愛知県",
+    "address": "〒460-0008 愛知県名古屋市中区栄3-25-34",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop156",
+    "officialUrl": "https://shops.fiteasy.jp/shop156"
+  },
+  {
+    "id": "manual-fiteasy-shop157",
+    "name": "FIT-EASY 福山緑町店",
+    "prefecture": "広島県",
+    "address": "〒720-0804 広島県福山市緑町1-30 みどり町モール2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop157",
+    "officialUrl": "https://shops.fiteasy.jp/shop157"
+  },
+  {
+    "id": "manual-fiteasy-shop159",
+    "name": "FIT-EASY 日進赤池店",
+    "prefecture": "愛知県",
+    "address": "〒470-0125 愛知県日進市赤池2丁目601番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "日進市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop159",
+    "officialUrl": "https://shops.fiteasy.jp/shop159"
+  },
+  {
+    "id": "manual-fiteasy-shop160",
+    "name": "FIT-EASY 豊橋汐田橋店",
+    "prefecture": "愛知県",
+    "address": "〒441-8087 愛知県豊橋市牟呂町扇田13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop160",
+    "officialUrl": "https://shops.fiteasy.jp/shop160"
+  },
+  {
+    "id": "manual-fiteasy-shop161",
+    "name": "FIT-EASY 岩倉店",
+    "prefecture": "愛知県",
+    "address": "〒482-0036 愛知県岩倉市西市町無量寺57-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岩倉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop161",
+    "officialUrl": "https://shops.fiteasy.jp/shop161"
+  },
+  {
+    "id": "manual-fiteasy-shop162",
+    "name": "FIT-EASY 太田丸山店",
+    "prefecture": "群馬県",
+    "address": "〒373-0018 群馬県太田市丸山町1380",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "太田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop162",
+    "officialUrl": "https://shops.fiteasy.jp/shop162"
+  },
+  {
+    "id": "manual-fiteasy-shop163",
+    "name": "FIT-EASY 加賀店",
+    "prefecture": "石川県",
+    "address": "〒922-0241 石川県加賀市加茂町130",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "加賀市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop163",
+    "officialUrl": "https://shops.fiteasy.jp/shop163"
+  },
+  {
+    "id": "manual-fiteasy-shop164",
+    "name": "FIT-EASY 新大村駅前店",
+    "prefecture": "長崎県",
+    "address": "〒856-0027 長崎県大村市植松3丁目59番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大村市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop164",
+    "officialUrl": "https://shops.fiteasy.jp/shop164"
+  },
+  {
+    "id": "manual-fiteasy-shop165",
+    "name": "FIT-EASY 豊川店",
+    "prefecture": "愛知県",
+    "address": "〒442-0888 愛知県豊川市千歳通3丁目6-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop165",
+    "officialUrl": "https://shops.fiteasy.jp/shop165"
+  },
+  {
+    "id": "manual-fiteasy-shop167",
+    "name": "FIT-EASY 長久手グリーンロード店",
+    "prefecture": "愛知県",
+    "address": "〒480-1144 愛知県長久手市熊田210",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長久手市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop167",
+    "officialUrl": "https://shops.fiteasy.jp/shop167"
+  },
+  {
+    "id": "manual-fiteasy-shop169",
+    "name": "FIT-EASY 西尾上町店",
+    "prefecture": "愛知県",
+    "address": "〒445-0894 愛知県西尾市上町山崎13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "西尾市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop169",
+    "officialUrl": "https://shops.fiteasy.jp/shop169"
+  },
+  {
+    "id": "manual-fiteasy-shop170",
+    "name": "FIT-EASY イオンモール香椎浜店",
+    "prefecture": "福岡県",
+    "address": "〒813-0016 福岡県福岡市東区香椎浜三丁目1番3号 香椎いーなテラス2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop170",
+    "officialUrl": "https://shops.fiteasy.jp/shop170"
+  },
+  {
+    "id": "manual-fiteasy-shop171",
+    "name": "FIT-EASY 富士宮店",
+    "prefecture": "静岡県",
+    "address": "〒418-0072 静岡県富士宮市矢立町935",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富士宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop171",
+    "officialUrl": "https://shops.fiteasy.jp/shop171"
+  },
+  {
+    "id": "manual-fiteasy-shop172",
+    "name": "FIT-EASY 彦根店",
+    "prefecture": "滋賀県",
+    "address": "〒522-0002 滋賀県彦根市松原町字石持1836",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "彦根市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop172",
+    "officialUrl": "https://shops.fiteasy.jp/shop172"
+  },
+  {
+    "id": "manual-fiteasy-shop173",
+    "name": "FIT-EASY 柳津店",
+    "prefecture": "岐阜県",
+    "address": "〒501-6103 岐阜県岐阜市柳津町蓮池3-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岐阜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop173",
+    "officialUrl": "https://shops.fiteasy.jp/shop173"
+  },
+  {
+    "id": "manual-fiteasy-shop174",
+    "name": "FIT-EASY 常滑インター店",
+    "prefecture": "愛知県",
+    "address": "〒479-0868 愛知県常滑市飛香台3丁目3-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "常滑市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop174",
+    "officialUrl": "https://shops.fiteasy.jp/shop174"
+  },
+  {
+    "id": "manual-fiteasy-shop175",
+    "name": "FIT-EASY 高畑店",
+    "prefecture": "愛知県",
+    "address": "〒454-0873 愛知県名古屋市中川区上高畑2丁目180番2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop175",
+    "officialUrl": "https://shops.fiteasy.jp/shop175"
+  },
+  {
+    "id": "manual-fiteasy-shop176",
+    "name": "FIT-EASY 小牧インター店",
+    "prefecture": "愛知県",
+    "address": "〒485-0046 愛知県小牧市堀の内2丁目15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小牧市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop176",
+    "officialUrl": "https://shops.fiteasy.jp/shop176"
+  },
+  {
+    "id": "manual-fiteasy-shop177",
+    "name": "FIT-EASY 吉野店",
+    "prefecture": "鹿児島県",
+    "address": "〒892-0871 鹿児島県鹿児島市吉野町2097",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鹿児島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop177",
+    "officialUrl": "https://shops.fiteasy.jp/shop177"
+  },
+  {
+    "id": "manual-fiteasy-shop178",
+    "name": "FIT-EASY 長泉店",
+    "prefecture": "静岡県",
+    "address": "〒411-0944 静岡県駿東郡長泉町竹原285-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "駿東郡長泉町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop178",
+    "officialUrl": "https://shops.fiteasy.jp/shop178"
+  },
+  {
+    "id": "manual-fiteasy-shop179",
+    "name": "FIT-EASY 練馬中村橋店",
+    "prefecture": "東京都",
+    "address": "〒176-0022 東京都練馬区向山1-19-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop179",
+    "officialUrl": "https://shops.fiteasy.jp/shop179"
+  },
+  {
+    "id": "manual-fiteasy-shop180",
+    "name": "FIT-EASY 秋田飯島店",
+    "prefecture": "秋田県",
+    "address": "〒011-0917 秋田県秋田市飯島道東1丁目1-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "秋田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop180",
+    "officialUrl": "https://shops.fiteasy.jp/shop180"
+  },
+  {
+    "id": "manual-fiteasy-shop182",
+    "name": "FIT-EASY 稲沢警察署前店",
+    "prefecture": "愛知県",
+    "address": "〒492-8268 愛知県稲沢市朝府町14-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "稲沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop182",
+    "officialUrl": "https://shops.fiteasy.jp/shop182"
+  },
+  {
+    "id": "manual-fiteasy-shop183",
+    "name": "FIT-EASY 弘前城東店",
+    "prefecture": "青森県",
+    "address": "〒036-8084 青森県弘前市高田4丁目3-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "弘前市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop183",
+    "officialUrl": "https://shops.fiteasy.jp/shop183"
+  },
+  {
+    "id": "manual-fiteasy-shop185",
+    "name": "FIT-EASY 伊勢崎宮子店",
+    "prefecture": "群馬県",
+    "address": "〒372-0801 群馬県伊勢崎市宮子町3299-1 TAGモール内2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "伊勢崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop185",
+    "officialUrl": "https://shops.fiteasy.jp/shop185"
+  },
+  {
+    "id": "manual-fiteasy-shop186",
+    "name": "FIT-EASY 守山自衛隊前店",
+    "prefecture": "愛知県",
+    "address": "〒463-0067 愛知県名古屋市守山区守山3-10-22",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop186",
+    "officialUrl": "https://shops.fiteasy.jp/shop186"
+  },
+  {
+    "id": "manual-fiteasy-shop189",
+    "name": "FIT-EASY 高知店",
+    "prefecture": "高知県",
+    "address": "〒780-0046 高知県高知市伊勢崎町14- 28",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高知市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop189",
+    "officialUrl": "https://shops.fiteasy.jp/shop189"
+  },
+  {
+    "id": "manual-fiteasy-shop190",
+    "name": "FIT-EASY 千種店",
+    "prefecture": "愛知県",
+    "address": "〒460-0007 愛知県名古屋市中区新栄3丁目20番24号",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop190",
+    "officialUrl": "https://shops.fiteasy.jp/shop190"
+  },
+  {
+    "id": "manual-fiteasy-shop191",
+    "name": "FIT-EASY 古河店",
+    "prefecture": "茨城県",
+    "address": "〒306-0234 茨城県古河市上辺見549-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "古河市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop191",
+    "officialUrl": "https://shops.fiteasy.jp/shop191"
+  },
+  {
+    "id": "manual-fiteasy-shop192",
+    "name": "FIT-EASY 福津店",
+    "prefecture": "福岡県",
+    "address": "〒811-3217 福岡県福津市中央1丁目19-13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop192",
+    "officialUrl": "https://shops.fiteasy.jp/shop192"
+  },
+  {
+    "id": "manual-fiteasy-shop193",
+    "name": "FIT-EASY 秦野店",
+    "prefecture": "神奈川県",
+    "address": "〒257-0031 神奈川県秦野市曽屋3511",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "秦野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop193",
+    "officialUrl": "https://shops.fiteasy.jp/shop193"
+  },
+  {
+    "id": "manual-fiteasy-shop194",
+    "name": "FIT-EASY 片江店",
+    "prefecture": "福岡県",
+    "address": "〒814-0142 福岡県福岡市城南区片江3丁目1-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop194",
+    "officialUrl": "https://shops.fiteasy.jp/shop194"
+  },
+  {
+    "id": "manual-fiteasy-shop195",
+    "name": "FIT-EASY 羽島竹鼻店",
+    "prefecture": "岐阜県",
+    "address": "〒501-6235 岐阜県羽島市竹鼻町蜂尻17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "羽島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop195",
+    "officialUrl": "https://shops.fiteasy.jp/shop195"
+  },
+  {
+    "id": "manual-fiteasy-shop196",
+    "name": "FIT-EASY 亀山店",
+    "prefecture": "三重県",
+    "address": "〒519-0124 三重県亀山市東御幸町51",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "亀山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop196",
+    "officialUrl": "https://shops.fiteasy.jp/shop196"
+  },
+  {
+    "id": "manual-fiteasy-shop197",
+    "name": "FIT-EASY 那覇新都心店",
+    "prefecture": "沖縄県",
+    "address": "〒900-0011 沖縄県那覇市上之屋1丁目1-28",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "那覇市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop197",
+    "officialUrl": "https://shops.fiteasy.jp/shop197"
+  },
+  {
+    "id": "manual-fiteasy-shop198",
+    "name": "FIT-EASY 新発田店",
+    "prefecture": "新潟県",
+    "address": "〒957-0062 新潟県新発田市富塚町2丁目967-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新発田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop198",
+    "officialUrl": "https://shops.fiteasy.jp/shop198"
+  },
+  {
+    "id": "manual-fiteasy-shop199",
+    "name": "FIT-EASY 諫早店",
+    "prefecture": "長崎県",
+    "address": "〒854-0053 長崎県諫早市小川町1273-6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "諫早市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop199",
+    "officialUrl": "https://shops.fiteasy.jp/shop199"
+  },
+  {
+    "id": "manual-fiteasy-shop201",
+    "name": "FIT-EASY アクロスプラザ南栄店",
+    "prefecture": "鹿児島県",
+    "address": "〒891-0122 鹿児島県鹿児島市南栄1丁目11-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鹿児島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop201",
+    "officialUrl": "https://shops.fiteasy.jp/shop201"
+  },
+  {
+    "id": "manual-fiteasy-shop202",
+    "name": "FIT-EASY 福山西店",
+    "prefecture": "広島県",
+    "address": "〒729-0106 広島県福山市高西町4丁目3-61",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop202",
+    "officialUrl": "https://shops.fiteasy.jp/shop202"
+  },
+  {
+    "id": "manual-fiteasy-shop203",
+    "name": "FIT-EASY 南国店",
+    "prefecture": "高知県",
+    "address": "〒783-0004 高知県南国市大そね甲2520-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "南国市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop203",
+    "officialUrl": "https://shops.fiteasy.jp/shop203"
+  },
+  {
+    "id": "manual-fiteasy-shop204",
+    "name": "FIT-EASY 茨木店",
+    "prefecture": "大阪府",
+    "address": "〒567-0825 大阪府茨木市園田町2-4 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "茨木市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop204",
+    "officialUrl": "https://shops.fiteasy.jp/shop204"
+  },
+  {
+    "id": "manual-fiteasy-shop205",
+    "name": "FIT-EASY 蒲郡店",
+    "prefecture": "愛知県",
+    "address": "〒443-0037 愛知県蒲郡市鹿島町浅井新田1-26",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "蒲郡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop205",
+    "officialUrl": "https://shops.fiteasy.jp/shop205"
+  },
+  {
+    "id": "manual-fiteasy-shop206",
+    "name": "FIT-EASY 関旭ヶ丘店",
+    "prefecture": "岐阜県",
+    "address": "〒501-3824 岐阜県関市東新町1丁目5-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "関市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop206",
+    "officialUrl": "https://shops.fiteasy.jp/shop206"
+  },
+  {
+    "id": "manual-fiteasy-shop207",
+    "name": "FIT-EASY 新潟横越店",
+    "prefecture": "新潟県",
+    "address": "〒950-0210 新潟県新潟市江南区横越上町5丁目1-32",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新潟市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop207",
+    "officialUrl": "https://shops.fiteasy.jp/shop207"
+  },
+  {
+    "id": "manual-fiteasy-shop208",
+    "name": "FIT-EASY 西浦和店",
+    "prefecture": "埼玉県",
+    "address": "〒338-0837 埼玉県さいたま市桜区田島 8-2-12 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "さいたま市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop208",
+    "officialUrl": "https://shops.fiteasy.jp/shop208"
+  },
+  {
+    "id": "manual-fiteasy-shop209",
+    "name": "FIT-EASY 江南店",
+    "prefecture": "愛知県",
+    "address": "〒483-8201 愛知県江南市野白町葭場102",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江南市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop209",
+    "officialUrl": "https://shops.fiteasy.jp/shop209"
+  },
+  {
+    "id": "manual-fiteasy-shop210",
+    "name": "FIT-EASY 上田しおだ野店",
+    "prefecture": "長野県",
+    "address": "〒386-1103 長野県上田市神畑字浦田105",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "上田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop210",
+    "officialUrl": "https://shops.fiteasy.jp/shop210"
+  },
+  {
+    "id": "manual-fiteasy-shop213",
+    "name": "FIT-EASY 九大学研都市店",
+    "prefecture": "福岡県",
+    "address": "〒819-0379 福岡県福岡市西区北原2丁目6-6 2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop213",
+    "officialUrl": "https://shops.fiteasy.jp/shop213"
+  },
+  {
+    "id": "manual-fiteasy-shop214",
+    "name": "FIT-EASY 豊橋牧野店",
+    "prefecture": "愛知県",
+    "address": "〒441-8112 愛知県豊橋市牧野町牧野26番地47",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop214",
+    "officialUrl": "https://shops.fiteasy.jp/shop214"
+  },
+  {
+    "id": "manual-fiteasy-shop215",
+    "name": "FIT-EASY 鈴鹿南玉垣店",
+    "prefecture": "三重県",
+    "address": "〒513-0816 三重県鈴鹿市南玉垣町7188",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "鈴鹿市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop215",
+    "officialUrl": "https://shops.fiteasy.jp/shop215"
+  },
+  {
+    "id": "manual-fiteasy-shop216",
+    "name": "FIT-EASY 岡崎大樹寺店",
+    "prefecture": "愛知県",
+    "address": "〒444-2121 愛知県岡崎市鴨田町広元270",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop216",
+    "officialUrl": "https://shops.fiteasy.jp/shop216"
+  },
+  {
+    "id": "manual-fiteasy-shop217",
+    "name": "FIT-EASY 高浜店",
+    "prefecture": "愛知県",
+    "address": "〒444-1321 愛知県高浜市稗田町3丁目2-22番地2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop217",
+    "officialUrl": "https://shops.fiteasy.jp/shop217"
+  },
+  {
+    "id": "manual-fiteasy-shop218",
+    "name": "FIT-EASY 新潟赤道店",
+    "prefecture": "新潟県",
+    "address": "〒950-0063 新潟県新潟市東区上王瀬町2-47 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新潟市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop218",
+    "officialUrl": "https://shops.fiteasy.jp/shop218"
+  },
+  {
+    "id": "manual-fiteasy-shop219",
+    "name": "FIT-EASY 三田店",
+    "prefecture": "兵庫県",
+    "address": "〒669-1322 兵庫県三田市すずかけ台3丁目3-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "三田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop219",
+    "officialUrl": "https://shops.fiteasy.jp/shop219"
+  },
+  {
+    "id": "manual-fiteasy-shop221",
+    "name": "FIT-EASY 萩野通店",
+    "prefecture": "愛知県",
+    "address": "〒462-0026 愛知県名古屋市北区萩野通2丁目19-1 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop221",
+    "officialUrl": "https://shops.fiteasy.jp/shop221"
+  },
+  {
+    "id": "manual-fiteasy-shop222",
+    "name": "FIT-EASY 都城店",
+    "prefecture": "宮崎県",
+    "address": "〒885-0012 宮崎県都城市上川東1丁目2-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "都城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop222",
+    "officialUrl": "https://shops.fiteasy.jp/shop222"
+  },
+  {
+    "id": "manual-fiteasy-shop223",
+    "name": "FIT-EASY 沼津店",
+    "prefecture": "静岡県",
+    "address": "〒410-0022 静岡県沼津市大岡1559-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "沼津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop223",
+    "officialUrl": "https://shops.fiteasy.jp/shop223"
+  },
+  {
+    "id": "manual-fiteasy-shop224",
+    "name": "FIT-EASY 渋谷店",
+    "prefecture": "東京都",
+    "address": "〒150-0031 東京都渋谷区桜丘町1-4 渋谷サクラステージ SHIBUYAサイド 2F,3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "渋谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop224",
+    "officialUrl": "https://shops.fiteasy.jp/shop224"
+  },
+  {
+    "id": "manual-fiteasy-shop225",
+    "name": "FIT-EASY 高富店",
+    "prefecture": "岐阜県",
+    "address": "〒501-2105 岐阜県山県市高富2405",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "山県市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop225",
+    "officialUrl": "https://shops.fiteasy.jp/shop225"
+  },
+  {
+    "id": "manual-fiteasy-shop226",
+    "name": "FIT-EASY 大垣安井店",
+    "prefecture": "岐阜県",
+    "address": "〒503-0837 岐阜県大垣市安井町4丁目7-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大垣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop226",
+    "officialUrl": "https://shops.fiteasy.jp/shop226"
+  },
+  {
+    "id": "manual-fiteasy-shop227",
+    "name": "FIT-EASY 目黒碑文谷店",
+    "prefecture": "東京都",
+    "address": "〒152-0003 東京都目黒区碑文谷2丁目21-6 1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop227",
+    "officialUrl": "https://shops.fiteasy.jp/shop227"
+  },
+  {
+    "id": "manual-fiteasy-shop228",
+    "name": "FIT-EASY 海津店",
+    "prefecture": "岐阜県",
+    "address": "〒503-0652 岐阜県海津市海津町馬目347-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "海津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop228",
+    "officialUrl": "https://shops.fiteasy.jp/shop228"
+  },
+  {
+    "id": "manual-fiteasy-shop230",
+    "name": "FIT-EASY 成増店",
+    "prefecture": "東京都",
+    "address": "〒175-0094 東京都板橋区成増2丁目17-24 成増GRAVITY 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "板橋区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop230",
+    "officialUrl": "https://shops.fiteasy.jp/shop230"
+  },
+  {
+    "id": "manual-fiteasy-shop231",
+    "name": "FIT-EASY 松阪駅部田店",
+    "prefecture": "三重県",
+    "address": "〒515-0045 三重県松阪市駅部田町153番地1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop231",
+    "officialUrl": "https://shops.fiteasy.jp/shop231"
+  },
+  {
+    "id": "manual-fiteasy-shop232",
+    "name": "FIT-EASY 西一之江店",
+    "prefecture": "東京都",
+    "address": "〒132-0023 東京都江戸川区西一之江1丁目17-11 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江戸川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop232",
+    "officialUrl": "https://shops.fiteasy.jp/shop232"
+  },
+  {
+    "id": "manual-fiteasy-shop233",
+    "name": "FIT-EASY 半田店",
+    "prefecture": "愛知県",
+    "address": "〒475-0837 愛知県半田市有楽町6丁目201-8",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "半田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop233",
+    "officialUrl": "https://shops.fiteasy.jp/shop233"
+  },
+  {
+    "id": "manual-fiteasy-shop234",
+    "name": "FIT-EASY 春日店",
+    "prefecture": "福岡県",
+    "address": "〒816-0847 福岡県春日市大土居2丁目104",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "春日市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop234",
+    "officialUrl": "https://shops.fiteasy.jp/shop234"
+  },
+  {
+    "id": "manual-fiteasy-shop235",
+    "name": "FIT-EASY 笠寺店",
+    "prefecture": "愛知県",
+    "address": "〒457-0058 愛知県名古屋市南区前浜通3丁目6番 コノミヤ笠寺3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop235",
+    "officialUrl": "https://shops.fiteasy.jp/shop235"
+  },
+  {
+    "id": "manual-fiteasy-shop236",
+    "name": "FIT-EASY 津島店",
+    "prefecture": "愛知県",
+    "address": "〒496-0803 愛知県津島市今市場町3丁目17-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "津島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop236",
+    "officialUrl": "https://shops.fiteasy.jp/shop236"
+  },
+  {
+    "id": "manual-fiteasy-shop238",
+    "name": "FIT-EASY 池袋西口店",
+    "prefecture": "東京都",
+    "address": "〒171-0021 東京都豊島区西池袋1丁目18-2 1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊島区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop238",
+    "officialUrl": "https://shops.fiteasy.jp/shop238"
+  },
+  {
+    "id": "manual-fiteasy-shop239",
+    "name": "FIT-EASY ドン・キホーテUNY可児店",
+    "prefecture": "岐阜県",
+    "address": "〒509-0202 岐阜県可児市中恵土字溝向2120-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "可児市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop239",
+    "officialUrl": "https://shops.fiteasy.jp/shop239"
+  },
+  {
+    "id": "manual-fiteasy-shop240",
+    "name": "FIT-EASY 新発田緑町店",
+    "prefecture": "新潟県",
+    "address": "〒957-0018 新潟県新発田市緑町2丁目5-27",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新発田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop240",
+    "officialUrl": "https://shops.fiteasy.jp/shop240"
+  },
+  {
+    "id": "manual-fiteasy-shop242",
+    "name": "FIT-EASY 浜松葵西店",
+    "prefecture": "静岡県",
+    "address": "〒433-8111 静岡県浜松市中央区葵西2丁目17-48",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop242",
+    "officialUrl": "https://shops.fiteasy.jp/shop242"
+  },
+  {
+    "id": "manual-fiteasy-shop243",
+    "name": "FIT-EASY 枇杷島店",
+    "prefecture": "愛知県",
+    "address": "〒452-0001 愛知県清須市西枇杷島町古城2丁目17-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "清須市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop243",
+    "officialUrl": "https://shops.fiteasy.jp/shop243"
+  },
+  {
+    "id": "manual-fiteasy-shop244",
+    "name": "FIT-EASY アクロスプラザ徳島大松店",
+    "prefecture": "徳島県",
+    "address": "〒770-8022 徳島県徳島市大松町榎原外77-50",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "徳島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop244",
+    "officialUrl": "https://shops.fiteasy.jp/shop244"
+  },
+  {
+    "id": "manual-fiteasy-shop245",
+    "name": "FIT-EASY 長居公園店",
+    "prefecture": "大阪府",
+    "address": "〒558-0004 大阪府大阪市住吉区長居東1丁目7-32",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop245",
+    "officialUrl": "https://shops.fiteasy.jp/shop245"
+  },
+  {
+    "id": "manual-fiteasy-shop246",
+    "name": "FIT-EASY 梅田店",
+    "prefecture": "大阪府",
+    "address": "〒530-0003 大阪府大阪市北区堂島1丁目1-5 1階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop246",
+    "officialUrl": "https://shops.fiteasy.jp/shop246"
+  },
+  {
+    "id": "manual-fiteasy-shop247",
+    "name": "FIT-EASY 駒ヶ根店",
+    "prefecture": "長野県",
+    "address": "〒399-4117 長野県駒ヶ根市赤穂11233-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "駒ヶ根市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop247",
+    "officialUrl": "https://shops.fiteasy.jp/shop247"
+  },
+  {
+    "id": "manual-fiteasy-shop248",
+    "name": "FIT-EASY 盛岡南大通店",
+    "prefecture": "岩手県",
+    "address": "〒020-0874 岩手県盛岡市南大通2丁目9-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "盛岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop248",
+    "officialUrl": "https://shops.fiteasy.jp/shop248"
+  },
+  {
+    "id": "manual-fiteasy-shop249",
+    "name": "FIT-EASY 五反田店",
+    "prefecture": "東京都",
+    "address": "〒141-0022 東京都品川区東五反田5丁目25-19 東京デザインセンタービル1F・B1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop249",
+    "officialUrl": "https://shops.fiteasy.jp/shop249"
+  },
+  {
+    "id": "manual-fiteasy-shop250",
+    "name": "FIT-EASY 栄広小路通店",
+    "prefecture": "愛知県",
+    "address": "〒460-0008 愛知県名古屋市中区栄4丁目6-1 3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop250",
+    "officialUrl": "https://shops.fiteasy.jp/shop250"
+  },
+  {
+    "id": "manual-fiteasy-shop251",
+    "name": "FIT-EASY 大野城店",
+    "prefecture": "福岡県",
+    "address": "〒816-0932 福岡県大野城市瓦田3丁目13-10 ステータスM II 1F2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大野城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop251",
+    "officialUrl": "https://shops.fiteasy.jp/shop251"
+  },
+  {
+    "id": "manual-fiteasy-shop252",
+    "name": "FIT-EASY 名古屋みなと店",
+    "prefecture": "愛知県",
+    "address": "〒455-0018 愛知県名古屋市港区港明2丁目2-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop252",
+    "officialUrl": "https://shops.fiteasy.jp/shop252"
+  },
+  {
+    "id": "manual-fiteasy-shop253",
+    "name": "FIT-EASY 自由が丘店",
+    "prefecture": "東京都",
+    "address": "〒152-0035 東京都目黒区自由が丘2丁目11 白樺広小路スクエアビル 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop253",
+    "officialUrl": "https://shops.fiteasy.jp/shop253"
+  },
+  {
+    "id": "manual-fiteasy-shop254",
+    "name": "FIT-EASY ミラモール東岸和田駅前店",
+    "prefecture": "大阪府",
+    "address": "〒596-0825 大阪府岸和田市土生町三丁目6番1号ミラモール東岸和田駅前2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岸和田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop254",
+    "officialUrl": "https://shops.fiteasy.jp/shop254"
+  },
+  {
+    "id": "manual-fiteasy-shop255",
+    "name": "FIT-EASY 津島崎店",
+    "prefecture": "三重県",
+    "address": "〒514-0002 三重県津市島崎町5-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop255",
+    "officialUrl": "https://shops.fiteasy.jp/shop255"
+  },
+  {
+    "id": "manual-fiteasy-shop256",
+    "name": "FIT-EASY 岡崎羽根店",
+    "prefecture": "愛知県",
+    "address": "〒444-0813 愛知県岡崎市羽根町前田34-6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop256",
+    "officialUrl": "https://shops.fiteasy.jp/shop256"
+  },
+  {
+    "id": "manual-fiteasy-shop257",
+    "name": "FIT-EASY 清須新川橋店",
+    "prefecture": "愛知県",
+    "address": "〒452-0914 愛知県清須市土器野本山149-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "清須市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop257",
+    "officialUrl": "https://shops.fiteasy.jp/shop257"
+  },
+  {
+    "id": "manual-fiteasy-shop258",
+    "name": "FIT-EASY 和泉和気店",
+    "prefecture": "大阪府",
+    "address": "〒594-0073 大阪府和泉市和気町1丁目30-41",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "和泉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop258",
+    "officialUrl": "https://shops.fiteasy.jp/shop258"
+  },
+  {
+    "id": "manual-fiteasy-shop259",
+    "name": "FIT-EASY 福山駅家店",
+    "prefecture": "広島県",
+    "address": "〒720-1132 広島県福山市駅家町大字倉光141番地1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop259",
+    "officialUrl": "https://shops.fiteasy.jp/shop259"
+  },
+  {
+    "id": "manual-fiteasy-shop261",
+    "name": "FIT-EASY 佐賀北部バイパス店",
+    "prefecture": "佐賀県",
+    "address": "〒849-0934 佐賀県佐賀市開成6丁目12-35",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "佐賀市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop261",
+    "officialUrl": "https://shops.fiteasy.jp/shop261"
+  },
+  {
+    "id": "manual-fiteasy-shop262",
+    "name": "FIT-EASY 中村亀島店",
+    "prefecture": "愛知県",
+    "address": "〒453-0018 愛知県名古屋市中村区佐古前町9 SKビルディング 1F2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop262",
+    "officialUrl": "https://shops.fiteasy.jp/shop262"
+  },
+  {
+    "id": "manual-fiteasy-shop263",
+    "name": "FIT-EASY 秋田旭南店",
+    "prefecture": "秋田県",
+    "address": "〒010-0925 秋田県秋田市旭南3丁目1-32",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "秋田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop263",
+    "officialUrl": "https://shops.fiteasy.jp/shop263"
+  },
+  {
+    "id": "manual-fiteasy-shop264",
+    "name": "FIT-EASY 豊川八幡店",
+    "prefecture": "愛知県",
+    "address": "〒442-0857 愛知県豊川市八幡町宮前49-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop264",
+    "officialUrl": "https://shops.fiteasy.jp/shop264"
+  },
+  {
+    "id": "manual-fiteasy-shop265",
+    "name": "FIT-EASY 長浜店",
+    "prefecture": "滋賀県",
+    "address": "〒526-0021 滋賀県長浜市八幡中山町473-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop265",
+    "officialUrl": "https://shops.fiteasy.jp/shop265"
+  },
+  {
+    "id": "manual-fiteasy-shop266",
+    "name": "FIT-EASY 長吉長原店",
+    "prefecture": "大阪府",
+    "address": "〒547-0016 大阪府大阪市平野区長吉長原4丁目19-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop266",
+    "officialUrl": "https://shops.fiteasy.jp/shop266"
+  },
+  {
+    "id": "manual-fiteasy-shop267",
+    "name": "FIT-EASY 岐阜河渡店",
+    "prefecture": "岐阜県",
+    "address": "〒501-0105 岐阜県岐阜市河渡3丁目37-38",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岐阜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop267",
+    "officialUrl": "https://shops.fiteasy.jp/shop267"
+  },
+  {
+    "id": "manual-fiteasy-shop268",
+    "name": "FIT-EASY 郡上八幡店",
+    "prefecture": "岐阜県",
+    "address": "〒501-4234 岐阜県郡上市八幡町五町4丁目4-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "郡上市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop268",
+    "officialUrl": "https://shops.fiteasy.jp/shop268"
+  },
+  {
+    "id": "manual-fiteasy-shop271",
+    "name": "FIT-EASY 藤沢駅前店",
+    "prefecture": "神奈川県",
+    "address": "〒251-0052 神奈川県藤沢市藤沢460番1 AB藤沢ビル3階・4階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "藤沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop271",
+    "officialUrl": "https://shops.fiteasy.jp/shop271"
+  },
+  {
+    "id": "manual-fiteasy-shop272",
+    "name": "FIT-EASY フレスポ佐久インター店",
+    "prefecture": "長野県",
+    "address": "〒385-0023 長野県佐久市岩村田北1丁目22-3 フレスポ佐久インター内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "佐久市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop272",
+    "officialUrl": "https://shops.fiteasy.jp/shop272"
+  },
+  {
+    "id": "manual-fiteasy-shop273",
+    "name": "FIT-EASY 豊橋飯村店",
+    "prefecture": "愛知県",
+    "address": "〒440-0835 愛知県豊橋市飯村南2丁目22-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop273",
+    "officialUrl": "https://shops.fiteasy.jp/shop273"
+  },
+  {
+    "id": "manual-fiteasy-shop274",
+    "name": "FIT-EASY 仲六郷雑色店",
+    "prefecture": "東京都",
+    "address": "〒144-0055 東京都大田区仲六郷2丁目39-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop274",
+    "officialUrl": "https://shops.fiteasy.jp/shop274"
+  },
+  {
+    "id": "manual-fiteasy-shop275",
+    "name": "FIT-EASY 岡崎稲熊店",
+    "prefecture": "愛知県",
+    "address": "〒444-0071 愛知県岡崎市稲熊町1丁目23(2F)",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "岡崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop275",
+    "officialUrl": "https://shops.fiteasy.jp/shop275"
+  },
+  {
+    "id": "manual-fiteasy-shop276",
+    "name": "FIT-EASY 一宮中島通店",
+    "prefecture": "愛知県",
+    "address": "〒491-0072 愛知県一宮市中島通1丁目26",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "一宮市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop276",
+    "officialUrl": "https://shops.fiteasy.jp/shop276"
+  },
+  {
+    "id": "manual-fiteasy-shop277",
+    "name": "FIT-EASY 三河豊田駅前店",
+    "prefecture": "愛知県",
+    "address": "〒471-0833 愛知県豊田市山之手4丁目152",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "豊田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop277",
+    "officialUrl": "https://shops.fiteasy.jp/shop277"
+  },
+  {
+    "id": "manual-fiteasy-shop278",
+    "name": "FIT-EASY 名張店",
+    "prefecture": "三重県",
+    "address": "〒518-0441 三重県名張市夏見3222-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名張市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop278",
+    "officialUrl": "https://shops.fiteasy.jp/shop278"
+  },
+  {
+    "id": "manual-fiteasy-shop279",
+    "name": "FIT-EASY 浜松ディーラー通り店",
+    "prefecture": "静岡県",
+    "address": "〒435-0042 静岡県浜松市中央区篠ケ瀬町2000",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop279",
+    "officialUrl": "https://shops.fiteasy.jp/shop279"
+  },
+  {
+    "id": "manual-fiteasy-shop280",
+    "name": "FIT-EASY 南仙台店",
+    "prefecture": "宮城県",
+    "address": "〒981-1106 宮城県仙台市太白区柳生1丁目6-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop280",
+    "officialUrl": "https://shops.fiteasy.jp/shop280"
+  },
+  {
+    "id": "manual-fiteasy-shop281",
+    "name": "FIT-EASY 大府共和店",
+    "prefecture": "愛知県",
+    "address": "〒474-0071 愛知県大府市梶田町6丁目179-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大府市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop281",
+    "officialUrl": "https://shops.fiteasy.jp/shop281"
+  },
+  {
+    "id": "manual-fiteasy-shop282",
+    "name": "FIT-EASY アクロスプラザ三芳店",
+    "prefecture": "埼玉県",
+    "address": "〒354-0041 埼玉県入間郡三芳町藤久保855-403 アクロスプラザ三芳 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "入間郡三芳町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop282",
+    "officialUrl": "https://shops.fiteasy.jp/shop282"
+  },
+  {
+    "id": "manual-fiteasy-shop283",
+    "name": "FIT-EASY 中村岩塚店",
+    "prefecture": "愛知県",
+    "address": "〒453-0861 愛知県名古屋市中村区岩塚本通2丁目1-2 MSインテリジェンスビル1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop283",
+    "officialUrl": "https://shops.fiteasy.jp/shop283"
+  },
+  {
+    "id": "manual-fiteasy-shop284",
+    "name": "FIT-EASY アクロスプラザ北柏店",
+    "prefecture": "千葉県",
+    "address": "〒277-0831 千葉県柏市根戸1854番地11 北柏26街区2 B棟",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "柏市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop284",
+    "officialUrl": "https://shops.fiteasy.jp/shop284"
+  },
+  {
+    "id": "manual-fiteasy-shop285",
+    "name": "FIT-EASY 川越的場店",
+    "prefecture": "埼玉県",
+    "address": "〒350-1107 埼玉県川越市的場新町21-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川越市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop285",
+    "officialUrl": "https://shops.fiteasy.jp/shop285"
+  },
+  {
+    "id": "manual-fiteasy-shop286",
+    "name": "FIT-EASY 土浦店",
+    "prefecture": "茨城県",
+    "address": "〒300-0051 茨城県土浦市真鍋5丁目8-15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "土浦市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop286",
+    "officialUrl": "https://shops.fiteasy.jp/shop286"
+  },
+  {
+    "id": "manual-fiteasy-shop288",
+    "name": "FIT-EASY 守山志段味店",
+    "prefecture": "愛知県",
+    "address": "〒463-0805 愛知県名古屋市守山区青山台628-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop288",
+    "officialUrl": "https://shops.fiteasy.jp/shop288"
+  },
+  {
+    "id": "manual-fiteasy-shop289",
+    "name": "FIT-EASY 池田店",
+    "prefecture": "岐阜県",
+    "address": "〒503-2424 岐阜県揖斐郡池田町池野228-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "揖斐郡池田町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop289",
+    "officialUrl": "https://shops.fiteasy.jp/shop289"
+  },
+  {
+    "id": "manual-fiteasy-shop290",
+    "name": "FIT-EASY 柏崎岩上店",
+    "prefecture": "新潟県",
+    "address": "〒945-0811 新潟県柏崎市岩上7-16",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "柏崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop290",
+    "officialUrl": "https://shops.fiteasy.jp/shop290"
+  },
+  {
+    "id": "manual-fiteasy-shop291",
+    "name": "FIT-EASY 浜松志都呂店",
+    "prefecture": "静岡県",
+    "address": "〒432-8069 静岡県浜松市中央区志都呂1丁目25-14",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop291",
+    "officialUrl": "https://shops.fiteasy.jp/shop291"
+  },
+  {
+    "id": "manual-fiteasy-shop292",
+    "name": "FIT-EASY 立川店",
+    "prefecture": "東京都",
+    "address": "〒190-0023 東京都立川市柴崎町5丁目5-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "立川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop292",
+    "officialUrl": "https://shops.fiteasy.jp/shop292"
+  },
+  {
+    "id": "manual-fiteasy-shop293",
+    "name": "FIT-EASY 高松太田店",
+    "prefecture": "香川県",
+    "address": "〒761-8082 香川県高松市鹿角町170番地4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop293",
+    "officialUrl": "https://shops.fiteasy.jp/shop293"
+  },
+  {
+    "id": "manual-fiteasy-shop294",
+    "name": "FIT-EASY 松阪三雲店",
+    "prefecture": "三重県",
+    "address": "〒515-2122 三重県松阪市久米町1174-13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop294",
+    "officialUrl": "https://shops.fiteasy.jp/shop294"
+  },
+  {
+    "id": "manual-fiteasy-shop295",
+    "name": "FIT-EASY 刈谷富士松店",
+    "prefecture": "愛知県",
+    "address": "〒448-0007 愛知県刈谷市東境町児山418-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "刈谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop295",
+    "officialUrl": "https://shops.fiteasy.jp/shop295"
+  },
+  {
+    "id": "manual-fiteasy-shop296",
+    "name": "FIT-EASY 浜松鴨江店",
+    "prefecture": "静岡県",
+    "address": "〒432-8023 静岡県浜松市中央区鴨江2丁目57-28",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop296",
+    "officialUrl": "https://shops.fiteasy.jp/shop296"
+  },
+  {
+    "id": "manual-fiteasy-shop297",
+    "name": "FIT-EASY 高山石浦店",
+    "prefecture": "岐阜県",
+    "address": "〒506-0825 岐阜県高山市石浦町2丁目396",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop297",
+    "officialUrl": "https://shops.fiteasy.jp/shop297"
+  },
+  {
+    "id": "manual-fiteasy-shop298",
+    "name": "FIT-EASY 本巣文殊店",
+    "prefecture": "岐阜県",
+    "address": "〒501-1203 岐阜県本巣市文殊字天辺1006-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "本巣市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop298",
+    "officialUrl": "https://shops.fiteasy.jp/shop298"
+  },
+  {
+    "id": "manual-fiteasy-shop299",
+    "name": "FIT-EASY 新城店",
+    "prefecture": "愛知県",
+    "address": "〒441-1348 愛知県新城市市場台2丁目2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新城市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop299",
+    "officialUrl": "https://shops.fiteasy.jp/shop299"
+  },
+  {
+    "id": "manual-fiteasy-shop302",
+    "name": "FIT-EASY 徳島沖浜店",
+    "prefecture": "徳島県",
+    "address": "〒770-8052 徳島県徳島市沖浜2丁目5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "徳島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop302",
+    "officialUrl": "https://shops.fiteasy.jp/shop302"
+  },
+  {
+    "id": "manual-fiteasy-shop303",
+    "name": "FIT-EASY 北名古屋西春店",
+    "prefecture": "愛知県",
+    "address": "〒481-0004 愛知県北名古屋市鹿田3450-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "北名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop303",
+    "officialUrl": "https://shops.fiteasy.jp/shop303"
+  },
+  {
+    "id": "manual-fiteasy-shop305",
+    "name": "FIT-EASY 錦糸町店",
+    "prefecture": "東京都",
+    "address": "〒130-0022 東京都墨田区江東橋4丁目27-14 楽天地ビル 7階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "墨田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop305",
+    "officialUrl": "https://shops.fiteasy.jp/shop305"
+  },
+  {
+    "id": "manual-fiteasy-shop306",
+    "name": "FIT-EASY 沼津バイパス店",
+    "prefecture": "静岡県",
+    "address": "〒410-0007 静岡県沼津市西沢田479 番 有賀園モール沼津3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "沼津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop306",
+    "officialUrl": "https://shops.fiteasy.jp/shop306"
+  },
+  {
+    "id": "manual-fiteasy-shop307",
+    "name": "FIT-EASY 瑞浪店",
+    "prefecture": "岐阜県",
+    "address": "〒509-6135 岐阜県瑞浪市薬師町2丁目92",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "瑞浪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop307",
+    "officialUrl": "https://shops.fiteasy.jp/shop307"
+  },
+  {
+    "id": "manual-fiteasy-shop308",
+    "name": "FIT-EASY 高辻南店",
+    "prefecture": "愛知県",
+    "address": "〒467-0861 愛知県名古屋市瑞穂区二野町3-7 高辻中駒ビル1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop308",
+    "officialUrl": "https://shops.fiteasy.jp/shop308"
+  },
+  {
+    "id": "manual-fiteasy-shop309",
+    "name": "FIT-EASY 南風原店",
+    "prefecture": "沖縄県",
+    "address": "〒901-1111 沖縄県島尻郡南風原町兼城602",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "島尻郡南風原町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop309",
+    "officialUrl": "https://shops.fiteasy.jp/shop309"
+  },
+  {
+    "id": "manual-fiteasy-shop310",
+    "name": "FIT-EASY ひたちなか大成町店",
+    "prefecture": "茨城県",
+    "address": "〒312-0055 茨城県ひたちなか市大成町5-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "ひたちなか市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop310",
+    "officialUrl": "https://shops.fiteasy.jp/shop310"
+  },
+  {
+    "id": "manual-fiteasy-shop312",
+    "name": "FIT-EASY 東郷店",
+    "prefecture": "愛知県",
+    "address": "〒470-0162 愛知県愛知郡東郷町春木深池1773",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "愛知郡東郷町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop312",
+    "officialUrl": "https://shops.fiteasy.jp/shop312"
+  },
+  {
+    "id": "manual-fiteasy-shop313",
+    "name": "FIT-EASY 燕三条店",
+    "prefecture": "新潟県",
+    "address": "〒959-1232 新潟県燕市井土巻2丁目225番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "燕市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop313",
+    "officialUrl": "https://shops.fiteasy.jp/shop313"
+  },
+  {
+    "id": "manual-fiteasy-shop314",
+    "name": "FIT-EASY 瀬戸苗場店",
+    "prefecture": "愛知県",
+    "address": "〒489-0983 愛知県瀬戸市苗場町130-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "瀬戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop314",
+    "officialUrl": "https://shops.fiteasy.jp/shop314"
+  },
+  {
+    "id": "manual-fiteasy-shop315",
+    "name": "FIT-EASY 神戸北店",
+    "prefecture": "兵庫県",
+    "address": "〒651-1313 兵庫県神戸市北区有野中町4丁目8-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "神戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop315",
+    "officialUrl": "https://shops.fiteasy.jp/shop315"
+  },
+  {
+    "id": "manual-fiteasy-shop316",
+    "name": "FIT-EASY 名駅牛島店",
+    "prefecture": "愛知県",
+    "address": "〒451-0046 愛知県名古屋市西区牛島町6-24",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop316",
+    "officialUrl": "https://shops.fiteasy.jp/shop316"
+  },
+  {
+    "id": "manual-fiteasy-shop318",
+    "name": "FIT-EASY 東刈谷店",
+    "prefecture": "愛知県",
+    "address": "〒448-0807 愛知県刈谷市東刈谷町1丁目9-6",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "刈谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop318",
+    "officialUrl": "https://shops.fiteasy.jp/shop318"
+  },
+  {
+    "id": "manual-fiteasy-shop319",
+    "name": "FIT-EASY 廿日市本町店",
+    "prefecture": "広島県",
+    "address": "〒738-0015 広島県廿日市市本町4-22",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "廿日市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop319",
+    "officialUrl": "https://shops.fiteasy.jp/shop319"
+  },
+  {
+    "id": "manual-fiteasy-shop320",
+    "name": "FIT-EASY 恵那店",
+    "prefecture": "岐阜県",
+    "address": "〒509-7203 岐阜県恵那市長島町正家2丁目6-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "恵那市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop320",
+    "officialUrl": "https://shops.fiteasy.jp/shop320"
+  },
+  {
+    "id": "manual-fiteasy-shop321",
+    "name": "FIT-EASY 野々市店",
+    "prefecture": "石川県",
+    "address": "〒921-8806 石川県野々市市三日市2丁目73",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "野々市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop321",
+    "officialUrl": "https://shops.fiteasy.jp/shop321"
+  },
+  {
+    "id": "manual-fiteasy-shop322",
+    "name": "FIT-EASY 奈良橿原店",
+    "prefecture": "奈良県",
+    "address": "〒634-0006 奈良県橿原市新賀町坊ノ坪206-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "橿原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop322",
+    "officialUrl": "https://shops.fiteasy.jp/shop322"
+  },
+  {
+    "id": "manual-fiteasy-shop323",
+    "name": "FIT-EASY 太田川駅前店",
+    "prefecture": "愛知県",
+    "address": "〒477-0031 愛知県東海市大田町後田1158",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "東海市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop323",
+    "officialUrl": "https://shops.fiteasy.jp/shop323"
+  },
+  {
+    "id": "manual-fiteasy-shop324",
+    "name": "FIT-EASY 玉城店",
+    "prefecture": "三重県",
+    "address": "〒519-0401 三重県度会郡玉城町世古401-16",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "度会郡玉城町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop324",
+    "officialUrl": "https://shops.fiteasy.jp/shop324"
+  },
+  {
+    "id": "manual-fiteasy-shop325",
+    "name": "FIT-EASY 福井松本店",
+    "prefecture": "福井県",
+    "address": "〒910-0003 福井県福井市松本2丁目23-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福井市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop325",
+    "officialUrl": "https://shops.fiteasy.jp/shop325"
+  },
+  {
+    "id": "manual-fiteasy-shop326",
+    "name": "FIT-EASY 浜松中瀬店",
+    "prefecture": "静岡県",
+    "address": "〒434-0012 静岡県浜松市浜名区中瀬104-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop326",
+    "officialUrl": "https://shops.fiteasy.jp/shop326"
+  },
+  {
+    "id": "manual-fiteasy-shop327",
+    "name": "FIT-EASY 長野高田店",
+    "prefecture": "長野県",
+    "address": "〒381-0034 長野県長野市高田1889-1 2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "長野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop327",
+    "officialUrl": "https://shops.fiteasy.jp/shop327"
+  },
+  {
+    "id": "manual-fiteasy-shop329",
+    "name": "FIT-EASY 福山蔵王店",
+    "prefecture": "広島県",
+    "address": "〒721-0973 広島県福山市南蔵王町6丁目20-20",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop329",
+    "officialUrl": "https://shops.fiteasy.jp/shop329"
+  },
+  {
+    "id": "manual-fiteasy-shop330",
+    "name": "FIT-EASY 新潟西店",
+    "prefecture": "新潟県",
+    "address": "〒950-2011 新潟県新潟市西区小針上山10-20",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新潟市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop330",
+    "officialUrl": "https://shops.fiteasy.jp/shop330"
+  },
+  {
+    "id": "manual-fiteasy-shop331",
+    "name": "FIT-EASY 中川コロナワールド店",
+    "prefecture": "愛知県",
+    "address": "〒454-0954 愛知県名古屋市中川区江松3丁目110 中川コロナワールド 4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop331",
+    "officialUrl": "https://shops.fiteasy.jp/shop331"
+  },
+  {
+    "id": "manual-fiteasy-shop332",
+    "name": "FIT-EASY 奈良平群店",
+    "prefecture": "奈良県",
+    "address": "〒636-0904 奈良県生駒郡平群町三里728番地1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "生駒郡平群町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop332",
+    "officialUrl": "https://shops.fiteasy.jp/shop332"
+  },
+  {
+    "id": "manual-fiteasy-shop333",
+    "name": "FIT-EASY 宮崎大橋店",
+    "prefecture": "宮崎県",
+    "address": "〒880-0022 宮崎県宮崎市大橋3丁目4-26 2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宮崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop333",
+    "officialUrl": "https://shops.fiteasy.jp/shop333"
+  },
+  {
+    "id": "manual-fiteasy-shop334",
+    "name": "FIT-EASY 薩摩川内店",
+    "prefecture": "鹿児島県",
+    "address": "〒895-0025 鹿児島県薩摩川内市向田町1060-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "薩摩川内市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop334",
+    "officialUrl": "https://shops.fiteasy.jp/shop334"
+  },
+  {
+    "id": "manual-fiteasy-shop335",
+    "name": "FIT-EASY 太田小舞木店",
+    "prefecture": "群馬県",
+    "address": "〒373-0818 群馬県太田市小舞木町244-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "太田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop335",
+    "officialUrl": "https://shops.fiteasy.jp/shop335"
+  },
+  {
+    "id": "manual-fiteasy-shop336",
+    "name": "FIT-EASY 常滑りんくう店",
+    "prefecture": "愛知県",
+    "address": "〒479-0882 愛知県常滑市りんくう町1丁目25-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "常滑市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop336",
+    "officialUrl": "https://shops.fiteasy.jp/shop336"
+  },
+  {
+    "id": "manual-fiteasy-shop337",
+    "name": "FIT-EASY 寝屋川店",
+    "prefecture": "大阪府",
+    "address": "〒572-0846 大阪府寝屋川市高宮栄町10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "寝屋川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop337",
+    "officialUrl": "https://shops.fiteasy.jp/shop337"
+  },
+  {
+    "id": "manual-fiteasy-shop338",
+    "name": "FIT-EASY 有賀園千葉店",
+    "prefecture": "千葉県",
+    "address": "〒261-0001 千葉県千葉市美浜区幸町1丁目26-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop338",
+    "officialUrl": "https://shops.fiteasy.jp/shop338"
+  },
+  {
+    "id": "manual-fiteasy-shop339",
+    "name": "FIT-EASY 久留米国分店",
+    "prefecture": "福岡県",
+    "address": "〒839-0863 福岡県久留米市国分町1167-8",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "久留米市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop339",
+    "officialUrl": "https://shops.fiteasy.jp/shop339"
+  },
+  {
+    "id": "manual-fiteasy-shop340",
+    "name": "FIT-EASY 土岐店",
+    "prefecture": "岐阜県",
+    "address": "〒509-5102 岐阜県土岐市泉町定林寺112",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "土岐市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop340",
+    "officialUrl": "https://shops.fiteasy.jp/shop340"
+  },
+  {
+    "id": "manual-fiteasy-shop341",
+    "name": "FIT-EASY 和白店",
+    "prefecture": "福岡県",
+    "address": "〒811-0213 福岡県福岡市東区和白丘3丁目1-20",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop341",
+    "officialUrl": "https://shops.fiteasy.jp/shop341"
+  },
+  {
+    "id": "manual-fiteasy-shop342",
+    "name": "FIT-EASY 掛川店",
+    "prefecture": "静岡県",
+    "address": "〒436-0074 静岡県掛川市葛川452-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "掛川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop342",
+    "officialUrl": "https://shops.fiteasy.jp/shop342"
+  },
+  {
+    "id": "manual-fiteasy-shop343",
+    "name": "FIT-EASY ファボーレ富山店",
+    "prefecture": "富山県",
+    "address": "〒939-2716 富山県富山市婦中町下轡田165-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop343",
+    "officialUrl": "https://shops.fiteasy.jp/shop343"
+  },
+  {
+    "id": "manual-fiteasy-shop344",
+    "name": "FIT-EASY 高崎問屋町店",
+    "prefecture": "群馬県",
+    "address": "〒370-0069 群馬県高崎市飯塚町問屋町前1126",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "高崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop344",
+    "officialUrl": "https://shops.fiteasy.jp/shop344"
+  },
+  {
+    "id": "manual-fiteasy-shop345",
+    "name": "FIT-EASY 金沢入江店",
+    "prefecture": "石川県",
+    "address": "〒921-8015 石川県金沢市東力4丁目236",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "金沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop345",
+    "officialUrl": "https://shops.fiteasy.jp/shop345"
+  },
+  {
+    "id": "manual-fiteasy-shop347",
+    "name": "FIT-EASY 明石二見店",
+    "prefecture": "兵庫県",
+    "address": "〒674-0094 兵庫県明石市二見町西二見89-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "明石市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop347",
+    "officialUrl": "https://shops.fiteasy.jp/shop347"
+  },
+  {
+    "id": "manual-fiteasy-shop348",
+    "name": "FIT-EASY 伏見御園店",
+    "prefecture": "愛知県",
+    "address": "〒460-0008 愛知県名古屋市中区栄1丁目11-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop348",
+    "officialUrl": "https://shops.fiteasy.jp/shop348"
+  },
+  {
+    "id": "manual-fiteasy-shop349",
+    "name": "FIT-EASY 敦賀店",
+    "prefecture": "福井県",
+    "address": "〒914-0802 福井県敦賀市呉竹町2丁目2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "敦賀市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop349",
+    "officialUrl": "https://shops.fiteasy.jp/shop349"
+  },
+  {
+    "id": "manual-fiteasy-shop352",
+    "name": "FIT-EASY 松山東長戸店",
+    "prefecture": "愛媛県",
+    "address": "〒791-8005 愛媛県松山市東長戸4丁目8-33",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "松山市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop352",
+    "officialUrl": "https://shops.fiteasy.jp/shop352"
+  },
+  {
+    "id": "manual-fiteasy-shop353",
+    "name": "FIT-EASY 北谷店",
+    "prefecture": "沖縄県",
+    "address": "〒904-0117 沖縄県中頭郡北谷町北前1丁目13",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "中頭郡北谷町",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop353",
+    "officialUrl": "https://shops.fiteasy.jp/shop353"
+  },
+  {
+    "id": "manual-fiteasy-shop354",
+    "name": "FIT-EASY 久喜菖蒲店",
+    "prefecture": "埼玉県",
+    "address": "〒346-0106 埼玉県久喜市菖蒲町菖蒲7001",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "久喜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop354",
+    "officialUrl": "https://shops.fiteasy.jp/shop354"
+  },
+  {
+    "id": "manual-fiteasy-shop355",
+    "name": "FIT-EASY 市ヶ谷店",
+    "prefecture": "東京都",
+    "address": "〒102-0076 東京都千代田区五番町6番地1 AKビルディング 2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千代田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "個室"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://shops.fiteasy.jp/shop355",
+    "officialUrl": "https://shops.fiteasy.jp/shop355"
   }
 ];
