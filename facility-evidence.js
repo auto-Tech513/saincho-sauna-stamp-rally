@@ -19347,6 +19347,917 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "st-fukui-491"
+  ],
+  "name": "たきのゆ",
+  "officialUrl": "https://www.huroya.com/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "営業時間",
+      "value": "平日13:00〜24:00、土日7:00〜24:00（定休日：毎週水曜日）",
+      "sourceUrl": "https://www.huroya.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "薬風呂・寝風呂・電気風呂・露天風呂・水風呂・深いお風呂・超音波風呂・ジャグジー風呂・サウナ・子ども用プールなど多種のお風呂がある",
+      "sourceUrl": "https://www.huroya.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒918-8007 福井県福井市足羽2丁目17-4",
+      "sourceUrl": "https://www.huroya.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-tochigi-1538"
+  ],
+  "name": "まほろばの湯 湯親館",
+  "officialUrl": "https://mahorobanoyu.com/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "大浴場には内風呂・露天風呂のほか電気風呂、水風呂、ジェットバス、気泡浴、遠赤外線強化仕様フィンランドサウナなどがある",
+      "sourceUrl": "https://mahorobanoyu.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "午前10:00～午後9:30（入館は午後9:00まで）",
+      "sourceUrl": "https://mahorobanoyu.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "定休日",
+      "value": "月曜日（祝日の場合は翌日）",
+      "sourceUrl": "https://mahorobanoyu.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒324-0501 栃木県那須郡那珂川町小川1065番地",
+      "sourceUrl": "https://mahorobanoyu.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-shizuoka-daruma-sauna"
+  ],
+  "name": "達磨サウナ",
+  "officialUrl": "https://mameya.net/",
+  "features": [
+    "薪サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "静岡県富士市の本格薪サウナ",
+      "sourceUrl": "https://mameya.net/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "水深2mの特大水風呂がある",
+      "sourceUrl": "https://mameya.net/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "osaka-user-whq1vo"
+  ],
+  "name": "大阪サウナDESSE",
+  "officialUrl": "https://desse.osaka/",
+  "features": [
+    "貸切可",
+    "サ飯あり"
+  ],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "貸切を含めた8つのサウナがある（2023年4月12日オープン）",
+      "sourceUrl": "https://desse.osaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "貸切サウナ",
+      "value": "8つのサウナの1つ「結びサウナ」は完全プライベートの貸し切りサウナで、家族であれば男女で利用できる",
+      "sourceUrl": "https://desse.osaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "サ飯",
+      "value": "ラウンジでサ飯を提供している",
+      "sourceUrl": "https://desse.osaka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒542-0081 大阪府大阪市中央区南船場3-6-18 ケーズビル心斎橋 4階",
+      "sourceUrl": "https://desse.osaka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-tottori-3598"
+  ],
+  "name": "ゆアシス東郷龍鳳閣",
+  "officialUrl": "https://www.ryuhoukaku.jp/yuashisutop.html",
+  "features": [
+    "遠赤外線サウナ",
+    "スチーム(ミスト)サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "10種類の浴槽と2種類のサウナがある",
+      "sourceUrl": "https://www.ryuhoukaku.jp/yuashisutop.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "サウナ",
+      "value": "遠赤外線を利用したサウナ（温度は95℃前後）",
+      "sourceUrl": "https://www.ryuhoukaku.jp/yuashisutop.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "ミストサウナ",
+      "value": "ミストサウナがある",
+      "sourceUrl": "https://www.ryuhoukaku.jp/yuashisutop.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "水風呂がある",
+      "sourceUrl": "https://www.ryuhoukaku.jp/yuashisutop.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-kagawa-3707"
+  ],
+  "name": "たからだの里環の湯",
+  "officialUrl": "https://takaradanosato.co.jp/event_cate/tamakinoyu",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "8人程度入れるサウナを完備。水風呂もある",
+      "sourceUrl": "https://takaradanosato.co.jp/event_cate/tamakinoyu",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "10:00～21:00（休館日：平日の月曜日、月曜祝日の翌火曜日）",
+      "sourceUrl": "https://takaradanosato.co.jp/event_cate/tamakinoyu",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "入湯料金",
+      "value": "大人570円、子供（5〜11歳）320円、シルバー（70歳以上）450円",
+      "sourceUrl": "https://takaradanosato.co.jp/event_cate/tamakinoyu",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-nagasaki-3955"
+  ],
+  "name": "みずほ温泉千年の湯",
+  "officialUrl": "https://www.city.unzen.nagasaki.jp/kiji0034314/index.html",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "大浴場にジャグジー、打たせ湯、露天風呂、水風呂、サウナがある",
+      "sourceUrl": "https://www.city.unzen.nagasaki.jp/kiji0034314/index.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "午前10時～午後9時（受付時間午後8時30分まで）",
+      "sourceUrl": "https://www.city.unzen.nagasaki.jp/kiji0034314/index.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休業日",
+      "value": "毎週水曜日、年末年始（12月29日～1月1日）および施設管理運営上定める日",
+      "sourceUrl": "https://www.city.unzen.nagasaki.jp/kiji0034314/index.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-saga-3930"
+  ],
+  "name": "伊万里温泉白磁乃湯",
+  "officialUrl": "https://yutokuonsen.com/imari.html",
+  "features": [
+    "遠赤外線サウナ",
+    "スチーム(ミスト)サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "遠赤外線サウナと蒸気サウナの2種類のサウナと水風呂がある（14種類のお風呂とサウナを備える）",
+      "sourceUrl": "https://yutokuonsen.com/imari.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日10:00〜21:30（最終受付21:00）、土日祝10:00〜22:00（最終受付21:30）",
+      "sourceUrl": "https://yutokuonsen.com/imari.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "入浴料金",
+      "value": "大人（中学生以上）は会員800円・一般900円、小人（小学生）は会員400円・一般450円",
+      "sourceUrl": "https://yutokuonsen.com/imari.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒848-0027 佐賀県伊万里市立花町2402-1",
+      "sourceUrl": "https://yutokuonsen.com/imari.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-saitama-1469"
+  ],
+  "name": "美楽温泉 SPA-HERBS",
+  "officialUrl": "https://spa-herbs.jp/",
+  "features": [],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "室内大浴場にシルクの湯、ナノ炭酸泉、ジェットバス、サウナなど9つのお風呂を完備",
+      "sourceUrl": "https://spa-herbs.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "入浴9:00～25:00（最終入館受付24:00）、岩盤浴9:00～24:00",
+      "sourceUrl": "https://spa-herbs.jp/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-tokyo-1873"
+  ],
+  "name": "天空のアジト マルシンスパ",
+  "officialUrl": "https://marushinspa.jp/",
+  "features": [
+    "水風呂あり",
+    "貸切可",
+    "サ飯あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "フィンランド式サウナで、サウナは常時100℃",
+      "sourceUrl": "https://marushinspa.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "地下水の水風呂",
+      "sourceUrl": "https://marushinspa.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "貸切サウナ",
+      "value": "完全予約制・1〜6名の貸切サウナ（日本初導入のエストニア製ストーブ）",
+      "sourceUrl": "https://marushinspa.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "料金",
+      "value": "2時間2,000円〜、4時間2,400円〜、朝までプラン（0:00〜閉店・8時間）4,200円〜（曜日と入館時刻で変動、税込）",
+      "sourceUrl": "https://marushinspa.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "東京都渋谷区笹塚1-58-6 マルシンビル10F（受付）",
+      "sourceUrl": "https://marushinspa.jp/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-ishikawa-12079"
+  ],
+  "name": "香林居",
+  "officialUrl": "https://www.chillnn.com/17a33622a636d/plan/180f4f0f45b107",
+  "features": [
+    "貸切可",
+    "ロウリュあり",
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "フィンランド式サウナ室（4名定員）を貸切で利用できる。ロウリュには白山の森林素材から抽出した芳香蒸留水を使う",
+      "sourceUrl": "https://www.chillnn.com/17a33622a636d/plan/180f4f0f45b107",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "サウナ（定員4名）／水風呂（14〜17℃）／スパ（41℃）などを備え、外気浴を楽しめるプライベートテラスがある",
+      "sourceUrl": "https://www.chillnn.com/17a33622a636d/plan/180f4f0f45b107",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "利用時間",
+      "value": "90分間貸切（水着着用必須）。利用時間は11:00～／13:00～／15:00～／17:00～／19:00～／21:00～／翌9:00～",
+      "sourceUrl": "https://www.chillnn.com/17a33622a636d/plan/180f4f0f45b107",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-nagano-11519"
+  ],
+  "name": "シマシマサウナ",
+  "officialUrl": "http://www.shimashimahouse.com/",
+  "features": [
+    "薪サウナ",
+    "セルフロウリュ",
+    "貸切可"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "フィンランド式・薪ストーブの完全予約制プライベートサウナ。セルフロウリュで温度と湿度を調節できる。宿泊者以外も利用できる",
+      "sourceUrl": "http://www.shimashimahouse.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-gifu-92846"
+  ],
+  "name": "Kanzaki Sanga Sauna",
+  "officialUrl": "https://sangasauna.com/",
+  "features": [
+    "水風呂あり",
+    "貸切可",
+    "男女共用"
+  ],
+  "facts": [
+    {
+      "label": "水風呂",
+      "value": "川へダイブする天然の水風呂を含めた3つの水風呂がある",
+      "sourceUrl": "https://sangasauna.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "サウナ",
+      "value": "小屋サウナ（定員10名・予約制、1枠の利用料で貸切可）とコンテナサウナ（定員15名・予約なしのパブリック利用）がある。水着着用必須で男女一緒に利用できる",
+      "sourceUrl": "https://sangasauna.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "料金",
+      "value": "入場料は10:00〜19:00が2,000円、19:00〜が1,100円（小屋サウナ利用は入場料に1名あたり2,000円追加）",
+      "sourceUrl": "https://sangasauna.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "岐阜県山県市片原字大フブセ611-1",
+      "sourceUrl": "https://sangasauna.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-hiroshima-3461"
+  ],
+  "name": "広島カプセルホテル&サウナ岩盤浴 ニュージャパンEX",
+  "officialUrl": "https://www.sauna-nj.com/",
+  "features": [],
+  "facts": [
+    {
+      "label": "営業時間",
+      "value": "入浴・サウナは5:00～2:00（2:00～5:00は清掃のため利用不可）。男性専用施設",
+      "sourceUrl": "https://www.sauna-nj.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒730-0027 広島県広島市中区薬研堀8-8",
+      "sourceUrl": "https://www.sauna-nj.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-yamaguchi-3562"
+  ],
+  "name": "西ノ市温泉 蛍の湯(ホタルサウナ)",
+  "officialUrl": "https://toyota-hotaru.com/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "「ホタルサウナ」は温泉水風呂や露天外気浴を備える",
+      "sourceUrl": "https://toyota-hotaru.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-4380"
+  ],
+  "name": "春日井温泉",
+  "officialUrl": "https://kasugai-onsen.com/",
+  "features": [
+    "タオルレンタルあり"
+  ],
+  "facts": [
+    {
+      "label": "料金",
+      "value": "入浴料は大人（中学生以上）550円、サウナ（入浴料含む）730円。サウナ回数券（10枚）6,100円",
+      "sourceUrl": "https://kasugai-onsen.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日13:30～24:00、土日祝10:00～24:00（年中無休）",
+      "sourceUrl": "https://kasugai-onsen.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "タオル",
+      "value": "サウナ利用者には専用タオルの貸出がある",
+      "sourceUrl": "https://kasugai-onsen.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-kumamoto-14173"
+  ],
+  "name": "トトノウバイ",
+  "officialUrl": "https://www.totonoubai.com/",
+  "features": [
+    "貸切可",
+    "薪サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "完全プライベートサウナ。サウナストーブは薪を燃やすフィンランド式で、自分で薪をくべて熱さを調整できる",
+      "sourceUrl": "https://www.totonoubai.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "屋外に設置した岩の水風呂（「風神石」という白色の岩を使用）",
+      "sourceUrl": "https://www.totonoubai.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "料金",
+      "value": "2時間半あたり平日1〜2名7,000円・3名9,000円、休日1〜3名9,000円・4名12,000円（最大利用人数6名まで）",
+      "sourceUrl": "https://www.totonoubai.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒861-1362 熊本県菊池市七城町山崎589",
+      "sourceUrl": "https://www.totonoubai.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-kagoshima-4134"
+  ],
+  "name": "天然温泉ぬくもりの湯",
+  "officialUrl": "http://nukumorino-yu.com/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "水風呂",
+      "value": "水風呂「明神の滝」は毎分400リットルと圧倒的な水量",
+      "sourceUrl": "http://nukumorino-yu.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒899-0131 鹿児島県出水市明神町1744-1",
+      "sourceUrl": "http://nukumorino-yu.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-tochigi-1536"
+  ],
+  "name": "みかえりの郷・みかえり温泉彩花の湯",
+  "officialUrl": "http://www.mikaerinosato.jp/",
+  "features": [],
+  "facts": [
+    {
+      "label": "設備",
+      "value": "天然温泉「彩花の湯」に内湯・露天風呂・サウナがある",
+      "sourceUrl": "http://www.mikaerinosato.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "入浴料",
+      "value": "大人700円、子供400円",
+      "sourceUrl": "http://www.mikaerinosato.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒329-2801 栃木県那須塩原市関谷1425-211",
+      "sourceUrl": "http://www.mikaerinosato.jp/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-toyama-2164"
+  ],
+  "name": "剣の湯ドーミーイン富山",
+  "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/toyama",
+  "features": [
+    "オートロウリュ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "2026年9月16日の大浴場リニューアルで、男性サウナにオートロウリュ、女性ミストサウナにアロマを導入",
+      "sourceUrl": "https://dormy-hotels.com/dormyinn/hotels/toyama",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒930-0084 富山県富山市大手町4-8",
+      "sourceUrl": "https://dormy-hotels.com/dormyinn/hotels/toyama",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-mie-suzunoyu"
+  ],
+  "name": "鈴の湯",
+  "officialUrl": "http://www.suzunoyu.com/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "「昭和ストロング」と「ハーバル」の2種のサウナがある",
+      "sourceUrl": "http://www.suzunoyu.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "サウナ・水風呂・外気浴を備える",
+      "sourceUrl": "http://www.suzunoyu.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "st-wakayama-3326"
+  ],
+  "name": "スーパー銭湯ユーバス和歌山店",
+  "officialUrl": "https://yu-bath.com/w-bath",
+  "features": [
+    "オートロウリュ",
+    "塩サウナ",
+    "遠赤外線サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "高温サウナ（男湯・女湯）、オートロウリュ（男湯限定、毎時0分と30分）、ソルトサウナ（女湯限定）、遠赤外線サウナ、水風呂がある",
+      "sourceUrl": "https://yu-bath.com/w-bath",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "料金",
+      "value": "ロイヤル入浴料（サウナ利用可）は大人（中学生以上）1,100円、小人（小学生）550円、幼児（3歳以上）440円",
+      "sourceUrl": "https://yu-bath.com/w-bath",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "9:00～24:00（受付は23:15まで）、年中無休",
+      "sourceUrl": "https://yu-bath.com/w-bath",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "和歌山県和歌山市湊20番地",
+      "sourceUrl": "https://yu-bath.com/w-bath",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-chiba-1728"
+  ],
+  "name": "クアパレス",
+  "officialUrl": "https://spa-tokyo.net/z-c-k-nar/index.html",
+  "features": [
+    "タオルレンタルあり"
+  ],
+  "facts": [
+    {
+      "label": "料金",
+      "value": "入浴料は大人（中学生以上）550円・子供（小学生以下）200円、サウナ使用（入浴料含む）1,200円",
+      "sourceUrl": "https://spa-tokyo.net/z-c-k-nar/index.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "15:00〜24:30（土日祝は14:00〜24:30）、最終受付23:30、不定休",
+      "sourceUrl": "https://spa-tokyo.net/z-c-k-nar/index.html",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "タオル",
+      "value": "レンタルタオルセット（フェイスタオル・バスタオル）320円",
+      "sourceUrl": "https://spa-tokyo.net/z-c-k-nar/index.html",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-niigata-9592"
+  ],
+  "name": "HOSTELperch (パーチ)",
+  "officialUrl": "http://s-perch.com/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "本格フィンランド式の蔵サウナ。高温サウナと低温サウナの2階建てで、水風呂・外気浴スペースを完備。サウナ温度は110℃",
+      "sourceUrl": "http://s-perch.com/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒952-1315 新潟県佐渡市河原田諏訪町4",
+      "sourceUrl": "http://s-perch.com/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-ishikawa-11110"
+  ],
+  "name": "天然温泉 加賀の宝泉 御宿 野乃金沢",
+  "officialUrl": "https://www.hotespa.net/hotels/nono_kanazawa/",
+  "features": [
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "男性サウナは3段で、上段は100℃。チェーン最大級のサウナがある",
+      "sourceUrl": "https://www.hotespa.net/hotels/nono_kanazawa/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "強冷の水風呂と、最上階の露天風呂での外気浴を楽しめる",
+      "sourceUrl": "https://www.hotespa.net/hotels/nono_kanazawa/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-gifu-28499"
+  ],
+  "name": "時のホテル",
+  "officialUrl": "https://tokino-hotel.jp",
+  "features": [
+    "ロウリュあり",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "全6室のロウリュサウナ付きのお部屋があり、そのうち4室には半露天壺湯を配する。水風呂を備えたサウナ付特別室もある",
+      "sourceUrl": "https://tokino-hotel.jp",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "岐阜県土岐市泉町定林寺962番地1",
+      "sourceUrl": "https://tokino-hotel.jp",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-fukuoka-7272"
+  ],
+  "name": "ヒナタの杜 小戸の湯どころ",
+  "officialUrl": "https://www.hinatanomori.jp/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "水風呂",
+      "value": "水深90センチの冷たい水風呂",
+      "sourceUrl": "https://www.hinatanomori.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "9:00〜24:00（最終入館時間23:00）、年中無休",
+      "sourceUrl": "https://www.hinatanomori.jp/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-kumamoto-78344"
+  ],
+  "name": "湯屋 水禅 Luxury Sauna & Spa(松屋別館)",
+  "officialUrl": "https://www.matsuyahonkan.com/suizen/",
+  "features": [
+    "セルフロウリュ",
+    "水風呂あり",
+    "外気あり",
+    "貸切可"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "全面檜のセルフロウリュサウナ（温度約90〜100度）。ロウリュ水はオリジナルのアロマ水",
+      "sourceUrl": "https://www.matsuyahonkan.com/suizen/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "水前寺の水脈を通ってきた阿蘇の伏流水の水風呂。外気浴スペースもある",
+      "sourceUrl": "https://www.matsuyahonkan.com/suizen/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "プライベートサウナ",
+      "value": "完全予約制のプライベートサウナ「浴司（よくす）」は利用時間7:00〜24:00、120分で平日10,000円〜・土日祝11,000円〜（最大定員5名）",
+      "sourceUrl": "https://www.matsuyahonkan.com/suizen/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒862-0950 熊本市中央区水前寺5丁目5-1 松屋別館2F",
+      "sourceUrl": "https://www.matsuyahonkan.com/suizen/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-fukushima-9550"
+  ],
+  "name": "LAKE SIDE HOTEL MINATOYA (MINATOYA SAUNA)",
+  "officialUrl": "https://www.h-minatoya.com/sauna/",
+  "features": [
+    "テントサウナ",
+    "水風呂あり",
+    "外気あり",
+    "ロウリュあり",
+    "サ飯あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "猪苗代湖の砂浜に設置したテントサウナを使ったフィンランド式サウナ体験。水風呂には猪苗代湖を利用し、専用のイスで外気浴ができる",
+      "sourceUrl": "https://www.h-minatoya.com/sauna/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "料金",
+      "value": "日帰りプランのテントサウナはMORZHが1名5,500円/人・2名5,000円/人、MORZH MAXが2名6,000円/人など",
+      "sourceUrl": "https://www.h-minatoya.com/sauna/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒969-3285 福島県耶麻郡猪苗代町翁沢長浜870",
+      "sourceUrl": "https://www.h-minatoya.com/sauna/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "si-tokyo-12818"
+  ],
+  "name": "ROOFTOP(ルーフトップ)",
+  "officialUrl": "https://rooftopsauna.jp/",
+  "features": [
+    "オートロウリュ",
+    "水風呂あり",
+    "外気あり"
+  ],
+  "facts": [
+    {
+      "label": "サウナ",
+      "value": "オートロウリュを備えた本格的フィンランド式サウナ。男性サウナ室は最大30人収容可能な都内最大級の広さ、女性サウナ室は約20人収容でiki製ストーブとオートロウリュを設置",
+      "sourceUrl": "https://rooftopsauna.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "水風呂",
+      "value": "水風呂を独り占めできるパーソナル水風呂を屋外に設置",
+      "sourceUrl": "https://rooftopsauna.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "8:00～24:00（最終受付23:00）",
+      "sourceUrl": "https://rooftopsauna.jp/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "住所",
+      "value": "〒167-0053 東京都杉並区西荻南3-14-7 4F",
+      "sourceUrl": "https://rooftopsauna.jp/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 
