@@ -42151,6 +42151,24 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       {"label": "設備", "value": "公式ページの設備表示：サウナ（ドライ）", "sourceUrl": "https://www.central.co.jp/club/yokote/", "checkedAt": "2026-11-26"},
       {"label": "アクセス", "value": "JR奥羽本線 横手駅から徒歩3分／駅東口を出て左 ホテルプラザアネックス様沿いすぐ／駐車場完備(70台無料)／玄関横に駐輪可能", "sourceUrl": "https://www.central.co.jp/club/yokote/", "checkedAt": "2026-11-26"},
     ],
+  },
+  {
+    ids: ["st-miyazaki-829"], name: "天岩戸の湯", officialUrl: "https://www.town-takachiho.jp/top/soshiki/kikakukanko/3/2_1/271.html",
+    features: ["温泉付き"],
+    facts: [
+      {"label":"営業状況","value":"リニューアル工事のため、2026年12月7日よりしばらくの間休館（高千穂町公式ページの告知）","sourceUrl":"https://www.town-takachiho.jp/top/soshiki/kikakukanko/3/2_1/271.html","checkedAt":"2026-11-26"},
+      {"label":"営業時間","value":"午前10時から午後10時まで（午後9時半最終受付）","sourceUrl":"https://www.town-takachiho.jp/top/soshiki/kikakukanko/3/2_1/271.html","checkedAt":"2026-11-26"},
+      {"label":"定休日","value":"毎週水曜日（2026年12月2日は開館）","sourceUrl":"https://www.town-takachiho.jp/top/soshiki/kikakukanko/3/2_1/271.html","checkedAt":"2026-11-26"},
+    ],
+  },
+  {
+    ids: ["st-wakayama-2852"], name: "リヴァージュ・スパひきがわ", officialUrl: "https://www.rivage-spa-hikigawa.jp/",
+    features: [],
+    facts: [
+      {"label":"営業状況","value":"白浜町との指定管理者契約の終了に伴い、運営会社による営業は2026年3月22日をもって終了（公式サイトの告知）。施設自体の現在の営業状況は公式ページでは未確認","sourceUrl":"https://www.rivage-spa-hikigawa.jp/","checkedAt":"2026-11-26"},
+      {"label":"住所","value":"〒649-2511 和歌山県西牟婁郡白浜町日置1013-25","sourceUrl":"https://www.rivage-spa-hikigawa.jp/","checkedAt":"2026-11-26"},
+      {"label":"電話","value":"0739-52-2370","sourceUrl":"https://www.rivage-spa-hikigawa.jp/","checkedAt":"2026-11-26"},
+    ],
   }
 ];
 
