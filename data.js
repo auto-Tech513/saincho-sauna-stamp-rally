@@ -75548,5 +75548,471 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://information.konamisportsclub.jp/ksc/004028/",
     "officialUrl": "https://information.konamisportsclub.jp/ksc/004028/"
+  },
+  {
+    "id": "manual-megalos-hibiya",
+    "name": "メガロス日比谷シャンテ",
+    "prefecture": "東京都",
+    "address": "〒100-0006 東京都千代田区有楽町1-2-2 日比谷シャンテ別館B1F・B2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千代田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "セルフロウリュ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/hibiya/",
+    "officialUrl": "https://www.megalos.co.jp/hibiya/"
+  },
+  {
+    "id": "manual-megalos-koiwa",
+    "name": "メガロス小岩",
+    "prefecture": "東京都",
+    "address": "〒133-0056 東京都江戸川区南小岩7-24-20 ファスタ小岩I 6F・7F・8F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江戸川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "オートロウリュ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/koiwa/",
+    "officialUrl": "https://www.megalos.co.jp/koiwa/"
+  },
+  {
+    "id": "manual-megalos-minamisunamachi",
+    "name": "メガロス南砂町SUNAMO",
+    "prefecture": "東京都",
+    "address": "〒136-0075 東京都江東区新砂3丁目4-31 南砂町ショッピングセンター SUNAMO 4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江東区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/",
+    "officialUrl": "https://www.megalos.co.jp/minamisunamachi/"
+  },
+  {
+    "id": "manual-megalos-mitaka",
+    "name": "メガロス三鷹",
+    "prefecture": "東京都",
+    "address": "〒180-0006 東京都武蔵野市中町1-12-10 武蔵野タワーズ タワーズモール3F･4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/mitaka/",
+    "officialUrl": "https://www.megalos.co.jp/mitaka/"
+  },
+  {
+    "id": "manual-megalos-kichijoji",
+    "name": "メガロス吉祥寺",
+    "prefecture": "東京都",
+    "address": "〒180-0004 東京都武蔵野市吉祥寺本町1-37-8 KM吉祥寺ビル",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/kichijoji/",
+    "officialUrl": "https://www.megalos.co.jp/kichijoji/"
+  },
+  {
+    "id": "manual-megalos-musashi",
+    "name": "メガロス武蔵小金井",
+    "prefecture": "東京都",
+    "address": "〒184-0003 東京都小金井市緑町5-3-24",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "小金井市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/musashi/",
+    "officialUrl": "https://www.megalos.co.jp/musashi/"
+  },
+  {
+    "id": "manual-megalos-hachiouji",
+    "name": "メガロス八王子",
+    "prefecture": "東京都",
+    "address": "〒192-0904 東京都八王子市子安町1-16-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "八王子市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/hachiouji/",
+    "officialUrl": "https://www.megalos.co.jp/hachiouji/"
+  },
+  {
+    "id": "manual-megalos-chofu",
+    "name": "メガロス調布",
+    "prefecture": "東京都",
+    "address": "〒182-0026 東京都調布市小島町1-9-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "調布市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/chofu/",
+    "officialUrl": "https://www.megalos.co.jp/chofu/"
+  },
+  {
+    "id": "manual-megalos-machida",
+    "name": "メガロス町田",
+    "prefecture": "東京都",
+    "address": "〒194-0022 東京都町田市森野2-2-45",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "町田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/machida/",
+    "officialUrl": "https://www.megalos.co.jp/machida/"
+  },
+  {
+    "id": "manual-megalos-katsushika",
+    "name": "メガロス葛飾",
+    "prefecture": "東京都",
+    "address": "〒124-0011 東京都葛飾区四つ木2-23-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "葛飾区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/katsushika/",
+    "officialUrl": "https://www.megalos.co.jp/katsushika/"
+  },
+  {
+    "id": "manual-megalos-nakanobu",
+    "name": "メガロス中延",
+    "prefecture": "東京都",
+    "address": "〒142-0041 東京都品川区戸越6-23-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "セルフロウリュ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/nakanobu/",
+    "officialUrl": "https://www.megalos.co.jp/nakanobu/"
+  },
+  {
+    "id": "manual-megalos-kaminagaya",
+    "name": "メガロス上永谷",
+    "prefecture": "神奈川県",
+    "address": "〒233-0013 神奈川県横浜市港南区丸山台2-3-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/kaminagaya/",
+    "officialUrl": "https://www.megalos.co.jp/kaminagaya/"
+  },
+  {
+    "id": "manual-megalos-kanagawa",
+    "name": "メガロス神奈川",
+    "prefecture": "神奈川県",
+    "address": "〒221-0014 神奈川県横浜市神奈川区入江1-31-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/kanagawa/",
+    "officialUrl": "https://www.megalos.co.jp/kanagawa/"
+  },
+  {
+    "id": "manual-megalos-tsunashima",
+    "name": "メガロス綱島",
+    "prefecture": "神奈川県",
+    "address": "〒223-0053 神奈川県横浜市港北区綱島西3-3-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/tsunashima/",
+    "officialUrl": "https://www.megalos.co.jp/tsunashima/"
+  },
+  {
+    "id": "manual-megalos-ichigao",
+    "name": "メガロス市ヶ尾",
+    "prefecture": "神奈川県",
+    "address": "〒225-0024 神奈川県横浜市青葉区市ヶ尾町1155-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/ichigao/",
+    "officialUrl": "https://www.megalos.co.jp/ichigao/"
+  },
+  {
+    "id": "manual-megalos-saginuma",
+    "name": "メガロス鷺沼",
+    "prefecture": "神奈川県",
+    "address": "〒216-0003 神奈川県川崎市宮前区有馬1丁目21-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/saginuma/",
+    "officialUrl": "https://www.megalos.co.jp/saginuma/"
+  },
+  {
+    "id": "manual-megalos-sagamiono",
+    "name": "メガロス相模大野",
+    "prefecture": "神奈川県",
+    "address": "〒252-0303 神奈川県相模原市南区相模大野3-2-1 ボーノ相模大野5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "相模原市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/sagamiono/",
+    "officialUrl": "https://www.megalos.co.jp/sagamiono/"
+  },
+  {
+    "id": "manual-megalos-motoyawata",
+    "name": "メガロス本八幡",
+    "prefecture": "千葉県",
+    "address": "〒272-0023 千葉県市川市南八幡3-14-26",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "オートロウリュ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/motoyawata/",
+    "officialUrl": "https://www.megalos.co.jp/motoyawata/"
+  },
+  {
+    "id": "manual-megalos-kashiwa",
+    "name": "メガロス柏",
+    "prefecture": "千葉県",
+    "address": "〒277-0005 千葉県柏市柏7-6-30",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "柏市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/kashiwa/",
+    "officialUrl": "https://www.megalos.co.jp/kashiwa/"
+  },
+  {
+    "id": "manual-megalos-souka",
+    "name": "メガロス草加",
+    "prefecture": "埼玉県",
+    "address": "〒340-0014 埼玉県草加市住吉1-7-7 オーク第1ビル 2F～5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "草加市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/souka/",
+    "officialUrl": "https://www.megalos.co.jp/souka/"
+  },
+  {
+    "id": "manual-megalos-hamamatsu",
+    "name": "メガロス浜松市野",
+    "prefecture": "静岡県",
+    "address": "〒435-0057 静岡県浜松市中央区中田町754-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/hamamatsu/",
+    "officialUrl": "https://www.megalos.co.jp/hamamatsu/"
+  },
+  {
+    "id": "manual-megalos-chikusa",
+    "name": "メガロス千種",
+    "prefecture": "愛知県",
+    "address": "〒464-0858 愛知県名古屋市千種区千種2-23-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/chikusa/",
+    "officialUrl": "https://www.megalos.co.jp/chikusa/"
+  },
+  {
+    "id": "manual-megalos-yamato",
+    "name": "メガロス大和",
+    "prefecture": "神奈川県",
+    "address": "神奈川県大和市中央5-14-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大和市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/yamato/",
+    "officialUrl": "https://www.megalos.co.jp/yamato/"
+  },
+  {
+    "id": "manual-megalos-yokohama",
+    "name": "メガロス横浜天王町",
+    "prefecture": "神奈川県",
+    "address": "〒240-0005 神奈川県横浜市保土ヶ谷区神戸町134 （横浜ビジネスパーク内）",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/yokohama/",
+    "officialUrl": "https://www.megalos.co.jp/yokohama/"
+  },
+  {
+    "id": "manual-megalos-tachikawa_kita",
+    "name": "メガロス立川北館",
+    "prefecture": "東京都",
+    "address": "〒190-0012 東京都立川市曙町2-42-1 パークアベニュー9階・10階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "立川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+    "officialUrl": "https://www.megalos.co.jp/tachikawa_kita/"
+  },
+  {
+    "id": "manual-megalos-tachikawa_minami",
+    "name": "メガロス立川南館",
+    "prefecture": "東京都",
+    "address": "〒190-0023 東京都立川市柴崎町3-6-29 アレアレア2 4F・5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "立川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+    "officialUrl": "https://www.megalos.co.jp/tachikawa_kita/"
   }
 ];

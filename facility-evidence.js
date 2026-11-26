@@ -26898,6 +26898,1098 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
     }
   ],
   "status": "closed"
+},
+{
+  "ids": [
+    "manual-megalos-hibiya"
+  ],
+  "name": "メガロス日比谷シャンテ",
+  "officialUrl": "https://www.megalos.co.jp/hibiya/",
+  "features": [
+    "セルフロウリュ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒100-0006 東京都千代田区有楽町1-2-2 日比谷シャンテ別館B1F・B2F",
+      "sourceUrl": "https://www.megalos.co.jp/hibiya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 7:00－23:00、土曜 9:30－18:00、日祝 9:30－18:00",
+      "sourceUrl": "https://www.megalos.co.jp/hibiya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎月5日・15日・25日・29日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/hibiya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男性用にフィンランド式サウナ（セルフロウリュ）と風呂・水風呂を完備（男性のみ）",
+      "sourceUrl": "https://www.megalos.co.jp/hibiya/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR山手線「有楽町駅」徒歩約5分、東京メトロ銀座線・丸ノ内線「銀座駅」C1出口より5分",
+      "sourceUrl": "https://www.megalos.co.jp/hibiya/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-koiwa"
+  ],
+  "name": "メガロス小岩",
+  "officialUrl": "https://www.megalos.co.jp/koiwa/",
+  "features": [
+    "オートロウリュ",
+    "スチーム(ミスト)サウナ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒133-0056 東京都江戸川区南小岩7-24-20 ファスタ小岩I 6F・7F・8F",
+      "sourceUrl": "https://www.megalos.co.jp/koiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:00、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/koiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/koiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男性用はフィンランド式サウナ（オートロウリュ）と水風呂、女性用はコラーゲンミストサウナを完備",
+      "sourceUrl": "https://www.megalos.co.jp/koiwa/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR総武線「小岩駅」 南口徒歩1分",
+      "sourceUrl": "https://www.megalos.co.jp/koiwa/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-minamisunamachi"
+  ],
+  "name": "メガロス南砂町SUNAMO",
+  "officialUrl": "https://www.megalos.co.jp/minamisunamachi/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒136-0075 東京都江東区新砂3丁目4-31 南砂町ショッピングセンター SUNAMO 4F",
+      "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00～23:00、土曜 10:00～21:00、日祝 10:00～20:00",
+      "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備",
+      "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東京メトロ東西線「南砂町駅」5番出口徒歩8分",
+      "sourceUrl": "https://www.megalos.co.jp/minamisunamachi/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-mitaka"
+  ],
+  "name": "メガロス三鷹",
+  "officialUrl": "https://www.megalos.co.jp/mitaka/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒180-0006 東京都武蔵野市中町1-12-10 武蔵野タワーズ タワーズモール3F･4F",
+      "sourceUrl": "https://www.megalos.co.jp/mitaka/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:30－23:00、土曜 9:30－21:00、日曜 9:30－20:00、祝日 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/mitaka/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/mitaka/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/mitaka/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線・総武線「三鷹駅」徒歩2分",
+      "sourceUrl": "https://www.megalos.co.jp/mitaka/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-kichijoji"
+  ],
+  "name": "メガロス吉祥寺",
+  "officialUrl": "https://www.megalos.co.jp/kichijoji/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒180-0004 東京都武蔵野市吉祥寺本町1-37-8 KM吉祥寺ビル",
+      "sourceUrl": "https://www.megalos.co.jp/kichijoji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：月～木 9:30－23:00、土曜 9:30－21:00、日祝 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/kichijoji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/kichijoji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/kichijoji/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線「吉祥寺駅」北口徒歩6分、京王井の頭線「吉祥寺駅」徒歩7分",
+      "sourceUrl": "https://www.megalos.co.jp/kichijoji/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-musashi"
+  ],
+  "name": "メガロス武蔵小金井",
+  "officialUrl": "https://www.megalos.co.jp/musashi/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒184-0003 東京都小金井市緑町5-3-24",
+      "sourceUrl": "https://www.megalos.co.jp/musashi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:30－23:00、土曜 9:30－21:00、日祝 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/musashi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日（祝日を含む）、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/musashi/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備",
+      "sourceUrl": "https://www.megalos.co.jp/musashi/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線「武蔵小金井駅」徒歩6分",
+      "sourceUrl": "https://www.megalos.co.jp/musashi/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-hachiouji"
+  ],
+  "name": "メガロス八王子",
+  "officialUrl": "https://www.megalos.co.jp/hachiouji/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒192-0904 東京都八王子市子安町1-16-11",
+      "sourceUrl": "https://www.megalos.co.jp/hachiouji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 8:30－23:00、土曜 9:30－22:30、日祝 10:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/hachiouji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/hachiouji/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/hachiouji/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線・横浜線「八王子駅」徒歩4分、京王線「京王八王子駅」徒歩8分",
+      "sourceUrl": "https://www.megalos.co.jp/hachiouji/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-chofu"
+  ],
+  "name": "メガロス調布",
+  "officialUrl": "https://www.megalos.co.jp/chofu/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒182-0026 東京都調布市小島町1-9-1",
+      "sourceUrl": "https://www.megalos.co.jp/chofu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:00、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/chofu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/chofu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/chofu/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京王線「調布駅」徒歩3分",
+      "sourceUrl": "https://www.megalos.co.jp/chofu/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-machida"
+  ],
+  "name": "メガロス町田",
+  "officialUrl": "https://www.megalos.co.jp/machida/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒194-0022 東京都町田市森野2-2-45",
+      "sourceUrl": "https://www.megalos.co.jp/machida/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:00、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/machida/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/machida/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/machida/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "小田急小田原線「町田駅」より徒歩7分、JR横浜線「町田駅」より徒歩12分",
+      "sourceUrl": "https://www.megalos.co.jp/machida/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-katsushika"
+  ],
+  "name": "メガロス葛飾",
+  "officialUrl": "https://www.megalos.co.jp/katsushika/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒124-0011 東京都葛飾区四つ木2-23-10",
+      "sourceUrl": "https://www.megalos.co.jp/katsushika/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:00、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/katsushika/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/katsushika/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/katsushika/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京成電鉄京成線「立石駅」徒歩9分、京成電鉄押上線「四ツ木駅」徒歩7分",
+      "sourceUrl": "https://www.megalos.co.jp/katsushika/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-nakanobu"
+  ],
+  "name": "メガロス中延",
+  "officialUrl": "https://www.megalos.co.jp/nakanobu/",
+  "features": [
+    "ドライサウナ",
+    "セルフロウリュ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒142-0041 東京都品川区戸越6-23-17",
+      "sourceUrl": "https://www.megalos.co.jp/nakanobu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:30、土曜 9:00－23:00、日祝 9:00－23:00）",
+      "sourceUrl": "https://www.megalos.co.jp/nakanobu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/nakanobu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "女性用はテレビ付きドライサウナと水風呂、男性用スパエリアにはフィンランド式サウナ（セルフロウリュ）と水風呂を完備",
+      "sourceUrl": "https://www.megalos.co.jp/nakanobu/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "都営浅草線「中延駅」A3出口徒歩1分、東急大井町線「中延駅」より徒歩3分",
+      "sourceUrl": "https://www.megalos.co.jp/nakanobu/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-kaminagaya"
+  ],
+  "name": "メガロス上永谷",
+  "officialUrl": "https://www.megalos.co.jp/kaminagaya/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒233-0013 神奈川県横浜市港南区丸山台2-3-1",
+      "sourceUrl": "https://www.megalos.co.jp/kaminagaya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 8:00－23:00、土曜 8:00－20:00、日祝 8:00－19:00）",
+      "sourceUrl": "https://www.megalos.co.jp/kaminagaya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/kaminagaya/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/kaminagaya/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "横浜市営ブルーライン「上永谷駅」徒歩3分",
+      "sourceUrl": "https://www.megalos.co.jp/kaminagaya/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-kanagawa"
+  ],
+  "name": "メガロス神奈川",
+  "officialUrl": "https://www.megalos.co.jp/kanagawa/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒221-0014 神奈川県横浜市神奈川区入江1-31-11",
+      "sourceUrl": "https://www.megalos.co.jp/kanagawa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:30－23:00、土曜 8:30－21:00、日祝 8:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/kanagawa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/kanagawa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/kanagawa/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR横浜線「大口駅」東口徒歩9分、JR京浜東北線「新子安駅」徒歩9分",
+      "sourceUrl": "https://www.megalos.co.jp/kanagawa/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-tsunashima"
+  ],
+  "name": "メガロス綱島",
+  "officialUrl": "https://www.megalos.co.jp/tsunashima/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒223-0053 神奈川県横浜市港北区綱島西3-3-3",
+      "sourceUrl": "https://www.megalos.co.jp/tsunashima/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:00、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/tsunashima/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/tsunashima/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/tsunashima/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急東横線「綱島駅」西口徒歩5分",
+      "sourceUrl": "https://www.megalos.co.jp/tsunashima/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-ichigao"
+  ],
+  "name": "メガロス市ヶ尾",
+  "officialUrl": "https://www.megalos.co.jp/ichigao/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒225-0024 神奈川県横浜市青葉区市ヶ尾町1155-10",
+      "sourceUrl": "https://www.megalos.co.jp/ichigao/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:30－23:00、土曜 9:30－21:00、日祝 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/ichigao/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/ichigao/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/ichigao/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線「市が尾駅」西口徒歩1分",
+      "sourceUrl": "https://www.megalos.co.jp/ichigao/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-saginuma"
+  ],
+  "name": "メガロス鷺沼",
+  "officialUrl": "https://www.megalos.co.jp/saginuma/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒216-0003 神奈川県川崎市宮前区有馬1丁目21-3",
+      "sourceUrl": "https://www.megalos.co.jp/saginuma/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：月・水～金 9:30－23:00、土曜 9:30－21:00、日祝 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/saginuma/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/saginuma/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/saginuma/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線「鷺沼駅」徒歩5分",
+      "sourceUrl": "https://www.megalos.co.jp/saginuma/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-sagamiono"
+  ],
+  "name": "メガロス相模大野",
+  "officialUrl": "https://www.megalos.co.jp/sagamiono/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒252-0303 神奈川県相模原市南区相模大野3-2-1 ボーノ相模大野5F",
+      "sourceUrl": "https://www.megalos.co.jp/sagamiono/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 8:30－23:00、土曜 8:30－21:00、日祝 8:30－20:00",
+      "sourceUrl": "https://www.megalos.co.jp/sagamiono/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/sagamiono/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備",
+      "sourceUrl": "https://www.megalos.co.jp/sagamiono/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "小田急小田原線・江ノ島線「相模大野駅」徒歩3分",
+      "sourceUrl": "https://www.megalos.co.jp/sagamiono/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-motoyawata"
+  ],
+  "name": "メガロス本八幡",
+  "officialUrl": "https://www.megalos.co.jp/motoyawata/",
+  "features": [
+    "ドライサウナ",
+    "オートロウリュ",
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒272-0023 千葉県市川市南八幡3-14-26",
+      "sourceUrl": "https://www.megalos.co.jp/motoyawata/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日9:00－23:00、土曜9:00－21:00、日祝9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/motoyawata/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/motoyawata/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男性サウナはフィンランド式（オートロウリュ）、女性サウナはドライサウナ。水風呂も完備",
+      "sourceUrl": "https://www.megalos.co.jp/motoyawata/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR総武線「本八幡駅」南口徒歩3分、都営新宿線「本八幡駅」徒歩5分",
+      "sourceUrl": "https://www.megalos.co.jp/motoyawata/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-kashiwa"
+  ],
+  "name": "メガロス柏",
+  "officialUrl": "https://www.megalos.co.jp/kashiwa/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒277-0005 千葉県柏市柏7-6-30",
+      "sourceUrl": "https://www.megalos.co.jp/kashiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:30、土曜 9:00－21:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/kashiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/kashiwa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/kashiwa/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR常磐線「柏駅」東口徒歩15分、阪東バス柏駅東口5番乗場 大津ヶ丘行「柏法務局入口」下車1分",
+      "sourceUrl": "https://www.megalos.co.jp/kashiwa/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-souka"
+  ],
+  "name": "メガロス草加",
+  "officialUrl": "https://www.megalos.co.jp/souka/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒340-0014 埼玉県草加市住吉1-7-7 オーク第1ビル 2F～5F",
+      "sourceUrl": "https://www.megalos.co.jp/souka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:00－23:30、土曜 9:00－22:00、日祝 9:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/souka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/souka/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/souka/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東武伊勢崎線「草加駅」徒歩2分",
+      "sourceUrl": "https://www.megalos.co.jp/souka/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-hamamatsu"
+  ],
+  "name": "メガロス浜松市野",
+  "officialUrl": "https://www.megalos.co.jp/hamamatsu/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒435-0057 静岡県浜松市中央区中田町754-1",
+      "sourceUrl": "https://www.megalos.co.jp/hamamatsu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 8:30－23:00、土曜 8:30－22:00、日祝 8:30－20:00",
+      "sourceUrl": "https://www.megalos.co.jp/hamamatsu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/hamamatsu/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/hamamatsu/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオンモール浜松市野となり",
+      "sourceUrl": "https://www.megalos.co.jp/hamamatsu/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-chikusa"
+  ],
+  "name": "メガロス千種",
+  "officialUrl": "https://www.megalos.co.jp/chikusa/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒464-0858 愛知県名古屋市千種区千種2-23-11",
+      "sourceUrl": "https://www.megalos.co.jp/chikusa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 9:30－23:30、土曜 9:30－21:00、日祝 9:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/chikusa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/chikusa/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "バスルームにドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/chikusa/guide/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央本線「鶴舞駅」・地下鉄鶴舞線「鶴舞駅」 名大病院口より徒歩10分",
+      "sourceUrl": "https://www.megalos.co.jp/chikusa/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-yamato"
+  ],
+  "name": "メガロス大和",
+  "officialUrl": "https://www.megalos.co.jp/yamato/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "設備・サウナ",
+      "value": "男女ともドライサウナを完備。プールエリアにミストサウナもあり",
+      "sourceUrl": "https://www.megalos.co.jp/yamato/guide/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-yokohama"
+  ],
+  "name": "メガロス横浜天王町",
+  "officialUrl": "https://www.megalos.co.jp/yokohama/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒240-0005 神奈川県横浜市保土ヶ谷区神戸町134 （横浜ビジネスパーク内）",
+      "sourceUrl": "https://www.megalos.co.jp/yokohama/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 8:30－23:00、土曜 8:30－21:00、日祝 8:30－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/yokohama/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/yokohama/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "店舗ページの設備一覧にサウナとミストサウナを表示（お風呂・シャワー併設）",
+      "sourceUrl": "https://www.megalos.co.jp/yokohama/access/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "相鉄線「天王町駅」YBP口徒歩5分、相鉄線「星川駅」南口徒歩5分",
+      "sourceUrl": "https://www.megalos.co.jp/yokohama/access/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-tachikawa_kita"
+  ],
+  "name": "メガロス立川北館",
+  "officialUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒190-0012 東京都立川市曙町2-42-1 パークアベニュー9階・10階",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "24時間営業（通常営業時間：平日 7:00－23:00、土曜 10:00－22:00、日祝 10:00－20:00）",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "店舗ページの設備一覧にサウナを表示（お風呂・シャワー併設）",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線・青梅線・南武線「立川駅」徒歩3分、多摩モノレール「立川北駅」徒歩1分",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-megalos-tachikawa_minami"
+  ],
+  "name": "メガロス立川南館",
+  "officialUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒190-0023 東京都立川市柴崎町3-6-29 アレアレア2 4F・5F",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00－23:00、土曜 8:00－20:00、日祝 8:00－18:00",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、夏期、年末年始",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備・サウナ",
+      "value": "店舗ページの設備一覧にサウナを表示（お風呂・シャワー併設）",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中央線・青梅線・南武線「立川駅」徒歩1分、多摩モノレール「立川南駅」徒歩1分",
+      "sourceUrl": "https://www.megalos.co.jp/tachikawa_kita/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 
