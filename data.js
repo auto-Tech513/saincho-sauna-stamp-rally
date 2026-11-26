@@ -71476,45 +71476,875 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://hotel-wanderlust.jp",
     "officialUrl": "https://hotel-wanderlust.jp"
   },
-{
-  "id": "manual-tokyo-sengenyu-ekoda",
-  "name": "浅間湯",
-  "prefecture": "東京都",
-  "address": "東京都練馬区栄町38-3",
-  "addressSource": "公式プレスリリース",
-  "addressCheckedAt": "2026-11-26",
-  "city": "練馬区",
-  "trait": "urban",
-  "tags": [
-    "開業予定"
-  ],
-  "features": [
-    "水風呂あり",
-    "セルフロウリュ"
-  ],
-  "source": "公式",
-  "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000193047.html"
-},
-{
-  "id": "manual-yamanashi-saden",
-  "name": "サ電（SADEN）",
-  "prefecture": "山梨県",
-  "address": "山梨県富士吉田市新町二丁目8-12",
-  "addressSource": "公式プレスリリース",
-  "addressCheckedAt": "2026-11-26",
-  "city": "富士吉田市",
-  "trait": "custom",
-  "tags": [
-    "開業予定"
-  ],
-  "features": [
-    "水風呂あり",
-    "外気あり",
-    "セルフロウリュ",
-    "薪サウナ"
-  ],
-  "source": "公式",
-  "sourceUrl": "https://saden.jp/",
-  "officialUrl": "https://saden.jp/"
-}
+  {
+    "id": "manual-tokyo-sengenyu-ekoda",
+    "name": "浅間湯",
+    "prefecture": "東京都",
+    "address": "東京都練馬区栄町38-3",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "水風呂あり",
+      "セルフロウリュ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000001.000193047.html"
+  },
+  {
+    "id": "manual-yamanashi-saden",
+    "name": "サ電（SADEN）",
+    "prefecture": "山梨県",
+    "address": "山梨県富士吉田市新町二丁目8-12",
+    "addressSource": "公式プレスリリース",
+    "addressCheckedAt": "2026-11-26",
+    "city": "富士吉田市",
+    "trait": "custom",
+    "tags": [
+      "開業予定"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり",
+      "セルフロウリュ",
+      "薪サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://saden.jp/",
+    "officialUrl": "https://saden.jp/"
+  },
+  {
+    "id": "manual-tipness-shp004",
+    "name": "ティップネス吉祥寺店",
+    "prefecture": "東京都",
+    "address": "〒180-0003 東京都武蔵野市吉祥寺南町2-2-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP004/"
+  },
+  {
+    "id": "manual-tipness-shp007",
+    "name": "ティップネス中野店",
+    "prefecture": "東京都",
+    "address": "〒164-0001 東京都中野区中野2-24-11 ナカノサウステラ オフィス棟3・4階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "中野区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "オートロウリュ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP007/"
+  },
+  {
+    "id": "manual-tipness-shp008",
+    "name": "ティップネス六本木店",
+    "prefecture": "東京都",
+    "address": "〒106-0032 東京都港区六本木6-6-9 ピラミデ B1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "港区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP008/"
+  },
+  {
+    "id": "manual-tipness-shp013",
+    "name": "ティップネス藤沢店",
+    "prefecture": "神奈川県",
+    "address": "〒251-0023 神奈川県藤沢市鵠沼花沢町13-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "藤沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP013/"
+  },
+  {
+    "id": "manual-tipness-shp015",
+    "name": "ティップネス京橋店",
+    "prefecture": "大阪府",
+    "address": "〒534-0024 大阪府大阪市都島区東野田町2-1-38 ホテル京阪京橋 6F・7F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP015/"
+  },
+  {
+    "id": "manual-tipness-shp019",
+    "name": "ティップネス天王寺店",
+    "prefecture": "大阪府",
+    "address": "〒545-0053 大阪府大阪市阿倍野区松崎町1-2-8 都シティ大阪天王寺3F・4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP019/"
+  },
+  {
+    "id": "manual-tipness-shp023",
+    "name": "ティップネス国領店",
+    "prefecture": "東京都",
+    "address": "〒182-0022 東京都調布市国領町2-10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "調布市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP023/"
+  },
+  {
+    "id": "manual-tipness-shp024",
+    "name": "ティップネス石橋阪大前店",
+    "prefecture": "大阪府",
+    "address": "〒563-0023 大阪府池田市井口堂3-1-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "池田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP024/"
+  },
+  {
+    "id": "manual-tipness-shp025",
+    "name": "ティップネス東武練馬店",
+    "prefecture": "東京都",
+    "address": "〒179-0081 東京都練馬区北町2-22-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP025/"
+  },
+  {
+    "id": "manual-tipness-shp026",
+    "name": "ティップネス宮崎台店",
+    "prefecture": "神奈川県",
+    "address": "〒216-0033 神奈川県川崎市宮前区宮崎2-10-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP026/"
+  },
+  {
+    "id": "manual-tipness-shp027",
+    "name": "ティップネス船橋店",
+    "prefecture": "千葉県",
+    "address": "〒273-0005 千葉県船橋市本町6-4-21",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "船橋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP027/"
+  },
+  {
+    "id": "manual-tipness-shp028",
+    "name": "ティップネス大泉学園店",
+    "prefecture": "東京都",
+    "address": "〒178-0063 東京都練馬区東大泉1-27-14",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP028/"
+  },
+  {
+    "id": "manual-tipness-shp029",
+    "name": "ティップネス下井草店",
+    "prefecture": "東京都",
+    "address": "〒167-0022 東京都杉並区下井草2-40-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "杉並区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP029/"
+  },
+  {
+    "id": "manual-tipness-shp030",
+    "name": "ティップネス塚口店",
+    "prefecture": "兵庫県",
+    "address": "〒661-0012 兵庫県尼崎市南塚口町1-6-15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "尼崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP030/"
+  },
+  {
+    "id": "manual-tipness-shp031",
+    "name": "ティップネス国分寺店",
+    "prefecture": "東京都",
+    "address": "〒185-0012 東京都国分寺市本町4-12-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "国分寺市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "オートロウリュ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP031/"
+  },
+  {
+    "id": "manual-tipness-shp032",
+    "name": "ティップネス田無店",
+    "prefecture": "東京都",
+    "address": "〒188-0011 東京都西東京市田無町4-28-17",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "西東京市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP032/"
+  },
+  {
+    "id": "manual-tipness-shp034",
+    "name": "ティップネス喜多見店",
+    "prefecture": "東京都",
+    "address": "〒157-0067 東京都世田谷区喜多見9-25-8",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP034/"
+  },
+  {
+    "id": "manual-tipness-shp035",
+    "name": "ティップネス新百合ヶ丘店",
+    "prefecture": "神奈川県",
+    "address": "〒215-0021 神奈川県川崎市麻生区上麻生1-4-1 小田急新百合ヶ丘エルミロード7F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP035/"
+  },
+  {
+    "id": "manual-tipness-shp036",
+    "name": "ティップネス木場店",
+    "prefecture": "東京都",
+    "address": "〒135-0042 東京都江東区木場1-5-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江東区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP036/"
+  },
+  {
+    "id": "manual-tipness-shp037",
+    "name": "ティップネス新小岩店",
+    "prefecture": "東京都",
+    "address": "〒124-0025 東京都葛飾区西新小岩1-2-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "葛飾区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP037/"
+  },
+  {
+    "id": "manual-tipness-shp038",
+    "name": "ティップネス上飯田店",
+    "prefecture": "愛知県",
+    "address": "〒462-0866 愛知県名古屋市北区瑠璃光町4-7太陽サウンドオンビル3・4Ｆ",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP038/"
+  },
+  {
+    "id": "manual-tipness-shp039",
+    "name": "ティップネス武庫之荘店",
+    "prefecture": "兵庫県",
+    "address": "〒661-0033 兵庫県尼崎市南武庫之荘1-4-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "尼崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP039/"
+  },
+  {
+    "id": "manual-tipness-shp041",
+    "name": "ティップネス蒲田店",
+    "prefecture": "東京都",
+    "address": "〒144-0052 東京都大田区蒲田5-28-8 she‐Bopビル3～5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "大田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP041/"
+  },
+  {
+    "id": "manual-tipness-shp042",
+    "name": "ティップネス浜松葵東店",
+    "prefecture": "静岡県",
+    "address": "〒433-8114 静岡県浜松市中央区葵東2-13-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "浜松市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP042/"
+  },
+  {
+    "id": "manual-tipness-shp045",
+    "name": "ティップネス江南店",
+    "prefecture": "愛知県",
+    "address": "〒483-8342 愛知県江南市松竹町上野205番地ヴィアモール江南内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江南市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP045/"
+  },
+  {
+    "id": "manual-tipness-shp046",
+    "name": "ティップネス武蔵藤沢店",
+    "prefecture": "埼玉県",
+    "address": "〒358-0012 埼玉県入間市東藤沢3-4-3 グリーンガーデン武蔵藤沢内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "入間市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP046/"
+  },
+  {
+    "id": "manual-tipness-shp047",
+    "name": "ティップネス宝塚店",
+    "prefecture": "兵庫県",
+    "address": "〒665-0845 兵庫県宝塚市栄町1-8-26",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "宝塚市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP047/"
+  },
+  {
+    "id": "manual-tipness-shp048",
+    "name": "ティップネス川口店",
+    "prefecture": "埼玉県",
+    "address": "〒332-0017 埼玉県川口市栄町3-7-1 CASTY 8F～10F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川口市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP048/"
+  },
+  {
+    "id": "manual-tipness-shp049",
+    "name": "ティップネス綾瀬店",
+    "prefecture": "東京都",
+    "address": "〒120-0005 東京都足立区綾瀬3-14-16 エディフィス山陽",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "足立区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP049/"
+  },
+  {
+    "id": "manual-tipness-shp051",
+    "name": "ティップネス三軒茶屋店",
+    "prefecture": "東京都",
+    "address": "〒154-0004 東京都世田谷区太子堂2-15-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP051/"
+  },
+  {
+    "id": "manual-tipness-shp052",
+    "name": "ティップネス二俣川店",
+    "prefecture": "神奈川県",
+    "address": "〒241-0821 神奈川県横浜市旭区二俣川1-6-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP052/"
+  },
+  {
+    "id": "manual-tipness-shp056",
+    "name": "ティップネス川崎店",
+    "prefecture": "神奈川県",
+    "address": "〒210-0006 神奈川県川崎市川崎区砂子2-11-17 日土地川崎ビル3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP056/"
+  },
+  {
+    "id": "manual-tipness-shp059",
+    "name": "ティップネス太田店",
+    "prefecture": "群馬県",
+    "address": "〒373-0807 群馬県太田市下小林町534-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "太田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP059/"
+  },
+  {
+    "id": "manual-tipness-shp060",
+    "name": "ティップネス南行徳店",
+    "prefecture": "千葉県",
+    "address": "〒272-0143 千葉県市川市相之川4-9-10",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "市川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP060/"
+  },
+  {
+    "id": "manual-tipness-shp062",
+    "name": "ティップネス明大前店",
+    "prefecture": "東京都",
+    "address": "〒156-0043 東京都世田谷区松原2-46-1 フレンテ明大前 3～5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP062/"
+  },
+  {
+    "id": "manual-tipness-shp063",
+    "name": "ティップネス氷川台店",
+    "prefecture": "東京都",
+    "address": "〒176-0002 東京都練馬区桜台3-34-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP063/"
+  },
+  {
+    "id": "manual-tipness-shp065",
+    "name": "ティップネス蘇我店",
+    "prefecture": "千葉県",
+    "address": "〒260-0835 千葉県千葉市中央区川崎町50-2 ハーバーシティ蘇我内 アリオ蘇我隣",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP065/"
+  },
+  {
+    "id": "manual-tipness-shp067",
+    "name": "ティップネス鴨居店",
+    "prefecture": "神奈川県",
+    "address": "〒224-0053 神奈川県横浜市都筑区池辺町4261-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP067/"
+  },
+  {
+    "id": "manual-tipness-shp069",
+    "name": "ティップネス練馬店",
+    "prefecture": "東京都",
+    "address": "〒176-0001 東京都練馬区練馬1-5-16",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP069/"
+  },
+  {
+    "id": "manual-tipness-shp070",
+    "name": "ティップネス横浜店",
+    "prefecture": "神奈川県",
+    "address": "〒220-0004 神奈川県横浜市西区北幸2-2-1 ハマボールビルディング3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP070/"
+  },
+  {
+    "id": "manual-tipness-shp074",
+    "name": "ティップネス宮前平店",
+    "prefecture": "神奈川県",
+    "address": "〒216-0006 神奈川県川崎市宮前区宮前平1-10-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP074/"
+  },
+  {
+    "id": "manual-tipness-shp075",
+    "name": "ティップネス藤枝店",
+    "prefecture": "静岡県",
+    "address": "〒426-0067 静岡県藤枝市前島1-2-1 オーレ藤枝8･9F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "藤枝市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP075/"
+  },
+  {
+    "id": "manual-tipness-shp076",
+    "name": "ティップネス瑞江店",
+    "prefecture": "東京都",
+    "address": "〒132-0011 東京都江戸川区瑞江4-44-20",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "江戸川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP076/"
+  },
+  {
+    "id": "manual-tipness-shp082",
+    "name": "ティップネス東新宿店",
+    "prefecture": "東京都",
+    "address": "〒160-0022 東京都新宿区新宿6-27-30 新宿イーストサイドスクエアB1F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "新宿区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP082/"
+  },
+  {
+    "id": "manual-tipness-shp084",
+    "name": "ティップネス鶴見店",
+    "prefecture": "神奈川県",
+    "address": "〒230-0051 神奈川県横浜市鶴見区鶴見中央1-3-4 鶴見えんため館4～7F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP084/"
+  },
+  {
+    "id": "manual-tipness-shp099",
+    "name": "ティップネスイオンモール川口店",
+    "prefecture": "埼玉県",
+    "address": "〒333-0834 埼玉県川口市安行領根岸3180 イオンモール川口 1,2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "川口市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり",
+      "オートロウリュ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP099/"
+  },
+  {
+    "id": "manual-tipness-shp100",
+    "name": "ティップネス駒沢大学店",
+    "prefecture": "東京都",
+    "address": "〒154-0011 東京都世田谷区上馬 3-15-16",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-26",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+    "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP100/"
+  }
 ];

@@ -12369,6 +12369,2011 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       "checkedAt": "2026-11-26"
     }
   ]
+},
+{
+  "ids": [
+    "manual-tipness-shp004"
+  ],
+  "name": "ティップネス吉祥寺店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒180-0003 東京都武蔵野市吉祥寺南町2-2-5",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 9:30 ～ 19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：ドライサウナ 女性：ドライサウナ Warmスタジオ、自動整体機、マッサージチェア、Warmブース、Coolingルーム",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR吉祥寺駅公園口（南口）を出て左へ徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP004/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp007"
+  ],
+  "name": "ティップネス中野店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+  "features": [
+    "水風呂あり",
+    "オートロウリュ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒164-0001 東京都中野区中野2-24-11 ナカノサウステラ オフィス棟3・4階",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週火曜 9:30 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉トゴールⓇの湯、水風呂、サウナはオートロウリュ付 女性：人工温泉トゴールⓇの湯、水風呂、サウナはオートロウリュ付 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR中野駅南口より徒歩3分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP007/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp008"
+  ],
+  "name": "ティップネス六本木店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+  "features": [
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒106-0032 東京都港区六本木6-6-9 ピラミデ B1F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 7:00〜23:00、土曜 9:30〜22:00、日曜 9:30〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ、ミストサウナ 女性：ドライサウナ、ミストサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "六本木駅3番出口より徒歩3分 ピラミデB1F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP008/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp013"
+  ],
+  "name": "ティップネス藤沢店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒251-0023 神奈川県藤沢市鵠沼花沢町13-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:30〜21:00、日曜 9:30〜19:00、祝日 9:30〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ、ゲルマニウム温浴(有料） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR藤沢駅南口徒歩3分 改札を出て右側 線路沿い",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP013/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp015"
+  ],
+  "name": "ティップネス京橋店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒534-0024 大阪府大阪市都島区東野田町2-1-38 ホテル京阪京橋 6F・7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 7:00〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 9:30〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ、タンニング 女性：お風呂、ドライサウナ、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "京阪京橋駅直結徒歩1分 ホテル京阪京橋6・7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP015/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp019"
+  ],
+  "name": "ティップネス天王寺店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒545-0053 大阪府大阪市阿倍野区松崎町1-2-8 都シティ大阪天王寺3F・4F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 10:00〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "都シティ大阪天王寺3F・4F 東改札出てすぐ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP019/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp023"
+  ],
+  "name": "ティップネス国領店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒182-0022 東京都調布市国領町2-10-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:45〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ ラケットボールコート2面、マッサージチェア、自動整体機 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国領駅より徒歩1分（旧甲州街道沿い）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP023/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp024"
+  ],
+  "name": "ティップネス石橋阪大前店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒563-0023 大阪府池田市井口堂3-1-5",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 9:00〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週金曜 9:00 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ ラケットボールコート1面、スカッシュコート1面、ゴルフレンジ 10打席（有料） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "石橋阪大前駅西口より徒歩4分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP024/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp025"
+  ],
+  "name": "ティップネス東武練馬店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒179-0081 東京都練馬区北町2-22-17",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:45〜22:00、日曜 9:45〜20:00、祝日 9:45〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週月曜 7:30 ～ 20:30",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ ゴルフレンジ無料（2打席） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東武練馬駅南口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP025/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp026"
+  ],
+  "name": "ティップネス宮崎台店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒216-0033 神奈川県川崎市宮前区宮崎2-10-10",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ、タンニング 女性：お風呂、水風呂、ドライサウナ スカッシュコート3面、ラケットコート1面、ゴルフレンジ 5打席（有料）、喫茶ランドリー 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線宮崎台駅 南口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP026/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp027"
+  ],
+  "name": "ティップネス船橋店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒273-0005 千葉県船橋市本町6-4-21",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:45〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "＜その他の設備＞ ラケットコート、自動整体機・マッサージ機・テレワークブース ＜男女で異なる設備＞ タンニングは男性のみとなります。 ＜一部施設の利用時間について＞ プール：プールエリアの利用は9時45分からとなります。 風呂・サウナ：土曜と日曜の利用は9時からとなります。 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "船橋駅北口より徒歩4分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP027/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp028"
+  ],
+  "name": "ティップネス大泉学園店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒178-0063 東京都練馬区東大泉1-27-14",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:45〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週金曜 9:45 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ ラケットボールコート、ゴルフレンジは4打席（有料）レッスンプロ常駐、パター無料 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "大泉学園駅北口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP028/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp029"
+  ],
+  "name": "ティップネス下井草店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒167-0022 東京都杉並区下井草2-40-17",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週月曜 9:00 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ ゴルフレンジ 4打席（有料）、ゲルマニウム温浴（有料）、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "下井草駅南口より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP029/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp030"
+  ],
+  "name": "ティップネス塚口店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒661-0012 兵庫県尼崎市南塚口町1-6-15",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 9:45〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週火曜 9:30 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ、タンニング 女性：お風呂、水風呂、ドライサウナ マッサージチェア、ホットルーム 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "阪急塚口駅南口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP030/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp031"
+  ],
+  "name": "ティップネス国分寺店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+  "features": [
+    "水風呂あり",
+    "オートロウリュ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒185-0012 東京都国分寺市本町4-12-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45〜23:00、土曜 9:45〜22:00、日曜 9:45〜20:00、祝日 9:45〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、サウナはオートロウリュ付 女性：お風呂、水風呂、サウナはオートロウリュ付 マッサージチェア、ゲルマニウム温浴（有料） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "国分寺駅北口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP031/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp032"
+  ],
+  "name": "ティップネス田無店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒188-0011 東京都西東京市田無町4-28-17",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:45\n〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:45\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ ゴルフレンジ:2打席（無料）、自動整体機（無料）、保温施設 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "田無駅北口より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP032/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp034"
+  ],
+  "name": "ティップネス喜多見店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒157-0067 東京都世田谷区喜多見9-25-8",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00〜23:00、土曜 8:00 〜21:00、日曜 8:00〜20:00、祝日 9:00\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ ゲルマニウム温浴（有料） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "喜多見駅北口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP034/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp035"
+  ],
+  "name": "ティップネス新百合ヶ丘店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒215-0021 神奈川県川崎市麻生区上麻生1-4-1 小田急新百合ヶ丘エルミロード7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00\n〜23:00、土曜 10:00\n〜22:00、日曜 10:00\n〜20:00、祝日 10:00\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ ゴルフレンジは打席数5打（有料）※シミュレーション・スウィングナビ全打席完備 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新百合ヶ丘駅南口より徒歩1分 小田急新百合ヶ丘エルミロード 7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP035/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp036"
+  ],
+  "name": "ティップネス木場店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+  "features": [],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒135-0042 東京都江東区木場1-5-10",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00\n〜23:00、土曜 9:00\n\n〜22:00、日曜 9:00\n〜20:00、祝日 9:00\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：冷水シャワー（サウナ前）、マッサージチェア6台（無料） 男性：冷水シャワー（サウナ前）、マッサージチェア4台（無料） 不明な点がございましたら店舗までお問い合わせください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "地下鉄東西線木場駅4b出口より徒歩3分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP036/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp037"
+  ],
+  "name": "ティップネス新小岩店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒124-0025 東京都葛飾区西新小岩1-2-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30\n〜23:00、土曜 9:30\n〜22:00、日曜 9:30\n〜20:00、祝日 9:30\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "新小岩駅北口より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP037/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp038"
+  ],
+  "name": "ティップネス上飯田店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒462-0866 愛知県名古屋市北区瑠璃光町4-7太陽サウンドオンビル3・4Ｆ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30\n〜23:00、土曜 9:30\n〜21:00、日曜 9:30\n\n〜19:00、祝日 9:30\n〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ、マッサージチェア 女性：お風呂、ドライサウナ、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "車で大曽根、黒川より約5分 太陽サウンドオンビル seria上",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP038/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp039"
+  ],
+  "name": "ティップネス武庫之荘店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒661-0033 兵庫県尼崎市南武庫之荘1-4-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30\n〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 9:30\n〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 9:30 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ、マッサージチェア、タンニング 女性：お風呂、水風呂、ドライサウナ、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "武庫之荘駅南口から徒歩3分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP039/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp041"
+  ],
+  "name": "ティップネス蒲田店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒144-0052 東京都大田区蒲田5-28-8 she‐Bopビル3～5F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30\n〜23:00、土曜 9:30\n\n〜22:00、日曜 9:30\n〜20:00、祝日 9:30\n〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ジムエリア休館：毎週水曜日9:30～19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR蒲田駅より徒歩7分 京急蒲田駅より徒歩7分 she-Bopビル3~5F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP041/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp042"
+  ],
+  "name": "ティップネス浜松葵東店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒433-8114 静岡県浜松市中央区葵東2-13-7",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜22:30、土曜 10:00〜19:00、日曜 10:00〜19:00、祝日 10:00〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 10:00 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "追分交差点すぐ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP042/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp045"
+  ],
+  "name": "ティップネス江南店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒483-8342 愛知県江南市松竹町上野205番地ヴィアモール江南内",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00\n〜23:00、土曜 10:00\n〜21:00、日曜 10:00\n〜19:00、祝日 10:00\n〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ、マッサージチェア 女性：お風呂、水風呂、ドライサウナ、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "ヴィアモール江南2F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP045/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp046"
+  ],
+  "name": "ティップネス武蔵藤沢店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒358-0012 埼玉県入間市東藤沢3-4-3 グリーンガーデン武蔵藤沢内",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00\n〜22:30、土曜 8:00〜21:30、日曜 8:00〜20:00、祝日 9:30\n〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 9:00 ～ 19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ、タンニング 女性：お風呂、水風呂、ドライサウナ マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "武蔵藤沢駅東口より徒歩2分 グリーンガーデン武蔵藤沢内",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP046/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp047"
+  ],
+  "name": "ティップネス宝塚店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒665-0845 兵庫県宝塚市栄町1-8-26",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 9:30〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "宝塚大劇場向かい",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP047/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp048"
+  ],
+  "name": "ティップネス川口店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒332-0017 埼玉県川口市栄町3-7-1 CASTY 8F～10F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:00\n〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:00\n\n〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ、タンニング 女性：お風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "川口駅東口より徒歩30秒 かわぐちキャスティ ８F~10F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP048/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp049"
+  ],
+  "name": "ティップネス綾瀬店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒120-0005 東京都足立区綾瀬3-14-16 エディフィス山陽",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜21:00、日曜 8:00〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、水風呂、ドライサウナ 女性：お風呂、水風呂、ドライサウナ マッサージチェア、採暖室はキッズのみ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "綾瀬駅東口より徒歩3分 エディフィス山陽",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP049/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp051"
+  ],
+  "name": "ティップネス三軒茶屋店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒154-0004 東京都世田谷区太子堂2-15-4",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 9:30 ～ 20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線三軒茶屋駅 北口A出口よりすぐ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP051/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp052"
+  ],
+  "name": "ティップネス二俣川店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒241-0821 神奈川県横浜市旭区二俣川1-6-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:30〜22:00、日曜 9:30〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 9:00 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "二俣川駅北口より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP052/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp056"
+  ],
+  "name": "ティップネス川崎店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒210-0006 神奈川県川崎市川崎区砂子2-11-17 日土地川崎ビル3F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:30〜22:00、日曜 9:30〜19:00、祝日 9:30〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週金曜日、年末年始、メンテナンス休館他",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ 女性：お風呂、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR川崎駅東口より徒歩6分 京急川崎駅より徒歩4分 川崎市営バス 川崎鶴見臨港バス 京急バス 停留所：市役所前より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP056/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp059"
+  ],
+  "name": "ティップネス太田店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒373-0807 群馬県太田市下小林町534-11",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜22:00、土曜 9:00〜21:00、日曜 9:00〜19:00、祝日 9:00〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 10:00 ～ 17:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：お風呂、ドライサウナ、タンニング、マッサージチェア 3台 女性：お風呂、ドライサウナ、マッサージチェア 3台 セルフジム利用時間専用シャワールームあり 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "イオンモール太田となり",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP059/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp060"
+  ],
+  "name": "ティップネス南行徳店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒272-0143 千葉県市川市相之川4-9-10",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:30〜22:00、日曜 9:30〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "南行徳駅北口より徒歩1分（千葉銀行裏）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP060/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp062"
+  ],
+  "name": "ティップネス明大前店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒156-0043 東京都世田谷区松原2-46-1 フレンテ明大前 3～5F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "明大前駅直結 フレンテ明大前",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP062/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp063"
+  ],
+  "name": "ティップネス氷川台店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒176-0002 東京都練馬区桜台3-34-2",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング、マッサージチェア 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、エステ、マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "氷川台駅2番出口より徒歩3分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP063/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp065"
+  ],
+  "name": "ティップネス蘇我店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒260-0835 千葉県千葉市中央区川崎町50-2 ハーバーシティ蘇我内 アリオ蘇我隣",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜22:00、土曜 10:00〜21:00、日曜 10:00〜18:00、祝日 10:00〜18:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日 年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 10:00 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "ハーバーシティ蘇我内アリオ蘇我となり",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP065/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp067"
+  ],
+  "name": "ティップネス鴨居店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+  "features": [
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒224-0053 神奈川県横浜市都筑区池辺町4261-5",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 9:00 ～18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ、エステ インドアテニススクール（２面） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "鴨居駅北口より徒歩7分 ららぽーと横浜すぐとなり",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP067/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp069"
+  ],
+  "name": "ティップネス練馬店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒176-0001 東京都練馬区練馬1-5-16",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 9:30 ～ 19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、水風呂、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、水風呂、ドライサウナ、ミストサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "練馬駅から徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP069/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp070"
+  ],
+  "name": "ティップネス横浜店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒220-0004 神奈川県横浜市西区北幸2-2-1 ハマボールビルディング3F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日  9:30〜23:00、土曜 8:00〜22:00、日曜  8:00〜20:00、祝日  9:00〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、水風呂、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、ミストサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "横浜駅西口より徒歩6分 ハマボールビルディング3F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP070/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp074"
+  ],
+  "name": "ティップネス宮前平店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒216-0006 神奈川県川崎市宮前区宮前平1-10-1",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜21:00、日曜 8:00〜19:00、祝日 8:30〜19:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 9:30 ～20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、シルキーバス（半露天風呂）、水風呂、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、座敷マッサージ風呂、シルキーバス、ドライサウナ、ミストサウナ マッサージチェア、溶岩浴（有料） 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線宮前平駅 南口より徒歩2分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP074/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp075"
+  ],
+  "name": "ティップネス藤枝店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒426-0067 静岡県藤枝市前島1-2-1 オーレ藤枝8･9F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜23:00、土曜 10:00〜21:00、日曜 10:00〜19:00、祝日 10:00〜19:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、ドライサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR藤枝駅南口オーレ藤枝 連絡通路よりエレベーターで8Fへ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP075/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp076"
+  ],
+  "name": "ティップネス瑞江店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒132-0011 東京都江戸川区瑞江4-44-20",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜23:00、土曜 8:00〜21:00、日曜 8:00〜20:00、祝日 10:00〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週火曜日 年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、タンニング 女性：人工温泉[準天然]光明石温泉Ⓡ、水風呂、ドライサウナ、ミストサウナ 採暖室はキッズのみ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "瑞江駅南口徒歩2分 ドン・キホーテ裏",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP076/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp082"
+  ],
+  "name": "ティップネス東新宿店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒160-0022 東京都新宿区新宿6-27-30 新宿イーストサイドスクエアB1F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 9:30〜22:00、日曜 9:30〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週木曜 9:30 ～ 18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、水風呂、ドライサウナ 女性：人工温泉[準天然]光明石温泉Ⓡ、炭酸泉、水風呂、ドライサウナ、ミストサウナ マッサージチェア 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東新宿駅A3出口直結 新宿イーストサイドスクエア B1F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP082/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp084"
+  ],
+  "name": "ティップネス鶴見店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+  "features": [
+    "水風呂あり",
+    "ドライサウナ",
+    "スチーム(ミスト)サウナ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒230-0051 神奈川県横浜市鶴見区鶴見中央1-3-4 鶴見えんため館4～7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週木曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉トゴールⓇの湯、水風呂、ドライサウナ 女性：人工温泉トゴールⓇの湯、水風呂、ドライサウナ、ミストサウナ 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "JR鶴見駅東口出てすぐ えんため館4F~7F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP084/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp099"
+  ],
+  "name": "ティップネスイオンモール川口店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+  "features": [
+    "水風呂あり",
+    "オートロウリュ"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒333-0834 埼玉県川口市安行領根岸3180 イオンモール川口 1,2F",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 10:00〜23:00、土曜 10:00〜22:00、日曜 10:00〜20:00、祝日 10:00〜20:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週月曜日、年末年始、メンテナンス休館",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "男性：人工温泉トゴールⓇの湯、水風呂、サウナはオートロウリュ付 女性：人工温泉トゴールⓇの湯、サウナはオートロウリュ付 ラウンジスペース充電可 不明な点がございましたら店舗までお問合せください。",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "埼玉高速鉄道鳩ヶ谷駅よりバス8分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP099/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
+},
+{
+  "ids": [
+    "manual-tipness-shp100"
+  ],
+  "name": "ティップネス駒沢大学店",
+  "officialUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+  "features": [
+    "水風呂あり"
+  ],
+  "facts": [
+    {
+      "label": "住所",
+      "value": "〒154-0011 東京都世田谷区上馬 3-15-16",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "営業時間",
+      "value": "平日 9:30〜23:00、土曜 8:00〜22:00、日曜 8:00〜20:00、祝日 9:30〜20:00（ジムエリアは24時間）",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "休館日",
+      "value": "毎週水曜日、年末年始、メンテナンス休館 ※ジムエリア休館：毎週水曜 10:00～18:00",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "設備",
+      "value": "設備内容：トレーニングジム、スタジオ、シャワー、お風呂、水風呂、サウナ、リラクゼーション、タンニング、ラウンジ",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "checkedAt": "2026-11-26"
+    },
+    {
+      "label": "アクセス",
+      "value": "東急田園都市線駒沢大学駅 東口より徒歩1分",
+      "sourceUrl": "https://tip.tipness.co.jp/shop_info/SHP100/",
+      "checkedAt": "2026-11-26"
+    }
+  ]
 }
 ];
 
