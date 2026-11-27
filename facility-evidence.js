@@ -42784,6 +42784,58 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       {"label": "料金", "value": "大人450円／子ども（12歳以下）150円／未就学児無料", "sourceUrl": "https://www.yamagatakanko.com/", "checkedAt": "2026-11-27"},
       {"label": "設備", "value": "温泉とサウナ。無料で利用できる50畳の大広間、無料Wi-Fi", "sourceUrl": "https://www.yamagatakanko.com/", "checkedAt": "2026-11-27"},
     ],
+  },
+  {
+    ids: ["si-7168"], name: "TAOYA日光霧降", officialUrl: "https://www.ooedoonsen.jp/taoya-nikkokirifuri/onsen/",
+    features: ["温泉付き", "水風呂あり"],
+    facts: [
+      {"label": "営業時間", "value": "入浴時間：大浴場・露天風呂 15:00～24:00／5:00～10:00、サウナ 15:00～24:00／7:00～10:00", "sourceUrl": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/onsen/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "標高約1,000mの露天風呂(インフィニティ温泉)と大浴場があり、大浴場ではサウナも楽しめる。水風呂も備える", "sourceUrl": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/onsen/", "checkedAt": "2026-11-27"},
+      {"label": "利用条件", "value": "入れ墨・タトゥーのある方は、当館指定のカバーシール(有料)で完全に覆える場合に限り大浴場を利用できる", "sourceUrl": "https://www.ooedoonsen.jp/taoya-nikkokirifuri/onsen/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["si-3822"], name: "メルキュール佐賀唐津リゾート", officialUrl: "https://mercure-sagakaratsu-resort.jp/spa/",
+    features: [],
+    facts: [
+      {"label": "営業時間", "value": "大浴場 6:00～10:00(最終入場9:45)/15:00～23:00(最終入場22:45)", "sourceUrl": "https://mercure-sagakaratsu-resort.jp/spa/", "checkedAt": "2026-11-27"},
+      {"label": "料金", "value": "宿泊者は無料", "sourceUrl": "https://mercure-sagakaratsu-resort.jp/spa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "2階に大浴場とサウナ、リラクゼーションラウンジを備える。大浴場は沸かし湯", "sourceUrl": "https://mercure-sagakaratsu-resort.jp/spa/", "checkedAt": "2026-11-27"},
+      {"label": "利用条件", "value": "入れ墨・タトゥーは8cm×10cmのカバーシール2枚で隠せる場合のみ入浴できる(カバーシールはフロントで販売)", "sourceUrl": "https://mercure-sagakaratsu-resort.jp/spa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["si-3972"], name: "大江戸温泉物語 Premium 西海橋", officialUrl: "https://www.ooedoonsen.jp/saikaibashi/onsen/",
+    features: ["温泉付き", "水風呂あり"],
+    facts: [
+      {"label": "営業時間", "value": "入浴時間：大浴場・露天風呂 15:00～24:00／5:00～10:00、サウナ 15:00～24:00／7:00～10:00", "sourceUrl": "https://www.ooedoonsen.jp/saikaibashi/onsen/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女大浴場それぞれにドライサウナがあり、女性大浴場には岩盤浴もある。水風呂は男性のみ。大村湾を望むインフィニティ温泉(露天風呂)", "sourceUrl": "https://www.ooedoonsen.jp/saikaibashi/onsen/", "checkedAt": "2026-11-27"},
+      {"label": "利用条件", "value": "入れ墨・タトゥーのある方は、当館指定のカバーシール(有料)で完全に覆える場合に限り大浴場を利用できる", "sourceUrl": "https://www.ooedoonsen.jp/saikaibashi/onsen/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-megalos-tabata"], name: "メガロス田端", officialUrl: "https://www.megalos.co.jp/tabata/",
+    features: ["ドライサウナ", "ミストサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒114-0013 東京都北区東田端1-17-32(1Fマルエツ/2～4Fメガロス田端)", "sourceUrl": "https://www.megalos.co.jp/tabata/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業(通常営業時間：平日9:30-23:20、土曜9:30-21:20、日祝9:30-20:20)。お風呂の利用時間は平日9:30～23:20/土曜9:30～21:20/日祝9:30～20:20", "sourceUrl": "https://www.megalos.co.jp/tabata/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "毎週金曜日、夏期、年末年始", "sourceUrl": "https://www.megalos.co.jp/tabata/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女ともドライサウナを完備(浴場エリア)。プールエリアにミストサウナ", "sourceUrl": "https://www.megalos.co.jp/tabata/guide/", "checkedAt": "2026-11-27"},
+      {"label": "アクセス", "value": "JR山手線・京浜東北線 田端駅から徒歩4分、西日暮里駅から徒歩9分", "sourceUrl": "https://www.megalos.co.jp/tabata/", "checkedAt": "2026-11-27"},
+      {"label": "電話", "value": "03-3893-9900", "sourceUrl": "https://www.megalos.co.jp/tabata/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-megalos-tabata-reflet"], name: "メガロスルフレ田端", officialUrl: "https://www.megalos.co.jp/tabata_reflet/",
+    features: ["ドライサウナ", "ミストサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒114-0013 東京都北区東田端1-17-32(1Fマルエツ/2～4Fメガロス田端)", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日9:30-23:20、土曜9:30-21:20、日祝9:30-20:20", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "毎週金曜日、夏期、年末年始", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ロッカールームやパウダールーム、お風呂・サウナを完備。設備一覧にミストサウナ/ドライサウナ", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+      {"label": "料金", "value": "月会費：ルフレフリー13,948円(税込)、ルフレ15,180円(税込)、ルフレ4 11,880円(税込)", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+      {"label": "アクセス", "value": "JR山手線・京浜東北線 田端駅から徒歩4分、西日暮里駅から徒歩9分", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
+    ],
   }
 ];
 

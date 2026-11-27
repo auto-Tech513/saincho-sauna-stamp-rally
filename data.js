@@ -58520,7 +58520,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "si-7168",
-    "name": "TAOYA 日光霧降",
+    "name": "TAOYA日光霧降",
     "prefecture": "栃木県",
     "city": "日光市 宿泊者限定",
     "trait": "private",
@@ -64344,7 +64344,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "si-3822",
-    "name": "メルキュール佐賀唐津リゾート(旧HOTEL & RESORTS SAGA KARATSU)",
+    "name": "メルキュール佐賀唐津リゾート",
     "prefecture": "佐賀県",
     "city": "唐津市 宿泊者限定",
     "trait": "private",
@@ -81948,5 +81948,41 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.central.co.jp/club/yokote/",
     "officialUrl": "https://www.central.co.jp/club/yokote/"
+  },
+  {
+    "id": "manual-megalos-tabata",
+    "name": "メガロス田端",
+    "prefecture": "東京都",
+    "address": "〒114-0013 東京都北区東田端1-17-32 1Fマルエツ／2～4Fメガロス田端",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "北区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "ミストサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/tabata/",
+    "officialUrl": "https://www.megalos.co.jp/tabata/"
+  },
+  {
+    "id": "manual-megalos-tabata-reflet",
+    "name": "メガロスルフレ田端",
+    "prefecture": "東京都",
+    "address": "〒114-0013 東京都北区東田端1-17-32 1Fマルエツ／2～4Fメガロス田端",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "北区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "ミストサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/",
+    "officialUrl": "https://www.megalos.co.jp/tabata_reflet/"
   }
 ];
