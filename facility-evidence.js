@@ -43427,6 +43427,1566 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       {"label": "定休日", "value": "金曜日", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/", "checkedAt": "2026-11-27"},
       {"label": "設備", "value": "平湯・寝湯・マッサージバス・水風呂のスパゾーンとタワーサウナ", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/pc/info/", "checkedAt": "2026-11-27"},
     ],
+  },
+  {
+    ids: ["manual-axtos-akashiookura"], name: "アクトス 明石大蔵リゾート店", officialUrl: "https://sc1.axtos.com/shop/akashiookura/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒673-0879 兵庫県明石市大蔵海岸通1-2-1", "sourceUrl": "https://sc1.axtos.com/shop/akashiookura/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00～23:00／［土］　10:00～23:00／［日］　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/akashiookura/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/akashiookura/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/akashiookura/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-akashiuozumi"], name: "アクトス 明石魚住店", officialUrl: "https://sc1.axtos.com/shop/akashiuozumi/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒674-0074 兵庫県明石市魚住町清水西宿1923-2", "sourceUrl": "https://sc1.axtos.com/shop/akashiuozumi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［月-土］10:00-23:00／［日］ 　10:00-18:00", "sourceUrl": "https://sc1.axtos.com/shop/akashiuozumi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/akashiuozumi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/akashiuozumi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-amagasaki"], name: "Willアマドゥ店", officialUrl: "https://sc1.axtos.com/shop/amagasaki/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒660-0083 兵庫県尼崎市道意町7-1-1", "sourceUrl": "https://sc1.axtos.com/shop/amagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【平日】　06:00～24：00／【木】　06:00～24:00／【土】　06:00～24:00／【日/祝祭日】 06:00～24：00", "sourceUrl": "https://sc1.axtos.com/shop/amagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お盆・年末年始", "sourceUrl": "https://sc1.axtos.com/shop/amagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/amagasaki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-ashiya"], name: "アクトス 芦屋リゾート店", officialUrl: "https://sc1.axtos.com/shop/ashiya/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒659-0035 兵庫県芦屋市海洋町10-3", "sourceUrl": "https://sc1.axtos.com/shop/ashiya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日・土］10:00～23:00／［日］　　　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/ashiya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/ashiya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/ashiya/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-fujiwaradai"], name: "アクトス 藤原台店", officialUrl: "https://sc1.axtos.com/shop/fujiwaradai/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒651-1302 兵庫県神戸市北区藤原台中町1-4-1", "sourceUrl": "https://sc1.axtos.com/shop/fujiwaradai/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-23:00／［土］　10:00-23:00／［日］　10:00-18:00", "sourceUrl": "https://sc1.axtos.com/shop/fujiwaradai/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/fujiwaradai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/fujiwaradai/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-hakozaki"], name: "Will箱崎店", officialUrl: "https://sc1.axtos.com/shop/hakozaki/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒812-0053 福岡県福岡市東区箱崎4-7-55", "sourceUrl": "https://sc1.axtos.com/shop/hakozaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　09:00～23:00／［土］　　09:00～23:00／［日／祝］09:00～23:00", "sourceUrl": "https://sc1.axtos.com/shop/hakozaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お盆・年末年始", "sourceUrl": "https://sc1.axtos.com/shop/hakozaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/hakozaki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-hamamatsu"], name: "アクトス 浜松店", officialUrl: "https://sc1.axtos.com/shop/hamamatsu/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒432-8048 静岡県浜松市中央区森田町350", "sourceUrl": "https://sc1.axtos.com/shop/hamamatsu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-23:00／［土］　10:00-23:00／［日］　10:00-18:00／［祝日］10:00-23:00", "sourceUrl": "https://sc1.axtos.com/shop/hamamatsu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/hamamatsu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/hamamatsu/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-imabari"], name: "アクトス 今治店", officialUrl: "https://sc1.axtos.com/shop/imabari/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒794-0813 愛媛県今治市衣干町3-1-6", "sourceUrl": "https://sc1.axtos.com/shop/imabari/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　08:00～23:00／［土］　　08:00～23:00／［日／祝］08:00～23:00", "sourceUrl": "https://sc1.axtos.com/shop/imabari/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お盆・年末年始", "sourceUrl": "https://sc1.axtos.com/shop/imabari/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/imabari/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-ise"], name: "アクトス 伊勢店", officialUrl: "https://sc1.axtos.com/shop/ise/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒516-0008 三重県伊勢市船江1-10-10", "sourceUrl": "https://sc1.axtos.com/shop/ise/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-22:30／［土］　10:00-21:30／［日］　10:00-18:00", "sourceUrl": "https://sc1.axtos.com/shop/ise/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/ise/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/ise/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-jyoetsu"], name: "アクトス 上越店", officialUrl: "https://sc1.axtos.com/shop/jyoetsu/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒943-0805 新潟県上越市木田2-467-1", "sourceUrl": "https://sc1.axtos.com/shop/jyoetsu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-22:30／［土］　10:00-21:30／［日］　10:00-19:00／［祝日］10:00-19:00", "sourceUrl": "https://sc1.axtos.com/shop/jyoetsu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/jyoetsu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/jyoetsu/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-kakogawa"], name: "アクトス 加古川店", officialUrl: "https://sc1.axtos.com/shop/kakogawa/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒675-0016 兵庫県加古川市野口町長砂811", "sourceUrl": "https://sc1.axtos.com/shop/kakogawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-23:00／［土］　10:00-22:00／［日］　10:00-19:00／［祝日］10:00-19:00", "sourceUrl": "https://sc1.axtos.com/shop/kakogawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/kakogawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/kakogawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-kanazawa"], name: "Will金沢大桑店", officialUrl: "https://sc1.axtos.com/shop/kanazawa/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒921-8045 石川県金沢市大桑1-177", "sourceUrl": "https://sc1.axtos.com/shop/kanazawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "[平日］　06:00～24:00／[木］　06:00～24:00／[土］　06:00～24:00／[日] 　06:00～24:00", "sourceUrl": "https://sc1.axtos.com/shop/kanazawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お盆・年末年始", "sourceUrl": "https://sc1.axtos.com/shop/kanazawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/kanazawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-kariya"], name: "アクトス 刈谷店", officialUrl: "https://sc1.axtos.com/shop/kariya/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒448-0858 愛知県刈谷市若松町2-101", "sourceUrl": "https://sc1.axtos.com/shop/kariya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　10:00～22:30／［土］　　10:00～21:00／［日・祝］10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/kariya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/kariya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/kariya/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-kurashiki"], name: "アクトス 倉敷店", officialUrl: "https://sc1.axtos.com/shop/kurashiki/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒712-8011 岡山県倉敷市連島町連島37-64", "sourceUrl": "https://sc1.axtos.com/shop/kurashiki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　08:00～23:00／［土］　　08:00～23:00／［日／祝］08:00～23:00", "sourceUrl": "https://sc1.axtos.com/shop/kurashiki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お盆・年末年始", "sourceUrl": "https://sc1.axtos.com/shop/kurashiki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/kurashiki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-morioka"], name: "アクトス 盛岡店", officialUrl: "https://sc1.axtos.com/shop/morioka/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒020-0864 岩手県盛岡市西仙北1-38-10", "sourceUrl": "https://sc1.axtos.com/shop/morioka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00～23:00／［土］　10:00～22:00／［日］　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/morioka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/morioka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/morioka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-nabari"], name: "アクトス 名張店", officialUrl: "https://sc1.axtos.com/shop/nabari/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒518-0775 三重県名張市希央台5-19", "sourceUrl": "https://sc1.axtos.com/shop/nabari/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　　10:00-23:00／［土］　　　10:00-21:00／［日・祝］　10:00-18:00", "sourceUrl": "https://sc1.axtos.com/shop/nabari/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/nabari/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/nabari/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-rinku"], name: "アクトス りんくう店", officialUrl: "https://sc1.axtos.com/shop/rinku/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒479-0882 愛知県常滑市りんくう町3-2-1", "sourceUrl": "https://sc1.axtos.com/shop/rinku/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［月～金］10:00～22:30／［土・祝］10:00～21:00／［日］　　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/rinku/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/rinku/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "クアプール・サウナ等のリラクゼーション設備", "sourceUrl": "https://sc1.axtos.com/shop/rinku/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-senboku"], name: "アクトス 泉北原山台店", officialUrl: "https://sc1.axtos.com/shop/senboku/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒590-0132 大阪府堺市南区原山台5-12-2", "sourceUrl": "https://sc1.axtos.com/shop/senboku/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］　10:00～23:00／［土］　　10:00～21:00／［日］　　10:00～18:00／［祝日］　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/senboku/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/senboku/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/senboku/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-suzuran"], name: "アクトス 鈴蘭台店", officialUrl: "https://sc1.axtos.com/shop/suzuran/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒651-1147 兵庫県神戸市北区松宮台2-27-8", "sourceUrl": "https://sc1.axtos.com/shop/suzuran/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00～23:00／［土］　10:00～23:00／［日］　10:00～18:00", "sourceUrl": "https://sc1.axtos.com/shop/suzuran/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/suzuran/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/suzuran/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-toyohashi"], name: "アクトス 豊橋店", officialUrl: "https://sc1.axtos.com/shop/toyohashi/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒440-0851 愛知県豊橋市前田南町2-17", "sourceUrl": "https://sc1.axtos.com/shop/toyohashi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00～23:00／［土］　10:00～23:00／［日］　10:00～18:00／［祝日］10:00～23:00 ※日曜日は18:00まで", "sourceUrl": "https://sc1.axtos.com/shop/toyohashi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/toyohashi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/toyohashi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-axtos-yagoto"], name: "アクトス 八事店", officialUrl: "https://sc1.axtos.com/shop/yagoto/",
+    features: ["遠赤外線サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒467-0033 愛知県名古屋市瑞穂区弥富町円山5-1", "sourceUrl": "https://sc1.axtos.com/shop/yagoto/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "［平日］10:00-23:00／［土］　10:00-23:00／［日］　10:00-18:00／［祝日］10:00-23:00", "sourceUrl": "https://sc1.axtos.com/shop/yagoto/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（他、お盆・年末年始）", "sourceUrl": "https://sc1.axtos.com/shop/yagoto/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・遠赤外線サウナを完備", "sourceUrl": "https://sc1.axtos.com/shop/yagoto/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-fujiidera"], name: "フィットネスクラブ コ・ス・パ 藤井寺", officialUrl: "https://www.cospa-wellness.co.jp/cospa/fujiidera/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒583-0027 大阪府藤井寺市岡2-8-41ソリヤビル4F", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fujiidera/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～20:00／日祝日 10:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fujiidera/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fujiidera/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fujiidera/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-fukai"], name: "フィットネスクラブ コ・ス・パ 深井24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/fukai/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒599-8273 大阪府堺市中区深井清水町3975", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fukai/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fukai/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fukai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/fukai/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-kongo"], name: "フィットネスクラブ コ・ス・パ 狭山金剛24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/kongo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒589-0011 大阪府大阪狭山市半田1丁目1186-3", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/kongo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/kongo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日（10:00～22:00）・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/kongo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/kongo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-krp"], name: "フィットネスクラブ コ・ス・パ 京都リサーチパーク24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/krp/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒600-8815 京都府京都市下京区中堂寺粟田町94　アーバネックス丹波口ビル6F", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/krp/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/krp/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日(10:00～22:00)・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/krp/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/krp/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-matsubara"], name: "フィットネスクラブ コ・ス・パ 草加松原24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/matsubara/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒340-0041 埼玉県草加市松原1-2-15", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsubara/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsubara/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsubara/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsubara/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-matsuiyamate"], name: "フィットネスクラブ コ・ス・パ 松井山手24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/matsuiyamate/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒610-0356 京都府京田辺市山手中央2-3", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsuiyamate/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土曜日 10:00～18:00／日祝日 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsuiyamate/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsuiyamate/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/matsuiyamate/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-minoh"], name: "フィットネスクラブ コ・ス・パ 箕面萱野24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/minoh/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒562-0013 大阪府箕面市坊島4-1-24　みのおキューズモールWEST2", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/minoh/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/minoh/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/minoh/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/minoh/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-momoyamarokujizo"], name: "フィットネスクラブ コ・ス・パ 桃山六地蔵24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/momoyamarokujizo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒612-8002 京都府京都市伏見区桃山町山ノ下24-8", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/momoyamarokujizo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:30～22:30", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/momoyamarokujizo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/momoyamarokujizo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/momoyamarokujizo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-nagaokakyo"], name: "フィットネスクラブ コ・ス・パ 長岡京", officialUrl: "https://www.cospa-wellness.co.jp/cospa/nagaokakyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒617-0833 京都府長岡京市神足2丁目2-1　バンビオ2番館6F", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nagaokakyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:00～23:00／土曜日 9:00～20:00／日祝日 9:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nagaokakyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nagaokakyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nagaokakyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-nijo"], name: "フィットネスクラブ コ・ス・パ 二条24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/nijo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒604-8416 京都府京都市中京区西ノ京星池町262番地", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nijo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nijo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nijo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/nijo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-otori"], name: "フィットネスクラブ コ・ス・パ 鳳", officialUrl: "https://www.cospa-wellness.co.jp/cospa/otori/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒593-8325 大阪府堺市西区鳳南町3丁目199-21", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/otori/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 8:00～23:00／土曜日 8:00～19:00／日祝日 8:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/otori/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/otori/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/otori/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-sakai"], name: "フィットネスクラブ コ・ス・パ 堺", officialUrl: "https://www.cospa-wellness.co.jp/cospa/sakai/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒590-0014 大阪府堺市堺区田出井町1-1-400", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/sakai/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～20:00／日祝日 10:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/sakai/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/sakai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/sakai/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-seishinchuo"], name: "フィットネスクラブ コ・ス・パ 西神中央24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/seishinchuo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒651-2273 兵庫県神戸市西区糀台５丁目5-2、2-401", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/seishinchuo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/seishinchuo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/seishinchuo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/seishinchuo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-suita"], name: "フィットネスクラブ コ・ス・パ 吹田", officialUrl: "https://www.cospa-wellness.co.jp/cospa/suita/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒564-0082 大阪府吹田市片山町1-1-301メロード吹田1番館 2F・3F", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suita/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 9:00～19:00／日祝日 9:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suita/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週月曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suita/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suita/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-suminodo"], name: "フィットネスクラブ コ・ス・パ 住道", officialUrl: "https://www.cospa-wellness.co.jp/cospa/suminodo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒574-0046 大阪府大東市赤井1-4-1ポップタウン住道オペラパーク4階", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suminodo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:00～23:00／土曜日 9:00～20:00／日祝日 10:00～19:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suminodo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suminodo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/suminodo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-toyonakashoji"], name: "フィットネスクラブ コ・ス・パ 豊中少路24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/toyonakashoji/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒560-0004 大阪府豊中市少路1丁目9-20", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/toyonakashoji/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/toyonakashoji/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/toyonakashoji/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/toyonakashoji/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-tsurumiryokuchi"], name: "フィットネスクラブ コ・ス・パ 鶴見緑地24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/tsurumiryokuchi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒538-0053 大阪府大阪市鶴見区鶴見5-10-30", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/tsurumiryokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/tsurumiryokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日(10:00～22:00)・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/tsurumiryokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/tsurumiryokuchi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-cospa-yao"], name: "フィットネスクラブ コ・ス・パ 八尾24", officialUrl: "https://www.cospa-wellness.co.jp/cospa/yao/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒581-0803 大阪府八尾市光町1丁目37番", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/yao/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～22:00／土日祝 10:00～18:00", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/yao/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日・夏季・年末年始・施設点検日", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/yao/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナ・ジャグジーを完備", "sourceUrl": "https://www.cospa-wellness.co.jp/cospa/yao/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-aeon-mall-atsuta-annex"], name: "ゴールドジム イオンモール熱田アネックス", officialUrl: "https://www.goldsgym.jp/shop/aeon-mall-atsuta-annex/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒456-0023 愛知県名古屋市熱田区六野1-208-4イオンモール熱田アネックス 1F", "sourceUrl": "https://www.goldsgym.jp/shop/aeon-mall-atsuta-annex/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜は20:00クローズ／月曜は7:00オープン／第3月曜日は23:00オープン／休館日はショップのみ13:00-19:00営業", "sourceUrl": "https://www.goldsgym.jp/shop/aeon-mall-atsuta-annex/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/aeon-mall-atsuta-annex/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/aeon-mall-atsuta-annex/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-aeonmall-miyazaki"], name: "ゴールドジム イオンモール宮崎", officialUrl: "https://www.goldsgym.jp/shop/aeonmall-miyazaki/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒880-0834 宮崎県宮崎市新別府町江口862-1", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-miyazaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:30-23:00／日 9:00-21:00／祝日 7:00-22:00", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-miyazaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-miyazaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・ドライサウナ・ミストスチームサウナ・水風呂を完備", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-miyazaki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-aeonmall-toki"], name: "ゴールドジム イオンモール土岐", officialUrl: "https://www.goldsgym.jp/shop/aeonmall-toki/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒509-5122 岐阜県土岐市土岐津町土岐口1372-1イオンモール土岐内", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-toki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 7:00-23:00／日 9:00-20:00／祝日（平日・土）7:00-22:30／祝日（日）9:00-20:00／祝日が日曜日の場合は日曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-toki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-toki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/aeonmall-toki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-atsugi-kanagawa"], name: "ゴールドジム 厚木神奈川", officialUrl: "https://www.goldsgym.jp/shop/atsugi-kanagawa/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒243-0018 神奈川県厚木市中町2-4-13本厚木駅前ビル 5・6Ｆ", "sourceUrl": "https://www.goldsgym.jp/shop/atsugi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜21:00-翌月曜7:00は営業時間外／第3月曜日は23:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/atsugi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/atsugi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/atsugi-kanagawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-beppu-suginoi-hotel"], name: "ゴールドジム 別府杉乃井", officialUrl: "https://www.goldsgym.jp/shop/beppu-suginoi-hotel/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒874-0822 大分県別府市観海寺1杉の井ホテルスギノイパレス 2F", "sourceUrl": "https://www.goldsgym.jp/shop/beppu-suginoi-hotel/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 9:00-23:00／土・日・祝 9:00-22:00", "sourceUrl": "https://www.goldsgym.jp/shop/beppu-suginoi-hotel/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "年中無休", "sourceUrl": "https://www.goldsgym.jp/shop/beppu-suginoi-hotel/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴槽・サウナ（杉乃井ホテルの付帯設備・棚湯／アクアガーデン）を無料で利用可能", "sourceUrl": "https://www.goldsgym.jp/shop/beppu-suginoi-hotel/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-chiba-newtown"], name: "ゴールドジム 千葉ニュータウン", officialUrl: "https://www.goldsgym.jp/shop/chiba-newtown/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒270-1340 千葉県印西市中央南1-8千葉ニュータウン駅前センタービル 3階", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:00", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-chiba-newtown-joyful-athletic-club-2"], name: "千葉NTジョイフルアスレティッククラブ", officialUrl: "https://www.goldsgym.jp/shop/chiba-newtown-joyful-athletic-club-2/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒270-1331 千葉県印西市牧の原2-4", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown-joyful-athletic-club-2/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00-23:00／土 7:00-22:00／日・祝 7:00-20:00／スポーツ施設は閉館30分前まで利用可／10:00までのスポーツ施設はトレーニングジムのみ／シャワー8:00-利用可・温浴施設10:00-利用可", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown-joyful-athletic-club-2/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown-joyful-athletic-club-2/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴風呂・水風呂・ドライサウナ、プールエリアにミストサウナ", "sourceUrl": "https://www.goldsgym.jp/shop/chiba-newtown-joyful-athletic-club-2/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-chikushino-fukuoka"], name: "ゴールドジム 筑紫野福岡", officialUrl: "https://www.goldsgym.jp/shop/chikushino-fukuoka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒818-0034 福岡県筑紫野市美しが丘南1-12-1", "sourceUrl": "https://www.goldsgym.jp/shop/chikushino-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00-23:00／土 10:00-21:00／日・祝 10:00-20:00／ジムエリアの利用は平日22:30まで／土20:30まで／日・祝19:30まで", "sourceUrl": "https://www.goldsgym.jp/shop/chikushino-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "特定日休館なし", "sourceUrl": "https://www.goldsgym.jp/shop/chikushino-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・岩盤浴を完備", "sourceUrl": "https://www.goldsgym.jp/shop/chikushino-fukuoka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-east-tokyo"], name: "ゴールドジム イースト東京", officialUrl: "https://www.goldsgym.jp/shop/east-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒136-0076 東京都江東区南砂3-3-6", "sourceUrl": "https://www.goldsgym.jp/shop/east-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:30／日曜日が祝日の場合は祝日営業時間を適用しない", "sourceUrl": "https://www.goldsgym.jp/shop/east-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/east-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/east-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-fuchu-tokyo"], name: "ゴールドジム 府中東京", officialUrl: "https://www.goldsgym.jp/shop/fuchu-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒183-0022 東京都府中市宮西町1-4-1 府中トーセイビルⅠ 4F", "sourceUrl": "https://www.goldsgym.jp/shop/fuchu-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜20:00-月曜7:00は営業時間外／第2月曜日は23:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/fuchu-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/fuchu-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/fuchu-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-ginza-tokyo"], name: "ゴールドジム 銀座東京", officialUrl: "https://www.goldsgym.jp/shop/ginza-tokyo/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒104-0061 東京都中央区銀座1-2-1東京都高速道路紺屋ビル 2F", "sourceUrl": "https://www.goldsgym.jp/shop/ginza-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜日20:00クローズ／翌月曜日7:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/ginza-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/ginza-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナ・サウナ・岩盤浴・ジェットバスを完備", "sourceUrl": "https://www.goldsgym.jp/shop/ginza-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-gotenba-shizuoka"], name: "ゴールドジム 御殿場静岡", officialUrl: "https://www.goldsgym.jp/shop/gotenba-shizuoka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒412-0042 静岡県御殿場市萩原89-1", "sourceUrl": "https://www.goldsgym.jp/shop/gotenba-shizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜21:00-月曜7:00は営業時間外", "sourceUrl": "https://www.goldsgym.jp/shop/gotenba-shizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/gotenba-shizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナルーム", "sourceUrl": "https://www.goldsgym.jp/shop/gotenba-shizuoka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-gyotoku-chiba-fitness-center"], name: "ゴールドジム 行徳千葉フィットネスセンター", officialUrl: "https://www.goldsgym.jp/shop/gyotoku-chiba-fitness-center/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒272-0133 千葉県市川市行徳駅前2-3-1ポニービル 2F", "sourceUrl": "https://www.goldsgym.jp/shop/gyotoku-chiba-fitness-center/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜日20:00-翌月曜日7:00はクローズ／第3月曜日は23:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/gyotoku-chiba-fitness-center/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/gyotoku-chiba-fitness-center/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/gyotoku-chiba-fitness-center/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hakata-riverain"], name: "ゴールドジム 博多リバレイン", officialUrl: "https://www.goldsgym.jp/shop/hakata-riverain/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒812-0027 福岡県福岡市博多区下川端町3-1博多リバレインモール B1", "sourceUrl": "https://www.goldsgym.jp/shop/hakata-riverain/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜20:00-翌月曜7:00はクローズ／第2月曜日が祝日の場合は7:00オープン／サウナは0:00-7:30および14:30-16:00は停止。", "sourceUrl": "https://www.goldsgym.jp/shop/hakata-riverain/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/hakata-riverain/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hakata-riverain/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hakodate-hokkaido"], name: "ゴールドジム 函館北海道", officialUrl: "https://www.goldsgym.jp/shop/hakodate-hokkaido/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒040-0063 北海道函館市若松町12-8ハコビバ 2Ｆ", "sourceUrl": "https://www.goldsgym.jp/shop/hakodate-hokkaido/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00-23:00／土 10:00-22:00／日・祝 10:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/hakodate-hokkaido/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2火曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/hakodate-hokkaido/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hakodate-hokkaido/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hamamatsu-sizuoka"], name: "ゴールドジム 浜松静岡", officialUrl: "https://www.goldsgym.jp/shop/hamamatsu-sizuoka/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒430-0933 静岡県浜松市中央区鍛冶町100-1ZAZACITY浜松中央館 2F", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsu-sizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／毎週日曜21:00-月曜7:00はクローズ／第3月曜日は休館、翌火曜7:00オープン（祝日の場合は月曜7:00オープン）", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsu-sizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsu-sizuoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsu-sizuoka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hamamatsucho-tokyo"], name: "ゴールドジム 浜松町東京", officialUrl: "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒105-0022 東京都港区海岸1－2－3汐留芝離宮ビルディング 2階", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 7:00-20:00／祝日 7:00-22:30／１Fジム営業時間　月-土 7:00-23:00／日 7:00-19:30／祝日 7:00-22:00／特記事項なし", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hamamatsucho-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-harajuku-annex-tokyo"], name: "ゴールドジム 原宿ANNEX", officialUrl: "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒150-0001 東京都渋谷区神宮前1-5-8神宮前タワービルディング B1F（フロントは1F）", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 6:45-23:30／日 7:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-annex-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-harajuku-tokyo"], name: "ゴールドジム 原宿東京", officialUrl: "https://www.goldsgym.jp/shop/harajuku-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒150-0001 東京都渋谷区神宮前6-31-17V28 4F・3F・B2F", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／B2フロア：6:00-23:30", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/harajuku-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-higashi-nakano-tokyo"], name: "ゴールドジム 東中野東京", officialUrl: "https://www.goldsgym.jp/shop/higashi-nakano-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒164-0003 東京都中野区東中野5-1-1ユニゾンモール 2F", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-nakano-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土・祝 7:00-23:30／日 9:00-20:00", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-nakano-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-nakano-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-nakano-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-higashi-urawa-saitama"], name: "ゴールドジム 東浦和さいたま", officialUrl: "https://www.goldsgym.jp/shop/higashi-urawa-saitama%EF%BC%88fc%EF%BC%89/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒336-0932 埼玉県さいたま市緑区大字中尾緑島2503-3 浦和駅　徒歩20分 浦和駅東口　国際興業バス　浦04系統　大谷口県営住宅　下車　徒歩3分 東浦和駅　徒歩20分", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-urawa-saitama%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 8:00-23:00／土 8:00-22:00／日・祝 8:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-urawa-saitama%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-urawa-saitama%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/higashi-urawa-saitama%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hikifune-tokyo"], name: "ゴールドジム 曳舟東京", officialUrl: "https://www.goldsgym.jp/shop/hikifune-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒131-0046 東京都墨田区京島1-47-10", "sourceUrl": "https://www.goldsgym.jp/shop/hikifune-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／毎週日曜日22:00-翌月曜日7:00は施設点検のためクローズ／サウナは2:00-6:00は利用不可／4階エアロビクス・和スタジオ・格闘技・アジリティーは23:00-7:00利用不可", "sourceUrl": "https://www.goldsgym.jp/shop/hikifune-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/hikifune-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hikifune-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hiroshima-pasela"], name: "ゴールドジム 広島パセーラ", officialUrl: "https://www.goldsgym.jp/shop/hiroshima-pasela/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒730-0011 広島県広島市中区基町6-78パセーラ 4階", "sourceUrl": "https://www.goldsgym.jp/shop/hiroshima-pasela/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 9:00-23:00／日・祝 9:00-20:00／最終入館は閉館30分前まで", "sourceUrl": "https://www.goldsgym.jp/shop/hiroshima-pasela/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/hiroshima-pasela/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hiroshima-pasela/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-hyogo-takarazuka"], name: "ゴールドジム 宝塚兵庫", officialUrl: "https://www.goldsgym.jp/shop/hyogo-takarazuka/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒665-0035 兵庫県宝塚市逆瀬川1丁目13-1アピア3 B2F", "sourceUrl": "https://www.goldsgym.jp/shop/hyogo-takarazuka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 7:00-21:00／祝 7:00-22:30／ジム・プロショップ・ラウンジは営業終了の15分前まで／ジム・プロショップ・ラウンジの利用は月-土 22:45まで／日 20:45まで／祝 22:15まで", "sourceUrl": "https://www.goldsgym.jp/shop/hyogo-takarazuka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/hyogo-takarazuka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/hyogo-takarazuka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-iizuka-fukuoka"], name: "ゴールドジム 飯塚福岡", officialUrl: "https://www.goldsgym.jp/shop/iizuka-fukuoka/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒820-0011 福岡県飯塚市柏の森56-10", "sourceUrl": "https://www.goldsgym.jp/shop/iizuka-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 10:00-23:00／土 10:00-21:00／日・祝 10:00-20:00／のがみプレジデントホテル店は24時間年中無休", "sourceUrl": "https://www.goldsgym.jp/shop/iizuka-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日", "sourceUrl": "https://www.goldsgym.jp/shop/iizuka-fukuoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/iizuka-fukuoka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-juso-in-plaza-osaka"], name: "ゴールドジム 十三プラザオーサカ", officialUrl: "https://www.goldsgym.jp/shop/juso-in-plaza-osaka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒532-0025 大阪府大阪市淀川区新北野1-9-15ホテルプラザオーサカ内 2F", "sourceUrl": "https://www.goldsgym.jp/shop/juso-in-plaza-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 8:00-23:30／日 9:00-20:00／祝日 9:00-22:30／ジム・プロショップ・ラウンジは月-土 23:15まで／日 19:45まで／祝日 22:15まで", "sourceUrl": "https://www.goldsgym.jp/shop/juso-in-plaza-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/juso-in-plaza-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/juso-in-plaza-osaka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kashihara-nara"], name: "ゴールドジム 橿原奈良", officialUrl: "https://www.goldsgym.jp/shop/kashihara-nara/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒634-0008 奈良県橿原市十市町1222-1ツインゲート橿原 2F", "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜日21:00-月曜日7:00はクローズ／0:00-9:00は一部サービス利用不可", "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日（祝日の場合は第3月曜日に振替）", "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kashihara-nara/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kashiwa-chiba"], name: "ゴールドジム 柏千葉", officialUrl: "https://www.goldsgym.jp/shop/kashiwa-chiba/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒277-0863 千葉県柏市豊四季135-108", "sourceUrl": "https://www.goldsgym.jp/shop/kashiwa-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 7:00-24:00／土 7:00-24:00／日・祝 7:00-20:00／各種届出受付：月〜土　 8:00-23:00／日・祝 9:00-19:00", "sourceUrl": "https://www.goldsgym.jp/shop/kashiwa-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/kashiwa-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kashiwa-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kitasenju-tokyo"], name: "ゴールドジム 北千住東京", officialUrl: "https://www.goldsgym.jp/shop/kitasenju-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒120-0034 東京都足立区千住1-4-1東京芸術センター 5F", "sourceUrl": "https://www.goldsgym.jp/shop/kitasenju-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 7:00-20:00／祝日は各曜日の通常営業時間", "sourceUrl": "https://www.goldsgym.jp/shop/kitasenju-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kitasenju-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kitasenju-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kobe-motomachi"], name: "ゴールドジム 神戸元町", officialUrl: "https://www.goldsgym.jp/shop/kobe-motomachi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒650-0037 兵庫県神戸市中央区明石町47番地ニッケ神戸ビル 4F・5F", "sourceUrl": "https://www.goldsgym.jp/shop/kobe-motomachi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 7:00-21:00／祝日 7:00-22:15／日曜日が祝日の場合は日曜営業時間（7:00-21:00）を適用", "sourceUrl": "https://www.goldsgym.jp/shop/kobe-motomachi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kobe-motomachi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・シャワーブース", "sourceUrl": "https://www.goldsgym.jp/shop/kobe-motomachi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kuki-saitama"], name: "ゴールドジム 久喜埼玉", officialUrl: "https://www.goldsgym.jp/shop/kuki-saitama/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒346-0003 埼玉県久喜市久喜中央1-1-20クッキープラザ 4Ｆ", "sourceUrl": "https://www.goldsgym.jp/shop/kuki-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 7:00-23:00／土 9:00-23:00／日 9:00-20:00／祝日 7:00-22:30／日曜日が祝日の場合は日曜営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/kuki-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/kuki-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "人工温泉・ドライサウナ（男性）・ミストサウナ（女性）", "sourceUrl": "https://www.goldsgym.jp/shop/kuki-saitama/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kumamoto-east"], name: "ゴールドジム 熊本East", officialUrl: "https://www.goldsgym.jp/shop/kumamoto-east/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒861-8035 熊本県熊本市東区御領8-4-83", "sourceUrl": "https://www.goldsgym.jp/shop/kumamoto-east/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 5:30-24:00／土 5:30-22:00／日 5:30-21:00／祝日は該当曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/kumamoto-east/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/kumamoto-east/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kumamoto-east/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kunitachi-tokyo"], name: "ゴールドジム 国立東京", officialUrl: "https://www.goldsgym.jp/shop/kunitachi-tokyo/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒186-0004 東京都国立市中1-9-30国立せきやビル ５F", "sourceUrl": "https://www.goldsgym.jp/shop/kunitachi-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:30／日曜日が祝日の場合は9:00-20:00で営業", "sourceUrl": "https://www.goldsgym.jp/shop/kunitachi-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/kunitachi-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kunitachi-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kusatsu-shiga"], name: "ゴールドジム 草津滋賀", officialUrl: "https://www.goldsgym.jp/shop/kusatsu-shiga/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒525-0037 滋賀県草津市西大路町４番３２号クサツウエストロイヤルタワーエストピアプラザ ３階", "sourceUrl": "https://www.goldsgym.jp/shop/kusatsu-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-21:00／祝日 7:00-23:00／日曜日が祝日の場合は日曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/kusatsu-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kusatsu-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kusatsu-shiga/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kyoto-imadegawa"], name: "ゴールドジム 京都今出川", officialUrl: "https://www.goldsgym.jp/shop/kyoto-imadegawa/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒602-0055 京都府京都市上京区堀川通今出川上ル南舟橋町381-5アフィシオン堀川 1Ｆ", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-imadegawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 7:00-21:00／祝日は該当曜日の営業時間／祝日は通常営業（該当曜日に準拠）", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-imadegawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-imadegawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナ・サウナ・ジェットバスを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-imadegawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kyoto-karasuma"], name: "ゴールドジム 京都烏丸", officialUrl: "https://www.goldsgym.jp/shop/kyoto-karasuma/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒604-8162 京都府京都市中京区烏丸通蛸薬師上ル七観音635番地からすまビル 2F", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-karasuma/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 7:00-21:00／祝日は該当曜日の営業時間／祝日は通常営業（該当曜日に準拠）", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-karasuma/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-karasuma/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-karasuma/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-kyoto-nijo"], name: "ゴールドジム 京都二条", officialUrl: "https://www.goldsgym.jp/shop/kyoto-nijo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒604-8418 京都府京都市中京区西ノ京東栂尾町3JR二条駅NKビル 2F", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-nijo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／毎週日曜日21:00-月曜日7:00はクローズ／第3月曜日は23:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-nijo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-nijo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/kyoto-nijo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-machida-tokyo"], name: "ゴールドジム 町田東京", officialUrl: "https://www.goldsgym.jp/shop/machida-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒194-0013 東京都町田市原町田4丁目1-14プラザ町田 3・4F（受付4F）", "sourceUrl": "https://www.goldsgym.jp/shop/machida-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土・祝 7:00-23:30／日 9:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/machida-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/machida-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/machida-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-maebashi-inter"], name: "ゴールドジム 前橋インター", officialUrl: "https://www.goldsgym.jp/shop/maebashi-inter/",
+    features: ["オートロウリュ"],
+    facts: [
+      {"label": "住所", "value": "〒370-0001 群馬県高崎市中尾町44番地アカマルA館 1階", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-inter/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-24:00／日 9:00-21:00／祝日 7:00-23:00／日曜日が祝日の場合は祝日営業時間の対象外", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-inter/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-inter/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "オートロウリュサウナ", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-inter/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-maebashi-lirica"], name: "ゴールドジム 前橋リリカ", officialUrl: "https://www.goldsgym.jp/shop/maebashi-lirica/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒371-0033 群馬県前橋市国領町2-15-10", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-lirica/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:00／運動施設は営業終了15分前まで利用可／入会受付は営業終了1時間前まで", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-lirica/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・施設メンテナンス日・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-lirica/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/maebashi-lirica/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-makuhari-baypark-arena"], name: "ゴールドジム 幕張ベイパークアリーナ", officialUrl: "https://www.goldsgym.jp/shop/makuhari-baypark-arena/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒261-0014 千葉県千葉市美浜区若葉3-1-37幕張ベイパークウェルネスセンター", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 9:00-22:30／土・日 9:00-22:00／祝日は該当曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-baypark-arena/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-makuhari-chiba-annex"], name: "ゴールドジム 幕張千葉ANNEX", officialUrl: "https://www.goldsgym.jp/shop/makuhari-chiba-annex/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒261-0021 千葉県千葉市美浜区ひび野2丁目4番地プレナ幕張 3F", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-annex/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-20:00／祝日 7:00-23:00／日曜が祝日の場合は祝日営業時間を適用しない／午前10時前は指定入口・エレベーターのみ利用可。", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-annex/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-annex/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-annex/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-makuhari-chiba-wbg"], name: "ゴールドジム 幕張千葉WBG", officialUrl: "https://www.goldsgym.jp/shop/makuhari-chiba-wbg/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒261-7101 千葉県千葉市美浜区中瀬2-6-1ワールドビジネスガーデンマリブダイニング 1F", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-wbg/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火-金 7:30-22:30／土 9:00-22:30／日・祝 10:00-20:00／月曜日は幕張千葉ANNEX店の休館日に準じて営業", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-wbg/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第1､3､4､5月曜日（第2月曜日が祝日の場合は休館）", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-wbg/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/makuhari-chiba-wbg/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-minamifunabashi-chiba"], name: "ゴールドジム 南船橋千葉", officialUrl: "https://www.goldsgym.jp/shop/minamifunabashi-chiba/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒273-0012 千葉県船橋市浜町2-2-7ららぽーとTOKYO-BAYNorthGate 4F", "sourceUrl": "https://www.goldsgym.jp/shop/minamifunabashi-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日は該当曜日の営業時間／祝日は通常の曜日どおり営業", "sourceUrl": "https://www.goldsgym.jp/shop/minamifunabashi-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始（第2月曜日が祝日の場合は通常営業）", "sourceUrl": "https://www.goldsgym.jp/shop/minamifunabashi-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ・ミストサウナ・岩盤浴を完備", "sourceUrl": "https://www.goldsgym.jp/shop/minamifunabashi-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-mizonokuchi-kanagawa"], name: "ゴールドジム 溝の口神奈川", officialUrl: "https://www.goldsgym.jp/shop/mizonokuchi-kanagawa/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒213-0001 神奈川県川崎市高津区溝口1丁目1番30号溝の口ブロックスビル 2F・3F（受付は3Ｆになります。）", "sourceUrl": "https://www.goldsgym.jp/shop/mizonokuchi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-20:00／祝日 7:00-23:00／ジム・SHOP・ラウンジ・レジの利用は月-土 23:15まで／日 19:45まで／祝日 22:45まで。日曜と祝日が重なる場合は日曜営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/mizonokuchi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/mizonokuchi-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/mizonokuchi-kanagawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-moriya-ibaraki-joyful-athletic-club"], name: "守谷茨城ジョイフルアスレティッククラブ", officialUrl: "https://www.goldsgym.jp/shop/moriya-ibaraki-joyful-athletic-club/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒302-0127 茨城県守谷市松ヶ丘３丁目２１ー１", "sourceUrl": "https://www.goldsgym.jp/shop/moriya-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 7:00-23:00／土 7:00-22:00／日・祝 7:00-20:00／スポーツ施設は閉館30分前まで利用可／10:00まではトレーニングジムのみ利用可／シャワー8:00-利用可・温浴施設10:00-利用可／プール施設平日は２２：１５まで。", "sourceUrl": "https://www.goldsgym.jp/shop/moriya-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/moriya-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室・サウナ", "sourceUrl": "https://www.goldsgym.jp/shop/moriya-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-motoyawata-chiba"], name: "ゴールドジム 本八幡千葉", officialUrl: "https://www.goldsgym.jp/shop/motoyawata-chiba/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒272-0021 千葉県市川市八幡2-15-10PATIO 8F", "sourceUrl": "https://www.goldsgym.jp/shop/motoyawata-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 7:00-20:00／祝日 7:00-23:00／日曜日が祝日の場合は祝日営業時間を適用しない", "sourceUrl": "https://www.goldsgym.jp/shop/motoyawata-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/motoyawata-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/motoyawata-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-nagoya-kanayama"], name: "ゴールドジム 名古屋金山", officialUrl: "https://www.goldsgym.jp/shop/nagoya-kanayama/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒456-0003 愛知県名古屋市熱田区波寄町24-14COLLECTMARK金山 3F", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-kanayama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 7:00-23:30／日 7:00-22:00／祝日 7:00-23:00／日曜日が祝日の場合は祝日営業時間を適用しない", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-kanayama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-kanayama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-kanayama/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-nagoya-sakae"], name: "ゴールドジム 名古屋栄", officialUrl: "https://www.goldsgym.jp/shop/nagoya-sakae/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒460-0003 愛知県名古屋市中区錦3-15-30アパホテル名古屋栄駅前EXCELLENT ３F", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-sakae/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 7:00-23:30／日 9:00-20:00／祝日（平日・土）7:00-23:00／祝日（日）9:00-20:00／祝日が日曜の場合は日曜営業時間を適用／ジム・ラウンジ・ショップの利用は閉店15分前まで", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-sakae/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-sakae/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/nagoya-sakae/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-narita-chiba"], name: "ゴールドジム 成田千葉", officialUrl: "https://www.goldsgym.jp/shop/narita-chiba/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒286-0017 千葉県成田市赤坂2-1-14そよら成田別館 1F", "sourceUrl": "https://www.goldsgym.jp/shop/narita-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 9:00-翌1:00／日・祝 9:00-21:00／第3月曜日が祝日の場合は祝日営業を行い、第2月曜日を振替休館", "sourceUrl": "https://www.goldsgym.jp/shop/narita-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/narita-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/narita-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-nerima-takanodai-tokyo"], name: "ゴールドジム 練馬高野台東京", officialUrl: "https://www.goldsgym.jp/shop/nerima-takanodai-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒177-0033 東京都練馬区高野台1-7-17NFプラザ 3F・4F", "sourceUrl": "https://www.goldsgym.jp/shop/nerima-takanodai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "ジム：平日・土 7:00-23:00／日 7:00-20:00／毎週月曜日はプールエリア休業", "sourceUrl": "https://www.goldsgym.jp/shop/nerima-takanodai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/nerima-takanodai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/nerima-takanodai-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-niihama-ehime"], name: "ゴールドジム 新居浜愛媛", officialUrl: "https://www.goldsgym.jp/shop/niihama-ehime/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒792-0886 愛媛県新居浜市郷5-7-50", "sourceUrl": "https://www.goldsgym.jp/shop/niihama-ehime/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:15／日・祝 8:00-20:00", "sourceUrl": "https://www.goldsgym.jp/shop/niihama-ehime/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎月20日", "sourceUrl": "https://www.goldsgym.jp/shop/niihama-ehime/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/niihama-ehime/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-nishikasai-tokyo"], name: "ゴールドジム 西葛西東京", officialUrl: "https://www.goldsgym.jp/shop/nishikasai-tokyo/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒134-0088 東京都江戸川区西葛西6-16-1 3～7F", "sourceUrl": "https://www.goldsgym.jp/shop/nishikasai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜日20:00-月曜日7:00はクローズ／金曜日はプール休館", "sourceUrl": "https://www.goldsgym.jp/shop/nishikasai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/nishikasai-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/nishikasai-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-north-tokyo"], name: "ゴールドジム ノース東京", officialUrl: "https://www.goldsgym.jp/shop/north-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒170-0004 東京都豊島区北大塚2-24-20永信ビル 3F", "sourceUrl": "https://www.goldsgym.jp/shop/north-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-20:00／祝日は該当曜日の営業時間／祝日は通常営業（該当曜日に準拠）", "sourceUrl": "https://www.goldsgym.jp/shop/north-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/north-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/north-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-omiya-saitama"], name: "ゴールドジム 大宮さいたま", officialUrl: "https://www.goldsgym.jp/shop/omiya-saitama/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒330-0854 埼玉県さいたま市大宮区桜木町2-1-1大宮アルシェビル 7F", "sourceUrl": "https://www.goldsgym.jp/shop/omiya-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜21:00-月曜7:00はクローズ／第2月曜日は23:00オープン／【深夜帯の各種お手続きと、トレーニングサポートについて】／お手続きをご希望の方は、店舗にお問い合わせください。／大変ご不便をお掛けいたしますが、ご理解の程よろしくお願い致します。", "sourceUrl": "https://www.goldsgym.jp/shop/omiya-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日（夏季・年末年始）", "sourceUrl": "https://www.goldsgym.jp/shop/omiya-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/omiya-saitama/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-omotesando-tokyo"], name: "ゴールドジム 表参道東京", officialUrl: "https://www.goldsgym.jp/shop/omotesando-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒150-0001 東京都渋谷区神宮前4-3-2表参道スクエアビル 2・3F", "sourceUrl": "https://www.goldsgym.jp/shop/omotesando-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:15／日 7:00-22:00／祝日 7:00-22:45", "sourceUrl": "https://www.goldsgym.jp/shop/omotesando-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/omotesando-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/omotesando-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-osaka-nakanoshima"], name: "ゴールドジム 大阪中之島", officialUrl: "https://www.goldsgym.jp/shop/osaka-nakanoshima/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒553-0003 大阪府大阪市福島区福島1-1-51堂島クロスウォーク 3F", "sourceUrl": "https://www.goldsgym.jp/shop/osaka-nakanoshima/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-22:00／祝日は該当曜日の営業時間／祝日は通常営業（該当曜日に準拠）", "sourceUrl": "https://www.goldsgym.jp/shop/osaka-nakanoshima/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/osaka-nakanoshima/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/osaka-nakanoshima/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-ritto-shiga"], name: "ゴールドジム 栗東滋賀", officialUrl: "https://www.goldsgym.jp/shop/ritto-shiga/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒520-3031 滋賀県栗東市綣2-4-5ウィングプラザ 3F", "sourceUrl": "https://www.goldsgym.jp/shop/ritto-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00", "sourceUrl": "https://www.goldsgym.jp/shop/ritto-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/ritto-shiga/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/ritto-shiga/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-saitama-super-arena"], name: "ゴールドジム さいたまスーパーアリーナ", officialUrl: "https://www.goldsgym.jp/shop/saitama-super-arena/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒330-0081 埼玉県さいたま市中央区新都心8番地さいたまスーパーアリーナ 6F", "sourceUrl": "https://www.goldsgym.jp/shop/saitama-super-arena/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 8:00-21:00／キッズルーム：火-木 9:00-14:00／土 10:00-16:00（祝日も利用可）", "sourceUrl": "https://www.goldsgym.jp/shop/saitama-super-arena/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/saitama-super-arena/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/saitama-super-arena/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-sasazuka-tokyo"], name: "ゴールドジム 笹塚東京", officialUrl: "https://www.goldsgym.jp/shop/sasazuka-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒151-0073 東京都渋谷区笹塚1-61-8​​ホテルブーゲンビリア新宿​内​ B​1F・B2F", "sourceUrl": "https://www.goldsgym.jp/shop/sasazuka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "ジム・プロショップ 24時間営業", "sourceUrl": "https://www.goldsgym.jp/shop/sasazuka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/sasazuka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/sasazuka-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-sasebo-nagasaki"], name: "ゴールドジム 佐世保長崎", officialUrl: "https://www.goldsgym.jp/shop/sasebo-nagasaki/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒857-1161 長崎県佐世保市大塔町6-1エレナ大塔 2階", "sourceUrl": "https://www.goldsgym.jp/shop/sasebo-nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／スタッフアワー 平日 9:00-23:00／土日祝 9:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/sasebo-nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "特定日休館なし", "sourceUrl": "https://www.goldsgym.jp/shop/sasebo-nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "シャワー・サウナ（ドライサウナ完備）", "sourceUrl": "https://www.goldsgym.jp/shop/sasebo-nagasaki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-seamall-shimonoseki"], name: "ゴールドジム 下関", officialUrl: "https://www.goldsgym.jp/shop/seamall-shimonoseki/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒750-0066 山口県下関市東大和町1-1-47シーモール下関新館駐車場 B1F", "sourceUrl": "https://www.goldsgym.jp/shop/seamall-shimonoseki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 7:00-23:00／日・祝 9:00-22:00／祝日が日曜の場合は日曜営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/seamall-shimonoseki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日（祝日の場合は翌平日）", "sourceUrl": "https://www.goldsgym.jp/shop/seamall-shimonoseki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/seamall-shimonoseki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-seiseki-sakuragaoka-tokyo"], name: "ゴールドジム 聖蹟桜ヶ丘東京", officialUrl: "https://www.goldsgym.jp/shop/seiseki-sakuragaoka-tokyo/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒206-0011 東京都多摩市関戸4-72ヴィータモールせいせき 6階", "sourceUrl": "https://www.goldsgym.jp/shop/seiseki-sakuragaoka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:30-23:00／日 7:30-21:00／祝日 7:30-22:30／タンニング・コラーゲン：月-土・祝 7:30-22:30／日 7:30-20:30／ショップ・ジムエリアの利用は閉館15分前まで／VITA MALL営業時間外はエレベーターで6階へ／支払い方法：現金・クレジット・交通系IC・PayPay", "sourceUrl": "https://www.goldsgym.jp/shop/seiseki-sakuragaoka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/seiseki-sakuragaoka-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（男性のみ）・ミストサウナ（女性のみ）", "sourceUrl": "https://www.goldsgym.jp/shop/seiseki-sakuragaoka-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-sendai-sunplaza"], name: "ゴールドジム 仙台サンプラザ", officialUrl: "https://www.goldsgym.jp/shop/sendai-sunplaza/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒983-0852 宮城県仙台市宮城野区榴岡5-11-1仙台サンプラザホテル 地下1階", "sourceUrl": "https://www.goldsgym.jp/shop/sendai-sunplaza/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 9:00-23:00／土 9:00-23:00／日・祝 9:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/sendai-sunplaza/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/sendai-sunplaza/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/sendai-sunplaza/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-shinkobe-hyogo"], name: "ゴールドジム 新神戸兵庫", officialUrl: "https://www.goldsgym.jp/shop/shinkobe-hyogo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒651-0055 兵庫県神戸市中央区熊内橋通7丁目-1-13神戸芸術センター 1F(プール)・3F(ジム)", "sourceUrl": "https://www.goldsgym.jp/shop/shinkobe-hyogo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "■ジム営業時間／月～土 7:00-23:00／日 9:00-21:00／祝日7:00～22:00／■プール営業時間／火～日 10:00-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/shinkobe-hyogo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "■ジム休館日", "sourceUrl": "https://www.goldsgym.jp/shop/shinkobe-hyogo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/shinkobe-hyogo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-shinsaibashi-osaka"], name: "ゴールドジム 心斎橋大阪", officialUrl: "https://www.goldsgym.jp/shop/shinsaibashi-osaka/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒542-0086 大阪府大阪市中央区西心斎橋1丁目6-14　BIGSTEP 6F", "sourceUrl": "https://www.goldsgym.jp/shop/shinsaibashi-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "ジム 月-土 7:00-23:30／日 9:00-22:00／祝日 7:00-22:30", "sourceUrl": "https://www.goldsgym.jp/shop/shinsaibashi-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/shinsaibashi-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/shinsaibashi-osaka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-shintokorozawa-saitama"], name: "ゴールドジム 新所沢埼玉", officialUrl: "https://www.goldsgym.jp/shop/shintokorozawa-saitama/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒359-1111 埼玉県所沢市緑町1-1-11西武ショッピングプラザ新所沢グリーンハイツ B1F", "sourceUrl": "https://www.goldsgym.jp/shop/shintokorozawa-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:00／【11月祝日営業日】11/23 (月)　【12月休館日】12/14 (月)　【12月特別営業日】12/31 (木) (営業時間 12:00-18:00)", "sourceUrl": "https://www.goldsgym.jp/shop/shintokorozawa-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/shintokorozawa-saitama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/shintokorozawa-saitama/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-shonan-kanagawa"], name: "ゴールドジム 湘南神奈川", officialUrl: "https://www.goldsgym.jp/shop/shonan-kanagawa/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒251-0047 神奈川県藤沢市辻堂2-7-1湘南パールビル 3・4Ｆ", "sourceUrl": "https://www.goldsgym.jp/shop/shonan-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜20:00クローズ／月曜7:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/shonan-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/shonan-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/shonan-kanagawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-south-tokyo"], name: "ゴールドジム サウス東京", officialUrl: "https://www.goldsgym.jp/shop/south-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒140-0011 東京都品川区東大井5-2-1おおい元気館 4F", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日曜日は23:00クローズ／第1・第4・第5月曜日は17:00オープン／第2月曜日は23:00オープン／第3月曜日および祝日月曜日は7:00オープン／サウス東京レギュラー会員は第1・第4・第5月曜日が平日の場合のみサウス東京ANNEX店を無料利用可（2024-05-27より適用）。", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-south-tokyo-annex"], name: "ゴールドジム サウス東京ANNEX", officialUrl: "https://www.goldsgym.jp/shop/south-tokyo-annex/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒143-0023 東京都大田区山王2-4-1大森駅前ビル 6F・7F", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo-annex/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 7:00-20:00／祝日は該当曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo-annex/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo-annex/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・ジェットバスを完備", "sourceUrl": "https://www.goldsgym.jp/shop/south-tokyo-annex/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-sparea-ashikaga"], name: "ゴールドジム スパレア足利", officialUrl: "https://www.goldsgym.jp/shop/sparea-ashikaga-%EF%BC%88fc%EF%BC%89/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒326-0005 栃木県足利市大月町3-2アシコタウンあしかが内", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-ashikaga-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日・祝は22:00まで営業、翌日は土日祝9:00／平日10:00から営業／第2金曜日（休館日）の前日は24:00まで（祝日は22:00まで）営業、翌日は9:00から営業", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-ashikaga-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2金曜日", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-ashikaga-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-ashikaga-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-sparea-utsunomiya"], name: "ゴールドジム スパレア宇都宮", officialUrl: "https://www.goldsgym.jp/shop/sparea-utsunomiya%EF%BC%88fc%EF%BC%89/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒320-0051 栃木県宇都宮市上戸祭町216-1", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-utsunomiya%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日・祝は22:00まで営業、翌日は10:00から営業／第2金曜日（休館日）の前日は24:00まで（祝日は22:00まで）営業、翌日は10:00から営業", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-utsunomiya%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2金曜日", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-utsunomiya%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・岩盤浴を完備", "sourceUrl": "https://www.goldsgym.jp/shop/sparea-utsunomiya%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-tachikawa-tokyo"], name: "ゴールドジム 立川東京", officialUrl: "https://www.goldsgym.jp/shop/tachikawa-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒190-8507 東京都立川市曙町2-39-3立川高島屋S.C. 7階", "sourceUrl": "https://www.goldsgym.jp/shop/tachikawa-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土・祝 7:00-23:30／日 7:00-20:00／第2月曜日が祝日の場合は通常営業／ショップは第2月曜日でも10:00-20:00で営業／入退館動線あり（朝10時前・夜20時以降は指定エレベーター）", "sourceUrl": "https://www.goldsgym.jp/shop/tachikawa-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/tachikawa-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/tachikawa-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-takasaki-gunma"], name: "ゴールドジム 高崎群馬", officialUrl: "https://www.goldsgym.jp/shop/takasaki-gunma/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒370-0069 群馬県高崎市飯塚町382-13", "sourceUrl": "https://www.goldsgym.jp/shop/takasaki-gunma/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-24:00／日 9:00-21:00／祝日 7:00-23:00／2025年3月より適用／ジムの利用は閉館15分前まで／日曜が祝日の場合は祝日営業時間の対象外", "sourceUrl": "https://www.goldsgym.jp/shop/takasaki-gunma/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/takasaki-gunma/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/takasaki-gunma/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-takatsuki-osaka"], name: "ゴールドジム 高槻大阪", officialUrl: "https://www.goldsgym.jp/shop/takatsuki-osaka/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒569-0804 大阪府高槻市紺屋町1-1グリーンプラザたかつき1号館 4階", "sourceUrl": "https://www.goldsgym.jp/shop/takatsuki-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業（火-土 24時間）／月 7:00オープン／日 21:00クローズ", "sourceUrl": "https://www.goldsgym.jp/shop/takatsuki-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "休館日の翌日は7:00から営業開始", "sourceUrl": "https://www.goldsgym.jp/shop/takatsuki-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ・ミストサウナ・岩盤浴を完備", "sourceUrl": "https://www.goldsgym.jp/shop/takatsuki-osaka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-totsuka-kanagawa"], name: "ゴールドジム 戸塚神奈川", officialUrl: "https://www.goldsgym.jp/shop/totsuka-kanagawa/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒244-0003 神奈川県横浜市戸塚区戸塚町10番地戸塚モディ 6F", "sourceUrl": "https://www.goldsgym.jp/shop/totsuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 7:00-23:00／土 7:00-23:00／日 7:00-20:00／祝日 7:00-22:30／特記事項なし", "sourceUrl": "https://www.goldsgym.jp/shop/totsuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/totsuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（男性のみ）・ミストサウナ", "sourceUrl": "https://www.goldsgym.jp/shop/totsuka-kanagawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-toyama-kansui-park"], name: "ゴールドジム 富山環水公園", officialUrl: "https://www.goldsgym.jp/shop/toyama-kansui-park/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒930-0805 富山県富山市湊入船町9番1号とやま自遊館 ５F", "sourceUrl": "https://www.goldsgym.jp/shop/toyama-kansui-park/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日・祝 9:00-19:00", "sourceUrl": "https://www.goldsgym.jp/shop/toyama-kansui-park/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎月15日・30日", "sourceUrl": "https://www.goldsgym.jp/shop/toyama-kansui-park/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂・ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/toyama-kansui-park/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-toyocho-super-center"], name: "ゴールドジム 東陽町スーパーセンター", officialUrl: "https://www.goldsgym.jp/shop/toyocho-super-center/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒135-0016 東京都江東区東陽2-2-20", "sourceUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 9:00-20:00／祝日 7:00-22:30／各種スケジュール（体育館・プール・格闘技スタジオ・スポーツフィールド）は案内ページをご確認ください。", "sourceUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/toyocho-super-center/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-tsuchiura-ibaraki-joyful-athletic-club"], name: "土浦茨城ジョイフルアスレティッククラブ", officialUrl: "https://www.goldsgym.jp/shop/tsuchiura-ibaraki-joyful-athletic-club/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒300-0843 茨城県土浦市中村南4-11-7", "sourceUrl": "https://www.goldsgym.jp/shop/tsuchiura-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00-23:00／土 7:00-22:00／日 7:00-20:00／スポーツ施設は閉館30分前まで利用可／10:00まではトレーニングジムのみ利用可／シャワー8:00-利用可・温浴施設10:00-利用可", "sourceUrl": "https://www.goldsgym.jp/shop/tsuchiura-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/tsuchiura-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "大浴場・サウナ・水風呂", "sourceUrl": "https://www.goldsgym.jp/shop/tsuchiura-ibaraki-joyful-athletic-club/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-tsudanuma-chiba"], name: "ゴールドジム 津田沼千葉", officialUrl: "https://www.goldsgym.jp/shop/tsudanuma-chiba/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒275-0016 千葉県習志野市津田沼5-12-4NARASHINOCREST 地下１階", "sourceUrl": "https://www.goldsgym.jp/shop/tsudanuma-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:00／日 7:00-20:00／祝日 7:00-22:30／祝日が日曜日と重なる場合は7:00-20:00", "sourceUrl": "https://www.goldsgym.jp/shop/tsudanuma-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/tsudanuma-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナ・サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/tsudanuma-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-umeda-osaka"], name: "ゴールドジム 梅田大阪", officialUrl: "https://www.goldsgym.jp/shop/umeda-osaka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒530-0013 大阪府大阪市北区茶屋町15-31茶屋町クリスタル 3・4F", "sourceUrl": "https://www.goldsgym.jp/shop/umeda-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／毎週日曜日20:00-月曜日7:00はクローズ／第3月曜日は23:00オープン", "sourceUrl": "https://www.goldsgym.jp/shop/umeda-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/umeda-osaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/umeda-osaka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-urayasu-chiba"], name: "ゴールドジム 浦安千葉", officialUrl: "https://www.goldsgym.jp/shop/urayasu-chiba/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒279-0002 千葉県浦安市北栄1-13-25 トライアル西友パートⅡ  5F", "sourceUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-20:00／祝日 7:00-22:30／日曜日が祝日の場合は祝日営業時間を適用しない", "sourceUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/urayasu-chiba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-ushiku-ibaraki"], name: "ゴールドジム 牛久茨城", officialUrl: "https://www.goldsgym.jp/shop/ushiku-ibaraki/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒300-1221 茨城県牛久市牛久町280番地エスカード牛久店", "sourceUrl": "https://www.goldsgym.jp/shop/ushiku-ibaraki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 9:00-23:00／日・祝 9:00-20:00／第2月曜日が祝日の場合は祝日営業を行い、第3月曜日を振替休館", "sourceUrl": "https://www.goldsgym.jp/shop/ushiku-ibaraki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/ushiku-ibaraki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/ushiku-ibaraki/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-v10-fukui"], name: "ゴールドジム ヴィテン福井", officialUrl: "https://www.goldsgym.jp/shop/v10-fukui/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒910-0846 福井県福井市四ツ井1丁目9-1", "sourceUrl": "https://www.goldsgym.jp/shop/v10-fukui/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00-23:00／日・祝 9:00-19:00／事前入会受付：平日 12:00-19:00／土日祝 10:00-18:00", "sourceUrl": "https://www.goldsgym.jp/shop/v10-fukui/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "10日・20日・30日", "sourceUrl": "https://www.goldsgym.jp/shop/v10-fukui/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/v10-fukui/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-v10-nonoichi"], name: "ゴールドジム ヴィテンののいち", officialUrl: "https://www.goldsgym.jp/shop/v10-nonoichi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒921-8817 石川県野々市市横宮町67-1", "sourceUrl": "https://www.goldsgym.jp/shop/v10-nonoichi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:45-23:30／土 9:45-23:00／日・祝 9:45-19:45／3F：平日22:30／土22:00／日祝19:00 4F：平日23:00／土22:30／日祝19:00／正会員・ファミリー・ボクシング会員は5:30から利用可（1Fエレベーター利用）／ビジター・他店・法人会員は通常営業時間のみ", "sourceUrl": "https://www.goldsgym.jp/shop/v10-nonoichi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎月5日・15日・25日・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/v10-nonoichi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/v10-nonoichi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-west-tokyo"], name: "ゴールドジム ウエスト東京", officialUrl: "https://www.goldsgym.jp/shop/west-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒164-0001 東京都中野区中野4-3-1サンクォーレタワー 3F", "sourceUrl": "https://www.goldsgym.jp/shop/west-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-金 7:00-23:30／土 7:00-23:30／日 9:00-20:00／祝日は通常の曜日どおりの営業時間で営業（特別営業時間なし）", "sourceUrl": "https://www.goldsgym.jp/shop/west-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/west-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/west-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-yokohama-bashamichi"], name: "ゴールドジム 横浜馬車道", officialUrl: "https://www.goldsgym.jp/shop/yokohama-bashamichi/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒231-0005 神奈川県中区本町4-43A-PLACE馬車道", "sourceUrl": "https://www.goldsgym.jp/shop/yokohama-bashamichi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "24時間営業／日祝は22:00まで営業、翌日は10:00開始／休館日（第2金曜日）の前日は23:00まで（祝日は22:00まで）、翌日は10:00開始", "sourceUrl": "https://www.goldsgym.jp/shop/yokohama-bashamichi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2金曜日", "sourceUrl": "https://www.goldsgym.jp/shop/yokohama-bashamichi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/yokohama-bashamichi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-yokosuka-kanagawa"], name: "ゴールドジム 横須賀神奈川", officialUrl: "https://www.goldsgym.jp/shop/yokosuka-kanagawa/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒238-0007 神奈川県横須賀市若松町2-4横須賀中央駅前ビル 5F", "sourceUrl": "https://www.goldsgym.jp/shop/yokosuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日・土 24時間営業／日・祝 -20:00クローズ／日・祝の翌日は平日7:00／土9:00／日・祝10:00オープン／クラブボクシングレッスンスケジュールは こちら", "sourceUrl": "https://www.goldsgym.jp/shop/yokosuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2金曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/yokosuka-kanagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/yokosuka-kanagawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-yoshikawa-saitama"], name: "ゴールドジム 吉川埼玉", officialUrl: "https://www.goldsgym.jp/shop/yoshikawa-saitama-%EF%BC%88fc%EF%BC%89/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒342-0041 埼玉県吉川市保1-13-3ライフ吉川駅前店 2F", "sourceUrl": "https://www.goldsgym.jp/shop/yoshikawa-saitama-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:30-23:00／土 9:30-22:00／日・祝 9:30-21:00", "sourceUrl": "https://www.goldsgym.jp/shop/yoshikawa-saitama-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第3木曜日", "sourceUrl": "https://www.goldsgym.jp/shop/yoshikawa-saitama-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/yoshikawa-saitama-%EF%BC%88fc%EF%BC%89/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-yotsuya-tokyo"], name: "ゴールドジム 四ツ谷東京", officialUrl: "https://www.goldsgym.jp/shop/yotsuya-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒102-0085 東京都千代田区六番町13番地2桃園学園ビル", "sourceUrl": "https://www.goldsgym.jp/shop/yotsuya-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:15／日 9:00-20:00／祝日 7:00-22:30／日曜日が祝日の場合は日曜日の営業時間を適用", "sourceUrl": "https://www.goldsgym.jp/shop/yotsuya-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日", "sourceUrl": "https://www.goldsgym.jp/shop/yotsuya-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "シャワールーム内にサウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/yotsuya-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-goldsgym-yoyogi-uehara-tokyo"], name: "ゴールドジム 代々木上原東京", officialUrl: "https://www.goldsgym.jp/shop/yoyogi-uehara-tokyo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒151-0066 東京都渋谷区西原3-8-5アコルデ代々木上原内", "sourceUrl": "https://www.goldsgym.jp/shop/yoyogi-uehara-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月-土 7:00-23:30／日 9:00-20:00／祝日 7:00-23:00", "sourceUrl": "https://www.goldsgym.jp/shop/yoyogi-uehara-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "第2月曜日・夏季・年末年始", "sourceUrl": "https://www.goldsgym.jp/shop/yoyogi-uehara-tokyo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.goldsgym.jp/shop/yoyogi-uehara-tokyo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-sendai"], name: "イトマンスポーツスクエア 仙台店", officialUrl: "https://www.itoman-w.com/sendai/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒983-0803 宮城県仙台市宮城野区小田原3丁目1-30　(ウジエスーパー小田原店2F)", "sourceUrl": "https://www.itoman-w.com/sendai/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】10:00～22:30(21:30)／【土】10:00～21:30(21:00)／【日・祝】10:00～19:30(19:00)", "sourceUrl": "https://www.itoman-w.com/sendai/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/sendai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.itoman-w.com/sendai/facilities/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-tsukuba"], name: "イトマンスポーツスクエア つくば店", officialUrl: "https://www.itoman-w.com/tsukuba/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒305-0071 茨城県つくば市稲岡66-1", "sourceUrl": "https://www.itoman-w.com/tsukuba/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月~水・金10:00～23:00／土曜日10:00～20:30／日曜・祝日10:00～19:30", "sourceUrl": "https://www.itoman-w.com/tsukuba/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/tsukuba/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/tsukuba/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-mito"], name: "イトマンスポーツスクエア 水戸店", officialUrl: "https://www.itoman-w.com/mito/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒310-0852 茨城県水戸市笠原町978-39 ロゼオ水戸内", "sourceUrl": "https://www.itoman-w.com/mito/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】10:00～21:00／【土】10:00～19:30／【日・祝】10:00～17:30", "sourceUrl": "https://www.itoman-w.com/mito/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/mito/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ・ミストサウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/mito/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kitamatsudo"], name: "イトマンスポーツスクエア 北松戸店", officialUrl: "https://www.itoman-w.com/kitamatsudo/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒271-0064 千葉県松戸市上本郷358", "sourceUrl": "https://www.itoman-w.com/kitamatsudo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:00～23:00", "sourceUrl": "https://www.itoman-w.com/kitamatsudo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kitamatsudo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/kitamatsudo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-minamikashiwa"], name: "イトマンスポーツスクエア 南柏店", officialUrl: "https://www.itoman-w.com/minamikashiwa/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒277-0075 千葉県柏市南柏中央3-2キュア・ラ内", "sourceUrl": "https://www.itoman-w.com/minamikashiwa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】10:00～20:00／【土・日・祝】10:00～18:00", "sourceUrl": "https://www.itoman-w.com/minamikashiwa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/minamikashiwa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "大浴場・サウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/minamikashiwa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kozunomori"], name: "イトマンスポーツスクエア 公津の杜店", officialUrl: "https://www.itoman-w.com/kozunomori/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒286-0048 千葉県成田市公津の杜1-10-1", "sourceUrl": "https://www.itoman-w.com/kozunomori/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】10:00～22:00／【土・日・祝】10:00～20:00", "sourceUrl": "https://www.itoman-w.com/kozunomori/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kozunomori/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スチームサウナを完備", "sourceUrl": "https://www.itoman-w.com/kozunomori/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-nagareyama"], name: "イトマンスポーツスクエア 流山おおたかの森", officialUrl: "https://www.itoman-w.com/nagareyama/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒270-0138 千葉県流山市おおたかの森東1-2-1", "sourceUrl": "https://www.itoman-w.com/nagareyama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:00～23:00", "sourceUrl": "https://www.itoman-w.com/nagareyama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/nagareyama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナ・ジャグジーを完備", "sourceUrl": "https://www.itoman-w.com/nagareyama/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-urayasu"], name: "イトマンスポーツスクエア 浦安店", officialUrl: "https://www.itoman-w.com/urayasu/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒279-0022 千葉県浦安市今川4-1-40", "sourceUrl": "https://www.itoman-w.com/urayasu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】9:00～23:00／【土】9:00～21:00／【日・祝】9:00～19:00", "sourceUrl": "https://www.itoman-w.com/urayasu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/urayasu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/urayasu/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-hiratsuka"], name: "イトマンスポーツスクエア 平塚店", officialUrl: "https://www.itoman-w.com/hiratsuka/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒254-0807 神奈川県平塚市代官町1-16", "sourceUrl": "https://www.itoman-w.com/hiratsuka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:30～21:00／【土】9:30～19:00／【日・祝】9:30～17:00", "sourceUrl": "https://www.itoman-w.com/hiratsuka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/hiratsuka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・ジャグジーを完備", "sourceUrl": "https://www.itoman-w.com/hiratsuka/facilities/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-fujisawa"], name: "イトマンスポーツスクエア 藤沢店", officialUrl: "https://www.itoman-w.com/fujisawa/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒251-0052 神奈川県藤沢市藤沢109-6  湘南NDビルディング5F", "sourceUrl": "https://www.itoman-w.com/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:00～23:00／【土】9:00～21:00／【日・祝】9:00～19:00", "sourceUrl": "https://www.itoman-w.com/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.itoman-w.com/fujisawa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kanazawabunko"], name: "イトマンスポーツスクエア 金沢文庫店", officialUrl: "https://www.itoman-w.com/kanazawabunko/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒236-0042 神奈川県横浜市金沢区釜利谷東2-3-1", "sourceUrl": "https://www.itoman-w.com/kanazawabunko/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "・月〜水/金9:00～23:00／・木15:00～20:00※子どもスクールのみ営業／・土9:00～21:00／・日祝9:00～19:00", "sourceUrl": "https://www.itoman-w.com/kanazawabunko/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kanazawabunko/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スチームサウナ・ジャグジーを完備", "sourceUrl": "https://www.itoman-w.com/kanazawabunko/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-minamifuruya"], name: "イトマンスポーツスクエア 南古谷店", officialUrl: "https://www.itoman-w.com/minamifuruya/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒350-0026 埼玉県川越市泉町1-1 UNICUS南古谷内フィットネス棟１F", "sourceUrl": "https://www.itoman-w.com/minamifuruya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:30～23:00／【土】9:30～21:00／【日・祝】9:30～19:00", "sourceUrl": "https://www.itoman-w.com/minamifuruya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/minamifuruya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/minamifuruya/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-nisshin"], name: "イトマンスポーツスクエア 日進店", officialUrl: "https://www.itoman-w.com/nisshin/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒331-0823 埼玉県さいたま市北区日進町2-1916-8 イスタ！日進4F", "sourceUrl": "https://www.itoman-w.com/nisshin/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月〜水・金】9:30～23:00/(10:00～22:00)／【土】9:30～21:00/(10:00～20:00)／【日・祝】9:30～19:00/(10:00～18:00)", "sourceUrl": "https://www.itoman-w.com/nisshin/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/nisshin/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/nisshin/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kawaguchi"], name: "イトマンスポーツスクエア 川口店", officialUrl: "https://www.itoman-w.com/kawaguchi/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "埼玉県川口市並木元町1-64", "sourceUrl": "https://www.itoman-w.com/kawaguchi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【平日】9:30～23:30／【土】9:00～21:00／【日祝】9:00～20:00", "sourceUrl": "https://www.itoman-w.com/kawaguchi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kawaguchi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "大浴場・ドライサウナ・スチームサウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/kawaguchi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kawaguchimotogou"], name: "イトマンスポーツスクエア 川口元郷店", officialUrl: "https://www.itoman-w.com/kawaguchimotogou/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒332-0011 埼玉県川口市元郷2-15ｰ3", "sourceUrl": "https://www.itoman-w.com/kawaguchimotogou/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~金】9:30～22:30／【土】9:00～20:30／【日・祝】9:00～18:30", "sourceUrl": "https://www.itoman-w.com/kawaguchimotogou/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kawaguchimotogou/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナ・水風呂・ジャグジーを完備", "sourceUrl": "https://www.itoman-w.com/kawaguchimotogou/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-kasukabe"], name: "イトマンスポーツスクエア 春日部店", officialUrl: "https://www.itoman-w.com/kasukabe/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒344-0122 埼玉県春日部市下柳1520", "sourceUrl": "https://www.itoman-w.com/kasukabe/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】9:30～22:30／【土】9:30～21:00／【日・祝】9:30～19:00", "sourceUrl": "https://www.itoman-w.com/kasukabe/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/kasukabe/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナ・水風呂を完備", "sourceUrl": "https://www.itoman-w.com/kasukabe/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-itoman-esaka"], name: "イトマンスポーツスクエア 江坂店", officialUrl: "https://www.itoman-w.com/esaka/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒564-0063 大阪府吹田市江坂町5丁目20-1", "sourceUrl": "https://www.itoman-w.com/esaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "【月~水・金】10:30～21:00／【土曜日】9:30～19:00／【日・祝】9:30～18:00", "sourceUrl": "https://www.itoman-w.com/esaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "お知らせ・キャンペーン・見学体験", "sourceUrl": "https://www.itoman-w.com/esaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.itoman-w.com/esaka/facilities/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-akabane"], name: "ジェクサー赤羽", officialUrl: "https://www.jexer.jp/fitness/akabane/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒115-0044 東京都北区赤羽南2-9-47", "sourceUrl": "https://www.jexer.jp/fitness/akabane/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00（プール9:30～23:00）／土 8:00～22:00（プール9:00～22:00）／日祝 8:00～20:00（プール9:00～20:00）", "sourceUrl": "https://www.jexer.jp/fitness/akabane/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週月曜日", "sourceUrl": "https://www.jexer.jp/fitness/akabane/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/akabane/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-itabashi"], name: "ジェクサー板橋", officialUrl: "https://www.jexer.jp/fitness/itabashi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒114-0023 東京都北区滝野川7丁目4番1号", "sourceUrl": "https://www.jexer.jp/fitness/itabashi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 6:00～24:00／土日祝 8:00～22:00", "sourceUrl": "https://www.jexer.jp/fitness/itabashi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週金曜日", "sourceUrl": "https://www.jexer.jp/fitness/itabashi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/itabashi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-kameido"], name: "ジェクサー亀戸", officialUrl: "https://www.jexer.jp/fitness/kameido/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒136-0071 東京都江東区亀戸5-1-1", "sourceUrl": "https://www.jexer.jp/fitness/kameido/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00（プール10:00～23:00）／土 8:00～22:00／日祝 8:00～20:00", "sourceUrl": "https://www.jexer.jp/fitness/kameido/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週金曜日", "sourceUrl": "https://www.jexer.jp/fitness/kameido/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/kameido/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-oi"], name: "ジェクサー大井町", officialUrl: "https://www.jexer.jp/fitness/oi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒140-0014 東京都品川区大井1-2-1", "sourceUrl": "https://www.jexer.jp/fitness/oi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00（プール10:00～23:00）／土 8:00～22:00（プール10:00～22:00）／日祝 8:00～20:00（プール10:00～20:00）", "sourceUrl": "https://www.jexer.jp/fitness/oi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週月曜日", "sourceUrl": "https://www.jexer.jp/fitness/oi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/oi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-otsuka"], name: "ジェクサー大塚", officialUrl: "https://www.jexer.jp/fitness/otsuka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒170-0005 東京都豊島区南大塚3-33-1", "sourceUrl": "https://www.jexer.jp/fitness/otsuka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00／土 8:00～22:00／日祝 8:00～20:00", "sourceUrl": "https://www.jexer.jp/fitness/otsuka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週木曜日", "sourceUrl": "https://www.jexer.jp/fitness/otsuka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/otsuka/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-shinjuku"], name: "ジェクサー新宿", officialUrl: "https://www.jexer.jp/fitness/shinjuku/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒151-0053 東京都渋谷区代々木2-1-5", "sourceUrl": "https://www.jexer.jp/fitness/shinjuku/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 6:30～23:00 （プール7:00～23:00）／土 8:00～22:00 （プール9:00～21:00）／日祝 8:00～20:00 （プール9:00～20:00）", "sourceUrl": "https://www.jexer.jp/fitness/shinjuku/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週金曜日", "sourceUrl": "https://www.jexer.jp/fitness/shinjuku/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/shinjuku/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-shinkoiwa"], name: "ジェクサー新小岩", officialUrl: "https://www.jexer.jp/fitness/shinkoiwa/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒124-0024 東京都葛飾区新⼩岩1-45-1", "sourceUrl": "https://www.jexer.jp/fitness/shinkoiwa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00／土日祝 8:00～22:00", "sourceUrl": "https://www.jexer.jp/fitness/shinkoiwa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週火曜日", "sourceUrl": "https://www.jexer.jp/fitness/shinkoiwa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/shinkoiwa/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-ueno"], name: "ジェクサー上野", officialUrl: "https://www.jexer.jp/fitness/ueno/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒110-0005 東京都台東区上野7-1-1", "sourceUrl": "https://www.jexer.jp/fitness/ueno/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00／土 8:00～22:00 （プール9:30～22:00）／日祝 8:00～20:00 （プール9:30～20:00）", "sourceUrl": "https://www.jexer.jp/fitness/ueno/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週金曜日", "sourceUrl": "https://www.jexer.jp/fitness/ueno/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "スパ・サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/ueno/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-jexer-yotsuya"], name: "ジェクサー 四谷", officialUrl: "https://www.jexer.jp/fitness/yotsuya/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒160-0004 東京都新宿区四谷1丁目 外濠公園内", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 7:00～23:00／土 8:00～22:00／日祝 8:00～20:00", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "毎週月曜日", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
+    ],
   }
 ];
 
