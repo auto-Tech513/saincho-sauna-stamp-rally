@@ -25723,7 +25723,7 @@ export const SEED_FACILITIES = [
   },
   {
     "id": "st-miyazaki-829",
-    "name": "天岩戸温泉",
+    "name": "天岩戸の湯",
     "prefecture": "宮崎県",
     "trait": "onsen",
     "tags": [
