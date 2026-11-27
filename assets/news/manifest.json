@@ -490,5 +490,23 @@
     "og": "/assets/news/saden-fujiyoshida-opening-2026-og.png",
     "thumb": "/assets/news/saden-fujiyoshida-opening-2026-thumb.webp",
     "generatedAt": "2026-11-26"
+  },
+  "haimurubushi-yearend-2026": {
+    "hero": "/assets/news/haimurubushi-yearend-2026-hero.webp",
+    "og": "/assets/news/haimurubushi-yearend-2026-og.png",
+    "thumb": "/assets/news/haimurubushi-yearend-2026-thumb.webp",
+    "generatedAt": "2026-11-27"
+  },
+  "ofurocafe-karin-mellow-sauna-day-2026": {
+    "hero": "/assets/news/ofurocafe-karin-mellow-sauna-day-2026-hero.webp",
+    "og": "/assets/news/ofurocafe-karin-mellow-sauna-day-2026-og.png",
+    "thumb": "/assets/news/ofurocafe-karin-mellow-sauna-day-2026-thumb.webp",
+    "generatedAt": "2026-11-27"
+  },
+  "saunahouse-december-ladies-2026": {
+    "hero": "/assets/news/saunahouse-december-ladies-2026-hero.webp",
+    "og": "/assets/news/saunahouse-december-ladies-2026-og.png",
+    "thumb": "/assets/news/saunahouse-december-ladies-2026-thumb.webp",
+    "generatedAt": "2026-11-27"
   }
 }

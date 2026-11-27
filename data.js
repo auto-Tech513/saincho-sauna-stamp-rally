@@ -71143,6 +71143,26 @@ export const SEED_FACILITIES = [
     "officialUrl": "https://misato.cocofuro.com/"
   },
   {
+    "id": "manual-okinawa-haimurubushi",
+    "name": "はいむるぶし",
+    "prefecture": "沖縄県",
+    "address": "〒907-1221 沖縄県八重山郡竹富町字小浜2930-1",
+    "addressSource": "公式プレスリリース",
+    "city": "竹富町",
+    "trait": "water",
+    "tags": [
+      "リゾート",
+      "ウィスキングあり"
+    ],
+    "features": [
+      "水風呂あり",
+      "外気あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.haimurubushi.co.jp/",
+    "officialUrl": "https://www.haimurubushi.co.jp/"
+  },
+  {
     "id": "manual-tokyo-kocoowa-hiroo",
     "name": "Kocoo和",
     "prefecture": "東京都",
