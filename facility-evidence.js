@@ -42836,6 +42836,597 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       {"label": "料金", "value": "月会費：ルフレフリー13,948円(税込)、ルフレ15,180円(税込)、ルフレ4 11,880円(税込)", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
       {"label": "アクセス", "value": "JR山手線・京浜東北線 田端駅から徒歩4分、西日暮里駅から徒歩9分", "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/", "checkedAt": "2026-11-27"},
     ],
+  },
+  {
+    ids: ["manual-renaissance-ryogoku"], name: "スポーツクラブ＆サウナスパ ルネサンス 両国24", officialUrl: "https://www.s-re.jp/ryogoku/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒130-0026 東京都 墨田区両国2-10-14", "sourceUrl": "https://www.s-re.jp/ryogoku/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 10:00～23:00／土曜 10:00～21:00／日曜・祝日 10:00～20:00", "sourceUrl": "https://www.s-re.jp/ryogoku/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/ryogoku/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（室温90度設定）を備えた温浴施設", "sourceUrl": "https://www.s-re.jp/ryogoku/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-musashikoyama"], name: "フィットネスクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext武蔵小山24", officialUrl: "https://www.s-re.jp/musashikoyama/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒142-0062 東京都品川区小山3-4-8 エトモ武蔵小山3F", "sourceUrl": "https://www.s-re.jp/musashikoyama/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/musashikoyama/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/musashikoyama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（男女）・スチームサウナ（女性）・水風呂・光明石人工温泉など充実の温浴施設完備", "sourceUrl": "https://www.s-re.jp/musashikoyama/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-himonya"], name: "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext碑文谷", officialUrl: "https://www.s-re.jp/himonya/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒152-0003 東京都目黒区碑文谷5-13-12", "sourceUrl": "https://www.s-re.jp/himonya/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～木曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/himonya/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "金曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/himonya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴施設にドライサウナ（男性・女性）・スチームサウナ・水風呂を完備", "sourceUrl": "https://www.s-re.jp/himonya/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-futakotamagawa"], name: "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext二子玉川", officialUrl: "https://www.s-re.jp/futakotamagawa/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒158-0094 東京都世田谷区玉川1-14-1二子玉川ライズ・ショッピングセンター・テラスマーケット内", "sourceUrl": "https://www.s-re.jp/futakotamagawa/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 9:00～23:00（水曜を除く）／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/futakotamagawa/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "水曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/futakotamagawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴施設（風呂・サウナ・シャワー）を完備。男女ともサウナあり", "sourceUrl": "https://www.s-re.jp/futakotamagawa/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-waseda"], name: "スポーツクラブ ルネサンス 早稲田", officialUrl: "https://www.s-re.jp/waseda/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒171-0033 東京都 豊島区高田1-19-24", "sourceUrl": "https://www.s-re.jp/waseda/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/waseda/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/waseda/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ロッカールーム奥にシャワー、スチームサウナを完備", "sourceUrl": "https://www.s-re.jp/waseda/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-shintokorozawa"], name: "スイミングクラブ ルネサンス 新所沢", officialUrl: "https://www.s-re.jp/shintokorozawa/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒359-0045 埼玉県 所沢市美原町2-2966", "sourceUrl": "https://www.s-re.jp/shintokorozawa/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜・水曜～金曜 9:00～21:30／土曜 9:00～20:30／日曜 8:00～16:45／祝日 9:00～20:30", "sourceUrl": "https://www.s-re.jp/shintokorozawa/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "火曜日・夏季、年末年始、他", "sourceUrl": "https://www.s-re.jp/shintokorozawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "室温が65度前後の低温ドライサウナ。身体への負担が少なく、サウナのみの利用も可", "sourceUrl": "https://www.s-re.jp/shintokorozawa/facility/", "checkedAt": "2026-11-27"},
+      {"label": "利用条件", "value": "サウナご利用時には水着が必要", "sourceUrl": "https://www.s-re.jp/shintokorozawa/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-aeontown-yoshikawaminami"], name: "スポーツクラブ＆サウナスパ ルネサンス・イオンタウン吉川美南", officialUrl: "https://www.s-re.jp/aeontown-yoshikawaminami/",
+    features: ["オートロウリュ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒342-0038 埼玉県吉川市美南3丁目25-1 イオンタウン吉川美南 東街区3F", "sourceUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "TV付きサウナ（オートロウリュ）と水風呂を備えた温浴施設", "sourceUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-makuhari"], name: "スポーツクラブ＆サウナスパ ルネサンス 幕張24", officialUrl: "https://www.s-re.jp/makuhari/",
+    features: ["オートロウリュ", "ドライサウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒262-0032 千葉県千葉市花見川区幕張町4-544-41", "sourceUrl": "https://www.s-re.jp/makuhari/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～水曜・金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/makuhari/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "木曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/makuhari/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "オートロウリュ搭載の高温三段サウナ（約90℃、15分間隔）と炭酸泉、水風呂（16～18℃）を備えた温浴施設", "sourceUrl": "https://www.s-re.jp/makuhari/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-takanodai"], name: "ルネサンス 鷹之台テニスクラブ", officialUrl: "https://www.s-re.jp/takanodai/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒262-0001 千葉県 千葉市花見川区横戸町810", "sourceUrl": "https://www.s-re.jp/takanodai/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～土曜 9:00～19:00 ※スクールは21:00まで／日曜・祝日 9:00～19:00", "sourceUrl": "https://www.s-re.jp/takanodai/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/takanodai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男性女性ともに、浴室にサウナを完備（クラブ会員専用）", "sourceUrl": "https://www.s-re.jp/takanodai/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-urayasu"], name: "スポーツクラブ＆サウナスパ ルネサンス 浦安24", officialUrl: "https://www.s-re.jp/urayasu/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "オートロウリュ"],
+    facts: [
+      {"label": "住所", "value": "〒279-0002 千葉県 浦安市北栄2-6-18", "sourceUrl": "https://www.s-re.jp/urayasu/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～木曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/urayasu/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "金曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/urayasu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男性浴室に87℃のオートロウリュ付ドライサウナ、女性浴室にミストサウナを完備", "sourceUrl": "https://www.s-re.jp/urayasu/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-aobadai"], name: "スポーツクラブ＆スパ ルネサンス・アトリオドゥーエ Next 青葉台24", officialUrl: "https://www.s-re.jp/aobadai/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒227-0062 神奈川県横浜市青葉区青葉台1-2-4", "sourceUrl": "https://www.s-re.jp/aobadai/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/aobadai/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/aobadai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴施設にスチームサウナと高濃度炭酸泉・白湯を完備", "sourceUrl": "https://www.s-re.jp/aobadai/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-tamaplaza"], name: "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNextたまプラーザ", officialUrl: "https://www.s-re.jp/tamaplaza/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒225-8535 神奈川県 横浜市青葉区新石川2-2-1たまプラーザテラス サウスプラザ内", "sourceUrl": "https://www.s-re.jp/tamaplaza/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～木曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/tamaplaza/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "金曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/tamaplaza/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（男女）・水風呂（男女）に加え、プールサイドにスチームサウナ（水着着用で利用可）を完備", "sourceUrl": "https://www.s-re.jp/tamaplaza/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-yokohama"], name: "スポーツクラブ＆サウナスパ ルネサンス 横浜24", officialUrl: "https://www.s-re.jp/yokohama/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒220-0073 神奈川県横浜市西区岡野2-15-1", "sourceUrl": "https://www.s-re.jp/yokohama/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 10:00～23:00／土曜 10:00～21:00／日曜・祝日 10:00～20:00", "sourceUrl": "https://www.s-re.jp/yokohama/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/yokohama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室にサウナを完備。プールサイドにミストサウナも併設", "sourceUrl": "https://www.s-re.jp/yokohama/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-himeji"], name: "スポーツクラブ＆サウナスパ ルネサンス 姫路", officialUrl: "https://www.s-re.jp/himeji/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒670-0821 兵庫県姫路市東郷町1454-3リオス4F", "sourceUrl": "https://www.s-re.jp/himeji/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜・水曜～金曜 10:00～23:00／土曜 10:00～23:00／日曜・祝日 10:00～19:00", "sourceUrl": "https://www.s-re.jp/himeji/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "火曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/himeji/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴施設にサウナと水風呂を完備", "sourceUrl": "https://www.s-re.jp/himeji/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-higashihiroshima"], name: "スポーツクラブ＆サウナ ルネサンス 東広島24", officialUrl: "https://www.s-re.jp/higashihiroshima/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒739-0024 広島県東広島市西条町御薗宇上戸6100", "sourceUrl": "https://www.s-re.jp/higashihiroshima/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/higashihiroshima/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/higashihiroshima/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "広いドライサウナを備えた温浴施設", "sourceUrl": "https://www.s-re.jp/higashihiroshima/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-rycom"], name: "スポーツクラブ＆サウナスパ ルネサンス・ライカム24", officialUrl: "https://www.s-re.jp/rycom/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒901-2306 沖縄県中頭郡北中城村字ライカム　640番地", "sourceUrl": "https://www.s-re.jp/rycom/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜 9:00～22:00／水曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/rycom/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "火曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/rycom/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室にドライサウナ（90℃）と水風呂（19℃）を完備", "sourceUrl": "https://www.s-re.jp/rycom/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-sapporo-hiragishi"], name: "スポーツクラブ＆サウナスパ ルネサンス 札幌平岸24", officialUrl: "https://www.s-re.jp/sapporo-hiragishi/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒062-0932 北海道 札幌市豊平区平岸2条11丁目3-7", "sourceUrl": "https://www.s-re.jp/sapporo-hiragishi/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜～金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/sapporo-hiragishi/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "月曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/sapporo-hiragishi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室に浴槽、シャワー、サウナを完備。水風呂の代わりにオーバーヘッドシャワーを利用できる", "sourceUrl": "https://www.s-re.jp/sapporo-hiragishi/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-higashisapporo"], name: "スポーツクラブ＆サウナスパ ルネサンス 東札幌24", officialUrl: "https://www.s-re.jp/higashisapporo/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒003-0004 北海道札幌市白石区東札幌４条１丁目1‐1 ラソラ札幌Bタウン2階", "sourceUrl": "https://www.s-re.jp/higashisapporo/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～水曜・金曜 10:00～23:00／土曜 10:00～21:00／日曜・祝日 10:00～20:00", "sourceUrl": "https://www.s-re.jp/higashisapporo/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "木曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/higashisapporo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（座面が広い3段のひな壇式）と水風呂（設定温度18度・水深80cm）を備えた温浴施設", "sourceUrl": "https://www.s-re.jp/higashisapporo/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-hakodate"], name: "スポーツクラブ＆サウナスパ ルネサンス 函館24", officialUrl: "https://www.s-re.jp/hakodate/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒041-0852 北海道 函館市鍛治2-6-15", "sourceUrl": "https://www.s-re.jp/hakodate/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～木曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/hakodate/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "金曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/hakodate/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "温浴施設にサウナを完備（9時から利用可能。お風呂・サウナだけの利用も可）", "sourceUrl": "https://www.s-re.jp/hakodate/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-renaissance-sendai-nagamachiminami"], name: "スポーツクラブ＆サウナ ルネサンス 仙台長町南24", officialUrl: "https://www.s-re.jp/sendai-nagamachiminami/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒982-0011 宮城県 仙台市太白区長町8-22-5", "sourceUrl": "https://www.s-re.jp/sendai-nagamachiminami/access/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月曜～水曜・金曜 9:00～23:00／土曜 9:00～21:00／日曜・祝日 9:00～20:00", "sourceUrl": "https://www.s-re.jp/sendai-nagamachiminami/", "checkedAt": "2026-11-27"},
+      {"label": "休館日", "value": "木曜日・年末年始、他", "sourceUrl": "https://www.s-re.jp/sendai-nagamachiminami/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナを完備", "sourceUrl": "https://www.s-re.jp/sendai-nagamachiminami/facility/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-abeno"], name: "スポーツクラブNASあべの", officialUrl: "https://www.nas-club.co.jp/abeno/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒545-0053 大阪府大阪市阿倍野区松崎町2-3-47", "sourceUrl": "https://www.nas-club.co.jp/abeno/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～22:00／日祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/abeno/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/abeno/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "大型サウナと水風呂を完備。女性に人気のミストサウナもあり", "sourceUrl": "https://www.nas-club.co.jp/abeno/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-fujisawa"], name: "スポーツクラブNAS藤沢", officialUrl: "https://www.nas-club.co.jp/fujisawa/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒251-0052 神奈川県藤沢市藤沢490-1", "sourceUrl": "https://www.nas-club.co.jp/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～21:00／日祝 10:00～19:00", "sourceUrl": "https://www.nas-club.co.jp/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/fujisawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワードライサウナ（テレビ完備）とミストサウナ、平湯・寝湯・ジェットバス・水風呂のあるスパゾーン", "sourceUrl": "https://www.nas-club.co.jp/fujisawa/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-fushimimomoyama"], name: "スポーツクラブNAS伏見桃山", officialUrl: "https://www.nas-club.co.jp/fushimimomoyama/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒612-8061 京都府京都市伏見区竹中町609", "sourceUrl": "https://www.nas-club.co.jp/fushimimomoyama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火〜金曜日 10:00〜23:00／土曜日 10:00〜21:00", "sourceUrl": "https://www.nas-club.co.jp/fushimimomoyama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/fushimimomoyama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男性はドライサウナ、女性はミストサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/fushimimomoyama/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-hakata"], name: "スポーツクラブNAS博多", officialUrl: "https://www.nas-club.co.jp/hakata/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒812-0892 福岡県福岡市博多区東那珂1丁目14-46 フォレオ博多3F", "sourceUrl": "https://www.nas-club.co.jp/hakata/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00〜23:00／土曜日 10:00〜22:00／日・祝 10:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/hakata/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/hakata/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女ともに利用できるサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/hakata/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-hikarigaoka"], name: "スポーツクラブNAS光が丘", officialUrl: "https://www.nas-club.co.jp/hikarigaoka/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒179-0072 東京都練馬区光が丘5-1-1 光が丘IMA イマミセ5F", "sourceUrl": "https://www.nas-club.co.jp/hikarigaoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 9:00～23：00／土曜日 9:00～22:00／日・祝 9:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/hikarigaoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/hikarigaoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "お風呂とサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/hikarigaoka/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-inazawa"], name: "スポーツクラブNAS稲沢", officialUrl: "https://www.nas-club.co.jp/inazawa/",
+    features: ["ドライサウナ", "スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒492-8218 愛知県稲沢市西町3-15-54 「ニッケタウン稲沢」内", "sourceUrl": "https://www.nas-club.co.jp/inazawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月～金曜日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/inazawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/inazawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "80〜90℃の大型タワーサウナ（テレビ完備）とミストサウナ、平湯・寝湯・マッサージ・水風呂の4つのお風呂", "sourceUrl": "https://www.nas-club.co.jp/inazawa/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-kichijoji"], name: "スポーツクラブNAS吉祥寺", officialUrl: "https://www.nas-club.co.jp/kichijoji/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒180-0003 東京都武蔵野市吉祥寺南町1-27-1", "sourceUrl": "https://www.nas-club.co.jp/kichijoji/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日　10:00～23:00／土・日・祝　9:00～22:00", "sourceUrl": "https://www.nas-club.co.jp/kichijoji/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/kichijoji/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "浴室（お風呂）とサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/kichijoji/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-machiya"], name: "スポーツクラブNAS町屋", officialUrl: "https://www.nas-club.co.jp/machiya/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒116-0002 東京都荒川区荒川6-4-9", "sourceUrl": "https://www.nas-club.co.jp/machiya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/machiya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/machiya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.nas-club.co.jp/machiya/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-matsudo"], name: "スポーツクラブNAS松戸", officialUrl: "https://www.nas-club.co.jp/matsudo/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒271-0091 千葉県松戸市本町4-1（松戸駅西口千葉銀行横）", "sourceUrl": "https://www.nas-club.co.jp/matsudo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 10:00～23:00／土曜日 10:00～21:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/matsudo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/matsudo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/matsudo/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-meinohama"], name: "スポーツクラブNAS姪浜", officialUrl: "https://www.nas-club.co.jp/meinohama/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒819-0005 福岡県福岡市西区内浜1丁目2-11", "sourceUrl": "https://www.nas-club.co.jp/meinohama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平　日　9:00〜23:00／土曜日　9:00〜22:00／日・祝　9:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/meinohama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "金曜日", "sourceUrl": "https://www.nas-club.co.jp/meinohama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "テレビ完備の広々としたサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/meinohama/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-minamirinkan"], name: "スポーツクラブNAS南林間", officialUrl: "https://www.nas-club.co.jp/minamirinkan/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒242-0006 神奈川県大和市南林間1-2-16", "sourceUrl": "https://www.nas-club.co.jp/minamirinkan/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/minamirinkan/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/minamirinkan/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナと、バラエティ豊かな4つのお風呂（大浴槽あり）", "sourceUrl": "https://www.nas-club.co.jp/minamirinkan/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-mizonokuchi"], name: "スポーツクラブNAS溝の口", officialUrl: "https://www.nas-club.co.jp/mizonokuchi/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "神奈川県川崎市高津区溝口1-12-12", "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平　日　10:00～23:00／土曜日　10:00～21:00／日・祝　10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日（木曜祝日含む）", "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女浴室に大浴槽・ジェットバス・ドライサウナを完備（4種のお風呂とサウナ完備）", "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-musashiurawa"], name: "スポーツクラブNAS武蔵浦和", officialUrl: "https://www.nas-club.co.jp/musashiurawa/",
+    features: ["遠赤外線サウナ", "スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒336-0021 埼玉県さいたま市南区別所7-6-8 ライブタワー武蔵浦和3F", "sourceUrl": "https://www.nas-club.co.jp/musashiurawa/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金 10:00～23:00／土曜日 9:00～21:00／日・祝 9:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/musashiurawa/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/musashiurawa/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "遠赤外線サウナ（80～90℃）とミストサウナ、温浴（ジェットバス）・冷浴のあるお風呂", "sourceUrl": "https://www.nas-club.co.jp/musashiurawa/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-nagasaki"], name: "スポーツクラブNAS長崎", officialUrl: "https://www.nas-club.co.jp/nagasaki/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒852-8053 長崎県長崎市葉山1-6-37 サニー道の尾店パーキング棟", "sourceUrl": "https://www.nas-club.co.jp/nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火曜日〜土曜日 10:00〜22:30／日・祝 11:00〜21:00／11:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/nagasaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナ（室内TV完備）とお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/nagasaki/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-nagayama"], name: "スポーツクラブNAS永山", officialUrl: "https://www.nas-club.co.jp/nagayama/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒206-0024 東京都多摩市諏訪2-12 ACROS 4F", "sourceUrl": "https://www.nas-club.co.jp/nagayama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月・水～金曜日 10:00～23:00／土曜日 10:00～22:00／日曜・祝日 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/nagayama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "火曜日", "sourceUrl": "https://www.nas-club.co.jp/nagayama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女共に乾式のサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/nagayama/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-nakayama"], name: "スポーツクラブNAS中山", officialUrl: "https://www.nas-club.co.jp/nakayama/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒226-0014 神奈川県横浜市緑区台村町135-5 パーシモンプラザ 3階", "sourceUrl": "https://www.nas-club.co.jp/nakayama/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/nakayama/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/nakayama/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（テレビ完備）とスチームサウナ、平湯・寝湯・マッサージ湯・水風呂の4つのお風呂", "sourceUrl": "https://www.nas-club.co.jp/nakayama/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-niigata"], name: "スポーツクラブNAS新潟", officialUrl: "https://www.nas-club.co.jp/niigata/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒950-0965 新潟県新潟市中央区新光町1-24", "sourceUrl": "https://www.nas-club.co.jp/niigata/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～19:00", "sourceUrl": "https://www.nas-club.co.jp/niigata/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/niigata/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男性ロッカーにサウナ・水風呂、女性ロッカーに温浴槽とミストサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/niigata/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-nishinippori"], name: "スポーツクラブNAS西日暮里", officialUrl: "https://www.nas-club.co.jp/nishinippori/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒116-0013 東京都荒川区西日暮里5-20-1", "sourceUrl": "https://www.nas-club.co.jp/nishinippori/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平　日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/nishinippori/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/nishinippori/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（テレビ完備）と、平湯・寝湯・マッサージバス・水風呂のスパゾーン", "sourceUrl": "https://www.nas-club.co.jp/nishinippori/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-odaka"], name: "スポーツクラブNAS大高", officialUrl: "https://www.nas-club.co.jp/odaka/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒459-8013 愛知県名古屋市緑区高根山1-1501", "sourceUrl": "https://www.nas-club.co.jp/odaka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～21:00／日祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/odaka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/odaka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（TV付）と、シルキーバス・寝湯・マッサージバス・水風呂・露天風呂の5種類のスパゾーン", "sourceUrl": "https://www.nas-club.co.jp/odaka/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-oita"], name: "スポーツクラブNASパークプレイス大分", officialUrl: "https://www.nas-club.co.jp/oita/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒870-0174 大分県大分市公園通り西1丁目6675-4", "sourceUrl": "https://www.nas-club.co.jp/oita/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平　日　10:00〜23:00／土曜日　10:00〜22:00／日・祝　10:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/oita/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/oita/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（テレビ完備）とバラエティ豊かな4つのお風呂（シルキーバスあり）", "sourceUrl": "https://www.nas-club.co.jp/oita/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-osakadome"], name: "スポーツクラブNAS大阪ドームシティ", officialUrl: "https://www.nas-club.co.jp/osakadome/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒550-0025 大阪府大阪市西区九条南1-12-33 フォレオ大阪ドームシティ3F", "sourceUrl": "https://www.nas-club.co.jp/osakadome/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00〜23:00／土曜日 10:00〜22:00／日・祝 10:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/osakadome/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/osakadome/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女ともに利用できるサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/osakadome/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-osaki"], name: "スポーツクラブNAS大崎", officialUrl: "https://www.nas-club.co.jp/osaki/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒141-0032 東京都品川区大崎2-1-3 ダイワロイネットホテル（フロント2F）", "sourceUrl": "https://www.nas-club.co.jp/osaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火〜金 7:00～23:00／土曜日 9:30～22:00", "sourceUrl": "https://www.nas-club.co.jp/osaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/osaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "テレビ完備のサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/osaki/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-otsu"], name: "スポーツクラブNAS大津一里山", officialUrl: "https://www.nas-club.co.jp/otsu/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒520-2153 滋賀県大津市一里山7-1-1 フォレオ大津一里山内", "sourceUrl": "https://www.nas-club.co.jp/otsu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～19:00", "sourceUrl": "https://www.nas-club.co.jp/otsu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/otsu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ミストサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/otsu/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-oyumino"], name: "スポーツクラブNASおゆみ野", officialUrl: "https://www.nas-club.co.jp/oyumino/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒266-0031 千葉県千葉市緑区おゆみ野5-43-2", "sourceUrl": "https://www.nas-club.co.jp/oyumino/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/oyumino/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/oyumino/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/oyumino/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-rivercity21"], name: "NASリバーシティ21", officialUrl: "https://www.nas-club.co.jp/rivercity21/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒104-0051 東京都中央区佃2-2-9", "sourceUrl": "https://www.nas-club.co.jp/rivercity21/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "月～木曜日 10:00～23:00／土曜日 10:00～21:00／日・祝 10:00～21:00", "sourceUrl": "https://www.nas-club.co.jp/rivercity21/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "金曜日", "sourceUrl": "https://www.nas-club.co.jp/rivercity21/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "広い空間のサウナと、さら湯・ぬる湯・水風呂・マッサージ風呂のスパ施設", "sourceUrl": "https://www.nas-club.co.jp/rivercity21/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-rokakoen"], name: "スポーツクラブNAS芦花公園", officialUrl: "https://www.nas-club.co.jp/rokakoen/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒157-0062 東京都世田谷区南烏山1-10-22 1・2F", "sourceUrl": "https://www.nas-club.co.jp/rokakoen/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 8:00～23:00／土曜日 8:00～21:00／日・祝 8:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/rokakoen/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/rokakoen/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "男女シャワーブース内にミストサウナを完備", "sourceUrl": "https://www.nas-club.co.jp/rokakoen/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-ropponmatsu"], name: "スポーツクラブNAS六本松", officialUrl: "https://www.nas-club.co.jp/ropponmatsu/",
+    features: ["スチーム(ミスト)サウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒810-0044 福岡県福岡市中央区六本松2-2-20", "sourceUrl": "https://www.nas-club.co.jp/ropponmatsu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～22:00／日祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/ropponmatsu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/ropponmatsu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナとミストサウナ、平湯・寝湯・マッサージバス・水風呂のスパゾーン", "sourceUrl": "https://www.nas-club.co.jp/ropponmatsu/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-sapporo"], name: "スポーツクラブNAS札幌", officialUrl: "https://www.nas-club.co.jp/sapporo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒063-0062 北海道札幌市西区西町南6丁目1番1号 イオン札幌西町ショッピング", "sourceUrl": "https://www.nas-club.co.jp/sapporo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金 10:00～22:00／土曜日 10:00～20:00／日・祝 10:00～18:00", "sourceUrl": "https://www.nas-club.co.jp/sapporo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/sapporo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/sapporo/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-seisekisakuragaoka"], name: "スポーツクラブNAS聖蹟桜ヶ丘", officialUrl: "https://www.nas-club.co.jp/seisekisakuragaoka/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒206-0011 東京都多摩市関戸1-7-5 京王聖蹟桜ヶ丘ショッピングセンターC館3F", "sourceUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～土曜日 9:00～22:30／日・祝 9:00～20:00／火～土曜日 9:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-seya"], name: "スポーツクラブNAS瀬谷", officialUrl: "https://www.nas-club.co.jp/seya/",
+    features: ["スチーム(ミスト)サウナ"],
+    facts: [
+      {"label": "住所", "value": "〒246-0031 神奈川県横浜市瀬谷区瀬谷4-7-5", "sourceUrl": "https://www.nas-club.co.jp/seya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/seya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "水曜日", "sourceUrl": "https://www.nas-club.co.jp/seya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（テレビ完備）とミストサウナ、バラエティ豊かな4つのお風呂", "sourceUrl": "https://www.nas-club.co.jp/seya/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-shinkamagaya"], name: "スポーツクラブNAS新鎌ヶ谷", officialUrl: "https://www.nas-club.co.jp/shinkamagaya/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒273-0107 千葉県鎌ケ谷市新鎌ケ谷2-12-1 アクロスモール新鎌ケ谷3F", "sourceUrl": "https://www.nas-club.co.jp/shinkamagaya/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火～金曜日 10:00～23:00／土・日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/shinkamagaya/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/shinkamagaya/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナと、ジェット付きの温浴・水風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/shinkamagaya/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-shinkawasaki"], name: "スポーツクラブNAS新川崎", officialUrl: "https://www.nas-club.co.jp/shinkawasaki/",
+    features: ["ドライサウナ", "水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒212-0032 神奈川県川崎市幸区新川崎5-2 シンカモール4F-5F", "sourceUrl": "https://www.nas-club.co.jp/shinkawasaki/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/shinkawasaki/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/shinkawasaki/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "TV付大型タワーサウナ（ドライサウナ）と、露天風呂・平湯・寝湯・ジェットバス・水風呂のスパゾーン", "sourceUrl": "https://www.nas-club.co.jp/shinkawasaki/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-shonandai"], name: "スポーツクラブNAS湘南台", officialUrl: "https://www.nas-club.co.jp/shonandai/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒252-0804 神奈川県藤沢市湘南台1-7-7", "sourceUrl": "https://www.nas-club.co.jp/shonandai/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/shonandai/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "水曜日", "sourceUrl": "https://www.nas-club.co.jp/shonandai/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナと水風呂、平湯・寝湯・マッサージ風呂の4種類のお風呂", "sourceUrl": "https://www.nas-club.co.jp/shonandai/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-sunmarche"], name: "スポーツクラブNASサンマルシェ", officialUrl: "https://www.nas-club.co.jp/sunmarche/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒487-0011 愛知県春日井市中央台2-1-11", "sourceUrl": "https://www.nas-club.co.jp/sunmarche/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火〜金 10:00〜23:00／土曜日 9:00〜22:00／日・祝 9:00〜20:00", "sourceUrl": "https://www.nas-club.co.jp/sunmarche/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/sunmarche/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナと男女それぞれの温冷のお風呂", "sourceUrl": "https://www.nas-club.co.jp/sunmarche/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-takao"], name: "スポーツクラブNAS高尾", officialUrl: "https://www.nas-club.co.jp/takao/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒193-0834 東京都八王子市東浅川町550-1 イーアス高尾2F", "sourceUrl": "https://www.nas-club.co.jp/takao/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～22:00／日祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/takao/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/takao/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "タワーサウナ（TV付）と大きなお風呂、寝湯・マッサージバス・水風呂", "sourceUrl": "https://www.nas-club.co.jp/takao/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-totsuka"], name: "スポーツクラブNAS戸塚", officialUrl: "https://www.nas-club.co.jp/totsuka/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒244-0817 神奈川県横浜市戸塚区吉田町3001-3", "sourceUrl": "https://www.nas-club.co.jp/totsuka/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜日 10:00～22:00／日・祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/totsuka/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/totsuka/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "サウナと、水風呂・寝湯など計4種類のお風呂（大浴槽あり）", "sourceUrl": "https://www.nas-club.co.jp/totsuka/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-vitparksapporo"], name: "スポーツクラブNAS Vit Park 札幌", officialUrl: "https://www.nas-club.co.jp/vitparksapporo/",
+    features: [],
+    facts: [
+      {"label": "住所", "value": "〒060-0034 北海道札幌市中央区北4条東7丁目", "sourceUrl": "https://www.nas-club.co.jp/vitparksapporo/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平日 10:00～23:00／土曜 10:00～21:00／日祝 10:00～20:00", "sourceUrl": "https://www.nas-club.co.jp/vitparksapporo/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "木曜日", "sourceUrl": "https://www.nas-club.co.jp/vitparksapporo/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "4つのお風呂と大型サウナを備えた本格スパゾーン", "sourceUrl": "https://www.nas-club.co.jp/vitparksapporo/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-woodytown"], name: "スポーツクラブNASウッディタウン", officialUrl: "https://www.nas-club.co.jp/woodytown/",
+    features: ["ドライサウナ"],
+    facts: [
+      {"label": "住所", "value": "〒669-1322 兵庫県三田市すずかけ台 2-3-1 えるむプラザ3F", "sourceUrl": "https://www.nas-club.co.jp/woodytown/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "火〜金 10:00〜23:00／土曜日 10:00〜22:00／日・祝 10:00〜19:00", "sourceUrl": "https://www.nas-club.co.jp/woodytown/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "月曜日", "sourceUrl": "https://www.nas-club.co.jp/woodytown/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "ドライサウナとお風呂を完備", "sourceUrl": "https://www.nas-club.co.jp/woodytown/info/", "checkedAt": "2026-11-27"},
+    ],
+  },
+  {
+    ids: ["manual-nas-nakamozu"], name: "スポーツクラブNASなかもず", officialUrl: "https://www.nas-club.co.jp/nakamozu/",
+    features: ["水風呂あり"],
+    facts: [
+      {"label": "住所", "value": "〒591-8023 大阪府堺市北区中百舌鳥町2-68", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/", "checkedAt": "2026-11-27"},
+      {"label": "営業時間", "value": "平　日 10:00～23:00／土曜日 10:00～22:00", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/", "checkedAt": "2026-11-27"},
+      {"label": "定休日", "value": "金曜日", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/", "checkedAt": "2026-11-27"},
+      {"label": "設備", "value": "平湯・寝湯・マッサージバス・水風呂のスパゾーンとタワーサウナ", "sourceUrl": "https://www.nas-club.co.jp/nakamozu/pc/info/", "checkedAt": "2026-11-27"},
+    ],
   }
 ];
 

@@ -81984,5 +81984,1003 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://www.megalos.co.jp/tabata_reflet/",
     "officialUrl": "https://www.megalos.co.jp/tabata_reflet/"
+  },
+  {
+    "id": "manual-renaissance-ryogoku",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 両国24",
+    "prefecture": "東京都",
+    "address": "〒130-0026 東京都 墨田区両国2-10-14",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "墨田区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/ryogoku/",
+    "officialUrl": "https://www.s-re.jp/ryogoku/"
+  },
+  {
+    "id": "manual-renaissance-musashikoyama",
+    "name": "フィットネスクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext武蔵小山24",
+    "prefecture": "東京都",
+    "address": "〒142-0062 東京都品川区小山3-4-8 エトモ武蔵小山3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/musashikoyama/",
+    "officialUrl": "https://www.s-re.jp/musashikoyama/"
+  },
+  {
+    "id": "manual-renaissance-himonya",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext碑文谷",
+    "prefecture": "東京都",
+    "address": "〒152-0003 東京都目黒区碑文谷5-13-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "目黒区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/himonya/",
+    "officialUrl": "https://www.s-re.jp/himonya/"
+  },
+  {
+    "id": "manual-renaissance-futakotamagawa",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNext二子玉川",
+    "prefecture": "東京都",
+    "address": "〒158-0094 東京都世田谷区玉川1-14-1二子玉川ライズ・ショッピングセンター・テラスマーケット内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/futakotamagawa/",
+    "officialUrl": "https://www.s-re.jp/futakotamagawa/"
+  },
+  {
+    "id": "manual-renaissance-waseda",
+    "name": "スポーツクラブ ルネサンス 早稲田",
+    "prefecture": "東京都",
+    "address": "〒171-0033 東京都 豊島区高田1-19-24",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "豊島区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/waseda/",
+    "officialUrl": "https://www.s-re.jp/waseda/"
+  },
+  {
+    "id": "manual-renaissance-shintokorozawa",
+    "name": "スイミングクラブ ルネサンス 新所沢",
+    "prefecture": "埼玉県",
+    "address": "〒359-0045 埼玉県 所沢市美原町2-2966",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "所沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/shintokorozawa/",
+    "officialUrl": "https://www.s-re.jp/shintokorozawa/"
+  },
+  {
+    "id": "manual-renaissance-aeontown-yoshikawaminami",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス・イオンタウン吉川美南",
+    "prefecture": "埼玉県",
+    "address": "〒342-0038 埼玉県吉川市美南3丁目25-1 イオンタウン吉川美南 東街区3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "吉川市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "オートロウリュ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/",
+    "officialUrl": "https://www.s-re.jp/aeontown-yoshikawaminami/"
+  },
+  {
+    "id": "manual-renaissance-makuhari",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 幕張24",
+    "prefecture": "千葉県",
+    "address": "〒262-0032 千葉県千葉市花見川区幕張町4-544-41",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "オートロウリュ",
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/makuhari/",
+    "officialUrl": "https://www.s-re.jp/makuhari/"
+  },
+  {
+    "id": "manual-renaissance-takanodai",
+    "name": "ルネサンス 鷹之台テニスクラブ",
+    "prefecture": "千葉県",
+    "address": "〒262-0001 千葉県 千葉市花見川区横戸町810",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/takanodai/",
+    "officialUrl": "https://www.s-re.jp/takanodai/"
+  },
+  {
+    "id": "manual-renaissance-urayasu",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 浦安24",
+    "prefecture": "千葉県",
+    "address": "〒279-0002 千葉県 浦安市北栄2-6-18",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "浦安市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "オートロウリュ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/urayasu/",
+    "officialUrl": "https://www.s-re.jp/urayasu/"
+  },
+  {
+    "id": "manual-renaissance-aobadai",
+    "name": "スポーツクラブ＆スパ ルネサンス・アトリオドゥーエ Next 青葉台24",
+    "prefecture": "神奈川県",
+    "address": "〒227-0062 神奈川県横浜市青葉区青葉台1-2-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/aobadai/",
+    "officialUrl": "https://www.s-re.jp/aobadai/"
+  },
+  {
+    "id": "manual-renaissance-tamaplaza",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス・アトリオドゥーエNextたまプラーザ",
+    "prefecture": "神奈川県",
+    "address": "〒225-8535 神奈川県 横浜市青葉区新石川2-2-1たまプラーザテラス サウスプラザ内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/tamaplaza/",
+    "officialUrl": "https://www.s-re.jp/tamaplaza/"
+  },
+  {
+    "id": "manual-renaissance-yokohama",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 横浜24",
+    "prefecture": "神奈川県",
+    "address": "〒220-0073 神奈川県横浜市西区岡野2-15-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/yokohama/",
+    "officialUrl": "https://www.s-re.jp/yokohama/"
+  },
+  {
+    "id": "manual-renaissance-himeji",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 姫路",
+    "prefecture": "兵庫県",
+    "address": "〒670-0821 兵庫県姫路市東郷町1454-3リオス4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "姫路市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/himeji/",
+    "officialUrl": "https://www.s-re.jp/himeji/"
+  },
+  {
+    "id": "manual-renaissance-higashihiroshima",
+    "name": "スポーツクラブ＆サウナ ルネサンス 東広島24",
+    "prefecture": "広島県",
+    "address": "〒739-0024 広島県東広島市西条町御薗宇上戸6100",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "東広島市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/higashihiroshima/",
+    "officialUrl": "https://www.s-re.jp/higashihiroshima/"
+  },
+  {
+    "id": "manual-renaissance-rycom",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス・ライカム24",
+    "prefecture": "沖縄県",
+    "address": "〒901-2306 沖縄県中頭郡北中城村字ライカム　640番地",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "北中城村",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/rycom/",
+    "officialUrl": "https://www.s-re.jp/rycom/"
+  },
+  {
+    "id": "manual-renaissance-sapporo-hiragishi",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 札幌平岸24",
+    "prefecture": "北海道",
+    "address": "〒062-0932 北海道 札幌市豊平区平岸2条11丁目3-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/sapporo-hiragishi/",
+    "officialUrl": "https://www.s-re.jp/sapporo-hiragishi/"
+  },
+  {
+    "id": "manual-renaissance-higashisapporo",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 東札幌24",
+    "prefecture": "北海道",
+    "address": "〒003-0004 北海道札幌市白石区東札幌４条１丁目1‐1 ラソラ札幌Bタウン2階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/higashisapporo/",
+    "officialUrl": "https://www.s-re.jp/higashisapporo/"
+  },
+  {
+    "id": "manual-renaissance-hakodate",
+    "name": "スポーツクラブ＆サウナスパ ルネサンス 函館24",
+    "prefecture": "北海道",
+    "address": "〒041-0852 北海道 函館市鍛治2-6-15",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "函館市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/hakodate/",
+    "officialUrl": "https://www.s-re.jp/hakodate/"
+  },
+  {
+    "id": "manual-renaissance-sendai-nagamachiminami",
+    "name": "スポーツクラブ＆サウナ ルネサンス 仙台長町南24",
+    "prefecture": "宮城県",
+    "address": "〒982-0011 宮城県 仙台市太白区長町8-22-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "仙台市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.s-re.jp/sendai-nagamachiminami/",
+    "officialUrl": "https://www.s-re.jp/sendai-nagamachiminami/"
+  },
+  {
+    "id": "manual-nas-abeno",
+    "name": "スポーツクラブNASあべの",
+    "prefecture": "大阪府",
+    "address": "〒545-0053 大阪府大阪市阿倍野区松崎町2-3-47",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/abeno/",
+    "officialUrl": "https://www.nas-club.co.jp/abeno/"
+  },
+  {
+    "id": "manual-nas-fujisawa",
+    "name": "スポーツクラブNAS藤沢",
+    "prefecture": "神奈川県",
+    "address": "〒251-0052 神奈川県藤沢市藤沢490-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "藤沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/fujisawa/",
+    "officialUrl": "https://www.nas-club.co.jp/fujisawa/"
+  },
+  {
+    "id": "manual-nas-fushimimomoyama",
+    "name": "スポーツクラブNAS伏見桃山",
+    "prefecture": "京都府",
+    "address": "〒612-8061 京都府京都市伏見区竹中町609",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "京都市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/fushimimomoyama/",
+    "officialUrl": "https://www.nas-club.co.jp/fushimimomoyama/"
+  },
+  {
+    "id": "manual-nas-hakata",
+    "name": "スポーツクラブNAS博多",
+    "prefecture": "福岡県",
+    "address": "〒812-0892 福岡県福岡市博多区東那珂1丁目14-46 フォレオ博多3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/hakata/",
+    "officialUrl": "https://www.nas-club.co.jp/hakata/"
+  },
+  {
+    "id": "manual-nas-hikarigaoka",
+    "name": "スポーツクラブNAS光が丘",
+    "prefecture": "東京都",
+    "address": "〒179-0072 東京都練馬区光が丘5-1-1 光が丘IMA イマミセ5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "練馬区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/hikarigaoka/",
+    "officialUrl": "https://www.nas-club.co.jp/hikarigaoka/"
+  },
+  {
+    "id": "manual-nas-inazawa",
+    "name": "スポーツクラブNAS稲沢",
+    "prefecture": "愛知県",
+    "address": "〒492-8218 愛知県稲沢市西町3-15-54 「ニッケタウン稲沢」内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "稲沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/inazawa/",
+    "officialUrl": "https://www.nas-club.co.jp/inazawa/"
+  },
+  {
+    "id": "manual-nas-kichijoji",
+    "name": "スポーツクラブNAS吉祥寺",
+    "prefecture": "東京都",
+    "address": "〒180-0003 東京都武蔵野市吉祥寺南町1-27-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "武蔵野市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/kichijoji/",
+    "officialUrl": "https://www.nas-club.co.jp/kichijoji/"
+  },
+  {
+    "id": "manual-nas-machiya",
+    "name": "スポーツクラブNAS町屋",
+    "prefecture": "東京都",
+    "address": "〒116-0002 東京都荒川区荒川6-4-9",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "荒川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/machiya/",
+    "officialUrl": "https://www.nas-club.co.jp/machiya/"
+  },
+  {
+    "id": "manual-nas-matsudo",
+    "name": "スポーツクラブNAS松戸",
+    "prefecture": "千葉県",
+    "address": "〒271-0091 千葉県松戸市本町4-1（松戸駅西口千葉銀行横）",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "松戸市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/matsudo/",
+    "officialUrl": "https://www.nas-club.co.jp/matsudo/"
+  },
+  {
+    "id": "manual-nas-meinohama",
+    "name": "スポーツクラブNAS姪浜",
+    "prefecture": "福岡県",
+    "address": "〒819-0005 福岡県福岡市西区内浜1丁目2-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/meinohama/",
+    "officialUrl": "https://www.nas-club.co.jp/meinohama/"
+  },
+  {
+    "id": "manual-nas-minamirinkan",
+    "name": "スポーツクラブNAS南林間",
+    "prefecture": "神奈川県",
+    "address": "〒242-0006 神奈川県大和市南林間1-2-16",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "大和市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/minamirinkan/",
+    "officialUrl": "https://www.nas-club.co.jp/minamirinkan/"
+  },
+  {
+    "id": "manual-nas-mizonokuchi",
+    "name": "スポーツクラブNAS溝の口",
+    "prefecture": "神奈川県",
+    "address": "神奈川県川崎市高津区溝口1-12-12",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/mizonokuchi/",
+    "officialUrl": "https://www.nas-club.co.jp/mizonokuchi/"
+  },
+  {
+    "id": "manual-nas-musashiurawa",
+    "name": "スポーツクラブNAS武蔵浦和",
+    "prefecture": "埼玉県",
+    "address": "〒336-0021 埼玉県さいたま市南区別所7-6-8 ライブタワー武蔵浦和3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "さいたま市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "遠赤外線サウナ",
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/musashiurawa/",
+    "officialUrl": "https://www.nas-club.co.jp/musashiurawa/"
+  },
+  {
+    "id": "manual-nas-nagasaki",
+    "name": "スポーツクラブNAS長崎",
+    "prefecture": "長崎県",
+    "address": "〒852-8053 長崎県長崎市葉山1-6-37 サニー道の尾店パーキング棟",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "長崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/nagasaki/",
+    "officialUrl": "https://www.nas-club.co.jp/nagasaki/"
+  },
+  {
+    "id": "manual-nas-nagayama",
+    "name": "スポーツクラブNAS永山",
+    "prefecture": "東京都",
+    "address": "〒206-0024 東京都多摩市諏訪2-12 ACROS 4F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "多摩市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/nagayama/",
+    "officialUrl": "https://www.nas-club.co.jp/nagayama/"
+  },
+  {
+    "id": "manual-nas-nakayama",
+    "name": "スポーツクラブNAS中山",
+    "prefecture": "神奈川県",
+    "address": "〒226-0014 神奈川県横浜市緑区台村町135-5 パーシモンプラザ 3階",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/nakayama/",
+    "officialUrl": "https://www.nas-club.co.jp/nakayama/"
+  },
+  {
+    "id": "manual-nas-niigata",
+    "name": "スポーツクラブNAS新潟",
+    "prefecture": "新潟県",
+    "address": "〒950-0965 新潟県新潟市中央区新光町1-24",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "新潟市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/niigata/",
+    "officialUrl": "https://www.nas-club.co.jp/niigata/"
+  },
+  {
+    "id": "manual-nas-nishinippori",
+    "name": "スポーツクラブNAS西日暮里",
+    "prefecture": "東京都",
+    "address": "〒116-0013 東京都荒川区西日暮里5-20-1",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "荒川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/nishinippori/",
+    "officialUrl": "https://www.nas-club.co.jp/nishinippori/"
+  },
+  {
+    "id": "manual-nas-odaka",
+    "name": "スポーツクラブNAS大高",
+    "prefecture": "愛知県",
+    "address": "〒459-8013 愛知県名古屋市緑区高根山1-1501",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "名古屋市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/odaka/",
+    "officialUrl": "https://www.nas-club.co.jp/odaka/"
+  },
+  {
+    "id": "manual-nas-oita",
+    "name": "スポーツクラブNASパークプレイス大分",
+    "prefecture": "大分県",
+    "address": "〒870-0174 大分県大分市公園通り西1丁目6675-4",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "大分市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/oita/",
+    "officialUrl": "https://www.nas-club.co.jp/oita/"
+  },
+  {
+    "id": "manual-nas-osakadome",
+    "name": "スポーツクラブNAS大阪ドームシティ",
+    "prefecture": "大阪府",
+    "address": "〒550-0025 大阪府大阪市西区九条南1-12-33 フォレオ大阪ドームシティ3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "大阪市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/osakadome/",
+    "officialUrl": "https://www.nas-club.co.jp/osakadome/"
+  },
+  {
+    "id": "manual-nas-osaki",
+    "name": "スポーツクラブNAS大崎",
+    "prefecture": "東京都",
+    "address": "〒141-0032 東京都品川区大崎2-1-3 ダイワロイネットホテル（フロント2F）",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "品川区",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/osaki/",
+    "officialUrl": "https://www.nas-club.co.jp/osaki/"
+  },
+  {
+    "id": "manual-nas-otsu",
+    "name": "スポーツクラブNAS大津一里山",
+    "prefecture": "滋賀県",
+    "address": "〒520-2153 滋賀県大津市一里山7-1-1 フォレオ大津一里山内",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "大津市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/otsu/",
+    "officialUrl": "https://www.nas-club.co.jp/otsu/"
+  },
+  {
+    "id": "manual-nas-oyumino",
+    "name": "スポーツクラブNASおゆみ野",
+    "prefecture": "千葉県",
+    "address": "〒266-0031 千葉県千葉市緑区おゆみ野5-43-2",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "千葉市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/oyumino/",
+    "officialUrl": "https://www.nas-club.co.jp/oyumino/"
+  },
+  {
+    "id": "manual-nas-rivercity21",
+    "name": "NASリバーシティ21",
+    "prefecture": "東京都",
+    "address": "〒104-0051 東京都中央区佃2-2-9",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "中央区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/rivercity21/",
+    "officialUrl": "https://www.nas-club.co.jp/rivercity21/"
+  },
+  {
+    "id": "manual-nas-rokakoen",
+    "name": "スポーツクラブNAS芦花公園",
+    "prefecture": "東京都",
+    "address": "〒157-0062 東京都世田谷区南烏山1-10-22 1・2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "世田谷区",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/rokakoen/",
+    "officialUrl": "https://www.nas-club.co.jp/rokakoen/"
+  },
+  {
+    "id": "manual-nas-ropponmatsu",
+    "name": "スポーツクラブNAS六本松",
+    "prefecture": "福岡県",
+    "address": "〒810-0044 福岡県福岡市中央区六本松2-2-20",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "福岡市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/ropponmatsu/",
+    "officialUrl": "https://www.nas-club.co.jp/ropponmatsu/"
+  },
+  {
+    "id": "manual-nas-sapporo",
+    "name": "スポーツクラブNAS札幌",
+    "prefecture": "北海道",
+    "address": "〒063-0062 北海道札幌市西区西町南6丁目1番1号 イオン札幌西町ショッピング",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/sapporo/",
+    "officialUrl": "https://www.nas-club.co.jp/sapporo/"
+  },
+  {
+    "id": "manual-nas-seisekisakuragaoka",
+    "name": "スポーツクラブNAS聖蹟桜ヶ丘",
+    "prefecture": "東京都",
+    "address": "〒206-0011 東京都多摩市関戸1-7-5 京王聖蹟桜ヶ丘ショッピングセンターC館3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "多摩市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/",
+    "officialUrl": "https://www.nas-club.co.jp/seisekisakuragaoka/"
+  },
+  {
+    "id": "manual-nas-seya",
+    "name": "スポーツクラブNAS瀬谷",
+    "prefecture": "神奈川県",
+    "address": "〒246-0031 神奈川県横浜市瀬谷区瀬谷4-7-5",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "スチーム(ミスト)サウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/seya/",
+    "officialUrl": "https://www.nas-club.co.jp/seya/"
+  },
+  {
+    "id": "manual-nas-shinkamagaya",
+    "name": "スポーツクラブNAS新鎌ヶ谷",
+    "prefecture": "千葉県",
+    "address": "〒273-0107 千葉県鎌ケ谷市新鎌ケ谷2-12-1 アクロスモール新鎌ケ谷3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "鎌ケ谷市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/shinkamagaya/",
+    "officialUrl": "https://www.nas-club.co.jp/shinkamagaya/"
+  },
+  {
+    "id": "manual-nas-shinkawasaki",
+    "name": "スポーツクラブNAS新川崎",
+    "prefecture": "神奈川県",
+    "address": "〒212-0032 神奈川県川崎市幸区新川崎5-2 シンカモール4F-5F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "川崎市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ",
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/shinkawasaki/",
+    "officialUrl": "https://www.nas-club.co.jp/shinkawasaki/"
+  },
+  {
+    "id": "manual-nas-shonandai",
+    "name": "スポーツクラブNAS湘南台",
+    "prefecture": "神奈川県",
+    "address": "〒252-0804 神奈川県藤沢市湘南台1-7-7",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "藤沢市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/shonandai/",
+    "officialUrl": "https://www.nas-club.co.jp/shonandai/"
+  },
+  {
+    "id": "manual-nas-sunmarche",
+    "name": "スポーツクラブNASサンマルシェ",
+    "prefecture": "愛知県",
+    "address": "〒487-0011 愛知県春日井市中央台2-1-11",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "春日井市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/sunmarche/",
+    "officialUrl": "https://www.nas-club.co.jp/sunmarche/"
+  },
+  {
+    "id": "manual-nas-takao",
+    "name": "スポーツクラブNAS高尾",
+    "prefecture": "東京都",
+    "address": "〒193-0834 東京都八王子市東浅川町550-1 イーアス高尾2F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "八王子市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/takao/",
+    "officialUrl": "https://www.nas-club.co.jp/takao/"
+  },
+  {
+    "id": "manual-nas-totsuka",
+    "name": "スポーツクラブNAS戸塚",
+    "prefecture": "神奈川県",
+    "address": "〒244-0817 神奈川県横浜市戸塚区吉田町3001-3",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "横浜市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/totsuka/",
+    "officialUrl": "https://www.nas-club.co.jp/totsuka/"
+  },
+  {
+    "id": "manual-nas-vitparksapporo",
+    "name": "スポーツクラブNAS Vit Park 札幌",
+    "prefecture": "北海道",
+    "address": "〒060-0034 北海道札幌市中央区北4条東7丁目",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "札幌市",
+    "trait": "urban",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/vitparksapporo/",
+    "officialUrl": "https://www.nas-club.co.jp/vitparksapporo/"
+  },
+  {
+    "id": "manual-nas-woodytown",
+    "name": "スポーツクラブNASウッディタウン",
+    "prefecture": "兵庫県",
+    "address": "〒669-1322 兵庫県三田市すずかけ台 2-3-1 えるむプラザ3F",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "三田市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "ドライサウナ"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/woodytown/",
+    "officialUrl": "https://www.nas-club.co.jp/woodytown/"
+  },
+  {
+    "id": "manual-nas-nakamozu",
+    "name": "スポーツクラブNASなかもず",
+    "prefecture": "大阪府",
+    "address": "〒591-8023 大阪府堺市北区中百舌鳥町2-68",
+    "addressSource": "公式店舗ページ",
+    "addressCheckedAt": "2026-11-27",
+    "city": "堺市",
+    "trait": "urban",
+    "tags": [],
+    "features": [
+      "水風呂あり"
+    ],
+    "source": "公式",
+    "sourceUrl": "https://www.nas-club.co.jp/nakamozu/",
+    "officialUrl": "https://www.nas-club.co.jp/nakamozu/"
   }
 ];
