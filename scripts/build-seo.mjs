@@ -367,6 +367,7 @@ await copyFile("manifest.webmanifest");
 await write("llms.txt", renderLlmsTxt(await read("llms.txt")));
 await copyFile("google4f1c271dfaceddbb.html");
 await copyFile("sitemap-test.xml");
+await copyFile("ads.txt");
 await copyAssetFiles(ASSET_FILES);
 for (const name of await fs.readdir(path.join(ROOT, "assets", "news")).catch(() => [])) {
   if (name !== "manifest.json") await copyFile(`assets/news/${name}`);
