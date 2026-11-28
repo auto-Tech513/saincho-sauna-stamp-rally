@@ -945,7 +945,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1191/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "青森県つがる市木造若緑52",
+    "officialUrl": "https://www.city.tsugaru.aomori.jp/soshiki/keizai/kankouburando/kanko/hotel_hotspring/6793.html"
   },
   {
     "id": "st-aomori-1230",
@@ -960,7 +962,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1230/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "青森県つがる市車力町花林48",
+    "officialUrl": "https://sr-onsen.com/"
   },
   {
     "id": "st-aomori-1212",
@@ -1066,7 +1070,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1185/",
     "city": "西津軽郡深浦町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "青森県西津軽郡深浦町大字舮作字下清滝15",
+    "officialUrl": "https://www.furofushi.com/"
   },
   {
     "id": "st-aomori-942",
@@ -1096,7 +1102,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4281/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "青森県平川市岩館長田97-1",
+    "officialUrl": "http://www.hanano-yu.net/"
   },
   {
     "id": "st-aomori-4166",
@@ -1142,7 +1150,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1205/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "青森県弘前市五所字野沢41-1",
+    "officialUrl": "https://www.city.hirosaki.aomori.jp/gaiyou/shisetsu/2026-0213-gosyo-hot-spring.html"
   },
   {
     "id": "st-aomori-1231",
@@ -1436,7 +1446,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1314/",
     "city": "胆沢郡金ケ崎町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "岩手県胆沢郡金ケ崎町永沢石持沢6-284",
+    "officialUrl": "http://yumenoyu.jp/"
   },
   {
     "id": "st-iwate-3881",
@@ -1601,7 +1613,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1361/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "岩手県八幡平市平笠第24地割728",
+    "officialUrl": "https://yakehashiri.jimdofree.com/"
   },
   {
     "id": "st-iwate-3362",
@@ -1685,7 +1699,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1353/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "岩手県二戸市浄法寺町野黒沢133-1",
+    "officialUrl": "https://tendainoyu.co.jp/"
   },
   {
     "id": "st-iwate-1359",
@@ -1701,7 +1717,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1359/",
     "city": "宮古市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "岩手県宮古市茂市8-53",
+    "officialUrl": "http://www.miyakoyuttari.jp/"
   },
   {
     "id": "st-iwate-1313",
@@ -1711,7 +1729,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1313/",
     "city": "八幡平市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "岩手県八幡平市松尾寄木1-590-4",
+    "officialUrl": "https://8mantai.jp/"
   },
   {
     "id": "st-iwate-1320",
@@ -2099,7 +2119,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1440/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "宮城県宮城郡七ヶ浜町吉田浜字野山5-1",
+    "officialUrl": "https://www.shichigahama.com/aquarena/facility01.html"
   },
   {
     "id": "st-miyagi-1444",
@@ -2253,7 +2275,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1422/",
     "city": "加美郡加美町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "宮城県加美郡加美町字味ヶ袋薬莱原1-76",
+    "officialUrl": "https://www.town.kami.miyagi.jp/soshikikarasagasu/shoukoukankou/kanko_tokusan/4/435.html"
   },
   {
     "id": "st-miyagi-276",
@@ -2268,7 +2292,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/276/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "宮城県仙台市泉区大沢2丁目5-9",
+    "officialUrl": "https://ryusenjinoyu.com/izumi/"
   },
   {
     "id": "st-akita-1271",
@@ -2869,7 +2895,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1400/",
     "city": "鶴岡市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山形県鶴岡市熊出字東村157-3",
+    "officialUrl": "https://www.yamagatakanko.com/"
   },
   {
     "id": "st-yamagata-4423",
@@ -3288,7 +3316,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1379/",
     "city": "鶴岡市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山形県鶴岡市由良三丁目16-31",
+    "officialUrl": "https://yaotome.in.net/"
   },
   {
     "id": "st-yamagata-1375",
@@ -3304,7 +3334,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1375/",
     "city": "鶴岡市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山形県鶴岡市湯野浜2-4-47",
+    "officialUrl": "https://www.tatsunoyu.jp/"
   },
   {
     "id": "st-yamagata-1392",
@@ -3314,7 +3346,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1392/",
     "city": "鶴岡市 宿泊者限定",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山形県鶴岡市湯温海丁1",
+    "officialUrl": "https://www.bankokuya.jp/"
   },
   {
     "id": "st-fukushima-4629",
@@ -3674,7 +3708,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1450/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "福島県会津若松市大戸町大字芦ノ牧字下平984",
+    "officialUrl": "http://www.ookawaso.co.jp/"
   },
   {
     "id": "st-fukushima-2708",
@@ -4284,7 +4320,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1671/",
     "city": "ひたちなか市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "茨城県ひたちなか市東石川六ツ野3378-17",
+    "officialUrl": "http://acatsuki.co.jp/katsuta"
   },
   {
     "id": "st-ibaraki-1648",
@@ -4300,7 +4338,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1648/",
     "city": "東茨城郡城里町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "茨城県東茨城郡城里町下古内1829-3",
+    "officialUrl": "https://www.hororunoyu.jp/"
   },
   {
     "id": "st-ibaraki-4594",
@@ -4525,7 +4565,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1523/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県真岡市長田1-24-3",
+    "officialUrl": "https://www.sparesort-livemax.com/"
   },
   {
     "id": "st-tochigi-1547",
@@ -4590,7 +4632,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1538/",
     "city": "那須郡那珂川町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県那須郡那珂川町小川1065番地",
+    "officialUrl": "https://mahorobanoyu.com/"
   },
   {
     "id": "st-tochigi-1536",
@@ -4605,7 +4649,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1536/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県那須塩原市関谷1425-211",
+    "officialUrl": "http://www.mikaerinosato.jp/"
   },
   {
     "id": "st-tochigi-1579",
@@ -4635,7 +4681,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1533/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県日光市鬼怒川温泉大原1021",
+    "officialUrl": "https://kgh.co.jp/"
   },
   {
     "id": "st-tochigi-1566",
@@ -4703,7 +4751,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1550/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県那須塩原市塩原2340-1",
+    "officialUrl": "https://www.kouunsou.com/"
   },
   {
     "id": "st-tochigi-1526",
@@ -4721,7 +4771,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1526/",
     "city": "大田原市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県大田原市佐久山2508",
+    "officialUrl": "https://kiminoyu.jp/"
   },
   {
     "id": "st-tochigi-332",
@@ -4736,7 +4788,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/332/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県佐野市小中町215",
+    "officialUrl": "https://www.yasuraginoyu.jp/sano"
   },
   {
     "id": "st-tochigi-331",
@@ -4753,7 +4807,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/331/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県小山市東城南5丁目26-5",
+    "officialUrl": "https://www.yasuraginoyu.jp/oyama"
   },
   {
     "id": "st-tochigi-4759",
@@ -4816,7 +4872,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1518/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "栃木県日光市中宮祠2482",
+    "officialUrl": "https://www.kanayahotel.co.jp/ckh/hotspring/"
   },
   {
     "id": "st-tochigi-1561",
@@ -5045,7 +5103,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1588/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県利根郡みなかみ町猿ヶ京温泉1150-1",
+    "officialUrl": "https://www.mantenboshinoyu.com/"
   },
   {
     "id": "st-gumma-4492",
@@ -5075,7 +5135,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1589/",
     "city": "北群馬郡吉岡町",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県北群馬郡吉岡町漆原1989番地",
+    "officialUrl": "https://www.yoshioka-onsen.jp/rivertopia/facility.html"
   },
   {
     "id": "gunma-private-sauna-zero",
@@ -5165,7 +5227,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1641/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県吾妻郡嬬恋村芦生田533",
+    "officialUrl": "https://yamadaya-onsen.com/"
   },
   {
     "id": "st-gumma-1614",
@@ -5180,7 +5244,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1614/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県多野郡上野村大字楢原塩ノ沢888",
+    "officialUrl": "https://yamabiko-so.com/"
   },
   {
     "id": "st-gumma-1607",
@@ -5195,7 +5261,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1607/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県高崎市榛名湖町846-3",
+    "officialUrl": "https://www.yusuge.co.jp/"
   },
   {
     "id": "st-gumma-1631",
@@ -5204,7 +5272,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/1631/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県安中市磯部1-12-5",
+    "officialUrl": "https://www.isobesuzume.co.jp/"
   },
   {
     "id": "st-gumma-1635",
@@ -5287,7 +5357,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/340/",
     "city": "伊勢崎市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "群馬県伊勢崎市太田町1136番地9号",
+    "officialUrl": "http://www.yumarl.com/"
   },
   {
     "id": "st-gumma-1590",
@@ -8382,7 +8454,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2164/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "富山県富山市大手町4-8",
+    "officialUrl": "https://dormy-hotels.com/dormyinn/hotels/toyama"
   },
   {
     "id": "st-toyama-2168",
@@ -8399,7 +8473,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2168/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "富山県南砺市田向333-1",
+    "officialUrl": "https://www.gokasansou.com/"
   },
   {
     "id": "st-toyama-322",
@@ -8534,7 +8610,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2165/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "富山県砺波市庄川町金屋839",
+    "officialUrl": "https://www.sanrakuen.com/"
   },
   {
     "id": "st-toyama-2912",
@@ -9382,7 +9460,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/491/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "福井県福井市足羽2丁目17-4",
+    "officialUrl": "https://www.huroya.com/"
   },
   {
     "id": "st-fukui-2279",
@@ -9438,7 +9518,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2268/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "福井県勝山市170-70",
+    "officialUrl": "https://jamresort.jp/"
   },
   {
     "id": "st-fukui-2278",
@@ -9454,7 +9536,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2278/",
     "city": "あわら市 宿泊者限定",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "福井県あわら市温泉4-418",
+    "officialUrl": "https://hotel-yagi.co.jp/"
   },
   {
     "id": "st-fukui-2276",
@@ -9517,7 +9601,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/494/",
     "city": "鯖江市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "福井県鯖江市神中町2丁目2-26",
+    "officialUrl": "https://www.yu-iwashita.jp/sabae/"
   },
   {
     "id": "st-fukui-573",
@@ -10105,7 +10191,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2457/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山梨県笛吹市石和町下平井578",
+    "officialUrl": "https://www.city.fuefuki.yamanashi.jp/shisetsu/onsen/001.html"
   },
   {
     "id": "st-yamanashi-2411",
@@ -10144,7 +10232,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2688/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山梨県都留市戸沢1353番地",
+    "officialUrl": "https://mgc.tatemono-golf.com/"
   },
   {
     "id": "st-yamanashi-447",
@@ -10210,7 +10300,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2454/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山梨県甲府市湯村3-16-2",
+    "officialUrl": "https://yumurayanagiya.com/"
   },
   {
     "id": "st-yamanashi-2414",
@@ -10225,7 +10317,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2414/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "山梨県南アルプス市鏡中條3782",
+    "officialUrl": "https://www.shisetsu-tds.jp/yamanashi-minami-alps-yuyu"
   },
   {
     "id": "st-yamanashi-2409",
@@ -12438,7 +12532,9 @@ export const SEED_FACILITIES = [
       "和合"
     ],
     "source": "スーパー銭湯全国検索",
-    "sourceUrl": "https://www.supersento.com/chubu/shizuoka/1_hamamatu.html"
+    "sourceUrl": "https://www.supersento.com/chubu/shizuoka/1_hamamatu.html",
+    "address": "静岡県浜松市中央区和合町1146",
+    "officialUrl": "https://wagou-yu.com/"
   },
   {
     "id": "manual-aichi-cred-spa-sauna",
@@ -13499,7 +13595,8 @@ export const SEED_FACILITIES = [
     ],
     "source": "公式",
     "sourceUrl": "https://sauna152.com/",
-    "officialUrl": "https://sauna152.com/"
+    "officialUrl": "https://sauna152.com/",
+    "address": "三重県津市乙部35-11"
   },
   {
     "id": "manual-mie-secret-sauna-kaiho",
@@ -13980,7 +14077,9 @@ export const SEED_FACILITIES = [
       "グルスパ"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/94099"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/94099",
+    "address": "三重県松阪市大塚町220-1 イオンタウン松阪船江別棟",
+    "officialUrl": "https://guru-spa.jp/"
   },
   {
     "id": "manual-mie-kumano-no-sato-matsusaka",
@@ -15067,7 +15166,9 @@ export const SEED_FACILITIES = [
     "note": "京都府京丹後市",
     "tags": [
       "SAUNACHELIN 2023"
-    ]
+    ],
+    "address": "京都府京丹後市峰山町杉谷941-1",
+    "officialUrl": "https://nuka-yuge.com/"
   },
   {
     "id": "kyoto-user-vym1qx",
@@ -17373,7 +17474,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/581/",
     "city": "吉野郡下北山村",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "奈良県吉野郡下北山村大字上池原1026番地",
+    "officialUrl": "https://kinarinosato.net/archives/1230"
   },
   {
     "id": "st-nara-2838",
@@ -17389,7 +17492,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2838/",
     "city": "橿原市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "奈良県橿原市新堂町210番地1",
+    "officialUrl": "https://kashipoka.com/"
   },
   {
     "id": "st-nara-2826",
@@ -17422,7 +17527,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2829/",
     "city": "五條市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "奈良県五條市新町2-1-33",
+    "officialUrl": "http://www.riversidehotel.co.jp/"
   },
   {
     "id": "ikitai-nara-gose-takarayu",
@@ -17476,7 +17583,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2849/",
     "city": "生駒市",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "奈良県生駒市俵口町2088",
+    "officialUrl": "https://ikoma36.jp/fureai"
   },
   {
     "id": "st-nara-2827",
@@ -17668,7 +17777,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2842/",
-    "sourceCheckedAt": "2026-11-04"
+    "sourceCheckedAt": "2026-11-04",
+    "address": "奈良県吉野郡下市町大字伃邑2189番地",
+    "officialUrl": "https://www.town.shimoichi.lg.jp/category/4-9-0-0-0-0-0-0-0-0.html"
   },
   {
     "id": "st-nara-2846",
@@ -17811,7 +17922,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3326/",
     "city": "和歌山市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "和歌山県和歌山市湊20番地",
+    "officialUrl": "https://yu-bath.com/w-bath"
   },
   {
     "id": "st-wakayama-2858",
@@ -17836,7 +17949,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2877/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "和歌山県新宮市蜂伏13-36",
+    "officialUrl": "http://pupshingu.web.fc2.com/"
   },
   {
     "id": "st-wakayama-2851",
@@ -17871,7 +17986,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2875/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "和歌山県西牟婁郡白浜町868",
+    "officialUrl": "https://www.yado-musashi.co.jp/"
   },
   {
     "id": "st-wakayama-2852",
@@ -17887,7 +18004,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/2852/",
     "city": "西牟婁郡白浜町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "和歌山県西牟婁郡白浜町日置1013-25",
+    "officialUrl": "https://www.rivage-spa-hikigawa.jp/"
   },
   {
     "id": "st-wakayama-2850",
@@ -18337,7 +18456,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3593/",
     "city": "境港市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "鳥取県境港市竹内団地255-5",
+    "officialUrl": "http://honokami.com/"
   },
   {
     "id": "st-tottori-3598",
@@ -18521,7 +18642,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3596/",
     "city": "米子市 宿泊者限定",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "鳥取県米子市皆生温泉3-12-33",
+    "officialUrl": "https://www.yukibou-hakusen.jp/"
   },
   {
     "id": "ikitai-tottori-yutani-so",
@@ -18538,7 +18661,9 @@ export const SEED_FACILITIES = [
       "水風呂あり",
       "外気あり"
     ],
-    "trait": "onsen"
+    "trait": "onsen",
+    "address": "鳥取県鳥取市河原町湯谷249番地",
+    "officialUrl": "https://www.nkt-tv.co.jp/plan/entry/01061.html"
   },
   {
     "id": "st-tottori-719",
@@ -18798,7 +18923,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3613/",
     "city": "江津市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "島根県江津市桜江町長谷2696番地",
+    "officialUrl": "https://www.kazenokuni.jp/"
   },
   {
     "id": "st-shimane-3607",
@@ -18807,7 +18934,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3607/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "島根県松江市玉湯町玉造1218-8",
+    "officialUrl": "https://www.kasuien-minami.jp/"
   },
   {
     "id": "st-shimane-3608",
@@ -18823,7 +18952,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3608/",
     "city": "飯石郡飯南町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "島根県飯石郡飯南町下来島707-2",
+    "officialUrl": "https://kadanoyu.amebaownd.com/"
   },
   {
     "id": "st-shimane-756",
@@ -18856,7 +18987,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3606/",
     "city": "仁多郡奥出雲町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "島根県仁多郡奥出雲町亀嵩3609-1",
+    "officialUrl": "http://tamamine.jp/"
   },
   {
     "id": "st-shimane-3617",
@@ -19273,7 +19406,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3628/",
     "city": "新見市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "岡山県新見市千屋花見1336-5",
+    "officialUrl": "https://www.ibukinosato.co.jp/"
   },
   {
     "id": "st-okayama-3643",
@@ -19288,7 +19423,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3643/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "岡山県新見市神郷高瀬3188-1",
+    "officialUrl": "https://shingo-onsen.com/"
   },
   {
     "id": "st-okayama-3642",
@@ -19343,7 +19480,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3640/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "岡山県岡山市北区久米197-1",
+    "officialUrl": "https://www.daikazokunoyu.jp/"
   },
   {
     "id": "st-okayama-2926",
@@ -19381,7 +19520,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/728/",
     "city": "倉敷市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "岡山県倉敷市玉島爪崎981-1",
+    "officialUrl": "https://www.manten-kurashiki.com/"
   },
   {
     "id": "st-okayama-3623",
@@ -19521,7 +19662,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3622/",
     "city": "和気郡和気町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "岡山県和気郡和気町益原666-1",
+    "officialUrl": "https://ugaidani.jp/onsen/"
   },
   {
     "id": "st-okayama-3632",
@@ -20861,7 +21004,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3701/",
     "city": "美馬市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "徳島県美馬市木屋平川井270",
+    "officialUrl": "https://glampark.co.jp/accommodation/glampark-tsuruginoyu-3"
   },
   {
     "id": "st-tokushima-3691",
@@ -20916,7 +21061,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3679/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "阿波市阿波町北正広205-1",
+    "officialUrl": "https://dochunoyu.com/"
   },
   {
     "id": "st-tokushima-3689",
@@ -20932,7 +21079,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3689/",
     "city": "吉野川市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "徳島県吉野川市鴨島町飯尾415番地の1",
+    "officialUrl": "https://www.tcu.or.jp/jimu/onsen/kamojima"
   },
   {
     "id": "st-tokushima-3690",
@@ -20981,7 +21130,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3695/",
     "city": "美馬郡つるぎ町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "徳島県美馬郡つるぎ町貞光字長瀬127-2",
+    "officialUrl": "https://www.town.tokushima-tsurugi.lg.jp/docs/3467.html"
   },
   {
     "id": "st-tokushima-3697",
@@ -21347,7 +21498,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3576/",
     "city": "三豊市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "香川県三豊市高瀬町上高瀬768-1",
+    "officialUrl": "https://www.souyu.co.jp/shisetsu/takase"
   },
   {
     "id": "st-kagawa-3707",
@@ -21411,7 +21564,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3573/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "香川県東かがわ市馬篠1200",
+    "officialUrl": "https://vessel-oochi.com/hotspring"
   },
   {
     "id": "st-kagawa-127",
@@ -21442,7 +21597,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3720/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "香川県さぬき市大川町富田中3424",
+    "officialUrl": "https://sanuki-sa.jp/miroku"
   },
   {
     "id": "st-kagawa-735",
@@ -21473,7 +21630,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3566/",
     "city": "丸亀市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "香川県丸亀市山北町400-1",
+    "officialUrl": "https://www.souyu.co.jp/shisetsu/marugame"
   },
   {
     "id": "st-kagawa-740",
@@ -21483,7 +21642,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/740/",
     "city": "観音寺市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "香川県観音寺市有明町6-6",
+    "officialUrl": "https://kotohiki-kairo.co.jp/"
   },
   {
     "id": "st-kagawa-3722",
@@ -21932,7 +22093,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3753/",
     "city": "大洲市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "愛媛県大洲市柚木388番地1",
+    "officialUrl": "https://www.garyunoyu.com/"
   },
   {
     "id": "st-ehime-3746",
@@ -21948,7 +22111,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3746/",
     "city": "新居浜市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "愛媛県新居浜市篠場町11番60号",
+    "officialUrl": "http://www.panas-kaja.com/"
   },
   {
     "id": "st-ehime-4294",
@@ -22178,7 +22343,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3734/",
     "city": "西条市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "愛媛県西条市河之内甲494",
+    "officialUrl": "https://www.hondani-onsen.com/"
   },
   {
     "id": "st-kochi-3791",
@@ -22373,7 +22540,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4255/",
     "city": "高知市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "高知県高知市廿代町5-16",
+    "officialUrl": "http://kochi-annexhotel.com/"
   },
   {
     "id": "st-kochi-3567",
@@ -23353,7 +23522,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3930/",
     "city": "伊万里市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "佐賀県伊万里市立花町2402-1",
+    "officialUrl": "https://yutokuonsen.com/imari.html"
   },
   {
     "id": "st-saga-4478",
@@ -23394,7 +23565,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3945/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "佐賀県嬉野市嬉野町下宿乙2091",
+    "officialUrl": "https://www.ooedoonsen.jp/ureshinokan/"
   },
   {
     "id": "st-saga-3931",
@@ -23410,7 +23583,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3931/",
     "city": "三養基郡上峰町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "佐賀県三養基郡上峰町大字坊所1523-1",
+    "officialUrl": "https://yutokuonsen.com/yoshinogari.html"
   },
   {
     "id": "st-saga-4473",
@@ -23441,7 +23616,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3934/",
     "city": "佐賀市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "佐賀県佐賀市富士町大字熊川204-8",
+    "officialUrl": "https://r.goope.jp/chidorinoyu"
   },
   {
     "id": "st-saga-3942",
@@ -23459,7 +23636,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3942/",
     "city": "東松浦郡玄海町",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "佐賀県東松浦郡玄海町大字石田1369番地3",
+    "officialUrl": "https://www.genkai-parea.com/"
   },
   {
     "id": "st-saga-3939",
@@ -23785,7 +23964,9 @@ export const SEED_FACILITIES = [
     "trait": "water",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/805/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "長崎県諫早市福田町1184",
+    "officialUrl": "https://nonnoco-onsui.com/"
   },
   {
     "id": "st-nagasaki-3980",
@@ -23977,7 +24158,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3978/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "長崎県南島原市深江町甲5292-2",
+    "officialUrl": "https://www.unzen-mikado.net/"
   },
   {
     "id": "st-nagasaki-3954",
@@ -24008,7 +24191,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/800/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "長崎県佐世保市鹿子前町1129",
+    "officialUrl": "https://www.saspa99.jp/"
   },
   {
     "id": "st-nagasaki-3972",
@@ -25671,7 +25856,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4094/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "宮崎県都城市山田町中霧島1913",
+    "officialUrl": "https://yamada-spa.com/"
   },
   {
     "id": "st-miyazaki-4074",
@@ -25700,7 +25887,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/858/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "宮崎県児湯郡西米良村大字村所260-6",
+    "officialUrl": "https://meranosho.co.jp/spa"
   },
   {
     "id": "st-miyazaki-4073",
@@ -25709,7 +25898,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4073/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "宮崎県都城市山之口町山之口2123",
+    "officialUrl": "https://aoidake.com/"
   },
   {
     "id": "st-miyazaki-4077",
@@ -25719,7 +25910,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4077/",
     "city": "宮崎市",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "宮崎県宮崎市大字折生迫7408",
+    "officialUrl": "https://www.cinqmale.co.jp/"
   },
   {
     "id": "st-miyazaki-829",
@@ -26181,7 +26374,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/915/",
-    "sourceCheckedAt": "2026-11-08"
+    "sourceCheckedAt": "2026-11-08",
+    "address": "日置市吹上町中原763",
+    "officialUrl": "https://www.city.hioki.kagoshima.jp/kanko/kankou/tomaru-onsen/tomaru-onsen/yupuru.html"
   },
   {
     "id": "st-kagoshima-4556",
@@ -26522,7 +26717,9 @@ export const SEED_FACILITIES = [
     "trait": "urban",
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/4356/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-10-18",
+    "address": "沖縄県石垣市新川舟蔵2481-1",
+    "officialUrl": "https://www.grandvrio-hotelresort.com/ishigaki/villagarden"
   },
   {
     "id": "st-okinawa-4317",
@@ -26649,7 +26846,9 @@ export const SEED_FACILITIES = [
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3989/",
     "city": "国頭郡本部町",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-10-18",
+    "address": "沖縄県国頭郡本部町備瀬148番地1",
+    "officialUrl": "https://www.okinawaresort-orion.com/"
   },
   {
     "id": "st-okinawa-4311",
@@ -26681,7 +26880,9 @@ export const SEED_FACILITIES = [
     ],
     "source": "SaunaTime",
     "sourceUrl": "https://saunatime.jp/saunas/3988/",
-    "sourceCheckedAt": "2026-10-18"
+    "sourceCheckedAt": "2026-10-18",
+    "address": "沖縄県国頭郡恩納村字冨着1550番地1",
+    "officialUrl": "https://www.hotelmonterey.co.jp/okinawa"
   },
   {
     "id": "st-okinawa-940",
@@ -27098,7 +27299,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/174"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/174",
+    "address": "札幌市中央区南7条西3丁目",
+    "officialUrl": "https://www.toukakyo.jp/"
   },
   {
     "id": "si-hokkaido-97",
@@ -27116,7 +27319,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/97"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/97",
+    "address": "北海道釧路市阿寒町阿寒湖温泉2丁目8-8",
+    "officialUrl": "https://www.newakanhotel.co.jp/room/ss/"
   },
   {
     "id": "si-hokkaido-11181",
@@ -27136,7 +27341,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11181"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11181",
+    "address": "北海道川上郡標茶町字塘路原野北7線49番43",
+    "officialUrl": "https://thegeek.jp/"
   },
   {
     "id": "si-hokkaido-205",
@@ -27154,7 +27361,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/205"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/205",
+    "address": "北海道札幌市南区小金湯25",
+    "officialUrl": "http://koganeyu.jp/"
   },
   {
     "id": "si-hokkaido-85",
@@ -27174,7 +27383,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/85"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85",
+    "address": "北海道芦別市旭町油谷1番地",
+    "officialUrl": "https://ofurocafe-seiyukan.com/"
   },
   {
     "id": "si-hokkaido-210",
@@ -27982,7 +28193,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/640"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/640",
+    "address": "宮城県仙台市泉区大沢2丁目5-9",
+    "officialUrl": "https://ryusenjinoyu.com/spametsasendai/"
   },
   {
     "id": "si-miyagi-654",
@@ -28019,7 +28232,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79074"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79074",
+    "address": "宮城県仙台市青葉区錦ケ丘1丁目2番88",
+    "officialUrl": "https://www.soyoginomori.site/"
   },
   {
     "id": "si-miyagi-4376",
@@ -28373,7 +28588,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/85091"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85091",
+    "address": "秋田県男鹿市船川港船川栄町82",
+    "officialUrl": "https://morichoryokan.com/"
   },
   {
     "id": "si-akita-554",
@@ -28409,7 +28626,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/507"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/507",
+    "address": "秋田県秋田市中通5-2-1",
+    "officialUrl": "https://www.hotel-grantia.co.jp/akita/spa"
   },
   {
     "id": "si-akita-530",
@@ -28427,7 +28646,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/530"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/530",
+    "address": "秋田県大仙市太田町中里字新屋敷114",
+    "officialUrl": "https://www.city.daisen.lg.jp/docs/2021061100018/"
   },
   {
     "id": "si-akita-82457",
@@ -28524,7 +28745,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78339"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78339",
+    "address": "秋田県横手市十文字町字大道東88-1-2",
+    "officialUrl": "https://www.chillnn.com/ja/1835aed0dfc134"
   },
   {
     "id": "si-akita-506",
@@ -28728,7 +28951,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11030"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11030",
+    "address": "山形県鶴岡市北京田字下鳥ノ巣23-1",
+    "officialUrl": "https://suiden-terrasse.com/"
   },
   {
     "id": "si-yamagata-8956",
@@ -28746,7 +28971,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8956"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8956",
+    "address": "山形県上山市蔵王坊平国有林241林班",
+    "officialUrl": "https://kogenyu.com/"
   },
   {
     "id": "si-yamagata-628",
@@ -28765,7 +28992,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/628"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/628",
+    "address": "山形県西村山郡西川町大字水沢2304",
+    "officialUrl": "https://www.gassan.co.jp/facility/02_mizusawa"
   },
   {
     "id": "si-yamagata-59449",
@@ -29101,7 +29330,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9550"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9550",
+    "address": "福島県耶麻郡猪苗代町翁沢長浜870",
+    "officialUrl": "https://www.h-minatoya.com/sauna/"
   },
   {
     "id": "si-fukushima-12419",
@@ -29122,7 +29353,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12419"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12419",
+    "address": "福島県南相馬市原町区本町３丁目２１",
+    "officialUrl": "https://hattatsu.jp/"
   },
   {
     "id": "si-fukushima-814",
@@ -29141,7 +29374,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/814"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/814",
+    "address": "福島県須賀川市滑川字関ノ上22-2",
+    "officialUrl": "http://www.hibari-land.jp/"
   },
   {
     "id": "si-fukushima-78226",
@@ -29179,7 +29414,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78165"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78165",
+    "address": "福島県福島市栄町6-7 フロンティアビル5F",
+    "officialUrl": "https://f-tuuli.jp/"
   },
   {
     "id": "si-fukushima-66148",
@@ -29475,7 +29712,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79238"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79238",
+    "address": "茨城県水戸市小吹町2624-1",
+    "officialUrl": "https://yuluumu.co.jp/"
   },
   {
     "id": "si-ibaraki-81944",
@@ -29493,7 +29732,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81944"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81944",
+    "address": "茨城県常総市むすびまち3番地",
+    "officialUrl": "https://www.oyumusubi.com/"
   },
   {
     "id": "si-ibaraki-11135",
@@ -29514,7 +29755,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11135"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11135",
+    "address": "茨城県結城市結城183",
+    "officialUrl": "https://harta-sauna.soun.co.jp/"
   },
   {
     "id": "si-ibaraki-42883",
@@ -29535,7 +29778,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/42883"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/42883",
+    "address": "茨城県日立市田尻町1-45-8 1階",
+    "officialUrl": "https://3un-sauna.com/"
   },
   {
     "id": "si-ibaraki-12262",
@@ -30633,7 +30878,9 @@ export const SEED_FACILITIES = [
       "外気なし"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79480"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79480",
+    "address": "埼玉県朝霞市本町3丁目1−53",
+    "officialUrl": "https://asaka-sauna-nagomi.com/"
   },
   {
     "id": "si-saitama-1579",
@@ -30652,7 +30899,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1579"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1579",
+    "address": "埼玉県所沢市くすのき台1丁目13-1 ガーデンシティ所沢3F・4F",
+    "officialUrl": "https://badengarden.com/"
   },
   {
     "id": "si-saitama-1545",
@@ -30725,7 +30974,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8370"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8370",
+    "address": "埼玉県入間郡越生町上野3083-1 オーパークおごせ",
+    "officialUrl": "https://opark.jp/saunasweetcabin/"
   },
   {
     "id": "si-saitama-1346",
@@ -30743,7 +30994,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1346"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1346",
+    "address": "埼玉県熊谷市久保島939",
+    "officialUrl": "https://ofurocafe-hareniwanoyu.com/"
   },
   {
     "id": "si-saitama-83642",
@@ -30761,7 +31014,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/83642"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/83642",
+    "address": "埼玉県越谷市東越谷3丁目3-1",
+    "officialUrl": "https://everyday-sauna.com/stores/%e8%b6%8a%e8%b0%b7%e5%ba%97/"
   },
   {
     "id": "si-saitama-12586",
@@ -30780,7 +31035,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12586"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12586",
+    "address": "埼玉県川越市松郷1313-1",
+    "officialUrl": "https://kashiba-onsen.jp/"
   },
   {
     "id": "si-saitama-172",
@@ -30833,7 +31090,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9290"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9290",
+    "address": "埼玉県比企郡ときがわ町大字本郷930番地1",
+    "officialUrl": "https://comoriver.com/"
   },
   {
     "id": "si-saitama-1413",
@@ -31017,7 +31276,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1708"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1708",
+    "address": "千葉県市川市南八幡4-1-12 パインズビル2F",
+    "officialUrl": "https://hpdsp.jp/rainbow-motoyawata/"
   },
   {
     "id": "si-chiba-1471",
@@ -31035,7 +31296,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1471"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1471",
+    "address": "千葉県野田市山崎貝塚町5-2",
+    "officialUrl": "https://yuno310.com/"
   },
   {
     "id": "si-chiba-1712",
@@ -31088,7 +31351,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1571"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1571",
+    "address": "千葉県香取市西田部1-1",
+    "officialUrl": "https://www.thefarm.jp/karinnoyu/"
   },
   {
     "id": "si-chiba-1666",
@@ -31107,7 +31372,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1666"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1666",
+    "address": "千葉県市川市柏井町1-1520",
+    "officialUrl": "https://rakutenchi-oasis.com/hoten/"
   },
   {
     "id": "si-chiba-1996",
@@ -31125,7 +31392,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1996"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1996",
+    "address": "千葉県千葉市稲毛区轟町1-8-5",
+    "officialUrl": "https://www.bivouacland.com/"
   },
   {
     "id": "si-chiba-114510",
@@ -31169,7 +31438,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/41068"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/41068",
+    "address": "千葉県勝浦市吉尾272 勝浦海中公園内",
+    "officialUrl": "https://eden-katsuura.com/"
   },
   {
     "id": "si-chiba-8464",
@@ -31188,7 +31459,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8464"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8464",
+    "address": "千葉県八街市吉倉379-2",
+    "officialUrl": "https://yachimata-villa.com/"
   },
   {
     "id": "si-chiba-1850",
@@ -31375,7 +31648,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1934"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1934",
+    "address": "東京都渋谷区東2-19-9",
+    "officialUrl": "https://kairyou-yu.com/"
   },
   {
     "id": "si-tokyo-65093",
@@ -31394,7 +31669,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/65093"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65093",
+    "address": "東京都渋谷区桜丘町18-9",
+    "officialUrl": "https://saunas-saunas.com/shibuya/"
   },
   {
     "id": "si-tokyo-67270",
@@ -31415,7 +31692,9 @@ export const SEED_FACILITIES = [
       "外気なし"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/67270"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/67270",
+    "address": "東京都港区赤坂3丁目13-4",
+    "officialUrl": "https://sauna-tokyo.jp/"
   },
   {
     "id": "si-tokyo-4416",
@@ -31432,7 +31711,9 @@ export const SEED_FACILITIES = [
       "外気なし"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4416"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4416",
+    "address": "東京都中野区東中野5-29-12",
+    "officialUrl": "https://www.matsumoto-yu.com/"
   },
   {
     "id": "si-tokyo-1873",
@@ -31451,7 +31732,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1873"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1873",
+    "address": "東京都渋谷区笹塚1-58-6 マルシンビル10F",
+    "officialUrl": "https://marushinspa.jp/"
   },
   {
     "id": "si-tokyo-12818",
@@ -31469,7 +31752,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12818"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12818",
+    "address": "東京都杉並区西荻南3-14-7 4F",
+    "officialUrl": "https://rooftopsauna.jp/"
   },
   {
     "id": "si-tokyo-1757",
@@ -31508,7 +31793,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1687"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1687",
+    "address": "東京都豊島区東池袋4-25-9 タイムズステーション池袋10階～12階",
+    "officialUrl": "http://www.timesspa-resta.jp/access.html"
   },
   {
     "id": "si-tokyo-1599",
@@ -31786,7 +32073,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/82473"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82473",
+    "address": "神奈川県川崎市川崎区小川町5-1",
+    "officialUrl": "https://nus-saunahouse.com/"
   },
   {
     "id": "si-kanagawa-2187",
@@ -31838,7 +32127,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2150"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2150",
+    "address": "神奈川県横浜市鶴見区下末吉2-21-21",
+    "officialUrl": "http://www.yu-land.com/"
   },
   {
     "id": "si-kanagawa-2212",
@@ -31857,7 +32148,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2212"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2212",
+    "address": "神奈川県横浜市西区北幸2-2-1 ハマボールビルディング 5階・6階",
+    "officialUrl": "https://spa-eas.com/"
   },
   {
     "id": "si-kanagawa-9852",
@@ -31933,7 +32226,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2147"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2147",
+    "address": "神奈川県横浜市鶴見区元宮2-1-39",
+    "officialUrl": "https://rakuspa.com/tsurumi/"
   },
   {
     "id": "si-kanagawa-80330",
@@ -32079,7 +32374,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/735"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/735",
+    "address": "新潟県新潟市西蒲区福井4067番地",
+    "officialUrl": "http://jonnobi.com/"
   },
   {
     "id": "si-niigata-36052",
@@ -32118,7 +32415,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9851"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9851",
+    "address": "新潟県柏崎市鯨波2-3-6 小竹屋旅館",
+    "officialUrl": "https://www.odakeya.com/sauna"
   },
   {
     "id": "si-niigata-88693",
@@ -32135,7 +32434,9 @@ export const SEED_FACILITIES = [
       "外気なし"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/88693"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/88693",
+    "address": "新潟県新潟市中央区南万代町1-6 南万代テラスB棟2階",
+    "officialUrl": "https://sauna100.jp/"
   },
   {
     "id": "si-niigata-713",
@@ -32171,7 +32472,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9592"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9592",
+    "address": "新潟県佐渡市河原田諏訪町4",
+    "officialUrl": "http://s-perch.com/"
   },
   {
     "id": "si-niigata-78413",
@@ -32189,7 +32492,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78413"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78413",
+    "address": "新潟市中央区西堀前通8番町1527 ビル2階",
+    "officialUrl": "https://hijilijapan.com/"
   },
   {
     "id": "si-niigata-80519",
@@ -32264,7 +32569,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/10129"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10129",
+    "address": "新潟県南魚沼郡湯沢町三国177-2",
+    "officialUrl": "https://www.naeba-heidi.com/"
   },
   {
     "id": "si-niigata-82365",
@@ -32416,7 +32723,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80979"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80979",
+    "address": "新潟県妙高市長森1555-1",
+    "officialUrl": "https://hotel-soboku.com/"
   },
   {
     "id": "si-toyama-79038",
@@ -32547,7 +32856,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80165"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80165",
+    "address": "富山県南砺市岩屋16-1",
+    "officialUrl": "https://37base.jp/price"
   },
   {
     "id": "si-toyama-80882",
@@ -32825,7 +33136,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/59285"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/59285",
+    "address": "石川県金沢市長町1丁目5番56号",
+    "officialUrl": "https://msento.com/"
   },
   {
     "id": "si-ishikawa-1150",
@@ -32901,7 +33214,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/10936"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10936",
+    "address": "石川県金沢市尾張町1-2-8",
+    "officialUrl": "https://www.linnashotels.com/"
   },
   {
     "id": "si-ishikawa-793",
@@ -32918,7 +33233,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/793"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/793",
+    "address": "石川県珠洲市野々江町ナ部5番地3",
+    "officialUrl": "https://www.amidayu-suzu.com/"
   },
   {
     "id": "si-ishikawa-77997",
@@ -32938,7 +33255,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/77997"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/77997",
+    "address": "石川県白山市河内町内尾ニ2番17 ペンシオーネセイモア内",
+    "officialUrl": "https://sauna-hakusan.com/"
   },
   {
     "id": "si-ishikawa-1132",
@@ -32956,7 +33275,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1132"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1132",
+    "address": "石川県金沢市中村町5-52",
+    "officialUrl": "http://www.manten-yu.co.jp/kanazawa/"
   },
   {
     "id": "si-ishikawa-5256",
@@ -33546,7 +33867,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8094"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8094",
+    "address": "山梨県南都留郡山中湖村山中1360-83",
+    "officialUrl": "https://www.mtfuji-hotel.com/"
   },
   {
     "id": "si-yamanashi-80715",
@@ -33981,7 +34304,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/13125"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/13125",
+    "address": "長野県北安曇郡白馬村北城瑞穂3020-45",
+    "officialUrl": "https://fromp-hakuba.jp/"
   },
   {
     "id": "si-nagano-4471",
@@ -34000,7 +34325,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4471"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4471",
+    "address": "長野市川中島町今井1780-1",
+    "officialUrl": "http://www.kawanakajimaonsen.com/"
   },
   {
     "id": "si-nagano-4374",
@@ -34129,7 +34456,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/75124"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/75124",
+    "address": "長野県上田市秋和1110-8",
+    "officialUrl": "https://www.hyva-sauna.com/"
   },
   {
     "id": "si-nagano-78739",
@@ -34149,7 +34478,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78739"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78739",
+    "address": "長野県長野市東後町2-1",
+    "officialUrl": "https://sambo-saun.com/"
   },
   {
     "id": "si-nagano-13547",
@@ -34299,7 +34630,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2303"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2303",
+    "address": "岐阜県各務原市鵜沼各務原町2-68",
+    "officialUrl": "https://www.meguminoyu.jp/"
   },
   {
     "id": "si-gifu-2376",
@@ -34317,7 +34650,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2376"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2376",
+    "address": "岐阜県多治見市大畑町6-105-1",
+    "officialUrl": "http://www.tenko-spa.jp/"
   },
   {
     "id": "si-gifu-92846",
@@ -34335,7 +34670,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/92846"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/92846",
+    "address": "岐阜県山県市片原字大フブセ611-1",
+    "officialUrl": "https://sangasauna.com/"
   },
   {
     "id": "si-gifu-28499",
@@ -34354,7 +34691,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/28499"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/28499",
+    "address": "岐阜県土岐市泉町定林寺962番地1",
+    "officialUrl": "https://tokino-hotel.jp"
   },
   {
     "id": "si-gifu-1374",
@@ -34372,7 +34711,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1374"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1374",
+    "address": "岐阜県高山市一之宮町5525",
+    "officialUrl": "https://www.livemax-resort.com/gifu/hidatakayama/"
   },
   {
     "id": "si-gifu-43675",
@@ -34679,7 +35020,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/65820"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/65820",
+    "address": "奈良市川上町728",
+    "officialUrl": "https://andohotelnara.com/sauna/"
   },
   {
     "id": "si-nara-7990",
@@ -35289,7 +35632,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/27307"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/27307",
+    "address": "鳥取県西伯郡伯耆町小林706",
+    "officialUrl": "https://fbi-camping.com/daisen/fees/"
   },
   {
     "id": "si-tottori-7778",
@@ -36279,7 +36624,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/3461"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3461",
+    "address": "広島県広島市中区薬研堀8-8",
+    "officialUrl": "https://www.sauna-nj.com/"
   },
   {
     "id": "si-hiroshima-10780",
@@ -36316,7 +36663,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79789"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79789",
+    "address": "広島県広島市中区猫屋町8-17",
+    "officialUrl": "https://www.nekoya-cho.jp/5f/"
   },
   {
     "id": "si-hiroshima-41763",
@@ -36335,7 +36684,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/41763"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/41763",
+    "address": "広島県広島市中区鉄砲町6-1",
+    "officialUrl": "https://resauna.jp/hiroshima"
   },
   {
     "id": "si-hiroshima-6019",
@@ -36373,7 +36724,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/7976"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/7976",
+    "address": "広島県廿日市市宮浜温泉2-13-10",
+    "officialUrl": "https://www.livemax-resort.com/hiroshima/miyahamaonsen-ocean"
   },
   {
     "id": "si-hiroshima-78678",
@@ -36681,7 +37034,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/10363"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10363",
+    "address": "山口県宇部市小野7887 フィンランド5丁目",
+    "officialUrl": "https://bokuoyo.com/"
   },
   {
     "id": "si-yamaguchi-62419",
@@ -36721,7 +37076,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78333"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78333",
+    "address": "山口県山口市宮野上801",
+    "officialUrl": "http://www.koukasha.com/"
   },
   {
     "id": "si-yamaguchi-3644",
@@ -36795,7 +37152,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12664"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12664",
+    "address": "山口県山口市徳地野谷522",
+    "officialUrl": "https://viehattava.com"
   },
   {
     "id": "si-yamaguchi-3627",
@@ -36848,7 +37207,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/86971"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/86971",
+    "address": "山口県長門市深川湯本2257",
+    "officialUrl": "https://soilis.co/nagatoyumoto/"
   },
   {
     "id": "si-yamaguchi-3508",
@@ -37897,7 +38258,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/38065"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/38065",
+    "address": "愛媛県東温市河之内2098",
+    "officialUrl": "https://sauna.yours-llc.net/"
   },
   {
     "id": "si-ehime-8443",
@@ -38501,7 +38864,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80161"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80161",
+    "address": "福岡市中央区天神3丁目2-22 天神河村壮ビル",
+    "officialUrl": "https://shiagaru-sauna.com/"
   },
   {
     "id": "si-fukuoka-9171",
@@ -38518,7 +38883,9 @@ export const SEED_FACILITIES = [
       "外気なし"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9171"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9171",
+    "address": "福岡市博多区祇園町8-12 ロータリー大和2F",
+    "officialUrl": "https://sln-wfw-change.studio.site/"
   },
   {
     "id": "si-fukuoka-3874",
@@ -38575,7 +38942,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78824"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78824",
+    "address": "福岡県福岡市博多区中洲5丁目2-5 サフィール許斐6F",
+    "officialUrl": "https://ooo-sauna.com/fukuoka.html"
   },
   {
     "id": "si-fukuoka-3777",
@@ -38593,7 +38962,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/3777"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3777",
+    "address": "福岡県糸島市泊765番地",
+    "officialUrl": "https://genki-ito.jp"
   },
   {
     "id": "si-fukuoka-81567",
@@ -38610,7 +38981,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81567"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81567",
+    "address": "福岡県糟屋郡久山町大字久原1822",
+    "officialUrl": "https://www.nayuta.earth/pages/furo-sauna-the-vanish"
   },
   {
     "id": "si-fukuoka-5848",
@@ -38628,7 +39001,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/5848"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5848",
+    "address": "福岡県糟屋郡新宮町三代西2丁目14番1号",
+    "officialUrl": "https://www.fukunoyu.com/shingu"
   },
   {
     "id": "si-fukuoka-10698",
@@ -38646,7 +39021,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/10698"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10698",
+    "address": "福岡県北九州市小倉北区鍛冶町1丁目6-17 鍛冶町第一ビル3F",
+    "officialUrl": "https://www.totonoikokura.com/"
   },
   {
     "id": "si-fukuoka-5490",
@@ -38886,7 +39263,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80159"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80159",
+    "address": "佐賀県武雄市武雄町大字永島18091",
+    "officialUrl": "https://www.ondhotel.jp/day_use/"
   },
   {
     "id": "si-saga-81912",
@@ -38905,7 +39284,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81912"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81912",
+    "address": "佐賀県武雄市武雄町大字永島18293番地",
+    "officialUrl": "https://www.ondsauna.jp/"
   },
   {
     "id": "si-saga-104474",
@@ -39631,7 +40012,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4020"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4020",
+    "address": "熊本県熊本市北区鶴羽田3丁目10番1号",
+    "officialUrl": "https://www.agannasse-spa.jp/"
   },
   {
     "id": "si-kumamoto-14173",
@@ -39652,7 +40035,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/14173"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/14173",
+    "address": "熊本県菊池市七城町山崎589",
+    "officialUrl": "https://www.totonoubai.com/"
   },
   {
     "id": "si-kumamoto-78344",
@@ -39670,7 +40055,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78344"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78344",
+    "address": "熊本市中央区水前寺5丁目5-1 松屋別館2F",
+    "officialUrl": "https://www.matsuyahonkan.com/suizen/"
   },
   {
     "id": "si-kumamoto-61594",
@@ -39722,7 +40109,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/36877"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/36877",
+    "address": "熊本県熊本市中央区新市街8-7",
+    "officialUrl": "https://www.candeohotels.com/ja/kumamoto-shinshigai/"
   },
   {
     "id": "si-kumamoto-4061",
@@ -39740,7 +40129,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4061"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4061",
+    "address": "熊本県上益城郡嘉島町大字上島字長池2232 イオンモール熊本内",
+    "officialUrl": "https://suisyun.jp/kumamoto"
   },
   {
     "id": "si-kumamoto-10968",
@@ -39987,7 +40378,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/10962"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/10962",
+    "address": "大分県豊後大野市三重町大字中津留300番地",
+    "officialUrl": "http://www.inazumi.com/"
   },
   {
     "id": "si-oita-4426",
@@ -40006,7 +40399,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4426"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4426",
+    "address": "大分県玖珠郡九重町田野257番地",
+    "officialUrl": "http://kannojigoku.jp/"
   },
   {
     "id": "si-oita-9118",
@@ -40025,7 +40420,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/9118"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/9118",
+    "address": "大分県豊後大野市尾平鉱山57",
+    "officialUrl": "https://lampinc.co.jp/bungoohno"
   },
   {
     "id": "si-oita-3875",
@@ -40177,7 +40574,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78923"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78923",
+    "address": "大分県別府市上人ケ浜町6-24",
+    "officialUrl": "https://www.seikai.co.jp/onsen/index.html"
   },
   {
     "id": "si-oita-8036",
@@ -40665,7 +41064,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78381"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78381",
+    "address": "宮崎県宮崎市青島2丁目241番1号",
+    "officialUrl": "https://aoshimabeachvillage.com/sauna"
   },
   {
     "id": "si-miyazaki-6719",
@@ -40737,7 +41138,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4371"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4371",
+    "address": "鹿児島県鹿児島市千日町13-24",
+    "officialUrl": "http://new-nishino.co.jp/"
   },
   {
     "id": "si-kagoshima-4134",
@@ -40756,7 +41159,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4134"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4134",
+    "address": "鹿児島県出水市明神町1744-1",
+    "officialUrl": "http://nukumorino-yu.com/"
   },
   {
     "id": "si-kagoshima-11440",
@@ -40794,7 +41199,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4234"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4234",
+    "address": "鹿児島県鹿児島市薬師1-22-36",
+    "officialUrl": "http://yakushionsen.com/"
   },
   {
     "id": "si-kagoshima-78259",
@@ -40832,7 +41239,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8770"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8770",
+    "address": "鹿児島県鹿児島市田上6丁目1-6",
+    "officialUrl": "https://takoju.jp/tokinosumika/"
   },
   {
     "id": "si-kagoshima-78103",
@@ -40852,7 +41261,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78103"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78103",
+    "address": "鹿児島県霧島市牧園町宿窪田1954",
+    "officialUrl": "https://www.sumusauna.com/"
   },
   {
     "id": "si-kagoshima-81268",
@@ -40870,7 +41281,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81268"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81268",
+    "address": "鹿児島県鹿児島市与次郎1丁目8-5",
+    "officialUrl": "https://thebarrel.jp/"
   },
   {
     "id": "si-kagoshima-4195",
@@ -41490,7 +41903,9 @@ export const SEED_FACILITIES = [
       "男女共用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12822"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12822",
+    "address": "群馬県前橋市粕川町中之沢249-126",
+    "officialUrl": "https://akagi-loginn.com/sauna/"
   },
   {
     "id": "si-nagano-11723",
@@ -41921,7 +42336,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2541"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2541",
+    "address": "静岡県沼津市原町中2-14-8",
+    "officialUrl": "https://www.joyland.jp/contents/spa"
   },
   {
     "id": "si-2844",
@@ -42026,7 +42443,9 @@ export const SEED_FACILITIES = [
     "city": "知多郡知多郡南知多町 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78532"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78532",
+    "address": "愛知県知多郡南知多町日間賀島浪太56",
+    "officialUrl": "https://kinosuke-himaka.com/"
   },
   {
     "id": "si-2473",
@@ -42038,7 +42457,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2473"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2473",
+    "address": "愛知県名古屋市守山区鳥羽見2-10-10",
+    "officialUrl": "https://pokapoka1126.jp/"
   },
   {
     "id": "si-4380",
@@ -42062,7 +42483,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2734"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2734",
+    "address": "三重県四日市市生桑町311番地",
+    "officialUrl": "http://ofurocafe-yumoriza.com/"
   },
   {
     "id": "si-80942",
@@ -42074,7 +42497,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80942"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80942",
+    "address": "三重県いなべ市北勢町阿下喜788",
+    "officialUrl": "https://inabe-ageki-base.com/"
   },
   {
     "id": "si-80402",
@@ -42134,7 +42559,9 @@ export const SEED_FACILITIES = [
     "city": "大津市",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/5098"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/5098",
+    "address": "滋賀県大津市馬場3-12-21",
+    "officialUrl": "https://miyakoyu.jp/"
   },
   {
     "id": "si-4566",
@@ -42152,7 +42579,9 @@ export const SEED_FACILITIES = [
     "city": "大津市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/56382"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/56382",
+    "address": "滋賀県大津市和邇北浜390",
+    "officialUrl": "https://wanibase.com/biwako-sauna/"
   },
   {
     "id": "si-79729",
@@ -42164,7 +42593,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79729"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79729",
+    "address": "滋賀県高島市安曇川町下小川2248-2",
+    "officialUrl": "https://www.takarabune-sauna.com/"
   },
   {
     "id": "si-79453",
@@ -42233,7 +42664,9 @@ export const SEED_FACILITIES = [
       "男性専用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79410"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79410",
+    "address": "京都府京都市東山区鞘町一丁目396-1 サクラクロスホテル京都清水 1F",
+    "officialUrl": "https://sasauna.com/"
   },
   {
     "id": "si-63409",
@@ -42320,7 +42753,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80001"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80001",
+    "address": "大阪府大阪市平野区平野南1丁目9-25",
+    "officialUrl": "https://cocofuro.com/oomineyu/"
   },
   {
     "id": "si-3012",
@@ -42332,7 +42767,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/3012"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3012",
+    "address": "大阪府豊中市神洲町1-16",
+    "officialUrl": "http://www.algo7.jp/spa/"
   },
   {
     "id": "si-3033",
@@ -42353,7 +42790,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80641"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80641",
+    "address": "兵庫県川西市火打1丁目16番6号 オアシスタウンキセラ川西内",
+    "officialUrl": "https://spa-kisela-kawanishi.jp/"
   },
   {
     "id": "si-95454",
@@ -42368,7 +42807,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/95454"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/95454",
+    "address": "兵庫県神戸市垂水区東舞子町18-11 シーサイドホテル舞子ビラ神戸 別館「SPAタワー」内",
+    "officialUrl": "https://safi-spa.com/maiko/"
   },
   {
     "id": "si-4697",
@@ -44032,7 +44473,9 @@ export const SEED_FACILITIES = [
     "sourceUrl": "https://sauna-ikitai.com/saunas/1459",
     "tags": [
       "SAUNACHELIN 2020"
-    ]
+    ],
+    "address": "埼玉県入間郡越生町上野3083-1",
+    "officialUrl": "https://opark.jp/ofuropark/"
   },
   {
     "id": "si-78527",
@@ -44311,7 +44754,9 @@ export const SEED_FACILITIES = [
     "city": "大田区",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4612"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4612",
+    "address": "東京都大田区仲六郷2丁目27-12",
+    "officialUrl": "https://cocofuro.com/takanoyu/"
   },
   {
     "id": "si-1763",
@@ -44362,7 +44807,9 @@ export const SEED_FACILITIES = [
     "city": "北区",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78719"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78719",
+    "address": "東京都北区王子本町2丁目23-9",
+    "officialUrl": "https://cocofuro.com/kagayokujo/"
   },
   {
     "id": "si-79783",
@@ -45000,7 +45447,9 @@ export const SEED_FACILITIES = [
     "city": "坂井市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78704"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78704",
+    "address": "福井県坂井市三国町安島58-31-8",
+    "officialUrl": "https://mrt.villas/"
   },
   {
     "id": "si-2105",
@@ -45307,7 +45756,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1340"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1340",
+    "address": "岐阜県高山市奥飛騨温泉平湯763-1",
+    "officialUrl": "http://www.hirayunomori.co.jp/"
   },
   {
     "id": "si-78554",
@@ -45576,7 +46027,9 @@ export const SEED_FACILITIES = [
     "city": "沼津市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/29089"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/29089",
+    "address": "静岡県駿東郡長泉町元長窪字芹沢566番5",
+    "officialUrl": "https://www.garage-secret-base.com/sauna-booking"
   },
   {
     "id": "si-33610",
@@ -45597,7 +46050,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4469"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4469",
+    "address": "名古屋市西区枇杷島1-2-20",
+    "officialUrl": "http://www.hakusan-onsen.com/"
   },
   {
     "id": "si-2595",
@@ -45609,7 +46064,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2595"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2595",
+    "address": "愛知県豊田市司町1-1-1",
+    "officialUrl": "http://www.oiden.info/"
   },
   {
     "id": "si-5578",
@@ -45651,7 +46108,9 @@ export const SEED_FACILITIES = [
     "city": "春日井市",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4790"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4790",
+    "address": "愛知県春日井市松河戸町2-5-4",
+    "officialUrl": "https://yugokoro-yururi.jp/"
   },
   {
     "id": "si-2848",
@@ -46951,7 +47410,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79689"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79689",
+    "address": "山口県下関市幸町11-11",
+    "officialUrl": "https://wakuwaku-onsenfitness.com/"
   },
   {
     "id": "si-3572",
@@ -46963,7 +47424,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/3572"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/3572",
+    "address": "山口県岩国市岩国1-1-7",
+    "officialUrl": "https://www.iwakunikankohotel.co.jp/onsen/"
   },
   {
     "id": "si-7517",
@@ -47302,7 +47765,9 @@ export const SEED_FACILITIES = [
     "city": "福岡市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78568"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78568",
+    "address": "福岡市中央区薬院1丁目2-5 リアンプレミアム薬院ステーション1F",
+    "officialUrl": "https://base-sauna.jp/price/"
   },
   {
     "id": "si-4778",
@@ -47475,7 +47940,9 @@ export const SEED_FACILITIES = [
     "city": "長崎市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80439"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80439",
+    "address": "長崎県長崎市松が枝町3-10",
+    "officialUrl": "https://fav-hotels.com/hotels/lux/nagasaki/"
   },
   {
     "id": "si-10147",
@@ -48024,7 +48491,9 @@ export const SEED_FACILITIES = [
     "city": "宮崎市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/4181"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/4181",
+    "address": "宮崎県宮崎市青島1丁目16番1号",
+    "officialUrl": "https://www.anahirmiyazaki.com/hotspa"
   },
   {
     "id": "si-78173",
@@ -48066,7 +48535,9 @@ export const SEED_FACILITIES = [
     "city": "鹿児島市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/82391"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82391",
+    "address": "鹿児島県鹿児島市山之口町7-30",
+    "officialUrl": "https://fav-hotels.com/hotels/lux/kagoshimatenmonkan/"
   },
   {
     "id": "si-4220",
@@ -48299,7 +48770,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79161"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79161",
+    "address": "沖縄県国頭郡金武町字金武10907",
+    "officialUrl": "https://www.asbostayhotel.com/"
   },
   {
     "id": "si-61133",
@@ -48481,7 +48954,9 @@ export const SEED_FACILITIES = [
     "city": "帯広市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/70108"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/70108",
+    "address": "北海道帯広市西17条南6丁目1-5",
+    "officialUrl": "https://5737.jp/"
   },
   {
     "id": "si-28429",
@@ -49884,7 +50359,9 @@ export const SEED_FACILITIES = [
     "city": "宇都宮市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79807"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79807",
+    "address": "栃木県宇都宮市鶴田町603",
+    "officialUrl": "https://dive-energize.com/sauna/"
   },
   {
     "id": "si-8902",
@@ -50707,7 +51184,9 @@ export const SEED_FACILITIES = [
     "city": "大田区",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/2063"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/2063",
+    "address": "東京都大田区南久が原2-1-23",
+    "officialUrl": "https://cocofuro.com/masunoyu/"
   },
   {
     "id": "si-12186",
@@ -50975,7 +51454,9 @@ export const SEED_FACILITIES = [
     "city": "燕市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/109027"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/109027",
+    "address": "新潟県燕市小池4852-5",
+    "officialUrl": "https://sau.ars-niigata.com/pricing"
   },
   {
     "id": "si-848",
@@ -51080,7 +51561,9 @@ export const SEED_FACILITIES = [
     "city": "阿賀野市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/61363"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/61363",
+    "address": "新潟県阿賀野市天神堂387-1",
+    "officialUrl": "https://5yukuri.jp/"
   },
   {
     "id": "si-740",
@@ -51128,7 +51611,9 @@ export const SEED_FACILITIES = [
     "city": "富山市 会員のみ",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81050"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81050",
+    "address": "富山県富山市桜町1-4-10 パティオさくら 2F",
+    "officialUrl": "https://i3u7.com/"
   },
   {
     "id": "si-1079",
@@ -51402,7 +51887,9 @@ export const SEED_FACILITIES = [
     "city": "金沢市 事前予約制",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/82158"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82158",
+    "address": "石川県金沢市入江2丁目34番地",
+    "officialUrl": "https://waspa-kanazawa.com/"
   },
   {
     "id": "si-5203",
@@ -52109,7 +52596,9 @@ export const SEED_FACILITIES = [
     "city": "高山市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79542"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79542",
+    "address": "岐阜県高山市花里町6丁目101番",
+    "officialUrl": "https://www.fav-lux.com/hotel/hidatakayama/"
   },
   {
     "id": "si-1994",
@@ -52858,7 +53347,9 @@ export const SEED_FACILITIES = [
     "city": "亀岡市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/38626"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/38626",
+    "address": "京都府亀岡市大井町並河2丁目737",
+    "officialUrl": "https://6ishiki.jp/en/"
   },
   {
     "id": "si-2404",
@@ -52912,7 +53403,9 @@ export const SEED_FACILITIES = [
     "city": "南丹市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81694"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81694",
+    "address": "京都府南丹市美山町板橋堂ケ谷7",
+    "officialUrl": "https://earthing-miyama.jp/"
   },
   {
     "id": "si-2622",
@@ -54131,7 +54624,9 @@ export const SEED_FACILITIES = [
     "city": "美作市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79825"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79825",
+    "address": "岡山県美作市小房562",
+    "officialUrl": "https://jp-house.site/"
   },
   {
     "id": "si-2603",
@@ -54230,7 +54725,9 @@ export const SEED_FACILITIES = [
     "city": "岡山市 会員のみ",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81083"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81083",
+    "address": "岡山県岡山市北区駅前町1-8-18 イコットニコット5F",
+    "officialUrl": "https://www.ilovemybody.jp/portal/ekimae/"
   },
   {
     "id": "si-3463",
@@ -54366,7 +54863,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/55423"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/55423",
+    "address": "広島県安芸高田市八千代町勝田2281-3",
+    "officialUrl": "https://www.hiroshima-aki-glamping.com/"
   },
   {
     "id": "si-88326",
@@ -54432,7 +54931,9 @@ export const SEED_FACILITIES = [
       "男性専用"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/82204"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82204",
+    "address": "山口県周南市有楽町15-1",
+    "officialUrl": "https://solution-cube.jp/"
   },
   {
     "id": "si-3391",
@@ -55692,7 +56193,9 @@ export const SEED_FACILITIES = [
     "city": "唐津市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/100746"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/100746",
+    "address": "佐賀県唐津市浜玉町浜崎1669-55",
+    "officialUrl": "https://oncri-karatsu.com/spa/"
   },
   {
     "id": "si-5364",
@@ -56053,7 +56556,9 @@ export const SEED_FACILITIES = [
       "貸切可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80399"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80399",
+    "address": "熊本県阿蘇郡南小国町満願寺5985-4",
+    "officialUrl": "https://deepspot.select-shop.xyz/"
   },
   {
     "id": "si-81624",
@@ -57042,7 +57547,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/416"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/416",
+    "address": "青森県弘前市大開2丁目9番",
+    "officialUrl": "https://takashige-group.jp/oobiraki/"
   },
   {
     "id": "si-393",
@@ -57597,7 +58104,9 @@ export const SEED_FACILITIES = [
     "city": "仙台市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/12213"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/12213",
+    "address": "宮城県仙台市青葉区立町14-16",
+    "officialUrl": "https://fairy-group.jp/blast/"
   },
   {
     "id": "si-82050",
@@ -59066,7 +59575,9 @@ export const SEED_FACILITIES = [
       "外気あり"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1845"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1845",
+    "address": "千葉県市川市上妙典1554",
+    "officialUrl": "https://www.central.co.jp/club/p-ichikawashi/"
   },
   {
     "id": "si-1967",
@@ -60248,7 +60759,9 @@ export const SEED_FACILITIES = [
     "city": "大野市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/90372"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/90372",
+    "address": "福井県大野市南六呂師169 字東上谷野47-1",
+    "officialUrl": "https://soratodaichi.villageinc.jp/"
   },
   {
     "id": "si-86415",
@@ -60534,7 +61047,9 @@ export const SEED_FACILITIES = [
     "city": "富士吉田市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/79900"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/79900",
+    "address": "山梨県富士吉田市上吉田東9-6-25",
+    "officialUrl": "https://blanc-fuji.com/"
   },
   {
     "id": "si-5003",
@@ -60873,7 +61388,9 @@ export const SEED_FACILITIES = [
     "city": "中津川市 事前予約制",
     "trait": "wood",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/80603"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/80603",
+    "address": "岐阜県中津川市付知町下浦349",
+    "officialUrl": "https://forestdome-tsukechi.com/sauna/"
   },
   {
     "id": "si-1561",
@@ -60909,7 +61426,9 @@ export const SEED_FACILITIES = [
     "city": "高山市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/78386"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/78386",
+    "address": "岐阜県高山市天満町6丁目22",
+    "officialUrl": "https://gift-takayama.com/"
   },
   {
     "id": "si-5542",
@@ -61023,7 +61542,9 @@ export const SEED_FACILITIES = [
     "city": "浜松市 会員のみ",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/66115"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/66115",
+    "address": "静岡県浜松市中央区白鳥町1377",
+    "officialUrl": "https://chill-box.jp/"
   },
   {
     "id": "si-13811",
@@ -61220,7 +61741,9 @@ export const SEED_FACILITIES = [
     "city": "名古屋市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81308"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81308",
+    "address": "愛知県名古屋市中区錦3-17-3",
+    "officialUrl": "https://hotrockin-sauna.com/"
   },
   {
     "id": "si-2684",
@@ -61922,7 +62445,9 @@ export const SEED_FACILITIES = [
     "city": "大阪市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/38230"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/38230",
+    "address": "大阪府大阪市都島区網島町4-12 東文ビル",
+    "officialUrl": "https://go2iza.com/sauna/"
   },
   {
     "id": "si-8988",
@@ -61934,7 +62459,9 @@ export const SEED_FACILITIES = [
       "温泉付き"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/8988"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/8988",
+    "address": "大阪府泉南市りんくう南浜2番201 泉南りんくう公園内SORA RINKU",
+    "officialUrl": "https://sora-rinku.com/facility/stay/"
   },
   {
     "id": "si-2937",
@@ -62287,7 +62814,9 @@ export const SEED_FACILITIES = [
     "city": "北葛城郡河合町 会員のみ",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11387"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11387",
+    "address": "奈良県北葛城郡河合町高塚台1-8-1 「奈良ニッセイエデンの園」内",
+    "officialUrl": "https://www.central.co.jp/club/arc_nishiyamato/"
   },
   {
     "id": "si-10582",
@@ -62416,7 +62945,9 @@ export const SEED_FACILITIES = [
     "city": "西牟婁郡白浜町 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/37971"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/37971",
+    "address": "和歌山県西牟婁郡白浜町堅田2368-3",
+    "officialUrl": "https://www.wakayama-glamping.com/facility"
   },
   {
     "id": "si-49351",
@@ -62776,7 +63307,9 @@ export const SEED_FACILITIES = [
     "city": "松江市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/82181"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/82181",
+    "address": "島根県松江市八束町波入字渡島2732",
+    "officialUrl": "https://www.motoshima-glamping.jp/"
   },
   {
     "id": "si-78746",
@@ -62905,7 +63438,9 @@ export const SEED_FACILITIES = [
     "city": "瀬戸内市 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81596"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81596",
+    "address": "岡山県瀬戸内市牛窓町鹿忍7195-1",
+    "officialUrl": "https://covo-ushimado.com/"
   },
   {
     "id": "si-12450",
@@ -62935,7 +63470,9 @@ export const SEED_FACILITIES = [
     "city": "倉敷市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11302"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11302",
+    "address": "岡山県倉敷市三田295-1",
+    "officialUrl": "http://mmmy.jp/knob/"
   },
   {
     "id": "si-6585",
@@ -63457,7 +63994,9 @@ export const SEED_FACILITIES = [
     "city": "板野郡松茂町",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11393"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11393",
+    "address": "徳島県板野郡松茂町中喜来字群恵15-1",
+    "officialUrl": "http://hotel-myth.jp/777/index.html"
   },
   {
     "id": "si-119967",
@@ -63505,7 +64044,9 @@ export const SEED_FACILITIES = [
     "city": "徳島市",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/26119"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/26119",
+    "address": "徳島県徳島市川内町上別宮東83-3",
+    "officialUrl": "http://hotel-anra.com/"
   },
   {
     "id": "si-61528",
@@ -64309,7 +64850,9 @@ export const SEED_FACILITIES = [
     "city": "三養基郡みやき町",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/109426"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/109426",
+    "address": "佐賀県三養基郡みやき町白壁4049-34",
+    "officialUrl": "https://www.yura-kuan.jp/"
   },
   {
     "id": "si-101800",
@@ -64547,7 +65090,9 @@ export const SEED_FACILITIES = [
       "宿泊可"
     ],
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/11840"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/11840",
+    "address": "長崎県諫早市大渡野町1718",
+    "officialUrl": "https://hotel-myth.jp/f2/"
   },
   {
     "id": "si-80992",
@@ -65664,7 +66209,9 @@ export const SEED_FACILITIES = [
     "city": "函館市",
     "trait": "onsen",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/6114"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/6114",
+    "address": "北海道函館市大手町22番13号",
+    "officialUrl": "https://www.centurymarina.com/"
   },
   {
     "id": "si-326",
@@ -66820,7 +67367,9 @@ export const SEED_FACILITIES = [
     "city": "山形市 会員のみ",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/101108"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/101108",
+    "address": "山形県山形市馬見ケ崎3丁目22-15",
+    "officialUrl": "https://shops.fiteasy.jp/shop241"
   },
   {
     "id": "si-602",
@@ -67398,7 +67947,9 @@ export const SEED_FACILITIES = [
     "city": "栃木県那須郡那須町 宿泊者限定",
     "trait": "private",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/104704"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/104704",
+    "address": "栃木県那須郡那須町湯本213-989",
+    "officialUrl": "https://earthboat.jp/nasu"
   },
   {
     "id": "si-9468",
@@ -67562,7 +68113,9 @@ export const SEED_FACILITIES = [
     "city": "吾妻郡長野原町",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/1195"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/1195",
+    "address": "群馬県吾妻郡長野原町北軽井沢2032-16",
+    "officialUrl": "https://karuizawa.holidayinnresorts.com/facilities/onsen/"
   },
   {
     "id": "si-1300",
@@ -67932,7 +68485,9 @@ export const SEED_FACILITIES = [
     "city": "安房郡 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/85857"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/85857",
+    "address": "千葉県安房郡鋸南町元名435",
+    "officialUrl": "https://www.umi-saunacafe.com/"
   },
   {
     "id": "si-12726",
@@ -69303,7 +69858,9 @@ export const SEED_FACILITIES = [
     "city": "南アルプス市 事前予約制",
     "trait": "urban",
     "source": "サウナイキタイ",
-    "sourceUrl": "https://sauna-ikitai.com/saunas/81825"
+    "sourceUrl": "https://sauna-ikitai.com/saunas/81825",
+    "address": "山梨県南アルプス市上宮地708-32",
+    "officialUrl": "https://www.minamialps-saunaglamping.com/sauna/"
   },
   {
     "id": "si-4755",
