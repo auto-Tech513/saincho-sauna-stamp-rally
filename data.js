@@ -86934,5 +86934,50 @@ export const SEED_FACILITIES = [
     "source": "公式",
     "sourceUrl": "https://tsuruoka.hotelinn.jp",
     "officialUrl": "https://tsuruoka.hotelinn.jp"
+  },
+  {
+    "id": "manual-fukushima-listel-inawashiro",
+    "name": "ホテルリステル猪苗代",
+    "prefecture": "福島県",
+    "address": "福島県耶麻郡猪苗代町大字川桁リステルパーク",
+    "addressSource": "公式ページ",
+    "addressCheckedAt": "2026-11-29",
+    "city": "猪苗代町",
+    "trait": "onsen",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "http://www.listel-inawashiro.jp/",
+    "officialUrl": "http://www.listel-inawashiro.jp/"
+  },
+  {
+    "id": "manual-fukushima-kitaaizu-fureai",
+    "name": "北会津保健センター ふれあいの湯",
+    "prefecture": "福島県",
+    "address": "福島県会津若松市北会津町下荒井字矢倉林1番地",
+    "addressSource": "公式ページ",
+    "addressCheckedAt": "2026-11-29",
+    "city": "会津若松市",
+    "trait": "onsen",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "https://awshakyo.or.jp/smarts/index/74/",
+    "officialUrl": "https://awshakyo.or.jp/smarts/index/74/"
+  },
+  {
+    "id": "manual-fukushima-koriyama-asaka",
+    "name": "ホテルシーアンドアイ郡山 郡山療養温泉あさかの湯",
+    "prefecture": "福島県",
+    "address": "福島県郡山市堤下町12-7",
+    "addressSource": "公式ページ",
+    "addressCheckedAt": "2026-11-29",
+    "city": "郡山市",
+    "trait": "onsen",
+    "tags": [],
+    "features": [],
+    "source": "公式",
+    "sourceUrl": "http://c-and-i.jp/onsen/",
+    "officialUrl": "http://c-and-i.jp/onsen/"
   }
 ];
