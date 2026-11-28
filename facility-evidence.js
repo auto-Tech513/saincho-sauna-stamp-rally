@@ -44987,6 +44987,1520 @@ factNov14("臨時休業", "2026年11月30日〜12月4日は施設の点検工事
       {"label": "定休日", "value": "毎週月曜日", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
       {"label": "設備", "value": "サウナを完備", "sourceUrl": "https://www.jexer.jp/fitness/yotsuya/", "checkedAt": "2026-11-27"},
     ],
+  },
+  {
+    "ids": [
+      "manual-joyfit-aeon-kenou"
+    ],
+    "name": "JOYFITイオン県央",
+    "officialUrl": "https://joyfit.jp/aeon-kenou/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒959-1232 新潟県燕市井土巻3丁目65番 イオン県央内1F",
+        "sourceUrl": "https://joyfit.jp/aeon-kenou/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "8:00-23:00／【12/30-31・1/2-3】9:00-17:00",
+        "sourceUrl": "https://joyfit.jp/aeon-kenou/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "休館日",
+        "value": "元旦・毎月7日",
+        "sourceUrl": "https://joyfit.jp/aeon-kenou/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備えるフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/aeon-kenou/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-aizu"
+    ],
+    "name": "JOYFIT 西若松",
+    "officialUrl": "https://joyfit.jp/aizu/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒965-0849 福島県会津若松市幕内南町9-60",
+        "sourceUrl": "https://joyfit.jp/aizu/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "月曜～土曜　8:00～23:00／日曜・祝日　8:00～22:00",
+        "sourceUrl": "https://joyfit.jp/aizu/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備えるフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/aizu/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-aizuapio"
+    ],
+    "name": "JOYFIT24 会津インター",
+    "officialUrl": "https://joyfit.jp/aizuapio/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒965-0059 福島県会津若松市インター西108",
+        "sourceUrl": "https://joyfit.jp/aizuapio/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業 《年中無休》",
+        "sourceUrl": "https://joyfit.jp/aizuapio/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/aizuapio/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-akitakomachi"
+    ],
+    "name": "JOYFIT24 あきた・こまち温泉",
+    "officialUrl": "https://joyfit.jp/akitakomachi/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒010-0061 秋田県秋田市卸町1丁目２－３ 天然温泉ホテルこまち内",
+        "sourceUrl": "https://joyfit.jp/akitakomachi/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業！",
+        "sourceUrl": "https://joyfit.jp/akitakomachi/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/akitakomachi/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-aomori"
+    ],
+    "name": "JOYFIT24 青森",
+    "officialUrl": "https://joyfit.jp/aomori/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒038-0006 青森県青森市三好2丁目3番16号(ガーラタウン敷地内)",
+        "sourceUrl": "https://joyfit.jp/aomori/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業",
+        "sourceUrl": "https://joyfit.jp/aomori/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/aomori/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-asahikawa"
+    ],
+    "name": "JOYFIT24 旭川",
+    "officialUrl": "https://joyfit.jp/asahikawa/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒070-0021 北海道旭川市東1条3丁目4-16",
+        "sourceUrl": "https://joyfit.jp/asahikawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業ジム",
+        "sourceUrl": "https://joyfit.jp/asahikawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/asahikawa/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-fujimino"
+    ],
+    "name": "JOYFIT24 ふじみ野",
+    "officialUrl": "https://joyfit.jp/fujimino/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒356-0058 埼玉県ふじみ野市大井中央3-1-1",
+        "sourceUrl": "https://joyfit.jp/fujimino/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業(年中無休)",
+        "sourceUrl": "https://joyfit.jp/fujimino/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/fujimino/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-furukawa"
+    ],
+    "name": "JOYFIT24 古川",
+    "officialUrl": "https://joyfit.jp/furukawa/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒989-6115 宮城県大崎市古川駅東2丁目62-1",
+        "sourceUrl": "https://joyfit.jp/furukawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間年中無休で営業中！！",
+        "sourceUrl": "https://joyfit.jp/furukawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/furukawa/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-hachinohe"
+    ],
+    "name": "JOYFIT24 八戸",
+    "officialUrl": "https://joyfit.jp/hachinohe/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒031-0071 青森県八戸市沼館4-4-7",
+        "sourceUrl": "https://joyfit.jp/hachinohe/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業",
+        "sourceUrl": "https://joyfit.jp/hachinohe/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/hachinohe/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-ikkyu"
+    ],
+    "name": "JOYFIT24 01(ゼロワン)",
+    "officialUrl": "https://joyfit.jp/ikkyu/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒080-2469 北海道帯広市西19条南2丁目49",
+        "sourceUrl": "https://joyfit.jp/ikkyu/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業",
+        "sourceUrl": "https://joyfit.jp/ikkyu/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/ikkyu/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-ishinomaki"
+    ],
+    "name": "JOYFIT24 LITE 石巻",
+    "officialUrl": "https://joyfit.jp/ishinomaki/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒986-0815 宮城県石巻市中里3-1-8",
+        "sourceUrl": "https://joyfit.jp/ishinomaki/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間年中無休で営業しております！",
+        "sourceUrl": "https://joyfit.jp/ishinomaki/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/ishinomaki/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-iwakikashima"
+    ],
+    "name": "JOYFIT24 いわき鹿島",
+    "officialUrl": "https://joyfit.jp/iwakikashima/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒971-8146 福島県いわき市鹿島町御代字堂ノ前42-1",
+        "sourceUrl": "https://joyfit.jp/iwakikashima/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業《年中無休》",
+        "sourceUrl": "https://joyfit.jp/iwakikashima/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/iwakikashima/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-iwakiuchigo"
+    ],
+    "name": "JOYFIT24 いわき内郷",
+    "officialUrl": "https://joyfit.jp/iwakiuchigo/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒973-8408 福島県いわき市内郷高坂町大町61-2",
+        "sourceUrl": "https://joyfit.jp/iwakiuchigo/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業《年中無休》",
+        "sourceUrl": "https://joyfit.jp/iwakiuchigo/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/iwakiuchigo/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-kasukabe"
+    ],
+    "name": "JOYFIT24 春日部",
+    "officialUrl": "https://joyfit.jp/kasukabe/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒344-0038 埼玉県春日部市大沼4丁目31番地",
+        "sourceUrl": "https://joyfit.jp/kasukabe/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業",
+        "sourceUrl": "https://joyfit.jp/kasukabe/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/kasukabe/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-koriyama"
+    ],
+    "name": "JOYFIT24 郡山",
+    "officialUrl": "https://joyfit.jp/koriyama/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒963-8834 福島県郡山市図景1丁目8-26",
+        "sourceUrl": "https://joyfit.jp/koriyama/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業",
+        "sourceUrl": "https://joyfit.jp/koriyama/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/koriyama/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-masagohonmachi"
+    ],
+    "name": "JOYFIT24 真砂本町",
+    "officialUrl": "https://joyfit.jp/masagohonmachi/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒890-0067 鹿児島県鹿児島市真砂本町３−８",
+        "sourceUrl": "https://joyfit.jp/masagohonmachi/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業／※第3日曜はメンテナンスの為、朝8:00まで利用可能／翌朝6:00開店",
+        "sourceUrl": "https://joyfit.jp/masagohonmachi/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/masagohonmachi/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-matsumotoshounai"
+    ],
+    "name": "JOYFIT24 松本庄内",
+    "officialUrl": "https://joyfit.jp/matsumotoshounai/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒390-0827 長野県松本市出川1-1-3ライフスクエアCOMO庄内",
+        "sourceUrl": "https://joyfit.jp/matsumotoshounai/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "1階ジムエリア＆2階レディースエリア≪24時間営業≫≪年中無休≫",
+        "sourceUrl": "https://joyfit.jp/matsumotoshounai/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/matsumotoshounai/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-niigatanagaokanisseki"
+    ],
+    "name": "JOYFIT新潟長岡日赤",
+    "officialUrl": "https://joyfit.jp/niigatanagaokanisseki/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒940-0095 新潟県長岡市日赤町2-6-1　ウオロク長岡店1F",
+        "sourceUrl": "https://joyfit.jp/niigatanagaokanisseki/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "平日 6:00-24:00、土日 6:00-23:00（祝日は各曜日のとおり営業）",
+        "sourceUrl": "https://joyfit.jp/niigatanagaokanisseki/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "休館日",
+        "value": "毎月10日、元旦",
+        "sourceUrl": "https://joyfit.jp/niigatanagaokanisseki/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備えるフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/niigatanagaokanisseki/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-sapporokita"
+    ],
+    "name": "JOYFIT 札幌北",
+    "officialUrl": "https://joyfit.jp/sapporokita/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒002-8012 北海道札幌市北区太平12条1丁目1-1　2F",
+        "sourceUrl": "https://joyfit.jp/sapporokita/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "6:00〜24:00",
+        "sourceUrl": "https://joyfit.jp/sapporokita/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備えるフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/sapporokita/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-sapporokousei"
+    ],
+    "name": "JOYFIT24 札幌北14条光星",
+    "officialUrl": "https://joyfit.jp/sapporokousei/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒065-0014 北海道札幌市東区北１４条東６丁目１−１７",
+        "sourceUrl": "https://joyfit.jp/sapporokousei/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間年中無休！！",
+        "sourceUrl": "https://joyfit.jp/sapporokousei/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/sapporokousei/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-shibata"
+    ],
+    "name": "JOYFIT24 新発田",
+    "officialUrl": "https://joyfit.jp/shibata/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒957-0065 新潟県新発田市舟入町3-6-28",
+        "sourceUrl": "https://joyfit.jp/shibata/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "ジムエリア24時間営業 (更衣室及び浴室エリアは平日9:30-22:30 / 土日9:00-21:00)",
+        "sourceUrl": "https://joyfit.jp/shibata/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/shibata/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-sukagawa"
+    ],
+    "name": "JOYFIT24 須賀川",
+    "officialUrl": "https://joyfit.jp/sukagawa/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒962-0024 福島県須賀川市稲荷町117",
+        "sourceUrl": "https://joyfit.jp/sukagawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業 《年中無休》",
+        "sourceUrl": "https://joyfit.jp/sukagawa/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/sukagawa/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-teinemaeda"
+    ],
+    "name": "JOYFIT24 札幌手稲前田",
+    "officialUrl": "https://joyfit.jp/teinemaeda/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒006-0813 北海道札幌市手稲区前田3条10丁目2-21",
+        "sourceUrl": "https://joyfit.jp/teinemaeda/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業（深夜23時～朝8時まではスタッフ不在となり、更衣室・浴室はご利用いただけません）／※深夜0時から早朝8時まではビル内への出入り口はリパーク駐車場側の夜間専用口のみでございます。",
+        "sourceUrl": "https://joyfit.jp/teinemaeda/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/teinemaeda/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "manual-joyfit-yamagata-akanegaoka"
+    ],
+    "name": "JOYFIT24 山形あかねヶ丘",
+    "officialUrl": "https://joyfit.jp/yamagata-akanegaoka/store-information/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒990-2481 山形県山形市あかねヶ丘2-15-25",
+        "sourceUrl": "https://joyfit.jp/yamagata-akanegaoka/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "24時間営業 《年中無休》",
+        "sourceUrl": "https://joyfit.jp/yamagata-akanegaoka/access/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナを備える24時間営業のフィットネスジム",
+        "sourceUrl": "https://joyfit.jp/yamagata-akanegaoka/store-information/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-79410"
+    ],
+    "name": "SASAUNA Sakura Sauna & Spa Kyoto",
+    "officialUrl": "https://sasauna.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒605-0902 京都府京都市東山区鞘町一丁目396-1 サクラクロスホテル京都清水 1F",
+        "sourceUrl": "https://sasauna.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "AM08:00～AM10:00、PM16:00～PM21:00",
+        "sourceUrl": "https://sasauna.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "超高温サウナと超低温の清水風呂を備える男性専用サウナ（ホテル宿泊者以外も利用可）",
+        "sourceUrl": "https://sasauna.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-80001"
+    ],
+    "name": "COCOFURO おおみね湯",
+    "officialUrl": "https://cocofuro.com/oomineyu/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒547-0031 大阪府大阪市平野区平野南1丁目9-25",
+        "sourceUrl": "https://cocofuro.com/oomineyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "朝6:00～深夜24:00（最終入場23:30）",
+        "sourceUrl": "https://cocofuro.com/oomineyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "定休日",
+        "value": "2、5、8、11月の第4木曜日",
+        "sourceUrl": "https://cocofuro.com/oomineyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "熱風オートロウリュサウナと超軟水の冷水風呂（深さ90センチ）を併設する銭湯",
+        "sourceUrl": "https://cocofuro.com/oomineyu/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-saga-81912"
+    ],
+    "name": "OND SAUNA",
+    "officialUrl": "https://www.ondsauna.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒843-0021 佐賀県武雄市武雄町大字永島18293番地",
+        "sourceUrl": "https://www.ondsauna.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "平日11:00〜21:30（最終受付20:00）、土日祝9:00〜21:30（最終受付20:00）",
+        "sourceUrl": "https://www.ondsauna.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "定休日",
+        "value": "火曜日（イベント等により変更の場合あり）",
+        "sourceUrl": "https://www.ondsauna.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "テーマの異なる5つのアウトドアサウナ（パブリックの木のサウナ、貸切の火・金のサウナなど）",
+        "sourceUrl": "https://www.ondsauna.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-109426"
+    ],
+    "name": "SAUNA & SPA YURAKUAN",
+    "officialUrl": "https://www.yura-kuan.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "佐賀県三養基郡みやき町白壁4049-34",
+        "sourceUrl": "https://www.yura-kuan.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "完全プライベートサウナ（バレルサウナ・スクエアサウナ）と半露天の家族風呂を備える温浴施設",
+        "sourceUrl": "https://www.yura-kuan.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "料金",
+        "value": "バレルサウナ90分6,000円／120分9,000円、スクエアサウナ90分8,000円／120分11,000円、家族風呂60分3,000円",
+        "sourceUrl": "https://www.yura-kuan.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-8483"
+    ],
+    "name": "GardensResort ときわ",
+    "officialUrl": "https://gardensresort-tokiwa.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "屋外サウナ（薪ストーブ式フィンランドサウナ、ロウリュ・ヴィヒタ可、プライベート利用）",
+        "sourceUrl": "https://gardensresort-tokiwa.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "料金",
+        "value": "サウナ利用料金6,500円",
+        "sourceUrl": "https://gardensresort-tokiwa.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "hyogo-user-1myv6gj"
+    ],
+    "name": "CLUB NISHINOMIYA",
+    "officialUrl": "http://clubnishinomiya-campfield.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒651-1423 兵庫県西宮市山口町船坂1826-1",
+        "sourceUrl": "http://clubnishinomiya-campfield.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "テントサウナ付きサイトのあるキャンプ場",
+        "sourceUrl": "http://clubnishinomiya-campfield.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-85857"
+    ],
+    "name": "Beach Sauna（ゆうみ Sauna Cafe）",
+    "officialUrl": "https://www.umi-saunacafe.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒299-1901 千葉県安房郡鋸南町元名435",
+        "sourceUrl": "https://www.umi-saunacafe.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "薪ストーブのビーチサウナ（セルフロウリュ可）と完全個室のプライベートサウナの2スタイル、全10室（完全予約制）。水風呂は鋸山の伏流水",
+        "sourceUrl": "https://www.umi-saunacafe.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-12213"
+    ],
+    "name": "HOTEL BLAST",
+    "officialUrl": "https://fairy-group.jp/blast/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒980-0822 宮城県仙台市青葉区立町14-16",
+        "sourceUrl": "https://fairy-group.jp/blast/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "プライベートサウナ31室とドライサウナ（上位客室タイプ）を備えるホテル",
+        "sourceUrl": "https://fairy-group.jp/blast/service/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-6114"
+    ],
+    "name": "HOTEL&SPA センチュリーマリーナ函館",
+    "officialUrl": "https://www.centurymarina.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒040-0064 北海道函館市大手町22番13号",
+        "sourceUrl": "https://www.centurymarina.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "温泉スパは午前5:30～翌深夜24:30",
+        "sourceUrl": "https://www.centurymarina.com/spa/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "天然温泉スパ「ステラ」に男性用の中温ロウリュサウナと女性用のアロマミスト塩サウナ",
+        "sourceUrl": "https://www.centurymarina.com/spa/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-3572"
+    ],
+    "name": "いつつばしの里（岩国国際観光ホテル）",
+    "officialUrl": "https://www.iwakunikankohotel.co.jp/onsen/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒741-0062 山口県岩国市岩国1-1-7",
+        "sourceUrl": "https://www.iwakunikankohotel.co.jp/onsen/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "男女入替制の大浴場（夕霧の湯・朝霧の湯）にドライサウナと水風呂（一部の時間帯はサウナ休止）",
+        "sourceUrl": "https://www.iwakunikankohotel.co.jp/onsen/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-79542"
+    ],
+    "name": "FAV LUX 飛騨高山",
+    "officialUrl": "https://www.fav-lux.com/hotel/hidatakayama/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒506-0026 岐阜県高山市花里町6丁目101番",
+        "sourceUrl": "https://www.fav-lux.com/hotel/hidatakayama/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナスイート（83㎡・定員8人）があり、BLACK SAUNAとWHITE SAUNAの2種類のサウナを貸切で利用できる",
+        "sourceUrl": "https://www.fav-lux.com/hotel/hidatakayama/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-79900"
+    ],
+    "name": "BLANC FUJI",
+    "officialUrl": "https://blanc-fuji.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒403-0032 山梨県富士吉田市上吉田東9-6-25",
+        "sourceUrl": "https://blanc-fuji.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "ヴィラタイプの客室にプライベートサウナ付きのSauna Villa（露天風呂付きのSpa Villaもある）",
+        "sourceUrl": "https://blanc-fuji.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-11302"
+    ],
+    "name": "HOTEL KNOB",
+    "officialUrl": "http://mmmy.jp/knob/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒710-0001 岡山県倉敷市三田295-1",
+        "sourceUrl": "http://mmmy.jp/knob/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "一部客室（201号室・215号室）にロウリュウサウナを備えるホテル",
+        "sourceUrl": "http://mmmy.jp/knob/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-78386"
+    ],
+    "name": "Hotel and Spa Gift Takayama",
+    "officialUrl": "https://gift-takayama.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒506-0025 岐阜県高山市天満町6丁目22",
+        "sourceUrl": "https://gift-takayama.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "大浴場（バス＆サウナ）利用時間 06:00〜10:00、15:00〜24:00",
+        "sourceUrl": "https://gift-takayama.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "大浴場にバス＆サウナを備えるホテル",
+        "sourceUrl": "https://gift-takayama.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-79825"
+    ],
+    "name": "JP HOUSE obusa",
+    "officialUrl": "https://jp-house.site/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒709-4201 岡山県美作市小房562",
+        "sourceUrl": "https://jp-house.site/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "古民家の宿にヒノキの卵型サウナ",
+        "sourceUrl": "https://jp-house.site/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-2063"
+    ],
+    "name": "COCOFURO ますの湯",
+    "officialUrl": "https://cocofuro.com/masunoyu/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒146-0084 東京都大田区南久が原2-1-23",
+        "sourceUrl": "https://cocofuro.com/masunoyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "朝6:00～深夜24:00（最終入場23:30）",
+        "sourceUrl": "https://cocofuro.com/masunoyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "定休日",
+        "value": "3、6、9、12月の第2木曜日",
+        "sourceUrl": "https://cocofuro.com/masunoyu/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "黒湯温泉の掛け流し風呂や高濃度炭酸泉風呂と無料のサウナ室、冷水風呂を備える銭湯",
+        "sourceUrl": "https://cocofuro.com/masunoyu/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-11393"
+    ],
+    "name": "HOTEL MYTH 777",
+    "officialUrl": "http://hotel-myth.jp/777/index.html",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "徳島県板野郡松茂町中喜来字群恵15-1",
+        "sourceUrl": "http://hotel-myth.jp/777/index.html",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナ付きルーム（ドライサウナ、ドライサウナ＆スチームサウナ）があるホテル",
+        "sourceUrl": "http://hotel-myth.jp/777/index.html",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-104704"
+    ],
+    "name": "Earthboat Nasu",
+    "officialUrl": "https://earthboat.jp/nasu",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "栃木県那須郡那須町湯本213-989",
+        "sourceUrl": "https://earthboat.jp/nasu",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "全室にプライベートサウナ（薪サウナ等）を備え、那須湯本の温泉も楽しめるアウトドアホテル",
+        "sourceUrl": "https://earthboat.jp/nasu",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-26119"
+    ],
+    "name": "HOTEL ANRA",
+    "officialUrl": "http://hotel-anra.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "徳島県徳島市川内町上別宮東83-3",
+        "sourceUrl": "http://hotel-anra.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "全室にマイクロバブルバスやドライサウナ、露天風呂などの設備を備えるホテル",
+        "sourceUrl": "http://hotel-anra.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-84083"
+    ],
+    "name": "COCO VILLA 那須白河温泉",
+    "officialUrl": "https://coco-villa.jp/villa/nasushirakawa/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "小屋式の薪ストーブサウナ（大きなガラス窓から炎を眺められる）と五右衛門風呂の水風呂、天然温泉の露天風呂を備える一棟貸しヴィラ",
+        "sourceUrl": "https://coco-villa.jp/villa/nasushirakawa/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-90372"
+    ],
+    "name": "SORA to DAICHI",
+    "officialUrl": "https://soratodaichi.villageinc.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒912-0131 福井県大野市南六呂師169 字東上谷野47-1",
+        "sourceUrl": "https://soratodaichi.villageinc.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "サウナは貸切10:00〜12:30・13:00〜15:30、個人フリー利用（宿泊者）10:00〜21:30／（宿泊者以外）10:00〜19:00",
+        "sourceUrl": "https://soratodaichi.villageinc.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "休館日",
+        "value": "通年営業（天候により休館の場合あり）",
+        "sourceUrl": "https://soratodaichi.villageinc.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "レンガ製の水風呂を備えるサウナ（貸切・個人フリー利用）のあるキャンプ・グランピング施設",
+        "sourceUrl": "https://soratodaichi.villageinc.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-ehime-38065"
+    ],
+    "name": "sauna.494（近藤家別邸花澄）",
+    "officialUrl": "https://sauna.yours-llc.net/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒791-0321 愛媛県東温市河之内2098",
+        "sourceUrl": "https://sauna.yours-llc.net/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "薪焚きの本格サウナ施設を貸切で利用でき、ウッドデッキに水風呂と外気浴スペース",
+        "sourceUrl": "https://sauna.yours-llc.net/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-niigata-10129"
+    ],
+    "name": "Heidi Guest House",
+    "officialUrl": "https://www.naeba-heidi.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒949-6212 新潟県南魚沼郡湯沢町三国177-2",
+        "sourceUrl": "https://www.naeba-heidi.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "サウナ利用時間 8:00～11:00、16:00～22:00",
+        "sourceUrl": "https://www.naeba-heidi.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "本格フィンランド式サウナと井戸水かけ流しの露天水風呂",
+        "sourceUrl": "https://www.naeba-heidi.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-niigata-80979"
+    ],
+    "name": "HOTEL SOBOKU",
+    "officialUrl": "https://hotel-soboku.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒944-0073 新潟県妙高市長森1555-1",
+        "sourceUrl": "https://hotel-soboku.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "全9棟のコテージすべてにプライベートサウナを完備し、日帰りサウナも提供するホテル",
+        "sourceUrl": "https://hotel-soboku.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-78532"
+    ],
+    "name": "KINOSUKE 日間賀島 島のサウナ",
+    "officialUrl": "https://kinosuke-himaka.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒470-3504 愛知県知多郡南知多町日間賀島浪太56",
+        "sourceUrl": "https://kinosuke-himaka.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "「島のサウナ」を利用できる宿泊プランがある島宿",
+        "sourceUrl": "https://kinosuke-himaka.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-11840"
+    ],
+    "name": "HOTEL MYTH F-2",
+    "officialUrl": "https://hotel-myth.jp/f2/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "長崎県諫早市大渡野町1718",
+        "sourceUrl": "https://hotel-myth.jp/f2/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナ付きルーム（ドライサウナ）があるホテル",
+        "sourceUrl": "https://hotel-myth.jp/f2/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-416"
+    ],
+    "name": "おおびらき温泉",
+    "officialUrl": "https://takashige-group.jp/oobiraki/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒036-8247 青森県弘前市大開2丁目9番",
+        "sourceUrl": "https://takashige-group.jp/oobiraki/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "営業時間",
+        "value": "大浴場・家族風呂 6:00～24:00、岩盤浴 9:00～24:00（年中無休）",
+        "sourceUrl": "https://takashige-group.jp/oobiraki/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "かけ流し天然温泉にサウナルームと家族風呂（全16室）、女性専用岩盤浴",
+        "sourceUrl": "https://takashige-group.jp/oobiraki/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-66115"
+    ],
+    "name": "CHILLBOX",
+    "officialUrl": "https://chill-box.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒435-0002 静岡県浜松市中央区白鳥町1377",
+        "sourceUrl": "https://chill-box.jp/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "会員制のプライベートサウナ（個室サウナ）",
+        "sourceUrl": "https://chill-box.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-95881"
+    ],
+    "name": "COCO VILLA 大洗",
+    "officialUrl": "https://coco-villa.jp/villa/oarai/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "屋上にガラス張りのサウナとジャグジーを備えるプライベートサウナ付き一棟貸しヴィラ",
+        "sourceUrl": "https://coco-villa.jp/villa/oarai/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-nagasaki-81098"
+    ],
+    "name": "HARIOBEACHWALK",
+    "officialUrl": "https://hariobeachwalk.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "海を一望できる絶景ロケーションに設置した貸切サウナハウス",
+        "sourceUrl": "https://hariobeachwalk.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-95882"
+    ],
+    "name": "COCO VILLA 山中湖",
+    "officialUrl": "https://coco-villa.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "すべてのVILLAにプライベートサウナを完備する1日1組限定のサウナ付きヴィラシリーズ（拠点ごとに薪・電気など仕様が異なる）",
+        "sourceUrl": "https://coco-villa.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-81050"
+    ],
+    "name": "IMMERSIVE SAUNA",
+    "officialUrl": "https://i3u7.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒930-0003 富山県富山市桜町1-4-10 パティオさくら 2F",
+        "sourceUrl": "https://i3u7.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "定休日",
+        "value": "毎週火曜日（火曜日が祝日の場合は翌水曜日）",
+        "sourceUrl": "https://i3u7.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "完全個室のプライベートサウナ（男女で利用できる）",
+        "sourceUrl": "https://i3u7.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-82391"
+    ],
+    "name": "FAV LUX 鹿児島天文館",
+    "officialUrl": "https://fav-hotels.com/hotels/lux/kagoshimatenmonkan/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "〒892-0844 鹿児島県鹿児島市山之口町7-30",
+        "sourceUrl": "https://fav-hotels.com/hotels/lux/kagoshimatenmonkan/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "サウナブランド「SAUNAGE」による客室内プライベートサウナを利用できる客室があるホテル",
+        "sourceUrl": "https://fav-hotels.com/hotels/lux/kagoshimatenmonkan/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-saitama-9290"
+    ],
+    "name": "COMORIVER",
+    "officialUrl": "https://comoriver.com/",
+    "features": [],
+    "facts": [
+      {
+        "label": "住所",
+        "value": "埼玉県比企郡ときがわ町大字本郷930番地1",
+        "sourceUrl": "https://comoriver.com/",
+        "checkedAt": "2026-11-28"
+      },
+      {
+        "label": "設備",
+        "value": "パブリックサウナエリア「moku」と貸切サウナ付きプランがある温泉グランピング施設",
+        "sourceUrl": "https://comoriver.com/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
+  },
+  {
+    "ids": [
+      "si-tottori-7260"
+    ],
+    "name": "GOOD BLESS GARDEN",
+    "officialUrl": "https://gbg-sauna.jp/",
+    "features": [],
+    "facts": [
+      {
+        "label": "設備",
+        "value": "サウナ・大浴場・岩盤浴を備える施設（ステイ・フィットネス・フード・ビューティー併設）",
+        "sourceUrl": "https://gbg-sauna.jp/",
+        "checkedAt": "2026-11-28"
+      }
+    ]
   }
 ];
 
