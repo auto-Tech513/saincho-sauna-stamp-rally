@@ -2,24 +2,27 @@ export const GEAR_PRODUCTS = [
   {
     "category": "サウナハット",
     "title": "今治タオル系サウナハット",
+    "amazonUrl": "https://www.amazon.co.jp/dp/B0C5QJZBQ3",
     "reason": "初めての1つに選びやすい定番。髪と頭皮を熱から守り、のぼせ感を抑えやすい。",
-    "proof": "楽天はレビュー評価順、Amazonはレビュー順検索で比較",
+    "proof": "Amazonは今治産サウナハット（ごリラックス）への直接リンク、楽天はレビュー評価順で比較",
     "amazonQuery": "今治タオル サウナハット",
     "rakutenQuery": "今治タオル サウナハット"
   },
   {
     "category": "マット",
     "title": "折りたたみサウナマット",
-    "reason": "共用マットが気になる人の必携品。軽くて乾きやすいEVA系から選ぶと持ち歩きやすい。",
-    "proof": "楽天はレビュー評価順、Amazonはレビュー順検索で比較",
+    "amazonUrl": "https://www.amazon.co.jp/dp/B0914Y27PH",
+    "reason": "共用マットが気になる人の必携品。軽くて乾きやすく、持ち歩きやすいものを選ぶと続けやすい。",
+    "proof": "AmazonはPrimal Blueのサウナマットへの直接リンク、楽天はレビュー評価順で比較",
     "amazonQuery": "サウナマット 折りたたみ",
     "rakutenQuery": "サウナマット 折りたたみ"
   },
   {
     "category": "水分補給",
     "title": "ポカリスエット 500ml ケース",
+    "amazonUrl": "https://www.amazon.co.jp/dp/B086DG8F9Y",
     "reason": "サウナ前後の定番補給。家に置いておくと出発前・帰宅後の水分補給が途切れにくい。",
-    "proof": "楽天はレビュー評価順、Amazonはレビュー順検索で比較",
+    "proof": "Amazonは大塚製薬ポカリスエット500ml×24本への直接リンク、楽天はレビュー評価順で比較",
     "amazonQuery": "ポカリスエット 500ml 24本",
     "rakutenQuery": "ポカリスエット 500ml 24本"
   },
